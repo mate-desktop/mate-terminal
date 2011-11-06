@@ -56,8 +56,8 @@ struct _TerminalTabsMenuPrivate
 
 enum
 {
-	PROP_0,
-	PROP_WINDOW
+    PROP_0,
+    PROP_WINDOW
 };
 
 static void	terminal_tabs_menu_update		(TerminalTabsMenu *menu);
@@ -76,77 +76,77 @@ G_DEFINE_TYPE (TerminalTabsMenu, terminal_tabs_menu, G_TYPE_OBJECT)
 static guint
 allocate_tab_id (void)
 {
-        int bit;
-        guint b, len;
-        guint8 *data;
-        guint8 byte, mask;
+	int bit;
+	guint b, len;
+	guint8 *data;
+	guint8 byte, mask;
 
-        if (n_tabs++ == 0)
-        {
-                g_assert (tabs_id_array == NULL);
-                tabs_id_array = g_byte_array_sized_new (16);
-        }
+	if (n_tabs++ == 0)
+	{
+		g_assert (tabs_id_array == NULL);
+		tabs_id_array = g_byte_array_sized_new (16);
+	}
 
-        /* Find a free ID */
-        len = tabs_id_array->len;
-        data = tabs_id_array->data;
-        for (b = 0; b < len; ++b)
-        {
-                if (data[b] != 0xff)
-                        break;
-        }
+	/* Find a free ID */
+	len = tabs_id_array->len;
+	data = tabs_id_array->data;
+	for (b = 0; b < len; ++b)
+	{
+		if (data[b] != 0xff)
+			break;
+	}
 
-        /* Need to append a new byte */
-        if (b == len)
-        {
-                guint8 bytes[] = { 0 };
-                g_byte_array_append (tabs_id_array, bytes, G_N_ELEMENTS (bytes));
-                g_assert (tabs_id_array->len > b);
-        }
+	/* Need to append a new byte */
+	if (b == len)
+	{
+		guint8 bytes[] = { 0 };
+		g_byte_array_append (tabs_id_array, bytes, G_N_ELEMENTS (bytes));
+		g_assert (tabs_id_array->len > b);
+	}
 
-        data = tabs_id_array->data + b;
-        byte = 0xff ^ *data;
-        /* Now find the first free bit */
-        bit = g_bit_nth_lsf (byte, -1);
-        mask = 1 << bit;
-        g_assert (bit >= 0 && bit <= 7);
-        g_assert ((*data & mask) == 0);
-        /* And mark it as allocated */
-        *data |= mask;
+	data = tabs_id_array->data + b;
+	byte = 0xff ^ *data;
+	/* Now find the first free bit */
+	bit = g_bit_nth_lsf (byte, -1);
+	mask = 1 << bit;
+	g_assert (bit >= 0 && bit <= 7);
+	g_assert ((*data & mask) == 0);
+	/* And mark it as allocated */
+	*data |= mask;
 
-        return b * 8 + bit;
+	return b * 8 + bit;
 }
 
 static void
 free_tab_id (GtkAction *action)
 {
-        const char *name;
-        guint id;
-        guint8 *data;
-        guint b, bit;
+	const char *name;
+	guint id;
+	guint8 *data;
+	guint b, bit;
 
-        name = gtk_action_get_name (action);
-        id = g_ascii_strtoull (name + ACTION_VERB_FORMAT_PREFIX_LEN, NULL,
-                               ACTION_VERB_FORMAT_BASE);
-        g_assert (id < tabs_id_array->len * 8);
+	name = gtk_action_get_name (action);
+	id = g_ascii_strtoull (name + ACTION_VERB_FORMAT_PREFIX_LEN, NULL,
+	                       ACTION_VERB_FORMAT_BASE);
+	g_assert (id < tabs_id_array->len * 8);
 
-        b = id >> 3;
-        bit = id & 0x7;
-        data = tabs_id_array->data + b;
-        *data &= ~(1 << bit);
+	b = id >> 3;
+	bit = id & 0x7;
+	data = tabs_id_array->data + b;
+	*data &= ~(1 << bit);
 
-        g_assert (n_tabs > 0);
-        if (--n_tabs == 0)
-        {
-                g_assert (tabs_id_array != NULL);
-                g_byte_array_free (tabs_id_array, TRUE);
-                tabs_id_array = NULL;
-        }
+	g_assert (n_tabs > 0);
+	if (--n_tabs == 0)
+	{
+		g_assert (tabs_id_array != NULL);
+		g_byte_array_free (tabs_id_array, TRUE);
+		tabs_id_array = NULL;
+	}
 }
 
 static void
 tab_action_activate_cb (GtkToggleAction *action,
-			TerminalTabsMenu *menu)
+                        TerminalTabsMenu *menu)
 {
 	TerminalTabsMenuPrivate *priv = menu->priv;
 	TerminalScreen *screen;
@@ -161,14 +161,14 @@ tab_action_activate_cb (GtkToggleAction *action,
 
 	if (terminal_window_get_active (priv->window) != screen)
 	{
-                terminal_window_switch_screen (priv->window, screen);
+		terminal_window_switch_screen (priv->window, screen);
 	}
 }
 
 static void
 sync_tab_title (TerminalScreen *screen,
-		GParamSpec *pspec,
-		GtkAction *action)
+                GParamSpec *pspec,
+                GtkAction *action)
 {
 	const char *title;
 
@@ -180,28 +180,28 @@ sync_tab_title (TerminalScreen *screen,
 static void
 notebook_page_added_cb (GtkNotebook *notebook,
                         TerminalScreenContainer *container,
-			guint position,
-			TerminalTabsMenu *menu)
+                        guint position,
+                        TerminalTabsMenu *menu)
 {
 	TerminalTabsMenuPrivate *priv = menu->priv;
 	GtkAction *action;
 	char verb[ACTION_VERB_FORMAT_LENGTH];
 	GSList *group;
-        TerminalScreen *screen;
+	TerminalScreen *screen;
 
-        screen = terminal_screen_container_get_screen (container);
+	screen = terminal_screen_container_get_screen (container);
 
 	g_snprintf (verb, sizeof (verb), ACTION_VERB_FORMAT, allocate_tab_id ());
-  
+
 	action = g_object_new (GTK_TYPE_RADIO_ACTION,
-			       "name", verb,
-			       "tooltip", _("Switch to this tab"),
-			       NULL);
+	                       "name", verb,
+	                       "tooltip", _("Switch to this tab"),
+	                       NULL);
 
 	sync_tab_title (screen, NULL, action);
 	/* make sure the action is alive when handling the signal, see bug #169833 */
 	g_signal_connect_object (screen, "notify::title",
-				 G_CALLBACK (sync_tab_title), action, 0);
+	                         G_CALLBACK (sync_tab_title), action, 0);
 
 	gtk_action_group_add_action_with_accel (priv->action_group, action, NULL);
 
@@ -218,7 +218,7 @@ notebook_page_added_cb (GtkNotebook *notebook,
 	g_object_set_data (G_OBJECT (action), DATA_KEY, screen);
 
 	g_signal_connect (action, "activate",
-			  G_CALLBACK (tab_action_activate_cb), menu);
+	                  G_CALLBACK (tab_action_activate_cb), menu);
 
 	g_object_unref (action);
 
@@ -228,37 +228,37 @@ notebook_page_added_cb (GtkNotebook *notebook,
 static void
 notebook_page_removed_cb (GtkNotebook *notebook,
                           TerminalScreenContainer *container,
-			  guint position,
-			  TerminalTabsMenu *menu)
+                          guint position,
+                          TerminalTabsMenu *menu)
 {
 	TerminalTabsMenuPrivate *priv = menu->priv;
 	GtkAction *action;
-        TerminalScreen *screen;
+	TerminalScreen *screen;
 
-        screen = terminal_screen_container_get_screen (container);
+	screen = terminal_screen_container_get_screen (container);
 
 	action = g_object_get_data (G_OBJECT (screen), DATA_KEY);
 	g_return_if_fail (action != NULL);
 
-        free_tab_id (action);
+	free_tab_id (action);
 
 	g_signal_handlers_disconnect_by_func
-		(screen, G_CALLBACK (sync_tab_title), action);
+	(screen, G_CALLBACK (sync_tab_title), action);
 
 	g_signal_handlers_disconnect_by_func
-		(action, G_CALLBACK (tab_action_activate_cb), menu);
+	(action, G_CALLBACK (tab_action_activate_cb), menu);
 
 	g_object_set_data (G_OBJECT (screen), DATA_KEY, NULL);
- 	gtk_action_group_remove_action (priv->action_group, action);
+	gtk_action_group_remove_action (priv->action_group, action);
 
 	terminal_tabs_menu_update (menu);
 }
 
 static void
 notebook_page_reordered_cb (GtkNotebook *notebook,
-			    GtkBin *bin,
-			    guint position,
-			    TerminalTabsMenu *menu)
+                            GtkBin *bin,
+                            guint position,
+                            TerminalTabsMenu *menu)
 {
 	terminal_tabs_menu_update (menu);
 }
@@ -273,28 +273,28 @@ notebook_page_switch_cb (GtkNotebook *notebook,
                          guint position,
                          TerminalTabsMenu *menu)
 {
-        TerminalScreenContainer *container;
-        TerminalScreen *screen;
-        GtkAction *action;
+	TerminalScreenContainer *container;
+	TerminalScreen *screen;
+	GtkAction *action;
 
 #if GTK_CHECK_VERSION (2, 90, 6)
-        container = TERMINAL_SCREEN_CONTAINER (page);
+	container = TERMINAL_SCREEN_CONTAINER (page);
 #else
-        container = TERMINAL_SCREEN_CONTAINER (gtk_notebook_get_nth_page (notebook, position));
+	container = TERMINAL_SCREEN_CONTAINER (gtk_notebook_get_nth_page (notebook, position));
 #endif
-        screen = terminal_screen_container_get_screen (container);
+	screen = terminal_screen_container_get_screen (container);
 
 	action = g_object_get_data (G_OBJECT (screen), DATA_KEY);
-        g_signal_handlers_block_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
+	g_signal_handlers_block_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
-        g_signal_handlers_unblock_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
+	g_signal_handlers_unblock_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
 }
 
 static void
 connect_proxy_cb (GtkActionGroup *action_group,
-		  GtkAction *action,
-		  GtkWidget *proxy,
-		  gpointer dummy)
+                  GtkAction *action,
+                  GtkWidget *proxy,
+                  gpointer dummy)
 {
 	if (GTK_IS_MENU_ITEM (proxy))
 	{
@@ -310,7 +310,7 @@ connect_proxy_cb (GtkActionGroup *action_group,
 
 static void
 terminal_tabs_menu_set_window (TerminalTabsMenu *menu,
-			   TerminalWindow *window)
+                               TerminalWindow *window)
 {
 	TerminalTabsMenuPrivate *priv = menu->priv;
 	GtkWidget *notebook;
@@ -324,49 +324,49 @@ terminal_tabs_menu_set_window (TerminalTabsMenu *menu,
 	g_object_unref (priv->action_group);
 
 	priv->anchor_action = g_object_new (GTK_TYPE_RADIO_ACTION,
-					    "name", "TabsMenuAnchorAction",
-					    NULL);
+	                                    "name", "TabsMenuAnchorAction",
+	                                    NULL);
 	gtk_action_group_add_action (priv->action_group, priv->anchor_action);
-        g_object_unref (priv->anchor_action);
+	g_object_unref (priv->anchor_action);
 
 	g_signal_connect (priv->action_group, "connect-proxy",
-			  G_CALLBACK (connect_proxy_cb), NULL);
+	                  G_CALLBACK (connect_proxy_cb), NULL);
 
 	notebook = terminal_window_get_notebook (window);
 	g_signal_connect_object (notebook, "page-added",
-				 G_CALLBACK (notebook_page_added_cb), menu, 0);
+	                         G_CALLBACK (notebook_page_added_cb), menu, 0);
 	g_signal_connect_object (notebook, "page-removed",
-				 G_CALLBACK (notebook_page_removed_cb), menu, 0);
+	                         G_CALLBACK (notebook_page_removed_cb), menu, 0);
 	g_signal_connect_object (notebook, "page-reordered",
-				 G_CALLBACK (notebook_page_reordered_cb), menu, 0);
+	                         G_CALLBACK (notebook_page_reordered_cb), menu, 0);
 	g_signal_connect_object (notebook, "switch-page",
-				 G_CALLBACK (notebook_page_switch_cb), menu, 0);
+	                         G_CALLBACK (notebook_page_switch_cb), menu, 0);
 }
 
 static void
 terminal_tabs_menu_set_property (GObject *object,
-			     guint prop_id,
-			     const GValue *value,
-			     GParamSpec *pspec)
+                                 guint prop_id,
+                                 const GValue *value,
+                                 GParamSpec *pspec)
 {
 	TerminalTabsMenu *menu = TERMINAL_TABS_MENU (object);
 
 	switch (prop_id)
 	{
-		case PROP_WINDOW:
-			terminal_tabs_menu_set_window (menu, g_value_get_object (value));
-			break;
-                default:
-                        G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-                        break;
+	case PROP_WINDOW:
+		terminal_tabs_menu_set_window (menu, g_value_get_object (value));
+		break;
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
 	}
 }
 
 static void
 terminal_tabs_menu_get_property (GObject *object,
-			     guint prop_id,
-			     GValue *value,
-			     GParamSpec *pspec)
+                                 guint prop_id,
+                                 GValue *value,
+                                 GParamSpec *pspec)
 {
 	/* no readable properties */
 	g_return_if_reached ();
@@ -381,16 +381,16 @@ terminal_tabs_menu_class_init (TerminalTabsMenuClass *klass)
 	object_class->get_property = terminal_tabs_menu_get_property;
 
 	g_object_class_install_property (object_class,
-					 PROP_WINDOW,
-					 g_param_spec_object ("window", NULL, NULL,
-							      TERMINAL_TYPE_WINDOW,
-							      G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
-							      G_PARAM_CONSTRUCT_ONLY));
+	                                 PROP_WINDOW,
+	                                 g_param_spec_object ("window", NULL, NULL,
+	                                         TERMINAL_TYPE_WINDOW,
+	                                         G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
+	                                         G_PARAM_CONSTRUCT_ONLY));
 
 	g_type_class_add_private (object_class, sizeof (TerminalTabsMenuPrivate));
 
-        /* We don't want to save accels, so skip them */
-        gtk_accel_map_add_filter ("<Actions>/Main/TabsSwitch*");
+	/* We don't want to save accels, so skip them */
+	gtk_accel_map_add_filter ("<Actions>/Main/TabsSwitch*");
 }
 
 static void
@@ -417,29 +417,29 @@ TerminalTabsMenu *
 terminal_tabs_menu_new (TerminalWindow *window)
 {
 	return TERMINAL_TABS_MENU (g_object_new (TERMINAL_TYPE_TABS_MENU,
-					     "window", window,
-					     NULL));
+	                           "window", window,
+	                           NULL));
 }
 
 static void
 tab_set_action_accelerator (GtkActionGroup *action_group,
-			    GtkAction *action,
-			    guint tab_number,
-			    gboolean is_single_tab)
+                            GtkAction *action,
+                            guint tab_number,
+                            gboolean is_single_tab)
 {
-        if (!is_single_tab &&
-            tab_number < TERMINAL_ACCELS_N_TABS_SWITCH)
-        {
-                char accel_path[ACCEL_PATH_FORMAT_LENGTH];
+	if (!is_single_tab &&
+	        tab_number < TERMINAL_ACCELS_N_TABS_SWITCH)
+	{
+		char accel_path[ACCEL_PATH_FORMAT_LENGTH];
 
-                g_snprintf (accel_path, sizeof (accel_path), ACCEL_PATH_FORMAT, tab_number + 1);
-                gtk_action_set_accel_path (action, accel_path);
-        }
-        else
-        {
-                gtk_action_set_accel_path (action, NULL);
-                return;
-        }
+		g_snprintf (accel_path, sizeof (accel_path), ACCEL_PATH_FORMAT, tab_number + 1);
+		gtk_action_set_accel_path (action, accel_path);
+	}
+	else
+	{
+		gtk_action_set_accel_path (action, NULL);
+		return;
+	}
 }
 
 static void
@@ -467,20 +467,20 @@ terminal_tabs_menu_update (TerminalTabsMenu *menu)
 
 	for (l = tabs; l != NULL; l = l->next)
 	{
-                TerminalScreenContainer *container = TERMINAL_SCREEN_CONTAINER (l->data);
-                GObject *screen = G_OBJECT (terminal_screen_container_get_screen (container));
+		TerminalScreenContainer *container = TERMINAL_SCREEN_CONTAINER (l->data);
+		GObject *screen = G_OBJECT (terminal_screen_container_get_screen (container));
 
 		action = g_object_get_data (screen, DATA_KEY);
 		g_return_if_fail (action != NULL);
-  
+
 		verb = gtk_action_get_name (action);
 
 		tab_set_action_accelerator (p->action_group, action, i++, is_single_tab);
 
 		gtk_ui_manager_add_ui (manager, p->ui_id,
-				       UI_PATH,
-				       verb, verb,
-				       GTK_UI_MANAGER_MENUITEM, FALSE);
+		                       UI_PATH,
+		                       verb, verb,
+		                       GTK_UI_MANAGER_MENUITEM, FALSE);
 	}
 
 	g_list_free (tabs);

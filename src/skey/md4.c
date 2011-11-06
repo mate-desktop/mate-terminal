@@ -1,9 +1,9 @@
 /*
  *    Copyright (C) 2001 Nikos Mavroyanopoulos
  *
- *    This library is free software; you can redistribute it and/or modify it 
- *    under the terms of the GNU Library General Public License as published 
- *    by the Free Software Foundation; either version 3 of the License, or 
+ *    This library is free software; you can redistribute it and/or modify it
+ *    under the terms of the GNU Library General Public License as published
+ *    by the Free Software Foundation; either version 3 of the License, or
  *    (at your option) any later version.
  *
  *    This library is distributed in the hope that it will be useful,
@@ -17,7 +17,7 @@
  *    Boston, MA 02111-1307, USA.
  */
 
-/* 
+/*
  * The algorithm is due to Ron Rivest.  This code is based on code
  * written by Colin Plumb in 1993.
  */
@@ -42,12 +42,14 @@ static void byteReverse(unsigned char *buf, unsigned longs);
 static void byteReverse(unsigned char *buf, unsigned longs)
 {
 	guint32 t;
-	do {
+	do
+	{
 		t = (guint32) ((unsigned) buf[3] << 8 | buf[2]) << 16 |
 		    ((unsigned) buf[1] << 8 | buf[0]);
 		*(guint32 *) buf = t;
 		buf += 4;
-	} while (--longs);
+	}
+	while (--longs);
 }
 #endif
 
@@ -73,7 +75,7 @@ void MD4Init(MD4_CTX *ctx)
  * of bytes.
  */
 void MD4Update(MD4_CTX *ctx, unsigned char const *buf,
-	       unsigned len)
+               unsigned len)
 {
 	register guint32 t;
 
@@ -88,11 +90,13 @@ void MD4Update(MD4_CTX *ctx, unsigned char const *buf,
 
 	/* Handle any leading odd-sized chunks */
 
-	if (t) {
+	if (t)
+	{
 		unsigned char *p = (unsigned char *) ctx->in + t;
 
 		t = 64 - t;
-		if (len < t) {
+		if (len < t)
+		{
 			memcpy(p, buf, len);
 			return;
 		}
@@ -104,7 +108,8 @@ void MD4Update(MD4_CTX *ctx, unsigned char const *buf,
 	}
 	/* Process data in 64-byte chunks */
 
-	while (len >= 64) {
+	while (len >= 64)
+	{
 		memcpy(ctx->in, buf, 64);
 		byteReverse(ctx->in, 16);
 		MD4Transform(ctx->buf, (guint32 *) ctx->in);
@@ -118,7 +123,7 @@ void MD4Update(MD4_CTX *ctx, unsigned char const *buf,
 }
 
 /*
- * Final wrapup - pad to 64-byte boundary with the bit pattern 
+ * Final wrapup - pad to 64-byte boundary with the bit pattern
  * 1 0* (64-bit count of bits processed, MSB-first)
  */
 void MD4Final(unsigned char* digest, MD4_CTX *ctx)
@@ -138,7 +143,8 @@ void MD4Final(unsigned char* digest, MD4_CTX *ctx)
 	count = 64 - 1 - count;
 
 	/* Pad out to 56 mod 64 */
-	if (count < 8) {
+	if (count < 8)
+	{
 		/* Two lots of padding:  Pad the first block to 64 bytes */
 		memset(p, 0, count);
 		byteReverse(ctx->in, 16);
@@ -146,7 +152,9 @@ void MD4Final(unsigned char* digest, MD4_CTX *ctx)
 
 		/* Now fill the next block with 56 bytes */
 		memset(ctx->in, 0, 56);
-	} else {
+	}
+	else
+	{
 		/* Pad block to 56 bytes */
 		memset(p, 0, count - 8);
 	}
@@ -158,7 +166,7 @@ void MD4Final(unsigned char* digest, MD4_CTX *ctx)
 
 	MD4Transform(ctx->buf, (guint32 *) ctx->in);
 	byteReverse((unsigned char *) ctx->buf, 4);
-	
+
 	if (digest!=NULL)
 		memcpy(digest, ctx->buf, 16);
 	memset(ctx, 0, sizeof(ctx));	/* In case it's sensitive */
@@ -317,10 +325,12 @@ int main(int argc, char *argv[])
 
 	md4 = (MD4_CTX *)malloc(sizeof(MD4_CTX));
 	MD4Init(md4);
-	do {
+	do
+	{
 		r = read(0, data, sizeof data);
 		MD4Update(md4, data, r);
-	} while (r);
+	}
+	while (r);
 
 	MD4Final(digest, md4);
 	printf("MD4 Digest is: ");

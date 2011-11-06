@@ -38,18 +38,18 @@ typedef struct _TerminalTabLabelPrivate TerminalTabLabelPrivate;
 
 struct _TerminalTabLabel
 {
-  GtkHBox parent_instance;
+	GtkHBox parent_instance;
 
-  /*< private >*/
-  TerminalTabLabelPrivate *priv;
+	/*< private >*/
+	TerminalTabLabelPrivate *priv;
 };
 
 struct _TerminalTabLabelClass
 {
-  GtkHBoxClass parent_class;
+	GtkHBoxClass parent_class;
 
-  /* Signals */
-  void (* close_button_clicked) (TerminalTabLabel *tab_label);
+	/* Signals */
+	void (* close_button_clicked) (TerminalTabLabel *tab_label);
 };
 
 GType       terminal_tab_label_get_type   (void);
@@ -57,7 +57,7 @@ GType       terminal_tab_label_get_type   (void);
 GtkWidget  *terminal_tab_label_new        (TerminalScreen *screen);
 
 void        terminal_tab_label_set_bold   (TerminalTabLabel *tab_label,
-                                           gboolean bold);
+        gboolean bold);
 
 G_END_DECLS
 

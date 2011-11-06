@@ -35,57 +35,59 @@ typedef struct _EggSMClient        EggSMClient;
 typedef struct _EggSMClientClass   EggSMClientClass;
 typedef struct _EggSMClientPrivate EggSMClientPrivate;
 
-typedef enum {
-  EGG_SM_CLIENT_END_SESSION_DEFAULT,
-  EGG_SM_CLIENT_LOGOUT,
-  EGG_SM_CLIENT_REBOOT,
-  EGG_SM_CLIENT_SHUTDOWN
+typedef enum
+{
+    EGG_SM_CLIENT_END_SESSION_DEFAULT,
+    EGG_SM_CLIENT_LOGOUT,
+    EGG_SM_CLIENT_REBOOT,
+    EGG_SM_CLIENT_SHUTDOWN
 } EggSMClientEndStyle;
 
-typedef enum {
-  EGG_SM_CLIENT_MODE_DISABLED,
-  EGG_SM_CLIENT_MODE_NO_RESTART,
-  EGG_SM_CLIENT_MODE_NORMAL
+typedef enum
+{
+    EGG_SM_CLIENT_MODE_DISABLED,
+    EGG_SM_CLIENT_MODE_NO_RESTART,
+    EGG_SM_CLIENT_MODE_NORMAL
 } EggSMClientMode;
 
 struct _EggSMClient
 {
-  GObject parent;
+	GObject parent;
 
 };
 
 struct _EggSMClientClass
 {
-  GObjectClass parent_class;
+	GObjectClass parent_class;
 
-  /* signals */
-  void (*save_state)       (EggSMClient *client,
-			    GKeyFile    *state_file);
+	/* signals */
+	void (*save_state)       (EggSMClient *client,
+	                          GKeyFile    *state_file);
 
-  void (*quit_requested)   (EggSMClient *client);
-  void (*quit_cancelled)   (EggSMClient *client);
-  void (*quit)             (EggSMClient *client);
+	void (*quit_requested)   (EggSMClient *client);
+	void (*quit_cancelled)   (EggSMClient *client);
+	void (*quit)             (EggSMClient *client);
 
-  /* virtual methods */
-  void	   (*startup)             (EggSMClient          *client,
-				   const char           *client_id);
-  void	   (*set_restart_command) (EggSMClient          *client,
-				   int                   argc,
-				   const char          **argv);
-  void	   (*set_discard_command) (EggSMClient          *client,
-				   int                   argc,
-				   const char          **argv);
-  void	   (*will_quit)           (EggSMClient          *client,
-				   gboolean              will_quit);
-  gboolean (*end_session)         (EggSMClient          *client,
-				   EggSMClientEndStyle   style,
-				   gboolean              request_confirmation);
+	/* virtual methods */
+	void	   (*startup)             (EggSMClient          *client,
+	                                   const char           *client_id);
+	void	   (*set_restart_command) (EggSMClient          *client,
+	                                   int                   argc,
+	                                   const char          **argv);
+	void	   (*set_discard_command) (EggSMClient          *client,
+	                                   int                   argc,
+	                                   const char          **argv);
+	void	   (*will_quit)           (EggSMClient          *client,
+	                                   gboolean              will_quit);
+	gboolean (*end_session)         (EggSMClient          *client,
+	                                 EggSMClientEndStyle   style,
+	                                 gboolean              request_confirmation);
 
-  /* Padding for future expansion */
-  void (*_egg_reserved1) (void);
-  void (*_egg_reserved2) (void);
-  void (*_egg_reserved3) (void);
-  void (*_egg_reserved4) (void);
+	/* Padding for future expansion */
+	void (*_egg_reserved1) (void);
+	void (*_egg_reserved2) (void);
+	void (*_egg_reserved3) (void);
+	void (*_egg_reserved4) (void);
 };
 
 GType            egg_sm_client_get_type            (void) G_GNUC_CONST;
@@ -103,19 +105,19 @@ GKeyFile        *egg_sm_client_get_state_file      (EggSMClient *client);
 
 /* Alternate means of saving state */
 void             egg_sm_client_set_restart_command (EggSMClient  *client,
-						    int           argc,
-						    const char  **argv);
+        int           argc,
+        const char  **argv);
 void             egg_sm_client_set_discard_command (EggSMClient  *client,
-						    int           argc,
-						    const char  **argv);
+        int           argc,
+        const char  **argv);
 
 /* Handling "quit_requested" signal */
 void             egg_sm_client_will_quit           (EggSMClient *client,
-						    gboolean     will_quit);
+        gboolean     will_quit);
 
 /* Initiate a logout/reboot/shutdown */
 gboolean         egg_sm_client_end_session         (EggSMClientEndStyle  style,
-						    gboolean             request_confirmation);
+        gboolean             request_confirmation);
 
 G_END_DECLS
 

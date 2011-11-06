@@ -102,16 +102,16 @@ void terminal_app_new_profile (TerminalApp     *app,
                                GtkWindow       *transient_parent);
 
 TerminalWindow * terminal_app_new_window   (TerminalApp *app,
-                                            GdkScreen *screen);
+        GdkScreen *screen);
 
 TerminalScreen *terminal_app_new_terminal (TerminalApp     *app,
-                                           TerminalWindow  *window,
-                                           TerminalProfile *profile,
-                                           char           **override_command,
-                                           const char      *title,
-                                           const char      *working_dir,
-                                           char           **child_env,
-                                           double           zoom);
+        TerminalWindow  *window,
+        TerminalProfile *profile,
+        char           **override_command,
+        const char      *title,
+        const char      *working_dir,
+        char           **child_env,
+        double           zoom);
 
 TerminalWindow *terminal_app_get_current_window (TerminalApp *app);
 
@@ -129,10 +129,10 @@ GList* terminal_app_get_profile_list (TerminalApp *app);
 TerminalProfile* terminal_app_ensure_profile_fallback (TerminalApp *app);
 
 TerminalProfile* terminal_app_get_profile_by_name         (TerminalApp *app,
-                                                           const char      *name);
+        const char      *name);
 
 TerminalProfile* terminal_app_get_profile_by_visible_name (TerminalApp *app,
-                                                           const char      *name);
+        const char      *name);
 
 /* may return NULL */
 TerminalProfile* terminal_app_get_default_profile (TerminalApp *app);
@@ -141,7 +141,7 @@ TerminalProfile* terminal_app_get_default_profile (TerminalApp *app);
 TerminalProfile* terminal_app_get_profile_for_new_term (TerminalApp *app);
 
 TerminalEncoding *terminal_app_ensure_encoding (TerminalApp *app,
-                                                const char *charset);
+        const char *charset);
 
 GHashTable *terminal_app_get_encodings (TerminalApp *app);
 

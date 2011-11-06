@@ -1,7 +1,8 @@
-typedef enum {
-  MD4,
-  MD5,
-  SHA1
+typedef enum
+{
+    MD4,
+    MD5,
+    SHA1
 } SKeyAlgorithm;
 
 #define SKEY_SIZE	8

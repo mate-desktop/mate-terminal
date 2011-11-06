@@ -8,8 +8,9 @@
 
 #include "skey.h"
 
-typedef struct {
-        SKeyAlgorithm algorithm;
+typedef struct
+{
+	SKeyAlgorithm algorithm;
 	const char *passphrase;
 	const char *seed;
 	int  count;
@@ -17,7 +18,8 @@ typedef struct {
 	const char *btoe;
 } TestEntry;
 
-static const TestEntry tests[] = {
+static const TestEntry tests[] =
+{
 	{ MD4, "This is a test.", "TeSt",     0, "D185 4218 EBBB 0B51", "ROME MUG FRED SCAN LIVE LACE"   },
 	{ MD4, "This is a test.", "TeSt",     1, "6347 3EF0 1CD0 B444", "CARD SAD MINI RYE COL KIN"      },
 	{ MD4, "This is a test.", "TeSt",    99, "C5E6 1277 6E6C 237A", "NOTE OUT IBIS SINK NAVE MODE"   },
@@ -46,54 +48,56 @@ static const TestEntry tests[] = {
 	{ SHA1, "OTP's are good",  "correct",  1, "82AE B52D 9437 74E4", "FLIT DOSE ALSO MEW DRUM DEFY"  },
 	{ SHA1, "OTP's are good",  "correct", 99, "4F29 6A74 FE15 67EC", "AURA ALOE HURL WING BERG WAIT" },
 
-        { SHA1, "Passphrase",      "IiIi",   100, "27F4 01CC 0AC8 5112", "MEG JACK DIET GAD FORK GARY"   }
+	{ SHA1, "Passphrase",      "IiIi",   100, "27F4 01CC 0AC8 5112", "MEG JACK DIET GAD FORK GARY"   }
 };
 
-static const char *algos[] = {
-  "MD4",
-  "MD5",
-  "SHA1"
+static const char *algos[] =
+{
+	"MD4",
+	"MD5",
+	"SHA1"
 };
 
 static void
 skey_test (gconstpointer data)
 {
-        const TestEntry *test = (const TestEntry *) data;
-        char *key;
+	const TestEntry *test = (const TestEntry *) data;
+	char *key;
 
-        key = skey (test->algorithm,
-                    test->count,
-                    test->seed,
-                    test->passphrase);
-        g_assert (key != NULL);
-        g_assert (strcmp (key, test->btoe) == 0);
-        free (key);
+	key = skey (test->algorithm,
+	            test->count,
+	            test->seed,
+	            test->passphrase);
+	g_assert (key != NULL);
+	g_assert (strcmp (key, test->btoe) == 0);
+	free (key);
 }
 
 int main(int argc, char *argv[])
 {
-        guint i;
+	guint i;
 
-        if (!setlocale (LC_ALL, ""))
-                 g_error ("Locale not supported by C library!\n");
+	if (!setlocale (LC_ALL, ""))
+		g_error ("Locale not supported by C library!\n");
 
-        g_test_init (&argc, &argv, NULL);
-        g_test_bug_base ("http://bugzilla.mate.org/enter_bug.cgi?product=mate-terminal");
+	g_test_init (&argc, &argv, NULL);
+	g_test_bug_base ("http://bugzilla.mate.org/enter_bug.cgi?product=mate-terminal");
 
-        for (i = 0; i < G_N_ELEMENTS (tests); ++i) {
-                const TestEntry *test = &tests[i];
-                char *name;
+	for (i = 0; i < G_N_ELEMENTS (tests); ++i)
+	{
+		const TestEntry *test = &tests[i];
+		char *name;
 
-                name = g_strdup_printf ("/%s/%s/%s/%d/%s/%s",
-                                        algos[test->algorithm],
-                                        test->passphrase,
-                                        test->seed,
-                                        test->count,
-                                        test->hex,
-                                        test->btoe);
-                g_test_add_data_func (name, test, skey_test);
-                g_free (name);
-        }
+		name = g_strdup_printf ("/%s/%s/%s/%d/%s/%s",
+		                        algos[test->algorithm],
+		                        test->passphrase,
+		                        test->seed,
+		                        test->count,
+		                        test->hex,
+		                        test->btoe);
+		g_test_add_data_func (name, test, skey_test);
+		g_free (name);
+	}
 
-        return g_test_run ();
+	return g_test_run ();
 }

@@ -38,14 +38,14 @@ typedef struct _TerminalWindowPrivate TerminalWindowPrivate;
 
 struct _TerminalWindow
 {
-  GtkWindow parent_instance;
+	GtkWindow parent_instance;
 
-  TerminalWindowPrivate *priv;
+	TerminalWindowPrivate *priv;
 };
 
 struct _TerminalWindowClass
 {
-  GtkWindowClass parent_class;
+	GtkWindowClass parent_class;
 
 };
 
@@ -74,11 +74,11 @@ void terminal_window_move_screen (TerminalWindow *source_window,
  * from the profile of the first screen added to the window
  */
 void terminal_window_set_menubar_visible     (TerminalWindow *window,
-                                              gboolean        setting);
+        gboolean        setting);
 gboolean terminal_window_get_menubar_visible (TerminalWindow *window);
 
 void            terminal_window_switch_screen (TerminalWindow *window,
-                                               TerminalScreen *screen);
+        TerminalScreen *screen);
 TerminalScreen* terminal_window_get_active (TerminalWindow *window);
 
 GList* terminal_window_list_screen_containers (TerminalWindow *window);
@@ -88,10 +88,10 @@ void terminal_window_set_size         (TerminalWindow *window,
                                        TerminalScreen *screen,
                                        gboolean        even_if_mapped);
 void terminal_window_set_size_force_grid (TerminalWindow *window,
-                                          TerminalScreen *screen,
-                                          gboolean        even_if_mapped,
-                                          int             force_grid_width,
-                                          int             force_grid_height);
+        TerminalScreen *screen,
+        gboolean        even_if_mapped,
+        int             force_grid_width,
+        int             force_grid_height);
 
 GtkWidget* terminal_window_get_notebook (TerminalWindow *window);
 

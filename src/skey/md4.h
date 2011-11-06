@@ -2,8 +2,9 @@
 #define MD4_H
 
 #include <glib.h>
- 
-typedef struct {
+
+typedef struct
+{
 	guint32 buf[4];
 	guint32 bits[2];
 	unsigned char in[64];

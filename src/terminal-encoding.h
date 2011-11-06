@@ -28,21 +28,21 @@
 
 typedef struct
 {
-  int   refcount;
-  char *id;
-  char *name;
-  guint valid            : 1;
-  guint validity_checked : 1;
-  guint is_custom        : 1;
-  guint is_active        : 1;
+	int   refcount;
+	char *id;
+	char *name;
+	guint valid            : 1;
+	guint validity_checked : 1;
+	guint is_custom        : 1;
+	guint is_active        : 1;
 } TerminalEncoding;
 
 GType terminal_encoding_get_type (void);
 
 TerminalEncoding *terminal_encoding_new (const char *charset,
-                                         const char *display_name,
-                                         gboolean is_custom,
-                                         gboolean force_valid);
+        const char *display_name,
+        gboolean is_custom,
+        gboolean force_valid);
 
 TerminalEncoding *terminal_encoding_ref (TerminalEncoding *encoding);
 

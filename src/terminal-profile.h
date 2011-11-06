@@ -28,32 +28,32 @@ G_BEGIN_DECLS
 
 typedef enum
 {
-  /* this has to be kept in sync with the option menu in the profile editor UI file */
-  TERMINAL_TITLE_REPLACE,
-  TERMINAL_TITLE_BEFORE,
-  TERMINAL_TITLE_AFTER,
-  TERMINAL_TITLE_IGNORE
+    /* this has to be kept in sync with the option menu in the profile editor UI file */
+    TERMINAL_TITLE_REPLACE,
+    TERMINAL_TITLE_BEFORE,
+    TERMINAL_TITLE_AFTER,
+    TERMINAL_TITLE_IGNORE
 } TerminalTitleMode;
 
 typedef enum
 {
-  TERMINAL_SCROLLBAR_LEFT,
-  TERMINAL_SCROLLBAR_RIGHT,
-  TERMINAL_SCROLLBAR_HIDDEN
+    TERMINAL_SCROLLBAR_LEFT,
+    TERMINAL_SCROLLBAR_RIGHT,
+    TERMINAL_SCROLLBAR_HIDDEN
 } TerminalScrollbarPosition;
 
-typedef enum 
+typedef enum
 {
-  TERMINAL_EXIT_CLOSE,
-  TERMINAL_EXIT_RESTART,
-  TERMINAL_EXIT_HOLD
+    TERMINAL_EXIT_CLOSE,
+    TERMINAL_EXIT_RESTART,
+    TERMINAL_EXIT_HOLD
 } TerminalExitAction;
 
 typedef enum
 {
-  TERMINAL_BACKGROUND_SOLID,
-  TERMINAL_BACKGROUND_IMAGE,
-  TERMINAL_BACKGROUND_TRANSPARENT
+    TERMINAL_BACKGROUND_SOLID,
+    TERMINAL_BACKGROUND_IMAGE,
+    TERMINAL_BACKGROUND_TRANSPARENT
 } TerminalBackgroundType;
 
 #define TERMINAL_PALETTE_SIZE 16
@@ -120,18 +120,18 @@ typedef struct _TerminalProfilePrivate TerminalProfilePrivate;
 
 struct _TerminalProfile
 {
-  GObject parent_instance;
+	GObject parent_instance;
 
-  TerminalProfilePrivate *priv;
+	TerminalProfilePrivate *priv;
 };
 
 struct _TerminalProfileClass
 {
-  GObjectClass parent_class;
+	GObjectClass parent_class;
 
-  void (* forgotten) (TerminalProfile           *profile);
+	void (* forgotten) (TerminalProfile           *profile);
 
-  GHashTable *mateconf_keys;
+	GHashTable *mateconf_keys;
 };
 
 GType             terminal_profile_get_type               (void);
@@ -143,48 +143,48 @@ void             _terminal_profile_forget                 (TerminalProfile *prof
 gboolean         _terminal_profile_get_forgotten          (TerminalProfile *profile);
 
 TerminalProfile* _terminal_profile_clone                  (TerminalProfile *base_profile,
-                                                           const char *visible_name);
+        const char *visible_name);
 
 gboolean          terminal_profile_property_locked        (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 void              terminal_profile_reset_property         (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 gboolean          terminal_profile_get_property_boolean   (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 gconstpointer     terminal_profile_get_property_boxed     (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 double            terminal_profile_get_property_double    (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 int               terminal_profile_get_property_enum      (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 int               terminal_profile_get_property_int       (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 gpointer          terminal_profile_get_property_object    (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 const char*       terminal_profile_get_property_string    (TerminalProfile *profile,
-                                                           const char *prop_name);
+        const char *prop_name);
 
 gboolean          terminal_profile_get_palette            (TerminalProfile *profile,
-                                                           GdkColor *colors,
-                                                           guint *n_colors);
+        GdkColor *colors,
+        guint *n_colors);
 
 gboolean          terminal_profile_get_palette_is_builtin (TerminalProfile *profile,
-                                                           guint *n);
+        guint *n);
 
 void              terminal_profile_set_palette_builtin    (TerminalProfile *profile,
-                                                           guint n);
+        guint n);
 
 gboolean          terminal_profile_modify_palette_entry   (TerminalProfile *profile,
-                                                           guint            i,
-                                                           const GdkColor  *color);
+        guint            i,
+        const GdkColor  *color);
 
 G_END_DECLS
 

@@ -28,18 +28,19 @@ void
 _terminal_debug_init(void)
 {
 #ifdef MATE_ENABLE_DEBUG
-  const GDebugKey keys[] = {
-    { "accels",    TERMINAL_DEBUG_ACCELS    },
-    { "encodings", TERMINAL_DEBUG_ENCODINGS },
-    { "factory",   TERMINAL_DEBUG_FACTORY   },
-    { "geometry",  TERMINAL_DEBUG_GEOMETRY  },
-    { "mdi",       TERMINAL_DEBUG_MDI       },
-    { "processes", TERMINAL_DEBUG_PROCESSES },
-    { "profile",   TERMINAL_DEBUG_PROFILE   }
-  };
+	const GDebugKey keys[] =
+	{
+		{ "accels",    TERMINAL_DEBUG_ACCELS    },
+		{ "encodings", TERMINAL_DEBUG_ENCODINGS },
+		{ "factory",   TERMINAL_DEBUG_FACTORY   },
+		{ "geometry",  TERMINAL_DEBUG_GEOMETRY  },
+		{ "mdi",       TERMINAL_DEBUG_MDI       },
+		{ "processes", TERMINAL_DEBUG_PROCESSES },
+		{ "profile",   TERMINAL_DEBUG_PROFILE   }
+	};
 
-  _terminal_debug_flags = g_parse_debug_string (g_getenv ("MATE_TERMINAL_DEBUG"),
-                                                keys, G_N_ELEMENTS (keys));
+	_terminal_debug_flags = g_parse_debug_string (g_getenv ("MATE_TERMINAL_DEBUG"),
+	                        keys, G_N_ELEMENTS (keys));
 #endif /* MATE_ENABLE_DEBUG */
 }
 

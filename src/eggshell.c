@@ -60,7 +60,8 @@ egg_shell (const char *shell)
 #ifndef G_OS_WIN32
 	struct passwd *pw;
 	int i;
-	static const char shells [][14] = {
+	static const char shells [][14] =
+	{
 		/* Note that on some systems shells can also
 		 * be installed in /usr/bin */
 		"/bin/bash", "/usr/bin/bash",
@@ -71,23 +72,30 @@ egg_shell (const char *shell)
 	};
 
 	if (geteuid () == getuid () &&
-	    getegid () == getgid ()) {
+	        getegid () == getgid ())
+	{
 		/* only in non-setuid */
-		if (shell != NULL) {
-			if (access (shell, X_OK) == 0) {
+		if (shell != NULL)
+		{
+			if (access (shell, X_OK) == 0)
+			{
 				return g_strdup (shell);
 			}
 		}
 	}
 	pw = getpwuid(getuid());
-	if (pw && pw->pw_shell) {
-		if (access (pw->pw_shell, X_OK) == 0) {
+	if (pw && pw->pw_shell)
+	{
+		if (access (pw->pw_shell, X_OK) == 0)
+		{
 			return g_strdup (pw->pw_shell);
 		}
 	}
 
-	for (i = 0; i != G_N_ELEMENTS (shells); i++) {
-		if (access (shells [i], X_OK) == 0) {
+	for (i = 0; i != G_N_ELEMENTS (shells); i++)
+	{
+		if (access (shells [i], X_OK) == 0)
+		{
 			return g_strdup (shells[i]);
 		}
 	}

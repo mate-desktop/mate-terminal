@@ -36,15 +36,15 @@ typedef struct _TerminalInfoBarPrivate TerminalInfoBarPrivate;
 
 struct _TerminalInfoBar
 {
-  GtkInfoBar parent_instance;
+	GtkInfoBar parent_instance;
 
-  /*< private >*/
-  TerminalInfoBarPrivate *priv;
+	/*< private >*/
+	TerminalInfoBarPrivate *priv;
 };
 
 struct _TerminalInfoBarClass
 {
-  GtkInfoBarClass parent_class;
+	GtkInfoBarClass parent_class;
 };
 
 GType terminal_info_bar_get_type (void);

@@ -28,81 +28,82 @@ G_BEGIN_DECLS
 
 typedef struct
 {
-  gboolean remote_arguments;
-  char   **env;
-  char    *startup_id;
-  char    *display_name;
-  int      screen_number;
-  GList   *initial_windows;
-  gboolean default_window_menubar_forced;
-  gboolean default_window_menubar_state;
-  gboolean default_fullscreen;
-  gboolean default_maximize;
-  char    *default_role;
-  char    *default_geometry;
-  char    *default_working_dir;
-  char    *default_title;
-  char   **exec_argv;
-  char    *default_profile;
-  gboolean default_profile_is_id;
+	gboolean remote_arguments;
+	char   **env;
+	char    *startup_id;
+	char    *display_name;
+	int      screen_number;
+	GList   *initial_windows;
+	gboolean default_window_menubar_forced;
+	gboolean default_window_menubar_state;
+	gboolean default_fullscreen;
+	gboolean default_maximize;
+	char    *default_role;
+	char    *default_geometry;
+	char    *default_working_dir;
+	char    *default_title;
+	char   **exec_argv;
+	char    *default_profile;
+	gboolean default_profile_is_id;
 
-  gboolean  execute;
-  gboolean  use_factory;
-  double    zoom;
+	gboolean  execute;
+	gboolean  use_factory;
+	double    zoom;
 
-  char    *config_file;
-  gboolean load_config;
-  gboolean save_config;
+	char    *config_file;
+	gboolean load_config;
+	gboolean save_config;
 } TerminalOptions;
 
 typedef struct
 {
-  char *profile;
-  gboolean profile_is_id;
-  char **exec_argv;
-  char *title;
-  char *working_dir;
-  double zoom;
-  guint zoom_set : 1;
-  guint active : 1;
+	char *profile;
+	gboolean profile_is_id;
+	char **exec_argv;
+	char *title;
+	char *working_dir;
+	double zoom;
+	guint zoom_set : 1;
+	guint active : 1;
 } InitialTab;
 
 typedef struct
 {
-  guint source_tag;
+	guint source_tag;
 
-  GList *tabs; /* list of InitialTab */
+	GList *tabs; /* list of InitialTab */
 
-  gboolean force_menubar_state;
-  gboolean menubar_state;
+	gboolean force_menubar_state;
+	gboolean menubar_state;
 
-  gboolean start_fullscreen;
-  gboolean start_maximized;
+	gboolean start_fullscreen;
+	gboolean start_maximized;
 
-  char *geometry;
-  char *role;
+	char *geometry;
+	char *role;
 
 } InitialWindow;
 
 #define TERMINAL_OPTION_ERROR (g_quark_from_static_string ("terminal-option-error"))
 
-typedef enum {
-  TERMINAL_OPTION_ERROR_NOT_IN_FACTORY,
-  TERMINAL_OPTION_ERROR_EXCLUSIVE_OPTIONS,
-  TERMINAL_OPTION_ERROR_INVALID_CONFIG_FILE,
-  TERMINAL_OPTION_ERROR_INCOMPATIBLE_CONFIG_FILE
+typedef enum
+{
+    TERMINAL_OPTION_ERROR_NOT_IN_FACTORY,
+    TERMINAL_OPTION_ERROR_EXCLUSIVE_OPTIONS,
+    TERMINAL_OPTION_ERROR_INVALID_CONFIG_FILE,
+    TERMINAL_OPTION_ERROR_INCOMPATIBLE_CONFIG_FILE
 } TerminalOptionError;
 
 TerminalOptions *terminal_options_parse (const char *working_directory,
-                                         const char *display_name,
-                                         const char *startup_id,
-                                         char **env,
-                                         gboolean remote_arguments,
-                                         gboolean ignore_unknown_options,
-                                         int *argcp,
-                                         char ***argvp,
-                                         GError **error,
-                                         ...) G_GNUC_NULL_TERMINATED;
+        const char *display_name,
+        const char *startup_id,
+        char **env,
+        gboolean remote_arguments,
+        gboolean ignore_unknown_options,
+        int *argcp,
+        char ***argvp,
+        GError **error,
+        ...) G_GNUC_NULL_TERMINATED;
 
 gboolean terminal_options_merge_config (TerminalOptions *options,
                                         GKeyFile *key_file,

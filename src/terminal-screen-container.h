@@ -38,15 +38,15 @@ typedef struct _TerminalScreenContainerPrivate TerminalScreenContainerPrivate;
 
 struct _TerminalScreenContainer
 {
-  GtkVBox parent_instance;
+	GtkVBox parent_instance;
 
-  /*< private >*/
-  TerminalScreenContainerPrivate *priv;
+	/*< private >*/
+	TerminalScreenContainerPrivate *priv;
 };
 
 struct _TerminalScreenContainerClass
 {
-  GtkVBoxClass parent_class;
+	GtkVBoxClass parent_class;
 };
 
 GType terminal_screen_container_get_type (void);
@@ -58,11 +58,11 @@ TerminalScreen *terminal_screen_container_get_screen (TerminalScreenContainer *c
 TerminalScreenContainer *terminal_screen_container_get_from_screen (TerminalScreen *screen);
 
 void terminal_screen_container_set_policy (TerminalScreenContainer *container,
-                                           GtkPolicyType hpolicy,
-                                           GtkPolicyType vpolicy);
+        GtkPolicyType hpolicy,
+        GtkPolicyType vpolicy);
 
 void terminal_screen_container_set_placement (TerminalScreenContainer *container,
-                                              GtkCornerType corner);
+        GtkCornerType corner);
 
 G_END_DECLS
 

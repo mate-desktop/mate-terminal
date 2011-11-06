@@ -27,12 +27,13 @@
 
 G_BEGIN_DECLS
 
-typedef enum {
-  FLAVOR_AS_IS,
-  FLAVOR_DEFAULT_TO_HTTP,
-  FLAVOR_VOIP_CALL,
-  FLAVOR_EMAIL,
-  FLAVOR_SKEY
+typedef enum
+{
+    FLAVOR_AS_IS,
+    FLAVOR_DEFAULT_TO_HTTP,
+    FLAVOR_VOIP_CALL,
+    FLAVOR_EMAIL,
+    FLAVOR_SKEY
 } TerminalURLFlavour;
 
 /* Forward decls */
@@ -52,24 +53,24 @@ typedef struct _TerminalScreenPrivate TerminalScreenPrivate;
 
 struct _TerminalScreen
 {
-  VteTerminal parent_instance;
+	VteTerminal parent_instance;
 
-  TerminalScreenPrivate *priv;
+	TerminalScreenPrivate *priv;
 };
 
 struct _TerminalScreenClass
 {
-  VteTerminalClass parent_class;
+	VteTerminalClass parent_class;
 
-  void (* profile_set)        (TerminalScreen *screen,
-                               TerminalProfile *old_profile);
-  void (* show_popup_menu)    (TerminalScreen *screen,
-                               TerminalScreenPopupInfo *info);
-  gboolean (* match_clicked)  (TerminalScreen *screen,
-                               const char *url,
-                               int flavour,
-                               guint state);
-  void (* close_screen)       (TerminalScreen *screen);
+	void (* profile_set)        (TerminalScreen *screen,
+	                             TerminalProfile *old_profile);
+	void (* show_popup_menu)    (TerminalScreen *screen,
+	                             TerminalScreenPopupInfo *info);
+	gboolean (* match_clicked)  (TerminalScreen *screen,
+	                             const char *url,
+	                             int flavour,
+	                             guint state);
+	void (* close_screen)       (TerminalScreen *screen);
 };
 
 GType terminal_screen_get_type (void) G_GNUC_CONST;
@@ -86,11 +87,11 @@ void terminal_screen_set_profile (TerminalScreen *screen,
 TerminalProfile* terminal_screen_get_profile (TerminalScreen *screen);
 
 void         terminal_screen_set_override_command (TerminalScreen  *screen,
-                                                   char           **argv);
+        char           **argv);
 const char** terminal_screen_get_override_command (TerminalScreen  *screen);
 
 void         terminal_screen_set_initial_environment (TerminalScreen  *screen,
-                                                      char           **argv);
+        char           **argv);
 char **      terminal_screen_get_initial_environment (TerminalScreen  *screen);
 
 const char* terminal_screen_get_raw_title      (TerminalScreen *screen);
@@ -102,7 +103,7 @@ void terminal_screen_set_user_title (TerminalScreen *screen,
                                      const char *text);
 
 void        terminal_screen_set_override_title     (TerminalScreen *screen,
-                                                    const char     *title);
+        const char     *title);
 
 const char *terminal_screen_get_dynamic_title      (TerminalScreen *screen);
 const char *terminal_screen_get_dynamic_icon_title (TerminalScreen *screen);
@@ -112,15 +113,15 @@ char *terminal_screen_get_current_dir_with_fallback (TerminalScreen *screen);
 
 void        terminal_screen_set_font (TerminalScreen *screen);
 void        terminal_screen_set_font_scale    (TerminalScreen *screen,
-                                               double          factor);
+        double          factor);
 double      terminal_screen_get_font_scale    (TerminalScreen *screen);
 
 void       terminal_screen_get_size (TerminalScreen *screen,
                                      int *width_chars,
                                      int *height_chars);
 void       terminal_screen_get_cell_size (TerminalScreen *screen,
-                                          int *width_chars,
-                                          int *height_chars);
+        int *width_chars,
+        int *height_chars);
 
 void _terminal_screen_update_scrollbar (TerminalScreen *screen);
 
@@ -140,15 +141,16 @@ gboolean terminal_screen_has_foreground_process (TerminalScreen *screen);
 #define TERMINAL_SCALE_MINIMUM     (TERMINAL_SCALE_XXXXX_SMALL/1.2)
 #define TERMINAL_SCALE_MAXIMUM     (TERMINAL_SCALE_XXXXX_LARGE*1.2)
 
-struct _TerminalScreenPopupInfo {
-  int ref_count;
-  TerminalWindow *window;
-  TerminalScreen *screen;
-  char *string;
-  TerminalURLFlavour flavour;
-  guint button;
-  guint state;
-  guint32 timestamp;
+struct _TerminalScreenPopupInfo
+{
+	int ref_count;
+	TerminalWindow *window;
+	TerminalScreen *screen;
+	char *string;
+	TerminalURLFlavour flavour;
+	guint button;
+	guint state;
+	guint32 timestamp;
 };
 
 TerminalScreenPopupInfo *terminal_screen_popup_info_ref (TerminalScreenPopupInfo *info);

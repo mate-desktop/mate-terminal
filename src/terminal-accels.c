@@ -111,144 +111,211 @@
 
 typedef struct
 {
-  const char *user_visible_name;
-  const char *mateconf_key;
-  const char *accel_path;
-  /* last values received from mateconf */
-  GdkModifierType mateconf_mask;
-  guint mateconf_keyval;
-  GClosure *closure;
-  /* have gotten a notification from gtk */
-  gboolean needs_mateconf_sync;
-  gboolean accel_path_unlocked;
+	const char *user_visible_name;
+	const char *mateconf_key;
+	const char *accel_path;
+	/* last values received from mateconf */
+	GdkModifierType mateconf_mask;
+	guint mateconf_keyval;
+	GClosure *closure;
+	/* have gotten a notification from gtk */
+	gboolean needs_mateconf_sync;
+	gboolean accel_path_unlocked;
 } KeyEntry;
 
 typedef struct
 {
-  KeyEntry *key_entry;
-  guint n_elements;
-  const char *user_visible_name;
+	KeyEntry *key_entry;
+	guint n_elements;
+	const char *user_visible_name;
 } KeyEntryList;
 
 static KeyEntry file_entries[] =
 {
-  { N_("New Tab"),
-    KEY_NEW_TAB, ACCEL_PATH_NEW_TAB, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_t, NULL, FALSE, TRUE },
-  { N_("New Window"),
-    KEY_NEW_WINDOW, ACCEL_PATH_NEW_WINDOW, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_n, NULL, FALSE, TRUE },
-  { N_("New Profile"),
-    KEY_NEW_PROFILE, ACCEL_PATH_NEW_PROFILE, 0, 0, NULL, FALSE, TRUE },
+	{
+		N_("New Tab"),
+		KEY_NEW_TAB, ACCEL_PATH_NEW_TAB, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_t, NULL, FALSE, TRUE
+	},
+	{
+		N_("New Window"),
+		KEY_NEW_WINDOW, ACCEL_PATH_NEW_WINDOW, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_n, NULL, FALSE, TRUE
+	},
+	{
+		N_("New Profile"),
+		KEY_NEW_PROFILE, ACCEL_PATH_NEW_PROFILE, 0, 0, NULL, FALSE, TRUE
+	},
 #ifdef ENABLE_SAVE
-  { N_("Save Contents"),
-    KEY_SAVE_CONTENTS, ACCEL_PATH_SAVE_CONTENTS, 0, 0, NULL, FALSE, TRUE },
+	{
+		N_("Save Contents"),
+		KEY_SAVE_CONTENTS, ACCEL_PATH_SAVE_CONTENTS, 0, 0, NULL, FALSE, TRUE
+	},
 #endif
-  { N_("Close Tab"),
-    KEY_CLOSE_TAB, ACCEL_PATH_CLOSE_TAB, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_w, NULL, FALSE, TRUE },
-  { N_("Close Window"),
-    KEY_CLOSE_WINDOW, ACCEL_PATH_CLOSE_WINDOW, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_q, NULL, FALSE, TRUE },
+	{
+		N_("Close Tab"),
+		KEY_CLOSE_TAB, ACCEL_PATH_CLOSE_TAB, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_w, NULL, FALSE, TRUE
+	},
+	{
+		N_("Close Window"),
+		KEY_CLOSE_WINDOW, ACCEL_PATH_CLOSE_WINDOW, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_q, NULL, FALSE, TRUE
+	},
 };
 
 static KeyEntry edit_entries[] =
 {
-  { N_("Copy"),
-    KEY_COPY, ACCEL_PATH_COPY, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_c, NULL, FALSE, TRUE },
-  { N_("Paste"),
-    KEY_PASTE, ACCEL_PATH_PASTE, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_v, NULL, FALSE, TRUE },
+	{
+		N_("Copy"),
+		KEY_COPY, ACCEL_PATH_COPY, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_c, NULL, FALSE, TRUE
+	},
+	{
+		N_("Paste"),
+		KEY_PASTE, ACCEL_PATH_PASTE, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_v, NULL, FALSE, TRUE
+	},
 };
 
 static KeyEntry view_entries[] =
 {
-  { N_("Hide and Show menubar"),
-    KEY_TOGGLE_MENUBAR, ACCEL_PATH_TOGGLE_MENUBAR, 0, 0, NULL, FALSE, TRUE },
-  { N_("Full Screen"),
-    KEY_FULL_SCREEN, ACCEL_PATH_FULL_SCREEN, 0, GDK_F11, NULL, FALSE, TRUE },
-  { N_("Zoom In"),
-    KEY_ZOOM_IN, ACCEL_PATH_ZOOM_IN, GDK_CONTROL_MASK, GDK_plus, NULL, FALSE, TRUE },
-  { N_("Zoom Out"),
-    KEY_ZOOM_OUT, ACCEL_PATH_ZOOM_OUT, GDK_CONTROL_MASK, GDK_minus, NULL, FALSE, TRUE },
-  { N_("Normal Size"),
-    KEY_ZOOM_NORMAL, ACCEL_PATH_ZOOM_NORMAL, GDK_CONTROL_MASK, GDK_0, NULL, FALSE, TRUE }
+	{
+		N_("Hide and Show menubar"),
+		KEY_TOGGLE_MENUBAR, ACCEL_PATH_TOGGLE_MENUBAR, 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Full Screen"),
+		KEY_FULL_SCREEN, ACCEL_PATH_FULL_SCREEN, 0, GDK_F11, NULL, FALSE, TRUE
+	},
+	{
+		N_("Zoom In"),
+		KEY_ZOOM_IN, ACCEL_PATH_ZOOM_IN, GDK_CONTROL_MASK, GDK_plus, NULL, FALSE, TRUE
+	},
+	{
+		N_("Zoom Out"),
+		KEY_ZOOM_OUT, ACCEL_PATH_ZOOM_OUT, GDK_CONTROL_MASK, GDK_minus, NULL, FALSE, TRUE
+	},
+	{
+		N_("Normal Size"),
+		KEY_ZOOM_NORMAL, ACCEL_PATH_ZOOM_NORMAL, GDK_CONTROL_MASK, GDK_0, NULL, FALSE, TRUE
+	}
 };
 
 static KeyEntry terminal_entries[] =
 {
-  { N_("Set Title"),
-    KEY_SET_TERMINAL_TITLE, ACCEL_PATH_SET_TERMINAL_TITLE, 0, 0, NULL, FALSE, TRUE },
-  { N_("Reset"),
-    KEY_RESET, ACCEL_PATH_RESET, 0, 0, NULL, FALSE, TRUE },
-  { N_("Reset and Clear"),
-    KEY_RESET_AND_CLEAR, ACCEL_PATH_RESET_AND_CLEAR, 0, 0, NULL, FALSE, TRUE },
+	{
+		N_("Set Title"),
+		KEY_SET_TERMINAL_TITLE, ACCEL_PATH_SET_TERMINAL_TITLE, 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Reset"),
+		KEY_RESET, ACCEL_PATH_RESET, 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Reset and Clear"),
+		KEY_RESET_AND_CLEAR, ACCEL_PATH_RESET_AND_CLEAR, 0, 0, NULL, FALSE, TRUE
+	},
 };
 
 static KeyEntry tabs_entries[] =
 {
-  { N_("Switch to Previous Tab"),
-    KEY_PREV_TAB, ACCEL_PATH_PREV_TAB, GDK_CONTROL_MASK, GDK_Page_Up, NULL, FALSE, TRUE },
-  { N_("Switch to Next Tab"),
-    KEY_NEXT_TAB, ACCEL_PATH_NEXT_TAB, GDK_CONTROL_MASK, GDK_Page_Down, NULL, FALSE, TRUE },
-  { N_("Move Tab to the Left"),
-    KEY_MOVE_TAB_LEFT, ACCEL_PATH_MOVE_TAB_LEFT, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_Page_Up, NULL, FALSE, TRUE },
-  { N_("Move Tab to the Right"),
-    KEY_MOVE_TAB_RIGHT, ACCEL_PATH_MOVE_TAB_RIGHT, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_Page_Down, NULL, FALSE, TRUE },
-  { N_("Detach Tab"),
-    KEY_DETACH_TAB, ACCEL_PATH_DETACH_TAB, 0, 0, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 1"),
-    KEY_SWITCH_TAB_PREFIX "1",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "1", GDK_MOD1_MASK, GDK_1, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 2"),
-    KEY_SWITCH_TAB_PREFIX "2",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "2", GDK_MOD1_MASK, GDK_2, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 3"),
-    KEY_SWITCH_TAB_PREFIX "3",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "3", GDK_MOD1_MASK, GDK_3, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 4"),
-    KEY_SWITCH_TAB_PREFIX "4",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "4", GDK_MOD1_MASK, GDK_4, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 5"),
-    KEY_SWITCH_TAB_PREFIX "5",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "5", GDK_MOD1_MASK, GDK_5, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 6"),
-    KEY_SWITCH_TAB_PREFIX "6",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "6", GDK_MOD1_MASK, GDK_6, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 7"),
-    KEY_SWITCH_TAB_PREFIX "7",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "7", GDK_MOD1_MASK, GDK_7, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 8"),
-    KEY_SWITCH_TAB_PREFIX "8",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "8", GDK_MOD1_MASK, GDK_8, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 9"),
-    KEY_SWITCH_TAB_PREFIX "9",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "9", GDK_MOD1_MASK, GDK_9, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 10"),
-    KEY_SWITCH_TAB_PREFIX "10",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "10", GDK_MOD1_MASK, GDK_0, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 11"),
-    KEY_SWITCH_TAB_PREFIX "11",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "11", 0, 0, NULL, FALSE, TRUE },
-  { N_("Switch to Tab 12"),
-    KEY_SWITCH_TAB_PREFIX "12",
-    ACCEL_PATH_SWITCH_TAB_PREFIX "12", 0, 0, NULL, FALSE, TRUE }
+	{
+		N_("Switch to Previous Tab"),
+		KEY_PREV_TAB, ACCEL_PATH_PREV_TAB, GDK_CONTROL_MASK, GDK_Page_Up, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Next Tab"),
+		KEY_NEXT_TAB, ACCEL_PATH_NEXT_TAB, GDK_CONTROL_MASK, GDK_Page_Down, NULL, FALSE, TRUE
+	},
+	{
+		N_("Move Tab to the Left"),
+		KEY_MOVE_TAB_LEFT, ACCEL_PATH_MOVE_TAB_LEFT, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_Page_Up, NULL, FALSE, TRUE
+	},
+	{
+		N_("Move Tab to the Right"),
+		KEY_MOVE_TAB_RIGHT, ACCEL_PATH_MOVE_TAB_RIGHT, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_Page_Down, NULL, FALSE, TRUE
+	},
+	{
+		N_("Detach Tab"),
+		KEY_DETACH_TAB, ACCEL_PATH_DETACH_TAB, 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 1"),
+		KEY_SWITCH_TAB_PREFIX "1",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "1", GDK_MOD1_MASK, GDK_1, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 2"),
+		KEY_SWITCH_TAB_PREFIX "2",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "2", GDK_MOD1_MASK, GDK_2, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 3"),
+		KEY_SWITCH_TAB_PREFIX "3",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "3", GDK_MOD1_MASK, GDK_3, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 4"),
+		KEY_SWITCH_TAB_PREFIX "4",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "4", GDK_MOD1_MASK, GDK_4, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 5"),
+		KEY_SWITCH_TAB_PREFIX "5",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "5", GDK_MOD1_MASK, GDK_5, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 6"),
+		KEY_SWITCH_TAB_PREFIX "6",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "6", GDK_MOD1_MASK, GDK_6, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 7"),
+		KEY_SWITCH_TAB_PREFIX "7",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "7", GDK_MOD1_MASK, GDK_7, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 8"),
+		KEY_SWITCH_TAB_PREFIX "8",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "8", GDK_MOD1_MASK, GDK_8, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 9"),
+		KEY_SWITCH_TAB_PREFIX "9",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "9", GDK_MOD1_MASK, GDK_9, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 10"),
+		KEY_SWITCH_TAB_PREFIX "10",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "10", GDK_MOD1_MASK, GDK_0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 11"),
+		KEY_SWITCH_TAB_PREFIX "11",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "11", 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Tab 12"),
+		KEY_SWITCH_TAB_PREFIX "12",
+		ACCEL_PATH_SWITCH_TAB_PREFIX "12", 0, 0, NULL, FALSE, TRUE
+	}
 };
 
-static KeyEntry help_entries[] = {
-  { N_("Contents"), KEY_HELP, ACCEL_PATH_HELP, 0, GDK_F1, NULL, FALSE, TRUE }
+static KeyEntry help_entries[] =
+{
+	{ N_("Contents"), KEY_HELP, ACCEL_PATH_HELP, 0, GDK_F1, NULL, FALSE, TRUE }
 };
 
 static KeyEntryList all_entries[] =
 {
-  { file_entries, G_N_ELEMENTS (file_entries), N_("File") },
-  { edit_entries, G_N_ELEMENTS (edit_entries), N_("Edit") },
-  { view_entries, G_N_ELEMENTS (view_entries), N_("View") },
-  { terminal_entries, G_N_ELEMENTS (terminal_entries), N_("Terminal") },
-  { tabs_entries, G_N_ELEMENTS (tabs_entries), N_("Tabs") },
-  { help_entries, G_N_ELEMENTS (help_entries), N_("Help") }
+	{ file_entries, G_N_ELEMENTS (file_entries), N_("File") },
+	{ edit_entries, G_N_ELEMENTS (edit_entries), N_("Edit") },
+	{ view_entries, G_N_ELEMENTS (view_entries), N_("View") },
+	{ terminal_entries, G_N_ELEMENTS (terminal_entries), N_("Terminal") },
+	{ tabs_entries, G_N_ELEMENTS (tabs_entries), N_("Tabs") },
+	{ help_entries, G_N_ELEMENTS (help_entries), N_("Help") }
 };
 
 enum
 {
-  ACTION_COLUMN,
-  KEYVAL_COLUMN,
-  N_COLUMNS
+    ACTION_COLUMN,
+    KEYVAL_COLUMN,
+    N_COLUMNS
 };
 
 static void keys_change_notify (MateConfClient *client,
@@ -285,126 +352,126 @@ static char*
 binding_name (guint            keyval,
               GdkModifierType  mask)
 {
-  if (keyval != 0)
-    return gtk_accelerator_name (keyval, mask);
+	if (keyval != 0)
+		return gtk_accelerator_name (keyval, mask);
 
-  return g_strdup ("disabled");
+	return g_strdup ("disabled");
 }
 
 static char*
 binding_display_name (guint            keyval,
                       GdkModifierType  mask)
 {
-  if (keyval != 0)
-    return gtk_accelerator_get_label (keyval, mask);
-    
-  return g_strdup (_("Disabled"));
+	if (keyval != 0)
+		return gtk_accelerator_get_label (keyval, mask);
+
+	return g_strdup (_("Disabled"));
 }
 
 static const char *
 key_from_mateconf_key (const char *mateconf_key)
 {
-  const char *last_slash = strrchr (mateconf_key, '/');
-  if (last_slash)
-    return ++last_slash;
-  return NULL;
+	const char *last_slash = strrchr (mateconf_key, '/');
+	if (last_slash)
+		return ++last_slash;
+	return NULL;
 }
 
 void
 terminal_accels_init (void)
 {
-  MateConfClient *conf;
-  guint i, j;
+	MateConfClient *conf;
+	guint i, j;
 
-  conf = mateconf_client_get_default ();
-  
-  mateconf_client_add_dir (conf, CONF_KEYS_PREFIX,
-                        MATECONF_CLIENT_PRELOAD_ONELEVEL,
-                        NULL);
-  mateconf_notify_id =
-  mateconf_client_notify_add (conf,
-                           CONF_KEYS_PREFIX,
-                           keys_change_notify,
-                           NULL, NULL, NULL);
+	conf = mateconf_client_get_default ();
 
-  mateconf_key_to_entry = g_hash_table_new (g_str_hash, g_str_equal);
+	mateconf_client_add_dir (conf, CONF_KEYS_PREFIX,
+	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
+	                         NULL);
+	mateconf_notify_id =
+	    mateconf_client_notify_add (conf,
+	                                CONF_KEYS_PREFIX,
+	                                keys_change_notify,
+	                                NULL, NULL, NULL);
 
-  notification_group = gtk_accel_group_new ();
+	mateconf_key_to_entry = g_hash_table_new (g_str_hash, g_str_equal);
 
-  for (i = 0; i < G_N_ELEMENTS (all_entries); ++i)
-    {
-      for (j = 0; j < all_entries[i].n_elements; ++j)
+	notification_group = gtk_accel_group_new ();
+
+	for (i = 0; i < G_N_ELEMENTS (all_entries); ++i)
 	{
-	  KeyEntry *key_entry;
+		for (j = 0; j < all_entries[i].n_elements; ++j)
+		{
+			KeyEntry *key_entry;
 
-	  key_entry = &(all_entries[i].key_entry[j]);
+			key_entry = &(all_entries[i].key_entry[j]);
 
-          g_hash_table_insert (mateconf_key_to_entry,
-                               (gpointer) key_from_mateconf_key (key_entry->mateconf_key),
-                               key_entry);
+			g_hash_table_insert (mateconf_key_to_entry,
+			                     (gpointer) key_from_mateconf_key (key_entry->mateconf_key),
+			                     key_entry);
 
-	  key_entry->closure = g_closure_new_simple (sizeof (GClosure), key_entry);
+			key_entry->closure = g_closure_new_simple (sizeof (GClosure), key_entry);
 
-	  g_closure_ref (key_entry->closure);
-	  g_closure_sink (key_entry->closure);
-	  
-	  gtk_accel_group_connect_by_path (notification_group,
-					   I_(key_entry->accel_path),
-					   key_entry->closure);
+			g_closure_ref (key_entry->closure);
+			g_closure_sink (key_entry->closure);
 
-          mateconf_client_notify (conf, key_entry->mateconf_key);
+			gtk_accel_group_connect_by_path (notification_group,
+			                                 I_(key_entry->accel_path),
+			                                 key_entry->closure);
+
+			mateconf_client_notify (conf, key_entry->mateconf_key);
+		}
 	}
-    }
 
-  g_object_unref (conf);
-  
-  g_signal_connect (notification_group, "accel-changed",
-                    G_CALLBACK (accel_changed_callback), NULL);
+	g_object_unref (conf);
+
+	g_signal_connect (notification_group, "accel-changed",
+	                  G_CALLBACK (accel_changed_callback), NULL);
 }
 
 void
 terminal_accels_shutdown (void)
 {
-  MateConfClient *conf;
+	MateConfClient *conf;
 
-  conf = mateconf_client_get_default ();
-  mateconf_client_notify_remove (conf, mateconf_notify_id);
-  mateconf_client_remove_dir (conf, CONF_KEYS_PREFIX, NULL);
-  g_object_unref (conf);
+	conf = mateconf_client_get_default ();
+	mateconf_client_notify_remove (conf, mateconf_notify_id);
+	mateconf_client_remove_dir (conf, CONF_KEYS_PREFIX, NULL);
+	g_object_unref (conf);
 
-  if (sync_idle_id != 0)
-    {
-      g_source_remove (sync_idle_id);
-      sync_idle_id = 0;
+	if (sync_idle_id != 0)
+	{
+		g_source_remove (sync_idle_id);
+		sync_idle_id = 0;
 
-      sync_idle_cb (NULL);
-    }
+		sync_idle_cb (NULL);
+	}
 
-  g_hash_table_destroy (mateconf_key_to_entry);
-  mateconf_key_to_entry = NULL;
+	g_hash_table_destroy (mateconf_key_to_entry);
+	mateconf_key_to_entry = NULL;
 
-  g_object_unref (notification_group);
-  notification_group = NULL;
+	g_object_unref (notification_group);
+	notification_group = NULL;
 }
 
 static gboolean
 update_model_foreach (GtkTreeModel *model,
-		      GtkTreePath  *path,
-		      GtkTreeIter  *iter,
-		      gpointer      data)
+                      GtkTreePath  *path,
+                      GtkTreeIter  *iter,
+                      gpointer      data)
 {
-  KeyEntry *key_entry = NULL;
+	KeyEntry *key_entry = NULL;
 
-  gtk_tree_model_get (model, iter,
-		      KEYVAL_COLUMN, &key_entry,
-		      -1);
+	gtk_tree_model_get (model, iter,
+	                    KEYVAL_COLUMN, &key_entry,
+	                    -1);
 
-  if (key_entry == (KeyEntry *) data)
-    {
-      gtk_tree_model_row_changed (model, path, iter);
-      return TRUE;
-    }
-  return FALSE;
+	if (key_entry == (KeyEntry *) data)
+	{
+		gtk_tree_model_row_changed (model, path, iter);
+		return TRUE;
+	}
+	return FALSE;
 }
 
 static void
@@ -413,82 +480,82 @@ keys_change_notify (MateConfClient *client,
                     MateConfEntry  *entry,
                     gpointer     user_data)
 {
-  MateConfValue *val;
-  KeyEntry *key_entry;
-  GdkModifierType mask;
-  guint keyval;
+	MateConfValue *val;
+	KeyEntry *key_entry;
+	GdkModifierType mask;
+	guint keyval;
 
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "key %s changed\n",
-                         mateconf_entry_get_key (entry));
-  
-  val = mateconf_entry_get_value (entry);
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "key %s changed\n",
+	                       mateconf_entry_get_key (entry));
+
+	val = mateconf_entry_get_value (entry);
 
 #ifdef MATE_ENABLE_DEBUG
-  _TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
-    {
-      if (val == NULL)
-        _terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to be unset\n");
-      else if (val->type != MATECONF_VALUE_STRING)
-        _terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to non-string value\n");
-      else
-        _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                               " changed to \"%s\"\n",
-                               mateconf_value_get_string (val));
-    }
+	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
+	{
+		if (val == NULL)
+			_terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to be unset\n");
+		else if (val->type != MATECONF_VALUE_STRING)
+			_terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to non-string value\n");
+		else
+			_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+			                       " changed to \"%s\"\n",
+			                       mateconf_value_get_string (val));
+	}
 #endif
 
-  key_entry = g_hash_table_lookup (mateconf_key_to_entry, key_from_mateconf_key (mateconf_entry_get_key (entry)));
-  if (!key_entry)
-    {
-      /* shouldn't really happen, but let's be safe */
-      _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                             "  WARNING: KeyEntry for changed key not found, bailing out\n");
-      return;
-    }
+	key_entry = g_hash_table_lookup (mateconf_key_to_entry, key_from_mateconf_key (mateconf_entry_get_key (entry)));
+	if (!key_entry)
+	{
+		/* shouldn't really happen, but let's be safe */
+		_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+		                       "  WARNING: KeyEntry for changed key not found, bailing out\n");
+		return;
+	}
 
-  if (!binding_from_value (val, &keyval, &mask))
-    {
-      const char *str = val->type == MATECONF_VALUE_STRING ? mateconf_value_get_string (val) : NULL;
-      g_printerr ("The value \"%s\" of configuration key %s is not a valid accelerator\n",
-                  str ? str : "(null)",
-                  key_entry->mateconf_key);
-      return;
-    }
+	if (!binding_from_value (val, &keyval, &mask))
+	{
+		const char *str = val->type == MATECONF_VALUE_STRING ? mateconf_value_get_string (val) : NULL;
+		g_printerr ("The value \"%s\" of configuration key %s is not a valid accelerator\n",
+		            str ? str : "(null)",
+		            key_entry->mateconf_key);
+		return;
+	}
 
-  key_entry->mateconf_keyval = keyval;
-  key_entry->mateconf_mask = mask;
+	key_entry->mateconf_keyval = keyval;
+	key_entry->mateconf_mask = mask;
 
-  /* Unlock the path, so we can change its accel */
-  if (!key_entry->accel_path_unlocked)
-    gtk_accel_map_unlock_path (key_entry->accel_path);
+	/* Unlock the path, so we can change its accel */
+	if (!key_entry->accel_path_unlocked)
+		gtk_accel_map_unlock_path (key_entry->accel_path);
 
-  /* sync over to GTK */
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "changing path %s to %s\n",
-                         key_entry->accel_path,
-                         binding_name (keyval, mask)); /* memleak */
-  inside_mateconf_notify += 1;
-  /* Note that this may return FALSE, e.g. when the entry was already set correctly. */
-  gtk_accel_map_change_entry (key_entry->accel_path,
-                              keyval, mask,
-                              TRUE);
-  inside_mateconf_notify -= 1;
+	/* sync over to GTK */
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "changing path %s to %s\n",
+	                       key_entry->accel_path,
+	                       binding_name (keyval, mask)); /* memleak */
+	inside_mateconf_notify += 1;
+	/* Note that this may return FALSE, e.g. when the entry was already set correctly. */
+	gtk_accel_map_change_entry (key_entry->accel_path,
+	                            keyval, mask,
+	                            TRUE);
+	inside_mateconf_notify -= 1;
 
-  /* Lock the path if the mateconf key isn't writable */
-  key_entry->accel_path_unlocked = mateconf_entry_get_is_writable (entry);
-  if (!key_entry->accel_path_unlocked)
-    gtk_accel_map_lock_path (key_entry->accel_path);
+	/* Lock the path if the mateconf key isn't writable */
+	key_entry->accel_path_unlocked = mateconf_entry_get_is_writable (entry);
+	if (!key_entry->accel_path_unlocked)
+		gtk_accel_map_lock_path (key_entry->accel_path);
 
-  /* This seems necessary to update the tree model, since sometimes the
-   * notification on the notification_group seems not to be emitted correctly.
-   * Without this change, when trying to set an accel to e.g. Alt-T (while the main
-   * menu in the terminal windows is _Terminal with Alt-T mnemonic) only displays
-   * the accel change after a re-expose of the row.
-   * FIXME: Find out *why* the accel-changed signal is wrong here!
-   */
-  if (edit_keys_store)
-    gtk_tree_model_foreach (GTK_TREE_MODEL (edit_keys_store), update_model_foreach, key_entry);
+	/* This seems necessary to update the tree model, since sometimes the
+	 * notification on the notification_group seems not to be emitted correctly.
+	 * Without this change, when trying to set an accel to e.g. Alt-T (while the main
+	 * menu in the terminal windows is _Terminal with Alt-T mnemonic) only displays
+	 * the accel change after a re-expose of the row.
+	 * FIXME: Find out *why* the accel-changed signal is wrong here!
+	 */
+	if (edit_keys_store)
+		gtk_tree_model_foreach (GTK_TREE_MODEL (edit_keys_store), update_model_foreach, key_entry);
 }
 
 static void
@@ -498,35 +565,35 @@ accel_changed_callback (GtkAccelGroup  *accel_group,
                         GClosure       *accel_closure,
                         gpointer        data)
 {
-  /* FIXME because GTK accel API is so nonsensical, we get
-   * a notify for each closure, on both the added and the removed
-   * accelerator. We just use the accel closure to find our
-   * accel entry, then update the value of that entry.
-   * We use an idle function to avoid setting the entry
-   * in mateconf when the accelerator gets removed and then
-   * setting it again when it gets added.
-   */
-  KeyEntry *key_entry;
-  
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "Changed accel %s closure %p\n",
-                         binding_name (keyval, modifier), /* memleak */
-                         accel_closure);
+	/* FIXME because GTK accel API is so nonsensical, we get
+	 * a notify for each closure, on both the added and the removed
+	 * accelerator. We just use the accel closure to find our
+	 * accel entry, then update the value of that entry.
+	 * We use an idle function to avoid setting the entry
+	 * in mateconf when the accelerator gets removed and then
+	 * setting it again when it gets added.
+	 */
+	KeyEntry *key_entry;
 
-  if (inside_mateconf_notify)
-    {
-      _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                             "Ignoring change from gtk because we're inside a mateconf notify\n");
-      return;
-    }
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "Changed accel %s closure %p\n",
+	                       binding_name (keyval, modifier), /* memleak */
+	                       accel_closure);
 
-  key_entry = accel_closure->data;
-  g_assert (key_entry);
+	if (inside_mateconf_notify)
+	{
+		_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+		                       "Ignoring change from gtk because we're inside a mateconf notify\n");
+		return;
+	}
 
-  key_entry->needs_mateconf_sync = TRUE;
+	key_entry = accel_closure->data;
+	g_assert (key_entry);
 
-  if (sync_idle_id == 0)
-    sync_idle_id = g_idle_add (sync_idle_cb, NULL);
+	key_entry->needs_mateconf_sync = TRUE;
+
+	if (sync_idle_id == 0)
+		sync_idle_id = g_idle_add (sync_idle_cb, NULL);
 }
 
 static gboolean
@@ -534,20 +601,20 @@ binding_from_string (const char      *str,
                      guint           *accelerator_key,
                      GdkModifierType *accelerator_mods)
 {
-  if (str == NULL ||
-      strcmp (str, "disabled") == 0)
-    {
-      *accelerator_key = 0;
-      *accelerator_mods = 0;
-      return TRUE;
-    }
+	if (str == NULL ||
+	        strcmp (str, "disabled") == 0)
+	{
+		*accelerator_key = 0;
+		*accelerator_mods = 0;
+		return TRUE;
+	}
 
-  gtk_accelerator_parse (str, accelerator_key, accelerator_mods);
-  if (*accelerator_key == 0 &&
-      *accelerator_mods == 0)
-    return FALSE;
+	gtk_accelerator_parse (str, accelerator_key, accelerator_mods);
+	if (*accelerator_key == 0 &&
+	        *accelerator_mods == 0)
+		return FALSE;
 
-  return TRUE;
+	return TRUE;
 }
 
 static gboolean
@@ -555,20 +622,20 @@ binding_from_value (MateConfValue       *value,
                     guint            *accelerator_key,
                     GdkModifierType  *accelerator_mods)
 {
-  if (value == NULL)
-    {
-      /* unset */
-      *accelerator_key = 0;
-      *accelerator_mods = 0;
-      return TRUE;
-    }
+	if (value == NULL)
+	{
+		/* unset */
+		*accelerator_key = 0;
+		*accelerator_mods = 0;
+		return TRUE;
+	}
 
-  if (value->type != MATECONF_VALUE_STRING)
-    return FALSE;
+	if (value->type != MATECONF_VALUE_STRING)
+		return FALSE;
 
-  return binding_from_string (mateconf_value_get_string (value),
-                              accelerator_key,
-                              accelerator_mods);
+	return binding_from_string (mateconf_value_get_string (value),
+	                            accelerator_key,
+	                            accelerator_mods);
 }
 
 static void
@@ -576,51 +643,51 @@ add_key_entry_to_changeset (gpointer key,
                             KeyEntry *key_entry,
                             MateConfChangeSet *changeset)
 {
-  GtkAccelKey gtk_key;
+	GtkAccelKey gtk_key;
 
-  if (!key_entry->needs_mateconf_sync)
-    return;
+	if (!key_entry->needs_mateconf_sync)
+		return;
 
-  key_entry->needs_mateconf_sync = FALSE;
+	key_entry->needs_mateconf_sync = FALSE;
 
-  if (gtk_accel_map_lookup_entry (key_entry->accel_path, &gtk_key) &&
-      (gtk_key.accel_key != key_entry->mateconf_keyval ||
-       gtk_key.accel_mods != key_entry->mateconf_mask))
-    {
-      char *accel_name;
+	if (gtk_accel_map_lookup_entry (key_entry->accel_path, &gtk_key) &&
+	        (gtk_key.accel_key != key_entry->mateconf_keyval ||
+	         gtk_key.accel_mods != key_entry->mateconf_mask))
+	{
+		char *accel_name;
 
-      accel_name = binding_name (gtk_key.accel_key, gtk_key.accel_mods);
-      mateconf_change_set_set_string (changeset,  key_entry->mateconf_key, accel_name);
-      g_free (accel_name);
-    }
+		accel_name = binding_name (gtk_key.accel_key, gtk_key.accel_mods);
+		mateconf_change_set_set_string (changeset,  key_entry->mateconf_key, accel_name);
+		g_free (accel_name);
+	}
 }
-              
+
 static gboolean
 sync_idle_cb (gpointer data)
 {
-  MateConfClient *conf;
-  MateConfChangeSet *changeset;
-  GError *error = NULL;
+	MateConfClient *conf;
+	MateConfChangeSet *changeset;
+	GError *error = NULL;
 
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "mateconf sync handler\n");
-  
-  sync_idle_id = 0;
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "mateconf sync handler\n");
 
-  conf = mateconf_client_get_default ();
+	sync_idle_id = 0;
 
-  changeset = mateconf_change_set_new ();
-  g_hash_table_foreach (mateconf_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);
-  if (!mateconf_client_commit_change_set (conf, changeset, TRUE, &error))
-    {
-      g_printerr ("Error committing the accelerator changeset: %s\n", error->message);
-      g_error_free (error);
-    }
-              
-  mateconf_change_set_unref (changeset);
-  g_object_unref (conf);
+	conf = mateconf_client_get_default ();
 
-  return FALSE;
+	changeset = mateconf_change_set_new ();
+	g_hash_table_foreach (mateconf_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);
+	if (!mateconf_client_commit_change_set (conf, changeset, TRUE, &error))
+	{
+		g_printerr ("Error committing the accelerator changeset: %s\n", error->message);
+		g_error_free (error);
+	}
+
+	mateconf_change_set_unref (changeset);
+	g_object_unref (conf);
+
+	return FALSE;
 }
 
 /* We have the same KeyEntry* in both columns;
@@ -635,25 +702,25 @@ accel_set_func (GtkTreeViewColumn *tree_column,
                 GtkTreeIter       *iter,
                 gpointer           data)
 {
-  KeyEntry *ke;
-  
-  gtk_tree_model_get (model, iter,
-                      KEYVAL_COLUMN, &ke,
-                      -1);
+	KeyEntry *ke;
 
-  if (ke == NULL)
-    /* This is a title row */
-    g_object_set (cell,
-                  "visible", FALSE,
-		  NULL);
-  else
-    g_object_set (cell,
-                  "visible", TRUE,
-                  "sensitive", ke->accel_path_unlocked,
-                  "editable", ke->accel_path_unlocked,
-                  "accel-key", ke->mateconf_keyval,
-                  "accel-mods", ke->mateconf_mask,
-		  NULL);
+	gtk_tree_model_get (model, iter,
+	                    KEYVAL_COLUMN, &ke,
+	                    -1);
+
+	if (ke == NULL)
+		/* This is a title row */
+		g_object_set (cell,
+		              "visible", FALSE,
+		              NULL);
+	else
+		g_object_set (cell,
+		              "visible", TRUE,
+		              "sensitive", ke->accel_path_unlocked,
+		              "editable", ke->accel_path_unlocked,
+		              "accel-key", ke->mateconf_keyval,
+		              "accel-mods", ke->mateconf_mask,
+		              NULL);
 }
 
 static int
@@ -662,48 +729,48 @@ accel_compare_func (GtkTreeModel *model,
                     GtkTreeIter  *b,
                     gpointer      user_data)
 {
-  KeyEntry *ke_a;
-  KeyEntry *ke_b;
-  char *name_a;
-  char *name_b;
-  int result;
-  
-  gtk_tree_model_get (model, a,
-                      KEYVAL_COLUMN, &ke_a,
-                      -1);
-  if (ke_a == NULL)
-    {
-      gtk_tree_model_get (model, a,
-			  ACTION_COLUMN, &name_a,
-			  -1);
-    }
-  else
-    {
-      name_a = binding_display_name (ke_a->mateconf_keyval,
-                                     ke_a->mateconf_mask);
-    }
+	KeyEntry *ke_a;
+	KeyEntry *ke_b;
+	char *name_a;
+	char *name_b;
+	int result;
 
-  gtk_tree_model_get (model, b,
-                      KEYVAL_COLUMN, &ke_b,
-                      -1);
-  if (ke_b == NULL)
-    {
-      gtk_tree_model_get (model, b,
-                          ACTION_COLUMN, &name_b,
-                          -1);
-    }
-  else
-    {
-      name_b = binding_display_name (ke_b->mateconf_keyval,
-                                     ke_b->mateconf_mask);
-    }
-  
-  result = g_utf8_collate (name_a, name_b);
+	gtk_tree_model_get (model, a,
+	                    KEYVAL_COLUMN, &ke_a,
+	                    -1);
+	if (ke_a == NULL)
+	{
+		gtk_tree_model_get (model, a,
+		                    ACTION_COLUMN, &name_a,
+		                    -1);
+	}
+	else
+	{
+		name_a = binding_display_name (ke_a->mateconf_keyval,
+		                               ke_a->mateconf_mask);
+	}
 
-  g_free (name_a);
-  g_free (name_b);
+	gtk_tree_model_get (model, b,
+	                    KEYVAL_COLUMN, &ke_b,
+	                    -1);
+	if (ke_b == NULL)
+	{
+		gtk_tree_model_get (model, b,
+		                    ACTION_COLUMN, &name_b,
+		                    -1);
+	}
+	else
+	{
+		name_b = binding_display_name (ke_b->mateconf_keyval,
+		                               ke_b->mateconf_mask);
+	}
 
-  return result;
+	result = g_utf8_collate (name_a, name_b);
+
+	g_free (name_a);
+	g_free (name_b);
+
+	return result;
 }
 
 static void
@@ -713,7 +780,7 @@ treeview_accel_changed_cb (GtkAccelGroup  *accel_group,
                            GClosure *accel_closure,
                            GtkTreeModel *model)
 {
-  gtk_tree_model_foreach (model, update_model_foreach, accel_closure->data);
+	gtk_tree_model_foreach (model, update_model_foreach, accel_closure->data);
 }
 
 static void
@@ -724,95 +791,99 @@ accel_edited_callback (GtkCellRendererAccel *cell,
                        guint                 hardware_keycode,
                        GtkTreeView          *view)
 {
-  GtkTreeModel *model;
-  GtkTreePath *path;
-  GtkTreeIter iter;
-  KeyEntry *ke;
-  GtkAccelGroupEntry *entries;
-  guint n_entries;
-  char *str;
-  MateConfClient *conf;
+	GtkTreeModel *model;
+	GtkTreePath *path;
+	GtkTreeIter iter;
+	KeyEntry *ke;
+	GtkAccelGroupEntry *entries;
+	guint n_entries;
+	char *str;
+	MateConfClient *conf;
 
-  model = gtk_tree_view_get_model (view);
+	model = gtk_tree_view_get_model (view);
 
-  path = gtk_tree_path_new_from_string (path_string);
-  if (!path)
-    return;
+	path = gtk_tree_path_new_from_string (path_string);
+	if (!path)
+		return;
 
-  if (!gtk_tree_model_get_iter (model, &iter, path)) {
-    gtk_tree_path_free (path);
-    return;
-  }
-  gtk_tree_path_free (path);
+	if (!gtk_tree_model_get_iter (model, &iter, path))
+	{
+		gtk_tree_path_free (path);
+		return;
+	}
+	gtk_tree_path_free (path);
 
-  gtk_tree_model_get (model, &iter, KEYVAL_COLUMN, &ke, -1);
+	gtk_tree_model_get (model, &iter, KEYVAL_COLUMN, &ke, -1);
 
-  /* sanity check */
-  if (ke == NULL)
-    return;
+	/* sanity check */
+	if (ke == NULL)
+		return;
 
-  /* Check if we already have an entry using this accel */
-  entries = gtk_accel_group_query (notification_group, keyval, mask, &n_entries);
-  if (n_entries > 0)
-    {
-      if (entries[0].accel_path_quark != g_quark_from_string (ke->accel_path))
-        {
-          GtkWidget *dialog;
-          char *name;
-          KeyEntry *other_key;
+	/* Check if we already have an entry using this accel */
+	entries = gtk_accel_group_query (notification_group, keyval, mask, &n_entries);
+	if (n_entries > 0)
+	{
+		if (entries[0].accel_path_quark != g_quark_from_string (ke->accel_path))
+		{
+			GtkWidget *dialog;
+			char *name;
+			KeyEntry *other_key;
 
-          name = gtk_accelerator_get_label (keyval, mask);
-          other_key = entries[0].closure->data;
-          g_assert (other_key);
+			name = gtk_accelerator_get_label (keyval, mask);
+			other_key = entries[0].closure->data;
+			g_assert (other_key);
 
-          dialog =
-            gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (view))),
-                                    GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL,
-                                    GTK_MESSAGE_WARNING,
-                                    GTK_BUTTONS_OK,
-                                    _("The shortcut key “%s” is already bound to the “%s” action"),
-                                    name,
-                                    other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->mateconf_key);
-          g_free (name);
+			dialog =
+			    gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (view))),
+			                            GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL,
+			                            GTK_MESSAGE_WARNING,
+			                            GTK_BUTTONS_OK,
+			                            _("The shortcut key “%s” is already bound to the “%s” action"),
+			                            name,
+			                            other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->mateconf_key);
+			g_free (name);
 
-          g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
-          gtk_window_present (GTK_WINDOW (dialog));
-        }
+			g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
+			gtk_window_present (GTK_WINDOW (dialog));
+		}
 
-      return;
-    }
+		return;
+	}
 
-  str = binding_name (keyval, mask);
+	str = binding_name (keyval, mask);
 
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "Edited path %s keyval %s, setting mateconf to %s\n",
-                         ke->accel_path,
-                         gdk_keyval_name (keyval) ? gdk_keyval_name (keyval) : "null",
-                         str);
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "Edited path %s keyval %s, setting mateconf to %s\n",
+	                       ke->accel_path,
+	                       gdk_keyval_name (keyval) ? gdk_keyval_name (keyval) : "null",
+	                       str);
 #ifdef MATE_ENABLE_DEBUG
-  _TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
-    {
-      GtkAccelKey old_key;
+	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
+	{
+		GtkAccelKey old_key;
 
-      if (gtk_accel_map_lookup_entry (ke->accel_path, &old_key)) {
-        _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                               "  Old entry of path %s is keyval %s mask %x\n",
-                               ke->accel_path, gdk_keyval_name (old_key.accel_key), old_key.accel_mods);
-      } else {
-        _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                               "  Failed to look up the old entry of path %s\n",
-                               ke->accel_path);
-      }
-    }
+		if (gtk_accel_map_lookup_entry (ke->accel_path, &old_key))
+		{
+			_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+			                       "  Old entry of path %s is keyval %s mask %x\n",
+			                       ke->accel_path, gdk_keyval_name (old_key.accel_key), old_key.accel_mods);
+		}
+		else
+		{
+			_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+			                       "  Failed to look up the old entry of path %s\n",
+			                       ke->accel_path);
+		}
+	}
 #endif
 
-  conf = mateconf_client_get_default ();
-  mateconf_client_set_string (conf,
-                           ke->mateconf_key,
-                           str,
-                           NULL);
-  g_object_unref (conf);
-  g_free (str);
+	conf = mateconf_client_get_default ();
+	mateconf_client_set_string (conf,
+	                            ke->mateconf_key,
+	                            str,
+	                            NULL);
+	g_object_unref (conf);
+	g_free (str);
 }
 
 static void
@@ -820,71 +891,72 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
                         gchar                *path_string,
                         GtkTreeView          *view)
 {
-  GtkTreeModel *model;
-  GtkTreePath *path;
-  GtkTreeIter iter;
-  KeyEntry *ke;
-  char *str;
-  MateConfClient *conf;
+	GtkTreeModel *model;
+	GtkTreePath *path;
+	GtkTreeIter iter;
+	KeyEntry *ke;
+	char *str;
+	MateConfClient *conf;
 
-  model = gtk_tree_view_get_model (view);
+	model = gtk_tree_view_get_model (view);
 
-  path = gtk_tree_path_new_from_string (path_string);
-  if (!path)
-    return;
+	path = gtk_tree_path_new_from_string (path_string);
+	if (!path)
+		return;
 
-  if (!gtk_tree_model_get_iter (model, &iter, path)) {
-    gtk_tree_path_free (path);
-    return;
-  }
-  gtk_tree_path_free (path);
+	if (!gtk_tree_model_get_iter (model, &iter, path))
+	{
+		gtk_tree_path_free (path);
+		return;
+	}
+	gtk_tree_path_free (path);
 
-  gtk_tree_model_get (model, &iter, KEYVAL_COLUMN, &ke, -1);
+	gtk_tree_model_get (model, &iter, KEYVAL_COLUMN, &ke, -1);
 
-  /* sanity check */
-  if (ke == NULL)
-    return;
+	/* sanity check */
+	if (ke == NULL)
+		return;
 
-  ke->mateconf_keyval = 0;
-  ke->mateconf_mask = 0;
-  ke->needs_mateconf_sync = TRUE;
+	ke->mateconf_keyval = 0;
+	ke->mateconf_mask = 0;
+	ke->needs_mateconf_sync = TRUE;
 
-  str = binding_name (0, 0);
+	str = binding_name (0, 0);
 
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "Cleared keybinding for mateconf %s",
-                         ke->mateconf_key);
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "Cleared keybinding for mateconf %s",
+	                       ke->mateconf_key);
 
-  conf = mateconf_client_get_default ();
-  mateconf_client_set_string (conf,
-                           ke->mateconf_key,
-                           str,
-                           NULL);
-  g_object_unref (conf);
-  g_free (str);
+	conf = mateconf_client_get_default ();
+	mateconf_client_set_string (conf,
+	                            ke->mateconf_key,
+	                            str,
+	                            NULL);
+	g_object_unref (conf);
+	g_free (str);
 }
 
 static void
 edit_keys_dialog_destroy_cb (GtkWidget *widget,
                              gpointer user_data)
 {
-  g_signal_handlers_disconnect_by_func (notification_group, G_CALLBACK (treeview_accel_changed_cb), user_data);
-  edit_keys_dialog = NULL;
-  edit_keys_store = NULL;
+	g_signal_handlers_disconnect_by_func (notification_group, G_CALLBACK (treeview_accel_changed_cb), user_data);
+	edit_keys_dialog = NULL;
+	edit_keys_store = NULL;
 }
 
 static void
 edit_keys_dialog_response_cb (GtkWidget *editor,
                               int response,
                               gpointer use_data)
-{  
-  if (response == GTK_RESPONSE_HELP)
-    {
-      terminal_util_show_help ("mate-terminal-shortcuts", GTK_WINDOW (editor));
-      return;
-    }
-    
-  gtk_widget_destroy (editor);
+{
+	if (response == GTK_RESPONSE_HELP)
+	{
+		terminal_util_show_help ("mate-terminal-shortcuts", GTK_WINDOW (editor));
+		return;
+	}
+
+	gtk_widget_destroy (editor);
 }
 
 #ifdef MATE_ENABLE_DEBUG
@@ -894,119 +966,119 @@ row_changed (GtkTreeModel *tree_model,
              GtkTreeIter  *iter,
              gpointer      user_data)
 {
-  _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-                         "ROW-CHANGED [%s]\n", gtk_tree_path_to_string (path) /* leak */);
+	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
+	                       "ROW-CHANGED [%s]\n", gtk_tree_path_to_string (path) /* leak */);
 }
 #endif
 
 void
 terminal_edit_keys_dialog_show (GtkWindow *transient_parent)
 {
-  TerminalApp *app;
-  GtkWidget *dialog, *tree_view, *disable_mnemonics_button, *disable_menu_accel_button;
-  GtkTreeViewColumn *column;
-  GtkCellRenderer *cell_renderer;
-  GtkTreeStore *tree;
-  guint i;
+	TerminalApp *app;
+	GtkWidget *dialog, *tree_view, *disable_mnemonics_button, *disable_menu_accel_button;
+	GtkTreeViewColumn *column;
+	GtkCellRenderer *cell_renderer;
+	GtkTreeStore *tree;
+	guint i;
 
-  if (edit_keys_dialog != NULL)
-    goto done;
+	if (edit_keys_dialog != NULL)
+		goto done;
 
-  if (!terminal_util_load_builder_file ("keybinding-editor.ui",
-                                        "keybindings-dialog", &dialog,
-                                        "disable-mnemonics-checkbutton", &disable_mnemonics_button,
-                                        "disable-menu-accel-checkbutton", &disable_menu_accel_button,
-                                        "accelerators-treeview", &tree_view,
-                                        NULL))
-    return;
+	if (!terminal_util_load_builder_file ("keybinding-editor.ui",
+	                                      "keybindings-dialog", &dialog,
+	                                      "disable-mnemonics-checkbutton", &disable_mnemonics_button,
+	                                      "disable-menu-accel-checkbutton", &disable_menu_accel_button,
+	                                      "accelerators-treeview", &tree_view,
+	                                      NULL))
+		return;
 
-  app = terminal_app_get ();
-  terminal_util_bind_object_property_to_widget (G_OBJECT (app), TERMINAL_APP_ENABLE_MNEMONICS,
-                                                disable_mnemonics_button, 0);
-  terminal_util_bind_object_property_to_widget (G_OBJECT (app), TERMINAL_APP_ENABLE_MENU_BAR_ACCEL,
-                                                disable_menu_accel_button, 0);
+	app = terminal_app_get ();
+	terminal_util_bind_object_property_to_widget (G_OBJECT (app), TERMINAL_APP_ENABLE_MNEMONICS,
+	        disable_mnemonics_button, 0);
+	terminal_util_bind_object_property_to_widget (G_OBJECT (app), TERMINAL_APP_ENABLE_MENU_BAR_ACCEL,
+	        disable_menu_accel_button, 0);
 
-  /* Column 1 */
-  cell_renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes (_("_Action"),
-						     cell_renderer,
-						     "text", ACTION_COLUMN,
-						     NULL);
-  gtk_tree_view_append_column (GTK_TREE_VIEW (tree_view), column);
-  gtk_tree_view_column_set_sort_column_id (column, ACTION_COLUMN);
+	/* Column 1 */
+	cell_renderer = gtk_cell_renderer_text_new ();
+	column = gtk_tree_view_column_new_with_attributes (_("_Action"),
+	         cell_renderer,
+	         "text", ACTION_COLUMN,
+	         NULL);
+	gtk_tree_view_append_column (GTK_TREE_VIEW (tree_view), column);
+	gtk_tree_view_column_set_sort_column_id (column, ACTION_COLUMN);
 
-  /* Column 2 */
-  cell_renderer = gtk_cell_renderer_accel_new ();
-  g_object_set (cell_renderer,
-                "editable", TRUE,
-                "accel-mode", GTK_CELL_RENDERER_ACCEL_MODE_GTK,
-                NULL);
-  g_signal_connect (cell_renderer, "accel-edited",
-                    G_CALLBACK (accel_edited_callback), tree_view);
-  g_signal_connect (cell_renderer, "accel-cleared",
-                    G_CALLBACK (accel_cleared_callback), tree_view);
-  
-  column = gtk_tree_view_column_new ();
-  gtk_tree_view_column_set_title (column, _("Shortcut _Key"));
-  gtk_tree_view_column_pack_start (column, cell_renderer, TRUE);
-  gtk_tree_view_column_set_cell_data_func (column, cell_renderer, accel_set_func, NULL, NULL);
-  gtk_tree_view_column_set_sort_column_id (column, KEYVAL_COLUMN);  
-  gtk_tree_view_append_column (GTK_TREE_VIEW (tree_view), column);
+	/* Column 2 */
+	cell_renderer = gtk_cell_renderer_accel_new ();
+	g_object_set (cell_renderer,
+	              "editable", TRUE,
+	              "accel-mode", GTK_CELL_RENDERER_ACCEL_MODE_GTK,
+	              NULL);
+	g_signal_connect (cell_renderer, "accel-edited",
+	                  G_CALLBACK (accel_edited_callback), tree_view);
+	g_signal_connect (cell_renderer, "accel-cleared",
+	                  G_CALLBACK (accel_cleared_callback), tree_view);
 
-  /* Add the data */
+	column = gtk_tree_view_column_new ();
+	gtk_tree_view_column_set_title (column, _("Shortcut _Key"));
+	gtk_tree_view_column_pack_start (column, cell_renderer, TRUE);
+	gtk_tree_view_column_set_cell_data_func (column, cell_renderer, accel_set_func, NULL, NULL);
+	gtk_tree_view_column_set_sort_column_id (column, KEYVAL_COLUMN);
+	gtk_tree_view_append_column (GTK_TREE_VIEW (tree_view), column);
 
-  tree = edit_keys_store = gtk_tree_store_new (N_COLUMNS, G_TYPE_STRING, G_TYPE_POINTER);
+	/* Add the data */
+
+	tree = edit_keys_store = gtk_tree_store_new (N_COLUMNS, G_TYPE_STRING, G_TYPE_POINTER);
 
 #ifdef MATE_ENABLE_DEBUG
-  _TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
-    g_signal_connect (tree, "row-changed", G_CALLBACK (row_changed), NULL);
+	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
+	g_signal_connect (tree, "row-changed", G_CALLBACK (row_changed), NULL);
 #endif
 
-  for (i = 0; i < G_N_ELEMENTS (all_entries); ++i)
-    {
-      GtkTreeIter parent_iter;
-      guint j;
-
-      gtk_tree_store_append (tree, &parent_iter, NULL);
-      gtk_tree_store_set (tree, &parent_iter,
-			  ACTION_COLUMN, _(all_entries[i].user_visible_name),
-			  -1);
-
-      for (j = 0; j < all_entries[i].n_elements; ++j)
+	for (i = 0; i < G_N_ELEMENTS (all_entries); ++i)
 	{
-	  KeyEntry *key_entry = &(all_entries[i].key_entry[j]);
-	  GtkTreeIter iter;
+		GtkTreeIter parent_iter;
+		guint j;
 
-          gtk_tree_store_insert_with_values (tree, &iter, &parent_iter, -1,
-                                             ACTION_COLUMN, _(key_entry->user_visible_name),
-                                             KEYVAL_COLUMN, key_entry,
-                                             -1);
+		gtk_tree_store_append (tree, &parent_iter, NULL);
+		gtk_tree_store_set (tree, &parent_iter,
+		                    ACTION_COLUMN, _(all_entries[i].user_visible_name),
+		                    -1);
+
+		for (j = 0; j < all_entries[i].n_elements; ++j)
+		{
+			KeyEntry *key_entry = &(all_entries[i].key_entry[j]);
+			GtkTreeIter iter;
+
+			gtk_tree_store_insert_with_values (tree, &iter, &parent_iter, -1,
+			                                   ACTION_COLUMN, _(key_entry->user_visible_name),
+			                                   KEYVAL_COLUMN, key_entry,
+			                                   -1);
+		}
 	}
-    }
 
-  gtk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (tree),
-                                   KEYVAL_COLUMN, accel_compare_func,
-                                   NULL, NULL);
-  gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (tree), ACTION_COLUMN,
-                                        GTK_SORT_ASCENDING);
+	gtk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (tree),
+	                                 KEYVAL_COLUMN, accel_compare_func,
+	                                 NULL, NULL);
+	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (tree), ACTION_COLUMN,
+	                                      GTK_SORT_ASCENDING);
 
-  gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), GTK_TREE_MODEL (tree));
-  g_object_unref (tree);
+	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), GTK_TREE_MODEL (tree));
+	g_object_unref (tree);
 
-  gtk_tree_view_expand_all (GTK_TREE_VIEW (tree_view));
+	gtk_tree_view_expand_all (GTK_TREE_VIEW (tree_view));
 
-  g_signal_connect (notification_group, "accel-changed",
-                    G_CALLBACK (treeview_accel_changed_cb), tree);
+	g_signal_connect (notification_group, "accel-changed",
+	                  G_CALLBACK (treeview_accel_changed_cb), tree);
 
-  edit_keys_dialog = dialog;
-  g_signal_connect (dialog, "destroy",
-                    G_CALLBACK (edit_keys_dialog_destroy_cb), tree);
-  g_signal_connect (dialog, "response",
-                    G_CALLBACK (edit_keys_dialog_response_cb),
-                    NULL);
-  gtk_window_set_default_size (GTK_WINDOW (dialog), -1, 350);
+	edit_keys_dialog = dialog;
+	g_signal_connect (dialog, "destroy",
+	                  G_CALLBACK (edit_keys_dialog_destroy_cb), tree);
+	g_signal_connect (dialog, "response",
+	                  G_CALLBACK (edit_keys_dialog_response_cb),
+	                  NULL);
+	gtk_window_set_default_size (GTK_WINDOW (dialog), -1, 350);
 
 done:
-  gtk_window_set_transient_for (GTK_WINDOW (edit_keys_dialog), transient_parent);
-  gtk_window_present (GTK_WINDOW (edit_keys_dialog));
+	gtk_window_set_transient_for (GTK_WINDOW (edit_keys_dialog), transient_parent);
+	gtk_window_present (GTK_WINDOW (edit_keys_dialog));
 }
