@@ -17,3 +17,13 @@ Session -
  
 Command line options - 
   do not overlap things that are preferences
+
+
+== Install ==
+
+Example:
+./autogen.sh --prefix=/usr --sysconfdir=/etc \
+    --disable-static --localstatedir=/var --disable-scrollkeeper --with-gnu-ld
+make
+sudo make install
+

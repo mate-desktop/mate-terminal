@@ -1,6 +1,6 @@
-m4_define([gt_version_major],[2])
-m4_define([gt_version_minor],[32])
-m4_define([gt_version_micro],[0])
+m4_define([gt_version_major],[2011])
+m4_define([gt_version_minor],[11])
+m4_define([gt_version_micro],[06])
 m4_define([gt_version_extra],[])
 m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
 
@@ -185,12 +185,12 @@ AC_OUTPUT
 # ****************************
 
 echo "
-mate-terminal-$VERSION:
+	mate-terminal-$VERSION:
 
 	prefix:                 ${prefix}
-	source code location:	${srcdir}
-	compiler:		${CC}
+	source code location:   ${srcdir}
+	compiler:               ${CC}
 
-        using smclient:         ${with_smclient}
-        s/key support:          ${enable_skey}
+	using smclient:         ${with_smclient}
+	s/key support:          ${enable_skey}
 "
