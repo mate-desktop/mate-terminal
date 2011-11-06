@@ -1,0 +1,116 @@
+<ui>
+  <menubar>
+    <menu action="File">
+      <menuitem action="FileNewWindow" />
+      <menu action="FileNewWindowProfiles" />
+      <menuitem action="FileNewTab" />
+      <menu action="FileNewTabProfiles" />
+      <separator />
+      <menuitem action="FileNewProfile" />
+      <menuitem action="FileSaveContents" />
+      <separator />
+      <menuitem action="FileCloseTab" />
+      <menuitem action="FileCloseWindow" />
+    </menu>
+    <menu action="Edit">
+      <menuitem action="EditCopy" />
+      <menuitem action="EditPaste" />
+      <menuitem action="EditPasteURIPaths" />
+      <separator />
+      <menuitem action="EditSelectAll" />
+      <separator />
+      <menuitem action="EditProfiles" />
+      <menuitem action="EditKeybindings" />
+      <menuitem action="EditCurrentProfile" />
+    </menu>
+    <menu action="View">
+      <menuitem action="ViewMenubar" />
+      <menuitem action="ViewFullscreen" />
+      <separator />
+      <menuitem action="ViewZoomIn" />
+      <menuitem action="ViewZoomOut" />
+      <menuitem action="ViewZoom100" />
+    </menu>
+    <menu action="Search">
+      <menuitem action="SearchFind"/>
+      <menuitem action="SearchFindNext"/>
+      <menuitem action="SearchFindPrevious"/>
+      <!--
+      <menuitem action="SearchIncrementalSearch"/>
+      -->
+      <!--
+      <separator/>
+      <menuitem name="SearchClearHighlight" action="SearchClearHighlight"/>
+      -->
+      <!--
+      <separator/>
+      <menuitem name="SearchGoToLineMenu" action="SearchGoToLine"/>
+      -->
+    </menu>
+    <menu action="Terminal">
+      <menu action="TerminalProfiles" />
+      <menuitem action="TerminalSetTitle" />
+      <menu action="TerminalSetEncoding" >
+        <placeholder name="EncodingsPH" />
+        <separator />
+        <menuitem action="TerminalAddEncoding" />
+      </menu>
+      <separator />
+      <menuitem action="TerminalReset" />
+      <menuitem action="TerminalResetClear" />
+      <separator />
+      <placeholder name="TerminalSizeToPH" />
+    </menu>
+    <menu action="Tabs">
+      <menuitem action="TabsNext" />
+      <menuitem action="TabsPrevious" />
+      <separator />
+      <menuitem action="TabsMoveLeft" />
+      <menuitem action="TabsMoveRight" />
+      <separator />
+      <menuitem action="TabsDetach" />
+      <separator />
+    </menu>
+    <menu action="Help">
+      <menuitem action="HelpContents" />
+      <menuitem action="HelpAbout" />
+    </menu>
+  </menubar>
+
+  <popup name="Popup" action="Popup">
+    <menuitem action="PopupSendEmail" />
+    <menuitem action="PopupCopyEmailAddress" />
+    <menuitem action="PopupCall" />
+    <menuitem action="PopupCopyCallAddress" />
+    <menuitem action="PopupOpenLink" />
+    <menuitem action="PopupCopyLinkAddress" />
+    <separator />
+    <menuitem action="PopupNewTerminal" />
+    <menuitem action="PopupNewTab" />
+    <separator />
+    <menuitem action="PopupCloseTab" />
+    <menuitem action="PopupCloseWindow" />
+    <separator />
+    <menuitem action="PopupCopy" />
+    <menuitem action="PopupPaste" />
+    <menuitem action="PopupPasteURIPaths" />
+    <separator />
+    <menu action="PopupTerminalProfiles">
+        <placeholder name="ProfilesPH" />
+        <separator />
+        <menuitem action="EditCurrentProfile" />
+    </menu>
+    <menuitem action="ViewMenubar" />
+    <menuitem action="PopupLeaveFullscreen" />
+    <separator />
+    <menuitem action="PopupInputMethods" />
+  </popup>
+  <popup name="NotebookPopup" action="NotebookPopup">
+    <menuitem action="TabsMoveLeft"/>
+    <menuitem action="TabsMoveRight"/>
+    <separator />
+    <menuitem action="TerminalSetTitle" />
+    <separator />
+    <menuitem action="FileCloseTab"/>
+  </popup>  
+</ui>

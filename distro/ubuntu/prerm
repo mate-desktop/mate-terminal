@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+pkgname=mmate-terminal
+
+if [ -f /usr/share/mateconf/schemas/${pkgname}.schemas ]; then
+	/usr/sbin/mateconfpkg --uninstall ${pkgname}
+fi
+
+
+exit 0

@@ -1,0 +1,19 @@
+
+This is the MATE terminal emulator application.  mate-terminal is
+only the shell (menubar, prefs dialog); the terminal emulation ("stuff
+in the middle") comes from the VTE widget. Remember this when 
+choosing a bugzilla component. ;-)
+
+How it works
+===
+
+Profiles - 
+  all settings are stored in profiles. prefs dialog edits the current
+  profile
+
+Session - 
+  just the number of open windows/tabs and their profile is stored
+  per-session
+ 
+Command line options - 
+  do not overlap things that are preferences

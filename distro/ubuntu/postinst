@@ -1,0 +1,8 @@
+#!/bin/sh
+
+pkgname=mate-terminal
+
+/usr/sbin/mateconfpkg --install ${pkgname}
+#gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+
+exit 0

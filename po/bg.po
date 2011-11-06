@@ -1,0 +1,2707 @@
+# Bulgarian translation of mate-terminal po-file.
+# Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2009, 2010 Free Software Foundation, Inc.
+# Borislav Aleksandrov <B.Aleksandrov@cnsys.bg>, 2002.
+# Alexander Shopov <ash@kambanaria.org>, 2003, 2007, 2008, 2009.
+# Rostislav Raykov <zbrox@i-space.org>, 2004.
+# Vladimir Petkov <kaladan@gmail.com>, 2004, 2006
+# Iassen Pramatarov <turin@fsa-bg.org>, 2005.
+# Yavor Doganov <yavor@gnu.org>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mate-terminal master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-08-24 15:28+0300\n"
+"PO-Revision-Date: 2010-08-24 15:27+0300\n"
+"Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../mate-terminal.desktop.in.in.h:1 ../src/mate-terminal.schemas.in.h:130
+#: ../src/terminal-accels.c:242 ../src/terminal.c:549
+#: ../src/terminal-profile.c:160 ../src/terminal-window.c:2000
+msgid "Terminal"
+msgstr "Терминал"
+
+#: ../mate-terminal.desktop.in.in.h:2
+msgid "Use the command line"
+msgstr "Използване на команден ред"
+
+#: ../src/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr "Изключване на връзката с управлението на сесиите"
+
+#: ../src/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr "Указване на файла със запазените настройки"
+
+#: ../src/eggsmclient.c:228 ../src/terminal-options.c:957
+#: ../src/terminal-options.c:966
+msgid "FILE"
+msgstr "ФАЙЛ"
+
+#: ../src/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr "Указване на идентификатор за управлението на сесиите"
+
+#: ../src/eggsmclient.c:231
+msgid "ID"
+msgstr "ИДЕНТИФИКАТОР"
+
+#: ../src/eggsmclient.c:252
+msgid "Session management options:"
+msgstr "Настройки на управлението на сесии:"
+
+#: ../src/eggsmclient.c:253
+msgid "Show session management options"
+msgstr "Показване на настройките за управлението на сесиите"
+
+#: ../src/encodings-dialog.glade.h:1
+msgid "A_vailable encodings:"
+msgstr "_Налични кодови таблици:"
+
+#: ../src/encodings-dialog.glade.h:2
+msgid "Add or Remove Terminal Encodings"
+msgstr "Добавяне или премахване на кодови таблици за терминала"
+
+#: ../src/encodings-dialog.glade.h:3
+msgid "E_ncodings shown in menu:"
+msgstr "К_одови таблици в менюто:"
+
+#: ../src/find-dialog.glade.h:1
+msgid "Find"
+msgstr "Търсене"
+
+#: ../src/find-dialog.glade.h:2
+msgid "Match _entire word only"
+msgstr "Ако съвпада само с _цяла дума"
+
+#: ../src/find-dialog.glade.h:3
+msgid "Match as _regular expression"
+msgstr "Ако съвпада с _регулярен израз"
+
+#: ../src/find-dialog.glade.h:4
+msgid "Search _backwards"
+msgstr "Търсене наза_д"
+
+#: ../src/find-dialog.glade.h:5
+msgid "_Match case"
+msgstr "Зачитане на главни/_малки"
+
+#: ../src/find-dialog.glade.h:6
+msgid "_Search for:"
+msgstr "_Търсене за: "
+
+#: ../src/find-dialog.glade.h:7
+msgid "_Wrap around"
+msgstr "_След края — от началото"
+
+#: ../src/mate-terminal.schemas.in.h:1
+msgid ""
+"A subset of possible encodings are presented in the Encoding submenu. This "
+"is a list of encodings to appear there. The special encoding name \"current"
+"\" means to display the encoding of the current locale."
+msgstr ""
+"Подмножество от възможните кодови таблици има в подменюто „Кодова таблица“. "
+"Това е списък с кодовите таблици, които да се появяват там. Специалното име "
+"на таблица „current“ означава да се използва кодовата таблица на текущия "
+"локал."
+
+#: ../src/mate-terminal.schemas.in.h:2
+msgid ""
+"A value between 0.0 and 1.0 indicating how much to darken the background "
+"image. 0.0 means no darkness, 1.0 means fully dark. In the current "
+"implementation, there are only two levels of darkness possible, so the "
+"setting behaves as a boolean, where 0.0 disables the darkening effect."
+msgstr ""
+"Стойност между 0.0 и 1.0 определя колко да бъде затъмнено фоновото "
+"изображение. 0.0 означава липса на затъмняване, 1.0 е за пълно затъмняване. "
+"В текущата реализация има само две възможни нива на затъмняване, затова "
+"стойността се държи като булева стойност — 0.0 изключва ефекта на "
+"затъмняване."
+
+#: ../src/mate-terminal.schemas.in.h:3
+msgid ""
+"Accelerator key to detach current tab. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keybinding for this action."
+msgstr ""
+"Клавишна комбинация за отделяне на текущия подпрозорец. Изразена е като низ "
+"в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:4
+msgid ""
+"Accelerator key to move the current tab to the left. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr ""
+"Клавишна комбинация за преместване на текущия подпрозорец наляво. Изразена е "
+"като низ в същия формат използван за ресурсните файлове използвани от GTK+. "
+"Ако зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:5
+msgid ""
+"Accelerator key to move the current tab to the right. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr ""
+"Клавишна комбинация за преместване на текущия подпрозорец надясно. Изразена "
+"е като низ в същия формат използван за ресурсните файлове използвани от GTK"
+"+. Ако зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:6
+msgid "Accelerator to detach current tab."
+msgstr "Клавишна комбинация за отделяне на текущия подпрозорец."
+
+#: ../src/mate-terminal.schemas.in.h:7
+msgid "Accelerator to move the current tab to the left."
+msgstr "Клавишна комбинация за преместване на текущия подпрозорец наляво."
+
+#: ../src/mate-terminal.schemas.in.h:8
+msgid "Accelerator to move the current tab to the right."
+msgstr "Клавишна комбинация за преместване на текущия подпрозорец надясно."
+
+#: ../src/mate-terminal.schemas.in.h:9
+msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Име на шрифт на Pango. Примери: „Sans 12“ или „Monospace Bold 14“."
+
+#: ../src/mate-terminal.schemas.in.h:10
+msgid "Background image"
+msgstr "Изображение за фон"
+
+#: ../src/mate-terminal.schemas.in.h:11
+msgid "Background type"
+msgstr "Вид на фона"
+
+#: ../src/mate-terminal.schemas.in.h:12
+msgid "Characters that are considered \"part of a word\""
+msgstr "Знаци, които се считат за част от дума"
+
+#: ../src/mate-terminal.schemas.in.h:13
+msgid "Custom command to use instead of the shell"
+msgstr ""
+"Потребителска команда, която да се използва вместо стандартната обвивка"
+
+#: ../src/mate-terminal.schemas.in.h:14
+msgid "Default"
+msgstr "Стандартен цвят"
+
+#: ../src/mate-terminal.schemas.in.h:15
+msgid "Default color of bold text in the terminal"
+msgstr "Стандартен цвят за получерния текст в терминала"
+
+#: ../src/mate-terminal.schemas.in.h:16
+msgid ""
+"Default color of bold text in the terminal, as a color specification (can be "
+"HTML-style hex digits, or a color name such as \"red\"). This is ignored if "
+"bold_color_same_as_fg is true."
+msgstr ""
+"Стандартен цвят на получерния текст в терминала (може да е цвят за HTML, "
+"шестнадесетично представен или име на цвета, например „red“). Стойността не "
+"се ползва, ако ключът „bold_color_same_as_fg“ е истина."
+
+#: ../src/mate-terminal.schemas.in.h:17
+msgid "Default color of terminal background"
+msgstr "Стандартен цвят за фона на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:18
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Стандартен цвят на фона на терминала (може да е цвят за HTML, "
+"шестнадесетично представен или име на цвета, например „red“)."
+
+#: ../src/mate-terminal.schemas.in.h:19
+msgid "Default color of text in the terminal"
+msgstr "Стандартен цвят за текста в терминала"
+
+#: ../src/mate-terminal.schemas.in.h:20
+msgid ""
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Стандартен цвят на текста в терминала (може да е цвят за HTML, "
+"шестнадесетично представен или име на цвета, например „red“)."
+
+#: ../src/mate-terminal.schemas.in.h:21
+msgid "Default number of columns"
+msgstr "Стандартен брой колони"
+
+#: ../src/mate-terminal.schemas.in.h:22
+msgid "Default number of rows"
+msgstr "Стандартен брой редове"
+
+#: ../src/mate-terminal.schemas.in.h:23
+msgid "Effect of the Backspace key"
+msgstr "Действие при натискане на клавиша „Backspace“"
+
+#: ../src/mate-terminal.schemas.in.h:24
+msgid "Effect of the Delete key"
+msgstr "Действие при натискане на клавиша „Delete“"
+
+#: ../src/mate-terminal.schemas.in.h:25
+msgid "Filename of a background image."
+msgstr "Файл на фоновото изображение."
+
+#: ../src/mate-terminal.schemas.in.h:26
+msgid "Font"
+msgstr "Шрифт"
+
+#. Translators: S/Key is the name of an application, so it should
+#. not be translated.
+#: ../src/mate-terminal.schemas.in.h:29
+msgid "Highlight S/Key challenges"
+msgstr "Осветяване на предизвикателствата на S/Key"
+
+#: ../src/mate-terminal.schemas.in.h:30
+msgid "How much to darken the background image"
+msgstr "Степен на затъмняване на фоновото изображение"
+
+#: ../src/mate-terminal.schemas.in.h:31
+msgid "Human-readable name of the profile"
+msgstr "Разбираемо за човек име на профила"
+
+#: ../src/mate-terminal.schemas.in.h:32
+msgid "Human-readable name of the profile."
+msgstr "Разбираемо за човек име на профила."
+
+#: ../src/mate-terminal.schemas.in.h:33
+msgid "Icon for terminal window"
+msgstr "Икона за прозореца на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:34
+msgid "Icon to use for tabs/windows containing this profile."
+msgstr "Икона за прозорци и подпрозорци с този профил."
+
+#: ../src/mate-terminal.schemas.in.h:35
+msgid ""
+"If the application in the terminal sets the title (most typically people "
+"have their shell set up to do this), the dynamically-set title can erase the "
+"configured title, go before it, go after it, or replace it. The possible "
+"values are \"replace\", \"before\", \"after\", and \"ignore\"."
+msgstr ""
+"Ако програмата в терминала задава заглавието (обикновено хората са настроили "
+"програмите да правят това), динамично задаваното заглавие може да изтрие "
+"стандартното, да отиде пред него, да отиде след него или да го замени. "
+"Възможните стойности са „replace“, „before“, „after“, и „ignore“."
+
+#: ../src/mate-terminal.schemas.in.h:36
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr ""
+"Ако е истина, приложенията в терминала могат да използват получер текст."
+
+#: ../src/mate-terminal.schemas.in.h:37
+msgid ""
+"If true, boldface text will be rendered using the same color as normal text."
+msgstr "Ако е истина, получерният текст ще се извежда с цвета на нормалния."
+
+#: ../src/mate-terminal.schemas.in.h:38
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr ""
+"Ако е истина, програмите няма да издават звуци когато изпращат екранираща "
+"последователност за терминалния звънец."
+
+#: ../src/mate-terminal.schemas.in.h:39
+msgid ""
+"If true, newly created terminal windows will have custom size specified by "
+"default_size_columns and default_size_rows."
+msgstr ""
+"Ако е истина, новоотворените прозорци ще имат размера указан от ключовете "
+"„default_size_columns“ (колони) и „default_size_rows“ (редове)."
+
+#: ../src/mate-terminal.schemas.in.h:40
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr "Ако е истина, натискането на клавиш прелиства до най-долу."
+
+#: ../src/mate-terminal.schemas.in.h:41
+msgid ""
+"If true, scroll the background image with the foreground text; if false, "
+"keep the image in a fixed position and scroll the text above it."
+msgstr ""
+"Ако е истина, фоновото изображение се движи с текста, ако е лъжа — текстът "
+"се движи върху неподвижното фоново изображение."
+
+#: ../src/mate-terminal.schemas.in.h:42
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+"Ако е истина, броят редове за придвижване назад е неограничен. Историята се "
+"запазва във временен файл, което може да доведе до свършване на дисковото "
+"пространство при извеждането на много информация в терминала."
+
+#: ../src/mate-terminal.schemas.in.h:43
+msgid ""
+"If true, the command inside the terminal will be launched as a login shell. "
+"(argv[0] will have a hyphen in front of it.)"
+msgstr ""
+"Ако е истина, командата в терминала ще се изпълни като обвивка с влизане в "
+"системата (пред argv[0] ще има тире.)."
+
+#: ../src/mate-terminal.schemas.in.h:44
+msgid ""
+"If true, the system login records utmp and wtmp will be updated when the "
+"command inside the terminal is launched."
+msgstr ""
+"Ако е истина, дневниците за utmp и wtmp ще бъдат обновени при изпълнението "
+"на командата в терминала."
+
+#: ../src/mate-terminal.schemas.in.h:45
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ако е истина, терминалът ще използва стандартният шрифт на графичната среда, "
+"ако шрифтът е равноширок. В противен случай ще се полза най-близкият шрифт."
+
+#: ../src/mate-terminal.schemas.in.h:46
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr ""
+"Ако е истина, терминалът ще използва цветовата схема на работния плот, а не "
+"тази на потребителя."
+
+#: ../src/mate-terminal.schemas.in.h:47
+msgid ""
+"If true, the value of the custom_command setting will be used in place of "
+"running a shell."
+msgstr ""
+"Ако е истина, вместо стандартната обвивка ще се изпълни стойността на "
+"„custom_command“."
+
+#: ../src/mate-terminal.schemas.in.h:48
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr ""
+"Ако е истина, при изписване на текст екранът ще се прелиства до най-долу."
+
+#: ../src/mate-terminal.schemas.in.h:49
+msgid ""
+"Keyboard shortcut key for bringing up the dialog for profile creation. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no "
+"keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за показване на диалога за създаването на профил. "
+"Изразена е като низ в същия формат използван за ресурсните файлове "
+"използвани от GTK+. Ако искате да зададете „disabled“, то няма да имате "
+"клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:50
+msgid ""
+"Keyboard shortcut key for closing a tab. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за затварянето на подпрозорец. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:51
+msgid ""
+"Keyboard shortcut key for closing a window. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за затваряне на прозорец. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:52
+msgid ""
+"Keyboard shortcut key for copying selected text to the clipboard. Expressed "
+"as a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr ""
+"Клавишна комбинация за копиране на избрания текст в буфера за обмен. "
+"Изразена е като низ в същия формат използван за ресурсните файлове "
+"използвани от GTK+. Ако искате да зададете „disabled“, то няма да имате "
+"клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:53
+msgid ""
+"Keyboard shortcut key for launching help. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за пускане на помощта. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:54
+msgid ""
+"Keyboard shortcut key for making font larger. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за увеличаване на шрифта. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:55
+msgid ""
+"Keyboard shortcut key for making font smaller. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за намаляване на шрифта. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:56
+msgid ""
+"Keyboard shortcut key for making font the normal size. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за задаване на нормална големина на шрифта. Изразена е "
+"като низ в същия формат използван за ресурсните файлове използвани от GTK+. "
+"Ако искате да зададете „disabled“, то няма да имате клавишна комбинация за "
+"тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:57
+msgid ""
+"Keyboard shortcut key for opening a new tab. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за отваряне на нов подпрозорец. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:58
+msgid ""
+"Keyboard shortcut key for opening a new window. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за отваряне на нов прозорец. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:59
+msgid ""
+"Keyboard shortcut key for pasting the contents of the clipboard into the "
+"terminal. Expressed as a string in the same format used for GTK+ resource "
+"files. If you set the option to the special string \"disabled\", then there "
+"will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за поставяне на съдържанието на буфера за обмен в "
+"терминала. Изразена е като низ в същия формат използван за ресурсните "
+"файлове използвани от GTK+. Ако искате да зададете „disabled“, то няма да "
+"имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:60
+msgid ""
+"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 1. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:61
+msgid ""
+"Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 10. Изразена е като низ "
+"в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:62
+msgid ""
+"Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 11. Изразена е като низ "
+"в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:63
+msgid ""
+"Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 12. Изразена е като низ "
+"в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:64
+msgid ""
+"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 2. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:65
+msgid ""
+"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 3. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:66
+msgid ""
+"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 4. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:67
+msgid ""
+"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 5. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:68
+msgid ""
+"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 6. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:69
+msgid ""
+"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 7. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:70
+msgid ""
+"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 8. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:71
+msgid ""
+"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this action."
+msgstr ""
+"Клавишна комбинация за превключване към подпрозорец 9. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:72
+msgid ""
+"Keyboard shortcut key for toggling full screen mode. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за пускането на режим „На цял екран“. Изразена е като "
+"низ в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:73
+msgid ""
+"Keyboard shortcut key to reset and clear the terminal. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за изчистване на терминала. Изразена е като низ в същия "
+"формат използван за ресурсните файлове използвани от GTK+. Ако искате да "
+"зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:74
+msgid ""
+"Keyboard shortcut key to reset the terminal. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за рестартиране на терминала. Изразена е като низ в "
+"същия формат използван за ресурсните файлове използвани от GTK+. Ако искате "
+"да зададете „disabled“, то няма да имате клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:75
+msgid ""
+"Keyboard shortcut key to save the current tab contents to a file. Expressed "
+"as a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr ""
+"Клавишна комбинация за запазване на съдържанието на текущия подпрозорец във "
+"файл. Изразена е като низ в същия формат използван за ресурсните файлове "
+"използвани от GTK+. Ако искате да зададете „disabled“, то няма да имате "
+"клавишна комбинация за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:76
+msgid ""
+"Keyboard shortcut key to set the terminal title. Expressed as a string in "
+"the same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за задаване на заглавие на терминала. Изразена е като "
+"низ в същия формат използван за ресурсните файлове използвани от GTK+. Ако "
+"искате да зададете „disabled“, то няма да имате клавишна комбинация за тази "
+"опция."
+
+#: ../src/mate-terminal.schemas.in.h:77
+msgid ""
+"Keyboard shortcut key to switch to the next tab. Expressed as a string in "
+"the same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за превключване към следващия подпрозорец. Изразена е "
+"като низ в същия формат използван за ресурсните файлове използвани от GTK+. "
+"Ако искате да зададете „disabled“, то няма да имате клавишна комбинация за "
+"тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:78
+msgid ""
+"Keyboard shortcut key to switch to the previous tab. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+"Клавишна комбинация за превключване към предишния подпрозорец. Изразена е "
+"като низ в същия формат използван за ресурсните файлове използвани от GTK+. "
+"Ако искате да зададете „disabled“, то няма да имате клавишна комбинация за "
+"тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:79
+msgid ""
+"Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
+"a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr ""
+"Клавишна комбинация за настройване видимостта на лентата с менюто. Изразена "
+"е като низ в същия формат използван за ресурсните файлове използвани от GTK"
+"+. Ако искате да зададете „disabled“, то няма да имате клавишна комбинация "
+"за тази опция."
+
+#: ../src/mate-terminal.schemas.in.h:80
+msgid "Keyboard shortcut to close a tab"
+msgstr "Клавишна комбинация за затваряне на подпрозорец"
+
+#: ../src/mate-terminal.schemas.in.h:81
+msgid "Keyboard shortcut to close a window"
+msgstr "Клавишна комбинация за затваряне на прозорец"
+
+#: ../src/mate-terminal.schemas.in.h:82
+msgid "Keyboard shortcut to copy text"
+msgstr "Клавишна комбинация за копиране на текст"
+
+#: ../src/mate-terminal.schemas.in.h:83
+msgid "Keyboard shortcut to create a new profile"
+msgstr "Клавишна комбинация за създаване на нов профил"
+
+#: ../src/mate-terminal.schemas.in.h:84
+msgid "Keyboard shortcut to launch help"
+msgstr "Клавишна комбинация за зареждане на помощта"
+
+#: ../src/mate-terminal.schemas.in.h:85
+msgid "Keyboard shortcut to make font larger"
+msgstr "Клавишна комбинация за увеличаване на шрифта"
+
+#: ../src/mate-terminal.schemas.in.h:86
+msgid "Keyboard shortcut to make font normal-size"
+msgstr "Клавишна комбинация за нормална големина на шрифта"
+
+#: ../src/mate-terminal.schemas.in.h:87
+msgid "Keyboard shortcut to make font smaller"
+msgstr "Клавишна комбинация за намаляване на шрифта"
+
+#: ../src/mate-terminal.schemas.in.h:88
+msgid "Keyboard shortcut to open a new tab"
+msgstr "Клавишна комбинация за отваряне на нов подпрозорец"
+
+#: ../src/mate-terminal.schemas.in.h:89
+msgid "Keyboard shortcut to open a new window"
+msgstr "Клавишна комбинация за отваряне на нов прозорец"
+
+#: ../src/mate-terminal.schemas.in.h:90
+msgid "Keyboard shortcut to paste text"
+msgstr "Клавишна комбинация за поставяне на текст"
+
+#: ../src/mate-terminal.schemas.in.h:91
+msgid "Keyboard shortcut to reset and clear the terminal"
+msgstr "Клавишна комбинация за изчистване на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:92
+msgid "Keyboard shortcut to reset the terminal"
+msgstr "Клавишна комбинация за презареждане на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:93
+msgid "Keyboard shortcut to save the current tab contents to file"
+msgstr ""
+"Клавишна комбинация за запазването на съдържанието на подпрозореца във файл"
+
+#: ../src/mate-terminal.schemas.in.h:94
+msgid "Keyboard shortcut to set the terminal title"
+msgstr "Клавишна комбинация за задаване заглавие на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:95
+msgid "Keyboard shortcut to switch to tab 1"
+msgstr "Клавишна комбинация за преход към подпрозорец 1"
+
+#: ../src/mate-terminal.schemas.in.h:96
+msgid "Keyboard shortcut to switch to tab 10"
+msgstr "Клавишна комбинация за преход към подпрозорец 10"
+
+#: ../src/mate-terminal.schemas.in.h:97
+msgid "Keyboard shortcut to switch to tab 11"
+msgstr "Клавишна комбинация за преход към подпрозорец 11"
+
+#: ../src/mate-terminal.schemas.in.h:98
+msgid "Keyboard shortcut to switch to tab 12"
+msgstr "Клавишна комбинация за преход към подпрозорец 12"
+
+#: ../src/mate-terminal.schemas.in.h:99
+msgid "Keyboard shortcut to switch to tab 2"
+msgstr "Клавишна комбинация за преход към подпрозорец 2"
+
+#: ../src/mate-terminal.schemas.in.h:100
+msgid "Keyboard shortcut to switch to tab 3"
+msgstr "Клавишна комбинация за преход към подпрозорец 3"
+
+#: ../src/mate-terminal.schemas.in.h:101
+msgid "Keyboard shortcut to switch to tab 4"
+msgstr "Клавишна комбинация за преход към подпрозорец 4"
+
+#: ../src/mate-terminal.schemas.in.h:102
+msgid "Keyboard shortcut to switch to tab 5"
+msgstr "Клавишна комбинация за преход към подпрозорец 5"
+
+#: ../src/mate-terminal.schemas.in.h:103
+msgid "Keyboard shortcut to switch to tab 6"
+msgstr "Клавишна комбинация за преход към подпрозорец 6"
+
+#: ../src/mate-terminal.schemas.in.h:104
+msgid "Keyboard shortcut to switch to tab 7"
+msgstr "Клавишна комбинация за преход към подпрозорец 7"
+
+#: ../src/mate-terminal.schemas.in.h:105
+msgid "Keyboard shortcut to switch to tab 8"
+msgstr "Клавишна комбинация за преход към подпрозорец 8"
+
+#: ../src/mate-terminal.schemas.in.h:106
+msgid "Keyboard shortcut to switch to tab 9"
+msgstr "Клавишна комбинация за преход към подпрозорец 9"
+
+#: ../src/mate-terminal.schemas.in.h:107
+msgid "Keyboard shortcut to switch to the next tab"
+msgstr "Клавишна комбинация за преход към следващия подпрозорец"
+
+#: ../src/mate-terminal.schemas.in.h:108
+msgid "Keyboard shortcut to switch to the previous tab"
+msgstr "Клавишна комбинация за преход към предишния подпрозорец"
+
+#: ../src/mate-terminal.schemas.in.h:109
+msgid "Keyboard shortcut to toggle full screen mode"
+msgstr "Клавишна комбинация за превключване в и от режим „На цял екран“"
+
+#: ../src/mate-terminal.schemas.in.h:110
+msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgstr "Клавишна комбинация за превключване видимостта на менюто"
+
+#: ../src/mate-terminal.schemas.in.h:111
+msgid "List of available encodings"
+msgstr "Списък на наличните кодирания"
+
+#: ../src/mate-terminal.schemas.in.h:112
+msgid "List of profiles"
+msgstr "Списък на профилите"
+
+#: ../src/mate-terminal.schemas.in.h:113
+msgid ""
+"List of profiles known to mate-terminal. The list contains strings naming "
+"subdirectories relative to /apps/mate-terminal/profiles."
+msgstr ""
+"Списък с профилите известни на mate-terminal. Съдържа имена на подпапки на "
+"папката /apps/mate-terminal/profiles."
+
+#: ../src/mate-terminal.schemas.in.h:114
+msgid ""
+"Normally you can access the menubar with F10. This can also be customized "
+"via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
+"standard menubar accelerator to be disabled."
+msgstr ""
+"Можете да достигате до лентата с инструменти чрез „F10“. Това може да се "
+"променя чрез файла gtkrc (gtk-menu-bar-accel = „каквото_трябва“). Тази "
+"настройка изключва клавишната комбинация за достъп до лентата с инструменти."
+
+#: ../src/mate-terminal.schemas.in.h:115
+msgid ""
+"Number of columns in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr ""
+"Брой колони в новоотворените прозорци. Има значение, само ако ключът "
+"„use_custom_default_size“ е истина."
+
+#: ../src/mate-terminal.schemas.in.h:116
+msgid "Number of lines to keep in scrollback"
+msgstr "Брой редове за придвижване назад"
+
+#: ../src/mate-terminal.schemas.in.h:117
+msgid ""
+"Number of rows in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr ""
+"Брой редове в новоотворените прозорци. Има значение, само ако ключът "
+"„use_custom_default_size“ е истина."
+
+#: ../src/mate-terminal.schemas.in.h:118
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are "
+"discarded. If scrollback_unlimited is true, this value is ignored."
+msgstr ""
+"Броят на редовете, които да се пазят в паметта за придвижване назад. Можете "
+"да се връщате обратно с този брой редове. При надвишаването на броя най-"
+"старите редове се изтриват от паметта. Тази стойност не се ползва, ако "
+"ключът „scrollback_unlimited“ е истина."
+
+#: ../src/mate-terminal.schemas.in.h:119
+msgid "Palette for terminal applications"
+msgstr "Палитра за програмите в терминала"
+
+#. Translators: S/Key is the name of an application, so it should
+#. not be translated.
+#: ../src/mate-terminal.schemas.in.h:122
+msgid ""
+"Popup a dialog when an S/Key challenge response query is detected and "
+"clicked on. Typing a password into the dialog will send it to the terminal."
+msgstr ""
+"Показване на диалогова кутия при засичане на запитване за отговор на "
+"предизвикателство на S/Key. Паролата ще бъде пратена към терминала."
+
+#: ../src/mate-terminal.schemas.in.h:123
+msgid "Position of the scrollbar"
+msgstr "Разположение на плъзгача"
+
+#: ../src/mate-terminal.schemas.in.h:124
+msgid ""
+"Possible values are \"close\" to close the terminal, and \"restart\" to "
+"restart the command."
+msgstr ""
+"Възможните стойности са „close“ за затваряне на терминала и „restart“ за "
+"повторно изпълнение на командата."
+
+#: ../src/mate-terminal.schemas.in.h:125
+msgid ""
+"Profile to be used when opening a new window or tab. Must be in profile_list."
+msgstr ""
+"Профил, който да се използва, при отваряне на нов прозорец или подпрозорец. "
+"Трябва да е в списъка с профилите („profile_list“)."
+
+#: ../src/mate-terminal.schemas.in.h:126
+msgid "Profile to use for new terminals"
+msgstr "Профил за новите терминали"
+
+#: ../src/mate-terminal.schemas.in.h:127
+msgid "Run this command in place of the shell, if use_custom_command is true."
+msgstr ""
+"изпълняване на тази команда вместо обвивка, ако е зададено "
+"use_custom_command."
+
+#: ../src/mate-terminal.schemas.in.h:128
+msgid ""
+"Sets what code the backspace key generates. Possible values are \"ascii-del"
+"\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII "
+"BS character), \"escape-sequence\" for the escape sequence typically bound "
+"to backspace or delete. \"ascii-del\" is normally considered the correct "
+"setting for the Backspace key."
+msgstr ""
+"Задава кода, който се генерира при натискането на клавиша за обратно триене "
+"(backspace). Възможните стойности са „ascii-del“ за символа ASCII DEL, "
+"„control-h“ за символа Control-H (ASCII BS), „escape-sequence“ за "
+"екраниращата последователност, която най-често се задава за нормално или "
+"обратно триене. Обикновено се счита, че правилната настройка е „ascii-del“."
+
+#: ../src/mate-terminal.schemas.in.h:129
+msgid ""
+"Sets what code the delete key generates. Possible values are \"ascii-del\" "
+"for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
+"character), \"escape-sequence\" for the escape sequence typically bound to "
+"backspace or delete. \"escape-sequence\" is normally considered the correct "
+"setting for the Delete key."
+msgstr ""
+"Задава кода, който се генерира при натискането на клавиша за триене "
+"(delete). Възможните стойности са „ascii-del“ за символа ASCII DEL, „control-"
+"h“ за символа Control-H (ASCII BS), „escape-sequence“ за екраниращата "
+"последователност, която най-често се задава за нормално или обратно триене. "
+"Обикновено се счита, че правилната настройка е „escape-sequence“."
+
+#: ../src/mate-terminal.schemas.in.h:131
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr ""
+"Терминалите имат палитра с 16 цвята, която приложенията могат да използват. "
+"Това е тази палитра, цветовете са разделени с двоеточие. Имената на "
+"цветовете трябва да бъдат в шестнадесетичен формат, например „#FF00FF“"
+
+#: ../src/mate-terminal.schemas.in.h:132
+msgid "The cursor appearance"
+msgstr "Изглед на курсора"
+
+#: ../src/mate-terminal.schemas.in.h:133
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr ""
+"Възможните стойности са „block“ (правоъгълен блок), „ibeam“ (вертикална "
+"линия) или „underline“ за (долна черта)."
+
+#: ../src/mate-terminal.schemas.in.h:134
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr ""
+"Възможните стойности са „system“ — настройките на средата за премигването на "
+"курсора, „on“ (с мигане) и „off“ (без мигане) за изрично указване на режима."
+
+#: ../src/mate-terminal.schemas.in.h:135
+msgid "Title for terminal"
+msgstr "Заглавие за терминала"
+
+#: ../src/mate-terminal.schemas.in.h:136
+msgid ""
+"Title to display for the terminal window or tab. This title may be replaced "
+"by or combined with the title set by the application inside the terminal, "
+"depending on the title_mode setting."
+msgstr ""
+"Заглавие на прозорец на терминала или подпрозорец. Това заглавие може да се "
+"замени или да включва заглавие, зададено от приложението, работещо в "
+"терминала, в зависимост от настройката title_mode."
+
+#: ../src/mate-terminal.schemas.in.h:137
+msgid ""
+"True if the menubar should be shown in new windows, for windows/tabs with "
+"this profile."
+msgstr ""
+"Ако е зададено, менюто е видимо в новите прозорци, за прозорци и подпрозорци "
+"с този профил."
+
+#: ../src/mate-terminal.schemas.in.h:138
+msgid ""
+"Type of terminal background. May be \"solid\" for a solid color, \"image\" "
+"for an image, or \"transparent\" for either real transparency if a "
+"compositing window manager is running, or pseudo-transparency otherwise."
+msgstr ""
+"Тип на фона на терминала. Може да бъде „solid“ за плътен цвят, „image“ за "
+"изображение, или „transperent“ за истинска прозрачност, ако е наличен "
+"мениджър за наслагване, или за псевдо прозрачност, ако такъв липсва."
+
+#: ../src/mate-terminal.schemas.in.h:139
+msgid "What to do with dynamic title"
+msgstr "Начин на съставяне на динамичното заглавие"
+
+#: ../src/mate-terminal.schemas.in.h:140
+msgid "What to do with the terminal when the child command exits"
+msgstr "Поведение на терминала при приключване на изпълняваната команда"
+
+#: ../src/mate-terminal.schemas.in.h:141
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
+"a range) should be the first character given."
+msgstr ""
+"Последователностите, които съдържат тези знаци се считат за една дума при "
+"избирането на текст по думи. Обхватите могат да се записват разделени с "
+"тире: „А-Я“. Ако тирето също се счита за част от дума, то трябва да се "
+"зададе като първи знак."
+
+#: ../src/mate-terminal.schemas.in.h:142
+msgid ""
+"Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
+"and \"hidden\"."
+msgstr ""
+"Местоположение на плъзгача на терминала. Възможностите са „left“ (отляво), "
+"„right“ (отдясно) и „hidden“ (скрит)."
+
+#: ../src/mate-terminal.schemas.in.h:143
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Дали да се пазят неограничен брой редове за придвижване назад"
+
+#: ../src/mate-terminal.schemas.in.h:144
+msgid "Whether bold text should use the same color as normal text"
+msgstr "Дали получерният текст да е с цвета на нормалния"
+
+#: ../src/mate-terminal.schemas.in.h:145
+msgid "Whether the menubar has access keys"
+msgstr "Дали за менюто да има клавиши за достъп"
+
+#: ../src/mate-terminal.schemas.in.h:146
+msgid "Whether the standard GTK shortcut for menubar access is enabled"
+msgstr "Дали стандартните клавишни комбинации на GTK за менюта са разрешени"
+
+#: ../src/mate-terminal.schemas.in.h:147
+msgid "Whether to allow bold text"
+msgstr "Позволяване на получер текст"
+
+#: ../src/mate-terminal.schemas.in.h:148
+msgid ""
+"Whether to ask for confirmation when closing a terminal window which has "
+"more than one open tab."
+msgstr ""
+"Дали да се пита при затварянето на прозорец на терминала с повече от един "
+"подпрозорец."
+
+#: ../src/mate-terminal.schemas.in.h:149
+msgid "Whether to ask for confirmation when closing terminal windows"
+msgstr "Дали да се пита при затваряне на прозорците на терминала"
+
+#: ../src/mate-terminal.schemas.in.h:150
+msgid "Whether to blink the cursor"
+msgstr "Дали да курсорът да мига"
+
+#: ../src/mate-terminal.schemas.in.h:151
+msgid ""
+"Whether to have Alt+letter access keys for the menubar. They may interfere "
+"with some applications run inside the terminal so it's possible to turn them "
+"off."
+msgstr ""
+"Дали да се разрешават клавишните комбинации за менюто „Alt+буква“. Те може "
+"да пречат на някои програми, работещи в терминала, затова има възможност да "
+"бъдат изключвани."
+
+#: ../src/mate-terminal.schemas.in.h:152
+msgid "Whether to launch the command in the terminal as a login shell"
+msgstr ""
+"Дали командата в терминала да се изпълни в обвивка с влизане в системата"
+
+#: ../src/mate-terminal.schemas.in.h:153
+msgid "Whether to run a custom command instead of the shell"
+msgstr "Дали да се изпълнява потребителска команда вместо обвивката"
+
+#: ../src/mate-terminal.schemas.in.h:154
+msgid "Whether to scroll background image"
+msgstr "Дали фоновото изображение да се плъзга"
+
+#: ../src/mate-terminal.schemas.in.h:155
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Дали да се отива най-долу при натискане на клавиш"
+
+#: ../src/mate-terminal.schemas.in.h:156
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Дали да се отива най-долу, когато се изпишат нови данни"
+
+#: ../src/mate-terminal.schemas.in.h:157
+msgid "Whether to show menubar in new windows/tabs"
+msgstr "Дали да се показва менюто в новите прозорци/подпрозорци"
+
+#: ../src/mate-terminal.schemas.in.h:158
+msgid "Whether to silence terminal bell"
+msgstr "Дали да се заглушава звукът от терминала"
+
+#: ../src/mate-terminal.schemas.in.h:159
+msgid "Whether to update login records when launching terminal command"
+msgstr ""
+"Дали да се обновяват журналите за влизане в системата при изпълнението на "
+"командата в терминала"
+
+#: ../src/mate-terminal.schemas.in.h:160
+msgid "Whether to use custom terminal size for new windows"
+msgstr "Дали новоотворените прозорци да са с определен стандартен размер"
+
+#: ../src/mate-terminal.schemas.in.h:161
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr ""
+"Дали да се използват цветовете от темата за графичния обект за терминала"
+
+#: ../src/mate-terminal.schemas.in.h:162
+msgid "Whether to use the system font"
+msgstr "Дали да се използва системният шрифт"
+
+#. Translators: Please note that this has to be a list of
+#. valid encodings (which are to be taken from the list in src/encoding.c).
+#. It has to include UTF-8 and the word 'current', which is not to be
+#. translated. This is provided for customization of the default encoding
+#. menu; see bug 144810 for an use case. In most cases, this should be
+#. left alone.
+#: ../src/mate-terminal.schemas.in.h:169
+msgid "[UTF-8,current]"
+msgstr "[UTF-8,current,WINDOWS-1251,ISO-8859-5]"
+
+#: ../src/keybinding-editor.glade.h:1
+msgid "Enable the _menu shortcut key (F10 by default)"
+msgstr "Изключване на клавиша за достъп до _менюто (стандартно F10)"
+
+#: ../src/keybinding-editor.glade.h:2
+msgid "Keyboard Shortcuts"
+msgstr "Клавишни комбинации"
+
+#: ../src/keybinding-editor.glade.h:3
+msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
+msgstr ""
+"_Включване на клавишните комбинации на менюто (като Alt+f за менюто Файл)"
+
+#: ../src/keybinding-editor.glade.h:4
+msgid "_Shortcut keys:"
+msgstr "_Клавишни комбинации:"
+
+#: ../src/profile-editor.c:42
+msgid "Black on light yellow"
+msgstr "Черно на светложълто"
+
+#: ../src/profile-editor.c:44
+msgid "Black on white"
+msgstr "Черно на бяло"
+
+#: ../src/profile-editor.c:46
+msgid "Gray on black"
+msgstr "Сиво на черно"
+
+#: ../src/profile-editor.c:48
+msgid "Green on black"
+msgstr "Зелено на черно"
+
+#: ../src/profile-editor.c:50
+msgid "White on black"
+msgstr "Бяло на черно"
+
+#: ../src/profile-editor.c:476
+#, c-format
+msgid "Error parsing command: %s"
+msgstr "Грешка при анализа на команда: %s"
+
+#: ../src/profile-editor.c:494
+#, c-format
+msgid "Editing Profile “%s”"
+msgstr "Редактиране на профила „%s“"
+
+#: ../src/profile-editor.c:632
+msgid "Images"
+msgstr "Изображения"
+
+#: ../src/profile-editor.c:804
+#, c-format
+msgid "Choose Palette Color %d"
+msgstr "Избор на цвят на палитрата № %d"
+
+#: ../src/profile-editor.c:808
+#, c-format
+msgid "Palette entry %d"
+msgstr "Палитра — цвят № %d"
+
+#: ../src/profile-manager.glade.h:1
+msgid "Profiles"
+msgstr "Профили"
+
+#: ../src/profile-manager.glade.h:2
+msgid "_Profile used when launching a new terminal:"
+msgstr "Профил _използван при отваряне на нов терминал:"
+
+#: ../src/profile-new-dialog.glade.h:1
+msgid "C_reate"
+msgstr "С_ъздаване"
+
+#: ../src/profile-new-dialog.glade.h:2 ../src/terminal-accels.c:139
+msgid "New Profile"
+msgstr "Нов профил"
+
+#: ../src/profile-new-dialog.glade.h:3
+msgid "Profile _name:"
+msgstr "_Име на профила:"
+
+#: ../src/profile-new-dialog.glade.h:4
+msgid "_Base on:"
+msgstr "_На основата на:"
+
+#: ../src/profile-preferences.glade.h:1
+msgid "<b>Command</b>"
+msgstr "<b>Команда</b>"
+
+#: ../src/profile-preferences.glade.h:2
+msgid "<b>Foreground, Background, Bold and Underline</b>"
+msgstr "<b>Преден план, фон, получер и подчертано</b>"
+
+#: ../src/profile-preferences.glade.h:3
+msgid "<b>Palette</b>"
+msgstr "<b>Палитра</b>"
+
+#: ../src/profile-preferences.glade.h:4
+msgid "<b>Title</b>"
+msgstr "<b>Заглавие</b>"
+
+#: ../src/profile-preferences.glade.h:5
+msgid ""
+"<small><i><b>Note:</b> Terminal applications have these colors available to "
+"them.</i></small>"
+msgstr ""
+"<small><i><b>Бележка:</b> Приложенията в терминала разполагат с тези цветове."
+"</i></small>"
+
+#: ../src/profile-preferences.glade.h:6
+msgid ""
+"<small><i><b>Note:</b> These options may cause some applications to behave "
+"incorrectly.  They are only here to allow you to work around certain "
+"applications and operating systems that expect different terminal behavior.</"
+"i></small>"
+msgstr ""
+"<small><i><b>Бележка:</b> Тези настройки могат да доведат до некоректна "
+"работа на някои програми.\n"
+"Те са тук, само за да ви позволят да работите с някои програми и операционни "
+"системи, които очакват различно поведение на терминала.</i></small>"
+
+#: ../src/profile-preferences.glade.h:7
+msgid "<small><i>Maximum</i></small>"
+msgstr "<small><i>Максимална</i></small>"
+
+#: ../src/profile-preferences.glade.h:8
+msgid "<small><i>None</i></small>"
+msgstr "<small><i>Минимална</i></small>"
+
+#: ../src/profile-preferences.glade.h:9
+msgid ""
+"Automatic\n"
+"Control-H\n"
+"ASCII DEL\n"
+"Escape sequence\n"
+"TTY Erase"
+msgstr ""
+"Автоматично\n"
+"Control-H\n"
+"ASCII DEL\n"
+"Екр-ща посл-ст\n"
+"TTY Erase"
+
+#: ../src/profile-preferences.glade.h:14
+msgid "Background"
+msgstr "Фон"
+
+#: ../src/profile-preferences.glade.h:15
+msgid "Background image _scrolls"
+msgstr "Придвижване на _фоновото изображение"
+
+#: ../src/profile-preferences.glade.h:16
+msgid ""
+"Block\n"
+"I-Beam\n"
+"Underline"
+msgstr ""
+"правоъгълен блок\n"
+"вертикална черта\n"
+"долна черта"
+
+#: ../src/profile-preferences.glade.h:19
+msgid "Bol_d color:"
+msgstr "Полу_черен цвят:"
+
+#: ../src/profile-preferences.glade.h:20
+msgid "Built-in _schemes:"
+msgstr "Вградени _схеми:"
+
+#: ../src/profile-preferences.glade.h:21
+msgid "Built-in sche_mes:"
+msgstr "_Вградени схеми:"
+
+#: ../src/profile-preferences.glade.h:22
+msgid "Choose A Terminal Font"
+msgstr "Избор на шрифт за терминала"
+
+#: ../src/profile-preferences.glade.h:23
+msgid "Choose Terminal Background Color"
+msgstr "Избор на цвета на фона на терминала"
+
+#: ../src/profile-preferences.glade.h:24
+msgid "Choose Terminal Text Color"
+msgstr "Избор на цвета на текста на терминала"
+
+#: ../src/profile-preferences.glade.h:25
+msgid "Color p_alette:"
+msgstr "_Цветова палитра:"
+
+#: ../src/profile-preferences.glade.h:26
+msgid "Colors"
+msgstr "Цветове"
+
+#: ../src/profile-preferences.glade.h:27
+msgid "Compatibility"
+msgstr "Съвместимост"
+
+#: ../src/profile-preferences.glade.h:28
+msgid "Cursor _shape:"
+msgstr "_Форма на курсора:"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.glade.h:29 ../src/extra-strings.c:73
+msgid "Custom"
+msgstr "Потребителска"
+
+#: ../src/profile-preferences.glade.h:30
+msgid "Custom co_mmand:"
+msgstr "Потребителска _команда:"
+
+#: ../src/profile-preferences.glade.h:31
+msgid "Default size:"
+msgstr "Стандартен размер:"
+
+#: ../src/profile-preferences.glade.h:32
+msgid ""
+"Exit the terminal\n"
+"Restart the command\n"
+"Hold the terminal open"
+msgstr ""
+"Изход от терминала\n"
+"Рестартиране на командата\n"
+"Оставяне на терминала отворен"
+
+#: ../src/profile-preferences.glade.h:35
+msgid "General"
+msgstr "Общи"
+
+#: ../src/profile-preferences.glade.h:36
+msgid "Image _file:"
+msgstr "_Файл с изображение:"
+
+#: ../src/profile-preferences.glade.h:37
+msgid "Initial _title:"
+msgstr "_Начално заглавие:"
+
+#: ../src/profile-preferences.glade.h:38
+msgid ""
+"On the left side\n"
+"On the right side\n"
+"Disabled"
+msgstr ""
+"отляво\n"
+"отдясно\n"
+"изключена"
+
+#: ../src/profile-preferences.glade.h:41
+msgid "Profile Editor"
+msgstr "Редактор на профили"
+
+#: ../src/profile-preferences.glade.h:42
+msgid ""
+"Replace initial title\n"
+"Append initial title\n"
+"Prepend initial title\n"
+"Keep initial title"
+msgstr ""
+"заменя първоначалното заглавие\n"
+"вмъква се преди първоначалното заглавие\n"
+"вмъква се след първоначалното заглавие\n"
+"ползване на първоначалното заглавие"
+
+#: ../src/profile-preferences.glade.h:46
+msgid "Ru_n a custom command instead of my shell"
+msgstr "Изпълнение на команда _вместо стандартната обвивка"
+
+#: ../src/profile-preferences.glade.h:47
+msgid "S_hade transparent or image background:"
+msgstr "_Непрозрачност на изображението или фона:"
+
+#: ../src/profile-preferences.glade.h:48
+msgid "Scroll on _keystroke"
+msgstr "Придвижване при _натискане на клавиш"
+
+#: ../src/profile-preferences.glade.h:49
+msgid "Scroll on _output"
+msgstr "Придвижване при _извеждане на текст"
+
+#: ../src/profile-preferences.glade.h:50
+msgid "Scroll_back:"
+msgstr "Придвижване _назад:"
+
+#: ../src/profile-preferences.glade.h:51
+msgid "Scrolling"
+msgstr "Придвижване"
+
+#: ../src/profile-preferences.glade.h:52
+msgid "Select Background Image"
+msgstr "Избор на изображение за фон"
+
+#: ../src/profile-preferences.glade.h:53
+msgid "Select-by-_word characters:"
+msgstr "Знаци, считани за _букви:"
+
+#: ../src/profile-preferences.glade.h:54
+msgid "Show _menubar by default in new terminals"
+msgstr "Показване на менюто в _новите терминали"
+
+#: ../src/profile-preferences.glade.h:55
+msgid ""
+"Tango\n"
+"Linux console\n"
+"XTerm\n"
+"Rxvt\n"
+"Custom"
+msgstr ""
+"стандартът Танго\n"
+"конзолата на Linux\n"
+"терминал XTerm\n"
+"терминал Rxvt\n"
+"потребителски настройки"
+
+#: ../src/profile-preferences.glade.h:60
+msgid "Terminal _bell"
+msgstr "З_вук на терминала"
+
+#: ../src/profile-preferences.glade.h:61
+msgid "Title and Command"
+msgstr "Заглавие и команда"
+
+#: ../src/profile-preferences.glade.h:62
+msgid "Use custom default terminal si_ze"
+msgstr "Използване на стандартен _размер на терминала"
+
+#: ../src/profile-preferences.glade.h:63
+msgid "When command _exits:"
+msgstr "_При приключване на командата:"
+
+#: ../src/profile-preferences.glade.h:64
+msgid "When terminal commands set their o_wn titles:"
+msgstr "_Кога командите задават собствено заглавие на прозореца:"
+
+#: ../src/profile-preferences.glade.h:65
+msgid "_Allow bold text"
+msgstr "Позволяване на полу_чер текст"
+
+#: ../src/profile-preferences.glade.h:66
+msgid "_Background color:"
+msgstr "Цвят на _фона:"
+
+#: ../src/profile-preferences.glade.h:67
+msgid "_Background image"
+msgstr "_Изображение за фон"
+
+#: ../src/profile-preferences.glade.h:68
+msgid "_Backspace key generates:"
+msgstr "_Клавишът „Backspace“ генерира:"
+
+#: ../src/profile-preferences.glade.h:69
+msgid "_Delete key generates:"
+msgstr "Клавишът „Delete“ _генерира:"
+
+#: ../src/profile-preferences.glade.h:70
+msgid "_Font:"
+msgstr "_Шрифт:"
+
+#: ../src/profile-preferences.glade.h:71
+msgid "_Profile name:"
+msgstr "_Име на профила:"
+
+#: ../src/profile-preferences.glade.h:72
+msgid "_Reset Compatibility Options to Defaults"
+msgstr "_Връщане настройките за съвместимост към стандартните"
+
+#: ../src/profile-preferences.glade.h:73
+msgid "_Run command as a login shell"
+msgstr "_Изпълнение на команда като обвивка при влизане"
+
+#: ../src/profile-preferences.glade.h:74
+msgid "_Same as text color"
+msgstr "_Еднакъв с цвета на текста"
+
+#: ../src/profile-preferences.glade.h:75
+msgid "_Scrollbar is:"
+msgstr "_Лентата за придвижване е:"
+
+#: ../src/profile-preferences.glade.h:76
+msgid "_Solid color"
+msgstr "_Плътен цвят"
+
+#: ../src/profile-preferences.glade.h:77
+msgid "_Text color:"
+msgstr "Цвят на _текста:"
+
+#: ../src/profile-preferences.glade.h:78
+msgid "_Transparent background"
+msgstr "Про_зрачен фон"
+
+#: ../src/profile-preferences.glade.h:79
+msgid "_Underline color:"
+msgstr "Цвят за под_чертаване:"
+
+#: ../src/profile-preferences.glade.h:80
+msgid "_Unlimited"
+msgstr "_Без ограничение"
+
+#: ../src/profile-preferences.glade.h:81
+msgid "_Update login records when command is launched"
+msgstr "_Обновяване на записите utmp/wtmp при изпълнение на команда"
+
+#: ../src/profile-preferences.glade.h:82
+msgid "_Use colors from system theme"
+msgstr "_Използване на цветовете от системната тема"
+
+#: ../src/profile-preferences.glade.h:83
+msgid "_Use the system fixed width font"
+msgstr "Използване на _системния шрифт на терминала"
+
+#: ../src/profile-preferences.glade.h:84
+msgid "columns"
+msgstr "колони"
+
+#: ../src/profile-preferences.glade.h:85
+msgid "lines"
+msgstr "реда"
+
+#: ../src/profile-preferences.glade.h:86
+msgid "rows"
+msgstr "реда"
+
+#: ../src/skey-challenge.glade.h:1
+msgid "S/Key Challenge Response"
+msgstr "Отговор към предизвикателство на S/Key"
+
+#: ../src/skey-challenge.glade.h:2
+msgid "_Password:"
+msgstr "_Парола:"
+
+#: ../src/skey-popup.c:164
+msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
+msgstr ""
+"Изглежда че текстът, който натиснахте, не е предизвикателство на S/Key."
+
+#: ../src/skey-popup.c:175
+msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
+msgstr "Изглежда че текстът, който натиснахте, не е предизвикателство на OTP."
+
+#: ../src/terminal-accels.c:135
+msgid "New Tab"
+msgstr "Нов подпрозорец"
+
+#: ../src/terminal-accels.c:137
+msgid "New Window"
+msgstr "Нов прозорец"
+
+#: ../src/terminal-accels.c:142
+msgid "Save Contents"
+msgstr "Запазване на съдържанието"
+
+#: ../src/terminal-accels.c:145
+msgid "Close Tab"
+msgstr "Затваряне на този подпрозорец"
+
+#: ../src/terminal-accels.c:147
+msgid "Close Window"
+msgstr "Затваряне на този прозорец"
+
+#: ../src/terminal-accels.c:153
+msgid "Copy"
+msgstr "Копиране"
+
+#: ../src/terminal-accels.c:155
+msgid "Paste"
+msgstr "Поставяне"
+
+#: ../src/terminal-accels.c:161
+msgid "Hide and Show menubar"
+msgstr "Скриване/показване на менюто"
+
+#: ../src/terminal-accels.c:163
+msgid "Full Screen"
+msgstr "Цял екран"
+
+#: ../src/terminal-accels.c:165
+msgid "Zoom In"
+msgstr "Увеличаване"
+
+#: ../src/terminal-accels.c:167
+msgid "Zoom Out"
+msgstr "Намаляване"
+
+#: ../src/terminal-accels.c:169
+msgid "Normal Size"
+msgstr "Нормален размер"
+
+#: ../src/terminal-accels.c:175 ../src/terminal-window.c:3702
+msgid "Set Title"
+msgstr "Задаване на заглавие"
+
+#: ../src/terminal-accels.c:177
+msgid "Reset"
+msgstr "Възстановяване"
+
+#: ../src/terminal-accels.c:179
+msgid "Reset and Clear"
+msgstr "Възстановяване и изчистване"
+
+#: ../src/terminal-accels.c:185
+msgid "Switch to Previous Tab"
+msgstr "Преход към предишния подпрозорец"
+
+#: ../src/terminal-accels.c:187
+msgid "Switch to Next Tab"
+msgstr "Преход към следващия подпрозорец"
+
+#: ../src/terminal-accels.c:189
+msgid "Move Tab to the Left"
+msgstr "Преместване на подпрозореца наляво"
+
+#: ../src/terminal-accels.c:191
+msgid "Move Tab to the Right"
+msgstr "Преместване на подпрозорец надясно"
+
+#: ../src/terminal-accels.c:193
+msgid "Detach Tab"
+msgstr "Отделяне на подпрозореца"
+
+#: ../src/terminal-accels.c:195
+msgid "Switch to Tab 1"
+msgstr "Преход към подпрозорец 1"
+
+#: ../src/terminal-accels.c:198
+msgid "Switch to Tab 2"
+msgstr "Преход към подпрозорец 2"
+
+#: ../src/terminal-accels.c:201
+msgid "Switch to Tab 3"
+msgstr "Преход към подпрозорец 3"
+
+#: ../src/terminal-accels.c:204
+msgid "Switch to Tab 4"
+msgstr "Преход към подпрозорец 4"
+
+#: ../src/terminal-accels.c:207
+msgid "Switch to Tab 5"
+msgstr "Преход към подпрозорец 5"
+
+#: ../src/terminal-accels.c:210
+msgid "Switch to Tab 6"
+msgstr "Преход към подпрозорец 6"
+
+#: ../src/terminal-accels.c:213
+msgid "Switch to Tab 7"
+msgstr "Преход към подпрозорец 7"
+
+#: ../src/terminal-accels.c:216
+msgid "Switch to Tab 8"
+msgstr "Преход към подпрозорец 8"
+
+#: ../src/terminal-accels.c:219
+msgid "Switch to Tab 9"
+msgstr "Преход към подпрозорец 9"
+
+#: ../src/terminal-accels.c:222
+msgid "Switch to Tab 10"
+msgstr "Преход към подпрозорец 10"
+
+#: ../src/terminal-accels.c:225
+msgid "Switch to Tab 11"
+msgstr "Преход към подпрозорец 11"
+
+#: ../src/terminal-accels.c:228
+msgid "Switch to Tab 12"
+msgstr "Преход към подпрозорец 12"
+
+#: ../src/terminal-accels.c:234
+msgid "Contents"
+msgstr "Ръководство"
+
+#: ../src/terminal-accels.c:239
+msgid "File"
+msgstr "Файл"
+
+#: ../src/terminal-accels.c:240
+msgid "Edit"
+msgstr "Редактиране"
+
+#: ../src/terminal-accels.c:241
+msgid "View"
+msgstr "Изглед"
+
+#: ../src/terminal-accels.c:243
+msgid "Tabs"
+msgstr "Подпрозорци"
+
+#: ../src/terminal-accels.c:244
+msgid "Help"
+msgstr "Помощ"
+
+#. Translators: Scrollbar is: ...
+#: ../src/terminal-accels.c:301 ../src/extra-strings.c:53
+msgid "Disabled"
+msgstr "Изключен"
+
+#: ../src/terminal-accels.c:773
+#, c-format
+msgid "The shortcut key “%s” is already bound to the “%s” action"
+msgstr "Клавишната комбинация „%s“ отговаря на действието „%s“"
+
+#: ../src/terminal-accels.c:931
+msgid "_Action"
+msgstr "_Действие"
+
+#: ../src/terminal-accels.c:950
+msgid "Shortcut _Key"
+msgstr "_Клавишна комбинация"
+
+#: ../src/terminal-app.c:486
+msgid "Click button to choose profile"
+msgstr "Натиснете за избор на профил"
+
+#: ../src/terminal-app.c:571
+msgid "Profile list"
+msgstr "Списък на профилите"
+
+#: ../src/terminal-app.c:632
+#, c-format
+msgid "Delete profile “%s”?"
+msgstr "Да бъде ли изтрит профилът „%s“?"
+
+#: ../src/terminal-app.c:648
+msgid "Delete Profile"
+msgstr "Изтриване на профил"
+
+#: ../src/terminal-app.c:1105
+#, c-format
+msgid ""
+"You already have a profile called “%s”. Do you want to create another "
+"profile with the same name?"
+msgstr ""
+"Вече съществува профил с име „%s“. Искате ли да се създаде още един профил "
+"със същото име?"
+
+#: ../src/terminal-app.c:1207
+msgid "Choose base profile"
+msgstr "Избор на основен профил"
+
+#: ../src/terminal-app.c:1824
+#, c-format
+msgid "No such profile \"%s\", using default profile\n"
+msgstr "Няма профил „%s“, ще бъде използван стандартният\n"
+
+#: ../src/terminal-app.c:1848
+#, c-format
+msgid "Invalid geometry string \"%s\"\n"
+msgstr "Грешен низ на геометрията „%s“\n"
+
+#: ../src/terminal-app.c:2026
+msgid "User Defined"
+msgstr "Определено от потребителя"
+
+#: ../src/terminal.c:544
+#, c-format
+msgid "Failed to parse arguments: %s\n"
+msgstr "Аргументите не могат да бъдат анализирани: %s\n"
+
+#: ../src/terminal-encoding.c:51 ../src/terminal-encoding.c:64
+#: ../src/terminal-encoding.c:78 ../src/terminal-encoding.c:100
+#: ../src/terminal-encoding.c:111
+msgid "Western"
+msgstr "западноевропейски"
+
+#: ../src/terminal-encoding.c:52 ../src/terminal-encoding.c:79
+#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:109
+msgid "Central European"
+msgstr "централноевропейски"
+
+#: ../src/terminal-encoding.c:53
+msgid "South European"
+msgstr "южноевропейски"
+
+#: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:62
+#: ../src/terminal-encoding.c:116
+msgid "Baltic"
+msgstr "балтийски"
+
+#: ../src/terminal-encoding.c:55 ../src/terminal-encoding.c:80
+#: ../src/terminal-encoding.c:86 ../src/terminal-encoding.c:87
+#: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:110
+msgid "Cyrillic"
+msgstr "кирилица"
+
+#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:83
+#: ../src/terminal-encoding.c:89 ../src/terminal-encoding.c:115
+msgid "Arabic"
+msgstr "арабски"
+
+#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:95
+#: ../src/terminal-encoding.c:112
+msgid "Greek"
+msgstr "гръцки"
+
+#: ../src/terminal-encoding.c:58
+msgid "Hebrew Visual"
+msgstr "еврейски, визуално"
+
+#: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:82
+#: ../src/terminal-encoding.c:98 ../src/terminal-encoding.c:114
+msgid "Hebrew"
+msgstr "иврит"
+
+#: ../src/terminal-encoding.c:60 ../src/terminal-encoding.c:81
+#: ../src/terminal-encoding.c:102 ../src/terminal-encoding.c:113
+msgid "Turkish"
+msgstr "турски"
+
+#: ../src/terminal-encoding.c:61
+msgid "Nordic"
+msgstr "скандинавски"
+
+#: ../src/terminal-encoding.c:63
+msgid "Celtic"
+msgstr "келтски"
+
+#: ../src/terminal-encoding.c:65 ../src/terminal-encoding.c:101
+msgid "Romanian"
+msgstr "румънски"
+
+#. These encodings do NOT pass-through ASCII, so are always rejected.
+#. * FIXME: why are they in this table; or rather why do we need
+#. * the ASCII pass-through requirement?
+#.
+#: ../src/terminal-encoding.c:66 ../src/terminal-encoding.c:123
+#: ../src/terminal-encoding.c:124 ../src/terminal-encoding.c:125
+#: ../src/terminal-encoding.c:126
+msgid "Unicode"
+msgstr "Уникод"
+
+#: ../src/terminal-encoding.c:67
+msgid "Armenian"
+msgstr "арменски"
+
+#: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:69
+#: ../src/terminal-encoding.c:73
+msgid "Chinese Traditional"
+msgstr "традиционен китайски"
+
+#: ../src/terminal-encoding.c:70
+msgid "Cyrillic/Russian"
+msgstr "кирилица (Русия)"
+
+#: ../src/terminal-encoding.c:71 ../src/terminal-encoding.c:84
+#: ../src/terminal-encoding.c:104
+msgid "Japanese"
+msgstr "японски"
+
+#: ../src/terminal-encoding.c:72 ../src/terminal-encoding.c:85
+#: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:127
+msgid "Korean"
+msgstr "корейски"
+
+#: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:75
+#: ../src/terminal-encoding.c:76
+msgid "Chinese Simplified"
+msgstr "опростен китайски"
+
+#: ../src/terminal-encoding.c:77
+msgid "Georgian"
+msgstr "грузински"
+
+#: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:103
+msgid "Cyrillic/Ukrainian"
+msgstr "кирилица (Украйна)"
+
+#: ../src/terminal-encoding.c:91
+msgid "Croatian"
+msgstr "хърватски"
+
+#: ../src/terminal-encoding.c:93
+msgid "Hindi"
+msgstr "хинди"
+
+#: ../src/terminal-encoding.c:94
+msgid "Persian"
+msgstr "персийски"
+
+#: ../src/terminal-encoding.c:96
+msgid "Gujarati"
+msgstr "гуджарати"
+
+#: ../src/terminal-encoding.c:97
+msgid "Gurmukhi"
+msgstr "гурмуки"
+
+#: ../src/terminal-encoding.c:99
+msgid "Icelandic"
+msgstr "исландски"
+
+#: ../src/terminal-encoding.c:105 ../src/terminal-encoding.c:108
+#: ../src/terminal-encoding.c:117
+msgid "Vietnamese"
+msgstr "виетнамски"
+
+#: ../src/terminal-encoding.c:106
+msgid "Thai"
+msgstr "тайландски"
+
+#: ../src/terminal-encoding.c:503 ../src/terminal-encoding.c:528
+msgid "_Description"
+msgstr "_Описание"
+
+#: ../src/terminal-encoding.c:512 ../src/terminal-encoding.c:537
+msgid "_Encoding"
+msgstr "_Кодова таблица"
+
+#: ../src/terminal-encoding.c:595
+msgid "Current Locale"
+msgstr "Текущ локал"
+
+#: ../src/terminal-options.c:175
+#, c-format
+msgid ""
+"Option \"%s\" is no longer supported in this version of mate-terminal; you "
+"might want to create a profile with the desired setting, and use the new '--"
+"profile' option\n"
+msgstr ""
+"Опцията „%s“ не се поддържа в тази версия на mate-terminal. Можете да "
+"създадете профил с желаните настройки и да използвате новата опция „--"
+"profile“\n"
+
+#: ../src/terminal-options.c:188 ../src/terminal-window.c:3929
+msgid "MATE Terminal"
+msgstr "Терминалът на MATE"
+
+#: ../src/terminal-options.c:208
+#, c-format
+msgid "Argument to \"%s\" is not a valid command: %s"
+msgstr "Аргументът на „%s“ не е валидна команда: %s"
+
+#: ../src/terminal-options.c:343
+msgid "Two roles given for one window"
+msgstr "Дадени са две роли на един прозорец"
+
+#: ../src/terminal-options.c:364 ../src/terminal-options.c:397
+#, c-format
+msgid "\"%s\" option given twice for the same window\n"
+msgstr "Опцията „%s“ е зададена повече от веднъж за един и същи прозорец\n"
+
+#: ../src/terminal-options.c:596
+#, c-format
+msgid "\"%s\" is not a valid zoom factor"
+msgstr "„%s“ е грешен коефициент на увеличение"
+
+#: ../src/terminal-options.c:603
+#, c-format
+msgid "Zoom factor \"%g\" is too small, using %g\n"
+msgstr "Увеличението „%g“ е прекалено малко, използва се %g\n"
+
+#: ../src/terminal-options.c:611
+#, c-format
+msgid "Zoom factor \"%g\" is too large, using %g\n"
+msgstr "Увеличението „%g“ е прекалено голямо, използва се %g\n"
+
+#: ../src/terminal-options.c:646
+#, c-format
+msgid ""
+"Option \"%s\" requires specifying the command to run on the rest of the "
+"command line"
+msgstr ""
+"Опцията „%s“ изисква задаване на командата за изпълнение на остатъка от "
+"командния ред"
+
+#: ../src/terminal-options.c:807
+msgid "Not a valid terminal config file."
+msgstr "Това не е файл с настройки за терминала."
+
+#: ../src/terminal-options.c:820
+msgid "Incompatible terminal config file version."
+msgstr "Несъвместима версия на файла с настройки на терминала."
+
+#: ../src/terminal-options.c:947
+msgid ""
+"Do not register with the activation nameserver, do not re-use an active "
+"terminal"
+msgstr ""
+"Да не се регистрира към активиращия\n"
+"                                            сървър за имена. Не използва\n"
+"                                            повторно активен терминал."
+
+#: ../src/terminal-options.c:956
+msgid "Load a terminal configuration file"
+msgstr "Зареждане на файл с настройки на терминала"
+
+#: ../src/terminal-options.c:965
+msgid "Save the terminal configuration to a file"
+msgstr "Запазване на настройките на терминала във файл"
+
+#: ../src/terminal-options.c:979
+msgid "Open a new window containing a tab with the default profile"
+msgstr ""
+"Отваряне на нов прозорец с\n"
+"                                            подпрозорец със стандартен "
+"профил."
+
+#: ../src/terminal-options.c:988
+msgid "Open a new tab in the last-opened window with the default profile"
+msgstr ""
+"Отваряне на нов подпрозорец със\n"
+"                                            стандартния профил в последно\n"
+"                                            отворения прозорец."
+
+#: ../src/terminal-options.c:1001
+msgid "Turn on the menubar"
+msgstr "Показване на менюто"
+
+#: ../src/terminal-options.c:1010
+msgid "Turn off the menubar"
+msgstr "Скриване на менюто"
+
+#: ../src/terminal-options.c:1019
+msgid "Maximise the window"
+msgstr "Максимизиране на прозореца"
+
+#: ../src/terminal-options.c:1028
+msgid "Full-screen the window"
+msgstr "Прозорецът да заема целия екран"
+
+#: ../src/terminal-options.c:1037
+msgid ""
+"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
+msgstr ""
+"Задаване на размера на прозореца.\n"
+"                                            Напр. 80x24, или 80x24+200+200\n"
+"                                            (РЕДОВЕxКОЛОНИ+X+Y)"
+
+#: ../src/terminal-options.c:1038
+msgid "GEOMETRY"
+msgstr "ГЕОМЕТРИЯ"
+
+#: ../src/terminal-options.c:1046
+msgid "Set the window role"
+msgstr "Задаване на ролята на прозореца"
+
+#: ../src/terminal-options.c:1047
+msgid "ROLE"
+msgstr "РОЛЯ"
+
+#: ../src/terminal-options.c:1055
+msgid "Set the last specified tab as the active one in its window"
+msgstr ""
+"Задаване на последния избран\n"
+"                                            подпрозорец като активен в "
+"неговия\n"
+"                                            прозорец"
+
+#: ../src/terminal-options.c:1068
+msgid "Execute the argument to this option inside the terminal"
+msgstr ""
+"Изпълняване на аргумента на тази\n"
+"                                            опция в терминала."
+
+#: ../src/terminal-options.c:1077
+msgid "Use the given profile instead of the default profile"
+msgstr "Използване на дадения профил вместо стандартния"
+
+#: ../src/terminal-options.c:1078
+msgid "PROFILE-NAME"
+msgstr "ИМЕ_НА_ПРОФИЛ"
+
+#: ../src/terminal-options.c:1086
+msgid "Set the terminal title"
+msgstr "Задаване на заглавието на терминала"
+
+#: ../src/terminal-options.c:1087
+msgid "TITLE"
+msgstr "ЗАГЛАВИЕ"
+
+#: ../src/terminal-options.c:1095
+msgid "Set the working directory"
+msgstr ""
+"Задаване на работната папка на\n"
+"                                            терминала"
+
+#: ../src/terminal-options.c:1096
+msgid "DIRNAME"
+msgstr "ПАПКА"
+
+#: ../src/terminal-options.c:1104
+msgid "Set the terminal's zoom factor (1.0 = normal size)"
+msgstr ""
+"Коефициент на мащабиране на\n"
+"                                            терминала (1.0 — нормален размер)"
+
+#: ../src/terminal-options.c:1105
+msgid "ZOOM"
+msgstr "УВЕЛИЧЕНИЕ"
+
+#: ../src/terminal-options.c:1355 ../src/terminal-options.c:1358
+msgid "MATE Terminal Emulator"
+msgstr "Терминалният емулатор на MATE"
+
+#: ../src/terminal-options.c:1359
+msgid "Show MATE Terminal options"
+msgstr "Показване на опциите на терминала на MATE"
+
+#: ../src/terminal-options.c:1369
+msgid ""
+"Options to open new windows or terminal tabs; more than one of these may be "
+"specified:"
+msgstr ""
+"Опции за отварянето на нови прозорци или\n"
+"                                            подпрозорци. Могат да се указват "
+"по-\n"
+"                                            вече от една от тях:"
+
+#: ../src/terminal-options.c:1370
+msgid "Show terminal options"
+msgstr "Показване на опциите на терминала"
+
+#: ../src/terminal-options.c:1378
+msgid ""
+"Window options; if used before the first --window or --tab argument, sets "
+"the default for all windows:"
+msgstr ""
+"Опции за прозорците. Използвани преди всички\n"
+"                                            опции „--window“ или „--tab“ "
+"задават стан-\n"
+"                                            дарта за всички прозорци:"
+
+#: ../src/terminal-options.c:1379
+msgid "Show per-window options"
+msgstr "Показване на опциите за прозорците"
+
+#: ../src/terminal-options.c:1387
+msgid ""
+"Terminal options; if used before the first --window or --tab argument, sets "
+"the default for all terminals:"
+msgstr ""
+"Опции за подпрозорците. Използвани преди\n"
+"                                            всички опции „--window“ или „--"
+"tab“\n"
+"                                            задават стандарта за всички "
+"подпро-\n"
+"                                            зорци:"
+
+#: ../src/terminal-options.c:1388
+msgid "Show per-terminal options"
+msgstr "Показване на опциите за подпрозорците"
+
+#: ../src/terminal-profile.c:167
+msgid "Unnamed"
+msgstr "Без име"
+
+#: ../src/terminal-screen.c:1488
+msgid "_Profile Preferences"
+msgstr "_Настройки на профила"
+
+#: ../src/terminal-screen.c:1489 ../src/terminal-screen.c:1876
+msgid "_Relaunch"
+msgstr "_Повторно пускане"
+
+#: ../src/terminal-screen.c:1492
+msgid "There was an error creating the child process for this terminal"
+msgstr "Грешка при създаване на дъщерен процес за този терминал"
+
+#: ../src/terminal-screen.c:1880
+#, c-format
+msgid "The child process exited normally with status %d."
+msgstr "Дъщерният процес завърши нормално с код за състояние %d."
+
+#: ../src/terminal-screen.c:1883
+#, c-format
+msgid "The child process was terminated by signal %d."
+msgstr "Дъщерният процес бе преустановен от сигнал %d."
+
+#: ../src/terminal-screen.c:1886
+msgid "The child process was terminated."
+msgstr "Дъщерният процес бе преустановен."
+
+#: ../src/terminal-tab-label.c:151
+msgid "Close tab"
+msgstr "Затваряне на подпрозорец"
+
+#: ../src/terminal-tabs-menu.c:198
+msgid "Switch to this tab"
+msgstr "Преход към този подпрозорец"
+
+#: ../src/terminal-util.c:186
+msgid "There was an error displaying help"
+msgstr "Грешка при зареждането на помощта"
+
+#: ../src/terminal-util.c:259
+#, c-format
+msgid "Could not open the address “%s”"
+msgstr "Не може да бъде отворен адресът „%s“"
+
+#: ../src/terminal-util.c:366
+msgid ""
+"MATE Terminal is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 3 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Тази програма (MATE Terminal) е свободен софтуер. Можете да я "
+"разпространявате и/или променяте под условията на Общия публичен лиценз на "
+"GNU (GNU GPL), както е публикуван от Фондацията за свободен софтуер — версия "
+"3 на лиценза или (по ваше решение) по-късна версия."
+
+#: ../src/terminal-util.c:370
+msgid ""
+"MATE Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"Тази програма се разпространява с надеждата, че ще бъде полезна, но БЕЗ "
+"НИКАКВИ ГАРАНЦИИ, дори и косвените за ПРОДАЖБА или СЪОТВЕТСТВИЕ С КАКВАТО И "
+"ДА Е УПОТРЕБА. За подробности погледнете Общия публичен лиценз на GNU."
+
+#: ../src/terminal-util.c:374
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"Трябва да сте получили копие от Общия публичен лиценз на GNU (GNU GPL) "
+"заедно с тази програма. Ако не сте, пишете до Free Software Foundation, "
+"Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
+
+#. Translators: This is the label of a menu item to choose a profile.
+#. * _%d is used as the accelerator (with d between 1 and 9), and
+#. * the %s is the name of the terminal profile.
+#.
+#: ../src/terminal-window.c:470
+#, c-format
+msgid "_%d. %s"
+msgstr "_%d. %s"
+
+#. Translators: This is the label of a menu item to choose a profile.
+#. * _%c is used as the accelerator (it will be a character between A and Z),
+#. * and the %s is the name of the terminal profile.
+#.
+#: ../src/terminal-window.c:476
+#, c-format
+msgid "_%c. %s"
+msgstr "_%c. %s"
+
+#. Toplevel
+#: ../src/terminal-window.c:1787
+msgid "_File"
+msgstr "_Файл"
+
+#. File menu
+#: ../src/terminal-window.c:1788 ../src/terminal-window.c:1800
+#: ../src/terminal-window.c:1947
+msgid "Open _Terminal"
+msgstr "_Отваряне на прозорец"
+
+#: ../src/terminal-window.c:1789 ../src/terminal-window.c:1803
+#: ../src/terminal-window.c:1950
+msgid "Open Ta_b"
+msgstr "О_тваряне на подпрозорец"
+
+#: ../src/terminal-window.c:1790
+msgid "_Edit"
+msgstr "_Редактиране"
+
+#: ../src/terminal-window.c:1791
+msgid "_View"
+msgstr "_Изглед"
+
+#: ../src/terminal-window.c:1792
+msgid "_Search"
+msgstr "_Търсене"
+
+#: ../src/terminal-window.c:1793
+msgid "_Terminal"
+msgstr "_Терминал"
+
+#: ../src/terminal-window.c:1794
+msgid "Ta_bs"
+msgstr "По_дпрозорци"
+
+#: ../src/terminal-window.c:1795
+msgid "_Help"
+msgstr "Помо_щ"
+
+#: ../src/terminal-window.c:1806
+msgid "New _Profile…"
+msgstr "Нов _профил…"
+
+#: ../src/terminal-window.c:1809
+msgid "_Save Contents"
+msgstr "_Запазване на съдържанието"
+
+#: ../src/terminal-window.c:1812 ../src/terminal-window.c:1956
+msgid "C_lose Tab"
+msgstr "З_атваряне на този подпрозорец"
+
+#: ../src/terminal-window.c:1815
+msgid "_Close Window"
+msgstr "_Затваряне на този прозорец"
+
+#: ../src/terminal-window.c:1826 ../src/terminal-window.c:1944
+msgid "Paste _Filenames"
+msgstr "Поставяне на име на _файл"
+
+#: ../src/terminal-window.c:1832
+msgid "P_rofiles…"
+msgstr "П_рофили…"
+
+#: ../src/terminal-window.c:1835
+msgid "_Keyboard Shortcuts…"
+msgstr "_Клавишни комбинации…"
+
+#: ../src/terminal-window.c:1838
+msgid "Pr_ofile Preferences"
+msgstr "_Настройки на профила"
+
+#. Search menu
+#: ../src/terminal-window.c:1854
+msgid "_Find..."
+msgstr "_Търсене…"
+
+#: ../src/terminal-window.c:1857
+msgid "Find Ne_xt"
+msgstr "_Следваща поява"
+
+#: ../src/terminal-window.c:1860
+msgid "Find Pre_vious"
+msgstr "_Предишна поява"
+
+#: ../src/terminal-window.c:1863
+msgid "_Clear Highlight"
+msgstr "_Изчистване на осветяването"
+
+#: ../src/terminal-window.c:1867
+msgid "Go to _Line..."
+msgstr "Към _ред…"
+
+#: ../src/terminal-window.c:1870
+msgid "_Incremental Search..."
+msgstr "Постепенно _търсене…"
+
+#. Terminal menu
+#: ../src/terminal-window.c:1876
+msgid "Change _Profile"
+msgstr "Смяна на _профила"
+
+#: ../src/terminal-window.c:1877
+msgid "_Set Title…"
+msgstr "_Задаване на заглавие…"
+
+#: ../src/terminal-window.c:1880
+msgid "Set _Character Encoding"
+msgstr "_Кодова таблица на знаците"
+
+#: ../src/terminal-window.c:1881
+msgid "_Reset"
+msgstr "_Възстановяване"
+
+#: ../src/terminal-window.c:1884
+msgid "Reset and C_lear"
+msgstr "Възстановяване и _изчистване"
+
+#. Terminal/Encodings menu
+#: ../src/terminal-window.c:1889
+msgid "_Add or Remove…"
+msgstr "_Добавяне или премахване…"
+
+#. Tabs menu
+#: ../src/terminal-window.c:1894
+msgid "_Previous Tab"
+msgstr "_Предишен подпрозорец"
+
+#: ../src/terminal-window.c:1897
+msgid "_Next Tab"
+msgstr "_Следващ подпрозорец"
+
+#: ../src/terminal-window.c:1900
+msgid "Move Tab _Left"
+msgstr "Преместване подпрозореца на_ляво"
+
+#: ../src/terminal-window.c:1903
+msgid "Move Tab _Right"
+msgstr "Преместване подпрозореца на_дясно"
+
+#: ../src/terminal-window.c:1906
+msgid "_Detach tab"
+msgstr "_Отделяне на подпрозореца"
+
+#. Help menu
+#: ../src/terminal-window.c:1911
+msgid "_Contents"
+msgstr "_Ръководство"
+
+#: ../src/terminal-window.c:1914
+msgid "_About"
+msgstr "_Относно"
+
+#. Popup menu
+#: ../src/terminal-window.c:1919
+msgid "_Send Mail To…"
+msgstr "Из_пращане на е-поща до…"
+
+#: ../src/terminal-window.c:1922
+msgid "_Copy E-mail Address"
+msgstr "_Копиране на адреса на е-пощата"
+
+#: ../src/terminal-window.c:1925
+msgid "C_all To…"
+msgstr "_Обаждане на…"
+
+#: ../src/terminal-window.c:1928
+msgid "_Copy Call Address"
+msgstr "_Копиране на адреса за обаждане"
+
+#: ../src/terminal-window.c:1931
+msgid "_Open Link"
+msgstr "_Отваряне на връзка"
+
+#: ../src/terminal-window.c:1934
+msgid "_Copy Link Address"
+msgstr "_Копиране на адреса на препратката"
+
+#: ../src/terminal-window.c:1937
+msgid "P_rofiles"
+msgstr "_Профили"
+
+#: ../src/terminal-window.c:1953 ../src/terminal-window.c:3166
+msgid "C_lose Window"
+msgstr "_Затваряне на този прозорец"
+
+#: ../src/terminal-window.c:1959
+msgid "L_eave Full Screen"
+msgstr "Изход от _цял екран"
+
+#: ../src/terminal-window.c:1962
+msgid "_Input Methods"
+msgstr "Методи за _вход"
+
+#. View Menu
+#: ../src/terminal-window.c:1968
+msgid "Show _Menubar"
+msgstr "_Показване на менюто"
+
+#: ../src/terminal-window.c:1972
+msgid "_Full Screen"
+msgstr "На _цял екран"
+
+#: ../src/terminal-window.c:3153
+msgid "Close this window?"
+msgstr "Затваряне на този прозорец?"
+
+#: ../src/terminal-window.c:3153
+msgid "Close this terminal?"
+msgstr "Затваряне на терминала?"
+
+#: ../src/terminal-window.c:3157
+msgid ""
+"There are still processes running in some terminals in this window. Closing "
+"the window will kill all of them."
+msgstr ""
+"В някой от подпрозорците на този прозорец поне един процес още не е завършил "
+"работа. Затварянето на прозореца ще го убие."
+
+#: ../src/terminal-window.c:3161
+msgid ""
+"There is still a process running in this terminal. Closing the terminal will "
+"kill it."
+msgstr ""
+"В този прозорец поне един процес още не е завършил работа. Затварянето на "
+"прозореца ще го убие."
+
+#: ../src/terminal-window.c:3166
+msgid "C_lose Terminal"
+msgstr "_Затваряне на терминала"
+
+#: ../src/terminal-window.c:3239
+msgid "Could not save contents"
+msgstr "Съдържанието не може да бъде запазено"
+
+#: ../src/terminal-window.c:3263
+msgid "Save as..."
+msgstr "Запазване като…"
+
+#: ../src/terminal-window.c:3725
+msgid "_Title:"
+msgstr "_Заглавие:"
+
+#: ../src/terminal-window.c:3912
+msgid "Contributors:"
+msgstr "Сътрудници:"
+
+#: ../src/terminal-window.c:3931
+msgid "A terminal emulator for the MATE desktop"
+msgstr "Емулатор на терминал към MATE"
+
+#: ../src/terminal-window.c:3938
+msgid "translator-credits"
+msgstr ""
+"Владимир „Kaladan“ Петков <kaladan@gmail.com>\n"
+"Александър Шопов <ash@kambanaria.org>\n"
+"Борислав Александров <B.Aleksandrov@cnsys.bg>\n"
+"Ростислав Райков <zbrox@i-space.org>\n"
+"Ясен Праматаров <turin@fsa-bg.org>\n"
+"\n"
+"Проектът за превод на MATE има нужда от подкрепа.\n"
+"Научете повече за нас на http://mate.cult.bg\n"
+"Докладвайте за грешки на http://mate.cult.bg/bugs"
+
+#.
+#. * Copyright © 2009 Christian Persch
+#. *
+#. * Mate-terminal is free software; you can redistribute it and/or modify
+#. * it under the terms of the GNU General Public License as published by
+#. * the Free Software Foundation; either version 3 of the License, or
+#. * (at your option) any later version.
+#. *
+#. * Mate-terminal is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. * GNU General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public License
+#. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#.
+#. This file contains extra strings that need to be translated, but
+#. * can't be extracted by intltool since the ui files aren't in git, and
+#. * the glade files don't contain them in the right form. See bug #553357.
+#.
+#. Translators: This refers to the Delete keybinding option
+#: ../src/extra-strings.c:24
+msgid "Automatic"
+msgstr "Автоматично"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/extra-strings.c:26
+msgid "Control-H"
+msgstr "Ctrl-H"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/extra-strings.c:28
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/extra-strings.c:30
+msgid "Escape sequence"
+msgstr "Екранираща последователност"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/extra-strings.c:32
+msgid "TTY Erase"
+msgstr "TTY Erase"
+
+#. Translators: Cursor shape: ...
+#: ../src/extra-strings.c:35
+msgid "Block"
+msgstr "Правоъгълник"
+
+#. Translators: Cursor shape: ...
+#: ../src/extra-strings.c:37
+msgid "I-Beam"
+msgstr "Вертикална черта"
+
+#. Translators: Cursor shape: ...
+#: ../src/extra-strings.c:39
+msgid "Underline"
+msgstr "Подчертаване"
+
+#. Translators: When command exits: ...
+#: ../src/extra-strings.c:42
+msgid "Exit the terminal"
+msgstr "Изход от терминала"
+
+#. Translators: When command exits: ...
+#: ../src/extra-strings.c:44
+msgid "Restart the command"
+msgstr "Рестартиране на командата"
+
+#. Translators: When command exits: ...
+#: ../src/extra-strings.c:46
+msgid "Hold the terminal open"
+msgstr "Терминалът да остане отворен"
+
+#. Translators: Scrollbar is: ...
+#: ../src/extra-strings.c:49
+msgid "On the left side"
+msgstr "Отляво"
+
+#. Translators: Scrollbar is: ...
+#: ../src/extra-strings.c:51
+msgid "On the right side"
+msgstr "Отдясно"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/extra-strings.c:56
+msgid "Replace initial title"
+msgstr "Замяна на първоначалното заглавие"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/extra-strings.c:58
+msgid "Append initial title"
+msgstr "Добавяне пред първоначалното заглавие"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/extra-strings.c:60
+msgid "Prepend initial title"
+msgstr "Добавяне зад първоначалното заглавие"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/extra-strings.c:62
+msgid "Keep initial title"
+msgstr "Запазване на първоначалното заглавие"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/extra-strings.c:65
+msgid "Tango"
+msgstr "Танго"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/extra-strings.c:67
+msgid "Linux console"
+msgstr "Конзола на Линукс"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/extra-strings.c:69
+msgid "XTerm"
+msgstr "XTerm"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/extra-strings.c:71
+msgid "Rxvt"
+msgstr "Rxvt"
