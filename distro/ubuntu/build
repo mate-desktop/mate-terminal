@@ -2,7 +2,7 @@
 
 # fill it
 pkgname=mate-terminal
-pkgver=2011.10.14
+pkgver=2011.11.07
 pkgrel=1
 pkgdesc="The MATE Terminal Emulator"
 #depends="gstreamer0.10-base-plugins, mate-panel, mate-character-map, libgtop, libmatenotify, cpufrequtils"
@@ -14,7 +14,7 @@ build() {
 	# entramos a la carpeta
 	cd ${pkgname}
 
-	./configure --prefix=/usr --sysconfdir=/etc --disable-static \
+	./autogen.sh --prefix=/usr --sysconfdir=/etc --disable-static \
 		--localstatedir=/var --disable-scrollkeeper || return 1
 
 	# there is some pre-compiled files on the tar
