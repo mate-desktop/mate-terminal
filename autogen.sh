@@ -4,20 +4,22 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME=mate-terminal
+PKG_NAME="mate-terminal"
 
-(test -f $srcdir/configure.ac \
-  && test -f $srcdir/autogen.sh \
-  && test -d $srcdir/src \
-  && test -f $srcdir/src/terminal.c) || {
+(test -f $srcdir/configure.ac) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
     echo " top-level $PKG_NAME directory"
     exit 1
 }
 
 which mate-autogen.sh || {
-    echo "You need to install mate-common from the MATE CVS"
+    echo "You need to install mate-common from the MATE Git"
     exit 1
 }
 
-REQUIRED_AUTOMAKE_VERSION=1.9 MATE_DATADIR="$mate_datadir" USE_COMMON_DOC_BUILD=yes . mate-autogen.sh
+REQUIRED_AUTOMAKE_VERSION=1.9
+MATE_DATADIR="$mate_datadir"
+USE_COMMON_DOC_BUILD=yes
+
+. mate-autogen.sh
+
