@@ -1,6 +1,6 @@
 m4_define([gt_version_major],[2011])
-m4_define([gt_version_minor],[11])
-m4_define([gt_version_micro],[7])
+m4_define([gt_version_minor],[12])
+m4_define([gt_version_micro],[01])
 m4_define([gt_version_extra],[])
 m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
 
