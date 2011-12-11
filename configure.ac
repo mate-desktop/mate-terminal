@@ -1,12 +1,12 @@
-m4_define([gt_version_major],[2011])
-m4_define([gt_version_minor],[12])
-m4_define([gt_version_micro],[01])
+m4_define([gt_version_major],[1])
+m4_define([gt_version_minor],[1])
+m4_define([gt_version_micro],[0])
 m4_define([gt_version_extra],[])
 m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
 
 m4_define([gt_api_version],[0])
 
-AC_INIT([MATE Terminal],[gt_version],[http://bugzilla.mate.org/enter_bug.cgi?product=mate-terminal],[mate-terminal])
+AC_INIT([MATE Terminal],[gt_version],[http://www.mate-desktop.org],[mate-terminal])
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 
@@ -43,7 +43,7 @@ GLIB_REQUIRED=2.25.0
 GIO_REQUIRED=2.25.12
 GTK_REQUIRED=2.14.0
 #MATECONF_REQUIRED=2.31.3 just testing
-MATECONF_REQUIRED=2.16.0
+MATECONF_REQUIRED=1.1.0
 VTE_REQUIRED=0.25.91
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
