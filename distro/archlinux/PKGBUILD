@@ -10,18 +10,18 @@ options=('!emptydirs' '!libtool')
 install=mate-terminal.install
 url="http://matsusoft.com.ar/projects"
 groups=('mate-extras')
-source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download)
-sha256sums=('0d8ad9ddd3c4e0a5cde323674ca38125efdc03b18a7334dd52fb9dc81517697e')
+source=()
+sha256sums=()
 
 build() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/../../../"
 	./autogen.sh --prefix=/usr --sysconfdir=/etc --disable-static \
 		--localstatedir=/var --disable-scrollkeeper --with-gnu-ld || return 1
 	make || return 1
 }
 
 package() {
-    cd "$srcdir/$pkgname"
+	cd "${srcdir}/../../../"
 
 	make MATECONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 DESTDIR="${pkgdir}" install || return 1
 
