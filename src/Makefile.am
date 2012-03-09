@@ -83,7 +83,7 @@ mate_terminal_CFLAGS = \
 	$(WARN_CFLAGS) \
 	$(AM_CFLAGS)
 
-mate_terminal_LDFLAGS =
+mate_terminal_LDFLAGS = -lICE
 
 mate_terminal_LDADD = \
 	skey/libskey.la \
