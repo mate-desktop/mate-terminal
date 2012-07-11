@@ -1,3 +1,89 @@
+commit 13847ac10a74de2b6f09984a7128a3815846fbba
+Merge: 45ed56d dd6c8ff
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Jul 10 17:17:32 2012 +0200
+
+    Merge branch 'master' of github.com:mate-desktop/mate-terminal
+
+commit 45ed56d22feac34c66a1d51411252c182d09baeb
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Jul 10 17:17:21 2012 +0200
+
+    sync translations with transifex
+
+ po/ar.po                | 1238 ++++++++---------------
+ po/ca.po                | 2510 ++++++++++++++---------------------------------
+ po/cs.po                | 1659 ++++++++++++++-----------------
+ po/eu.po                | 1285 ++++++++++--------------
+ po/gnome-copyrights.txt | 1166 ++++++++++++++++++++++
+ po/he.po                | 1768 ++++++++-------------------------
+ po/pt.po                | 2346 +++++++++++++------------------------------
+ po/ru.po                | 1037 ++++++++++++--------
+ po/tr.po                | 1742 ++++++++++++++++----------------
+ 9 files changed, 6090 insertions(+), 8661 deletions(-)
+
+commit dd6c8ff90284d0936d8c46c5c63c26485429f8e0
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun May 20 01:43:43 2012 +0300
+
+    fix latest email address in src/terminal.about
+
+ src/terminal.about |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8403e6d252586090c013e979e7613af0244d9b0e
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun May 20 00:27:51 2012 +0200
+
+    fix email urls in about window
+
+ src/terminal.about |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a81924a5c8be2aeb8c4052af824370f2a53f0d16
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Apr 5 23:59:55 2012 -0400
+
+    Removed ubuntu/ folder.
+
+ distro/ubuntu/build    |   31 -------------------------------
+ distro/ubuntu/postinst |    8 --------
+ distro/ubuntu/postrm   |    8 --------
+ distro/ubuntu/preinst  |    9 ---------
+ distro/ubuntu/prerm    |   12 ------------
+ 5 files changed, 68 deletions(-)
+
+commit 1626a9586172146c8356075837a07c475560ccd3
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Mon Mar 12 21:43:10 2012 -0400
+
+    Bumped version number to 1.2.1
+
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit dece7b096dda9113d5a2b7e5cdbc42b23829c4da
+Author: Perberos <perberos@gmail.com>
+Date:   Fri Mar 9 16:26:16 2012 -0300
+
+    /usr/bin/ld: note: 'IceConnectionNumber' is defined in DSO /usr/lib/libICE.so.6 so try adding it to the linker command line
+
+ src/Makefile.am |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 636a84135f0be37b168ecc36714f6a98a3f137d1
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 7 23:00:32 2012 +0100
+
+    update for 1.2
+
+ AUTHORS      |    2 +
+ ChangeLog    |47483 +---------------------------------------------------------
+ README       |    4 +-
+ autogen.sh   |    4 +-
+ configure.ac |    2 +-
+ 5 files changed, 459 insertions(+), 47036 deletions(-)
+
 commit 9e91f901f1895ed4f6ac1c55bcece06daee8cb90
 Author: Perberos <perberos@gmail.com>
 Date:   Mon Jan 30 12:30:29 2012 -0300
@@ -5,7 +91,7 @@ Date:   Mon Jan 30 12:30:29 2012 -0300
     set patch on archlinux script
 
  distro/archlinux/PKGBUILD |    8 ++++----
- 1 files changed, 4 insertions(+), 4 deletions(-)
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
 commit c4afb0c2cffc1ed8930248442bb77097af9dde7d
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -14,7 +100,7 @@ Date:   Fri Jan 13 20:05:07 2012 -0500
     Added mate-desktop.org to about window
 
  src/terminal-window.c | 5627 +++++++++++++++++++++++++------------------------
- 1 files changed, 2814 insertions(+), 2813 deletions(-)
+ 1 file changed, 2814 insertions(+), 2813 deletions(-)
 
 commit f7ed2116ec90711d8bdb336eb2fc5d42bbbdffd8
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -23,7 +109,7 @@ Date:   Tue Jan 10 14:41:34 2012 -0500
     Changed mate.gr.jp to gnome.gr.jp as requested in Issue #86
 
  po/ja.po |   12 ++++++------
- 1 files changed, 6 insertions(+), 6 deletions(-)
+ 1 file changed, 6 insertions(+), 6 deletions(-)
 
 commit a78e97c16d62a9cd8cb56deb1bed37e5e31be196
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -76,7 +162,7 @@ Date:   Mon Nov 7 12:45:31 2011 -0300
     quitando archivo oculto autogenerado
 
  config.h.in~ |  107 ----------------------------------------------------------
- 1 files changed, 0 insertions(+), 107 deletions(-)
+ 1 file changed, 107 deletions(-)
 
 commit 99a9277d92f6cb9f09addb039273ae2fd93e0810
 Author: Perberos <perberos@gmail.com>
@@ -85,7 +171,7 @@ Date:   Mon Nov 7 12:13:28 2011 -0300
     agregando variable faltante para generar algunos .make
 
  autogen.sh |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit da2f875c96069ef08f0a28ac90b7936d5ca95a26
 Author: Perberos <perberos@gmail.com>
@@ -94,7 +180,7 @@ Date:   Mon Nov 7 12:10:19 2011 -0300
     borrando archivo autogenerado
 
  help/ro/Makefile.in |  577 ---------------------------------------------------
- 1 files changed, 0 insertions(+), 577 deletions(-)
+ 1 file changed, 577 deletions(-)
 
 commit efa831af6ee67a366fc9638374099d2ec110b84f
 Author: Perberos <perberos@gmail.com>
@@ -103,7 +189,7 @@ Date:   Mon Nov 7 11:58:46 2011 -0300
     quitando archivo autogenerado
 
  po/Makefile.in.in |  217 -----------------------------------------------------
- 1 files changed, 0 insertions(+), 217 deletions(-)
+ 1 file changed, 217 deletions(-)
 
 commit 0bc56aae873d3362b3ca1cc50c6cd233c4914759
 Author: Perberos <perberos@gmail.com>
@@ -112,7 +198,7 @@ Date:   Mon Nov 7 11:49:00 2011 -0300
     agregando nombre completo al item de menu, para evitar confundirlo
 
  mate-terminal.desktop.in.in |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit df195ac8775efe5357b81d44f5f2f9e3bada800b
 Author: Perberos <perberos@gmail.com>
@@ -122,7 +208,7 @@ Date:   Mon Nov 7 11:41:40 2011 -0300
 
  omf.make     |   61 -----------------------------------
  xmldocs.make |  101 ----------------------------------------------------------
- 2 files changed, 0 insertions(+), 162 deletions(-)
+ 2 files changed, 162 deletions(-)
 
 commit f5edf1af10f1b1030fb30e2b8f047c702267c013
 Author: Perberos <perberos@gmail.com>
@@ -141,7 +227,7 @@ Date:   Mon Nov 7 11:12:17 2011 -0300
     el cero a la izquierda rompe el codigo
 
  configure.ac |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit f2a13175e5a3a38d1340d2fff5e03f8c2e0d8f8e
 Author: Perberos <perberos@gmail.com>
@@ -149,16 +235,16 @@ Date:   Sun Nov 6 19:14:03 2011 -0300
 
     aplicando formato allman
 
- src/eggdesktopfile.c            | 1839 +++++++-------
+ src/eggdesktopfile.c            | 1839 ++++++-------
  src/eggdesktopfile.h            |  111 +-
  src/eggshell.c                  |   24 +-
  src/eggsmclient-osx.c           |  225 +-
- src/eggsmclient-win32.c         |  309 ++--
+ src/eggsmclient-win32.c         |  309 +--
  src/eggsmclient-xsmp.c          | 1977 +++++++-------
- src/eggsmclient.c               |  631 +++---
+ src/eggsmclient.c               |  631 ++---
  src/eggsmclient.h               |   94 +-
- src/profile-editor.c            | 1358 +++++-----
- src/skey-popup.c                |  315 ++--
+ src/profile-editor.c            | 1358 ++++-----
+ src/skey-popup.c                |  315 +--
  src/skey-popup.h                |    2 +-
  src/skey/btoe.c                 |  516 ++--
  src/skey/md4.c                  |   42 +-
@@ -169,7 +255,7 @@ Date:   Sun Nov 6 19:14:03 2011 -0300
  src/skey/skey.c                 |    8 +-
  src/skey/skey.h                 |    9 +-
  src/skey/test.c                 |   76 +-
- src/terminal-accels.c           | 1352 +++++-----
+ src/terminal-accels.c           | 1352 ++++-----
  src/terminal-accels.h           |    2 +-
  src/terminal-app.c              | 2684 +++++++++---------
  src/terminal-app.h              |   22 +-
@@ -183,20 +269,20 @@ Date:   Sun Nov 6 19:14:03 2011 -0300
  src/terminal-options.h          |  111 +-
  src/terminal-profile.c          | 2285 ++++++++--------
  src/terminal-profile.h          |   72 +-
- src/terminal-screen-container.c |  430 ++--
+ src/terminal-screen-container.c |  430 +--
  src/terminal-screen-container.h |   14 +-
  src/terminal-screen.c           | 3299 +++++++++++-----------
  src/terminal-screen.h           |   70 +-
- src/terminal-search-dialog.c    |  430 ++--
+ src/terminal-search-dialog.c    |  430 +--
  src/terminal-search-dialog.h    |   11 +-
  src/terminal-tab-label.c        |  280 +-
  src/terminal-tab-label.h        |   14 +-
- src/terminal-tabs-menu.c        |  302 +-
+ src/terminal-tabs-menu.c        |  302 +--
  src/terminal-util.c             | 1695 ++++++------
  src/terminal-util.h             |   59 +-
  src/terminal-window.c           | 5736 ++++++++++++++++++++-------------------
  src/terminal-window.h           |   18 +-
- src/terminal.c                  |  940 ++++----
+ src/terminal.c                  |  940 +++----
  48 files changed, 15453 insertions(+), 15101 deletions(-)
 
 commit def492f92d29f294c62d94ef562dd6271bd9b84b
@@ -223,7 +309,7 @@ Date:   Sun Nov 6 18:44:13 2011 -0300
  help/zh_TW/Makefile.in |  577 -------------------
  src/Makefile.in        | 1473 ------------------------------------------------
  src/skey/Makefile.in   |  777 -------------------------
- 8 files changed, 0 insertions(+), 6382 deletions(-)
+ 8 files changed, 6382 deletions(-)
 
 commit 13e6e4ab1290cda9426eaedfeda70f7491b6b083
 Author: Perberos <perberos@gmail.com>
@@ -502,4 +588,4 @@ Date:   Sun Nov 6 17:13:49 2011 -0300
  src/terminal.c                               |  619 +
  src/terminal.xml                             |  116 +
  xmldocs.make                                 |  101 +
- 271 files changed, 366519 insertions(+), 0 deletions(-)
+ 271 files changed, 366519 insertions(+)
