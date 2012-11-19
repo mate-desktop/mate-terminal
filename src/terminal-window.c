@@ -3204,7 +3204,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *dialog;
-    MateConfClient *client;
+    GSettings *gsettings;
     gboolean do_confirm;
     int n_tabs;
 
@@ -3215,9 +3215,8 @@ confirm_close_window_or_tab (TerminalWindow *window,
                              GTK_RESPONSE_DELETE_EVENT);
     }
 
-    client = mateconf_client_get_default ();
-    do_confirm = mateconf_client_get_bool (client, CONF_GLOBAL_PREFIX "/confirm_window_close", NULL);
-    g_object_unref (client);
+    gsettings = g_settings_new ("org.mate.terminal.global");
+    do_confirm = g_settings_get_boolean (gsettings, "confirm-window-close");
     if (!do_confirm)
         return FALSE;
 
