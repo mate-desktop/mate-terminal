@@ -161,7 +161,7 @@ extern gboolean mateconf_spawn_daemon(GError** err);
 #define ENABLE_MNEMONICS_KEY "use-mnemonics"
 #define DEFAULT_ENABLE_MNEMONICS (TRUE)
 
-#define ENABLE_MENU_BAR_ACCEL_KEY "use_menu_accelerators"
+#define ENABLE_MENU_BAR_ACCEL_KEY "use-menu-accelerators"
 #define DEFAULT_ENABLE_MENU_BAR_ACCEL (TRUE)
 
 #define PROFILE_LIST_KEY CONF_GLOBAL_PREFIX "/profile_list"
@@ -1411,7 +1411,7 @@ terminal_app_init (TerminalApp *app)
 
 	g_signal_connect (app->gsettings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
-	      		  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
+	                  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                  app);
 
 	g_signal_connect (app->gsettings_global,
