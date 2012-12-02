@@ -57,6 +57,11 @@ G_BEGIN_DECLS
 
 /* Configuration */
 
+#define MCONF_PREFIX           "/apps/mate-terminal"
+#define MCONF_GLOBAL_PREFIX    MCONF_PREFIX "/global"
+#define MCONF_PROFILES_PREFIX  MCONF_PREFIX "/profiles"
+#define MCONF_KEYS_PREFIX      MCONF_PREFIX "/keybindings"
+
 #define CONF_PREFIX           "org.mate.terminal"
 #define CONF_GLOBAL_PREFIX    CONF_PREFIX ".global"
 #define CONF_PROFILES_PREFIX  CONF_PREFIX ".profiles"

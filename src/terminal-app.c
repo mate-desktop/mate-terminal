@@ -164,10 +164,10 @@ extern gboolean mateconf_spawn_daemon(GError** err);
 #define ENABLE_MENU_BAR_ACCEL_KEY "use-menu-accelerators"
 #define DEFAULT_ENABLE_MENU_BAR_ACCEL (TRUE)
 
-#define PROFILE_LIST_KEY CONF_GLOBAL_PREFIX "/profile_list"
-#define DEFAULT_PROFILE_KEY CONF_GLOBAL_PREFIX "/default_profile"
+#define PROFILE_LIST_KEY MCONF_GLOBAL_PREFIX "/profile_list"
+#define DEFAULT_PROFILE_KEY MCONF_GLOBAL_PREFIX "/default_profile"
 
-#define ENCODING_LIST_KEY CONF_GLOBAL_PREFIX "/active_encodings"
+#define ENCODING_LIST_KEY MCONF_GLOBAL_PREFIX "/active_encodings"
 
 /* Helper functions */
 
@@ -316,7 +316,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	const char **nameptr = &name;
 
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
-	mateconf_dir = mateconf_concat_dir_and_key (CONF_PREFIX "/profiles", profile_name);
+	mateconf_dir = mateconf_concat_dir_and_key (MCONF_PREFIX "/profiles", profile_name);
 
 	name_list = NULL;
 	g_hash_table_iter_init (&iter, app->profiles);
@@ -329,7 +329,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	}
 
 	mateconf_client_set_list (app->conf,
-	                          CONF_GLOBAL_PREFIX"/profile_list",
+	                          MCONF_GLOBAL_PREFIX"/profile_list",
 	                          MATECONF_VALUE_STRING,
 	                          name_list,
 	                          NULL);
@@ -514,7 +514,7 @@ profile_combo_box_changed_cb (GtkWidget *widget,
 		return;
 
 	mateconf_client_set_string (app->conf,
-	                            CONF_GLOBAL_PREFIX "/default_profile",
+	                            MCONF_GLOBAL_PREFIX "/default_profile",
 	                            terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME),
 	                            NULL);
 
@@ -1104,12 +1104,12 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 
 		/* And now save the list to mateconf */
 		list = mateconf_client_get_list (app->conf,
-		                                 CONF_GLOBAL_PREFIX"/profile_list",
+		                                 MCONF_GLOBAL_PREFIX"/profile_list",
 		                                 MATECONF_VALUE_STRING,
 		                                 NULL);
 		list = g_slist_append (list, g_strdup (new_profile_name));
 		mateconf_client_set_list (app->conf,
-		                          CONF_GLOBAL_PREFIX"/profile_list",
+		                          MCONF_GLOBAL_PREFIX"/profile_list",
 		                          MATECONF_VALUE_STRING,
 		                          list,
 		                          NULL);
@@ -1488,7 +1488,7 @@ terminal_app_finalize (GObject *object)
 	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                                      app);
 
-	mateconf_client_remove_dir (app->conf, CONF_GLOBAL_PREFIX, NULL);
+	mateconf_client_remove_dir (app->conf, MCONF_GLOBAL_PREFIX, NULL);
 	mateconf_client_remove_dir (app->conf, MONOSPACE_FONT_DIR, NULL);
 
 	g_object_unref (app->conf);

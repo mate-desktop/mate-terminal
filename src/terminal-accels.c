@@ -88,7 +88,7 @@
 #define KEY_RESET_AND_CLEAR     "reset-and-clear"
 #define KEY_RESET               "reset"
 #define KEY_SAVE_CONTENTS       "save-contents"
-#define KEY_SET_TERMINAL_TITLE  "set-window-title"
+#define KEY_SET_TERMINAL_TITLE  "set-terminal-title"
 #define KEY_TOGGLE_MENUBAR      "toggle-menubar"
 #define KEY_ZOOM_IN             "zoom-in"
 #define KEY_ZOOM_NORMAL         "zoom-normal"
@@ -369,9 +369,9 @@ binding_display_name (guint            keyval,
 static const char *
 key_from_gsettings_key (const char *gsettings_key)
 {
-	const char *last_slash = strrchr (gsettings_key, '/');
-	if (last_slash)
-		return ++last_slash;
+	const char *last_dot = strrchr (gsettings_key, '.');
+	if (last_dot)
+		return ++last_dot;
 	return NULL;
 }
 
@@ -384,7 +384,7 @@ terminal_accels_init (void)
 	conf = g_settings_new (CONF_KEYS_PREFIX);
 
 	g_signal_connect (conf,
-			  "changed::" CONF_KEYS_PREFIX,
+			  "changed",
 			  G_CALLBACK(keys_change_notify),
 			  NULL);
 
@@ -401,7 +401,8 @@ terminal_accels_init (void)
 			key_entry = &(all_entries[i].key_entry[j]);
 
 			g_hash_table_insert (gsettings_key_to_entry,
-			                     (gpointer) key_from_gsettings_key (key_entry->gsettings_key),
+/*			                     (gpointer) key_from_gsettings_key (key_entry->gsettings_key),*/
+			                     (gpointer) key_entry->gsettings_key,
 			                     key_entry);
 
 			key_entry->closure = g_closure_new_simple (sizeof (GClosure), key_entry);
@@ -494,11 +495,12 @@ keys_change_notify (GSettings *gsettings,
 		else
 			_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
 			                       " changed to \"%s\"\n",
-			                       g_variant_get_type_string (val));
+			                       g_variant_get_string (val, NULL));
 	}
 #endif
 
-	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key_from_gsettings_key (key));
+/*	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key_from_gsettings_key (key));*/
+	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key);
 	if (!key_entry)
 	{
 		/* shouldn't really happen, but let's be safe */
@@ -509,13 +511,12 @@ keys_change_notify (GSettings *gsettings,
 
 	if (!binding_from_value (val, &keyval, &mask))
 	{
-		const char *str = g_variant_is_of_type (val, G_VARIANT_TYPE_STRING) ? g_variant_get_type_string (val) : NULL;
+		const char *str = g_variant_is_of_type (val, G_VARIANT_TYPE_STRING) ? g_variant_get_string (val, NULL) : NULL;
 		g_printerr ("The value \"%s\" of configuration key %s is not a valid accelerator\n",
 		            str ? str : "(null)",
 		            key_entry->gsettings_key);
 		return;
 	}
-
 	key_entry->gsettings_keyval = keyval;
 	key_entry->gsettings_mask = mask;
 

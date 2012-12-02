@@ -1142,7 +1142,7 @@ terminal_profile_set_property (GObject *object,
 		const char *name = g_value_get_string (value);
 
 		g_assert (name != NULL);
-		priv->profile_dir = mateconf_concat_dir_and_key (CONF_PROFILES_PREFIX, name);
+		priv->profile_dir = mateconf_concat_dir_and_key (MCONF_PROFILES_PREFIX, name);
 
 		mateconf_client_add_dir (priv->conf, priv->profile_dir,
 		                         MATECONF_CLIENT_PRELOAD_ONELEVEL,

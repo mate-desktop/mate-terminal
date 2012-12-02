@@ -301,7 +301,7 @@ update_active_encodings_mateconf (void)
 
 	conf = mateconf_client_get_default ();
 	mateconf_client_set_list (conf,
-	                          CONF_GLOBAL_PREFIX"/active_encodings",
+	                          MCONF_GLOBAL_PREFIX"/active_encodings",
 	                          MATECONF_VALUE_STRING,
 	                          strings,
 	                          NULL);
