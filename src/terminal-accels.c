@@ -332,7 +332,7 @@ static gboolean binding_from_string (const char      *str,
                                      guint           *accelerator_key,
                                      GdkModifierType *accelerator_mods);
 
-static gboolean binding_from_value  (MateConfValue       *value,
+static gboolean binding_from_value  (GVariant        *value,
                                      guint           *accelerator_key,
                                      GdkModifierType *accelerator_mods);
 
@@ -509,7 +509,7 @@ keys_change_notify (GSettings *gsettings,
 
 	if (!binding_from_value (val, &keyval, &mask))
 	{
-		const char *str = g_variant_is_of_type (val, G_VARIANT_TYPE_STRING) ? mateconf_value_get_string (val) : NULL;
+		const char *str = g_variant_is_of_type (val, G_VARIANT_TYPE_STRING) ? g_variant_get_type_string (val) : NULL;
 		g_printerr ("The value \"%s\" of configuration key %s is not a valid accelerator\n",
 		            str ? str : "(null)",
 		            key_entry->gsettings_key);
@@ -613,7 +613,7 @@ binding_from_string (const char      *str,
 }
 
 static gboolean
-binding_from_value (MateConfValue       *value,
+binding_from_value (GVariant         *value,
                     guint            *accelerator_key,
                     GdkModifierType  *accelerator_mods)
 {
@@ -625,10 +625,10 @@ binding_from_value (MateConfValue       *value,
 		return TRUE;
 	}
 
-	if (value->type != MATECONF_VALUE_STRING)
+	if (!g_variant_is_of_type (value, G_VARIANT_TYPE_STRING))
 		return FALSE;
 
-	return binding_from_string (mateconf_value_get_string (value),
+	return binding_from_string (g_variant_get_type_string (value),
 	                            accelerator_key,
 	                            accelerator_mods);
 }
@@ -636,7 +636,7 @@ binding_from_value (MateConfValue       *value,
 static void
 add_key_entry_to_changeset (gpointer key,
                             KeyEntry *key_entry,
-                            MateConfChangeSet *changeset)
+                            GSettings *changeset)
 {
 	GtkAccelKey gtk_key;
 
@@ -652,7 +652,7 @@ add_key_entry_to_changeset (gpointer key,
 		char *accel_name;
 
 		accel_name = binding_name (gtk_key.accel_key, gtk_key.accel_mods);
-		mateconf_change_set_set_string (changeset,  key_entry->gsettings_key, accel_name);
+		g_settings_set_string (changeset, key_entry->gsettings_key, accel_name);
 		g_free (accel_name);
 	}
 }
@@ -660,8 +660,8 @@ add_key_entry_to_changeset (gpointer key,
 static gboolean
 sync_idle_cb (gpointer data)
 {
-	MateConfClient *conf;
-	MateConfChangeSet *changeset;
+	GSettings *conf;
+	GSettings *changeset;
 	GError *error = NULL;
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
@@ -669,17 +669,14 @@ sync_idle_cb (gpointer data)
 
 	sync_idle_id = 0;
 
-	conf = mateconf_client_get_default ();
+	conf = g_settings_new (CONF_KEYS_PREFIX);
+	changeset = g_settings_new (CONF_KEYS_PREFIX);
+	g_settings_delay (changeset);
 
-	changeset = mateconf_change_set_new ();
 	g_hash_table_foreach (gsettings_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);
-	if (!mateconf_client_commit_change_set (conf, changeset, TRUE, &error))
-	{
-		g_printerr ("Error committing the accelerator changeset: %s\n", error->message);
-		g_error_free (error);
-	}
+	g_settings_apply(changeset);
 
-	mateconf_change_set_unref (changeset);
+	g_object_unref (changeset);
 	g_object_unref (conf);
 
 	return FALSE;
@@ -793,7 +790,7 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 	GtkAccelGroupEntry *entries;
 	guint n_entries;
 	char *str;
-	MateConfClient *conf;
+	GSettings *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -873,11 +870,10 @@ other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->gset
 	}
 #endif
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_set_string (conf,
-	                            ke->gsettings_key,
-	                            str,
-	                            NULL);
+	conf = g_settings_new (CONF_KEYS_PREFIX);
+	g_settings_set_string (conf,
+	                       ke->gsettings_key,
+	                       str);
 	g_object_unref (conf);
 	g_free (str);
 }
@@ -892,7 +888,7 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	GtkTreeIter iter;
 	KeyEntry *ke;
 	char *str;
-	MateConfClient *conf;
+	GSettings *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -923,11 +919,10 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	                       "Cleared keybinding for GSettings %s",
 	                       ke->gsettings_key);
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_set_string (conf,
-	                            ke->gsettings_key,
-	                            str,
-	                            NULL);
+	conf = g_settings_new (CONF_KEYS_PREFIX);
+	g_settings_set_string (conf,
+	                       ke->gsettings_key,
+	                       str);
 	g_object_unref (conf);
 	g_free (str);
 }
