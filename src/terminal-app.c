@@ -1382,9 +1382,9 @@ terminal_app_init (TerminalApp *app)
 	app->encodings = terminal_encodings_get_builtins ();
 
 	app->conf = mateconf_client_get_default ();
-	app->gsettings_global = g_settings_new ("org.mate.terminal.global");
-	app->gsettings_keybindings = g_settings_new ("org.mate.terminal.keybindings");
-	app->gsettings_profiles = g_settings_new ("org.mate.terminal.profiles");
+	app->gsettings_global = g_settings_new (CONF_GLOBAL_PREFIX);
+	app->gsettings_keybindings = g_settings_new (CONF_KEYS_PREFIX);
+	app->gsettings_profiles = g_settings_new (CONF_PROFILES_PREFIX);
 
 	app->profile_list_notify_id =
 	    mateconf_client_notify_add (app->conf, PROFILE_LIST_KEY,

@@ -57,10 +57,10 @@ G_BEGIN_DECLS
 
 /* Configuration */
 
-#define CONF_PREFIX           "/apps/mate-terminal"
-#define CONF_GLOBAL_PREFIX    CONF_PREFIX "/global"
-#define CONF_PROFILES_PREFIX  CONF_PREFIX "/profiles"
-#define CONF_KEYS_PREFIX      CONF_PREFIX "/keybindings"
+#define CONF_PREFIX           "org.mate.terminal"
+#define CONF_GLOBAL_PREFIX    CONF_PREFIX ".global"
+#define CONF_PROFILES_PREFIX  CONF_PREFIX ".profiles"
+#define CONF_KEYS_PREFIX      CONF_PREFIX ".keybindings"
 
 #define MATE_TERMINAL_ICON_NAME "utilities-terminal"
 
