@@ -97,9 +97,8 @@ struct _TerminalApp
 	GtkWidget *manage_profiles_default_menu;
 
 	MateConfClient *conf;
-	GSettings *gsettings_global;
-	GSettings *gsettings_keybindings;
-	GSettings *gsettings_profiles;
+	GSettings *settings_global;
+	GSettings *settings_profiles;
 	guint profile_list_notify_id;
 	guint default_profile_notify_id;
 	guint encoding_list_notify_id;
@@ -1010,7 +1009,7 @@ terminal_app_enable_mnemonics_notify_cb (GSettings *gsettings,
 	gpointer user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	GVariant *gsettings_value;
+	GVariant *settings_value;
 	gboolean enable;
 
 	enable = g_settings_get_boolean (gsettings,key);
@@ -1382,9 +1381,8 @@ terminal_app_init (TerminalApp *app)
 	app->encodings = terminal_encodings_get_builtins ();
 
 	app->conf = mateconf_client_get_default ();
-	app->gsettings_global = g_settings_new (CONF_GLOBAL_PREFIX);
-	app->gsettings_keybindings = g_settings_new (CONF_KEYS_PREFIX);
-	app->gsettings_profiles = g_settings_new (CONF_PROFILES_PREFIX);
+	app->settings_global = g_settings_new (CONF_GLOBAL_PREFIX);
+	app->settings_profiles = g_settings_new (CONF_PROFILES_PREFIX);
 
 	app->profile_list_notify_id =
 	    mateconf_client_notify_add (app->conf, PROFILE_LIST_KEY,
@@ -1409,12 +1407,12 @@ terminal_app_init (TerminalApp *app)
 	                                terminal_app_system_font_notify_cb,
 	                                app, NULL, NULL);
 
-	g_signal_connect (app->gsettings_global,
+	g_signal_connect (app->settings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
 	                  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                  app);
 
-	g_signal_connect (app->gsettings_global,
+	g_signal_connect (app->settings_global,
 	                  "changed::" ENABLE_MENU_BAR_ACCEL_KEY,
 	                  G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                  app);
@@ -1424,10 +1422,10 @@ terminal_app_init (TerminalApp *app)
 	mateconf_client_notify (app->conf, DEFAULT_PROFILE_KEY);
 	mateconf_client_notify (app->conf, ENCODING_LIST_KEY);
 	mateconf_client_notify (app->conf, MONOSPACE_FONT_KEY);
-	terminal_app_enable_menu_accels_notify_cb (app->gsettings_global,
+	terminal_app_enable_menu_accels_notify_cb (app->settings_global,
 	                                           ENABLE_MENU_BAR_ACCEL_KEY,
 	                                           app);
-	terminal_app_enable_mnemonics_notify_cb (app->gsettings_global,
+	terminal_app_enable_mnemonics_notify_cb (app->settings_global,
 	                                         ENABLE_MNEMONICS_KEY,
 	                                         app);
 
@@ -1481,10 +1479,10 @@ terminal_app_finalize (GObject *object)
 		mateconf_client_notify_remove (app->conf, app->encoding_list_notify_id);
 	if (app->system_font_notify_id != 0)
 		mateconf_client_notify_remove (app->conf, app->system_font_notify_id);
-	g_signal_handlers_disconnect_by_func (app->gsettings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 	                                      G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                                      app);
-	g_signal_handlers_disconnect_by_func (app->gsettings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                                      app);
 
@@ -1492,6 +1490,8 @@ terminal_app_finalize (GObject *object)
 	mateconf_client_remove_dir (app->conf, MONOSPACE_FONT_DIR, NULL);
 
 	g_object_unref (app->conf);
+	g_object_unref (app->settings_global);
+	g_object_unref (app->settings_profiles);
 
 	g_free (app->default_profile_id);
 

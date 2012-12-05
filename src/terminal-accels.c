@@ -318,7 +318,7 @@ enum
     N_COLUMNS
 };
 
-static void keys_change_notify (GSettings *gsettings,
+static void keys_change_notify (GSettings *settings,
                                 gchar *key,
                                 gpointer user_data);
 
@@ -345,6 +345,7 @@ static int inside_gsettings_notify = 0;
 static GtkWidget *edit_keys_dialog = NULL;
 static GtkTreeStore *edit_keys_store = NULL;
 static GHashTable *gsettings_key_to_entry;
+static GSettings *settings_keybindings;
 
 static char*
 binding_name (guint            keyval,
@@ -366,24 +367,14 @@ binding_display_name (guint            keyval,
 	return g_strdup (_("Disabled"));
 }
 
-static const char *
-key_from_gsettings_key (const char *gsettings_key)
-{
-	const char *last_dot = strrchr (gsettings_key, '.');
-	if (last_dot)
-		return ++last_dot;
-	return NULL;
-}
-
 void
 terminal_accels_init (void)
 {
-	GSettings *conf;
 	guint i, j;
 
-	conf = g_settings_new (CONF_KEYS_PREFIX);
+	settings_keybindings = g_settings_new (CONF_KEYS_PREFIX);
 
-	g_signal_connect (conf,
+	g_signal_connect (settings_keybindings,
 			  "changed",
 			  G_CALLBACK(keys_change_notify),
 			  NULL);
@@ -401,7 +392,6 @@ terminal_accels_init (void)
 			key_entry = &(all_entries[i].key_entry[j]);
 
 			g_hash_table_insert (gsettings_key_to_entry,
-/*			                     (gpointer) key_from_gsettings_key (key_entry->gsettings_key),*/
 			                     (gpointer) key_entry->gsettings_key,
 			                     key_entry);
 
@@ -413,11 +403,9 @@ terminal_accels_init (void)
 			gtk_accel_group_connect_by_path (notification_group,
 			                                 I_(key_entry->accel_path),
 			                                 key_entry->closure);
-			keys_change_notify (conf, key_entry->gsettings_key, NULL);
+			keys_change_notify (settings_keybindings, key_entry->gsettings_key, NULL);
 		}
 	}
-
-	g_object_unref (conf);
 
 	g_signal_connect (notification_group, "accel-changed",
 	                  G_CALLBACK (accel_changed_callback), NULL);
@@ -426,13 +414,11 @@ terminal_accels_init (void)
 void
 terminal_accels_shutdown (void)
 {
-	GSettings *conf;
 
-	conf = g_settings_new (CONF_KEYS_PREFIX);
-	g_signal_handlers_disconnect_by_func (conf,
+	g_signal_handlers_disconnect_by_func (settings_keybindings,
 					      G_CALLBACK(keys_change_notify),
 					      NULL);
-	g_object_unref (conf);
+	g_object_unref (settings_keybindings);
 
 	if (sync_idle_id != 0)
 	{
@@ -470,7 +456,7 @@ update_model_foreach (GtkTreeModel *model,
 }
 
 static void
-keys_change_notify (GSettings *gsettings,
+keys_change_notify (GSettings *settings,
                     gchar *key,
                     gpointer user_data)
 {
@@ -483,7 +469,7 @@ keys_change_notify (GSettings *gsettings,
 	                       "key %s changed\n",
 	                       key);
 
-	val = g_settings_get_value (gsettings, key);
+	val = g_settings_get_value (settings, key);
 
 #ifdef MATE_ENABLE_DEBUG
 	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
@@ -499,7 +485,6 @@ keys_change_notify (GSettings *gsettings,
 	}
 #endif
 
-/*	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key_from_gsettings_key (key));*/
 	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key);
 	if (!key_entry)
 	{
@@ -537,7 +522,7 @@ keys_change_notify (GSettings *gsettings,
 	inside_gsettings_notify -= 1;
 
 	/* Lock the path if the GSettings key isn't writable */
-	key_entry->accel_path_unlocked = g_settings_is_writable (gsettings, key);
+	key_entry->accel_path_unlocked = g_settings_is_writable (settings, key);
 	if (!key_entry->accel_path_unlocked)
 		gtk_accel_map_lock_path (key_entry->accel_path);
 
@@ -579,7 +564,7 @@ accel_changed_callback (GtkAccelGroup  *accel_group,
 	if (inside_gsettings_notify)
 	{
 		_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-		                       "Ignoring change from gtk because we're inside a Gsettings notify\n");
+		                       "Ignoring change from gtk because we're inside a GSettings notify\n");
 		return;
 	}
 
@@ -629,7 +614,7 @@ binding_from_value (GVariant         *value,
 	if (!g_variant_is_of_type (value, G_VARIANT_TYPE_STRING))
 		return FALSE;
 
-	return binding_from_string (g_variant_get_type_string (value),
+	return binding_from_string (g_variant_get_string (value,NULL),
 	                            accelerator_key,
 	                            accelerator_mods);
 }
@@ -661,7 +646,6 @@ add_key_entry_to_changeset (gpointer key,
 static gboolean
 sync_idle_cb (gpointer data)
 {
-	GSettings *conf;
 	GSettings *changeset;
 	GError *error = NULL;
 
@@ -670,7 +654,6 @@ sync_idle_cb (gpointer data)
 
 	sync_idle_id = 0;
 
-	conf = g_settings_new (CONF_KEYS_PREFIX);
 	changeset = g_settings_new (CONF_KEYS_PREFIX);
 	g_settings_delay (changeset);
 
@@ -678,7 +661,6 @@ sync_idle_cb (gpointer data)
 	g_settings_apply(changeset);
 
 	g_object_unref (changeset);
-	g_object_unref (conf);
 
 	return FALSE;
 }
@@ -791,7 +773,6 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 	GtkAccelGroupEntry *entries;
 	guint n_entries;
 	char *str;
-	GSettings *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -871,11 +852,9 @@ other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->gset
 	}
 #endif
 
-	conf = g_settings_new (CONF_KEYS_PREFIX);
-	g_settings_set_string (conf,
+	g_settings_set_string (settings_keybindings,
 	                       ke->gsettings_key,
 	                       str);
-	g_object_unref (conf);
 	g_free (str);
 }
 
@@ -889,7 +868,6 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	GtkTreeIter iter;
 	KeyEntry *ke;
 	char *str;
-	GSettings *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -920,11 +898,9 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	                       "Cleared keybinding for GSettings %s",
 	                       ke->gsettings_key);
 
-	conf = g_settings_new (CONF_KEYS_PREFIX);
-	g_settings_set_string (conf,
+	g_settings_set_string (settings_keybindings,
 	                       ke->gsettings_key,
 	                       str);
-	g_object_unref (conf);
 	g_free (str);
 }
 
