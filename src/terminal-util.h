@@ -22,14 +22,13 @@
 #define TERMINAL_UTIL_H
 
 #include <gtk/gtk.h>
-#include <mateconf/mateconf-client.h>
 
 #include "terminal-screen.h"
 
 G_BEGIN_DECLS
 
-#define CONF_PROXY_PREFIX      "/system/proxy"
-#define CONF_HTTP_PROXY_PREFIX "/system/http_proxy"
+#define CONF_PROXY_SCHEMA      "org.gnome.system.proxy"
+#define CONF_HTTP_PROXY_SCHEMA "org.gnome.system.proxy.http"
 
 void terminal_util_set_unique_role (GtkWindow *window, const char *prefix);
 

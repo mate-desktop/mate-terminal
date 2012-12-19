@@ -31,7 +31,7 @@
 
 /* Overview
  *
- * There's a list of character sets stored in mateconf, indicating
+ * There's a list of character sets stored in GSettings, indicating
  * which encodings to display in the encoding menu.
  *
  * We have a pre-canned list of available encodings
@@ -39,7 +39,7 @@
  * the encoding menu, and to give a human-readable name
  * to certain encodings.
  *
- * If the mateconf list contains an encoding not in the
+ * If the GSettings list contains an encoding not in the
  * predetermined table, then that encoding is
  * labeled "user defined" but still appears in the menu.
  */
@@ -285,29 +285,28 @@ terminal_encoding_get_type (void)
 }
 
 static void
-update_active_encodings_mateconf (void)
+update_active_encodings_gsettings (void)
 {
 	GSList *list, *l;
-	GSList *strings = NULL;
-	MateConfClient *conf;
+	GArray *strings;
+	gchar *id_string;
+	GSettings *settings;
 
 	list = terminal_app_get_active_encodings (terminal_app_get ());
+	strings = g_array_new (TRUE, TRUE, sizeof (gchar *));
 	for (l = list; l != NULL; l = l->next)
 	{
 		TerminalEncoding *encoding = (TerminalEncoding *) l->data;
+		id_string = terminal_encoding_get_id (encoding);
 
-		strings = g_slist_prepend (strings, (gpointer) terminal_encoding_get_id (encoding));
+		strings = g_array_append_val (strings, id_string);
 	}
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_set_list (conf,
-	                          MCONF_GLOBAL_PREFIX"/active_encodings",
-	                          MATECONF_VALUE_STRING,
-	                          strings,
-	                          NULL);
-	g_object_unref (conf);
+	settings = g_settings_new (CONF_GLOBAL_SCHEMA);
+	g_settings_set_strv (settings, "active-encodings", (const gchar **) strings->data);
+	g_object_unref (settings);
 
-	g_slist_free (strings);
+	g_array_free (strings, TRUE);
 	g_slist_foreach (list, (GFunc) terminal_encoding_unref, NULL);
 	g_slist_free (list);
 }
@@ -385,10 +384,10 @@ button_clicked_cb (GtkWidget *button,
 
 	terminal_encoding_unref (encoding);
 
-	/* We don't need to emit row-changed here, since updating the mateconf pref
+	/* We don't need to emit row-changed here, since updating the GSettings pref
 	 * will update the models.
 	 */
-	update_active_encodings_mateconf ();
+	update_active_encodings_gsettings ();
 }
 
 static void

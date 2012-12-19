@@ -50,7 +50,7 @@
 #endif
 #endif
 
-#define FALLBACK_PROFILE_ID "Default"
+#define FALLBACK_PROFILE_ID "default"
 
 /* Settings storage works as follows:
  *   /apps/mate-terminal/global/
@@ -99,10 +99,8 @@ struct _TerminalApp
 	MateConfClient *conf;
 	GSettings *settings_global;
 	GSettings *settings_profiles;
+	GSettings *settings_font;
 	guint profile_list_notify_id;
-	guint default_profile_notify_id;
-	guint encoding_list_notify_id;
-	guint system_font_notify_id;
 
 	GHashTable *profiles;
 	char* default_profile_id;
@@ -153,8 +151,8 @@ static TerminalApp *global_app = NULL;
 /* Evil hack alert: this is exported from libmateconf-2 but not in a public header */
 extern gboolean mateconf_spawn_daemon(GError** err);
 
-#define MONOSPACE_FONT_DIR "/desktop/mate/interface"
-#define MONOSPACE_FONT_KEY MONOSPACE_FONT_DIR "/monospace_font_name"
+#define MONOSPACE_FONT_SCHEMA "org.mate.interface"
+#define MONOSPACE_FONT_KEY "monospace-font-name"
 #define DEFAULT_MONOSPACE_FONT ("Monospace 10")
 
 #define ENABLE_MNEMONICS_KEY "use-mnemonics"
@@ -164,9 +162,9 @@ extern gboolean mateconf_spawn_daemon(GError** err);
 #define DEFAULT_ENABLE_MENU_BAR_ACCEL (TRUE)
 
 #define PROFILE_LIST_KEY MCONF_GLOBAL_PREFIX "/profile_list"
-#define DEFAULT_PROFILE_KEY MCONF_GLOBAL_PREFIX "/default_profile"
+#define DEFAULT_PROFILE_KEY "default-profile"
 
-#define ENCODING_LIST_KEY MCONF_GLOBAL_PREFIX "/active_encodings"
+#define ENCODING_LIST_KEY "active-encodings"
 
 /* Helper functions */
 
@@ -865,21 +863,20 @@ ensure_one_profile:
 }
 
 static void
-terminal_app_default_profile_notify_cb (MateConfClient *client,
-                                        guint        cnxn_id,
-                                        MateConfEntry  *entry,
+terminal_app_default_profile_notify_cb (GSettings *settings,
+                                        gchar *key,
                                         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *val;
+	GVariant *val;
 	const char *name = NULL;
 
-	app->default_profile_locked = !mateconf_entry_get_is_writable (entry);
+	app->default_profile_locked = !g_settings_is_writable (settings, key);
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
-	        val->type == MATECONF_VALUE_STRING)
-		name = mateconf_value_get_string (val);
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
+		name = g_variant_get_string (val, NULL);
 	if (!name || !name[0])
 		name = FALLBACK_PROFILE_ID;
 	g_assert (name != NULL);
@@ -890,6 +887,7 @@ terminal_app_default_profile_notify_cb (MateConfClient *client,
 	app->default_profile = terminal_app_get_profile_by_name (app, name);
 
 	g_object_notify (G_OBJECT (app), TERMINAL_APP_DEFAULT_PROFILE);
+	g_variant_unref (val);
 }
 
 static int
@@ -911,18 +909,17 @@ encoding_mark_active (gpointer key,
 }
 
 static void
-terminal_app_encoding_list_notify_cb (MateConfClient *client,
-                                      guint        cnxn_id,
-                                      MateConfEntry  *entry,
+terminal_app_encoding_list_notify_cb (GSettings *settings,
+                                      gchar *key,
                                       gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *val;
+	GVariant *val;
 	GSList *strings, *tmp;
 	TerminalEncoding *encoding;
 	const char *charset;
 
-	app->encodings_locked = !mateconf_entry_get_is_writable (entry);
+	app->encodings_locked = !g_settings_is_writable (settings, key);
 
 	/* Mark all as non-active, then re-enable the active ones */
 	g_hash_table_foreach (app->encodings, (GHFunc) encoding_mark_active, GUINT_TO_POINTER (FALSE));
@@ -939,19 +936,16 @@ terminal_app_encoding_list_notify_cb (MateConfClient *client,
 	if (terminal_encoding_is_valid (encoding))
 		encoding->is_active = TRUE;
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
-	        val->type == MATECONF_VALUE_LIST &&
-	        mateconf_value_get_list_type (val) == MATECONF_VALUE_STRING)
-		strings = mateconf_value_get_list (val);
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY))
+		strings = terminal_gsettings_strv_to_gslist (g_variant_get_strv (val, NULL));
 	else
 		strings = NULL;
 
 	for (tmp = strings; tmp != NULL; tmp = tmp->next)
 	{
-		MateConfValue *v = (MateConfValue *) tmp->data;
-
-		charset = mateconf_value_get_string (v);
+		charset = tmp->data;
 		if (!charset)
 			continue;
 
@@ -963,26 +957,27 @@ terminal_app_encoding_list_notify_cb (MateConfClient *client,
 	}
 
 	g_signal_emit (app, signals[ENCODING_LIST_CHANGED], 0);
+	g_variant_unref (val);
+	g_slist_free_full (strings, g_free);
 }
 
 static void
-terminal_app_system_font_notify_cb (MateConfClient *client,
-                                    guint        cnxn_id,
-                                    MateConfEntry  *entry,
+terminal_app_system_font_notify_cb (GSettings *settings,
+                                    gchar *key,
                                     gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *mateconf_value;
+	GVariant *val;
 	const char *font = NULL;
 	PangoFontDescription *font_desc;
 
-	if (strcmp (mateconf_entry_get_key (entry), MONOSPACE_FONT_KEY) != 0)
+	if (strcmp (key, MONOSPACE_FONT_KEY) != 0)
 		return;
 
-	mateconf_value = mateconf_entry_get_value (entry);
-	if (mateconf_value &&
-	        mateconf_value->type == MATECONF_VALUE_STRING)
-		font = mateconf_value_get_string (mateconf_value);
+	val = g_settings_get_value (settings, key);
+	if (val &&
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
+		font = g_variant_get_string (val, NULL);
 	if (!font)
 		font = DEFAULT_MONOSPACE_FONT;
 	g_assert (font != NULL);
@@ -1001,10 +996,11 @@ terminal_app_system_font_notify_cb (MateConfClient *client,
 	app->system_font_desc = font_desc;
 
 	g_object_notify (G_OBJECT (app), TERMINAL_APP_SYSTEM_FONT);
+	g_variant_unref (val);
 }
 
 static void
-terminal_app_enable_mnemonics_notify_cb (GSettings *gsettings,
+terminal_app_enable_mnemonics_notify_cb (GSettings *settings,
 	gchar *key,
 	gpointer user_data)
 {
@@ -1012,7 +1008,7 @@ terminal_app_enable_mnemonics_notify_cb (GSettings *gsettings,
 	GVariant *settings_value;
 	gboolean enable;
 
-	enable = g_settings_get_boolean (gsettings,key);
+	enable = g_settings_get_boolean (settings, key);
 	if (enable == app->enable_mnemonics)
 		return;
 
@@ -1021,14 +1017,14 @@ terminal_app_enable_mnemonics_notify_cb (GSettings *gsettings,
 }
 
 static void
-terminal_app_enable_menu_accels_notify_cb (GSettings *gsettings,
-	gchar *key,
+terminal_app_enable_menu_accels_notify_cb (GSettings *settings,
+        gchar *key,
         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	gboolean enable;
 
-	enable = g_settings_get_boolean (gsettings,key);
+	enable = g_settings_get_boolean (settings, key);
 	if (enable == app->enable_menu_accels)
 		return;
 
@@ -1381,31 +1377,30 @@ terminal_app_init (TerminalApp *app)
 	app->encodings = terminal_encodings_get_builtins ();
 
 	app->conf = mateconf_client_get_default ();
-	app->settings_global = g_settings_new (CONF_GLOBAL_PREFIX);
-	app->settings_profiles = g_settings_new (CONF_PROFILES_PREFIX);
+	app->settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
+	app->settings_profiles = g_settings_new (CONF_PROFILES_SCHEMA);
+	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
 	app->profile_list_notify_id =
 	    mateconf_client_notify_add (app->conf, PROFILE_LIST_KEY,
 	                                terminal_app_profile_list_notify_cb,
 	                                app, NULL, NULL);
 
-	app->default_profile_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                DEFAULT_PROFILE_KEY,
-	                                terminal_app_default_profile_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" DEFAULT_PROFILE_KEY,
+			  G_CALLBACK(terminal_app_default_profile_notify_cb),
+			  app);
 
-	app->encoding_list_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                ENCODING_LIST_KEY,
-	                                terminal_app_encoding_list_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" ENCODING_LIST_KEY,
+			  G_CALLBACK(terminal_app_encoding_list_notify_cb),
+			  app);
 
-	app->system_font_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                MONOSPACE_FONT_KEY,
-	                                terminal_app_system_font_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_font,
+			  "changed::" MONOSPACE_FONT_KEY,
+			  G_CALLBACK(terminal_app_system_font_notify_cb),
+			  app);
+
 
 	g_signal_connect (app->settings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
@@ -1419,9 +1414,15 @@ terminal_app_init (TerminalApp *app)
 
 	/* Load the settings */
 	mateconf_client_notify (app->conf, PROFILE_LIST_KEY);
-	mateconf_client_notify (app->conf, DEFAULT_PROFILE_KEY);
-	mateconf_client_notify (app->conf, ENCODING_LIST_KEY);
-	mateconf_client_notify (app->conf, MONOSPACE_FONT_KEY);
+	terminal_app_default_profile_notify_cb (app->settings_global,
+					        DEFAULT_PROFILE_KEY,
+						app);
+	terminal_app_encoding_list_notify_cb (app->settings_global,
+					      ENCODING_LIST_KEY,
+					      app);
+	terminal_app_system_font_notify_cb (app->settings_font,
+					    MONOSPACE_FONT_KEY,
+					    app);
 	terminal_app_enable_menu_accels_notify_cb (app->settings_global,
 	                                           ENABLE_MENU_BAR_ACCEL_KEY,
 	                                           app);
@@ -1473,12 +1474,15 @@ terminal_app_finalize (GObject *object)
 
 	if (app->profile_list_notify_id != 0)
 		mateconf_client_notify_remove (app->conf, app->profile_list_notify_id);
-	if (app->default_profile_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->default_profile_notify_id);
-	if (app->encoding_list_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->encoding_list_notify_id);
-	if (app->system_font_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->system_font_notify_id);
+	g_signal_handlers_disconnect_by_func (app->settings_profiles,
+					      G_CALLBACK(terminal_app_default_profile_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+					      G_CALLBACK(terminal_app_encoding_list_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_font,
+					      G_CALLBACK(terminal_app_system_font_notify_cb),
+					      app);
 	g_signal_handlers_disconnect_by_func (app->settings_global,
 	                                      G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                                      app);
@@ -1487,11 +1491,11 @@ terminal_app_finalize (GObject *object)
 	                                      app);
 
 	mateconf_client_remove_dir (app->conf, MCONF_GLOBAL_PREFIX, NULL);
-	mateconf_client_remove_dir (app->conf, MONOSPACE_FONT_DIR, NULL);
 
 	g_object_unref (app->conf);
 	g_object_unref (app->settings_global);
 	g_object_unref (app->settings_profiles);
+	g_object_unref (app->settings_font);
 
 	g_free (app->default_profile_id);
 

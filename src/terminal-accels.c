@@ -372,7 +372,7 @@ terminal_accels_init (void)
 {
 	guint i, j;
 
-	settings_keybindings = g_settings_new (CONF_KEYS_PREFIX);
+	settings_keybindings = g_settings_new (CONF_KEYS_SCHEMA);
 
 	g_signal_connect (settings_keybindings,
 			  "changed",
@@ -654,7 +654,7 @@ sync_idle_cb (gpointer data)
 
 	sync_idle_id = 0;
 
-	changeset = g_settings_new (CONF_KEYS_PREFIX);
+	changeset = g_settings_new (CONF_KEYS_SCHEMA);
 	g_settings_delay (changeset);
 
 	g_hash_table_foreach (gsettings_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);

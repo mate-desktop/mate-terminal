@@ -63,9 +63,9 @@ G_BEGIN_DECLS
 #define MCONF_KEYS_PREFIX      MCONF_PREFIX "/keybindings"
 
 #define CONF_PREFIX           "org.mate.terminal"
-#define CONF_GLOBAL_PREFIX    CONF_PREFIX ".global"
-#define CONF_PROFILES_PREFIX  CONF_PREFIX ".profiles"
-#define CONF_KEYS_PREFIX      CONF_PREFIX ".keybindings"
+#define CONF_GLOBAL_SCHEMA    CONF_PREFIX ".global"
+#define CONF_PROFILES_SCHEMA  CONF_PREFIX ".profiles"
+#define CONF_KEYS_SCHEMA      CONF_PREFIX ".keybindings"
 
 #define MATE_TERMINAL_ICON_NAME "utilities-terminal"
 
