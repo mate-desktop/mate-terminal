@@ -1,5 +1,43 @@
 <?xml version="1.0"?>
-<schemalist gettext-domain="FIXME">
+<schemalist gettext-domain="mate-terminal">
+  <enum id="org.mate.terminal.erasebinding">
+    <value nick="auto" value="0"/>
+    <value nick="control-h" value="1"/>
+    <value nick="ascii-del" value="2"/>
+    <value nick="escape-sequence" value="3"/>
+    <value nick="tty" value="4"/>
+  </enum>
+  <enum id="org.mate.terminal.titlemode">
+    <value nick="replace" value="0"/>
+    <value nick="before" value="1"/>
+    <value nick="after" value="2"/>
+    <value nick="ignore" value="3"/>
+  </enum>
+  <enum id="org.mate.terminal.scrollbar-position">
+    <value nick="left" value="0"/>
+    <value nick="right" value="1"/>
+    <value nick="hidden" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.exit-action">
+    <value nick="close" value="0"/>
+    <value nick="restart" value="1"/>
+    <value nick="hold" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.cursor-shape">
+    <value nick="block" value="0"/>
+    <value nick="ibeam" value="1"/>
+    <value nick="underline" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.cursor-blink-mode">
+    <value nick="system" value="0"/>
+    <value nick="on" value="1"/>
+    <value nick="off" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.background-type">
+    <value nick="solid" value="0"/>
+    <value nick="image" value="1"/>
+    <value nick="transparent" value="2"/>
+  </enum>
   <schema id="org.mate.terminal" path="/apps/mate-terminal/">
     <child name="global" schema="org.mate.terminal.global"/>
     <child name="profiles" schema="org.mate.terminal.profiles"/>
@@ -38,11 +76,10 @@
     </key>
   </schema>
   <schema id="org.mate.terminal.profiles" path="/apps/mate-terminal/profiles/">
-    <child name="default" schema="org.mate.terminal.profiles.default"/>
   </schema>
-  <schema id="org.mate.terminal.profiles.default" path="/apps/mate-terminal/profiles/default/">
+  <schema id="org.mate.terminal.profile">
     <key name="visible-name" type="s">
-      <default context="visible-name" l10n="messages">'default'</default>
+      <default context="visible-name" l10n="messages">'Default'</default>
       <summary>Human-readable name of the profile</summary>
       <description>Human-readable name of the profile.</description>
     </key>
@@ -71,7 +108,7 @@
       <summary>Whether bold text should use the same color as normal text</summary>
       <description>If true, boldface text will be rendered using the same color as normal text.</description>
     </key>
-    <key name="title-mode" type="s">
+    <key name="title-mode" enum="org.mate.terminal.titlemode">
       <default>'replace'</default>
       <summary>What to do with dynamic title</summary>
       <description>If the application in the terminal sets the title  (most typically people have their shell set up to  do this), the dynamically-set title can  erase the configured title, go before it, go after it,  or replace it. The possible values are "replace",  "before", "after", and "ignore".</description>
@@ -111,7 +148,7 @@
       <summary>Default number of rows</summary>
       <description>Number of rows in newly created terminal windows. Has no effect if use_custom_default_size is not enabled.</description>
     </key>
-    <key name="scrollbar-position" type="s">
+    <key name="scrollbar-position" enum="org.mate.terminal.scrollbar-position">
       <default>'right'</default>
       <summary>Position of the scrollbar</summary>
       <description>Where to put the terminal scrollbar. Possibilities are  "left", "right", and "hidden".</description>
@@ -136,7 +173,7 @@
       <summary>Whether to scroll to the bottom when there's new output</summary>
       <description>If true, whenever there's new output the terminal will scroll to the bottom.</description>
     </key>
-    <key name="exit-action" type="s">
+    <key name="exit-action" enum="org.mate.terminal.exit-action">
       <default>'close'</default>
       <summary>What to do with the terminal when the child command exits</summary>
       <description>Possible values are "close" to close the terminal, and "restart" to restart the command.</description>
@@ -156,12 +193,12 @@
       <summary>Whether to run a custom command instead of the shell</summary>
       <description>If true, the value of the custom_command setting will  be used in place of running a shell.</description>
     </key>
-    <key name="cursor-blink-mode" type="s">
+    <key name="cursor-blink-mode" enum="org.mate.terminal.cursor-blink-mode">
       <default>'system'</default>
       <summary>Whether to blink the cursor</summary>
       <description>The possible values are "system" to use the global cursor blinking settings, or "on" or "off" to set the mode explicitly.</description>
     </key>
-    <key name="cursor-shape" type="s">
+    <key name="cursor-shape" enum="org.mate.terminal.cursor-shape">
       <default>'block'</default>
       <summary>The cursor appearance</summary>
       <description>The possible values are "block" to use a block cursor, "ibeam" to use a vertical line cursor, or "underline" to use an underline cursor.</description>
@@ -186,7 +223,7 @@
       <summary>Font</summary>
       <description>An Pango font name. Examples are "Sans 12" or "Monospace Bold 14".</description>
     </key>
-    <key name="background-type" type="s">
+    <key name="background-type" enum="org.mate.terminal.background-type">
       <default>'solid'</default>
       <summary>Background type</summary>
       <description>Type of terminal background. May be "solid" for a solid color, "image" for an image, or "transparent" for either real transparency if a compositing window manager is running, or pseudo-transparency otherwise.</description>
@@ -206,12 +243,12 @@
       <summary>How much to darken the background image</summary>
       <description>A value between 0.0 and 1.0 indicating how much to darken  the background image. 0.0 means no darkness, 1.0 means fully  dark. In the current implementation, there are only two levels of  darkness possible, so the setting behaves as a boolean, where 0.0 disables the darkening effect.</description>
     </key>
-    <key name="backspace-binding" type="s">
+    <key name="backspace-binding" enum="org.mate.terminal.erasebinding">
       <default>'ascii-del'</default>
       <summary>Effect of the Backspace key</summary>
       <description>Sets what code the backspace key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "ascii-del" is normally  considered the correct setting for the Backspace key.</description>
     </key>
-    <key name="delete-binding" type="s">
+    <key name="delete-binding" enum="org.mate.terminal.erasebinding">
       <default>'escape-sequence'</default>
       <summary>Effect of the Delete key</summary>
       <description>Sets what code the delete key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "escape-sequence" is normally  considered the correct setting for the Delete key.</description>

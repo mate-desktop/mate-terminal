@@ -131,7 +131,7 @@ struct _TerminalProfileClass
 
 	void (* forgotten) (TerminalProfile           *profile);
 
-	GHashTable *mateconf_keys;
+	GHashTable *gsettings_keys;
 };
 
 GType             terminal_profile_get_type               (void);

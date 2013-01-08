@@ -100,7 +100,6 @@ struct _TerminalApp
 	GSettings *settings_global;
 	GSettings *settings_profiles;
 	GSettings *settings_font;
-	guint profile_list_notify_id;
 
 	GHashTable *profiles;
 	char* default_profile_id;
@@ -161,7 +160,7 @@ extern gboolean mateconf_spawn_daemon(GError** err);
 #define ENABLE_MENU_BAR_ACCEL_KEY "use-menu-accelerators"
 #define DEFAULT_ENABLE_MENU_BAR_ACCEL (TRUE)
 
-#define PROFILE_LIST_KEY MCONF_GLOBAL_PREFIX "/profile_list"
+#define PROFILE_LIST_KEY "profile-list"
 #define DEFAULT_PROFILE_KEY "default-profile"
 
 #define ENCODING_LIST_KEY "active-encodings"
@@ -741,14 +740,13 @@ find_profile_link (GList      *profiles,
 }
 
 static void
-terminal_app_profile_list_notify_cb (MateConfClient *conf,
-                                     guint        cnxn_id,
-                                     MateConfEntry  *entry,
+terminal_app_profile_list_notify_cb (GSettings *settings,
+                                     gchar *key,
                                      gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	GObject *object = G_OBJECT (app);
-	MateConfValue *val;
+	GVariant *val;
 	GSList *value_list, *sl;
 	GList *profiles_to_delete, *l;
 	gboolean need_new_default;
@@ -759,22 +757,20 @@ terminal_app_profile_list_notify_cb (MateConfClient *conf,
 
 	profiles_to_delete = terminal_app_get_profile_list (app);
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val == NULL ||
-	        val->type != MATECONF_VALUE_LIST ||
-	        mateconf_value_get_list_type (val) != MATECONF_VALUE_STRING)
+	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY) ||
+	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
 		goto ensure_one_profile;
 
-	value_list = mateconf_value_get_list (val);
+	value_list = terminal_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
 
 	/* Add any new ones */
 	for (sl = value_list; sl != NULL; sl = sl->next)
 	{
-		MateConfValue *listvalue = (MateConfValue *) (sl->data);
-		const char *profile_name;
+		const char *profile_name = sl->data;
 		GList *link;
 
-		profile_name = mateconf_value_get_string (listvalue);
 		if (!profile_name)
 			continue;
 
@@ -1381,10 +1377,10 @@ terminal_app_init (TerminalApp *app)
 	app->settings_profiles = g_settings_new (CONF_PROFILES_SCHEMA);
 	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
-	app->profile_list_notify_id =
-	    mateconf_client_notify_add (app->conf, PROFILE_LIST_KEY,
-	                                terminal_app_profile_list_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" PROFILE_LIST_KEY,
+			  G_CALLBACK(terminal_app_profile_list_notify_cb),
+			  app);
 
 	g_signal_connect (app->settings_global,
 			  "changed::" DEFAULT_PROFILE_KEY,
@@ -1413,7 +1409,9 @@ terminal_app_init (TerminalApp *app)
 	                  app);
 
 	/* Load the settings */
-	mateconf_client_notify (app->conf, PROFILE_LIST_KEY);
+        terminal_app_profile_list_notify_cb (app->settings_global,
+					     PROFILE_LIST_KEY,
+					     app);
 	terminal_app_default_profile_notify_cb (app->settings_global,
 					        DEFAULT_PROFILE_KEY,
 						app);
@@ -1471,9 +1469,9 @@ terminal_app_finalize (GObject *object)
 	g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
 	                                      0, 0, NULL, NULL, app);
 #endif
-
-	if (app->profile_list_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->profile_list_notify_id);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+					      G_CALLBACK(terminal_app_profile_list_notify_cb),
+					      app);
 	g_signal_handlers_disconnect_by_func (app->settings_profiles,
 					      G_CALLBACK(terminal_app_default_profile_notify_cb),
 					      app);
