@@ -24,8 +24,6 @@
 
 #include <gtk/gtk.h>
 
-#include <mateconf/mateconf-client.h>
-
 #include "terminal-app.h"
 #include "terminal-debug.h"
 #include "terminal-intl.h"
@@ -937,6 +935,11 @@ terminal_profile_constructor (GType type,
 
 	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
 		g_strconcat (CONF_PROFILE_PREFIX, name, "/", NULL));
+	g_assert (priv->settings != NULL);
+	g_signal_connect (priv->settings,
+			  g_strconcat("changed::", priv->profile_dir, "/", NULL),
+			  G_CALLBACK(terminal_profile_gsettings_notify_cb),
+			  profile);
 
 	/* Now load those properties from GSettings that were not set as construction params */
 	pspecs = g_object_class_list_properties (G_OBJECT_CLASS (TERMINAL_PROFILE_GET_CLASS (profile)), &n_pspecs);
@@ -1087,11 +1090,12 @@ terminal_profile_set_property (GObject *object,
 
 		g_assert (name != NULL);
 		priv->profile_dir = g_strdup (name);
-
-		g_signal_connect (priv->settings,
-				  g_strconcat("changed::", priv->profile_dir, NULL),
-				  G_CALLBACK(terminal_profile_gsettings_notify_cb),
-				  profile);
+		if (priv->settings != NULL) {
+			g_signal_connect (priv->settings,
+					  g_strconcat("changed::", priv->profile_dir, "/", NULL),
+					  G_CALLBACK(terminal_profile_gsettings_notify_cb),
+					  profile);
+		}
 		break;
 	}
 
@@ -1133,7 +1137,7 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	gsettings_key_quark = g_quark_from_static_string ("GT::MateConfKey");
+	gsettings_key_quark = g_quark_from_static_string ("GT::GSettingsKey");
 
 	g_type_class_add_private (object_class, sizeof (TerminalProfilePrivate));
 

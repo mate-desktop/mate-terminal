@@ -38,7 +38,6 @@
 #include "terminal-encoding.h"
 #include "terminal-gsettings.h"
 #include "terminal-dconf.h"
-#include <mateconf/mateconf-client.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -96,9 +95,7 @@ struct _TerminalApp
 	GtkWidget *manage_profiles_delete_button;
 	GtkWidget *manage_profiles_default_menu;
 
-	MateConfClient *conf;
 	GSettings *settings_global;
-	GSettings *settings_profiles;
 	GSettings *settings_font;
 
 	GHashTable *profiles;
@@ -146,9 +143,6 @@ enum
 };
 
 static TerminalApp *global_app = NULL;
-
-/* Evil hack alert: this is exported from libmateconf-2 but not in a public header */
-extern gboolean mateconf_spawn_daemon(GError** err);
 
 #define MONOSPACE_FONT_SCHEMA "org.mate.interface"
 #define MONOSPACE_FONT_KEY "monospace-font-name"
@@ -304,43 +298,23 @@ static void
 terminal_app_delete_profile (TerminalApp *app,
                              TerminalProfile *profile)
 {
-	GHashTableIter iter;
-	GSList *name_list;
-	const char *name, *profile_name;
-	char *mateconf_dir;
+	const char *profile_name;
+	char *profile_dir;
 	GError *error = NULL;
-	const char **nameptr = &name;
 
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
-	mateconf_dir = mateconf_concat_dir_and_key (MCONF_PREFIX "/profiles", profile_name);
+	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	name_list = NULL;
-	g_hash_table_iter_init (&iter, app->profiles);
-	while (g_hash_table_iter_next (&iter, (gpointer *) nameptr, NULL))
-	{
-		if (strcmp (name, profile_name) == 0)
-			continue;
-
-		name_list = g_slist_prepend (name_list, g_strdup (name));
-	}
-
-	mateconf_client_set_list (app->conf,
-	                          MCONF_GLOBAL_PREFIX"/profile_list",
-	                          MATECONF_VALUE_STRING,
-	                          name_list,
-	                          NULL);
-
-	g_slist_foreach (name_list, (GFunc) g_free, NULL);
-	g_slist_free (name_list);
+	terminal_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
-	if (!mateconf_client_recursive_unset (app->conf, mateconf_dir, MATECONF_UNSET_INCLUDING_SCHEMA_NAMES, &error))
+	if (!terminal_dconf_recursive_reset (profile_dir, &error))
 	{
-		g_warning ("Failed to recursively unset %s: %s\n", mateconf_dir, error->message);
+		g_warning ("Failed to recursively unset %s: %s\n", profile_dir, error->message);
 		g_error_free (error);
 	}
 
-	g_free (mateconf_dir);
+	g_free (profile_dir);
 }
 
 static void
@@ -1338,20 +1312,6 @@ terminal_app_init (TerminalApp *app)
 
 	global_app = app;
 
-	/* If the mateconf daemon isn't available (e.g. because there's no dbus
-	 * session bus running), we'd crash later on. Tell the user about it
-	 * now, and exit. See bug #561663.
-	 * Don't use mateconf_ping_daemon() here since the server may just not
-	 * be running yet, but able to be started. See comments on bug #564649.
-	 */
-	if (!mateconf_spawn_daemon (&error))
-	{
-		g_printerr ("Failed to summon the MateConf demon; exiting.  %s\n", error->message);
-		g_error_free (error);
-
-		exit (EXIT_FAILURE);
-	}
-
 	gtk_window_set_default_icon_name (MATE_TERMINAL_ICON_NAME);
 
 	/* Initialise defaults */
@@ -1362,9 +1322,7 @@ terminal_app_init (TerminalApp *app)
 
 	app->encodings = terminal_encodings_get_builtins ();
 
-	app->conf = mateconf_client_get_default ();
 	app->settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
-	app->settings_profiles = g_settings_new (CONF_PROFILES_SCHEMA);
 	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
 	g_signal_connect (app->settings_global,
@@ -1462,7 +1420,7 @@ terminal_app_finalize (GObject *object)
 	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_profile_list_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (app->settings_profiles,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_default_profile_notify_cb),
 					      app);
 	g_signal_handlers_disconnect_by_func (app->settings_global,
@@ -1478,11 +1436,7 @@ terminal_app_finalize (GObject *object)
 	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                                      app);
 
-	mateconf_client_remove_dir (app->conf, MCONF_GLOBAL_PREFIX, NULL);
-
-	g_object_unref (app->conf);
 	g_object_unref (app->settings_global);
-	g_object_unref (app->settings_profiles);
 	g_object_unref (app->settings_font);
 
 	g_free (app->default_profile_id);
@@ -1543,11 +1497,11 @@ terminal_app_set_property (GObject *object,
 	{
 	case PROP_ENABLE_MENU_BAR_ACCEL:
 		app->enable_menu_accels = g_value_get_boolean (value);
-		mateconf_client_set_bool (app->conf, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels, NULL);
+		g_settings_set_boolean (app->settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
 		break;
 	case PROP_ENABLE_MNEMONICS:
 		app->enable_mnemonics = g_value_get_boolean (value);
-		mateconf_client_set_bool (app->conf, ENABLE_MNEMONICS_KEY, app->enable_mnemonics, NULL);
+		g_settings_set_boolean (app->settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
 		break;
 	case PROP_DEFAULT_PROFILE:
 	case PROP_SYSTEM_FONT:

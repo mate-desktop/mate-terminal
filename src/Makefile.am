@@ -159,10 +159,6 @@ gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 .PRECIOUS: $(gsettings_SCHEMAS)
 @INTLTOOL_XML_NOMERGE_RULE@
 
-schemadir = $(MATECONF_SCHEMA_FILE_DIR)
-schema_in_files = mate-terminal.schemas.in
-schema_DATA = mate-terminal.schemas
-
 aboutdir = $(pkgdatadir)
 about_DATA = \
 	terminal.about \
@@ -209,11 +205,6 @@ EXTRA_DIST = \
 @GSETTINGS_RULES@
 
 @INTLTOOL_SCHEMAS_RULE@
-
-if MATECONF_SCHEMAS_INSTALL
-install-data-local:
-	MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $(top_builddir)/src/$(schema_DATA)
-endif
 
 %.ui: %.glade
 	$(AM_V_GEN) $(GTK_BUILDER_CONVERT) $< $@

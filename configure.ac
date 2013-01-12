@@ -44,8 +44,6 @@ DCONF_OLD_REQUIRED=0.10
 GLIB_REQUIRED=2.25.0
 GIO_REQUIRED=2.25.12
 GTK_REQUIRED=2.14.0
-#MATECONF_REQUIRED=2.31.3 just testing
-MATECONF_REQUIRED=1.1.0
 VTE_REQUIRED=0.25.91
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
@@ -82,7 +80,6 @@ PKG_CHECK_MODULES([TERM],
    gthread-2.0
    gio-2.0 >= $GIO_REQUIRED
    gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
-   mateconf-2.0 >= $MATECONF_REQUIRED
    $PLATFORM_DEPS])
 
 # ********
@@ -131,13 +128,6 @@ PKG_CHECK_MODULES([DCONF], [dconf >= $DCONF_NEW_REQUIRED],
 AC_SUBST(DCONF_CFLAGS)
 AC_SUBST(DCONF_LIBS)
 
-AC_PATH_PROG(MATECONFTOOL, mateconftool-2, no)
-
-if test x"$MATECONFTOOL" = xno; then
-  AC_MSG_ERROR([mateconftool-2 executable not found in your path - should be installed with MateConf])
-fi
-
-AM_MATECONF_SOURCE_2
 
 GLIB_GENMARSHAL="$($PKG_CONFIG --variable=glib_genmarshal glib-2.0)"
 AC_SUBST([GLIB_GENMARSHAL])
