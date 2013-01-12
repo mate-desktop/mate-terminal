@@ -57,7 +57,7 @@
  *   /apps/mate-terminal/profiles/Foo/
  *
  * It's somewhat tricky to manage the profiles/ dir since we need to track
- * the list of profiles, but mateconf doesn't have a concept of notifying that
+ * the list of profiles, but GSettings doesn't have a concept of notifying that
  * a directory has appeared or disappeared.
  *
  * Session state is stored entirely in the RestartCommand command line.
@@ -67,7 +67,7 @@
  * OVERLAP. The UI and implementation totally break if you overlap
  * these categories. See mate-terminal 1.x for why.
  *
- * Don't use this code as an example of how to use MateConf - it's hugely
+ * Don't use this code as an example of how to use GSettings - it's hugely
  * overcomplicated due to the profiles stuff. Most apps should not
  * have to do scary things of this nature, and should not have
  * a profiles feature.
@@ -509,12 +509,10 @@ profile_combo_box_changed_cb (GtkWidget *widget,
 	if (!profile)
 		return;
 
-	mateconf_client_set_string (app->conf,
-	                            MCONF_GLOBAL_PREFIX "/default_profile",
-	                            terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME),
-	                            NULL);
+	g_settings_set_string (app->settings_global, DEFAULT_PROFILE_KEY,
+			       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME));
 
-	/* Even though the mateconf change notification does this, it happens too late.
+	/* Even though the GSettings change notification does this, it happens too late.
 	 * In some cases, the default profile changes twice in quick succession,
 	 * and update_default_profile must be called in sync with those changes.
 	 */
@@ -759,8 +757,8 @@ terminal_app_profile_list_notify_cb (GSettings *settings,
 
 	val = g_settings_get_value (settings, key);
 	if (val == NULL ||
-	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY) ||
-	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
+	        (!g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY) &&
+	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING)))
 		goto ensure_one_profile;
 
 	value_list = terminal_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
@@ -1046,7 +1044,6 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		GtkWindow *transient_parent;
 		GtkWidget *confirm_dialog;
 		gint retval;
-		GSList *list;
 
 		base_option_menu = g_object_get_data (G_OBJECT (new_profile_dialog), "base_option_menu");
 		base_profile = profile_combo_box_get_selected (base_option_menu);
@@ -1093,17 +1090,10 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     g_strdup (new_profile_name),
 		                     new_profile /* adopts the refcount */);
 
-		/* And now save the list to mateconf */
-		list = mateconf_client_get_list (app->conf,
-		                                 MCONF_GLOBAL_PREFIX"/profile_list",
-		                                 MATECONF_VALUE_STRING,
-		                                 NULL);
-		list = g_slist_append (list, g_strdup (new_profile_name));
-		mateconf_client_set_list (app->conf,
-		                          MCONF_GLOBAL_PREFIX"/profile_list",
-		                          MATECONF_VALUE_STRING,
-		                          list,
-		                          NULL);
+		/* And now save the new profile name to GSettings */
+		terminal_gsettings_append_strv (app->settings_global,
+						PROFILE_LIST_KEY,
+						new_profile_name);
 
 		terminal_profile_edit (new_profile, transient_parent, NULL);
 

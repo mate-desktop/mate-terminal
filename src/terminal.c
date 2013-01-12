@@ -409,7 +409,7 @@ name_lost_cb (GDBusConnection *connection,
  *   /apps/mate-terminal/profiles/Foo/
  *
  * It's somewhat tricky to manage the profiles/ dir since we need to track
- * the list of profiles, but mateconf doesn't have a concept of notifying that
+ * the list of profiles, but GSettings doesn't have a concept of notifying that
  * a directory has appeared or disappeared.
  *
  * Session state is stored entirely in the RestartCommand command line.
@@ -419,7 +419,7 @@ name_lost_cb (GDBusConnection *connection,
  * OVERLAP. The UI and implementation totally break if you overlap
  * these categories. See mate-terminal 1.x for why.
  *
- * Don't use this code as an example of how to use MateConf - it's hugely
+ * Don't use this code as an example of how to use GSettings - it's hugely
  * overcomplicated due to the profiles stuff. Most apps should not
  * have to do scary things of this nature, and should not have
  * a profiles feature.

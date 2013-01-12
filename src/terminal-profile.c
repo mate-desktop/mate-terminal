@@ -882,9 +882,6 @@ terminal_profile_init (TerminalProfile *profile)
 	priv = profile->priv = G_TYPE_INSTANCE_GET_PRIVATE (profile, TERMINAL_TYPE_PROFILE, TerminalProfilePrivate);
 
 	priv->gsettings_notification_pspec = NULL;
-	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
-		g_strconcat (CONF_PROFILE_PREFIX, "default/", NULL)); /* FIXME: Use key "global/default-profile" */
-
 	priv->locked = g_new0 (gboolean, LAST_PROP);
 
 	priv->properties = g_value_array_new (LAST_PROP);
@@ -937,6 +934,9 @@ terminal_profile_constructor (GType type,
 
 	name = g_value_get_string (g_value_array_get_nth (priv->properties, PROP_NAME));
 	g_assert (name != NULL);
+
+	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
+		g_strconcat (CONF_PROFILE_PREFIX, name, "/", NULL));
 
 	/* Now load those properties from GSettings that were not set as construction params */
 	pspecs = g_object_class_list_properties (G_OBJECT_CLASS (TERMINAL_PROFILE_GET_CLASS (profile)), &n_pspecs);
