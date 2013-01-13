@@ -38,16 +38,16 @@
     <value nick="image" value="1"/>
     <value nick="transparent" value="2"/>
   </enum>
-  <schema id="org.mate.terminal" path="/apps/mate-terminal/">
+  <schema id="org.mate.terminal" path="/org/mate/terminal/">
     <child name="global" schema="org.mate.terminal.global"/>
     <child name="profiles" schema="org.mate.terminal.profiles"/>
     <child name="keybindings" schema="org.mate.terminal.keybindings"/>
   </schema>
-  <schema id="org.mate.terminal.global" path="/apps/mate-terminal/global/">
+  <schema id="org.mate.terminal.global" path="/org/mate/terminal/global/">
     <key name="profile-list" type="as">
       <default>[ 'default' ]</default>
       <summary>List of profiles</summary>
-      <description>List of profiles known to mate-terminal. The list contains  strings naming subdirectories relative to /apps/mate-terminal/profiles.</description>
+      <description>List of profiles known to mate-terminal. The list contains  strings naming subdirectories relative to /org/mate/terminal/profiles.</description>
     </key>
     <key name="default-profile" type="s">
       <default>'default'</default>
@@ -75,7 +75,7 @@
       <description>Whether to ask for confirmation when closing a terminal window which has more than one open tab.</description>
     </key>
   </schema>
-  <schema id="org.mate.terminal.profiles" path="/apps/mate-terminal/profiles/">
+  <schema id="org.mate.terminal.profiles" path="/org/mate/terminal/profiles/">
   </schema>
   <schema id="org.mate.terminal.profile">
     <key name="visible-name" type="s">
@@ -269,7 +269,7 @@
       <description>Popup a dialog when an S/Key challenge response query is detected and clicked on.  Typing a password into the dialog will send it to the terminal.</description>
     </key>
   </schema>
-  <schema id="org.mate.terminal.keybindings" path="/apps/mate-terminal/keybindings/">
+  <schema id="org.mate.terminal.keybindings" path="/org/mate/terminal/keybindings/">
     <key name="new-tab" type="s">
       <default>'&lt;Ctrl&gt;&lt;Shift&gt;t'</default>
       <summary>Keyboard shortcut to open a new tab</summary>

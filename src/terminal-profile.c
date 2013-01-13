@@ -564,13 +564,11 @@ terminal_profile_gsettings_notify_cb (GSettings *settings,
 	}
 	else if (G_IS_PARAM_SPEC_ENUM (pspec))
 	{
-		const GEnumValue *eval;
-		int enum_value;
 
 		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		g_value_set_enum (&value, enum_value);
+		g_value_set_enum (&value, g_settings_get_enum (settings, key));
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
 	{
@@ -1091,10 +1089,13 @@ terminal_profile_set_property (GObject *object,
 		g_assert (name != NULL);
 		priv->profile_dir = g_strdup (name);
 		if (priv->settings != NULL) {
+			g_signal_handlers_disconnect_by_func (priv->settings,
+												  G_CALLBACK(terminal_profile_gsettings_notify_cb),
+												  profile);
 			g_signal_connect (priv->settings,
 					  g_strconcat("changed::", priv->profile_dir, "/", NULL),
-					  G_CALLBACK(terminal_profile_gsettings_notify_cb),
-					  profile);
+								  G_CALLBACK(terminal_profile_gsettings_notify_cb),
+								  profile);
 		}
 		break;
 	}
