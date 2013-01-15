@@ -31,18 +31,18 @@
 
 /* NOTES
  *
- * There are two sources of keybindings changes, from MateConf and from
+ * There are two sources of keybindings changes, from GSettings and from
  * the accel map (happens with in-place menu editing).
  *
- * When a keybinding mateconf key changes, we propagate that into the
+ * When a keybinding GSettins key changes, we propagate that into the
  * accel map.
- * When the accel map changes, we queue a sync to mateconf.
+ * When the accel map changes, we queue a sync to GSettings.
  *
  * To avoid infinite loops, we short-circuit in both directions
  * if the value is unchanged from last known.
  *
  * In the keybinding editor, when editing or clearing an accel, we write
- * the change directly to mateconf and rely on the mateconf callback to
+ * the change directly to GSettings and rely on the GSettings callback to
  * actually apply the change to the accel map.
  */
 
@@ -71,29 +71,29 @@
 #define ACCEL_PATH_DETACH_TAB           ACCEL_PATH_ROOT "TabsDetach"
 #define ACCEL_PATH_SWITCH_TAB_PREFIX    ACCEL_PATH_ROOT "TabsSwitch"
 
-#define KEY_CLOSE_TAB           CONF_KEYS_PREFIX "/close_tab"
-#define KEY_CLOSE_WINDOW        CONF_KEYS_PREFIX "/close_window"
-#define KEY_COPY                CONF_KEYS_PREFIX "/copy"
-#define KEY_DETACH_TAB          CONF_KEYS_PREFIX "/detach_tab"
-#define KEY_FULL_SCREEN         CONF_KEYS_PREFIX "/full_screen"
-#define KEY_HELP                CONF_KEYS_PREFIX "/help"
-#define KEY_MOVE_TAB_LEFT       CONF_KEYS_PREFIX "/move_tab_left"
-#define KEY_MOVE_TAB_RIGHT      CONF_KEYS_PREFIX "/move_tab_right"
-#define KEY_NEW_PROFILE         CONF_KEYS_PREFIX "/new_profile"
-#define KEY_NEW_TAB             CONF_KEYS_PREFIX "/new_tab"
-#define KEY_NEW_WINDOW          CONF_KEYS_PREFIX "/new_window"
-#define KEY_NEXT_TAB            CONF_KEYS_PREFIX "/next_tab"
-#define KEY_PASTE               CONF_KEYS_PREFIX "/paste"
-#define KEY_PREV_TAB            CONF_KEYS_PREFIX "/prev_tab"
-#define KEY_RESET_AND_CLEAR     CONF_KEYS_PREFIX "/reset_and_clear"
-#define KEY_RESET               CONF_KEYS_PREFIX "/reset"
-#define KEY_SAVE_CONTENTS       CONF_KEYS_PREFIX "/save_contents"
-#define KEY_SET_TERMINAL_TITLE  CONF_KEYS_PREFIX "/set_window_title"
-#define KEY_TOGGLE_MENUBAR      CONF_KEYS_PREFIX "/toggle_menubar"
-#define KEY_ZOOM_IN             CONF_KEYS_PREFIX "/zoom_in"
-#define KEY_ZOOM_NORMAL         CONF_KEYS_PREFIX "/zoom_normal"
-#define KEY_ZOOM_OUT            CONF_KEYS_PREFIX "/zoom_out"
-#define KEY_SWITCH_TAB_PREFIX   CONF_KEYS_PREFIX "/switch_to_tab_"
+#define KEY_CLOSE_TAB           "close-tab"
+#define KEY_CLOSE_WINDOW        "close-window"
+#define KEY_COPY                "copy"
+#define KEY_DETACH_TAB          "detach-tab"
+#define KEY_FULL_SCREEN         "full-screen"
+#define KEY_HELP                "help"
+#define KEY_MOVE_TAB_LEFT       "move-tab-left"
+#define KEY_MOVE_TAB_RIGHT      "move-tab-right"
+#define KEY_NEW_PROFILE         "new-profile"
+#define KEY_NEW_TAB             "new-tab"
+#define KEY_NEW_WINDOW          "new-window"
+#define KEY_NEXT_TAB            "next-tab"
+#define KEY_PASTE               "paste"
+#define KEY_PREV_TAB            "prev-tab"
+#define KEY_RESET_AND_CLEAR     "reset-and-clear"
+#define KEY_RESET               "reset"
+#define KEY_SAVE_CONTENTS       "save-contents"
+#define KEY_SET_TERMINAL_TITLE  "set-terminal-title"
+#define KEY_TOGGLE_MENUBAR      "toggle-menubar"
+#define KEY_ZOOM_IN             "zoom-in"
+#define KEY_ZOOM_NORMAL         "zoom-normal"
+#define KEY_ZOOM_OUT            "zoom-out"
+#define KEY_SWITCH_TAB_PREFIX   "switch-to-tab-"
 
 #if 1
 /*
@@ -112,14 +112,14 @@
 typedef struct
 {
 	const char *user_visible_name;
-	const char *mateconf_key;
+	const char *gsettings_key;
 	const char *accel_path;
-	/* last values received from mateconf */
-	GdkModifierType mateconf_mask;
-	guint mateconf_keyval;
+	/* last values received from GSettings */
+	GdkModifierType gsettings_mask;
+	guint gsettings_keyval;
 	GClosure *closure;
 	/* have gotten a notification from gtk */
-	gboolean needs_mateconf_sync;
+	gboolean needs_gsettings_sync;
 	gboolean accel_path_unlocked;
 } KeyEntry;
 
@@ -318,10 +318,9 @@ enum
     N_COLUMNS
 };
 
-static void keys_change_notify (MateConfClient *client,
-                                guint        cnxn_id,
-                                MateConfEntry  *entry,
-                                gpointer     user_data);
+static void keys_change_notify (GSettings *settings,
+                                gchar *key,
+                                gpointer user_data);
 
 static void accel_changed_callback (GtkAccelGroup  *accel_group,
                                     guint           keyval,
@@ -333,7 +332,7 @@ static gboolean binding_from_string (const char      *str,
                                      guint           *accelerator_key,
                                      GdkModifierType *accelerator_mods);
 
-static gboolean binding_from_value  (MateConfValue       *value,
+static gboolean binding_from_value  (GVariant        *value,
                                      guint           *accelerator_key,
                                      GdkModifierType *accelerator_mods);
 
@@ -341,12 +340,12 @@ static gboolean sync_idle_cb (gpointer data);
 
 static guint sync_idle_id = 0;
 static GtkAccelGroup *notification_group = NULL;
-/* never set mateconf keys in response to receiving a mateconf notify. */
-static int inside_mateconf_notify = 0;
+/* never set GSettings keys in response to receiving a GSettings notify. */
+static int inside_gsettings_notify = 0;
 static GtkWidget *edit_keys_dialog = NULL;
 static GtkTreeStore *edit_keys_store = NULL;
-static guint mateconf_notify_id;
-static GHashTable *mateconf_key_to_entry;
+static GHashTable *gsettings_key_to_entry;
+static GSettings *settings_keybindings;
 
 static char*
 binding_name (guint            keyval,
@@ -368,33 +367,19 @@ binding_display_name (guint            keyval,
 	return g_strdup (_("Disabled"));
 }
 
-static const char *
-key_from_mateconf_key (const char *mateconf_key)
-{
-	const char *last_slash = strrchr (mateconf_key, '/');
-	if (last_slash)
-		return ++last_slash;
-	return NULL;
-}
-
 void
 terminal_accels_init (void)
 {
-	MateConfClient *conf;
 	guint i, j;
 
-	conf = mateconf_client_get_default ();
+	settings_keybindings = g_settings_new (CONF_KEYS_SCHEMA);
 
-	mateconf_client_add_dir (conf, CONF_KEYS_PREFIX,
-	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-	                         NULL);
-	mateconf_notify_id =
-	    mateconf_client_notify_add (conf,
-	                                CONF_KEYS_PREFIX,
-	                                keys_change_notify,
-	                                NULL, NULL, NULL);
+	g_signal_connect (settings_keybindings,
+			  "changed",
+			  G_CALLBACK(keys_change_notify),
+			  NULL);
 
-	mateconf_key_to_entry = g_hash_table_new (g_str_hash, g_str_equal);
+	gsettings_key_to_entry = g_hash_table_new (g_str_hash, g_str_equal);
 
 	notification_group = gtk_accel_group_new ();
 
@@ -406,8 +391,8 @@ terminal_accels_init (void)
 
 			key_entry = &(all_entries[i].key_entry[j]);
 
-			g_hash_table_insert (mateconf_key_to_entry,
-			                     (gpointer) key_from_mateconf_key (key_entry->mateconf_key),
+			g_hash_table_insert (gsettings_key_to_entry,
+			                     (gpointer) key_entry->gsettings_key,
 			                     key_entry);
 
 			key_entry->closure = g_closure_new_simple (sizeof (GClosure), key_entry);
@@ -418,12 +403,9 @@ terminal_accels_init (void)
 			gtk_accel_group_connect_by_path (notification_group,
 			                                 I_(key_entry->accel_path),
 			                                 key_entry->closure);
-
-			mateconf_client_notify (conf, key_entry->mateconf_key);
+			keys_change_notify (settings_keybindings, key_entry->gsettings_key, NULL);
 		}
 	}
-
-	g_object_unref (conf);
 
 	g_signal_connect (notification_group, "accel-changed",
 	                  G_CALLBACK (accel_changed_callback), NULL);
@@ -432,12 +414,11 @@ terminal_accels_init (void)
 void
 terminal_accels_shutdown (void)
 {
-	MateConfClient *conf;
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_notify_remove (conf, mateconf_notify_id);
-	mateconf_client_remove_dir (conf, CONF_KEYS_PREFIX, NULL);
-	g_object_unref (conf);
+	g_signal_handlers_disconnect_by_func (settings_keybindings,
+					      G_CALLBACK(keys_change_notify),
+					      NULL);
+	g_object_unref (settings_keybindings);
 
 	if (sync_idle_id != 0)
 	{
@@ -447,8 +428,8 @@ terminal_accels_shutdown (void)
 		sync_idle_cb (NULL);
 	}
 
-	g_hash_table_destroy (mateconf_key_to_entry);
-	mateconf_key_to_entry = NULL;
+	g_hash_table_destroy (gsettings_key_to_entry);
+	gsettings_key_to_entry = NULL;
 
 	g_object_unref (notification_group);
 	notification_group = NULL;
@@ -475,37 +456,36 @@ update_model_foreach (GtkTreeModel *model,
 }
 
 static void
-keys_change_notify (MateConfClient *client,
-                    guint        cnxn_id,
-                    MateConfEntry  *entry,
-                    gpointer     user_data)
+keys_change_notify (GSettings *settings,
+                    gchar *key,
+                    gpointer user_data)
 {
-	MateConfValue *val;
+	GVariant *val;
 	KeyEntry *key_entry;
 	GdkModifierType mask;
 	guint keyval;
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
 	                       "key %s changed\n",
-	                       mateconf_entry_get_key (entry));
+	                       key);
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 
 #ifdef MATE_ENABLE_DEBUG
 	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_ACCELS)
 	{
 		if (val == NULL)
 			_terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to be unset\n");
-		else if (val->type != MATECONF_VALUE_STRING)
+		else if (!g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
 			_terminal_debug_print (TERMINAL_DEBUG_ACCELS, " changed to non-string value\n");
 		else
 			_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
 			                       " changed to \"%s\"\n",
-			                       mateconf_value_get_string (val));
+			                       g_variant_get_string (val, NULL));
 	}
 #endif
 
-	key_entry = g_hash_table_lookup (mateconf_key_to_entry, key_from_mateconf_key (mateconf_entry_get_key (entry)));
+	key_entry = g_hash_table_lookup (gsettings_key_to_entry, key);
 	if (!key_entry)
 	{
 		/* shouldn't really happen, but let's be safe */
@@ -516,15 +496,14 @@ keys_change_notify (MateConfClient *client,
 
 	if (!binding_from_value (val, &keyval, &mask))
 	{
-		const char *str = val->type == MATECONF_VALUE_STRING ? mateconf_value_get_string (val) : NULL;
+		const char *str = g_variant_is_of_type (val, G_VARIANT_TYPE_STRING) ? g_variant_get_string (val, NULL) : NULL;
 		g_printerr ("The value \"%s\" of configuration key %s is not a valid accelerator\n",
 		            str ? str : "(null)",
-		            key_entry->mateconf_key);
+		            key_entry->gsettings_key);
 		return;
 	}
-
-	key_entry->mateconf_keyval = keyval;
-	key_entry->mateconf_mask = mask;
+	key_entry->gsettings_keyval = keyval;
+	key_entry->gsettings_mask = mask;
 
 	/* Unlock the path, so we can change its accel */
 	if (!key_entry->accel_path_unlocked)
@@ -535,15 +514,15 @@ keys_change_notify (MateConfClient *client,
 	                       "changing path %s to %s\n",
 	                       key_entry->accel_path,
 	                       binding_name (keyval, mask)); /* memleak */
-	inside_mateconf_notify += 1;
+	inside_gsettings_notify += 1;
 	/* Note that this may return FALSE, e.g. when the entry was already set correctly. */
 	gtk_accel_map_change_entry (key_entry->accel_path,
 	                            keyval, mask,
 	                            TRUE);
-	inside_mateconf_notify -= 1;
+	inside_gsettings_notify -= 1;
 
-	/* Lock the path if the mateconf key isn't writable */
-	key_entry->accel_path_unlocked = mateconf_entry_get_is_writable (entry);
+	/* Lock the path if the GSettings key isn't writable */
+	key_entry->accel_path_unlocked = g_settings_is_writable (settings, key);
 	if (!key_entry->accel_path_unlocked)
 		gtk_accel_map_lock_path (key_entry->accel_path);
 
@@ -556,6 +535,8 @@ keys_change_notify (MateConfClient *client,
 	 */
 	if (edit_keys_store)
 		gtk_tree_model_foreach (GTK_TREE_MODEL (edit_keys_store), update_model_foreach, key_entry);
+
+	g_variant_unref(val);
 }
 
 static void
@@ -570,7 +551,7 @@ accel_changed_callback (GtkAccelGroup  *accel_group,
 	 * accelerator. We just use the accel closure to find our
 	 * accel entry, then update the value of that entry.
 	 * We use an idle function to avoid setting the entry
-	 * in mateconf when the accelerator gets removed and then
+	 * in GSettings when the accelerator gets removed and then
 	 * setting it again when it gets added.
 	 */
 	KeyEntry *key_entry;
@@ -580,17 +561,17 @@ accel_changed_callback (GtkAccelGroup  *accel_group,
 	                       binding_name (keyval, modifier), /* memleak */
 	                       accel_closure);
 
-	if (inside_mateconf_notify)
+	if (inside_gsettings_notify)
 	{
 		_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-		                       "Ignoring change from gtk because we're inside a mateconf notify\n");
+		                       "Ignoring change from gtk because we're inside a GSettings notify\n");
 		return;
 	}
 
 	key_entry = accel_closure->data;
 	g_assert (key_entry);
 
-	key_entry->needs_mateconf_sync = TRUE;
+	key_entry->needs_gsettings_sync = TRUE;
 
 	if (sync_idle_id == 0)
 		sync_idle_id = g_idle_add (sync_idle_cb, NULL);
@@ -618,7 +599,7 @@ binding_from_string (const char      *str,
 }
 
 static gboolean
-binding_from_value (MateConfValue       *value,
+binding_from_value (GVariant         *value,
                     guint            *accelerator_key,
                     GdkModifierType  *accelerator_mods)
 {
@@ -630,10 +611,10 @@ binding_from_value (MateConfValue       *value,
 		return TRUE;
 	}
 
-	if (value->type != MATECONF_VALUE_STRING)
+	if (!g_variant_is_of_type (value, G_VARIANT_TYPE_STRING))
 		return FALSE;
 
-	return binding_from_string (mateconf_value_get_string (value),
+	return binding_from_string (g_variant_get_string (value,NULL),
 	                            accelerator_key,
 	                            accelerator_mods);
 }
@@ -641,23 +622,23 @@ binding_from_value (MateConfValue       *value,
 static void
 add_key_entry_to_changeset (gpointer key,
                             KeyEntry *key_entry,
-                            MateConfChangeSet *changeset)
+                            GSettings *changeset)
 {
 	GtkAccelKey gtk_key;
 
-	if (!key_entry->needs_mateconf_sync)
+	if (!key_entry->needs_gsettings_sync)
 		return;
 
-	key_entry->needs_mateconf_sync = FALSE;
+	key_entry->needs_gsettings_sync = FALSE;
 
 	if (gtk_accel_map_lookup_entry (key_entry->accel_path, &gtk_key) &&
-	        (gtk_key.accel_key != key_entry->mateconf_keyval ||
-	         gtk_key.accel_mods != key_entry->mateconf_mask))
+	        (gtk_key.accel_key != key_entry->gsettings_keyval ||
+	         gtk_key.accel_mods != key_entry->gsettings_mask))
 	{
 		char *accel_name;
 
 		accel_name = binding_name (gtk_key.accel_key, gtk_key.accel_mods);
-		mateconf_change_set_set_string (changeset,  key_entry->mateconf_key, accel_name);
+		g_settings_set_string (changeset, key_entry->gsettings_key, accel_name);
 		g_free (accel_name);
 	}
 }
@@ -665,27 +646,21 @@ add_key_entry_to_changeset (gpointer key,
 static gboolean
 sync_idle_cb (gpointer data)
 {
-	MateConfClient *conf;
-	MateConfChangeSet *changeset;
+	GSettings *changeset;
 	GError *error = NULL;
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-	                       "mateconf sync handler\n");
+	                       "GSettings sync handler\n");
 
 	sync_idle_id = 0;
 
-	conf = mateconf_client_get_default ();
+	changeset = g_settings_new (CONF_KEYS_SCHEMA);
+	g_settings_delay (changeset);
 
-	changeset = mateconf_change_set_new ();
-	g_hash_table_foreach (mateconf_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);
-	if (!mateconf_client_commit_change_set (conf, changeset, TRUE, &error))
-	{
-		g_printerr ("Error committing the accelerator changeset: %s\n", error->message);
-		g_error_free (error);
-	}
+	g_hash_table_foreach (gsettings_key_to_entry, (GHFunc) add_key_entry_to_changeset, changeset);
+	g_settings_apply(changeset);
 
-	mateconf_change_set_unref (changeset);
-	g_object_unref (conf);
+	g_object_unref (changeset);
 
 	return FALSE;
 }
@@ -718,8 +693,8 @@ accel_set_func (GtkTreeViewColumn *tree_column,
 		              "visible", TRUE,
 		              "sensitive", ke->accel_path_unlocked,
 		              "editable", ke->accel_path_unlocked,
-		              "accel-key", ke->mateconf_keyval,
-		              "accel-mods", ke->mateconf_mask,
+		              "accel-key", ke->gsettings_keyval,
+		              "accel-mods", ke->gsettings_mask,
 		              NULL);
 }
 
@@ -746,8 +721,8 @@ accel_compare_func (GtkTreeModel *model,
 	}
 	else
 	{
-		name_a = binding_display_name (ke_a->mateconf_keyval,
-		                               ke_a->mateconf_mask);
+		name_a = binding_display_name (ke_a->gsettings_keyval,
+		                               ke_a->gsettings_mask);
 	}
 
 	gtk_tree_model_get (model, b,
@@ -761,8 +736,8 @@ accel_compare_func (GtkTreeModel *model,
 	}
 	else
 	{
-		name_b = binding_display_name (ke_b->mateconf_keyval,
-		                               ke_b->mateconf_mask);
+		name_b = binding_display_name (ke_b->gsettings_keyval,
+		                               ke_b->gsettings_mask);
 	}
 
 	result = g_utf8_collate (name_a, name_b);
@@ -798,7 +773,6 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 	GtkAccelGroupEntry *entries;
 	guint n_entries;
 	char *str;
-	MateConfClient *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -840,7 +814,8 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 			                            GTK_BUTTONS_OK,
 			                            _("The shortcut key “%s” is already bound to the “%s” action"),
 			                            name,
-			                            other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->mateconf_key);
+			                            
+other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->gsettings_key);
 			g_free (name);
 
 			g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
@@ -853,7 +828,7 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 	str = binding_name (keyval, mask);
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-	                       "Edited path %s keyval %s, setting mateconf to %s\n",
+	                       "Edited path %s keyval %s, setting GSettings to %s\n",
 	                       ke->accel_path,
 	                       gdk_keyval_name (keyval) ? gdk_keyval_name (keyval) : "null",
 	                       str);
@@ -877,12 +852,9 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 	}
 #endif
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_set_string (conf,
-	                            ke->mateconf_key,
-	                            str,
-	                            NULL);
-	g_object_unref (conf);
+	g_settings_set_string (settings_keybindings,
+	                       ke->gsettings_key,
+	                       str);
 	g_free (str);
 }
 
@@ -896,7 +868,6 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	GtkTreeIter iter;
 	KeyEntry *ke;
 	char *str;
-	MateConfClient *conf;
 
 	model = gtk_tree_view_get_model (view);
 
@@ -917,22 +888,19 @@ accel_cleared_callback (GtkCellRendererAccel *cell,
 	if (ke == NULL)
 		return;
 
-	ke->mateconf_keyval = 0;
-	ke->mateconf_mask = 0;
-	ke->needs_mateconf_sync = TRUE;
+	ke->gsettings_keyval = 0;
+	ke->gsettings_mask = 0;
+	ke->needs_gsettings_sync = TRUE;
 
 	str = binding_name (0, 0);
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
-	                       "Cleared keybinding for mateconf %s",
-	                       ke->mateconf_key);
+	                       "Cleared keybinding for GSettings %s",
+	                       ke->gsettings_key);
 
-	conf = mateconf_client_get_default ();
-	mateconf_client_set_string (conf,
-	                            ke->mateconf_key,
-	                            str,
-	                            NULL);
-	g_object_unref (conf);
+	g_settings_set_string (settings_keybindings,
+	                       ke->gsettings_key,
+	                       str);
 	g_free (str);
 }
 

@@ -1,4 +1,4 @@
-INCLUDES =						\
+libcaja_open_terminal_la_CFLAGS = \
 	-DG_LOG_DOMAIN=\"Caja-Open-Terminal\"	\
 	-DDATADIR=\"$(datadir)\"			\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
@@ -7,8 +7,8 @@ INCLUDES =						\
 	$(WARN_CFLAGS)                                  \
 	-Werror                                         \
 	$(DISABLE_DEPRECATED_CFLAGS)			\
-	$(CAJA_CFLAGS)				\
-	$(MATECONF_CFLAGS)					\
+	$(AM_CFLAGS)				\
+	$(TERM_CFLAGS)				\
 	$(MATEDESKTOP_CFLAGS)
 
 caja_extensiondir=$(CAJA_EXTENSION_DIR)
@@ -24,4 +24,4 @@ libcaja_open_terminal_la_SOURCES = \
 	open-terminal.c
 
 libcaja_open_terminal_la_LDFLAGS = -module -avoid-version
-libcaja_open_terminal_la_LIBADD  = $(CAJA_LIBS) $(MATECONF_LIBS) $(MATEDESKTOP_LIBS)
+libcaja_open_terminal_la_LIBADD  = $(AM_LIBS) $(TERM_LIBS) $(MATEDESKTOP_LIBS)

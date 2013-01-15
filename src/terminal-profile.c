@@ -24,8 +24,6 @@
 
 #include <gtk/gtk.h>
 
-#include <mateconf/mateconf-client.h>
-
 #include "terminal-app.h"
 #include "terminal-debug.h"
 #include "terminal-intl.h"
@@ -39,8 +37,8 @@
  *  - add a #define with its name in terminal-profile.h
  *  - add a gobject property for it in terminal_profile_class_init
  *  - if the property's type needs special casing, add that to
- *    terminal_profile_mateconf_notify_cb and
- *    terminal_profile_mateconf_changeset_add
+ *    terminal_profile_gsettings_notify_cb and
+ *    terminal_profile_gsettings_changeset_add
  *  - if necessary the default value cannot be handled via the paramspec,
  *    handle that in terminal_profile_reset_property_internal
  */
@@ -89,45 +87,45 @@ enum
     LAST_PROP
 };
 
-#define KEY_ALLOW_BOLD "allow_bold"
-#define KEY_BACKGROUND_COLOR "background_color"
-#define KEY_BACKGROUND_DARKNESS "background_darkness"
-#define KEY_BACKGROUND_IMAGE_FILE "background_image"
-#define KEY_BACKGROUND_TYPE "background_type"
-#define KEY_BACKSPACE_BINDING "backspace_binding"
-#define KEY_BOLD_COLOR "bold_color"
-#define KEY_BOLD_COLOR_SAME_AS_FG "bold_color_same_as_fg"
-#define KEY_CURSOR_BLINK_MODE "cursor_blink_mode"
-#define KEY_CURSOR_SHAPE "cursor_shape"
-#define KEY_CUSTOM_COMMAND "custom_command"
-#define KEY_DEFAULT_SHOW_MENUBAR "default_show_menubar"
-#define KEY_DEFAULT_SIZE_COLUMNS "default_size_columns"
-#define KEY_DEFAULT_SIZE_ROWS "default_size_rows"
-#define KEY_DELETE_BINDING "delete_binding"
-#define KEY_EXIT_ACTION "exit_action"
+#define KEY_ALLOW_BOLD "allow-bold"
+#define KEY_BACKGROUND_COLOR "background-color"
+#define KEY_BACKGROUND_DARKNESS "background-darkness"
+#define KEY_BACKGROUND_IMAGE_FILE "background-image"
+#define KEY_BACKGROUND_TYPE "background-type"
+#define KEY_BACKSPACE_BINDING "backspace-binding"
+#define KEY_BOLD_COLOR "bold-color"
+#define KEY_BOLD_COLOR_SAME_AS_FG "bold-color-same-as-fg"
+#define KEY_CURSOR_BLINK_MODE "cursor-blink-mode"
+#define KEY_CURSOR_SHAPE "cursor-shape"
+#define KEY_CUSTOM_COMMAND "custom-command"
+#define KEY_DEFAULT_SHOW_MENUBAR "default-show-menubar"
+#define KEY_DEFAULT_SIZE_COLUMNS "default-size-columns"
+#define KEY_DEFAULT_SIZE_ROWS "default-size-rows"
+#define KEY_DELETE_BINDING "delete-binding"
+#define KEY_EXIT_ACTION "exit-action"
 #define KEY_FONT "font"
-#define KEY_FOREGROUND_COLOR "foreground_color"
-#define KEY_LOGIN_SHELL "login_shell"
+#define KEY_FOREGROUND_COLOR "foreground-color"
+#define KEY_LOGIN_SHELL "login-shell"
 #define KEY_PALETTE "palette"
-#define KEY_SCROLL_BACKGROUND "scroll_background"
-#define KEY_SCROLLBACK_LINES "scrollback_lines"
-#define KEY_SCROLLBACK_UNLIMITED "scrollback_unlimited"
-#define KEY_SCROLLBAR_POSITION "scrollbar_position"
-#define KEY_SCROLL_ON_KEYSTROKE "scroll_on_keystroke"
-#define KEY_SCROLL_ON_OUTPUT "scroll_on_output"
-#define KEY_SILENT_BELL "silent_bell"
-#define KEY_TITLE_MODE "title_mode"
+#define KEY_SCROLL_BACKGROUND "scroll-background"
+#define KEY_SCROLLBACK_LINES "scrollback-lines"
+#define KEY_SCROLLBACK_UNLIMITED "scrollback-unlimited"
+#define KEY_SCROLLBAR_POSITION "scrollbar-position"
+#define KEY_SCROLL_ON_KEYSTROKE "scroll-on-keystroke"
+#define KEY_SCROLL_ON_OUTPUT "scroll-on-output"
+#define KEY_SILENT_BELL "silent-bell"
+#define KEY_TITLE_MODE "title-mode"
 #define KEY_TITLE "title"
-#define KEY_UPDATE_RECORDS "update_records"
-#define KEY_USE_CUSTOM_COMMAND "use_custom_command"
-#define KEY_USE_CUSTOM_DEFAULT_SIZE "use_custom_default_size"
-#define KEY_USE_SKEY "use_skey"
-#define KEY_USE_SYSTEM_FONT "use_system_font"
-#define KEY_USE_THEME_COLORS "use_theme_colors"
-#define KEY_VISIBLE_NAME "visible_name"
-#define KEY_WORD_CHARS "word_chars"
+#define KEY_UPDATE_RECORDS "update-records"
+#define KEY_USE_CUSTOM_COMMAND "use-custom-command"
+#define KEY_USE_CUSTOM_DEFAULT_SIZE "use-custom-default-size"
+#define KEY_USE_SKEY "use-skey"
+#define KEY_USE_SYSTEM_FONT "use-system-font"
+#define KEY_USE_THEME_COLORS "use-theme-colors"
+#define KEY_VISIBLE_NAME "visible-name"
+#define KEY_WORD_CHARS "word-chars"
 
-/* Keep these in sync with the MateConf schema! */
+/* Keep these in sync with the GSettings schema! */
 #define DEFAULT_ALLOW_BOLD            (TRUE)
 #define DEFAULT_BACKGROUND_COLOR      ("#FFFFDD")
 #define DEFAULT_BOLD_COLOR_SAME_AS_FG (TRUE)
@@ -172,31 +170,17 @@ struct _TerminalProfilePrivate
 	GValueArray *properties;
 	gboolean *locked;
 
-	MateConfClient *conf;
+	GSettings *settings;
 	char *profile_dir;
-	guint notify_id;
 
 	GSList *dirty_pspecs;
 	guint save_idle_id;
 
-	GParamSpec *mateconf_notification_pspec;
+	GParamSpec *gsettings_notification_pspec;
 
 	gboolean background_load_failed;
 
 	guint forgotten : 1;
-};
-
-/* We have to continue to use these since they're unfortunately different
- * from the value nicks of the vte_terminal_erase_binding_get_type() enum type.
- */
-static const MateConfEnumStringPair erase_bindings[] =
-{
-	{ VTE_ERASE_AUTO, "auto" },
-	{ VTE_ERASE_ASCII_BACKSPACE, "control-h" },
-	{ VTE_ERASE_ASCII_DELETE, "ascii-del" },
-	{ VTE_ERASE_DELETE_SEQUENCE, "escape-sequence" },
-	{ VTE_ERASE_TTY, "tty" },
-	{ -1, NULL }
 };
 
 static const GdkColor terminal_palettes[TERMINAL_PALETTE_N_BUILTINS][TERMINAL_PALETTE_SIZE] =
@@ -302,7 +286,7 @@ static void ensure_pixbuf_property (TerminalProfile *profile,
                                     gboolean *load_failed);
 
 static guint signals[LAST_SIGNAL];
-static GQuark mateconf_key_quark;
+static GQuark gsettings_key_quark;
 
 G_DEFINE_TYPE (TerminalProfile, terminal_profile, G_TYPE_OBJECT);
 
@@ -531,119 +515,95 @@ terminal_profile_reset_property_internal (TerminalProfile *profile,
 }
 
 static void
-terminal_profile_mateconf_notify_cb (MateConfClient *client,
-                                     guint        cnxn_id,
-                                     MateConfEntry  *entry,
-                                     gpointer     user_data)
+terminal_profile_gsettings_notify_cb (GSettings *settings,
+                                      gchar *key,
+                                      gpointer     user_data)
 {
 	TerminalProfile *profile = TERMINAL_PROFILE (user_data);
 	TerminalProfilePrivate *priv = profile->priv;
 	TerminalProfileClass *klass;
-	const char *key;
-	MateConfValue *mateconf_value;
+	GVariant *settings_value;
 	GParamSpec *pspec;
 	GValue value = { 0, };
 	gboolean equal;
 	gboolean force_set = FALSE;
 
-	key = mateconf_entry_get_key (entry);
-	if (!key || !g_str_has_prefix (key, priv->profile_dir))
-		return;
+	if (!key) return;
 
 	_terminal_debug_print (TERMINAL_DEBUG_PROFILE,
-	                       "MateConf notification for key %s [%s]\n",
+	                       "GSettings notification for key %s [%s]\n",
 	                       key,
-	                       mateconf_entry_get_is_writable (entry) ? "writable" : "LOCKED");
+	                       g_settings_is_writable (settings, key) ? "writable" : "LOCKED");
 
-	key += strlen (priv->profile_dir);
-	if (!key[0])
-		return;
-
-	key++;
 	klass = TERMINAL_PROFILE_GET_CLASS (profile);
-	pspec = g_hash_table_lookup (klass->mateconf_keys, key);
+	pspec = g_hash_table_lookup (klass->gsettings_keys, key);
 	if (!pspec)
 		return; /* ignore unknown keys, for future extensibility */
 
-	priv->locked[pspec->param_id] = !mateconf_entry_get_is_writable (entry);
+	priv->locked[pspec->param_id] = !g_settings_is_writable (settings, key);
 
-	mateconf_value = mateconf_entry_get_value (entry);
-	if (!mateconf_value)
+	settings_value = g_settings_get_value (settings, key);
+	if (!settings_value)
 		return;
 
 	g_value_init (&value, G_PARAM_SPEC_VALUE_TYPE (pspec));
 
 	if (G_IS_PARAM_SPEC_BOOLEAN (pspec))
 	{
-		if (mateconf_value->type != MATECONF_VALUE_BOOL)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_BOOLEAN))
 			goto out;
 
-		g_value_set_boolean (&value, mateconf_value_get_bool (mateconf_value));
+		g_value_set_boolean (&value, g_variant_get_boolean (settings_value));
 	}
 	else if (G_IS_PARAM_SPEC_STRING (pspec))
 	{
-		if (mateconf_value->type != MATECONF_VALUE_STRING)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		g_value_set_string (&value, mateconf_value_get_string (mateconf_value));
+		g_value_set_string (&value, g_variant_get_string (settings_value, NULL));
 	}
 	else if (G_IS_PARAM_SPEC_ENUM (pspec))
 	{
-		const GEnumValue *eval;
-		int enum_value;
 
-		if (mateconf_value->type != MATECONF_VALUE_STRING)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		eval = g_enum_get_value_by_nick (G_PARAM_SPEC_ENUM (pspec)->enum_class,
-		                                 mateconf_value_get_string (mateconf_value));
-		if (eval)
-			enum_value = eval->value;
-		else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == vte_terminal_erase_binding_get_type ())
-		{
-			/* Backward compatibility */
-			if (!mateconf_string_to_enum ((MateConfEnumStringPair*) erase_bindings,
-			                              mateconf_value_get_string (mateconf_value),
-			                              &enum_value))
-				goto out;
-		}
-		else
-			goto out;
-
-		g_value_set_enum (&value, enum_value);
+		g_value_set_enum (&value, g_settings_get_enum (settings, key));
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
 	{
 		GdkColor color;
 
-		if (mateconf_value->type != MATECONF_VALUE_STRING)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		if (!gdk_color_parse (mateconf_value_get_string (mateconf_value), &color))
+		if (!gdk_color_parse (g_variant_get_string (settings_value, NULL), &color))
 			goto out;
 
 		g_value_set_boxed (&value, &color);
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == PANGO_TYPE_FONT_DESCRIPTION)
 	{
-		if (mateconf_value->type != MATECONF_VALUE_STRING)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		g_value_take_boxed (&value, pango_font_description_from_string (mateconf_value_get_string (mateconf_value)));
+		g_value_take_boxed (&value, pango_font_description_from_string (g_variant_get_string (settings_value, NULL)));
 	}
 	else if (G_IS_PARAM_SPEC_DOUBLE (pspec))
 	{
-		if (mateconf_value->type != MATECONF_VALUE_FLOAT)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_DOUBLE))
 			goto out;
 
-		g_value_set_double (&value, mateconf_value_get_float (mateconf_value));
+		g_value_set_double (&value, g_variant_get_double (settings_value));
 	}
 	else if (G_IS_PARAM_SPEC_INT (pspec))
 	{
-		if (mateconf_value->type != MATECONF_VALUE_INT)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_INT16) &&
+		    !g_variant_is_of_type (settings_value, G_VARIANT_TYPE_INT32) &&
+		    !g_variant_is_of_type (settings_value, G_VARIANT_TYPE_INT64))
 			goto out;
 
-		g_value_set_int (&value, mateconf_value_get_int (mateconf_value));
+		g_value_set_int (&value, g_settings_get_int(settings, key));
 	}
 	else if (G_IS_PARAM_SPEC_VALUE_ARRAY (pspec) &&
 	         G_PARAM_SPEC_VALUE_TYPE (G_PARAM_SPEC_VALUE_ARRAY (pspec)->element_spec) == GDK_TYPE_COLOR)
@@ -652,10 +612,10 @@ terminal_profile_mateconf_notify_cb (MateConfClient *client,
 		GdkColor *colors;
 		int n_colors, i;
 
-		if (mateconf_value->type != MATECONF_VALUE_STRING)
+		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		color_strings = g_strsplit (mateconf_value_get_string (mateconf_value), ":", -1);
+		color_strings = g_strsplit (g_variant_get_string (settings_value, NULL), ":", -1);
 		if (!color_strings)
 			goto out;
 
@@ -684,8 +644,8 @@ terminal_profile_mateconf_notify_cb (MateConfClient *client,
 	if (g_param_value_validate (pspec, &value))
 	{
 		_terminal_debug_print (TERMINAL_DEBUG_PROFILE,
-		                       "Invalid value in mateconf for key %s was changed to comply with pspec %s\n",
-		                       mateconf_entry_get_key (entry), pspec->name);
+		                       "Invalid value in GSettings for key %s was changed to comply with pspec %s\n",
+		                       key, pspec->name);
 
 		force_set = TRUE;
 	}
@@ -710,9 +670,9 @@ terminal_profile_mateconf_notify_cb (MateConfClient *client,
 
 	if (!equal || force_set)
 	{
-		priv->mateconf_notification_pspec = pspec;
+		priv->gsettings_notification_pspec = pspec;
 		g_object_set_property (G_OBJECT (profile), pspec->name, &value);
-		priv->mateconf_notification_pspec = NULL;
+		priv->gsettings_notification_pspec = NULL;
 	}
 
 out:
@@ -721,15 +681,15 @@ out:
 	 */
 
 	g_value_unset (&value);
+	g_variant_unref (settings_value);
 }
 
 static void
-terminal_profile_mateconf_changeset_add (TerminalProfile *profile,
-        MateConfChangeSet *changeset,
+terminal_profile_gsettings_changeset_add (TerminalProfile *profile,
+        GSettings *changeset,
         GParamSpec *pspec)
 {
 	TerminalProfilePrivate *priv = profile->priv;
-	const char *mateconf_key;
 	char *key;
 	const GValue *value;
 
@@ -738,50 +698,36 @@ terminal_profile_mateconf_changeset_add (TerminalProfile *profile,
 	if (priv->locked[pspec->param_id])
 		return;
 
-	if (!mateconf_client_key_is_writable (priv->conf, mateconf_key, NULL))
+	if (!g_settings_is_writable (priv->settings, gsettings_key, NULL))
 		return;
 #endif
 
-	mateconf_key = g_param_spec_get_qdata (pspec, mateconf_key_quark);
-	if (!mateconf_key)
+	key = g_param_spec_get_qdata (pspec, gsettings_key_quark);
+	if (!key)
 		return;
 
-	key = mateconf_concat_dir_and_key (priv->profile_dir, mateconf_key);
 	value = g_value_array_get_nth (priv->properties, pspec->param_id);
 
 	_terminal_debug_print (TERMINAL_DEBUG_PROFILE,
-	                       "Adding pspec %s with value %s to the mateconf changeset\n",
+	                       "Adding pspec %s with value %s to the GSettings changeset\n",
 	                       pspec->name, g_strdup_value_contents (value));
 
 	if (G_IS_PARAM_SPEC_BOOLEAN (pspec))
-		mateconf_change_set_set_bool (changeset, key, g_value_get_boolean (value));
+		g_settings_set_boolean (changeset, key, g_value_get_boolean (value));
 	else if (G_IS_PARAM_SPEC_STRING (pspec))
 	{
 		const char *str;
 
 		str = g_value_get_string (value);
-		mateconf_change_set_set_string (changeset, key, str ? str : "");
+		g_settings_set_string (changeset, key, str ? str : "");
 	}
 	else if (G_IS_PARAM_SPEC_ENUM (pspec))
 	{
 		const GEnumValue *eval;
-		const char *string;
 
 		eval = g_enum_get_value (G_PARAM_SPEC_ENUM (pspec)->enum_class, g_value_get_enum (value));
 
-		if (G_PARAM_SPEC_VALUE_TYPE (pspec) == vte_terminal_erase_binding_get_type ())
-		{
-			/* Backward compatibility */
-			string = mateconf_enum_to_string ((MateConfEnumStringPair*) erase_bindings, g_value_get_enum (value));
-			if (!string)
-				goto cleanup;
-		}
-		else if (eval)
-			string = eval->value_nick;
-		else
-			goto cleanup;
-
-		mateconf_change_set_set_string (changeset, key, string);
+		g_settings_set_enum (changeset, key, eval->value);
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
 	{
@@ -798,7 +744,7 @@ terminal_profile_mateconf_changeset_add (TerminalProfile *profile,
 		            color->green,
 		            color->blue);
 
-		mateconf_change_set_set_string (changeset, key, str);
+		g_settings_set_string (changeset, key, str);
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == PANGO_TYPE_FONT_DESCRIPTION)
 	{
@@ -810,13 +756,13 @@ terminal_profile_mateconf_changeset_add (TerminalProfile *profile,
 			goto cleanup;
 
 		font = pango_font_description_to_string (font_desc);
-		mateconf_change_set_set_string (changeset, key, font);
+		g_settings_set_string (changeset, key, font);
 		g_free (font);
 	}
 	else if (G_IS_PARAM_SPEC_DOUBLE (pspec))
-		mateconf_change_set_set_float (changeset, key, (float) g_value_get_double (value));
+		g_settings_set_double (changeset, key, g_value_get_double (value));
 	else if (G_IS_PARAM_SPEC_INT (pspec))
-		mateconf_change_set_set_int (changeset, key, g_value_get_int (value));
+		g_settings_set_int (changeset, key, g_value_get_int (value));
 	else if (G_IS_PARAM_SPEC_VALUE_ARRAY (pspec) &&
 	         G_PARAM_SPEC_VALUE_TYPE (G_PARAM_SPEC_VALUE_ARRAY (pspec)->element_spec) == GDK_TYPE_COLOR)
 	{
@@ -852,27 +798,28 @@ terminal_profile_mateconf_changeset_add (TerminalProfile *profile,
 			                        color->blue);
 		}
 
-		mateconf_change_set_set_string (changeset, key, string->str);
+		g_settings_set_string (changeset, key, string->str);
 		g_string_free (string, TRUE);
 	}
 	else
 		g_printerr ("Unhandled value type %s of pspec %s\n", g_type_name (G_PARAM_SPEC_VALUE_TYPE (pspec)), pspec->name);
 
 cleanup:
-	g_free (key);
+	return;
 }
 
 static void
 terminal_profile_save (TerminalProfile *profile)
 {
 	TerminalProfilePrivate *priv = profile->priv;
-	MateConfChangeSet *changeset;
+	GSettings *changeset;
 	GSList *l;
 	GError *error = NULL;
 
 	priv->save_idle_id = 0;
-
-	changeset = mateconf_change_set_new ();
+	changeset = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
+					      g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir,"/", NULL));
+	g_settings_delay (changeset);
 
 	for (l = priv->dirty_pspecs; l != NULL; l = l->next)
 	{
@@ -884,19 +831,14 @@ terminal_profile_save (TerminalProfile *profile)
 		if ((pspec->flags & G_PARAM_WRITABLE) == 0)
 			continue;
 
-		terminal_profile_mateconf_changeset_add (profile, changeset, pspec);
+		terminal_profile_gsettings_changeset_add (profile, changeset, pspec);
 	}
 
 	g_slist_free (priv->dirty_pspecs);
 	priv->dirty_pspecs = NULL;
 
-	if (!mateconf_client_commit_change_set (priv->conf, changeset, TRUE, &error))
-	{
-		g_message ("Failed to commit the changeset to mateconf: %s", error->message);
-		g_error_free (error);
-	}
-
-	mateconf_change_set_unref (changeset);
+	g_settings_apply (changeset);
+	g_object_unref (changeset);
 }
 
 static gboolean
@@ -935,10 +877,7 @@ terminal_profile_init (TerminalProfile *profile)
 
 	priv = profile->priv = G_TYPE_INSTANCE_GET_PRIVATE (profile, TERMINAL_TYPE_PROFILE, TerminalProfilePrivate);
 
-	priv->mateconf_notification_pspec = NULL;
-
-	priv->conf = mateconf_client_get_default ();
-
+	priv->gsettings_notification_pspec = NULL;
 	priv->locked = g_new0 (gboolean, LAST_PROP);
 
 	priv->properties = g_value_array_new (LAST_PROP);
@@ -992,14 +931,21 @@ terminal_profile_constructor (GType type,
 	name = g_value_get_string (g_value_array_get_nth (priv->properties, PROP_NAME));
 	g_assert (name != NULL);
 
-	/* Now load those properties from mateconf that were not set as construction params */
+	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
+		g_strconcat (CONF_PROFILE_PREFIX, name, "/", NULL));
+	g_assert (priv->settings != NULL);
+	g_signal_connect (priv->settings,
+			  g_strconcat("changed::", priv->profile_dir, "/", NULL),
+			  G_CALLBACK(terminal_profile_gsettings_notify_cb),
+			  profile);
+
+	/* Now load those properties from GSettings that were not set as construction params */
 	pspecs = g_object_class_list_properties (G_OBJECT_CLASS (TERMINAL_PROFILE_GET_CLASS (profile)), &n_pspecs);
 	for (i = 0; i < n_pspecs; ++i)
 	{
 		GParamSpec *pspec = pspecs[i];
 		guint j;
 		gboolean is_construct = FALSE;
-		const char *mateconf_key;
 		char *key;
 
 		if (pspec->owner_type != TERMINAL_TYPE_PROFILE)
@@ -1019,13 +965,11 @@ terminal_profile_constructor (GType type,
 		if (is_construct)
 			continue;
 
-		mateconf_key = g_param_spec_get_qdata (pspec, mateconf_key_quark);
-		if (!mateconf_key)
+		key = g_param_spec_get_qdata (pspec, gsettings_key_quark);
+		if (!key)
 			continue;
 
-		key = mateconf_concat_dir_and_key (priv->profile_dir, mateconf_key);
-		mateconf_client_notify (priv->conf, key);
-		g_free (key);
+		terminal_profile_gsettings_notify_cb (priv->settings, key,  profile);
 	}
 
 	g_free (pspecs);
@@ -1039,8 +983,9 @@ terminal_profile_finalize (GObject *object)
 	TerminalProfile *profile = TERMINAL_PROFILE (object);
 	TerminalProfilePrivate *priv = profile->priv;
 
-	mateconf_client_notify_remove (priv->conf, priv->notify_id);
-	priv->notify_id = 0;
+	g_signal_handlers_disconnect_by_func (priv->settings,
+		G_CALLBACK(terminal_profile_gsettings_notify_cb),
+		profile);
 
 	if (priv->save_idle_id)
 	{
@@ -1052,7 +997,7 @@ terminal_profile_finalize (GObject *object)
 
 	_terminal_profile_forget (profile);
 
-	g_object_unref (priv->conf);
+	g_object_unref (priv->settings);
 
 	g_free (priv->profile_dir);
 	g_free (priv->locked);
@@ -1142,18 +1087,19 @@ terminal_profile_set_property (GObject *object,
 		const char *name = g_value_get_string (value);
 
 		g_assert (name != NULL);
-		priv->profile_dir = mateconf_concat_dir_and_key (CONF_PROFILES_PREFIX, name);
-
-		mateconf_client_add_dir (priv->conf, priv->profile_dir,
-		                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-		                         NULL);
-		priv->notify_id =
-		    mateconf_client_notify_add (priv->conf,
-		                                priv->profile_dir,
-		                                terminal_profile_mateconf_notify_cb,
-		                                profile, NULL,
-		                                NULL);
-
+		priv->profile_dir = g_strdup (name);
+		if (priv->settings != NULL) {
+			g_signal_handlers_disconnect_by_func (priv->settings,
+							      G_CALLBACK(terminal_profile_gsettings_notify_cb),
+							      profile);
+			g_object_unref (priv->settings);
+			priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
+						g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir, "/", NULL));
+			g_signal_connect (priv->settings,
+					  g_strconcat("changed::", priv->profile_dir, "/", NULL),
+						      G_CALLBACK(terminal_profile_gsettings_notify_cb),
+					  profile);
+		}
 		break;
 	}
 
@@ -1185,8 +1131,8 @@ terminal_profile_notify (GObject *object,
 
 	if (pspec->owner_type == TERMINAL_TYPE_PROFILE &&
 	        (pspec->flags & G_PARAM_WRITABLE) &&
-	        g_param_spec_get_qdata (pspec, mateconf_key_quark) != NULL &&
-	        pspec != priv->mateconf_notification_pspec)
+	        g_param_spec_get_qdata (pspec, gsettings_key_quark) != NULL &&
+	        pspec != priv->gsettings_notification_pspec)
 		terminal_profile_schedule_save (TERMINAL_PROFILE (object), pspec);
 }
 
@@ -1195,7 +1141,7 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	mateconf_key_quark = g_quark_from_static_string ("GT::MateConfKey");
+	gsettings_key_quark = g_quark_from_static_string ("GT::GSettingsKey");
 
 	g_type_class_add_private (object_class, sizeof (TerminalProfilePrivate));
 
@@ -1214,88 +1160,88 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 	                  g_cclosure_marshal_VOID__VOID,
 	                  G_TYPE_NONE, 0);
 
-	/* mateconf_key -> pspec hash */
-	klass->mateconf_keys = g_hash_table_new (g_str_hash, g_str_equal);
+	/* gsettings_key -> pspec hash */
+	klass->gsettings_keys = g_hash_table_new (g_str_hash, g_str_equal);
 
 #define TERMINAL_PROFILE_PSPEC_STATIC (G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB)
 
-#define TERMINAL_PROFILE_PROPERTY(propId, propSpec, propMateConf) \
+#define TERMINAL_PROFILE_PROPERTY(propId, propSpec, propGSettings) \
 {\
   GParamSpec *pspec = propSpec;\
   g_object_class_install_property (object_class, propId, pspec);\
 \
-  if (propMateConf)\
+  if (propGSettings)\
     {\
-      g_param_spec_set_qdata (pspec, mateconf_key_quark, (gpointer) propMateConf);\
-      g_hash_table_insert (klass->mateconf_keys, (gpointer) propMateConf, pspec);\
+      g_param_spec_set_qdata (pspec, gsettings_key_quark, (gpointer) propGSettings);\
+      g_hash_table_insert (klass->gsettings_keys, (gpointer) propGSettings, pspec);\
     }\
 }
 
-#define TERMINAL_PROFILE_PROPERTY_BOOLEAN(prop, propDefault, propMateConf) \
+#define TERMINAL_PROFILE_PROPERTY_BOOLEAN(prop, propDefault, propGSettings) \
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_boolean (TERMINAL_PROFILE_##prop, NULL, NULL,\
                           propDefault,\
                           G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_BOXED(prop, propType, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_BOXED(prop, propType, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_boxed (TERMINAL_PROFILE_##prop, NULL, NULL,\
                         propType,\
                         G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_DOUBLE(prop, propMin, propMax, propDefault, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_DOUBLE(prop, propMin, propMax, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_double (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propMin, propMax, propDefault,\
                          G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_ENUM(prop, propType, propDefault, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_ENUM(prop, propType, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_enum (TERMINAL_PROFILE_##prop, NULL, NULL,\
                        propType, propDefault,\
                        G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_INT(prop, propMin, propMax, propDefault, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_INT(prop, propMin, propMax, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_int (TERMINAL_PROFILE_##prop, NULL, NULL,\
                       propMin, propMax, propDefault,\
                       G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
 	/* these are all read-only */
-#define TERMINAL_PROFILE_PROPERTY_OBJECT(prop, propType, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_OBJECT(prop, propType, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_object (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propType,\
                          G_PARAM_READABLE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_STRING(prop, propDefault, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_STRING(prop, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_string (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propDefault,\
                          G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_STRING_CO(prop, propDefault, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_STRING_CO(prop, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_string (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propDefault,\
                          G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_VALUE_ARRAY_BOXED(prop, propElementName, propElementType, propMateConf)\
+#define TERMINAL_PROFILE_PROPERTY_VALUE_ARRAY_BOXED(prop, propElementName, propElementType, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
     g_param_spec_value_array (TERMINAL_PROFILE_##prop, NULL, NULL,\
                               g_param_spec_boxed (propElementName, NULL, NULL,\
                                                   propElementType, \
                                                   G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
                               G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propMateConf)
+    propGSettings)
 
 	TERMINAL_PROFILE_PROPERTY_BOOLEAN (ALLOW_BOLD, DEFAULT_ALLOW_BOLD, KEY_ALLOW_BOLD);
 	TERMINAL_PROFILE_PROPERTY_BOOLEAN (BOLD_COLOR_SAME_AS_FG, DEFAULT_BOLD_COLOR_SAME_AS_FG, KEY_BOLD_COLOR_SAME_AS_FG);
@@ -1363,10 +1309,6 @@ _terminal_profile_forget (TerminalProfile *profile)
 
 	if (!priv->forgotten)
 	{
-		mateconf_client_remove_dir (priv->conf,
-		                            priv->profile_dir,
-		                            NULL);
-
 		priv->forgotten = TRUE;
 
 		g_signal_emit (G_OBJECT (profile), signals[FORGOTTEN], 0);
@@ -1397,7 +1339,7 @@ _terminal_profile_clone (TerminalProfile *base_profile,
 	profile_num = 0;
 	do
 	{
-		g_snprintf (profile_name, sizeof (profile_name), "Profile%u", profile_num++);
+		g_snprintf (profile_name, sizeof (profile_name), "profile%u", profile_num++);
 	}
 	while (terminal_app_get_profile_by_name (app, profile_name) != NULL);
 
@@ -1439,7 +1381,7 @@ _terminal_profile_clone (TerminalProfile *base_profile,
 	for (i = 0; i < n_params; ++i)
 		g_value_unset (&params[i].value);
 
-	/* Flush the new profile to mateconf */
+	/* Flush the new profile to GSettings */
 	new_priv = new_profile->priv;
 
 	g_slist_free (new_priv->dirty_pspecs);
