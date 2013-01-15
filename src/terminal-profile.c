@@ -1090,12 +1090,15 @@ terminal_profile_set_property (GObject *object,
 		priv->profile_dir = g_strdup (name);
 		if (priv->settings != NULL) {
 			g_signal_handlers_disconnect_by_func (priv->settings,
-												  G_CALLBACK(terminal_profile_gsettings_notify_cb),
-												  profile);
+							      G_CALLBACK(terminal_profile_gsettings_notify_cb),
+							      profile);
+			g_object_unref (priv->settings);
+			priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
+						g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir, "/", NULL));
 			g_signal_connect (priv->settings,
 					  g_strconcat("changed::", priv->profile_dir, "/", NULL),
-								  G_CALLBACK(terminal_profile_gsettings_notify_cb),
-								  profile);
+						      G_CALLBACK(terminal_profile_gsettings_notify_cb),
+					  profile);
 		}
 		break;
 	}
