@@ -32,8 +32,6 @@
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
-#include <mateconf/mateconf.h>
-
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #include <X11/Xatom.h>
@@ -527,11 +525,11 @@ terminal_util_key_file_get_argv (GKeyFile *key_file,
 /* Proxy stuff */
 
 static char *
-conf_get_string (MateConfClient *conf,
+gsettings_get_string (GSettings *settings,
                  const char *key)
 {
 	char *value;
-	value = mateconf_client_get_string (conf, key, NULL);
+	value = g_settings_get_string (settings, key);
 	if (G_UNLIKELY (value && *value == '\0'))
 	{
 		g_free (value);
@@ -590,30 +588,30 @@ set_proxy_env (GHashTable *env_table,
 
 static void
 setup_http_proxy_env (GHashTable *env_table,
-                      MateConfClient *conf)
+                      GSettings *settings_http)
 {
 	gchar *host;
 	gint port;
 	GSList *ignore;
 
-	if (!mateconf_client_get_bool (conf, CONF_HTTP_PROXY_PREFIX "/use_http_proxy", NULL))
+	if (!g_settings_get_boolean (settings_http, "use-http-proxy"))
 		return;
 
-	host = conf_get_string (conf, CONF_HTTP_PROXY_PREFIX "/host");
-	port = mateconf_client_get_int (conf, CONF_HTTP_PROXY_PREFIX "/port", NULL);
+	host = gsettings_get_string (settings_http, "host");
+	port = g_settings_get_int (settings_http, "port");
 	if (host && port)
 	{
 		GString *buf = g_string_sized_new (64);
 		g_string_append (buf, "http://");
 
-		if (mateconf_client_get_bool (conf, CONF_HTTP_PROXY_PREFIX "/use_authentication", NULL))
+		if (g_settings_get_boolean (settings_http, "use-authentication"))
 		{
 			char *user, *password;
-			user = conf_get_string (conf, CONF_HTTP_PROXY_PREFIX "/authentication_user");
+			user = gsettings_get_string (settings_http, "authentication-user");
 			if (user)
 			{
 				g_string_append_uri_escaped (buf, user, NULL, TRUE);
-				password = conf_get_string (conf, CONF_HTTP_PROXY_PREFIX "/authentication_password");
+				password = gsettings_get_string (settings_http, "authentication-password");
 				if (password)
 				{
 					g_string_append_c (buf, ':');
@@ -629,7 +627,7 @@ setup_http_proxy_env (GHashTable *env_table,
 	}
 	g_free (host);
 
-	ignore = mateconf_client_get_list (conf, CONF_HTTP_PROXY_PREFIX "/ignore_hosts", MATECONF_VALUE_STRING, NULL);
+	ignore = terminal_gsettings_strv_to_gslist (g_settings_get_strv (settings_http, "ignore-hosts"));
 	if (ignore)
 	{
 		GString *buf = g_string_sized_new (64);
@@ -652,13 +650,13 @@ setup_http_proxy_env (GHashTable *env_table,
 
 static void
 setup_https_proxy_env (GHashTable *env_table,
-                       MateConfClient *conf)
+                       GSettings *settings)
 {
 	gchar *host;
 	gint port;
 
-	host = conf_get_string (conf, CONF_PROXY_PREFIX "/secure_host");
-	port = mateconf_client_get_int (conf, CONF_PROXY_PREFIX "/secure_port", NULL);
+	host = gsettings_get_string (settings, "secure-host");
+	port = g_settings_get_int (settings, "secure-port");
 	if (host && port)
 	{
 		char *proxy;
@@ -671,13 +669,13 @@ setup_https_proxy_env (GHashTable *env_table,
 
 static void
 setup_ftp_proxy_env (GHashTable *env_table,
-                     MateConfClient *conf)
+                     GSettings *settings)
 {
 	gchar *host;
 	gint port;
 
-	host = conf_get_string (conf, CONF_PROXY_PREFIX "/ftp_host");
-	port = mateconf_client_get_int (conf, CONF_PROXY_PREFIX "/ftp_port", NULL);
+	host = gsettings_get_string (settings, "ftp-host");
+	port = g_settings_get_int (settings, "ftp-port");
 	if (host && port)
 	{
 		char *proxy;
@@ -690,13 +688,13 @@ setup_ftp_proxy_env (GHashTable *env_table,
 
 static void
 setup_socks_proxy_env (GHashTable *env_table,
-                       MateConfClient *conf)
+                       GSettings *settings)
 {
 	gchar *host;
 	gint port;
 
-	host = conf_get_string (conf, CONF_PROXY_PREFIX "/socks_host");
-	port = mateconf_client_get_int (conf, CONF_PROXY_PREFIX "/socks_port", NULL);
+	host = gsettings_get_string (settings, "socks-host");
+	port = g_settings_get_int (settings, "socks-port");
 	if (host && port)
 	{
 		char *proxy;
@@ -708,12 +706,12 @@ setup_socks_proxy_env (GHashTable *env_table,
 
 static void
 setup_autoconfig_proxy_env (GHashTable *env_table,
-                            MateConfClient *conf)
+                            GSettings *settings)
 {
 	/* XXX  Not sure what to do with this.  See bug #596688.
 	gchar *url;
 
-	url = conf_get_string (conf, CONF_PROXY_PREFIX "/autoconfig_url");
+	url = gsettings_get_string (settings, "autoconfig-url");
 	if (url)
 	  {
 	    char *proxy;
@@ -735,25 +733,27 @@ terminal_util_add_proxy_env (GHashTable *env_table)
 {
 	char *proxymode;
 
-	MateConfClient *conf;
-	conf = mateconf_client_get_default ();
+	GSettings *settings, *settings_http;
+	settings = g_settings_new (CONF_PROXY_SCHEMA);
+	settings_http = g_settings_new (CONF_HTTP_PROXY_SCHEMA);
 
 	/* If mode is not manual, nothing to set */
-	proxymode = conf_get_string (conf, CONF_PROXY_PREFIX "/mode");
+	proxymode = gsettings_get_string (settings, "mode");
 	if (proxymode && 0 == strcmp (proxymode, "manual"))
 	{
-		setup_http_proxy_env (env_table, conf);
-		setup_https_proxy_env (env_table, conf);
-		setup_ftp_proxy_env (env_table, conf);
-		setup_socks_proxy_env (env_table, conf);
+		setup_http_proxy_env (env_table, settings_http);
+		setup_https_proxy_env (env_table, settings);
+		setup_ftp_proxy_env (env_table, settings);
+		setup_socks_proxy_env (env_table, settings);
 	}
 	else if (proxymode && 0 == strcmp (proxymode, "auto"))
 	{
-		setup_autoconfig_proxy_env (env_table, conf);
+		setup_autoconfig_proxy_env (env_table, settings);
 	}
 
 	g_free (proxymode);
-	g_object_unref (conf);
+	g_object_unref (settings);
+	g_object_unref (settings_http);
 }
 
 /* Bidirectional object/widget binding */

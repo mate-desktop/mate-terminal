@@ -39,11 +39,11 @@ MATE_COMPILE_WARNINGS([maximum])
 
 AM_GLIB_GNU_GETTEXT
 
+DCONF_NEW_REQUIRED=0.13
+DCONF_OLD_REQUIRED=0.10
 GLIB_REQUIRED=2.25.0
 GIO_REQUIRED=2.25.12
 GTK_REQUIRED=2.14.0
-#MATECONF_REQUIRED=2.31.3 just testing
-MATECONF_REQUIRED=1.1.0
 VTE_REQUIRED=0.25.91
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
@@ -80,7 +80,6 @@ PKG_CHECK_MODULES([TERM],
    gthread-2.0
    gio-2.0 >= $GIO_REQUIRED
    gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
-   mateconf-2.0 >= $MATECONF_REQUIRED
    $PLATFORM_DEPS])
 
 # ********
@@ -115,16 +114,20 @@ AM_CONDITIONAL([WITH_SMCLIENT_WIN32],[test "$with_smclient" = "win32"])
 AM_CONDITIONAL([WITH_SMCLIENT_QUARTZ],[test "$with_smclient" = "quartz"])
 
 # *****
-# MateConf
+# GSettings
 # *****
 
-AC_PATH_PROG(MATECONFTOOL, mateconftool-2, no)
+GLIB_GSETTINGS
 
-if test x"$MATECONFTOOL" = xno; then
-  AC_MSG_ERROR([mateconftool-2 executable not found in your path - should be installed with MateConf])
-fi
+PKG_CHECK_MODULES([DCONF], [dconf >= $DCONF_NEW_REQUIRED],
+   [AC_DEFINE([HAVE_DCONF_NEW], [1], [Use DCONF >= 0.13])],
+   [PKG_CHECK_MODULES([DCONF], [dconf >= $DCONF_OLD_REQUIRED],
+       [AC_DEFINE([HAVE_DCONF_OLD], [1], [Use DCONF 0.12])
+    ])
+])
+AC_SUBST(DCONF_CFLAGS)
+AC_SUBST(DCONF_LIBS)
 
-AM_MATECONF_SOURCE_2
 
 GLIB_GENMARSHAL="$($PKG_CONFIG --variable=glib_genmarshal glib-2.0)"
 AC_SUBST([GLIB_GENMARSHAL])

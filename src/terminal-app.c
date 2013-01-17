@@ -36,7 +36,8 @@
 #include "terminal-util.h"
 #include "profile-editor.h"
 #include "terminal-encoding.h"
-#include <mateconf/mateconf-client.h>
+#include "terminal-gsettings.h"
+#include "terminal-dconf.h"
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -48,14 +49,14 @@
 #endif
 #endif
 
-#define FALLBACK_PROFILE_ID "Default"
+#define FALLBACK_PROFILE_ID "default"
 
 /* Settings storage works as follows:
  *   /apps/mate-terminal/global/
  *   /apps/mate-terminal/profiles/Foo/
  *
  * It's somewhat tricky to manage the profiles/ dir since we need to track
- * the list of profiles, but mateconf doesn't have a concept of notifying that
+ * the list of profiles, but GSettings doesn't have a concept of notifying that
  * a directory has appeared or disappeared.
  *
  * Session state is stored entirely in the RestartCommand command line.
@@ -65,7 +66,7 @@
  * OVERLAP. The UI and implementation totally break if you overlap
  * these categories. See mate-terminal 1.x for why.
  *
- * Don't use this code as an example of how to use MateConf - it's hugely
+ * Don't use this code as an example of how to use GSettings - it's hugely
  * overcomplicated due to the profiles stuff. Most apps should not
  * have to do scary things of this nature, and should not have
  * a profiles feature.
@@ -94,13 +95,8 @@ struct _TerminalApp
 	GtkWidget *manage_profiles_delete_button;
 	GtkWidget *manage_profiles_default_menu;
 
-	MateConfClient *conf;
-	guint profile_list_notify_id;
-	guint default_profile_notify_id;
-	guint encoding_list_notify_id;
-	guint system_font_notify_id;
-	guint enable_mnemonics_notify_id;
-	guint enable_menu_accels_notify_id;
+	GSettings *settings_global;
+	GSettings *settings_font;
 
 	GHashTable *profiles;
 	char* default_profile_id;
@@ -148,23 +144,20 @@ enum
 
 static TerminalApp *global_app = NULL;
 
-/* Evil hack alert: this is exported from libmateconf-2 but not in a public header */
-extern gboolean mateconf_spawn_daemon(GError** err);
-
-#define MONOSPACE_FONT_DIR "/desktop/mate/interface"
-#define MONOSPACE_FONT_KEY MONOSPACE_FONT_DIR "/monospace_font_name"
+#define MONOSPACE_FONT_SCHEMA "org.mate.interface"
+#define MONOSPACE_FONT_KEY "monospace-font-name"
 #define DEFAULT_MONOSPACE_FONT ("Monospace 10")
 
-#define ENABLE_MNEMONICS_KEY CONF_GLOBAL_PREFIX "/use_mnemonics"
+#define ENABLE_MNEMONICS_KEY "use-mnemonics"
 #define DEFAULT_ENABLE_MNEMONICS (TRUE)
 
-#define ENABLE_MENU_BAR_ACCEL_KEY CONF_GLOBAL_PREFIX"/use_menu_accelerators"
+#define ENABLE_MENU_BAR_ACCEL_KEY "use-menu-accelerators"
 #define DEFAULT_ENABLE_MENU_BAR_ACCEL (TRUE)
 
-#define PROFILE_LIST_KEY CONF_GLOBAL_PREFIX "/profile_list"
-#define DEFAULT_PROFILE_KEY CONF_GLOBAL_PREFIX "/default_profile"
+#define PROFILE_LIST_KEY "profile-list"
+#define DEFAULT_PROFILE_KEY "default-profile"
 
-#define ENCODING_LIST_KEY CONF_GLOBAL_PREFIX "/active_encodings"
+#define ENCODING_LIST_KEY "active-encodings"
 
 /* Helper functions */
 
@@ -305,43 +298,23 @@ static void
 terminal_app_delete_profile (TerminalApp *app,
                              TerminalProfile *profile)
 {
-	GHashTableIter iter;
-	GSList *name_list;
-	const char *name, *profile_name;
-	char *mateconf_dir;
+	const char *profile_name;
+	char *profile_dir;
 	GError *error = NULL;
-	const char **nameptr = &name;
 
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
-	mateconf_dir = mateconf_concat_dir_and_key (CONF_PREFIX "/profiles", profile_name);
+	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	name_list = NULL;
-	g_hash_table_iter_init (&iter, app->profiles);
-	while (g_hash_table_iter_next (&iter, (gpointer *) nameptr, NULL))
-	{
-		if (strcmp (name, profile_name) == 0)
-			continue;
-
-		name_list = g_slist_prepend (name_list, g_strdup (name));
-	}
-
-	mateconf_client_set_list (app->conf,
-	                          CONF_GLOBAL_PREFIX"/profile_list",
-	                          MATECONF_VALUE_STRING,
-	                          name_list,
-	                          NULL);
-
-	g_slist_foreach (name_list, (GFunc) g_free, NULL);
-	g_slist_free (name_list);
+	terminal_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
-	if (!mateconf_client_recursive_unset (app->conf, mateconf_dir, MATECONF_UNSET_INCLUDING_SCHEMA_NAMES, &error))
+	if (!terminal_dconf_recursive_reset (profile_dir, &error))
 	{
-		g_warning ("Failed to recursively unset %s: %s\n", mateconf_dir, error->message);
+		g_warning ("Failed to recursively unset %s: %s\n", profile_dir, error->message);
 		g_error_free (error);
 	}
 
-	g_free (mateconf_dir);
+	g_free (profile_dir);
 }
 
 static void
@@ -510,12 +483,10 @@ profile_combo_box_changed_cb (GtkWidget *widget,
 	if (!profile)
 		return;
 
-	mateconf_client_set_string (app->conf,
-	                            CONF_GLOBAL_PREFIX "/default_profile",
-	                            terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME),
-	                            NULL);
+	g_settings_set_string (app->settings_global, DEFAULT_PROFILE_KEY,
+			       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME));
 
-	/* Even though the mateconf change notification does this, it happens too late.
+	/* Even though the GSettings change notification does this, it happens too late.
 	 * In some cases, the default profile changes twice in quick succession,
 	 * and update_default_profile must be called in sync with those changes.
 	 */
@@ -741,14 +712,13 @@ find_profile_link (GList      *profiles,
 }
 
 static void
-terminal_app_profile_list_notify_cb (MateConfClient *conf,
-                                     guint        cnxn_id,
-                                     MateConfEntry  *entry,
+terminal_app_profile_list_notify_cb (GSettings *settings,
+                                     gchar *key,
                                      gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	GObject *object = G_OBJECT (app);
-	MateConfValue *val;
+	GVariant *val;
 	GSList *value_list, *sl;
 	GList *profiles_to_delete, *l;
 	gboolean need_new_default;
@@ -759,22 +729,20 @@ terminal_app_profile_list_notify_cb (MateConfClient *conf,
 
 	profiles_to_delete = terminal_app_get_profile_list (app);
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val == NULL ||
-	        val->type != MATECONF_VALUE_LIST ||
-	        mateconf_value_get_list_type (val) != MATECONF_VALUE_STRING)
+	        (!g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY) &&
+	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING)))
 		goto ensure_one_profile;
 
-	value_list = mateconf_value_get_list (val);
+	value_list = terminal_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
 
 	/* Add any new ones */
 	for (sl = value_list; sl != NULL; sl = sl->next)
 	{
-		MateConfValue *listvalue = (MateConfValue *) (sl->data);
-		const char *profile_name;
+		const char *profile_name = sl->data;
 		GList *link;
 
-		profile_name = mateconf_value_get_string (listvalue);
 		if (!profile_name)
 			continue;
 
@@ -863,21 +831,20 @@ ensure_one_profile:
 }
 
 static void
-terminal_app_default_profile_notify_cb (MateConfClient *client,
-                                        guint        cnxn_id,
-                                        MateConfEntry  *entry,
+terminal_app_default_profile_notify_cb (GSettings *settings,
+                                        gchar *key,
                                         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *val;
+	GVariant *val;
 	const char *name = NULL;
 
-	app->default_profile_locked = !mateconf_entry_get_is_writable (entry);
+	app->default_profile_locked = !g_settings_is_writable (settings, key);
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
-	        val->type == MATECONF_VALUE_STRING)
-		name = mateconf_value_get_string (val);
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
+		name = g_variant_get_string (val, NULL);
 	if (!name || !name[0])
 		name = FALLBACK_PROFILE_ID;
 	g_assert (name != NULL);
@@ -888,6 +855,7 @@ terminal_app_default_profile_notify_cb (MateConfClient *client,
 	app->default_profile = terminal_app_get_profile_by_name (app, name);
 
 	g_object_notify (G_OBJECT (app), TERMINAL_APP_DEFAULT_PROFILE);
+	g_variant_unref (val);
 }
 
 static int
@@ -909,18 +877,17 @@ encoding_mark_active (gpointer key,
 }
 
 static void
-terminal_app_encoding_list_notify_cb (MateConfClient *client,
-                                      guint        cnxn_id,
-                                      MateConfEntry  *entry,
+terminal_app_encoding_list_notify_cb (GSettings *settings,
+                                      gchar *key,
                                       gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *val;
+	GVariant *val;
 	GSList *strings, *tmp;
 	TerminalEncoding *encoding;
 	const char *charset;
 
-	app->encodings_locked = !mateconf_entry_get_is_writable (entry);
+	app->encodings_locked = !g_settings_is_writable (settings, key);
 
 	/* Mark all as non-active, then re-enable the active ones */
 	g_hash_table_foreach (app->encodings, (GHFunc) encoding_mark_active, GUINT_TO_POINTER (FALSE));
@@ -937,19 +904,16 @@ terminal_app_encoding_list_notify_cb (MateConfClient *client,
 	if (terminal_encoding_is_valid (encoding))
 		encoding->is_active = TRUE;
 
-	val = mateconf_entry_get_value (entry);
+	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
-	        val->type == MATECONF_VALUE_LIST &&
-	        mateconf_value_get_list_type (val) == MATECONF_VALUE_STRING)
-		strings = mateconf_value_get_list (val);
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY))
+		strings = terminal_gsettings_strv_to_gslist (g_variant_get_strv (val, NULL));
 	else
 		strings = NULL;
 
 	for (tmp = strings; tmp != NULL; tmp = tmp->next)
 	{
-		MateConfValue *v = (MateConfValue *) tmp->data;
-
-		charset = mateconf_value_get_string (v);
+		charset = tmp->data;
 		if (!charset)
 			continue;
 
@@ -961,26 +925,27 @@ terminal_app_encoding_list_notify_cb (MateConfClient *client,
 	}
 
 	g_signal_emit (app, signals[ENCODING_LIST_CHANGED], 0);
+	g_variant_unref (val);
+	g_slist_free_full (strings, g_free);
 }
 
 static void
-terminal_app_system_font_notify_cb (MateConfClient *client,
-                                    guint        cnxn_id,
-                                    MateConfEntry  *entry,
+terminal_app_system_font_notify_cb (GSettings *settings,
+                                    gchar *key,
                                     gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *mateconf_value;
+	GVariant *val;
 	const char *font = NULL;
 	PangoFontDescription *font_desc;
 
-	if (strcmp (mateconf_entry_get_key (entry), MONOSPACE_FONT_KEY) != 0)
+	if (strcmp (key, MONOSPACE_FONT_KEY) != 0)
 		return;
 
-	mateconf_value = mateconf_entry_get_value (entry);
-	if (mateconf_value &&
-	        mateconf_value->type == MATECONF_VALUE_STRING)
-		font = mateconf_value_get_string (mateconf_value);
+	val = g_settings_get_value (settings, key);
+	if (val &&
+	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING))
+		font = g_variant_get_string (val, NULL);
 	if (!font)
 		font = DEFAULT_MONOSPACE_FONT;
 	g_assert (font != NULL);
@@ -999,28 +964,19 @@ terminal_app_system_font_notify_cb (MateConfClient *client,
 	app->system_font_desc = font_desc;
 
 	g_object_notify (G_OBJECT (app), TERMINAL_APP_SYSTEM_FONT);
+	g_variant_unref (val);
 }
 
 static void
-terminal_app_enable_mnemonics_notify_cb (MateConfClient *client,
-        guint        cnxn_id,
-        MateConfEntry  *entry,
-        gpointer     user_data)
+terminal_app_enable_mnemonics_notify_cb (GSettings *settings,
+	gchar *key,
+	gpointer user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *mateconf_value;
+	GVariant *settings_value;
 	gboolean enable;
 
-	if (strcmp (mateconf_entry_get_key (entry), ENABLE_MNEMONICS_KEY) != 0)
-		return;
-
-	mateconf_value = mateconf_entry_get_value (entry);
-	if (mateconf_value &&
-	        mateconf_value->type == MATECONF_VALUE_BOOL)
-		enable = mateconf_value_get_bool (mateconf_value);
-	else
-		enable = TRUE;
-
+	enable = g_settings_get_boolean (settings, key);
 	if (enable == app->enable_mnemonics)
 		return;
 
@@ -1029,25 +985,14 @@ terminal_app_enable_mnemonics_notify_cb (MateConfClient *client,
 }
 
 static void
-terminal_app_enable_menu_accels_notify_cb (MateConfClient *client,
-        guint        cnxn_id,
-        MateConfEntry  *entry,
+terminal_app_enable_menu_accels_notify_cb (GSettings *settings,
+        gchar *key,
         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	MateConfValue *mateconf_value;
 	gboolean enable;
 
-	if (strcmp (mateconf_entry_get_key (entry), ENABLE_MENU_BAR_ACCEL_KEY) != 0)
-		return;
-
-	mateconf_value = mateconf_entry_get_value (entry);
-	if (mateconf_value &&
-	        mateconf_value->type == MATECONF_VALUE_BOOL)
-		enable = mateconf_value_get_bool (mateconf_value);
-	else
-		enable = TRUE;
-
+	enable = g_settings_get_boolean (settings, key);
 	if (enable == app->enable_menu_accels)
 		return;
 
@@ -1073,7 +1018,6 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		GtkWindow *transient_parent;
 		GtkWidget *confirm_dialog;
 		gint retval;
-		GSList *list;
 
 		base_option_menu = g_object_get_data (G_OBJECT (new_profile_dialog), "base_option_menu");
 		base_profile = profile_combo_box_get_selected (base_option_menu);
@@ -1120,17 +1064,10 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     g_strdup (new_profile_name),
 		                     new_profile /* adopts the refcount */);
 
-		/* And now save the list to mateconf */
-		list = mateconf_client_get_list (app->conf,
-		                                 CONF_GLOBAL_PREFIX"/profile_list",
-		                                 MATECONF_VALUE_STRING,
-		                                 NULL);
-		list = g_slist_append (list, g_strdup (new_profile_name));
-		mateconf_client_set_list (app->conf,
-		                          CONF_GLOBAL_PREFIX"/profile_list",
-		                          MATECONF_VALUE_STRING,
-		                          list,
-		                          NULL);
+		/* And now save the new profile name to GSettings */
+		terminal_gsettings_append_strv (app->settings_global,
+						PROFILE_LIST_KEY,
+						new_profile_name);
 
 		terminal_profile_edit (new_profile, transient_parent, NULL);
 
@@ -1375,20 +1312,6 @@ terminal_app_init (TerminalApp *app)
 
 	global_app = app;
 
-	/* If the mateconf daemon isn't available (e.g. because there's no dbus
-	 * session bus running), we'd crash later on. Tell the user about it
-	 * now, and exit. See bug #561663.
-	 * Don't use mateconf_ping_daemon() here since the server may just not
-	 * be running yet, but able to be started. See comments on bug #564649.
-	 */
-	if (!mateconf_spawn_daemon (&error))
-	{
-		g_printerr ("Failed to summon the MateConf demon; exiting.  %s\n", error->message);
-		g_error_free (error);
-
-		exit (EXIT_FAILURE);
-	}
-
 	gtk_window_set_default_icon_name (MATE_TERMINAL_ICON_NAME);
 
 	/* Initialise defaults */
@@ -1399,63 +1322,59 @@ terminal_app_init (TerminalApp *app)
 
 	app->encodings = terminal_encodings_get_builtins ();
 
-	app->conf = mateconf_client_get_default ();
+	app->settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
+	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
-	mateconf_client_add_dir (app->conf, CONF_GLOBAL_PREFIX,
-	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-	                         NULL);
-	mateconf_client_add_dir (app->conf, MONOSPACE_FONT_DIR,
-	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-	                         NULL);
-	mateconf_client_add_dir (app->conf, CONF_PROXY_PREFIX,
-	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-	                         NULL);
-	mateconf_client_add_dir (app->conf, CONF_HTTP_PROXY_PREFIX,
-	                         MATECONF_CLIENT_PRELOAD_ONELEVEL,
-	                         NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" PROFILE_LIST_KEY,
+			  G_CALLBACK(terminal_app_profile_list_notify_cb),
+			  app);
 
-	app->profile_list_notify_id =
-	    mateconf_client_notify_add (app->conf, PROFILE_LIST_KEY,
-	                                terminal_app_profile_list_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" DEFAULT_PROFILE_KEY,
+			  G_CALLBACK(terminal_app_default_profile_notify_cb),
+			  app);
 
-	app->default_profile_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                DEFAULT_PROFILE_KEY,
-	                                terminal_app_default_profile_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+			  "changed::" ENCODING_LIST_KEY,
+			  G_CALLBACK(terminal_app_encoding_list_notify_cb),
+			  app);
 
-	app->encoding_list_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                ENCODING_LIST_KEY,
-	                                terminal_app_encoding_list_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_font,
+			  "changed::" MONOSPACE_FONT_KEY,
+			  G_CALLBACK(terminal_app_system_font_notify_cb),
+			  app);
 
-	app->system_font_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                MONOSPACE_FONT_KEY,
-	                                terminal_app_system_font_notify_cb,
-	                                app, NULL, NULL);
 
-	app->enable_mnemonics_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                ENABLE_MNEMONICS_KEY,
-	                                terminal_app_enable_mnemonics_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+	                  "changed::" ENABLE_MNEMONICS_KEY,
+	                  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
+	                  app);
 
-	app->enable_menu_accels_notify_id =
-	    mateconf_client_notify_add (app->conf,
-	                                ENABLE_MENU_BAR_ACCEL_KEY,
-	                                terminal_app_enable_menu_accels_notify_cb,
-	                                app, NULL, NULL);
+	g_signal_connect (app->settings_global,
+	                  "changed::" ENABLE_MENU_BAR_ACCEL_KEY,
+	                  G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
+	                  app);
 
 	/* Load the settings */
-	mateconf_client_notify (app->conf, PROFILE_LIST_KEY);
-	mateconf_client_notify (app->conf, DEFAULT_PROFILE_KEY);
-	mateconf_client_notify (app->conf, ENCODING_LIST_KEY);
-	mateconf_client_notify (app->conf, MONOSPACE_FONT_KEY);
-	mateconf_client_notify (app->conf, ENABLE_MENU_BAR_ACCEL_KEY);
-	mateconf_client_notify (app->conf, ENABLE_MNEMONICS_KEY);
+        terminal_app_profile_list_notify_cb (app->settings_global,
+					     PROFILE_LIST_KEY,
+					     app);
+	terminal_app_default_profile_notify_cb (app->settings_global,
+					        DEFAULT_PROFILE_KEY,
+						app);
+	terminal_app_encoding_list_notify_cb (app->settings_global,
+					      ENCODING_LIST_KEY,
+					      app);
+	terminal_app_system_font_notify_cb (app->settings_font,
+					    MONOSPACE_FONT_KEY,
+					    app);
+	terminal_app_enable_menu_accels_notify_cb (app->settings_global,
+	                                           ENABLE_MENU_BAR_ACCEL_KEY,
+	                                           app);
+	terminal_app_enable_mnemonics_notify_cb (app->settings_global,
+	                                         ENABLE_MNEMONICS_KEY,
+	                                         app);
 
 	/* Ensure we have valid settings */
 	g_assert (app->default_profile_id != NULL);
@@ -1498,24 +1417,27 @@ terminal_app_finalize (GObject *object)
 	g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
 	                                      0, 0, NULL, NULL, app);
 #endif
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+					      G_CALLBACK(terminal_app_profile_list_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+					      G_CALLBACK(terminal_app_default_profile_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+					      G_CALLBACK(terminal_app_encoding_list_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_font,
+					      G_CALLBACK(terminal_app_system_font_notify_cb),
+					      app);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+	                                      G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
+	                                      app);
+	g_signal_handlers_disconnect_by_func (app->settings_global,
+	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
+	                                      app);
 
-	if (app->profile_list_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->profile_list_notify_id);
-	if (app->default_profile_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->default_profile_notify_id);
-	if (app->encoding_list_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->encoding_list_notify_id);
-	if (app->system_font_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->system_font_notify_id);
-	if (app->enable_menu_accels_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->enable_menu_accels_notify_id);
-	if (app->enable_mnemonics_notify_id != 0)
-		mateconf_client_notify_remove (app->conf, app->enable_mnemonics_notify_id);
-
-	mateconf_client_remove_dir (app->conf, CONF_GLOBAL_PREFIX, NULL);
-	mateconf_client_remove_dir (app->conf, MONOSPACE_FONT_DIR, NULL);
-
-	g_object_unref (app->conf);
+	g_object_unref (app->settings_global);
+	g_object_unref (app->settings_font);
 
 	g_free (app->default_profile_id);
 
@@ -1575,11 +1497,11 @@ terminal_app_set_property (GObject *object,
 	{
 	case PROP_ENABLE_MENU_BAR_ACCEL:
 		app->enable_menu_accels = g_value_get_boolean (value);
-		mateconf_client_set_bool (app->conf, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels, NULL);
+		g_settings_set_boolean (app->settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
 		break;
 	case PROP_ENABLE_MNEMONICS:
 		app->enable_mnemonics = g_value_get_boolean (value);
-		mateconf_client_set_bool (app->conf, ENABLE_MNEMONICS_KEY, app->enable_mnemonics, NULL);
+		g_settings_set_boolean (app->settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
 		break;
 	case PROP_DEFAULT_PROFILE:
 	case PROP_SYSTEM_FONT:

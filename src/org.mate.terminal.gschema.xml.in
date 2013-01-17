@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<schemalist gettext-domain="mate-terminal">
+  <enum id="org.mate.terminal.erasebinding">
+    <value nick="auto" value="0"/>
+    <value nick="control-h" value="1"/>
+    <value nick="ascii-del" value="2"/>
+    <value nick="escape-sequence" value="3"/>
+    <value nick="tty" value="4"/>
+  </enum>
+  <enum id="org.mate.terminal.titlemode">
+    <value nick="replace" value="0"/>
+    <value nick="before" value="1"/>
+    <value nick="after" value="2"/>
+    <value nick="ignore" value="3"/>
+  </enum>
+  <enum id="org.mate.terminal.scrollbar-position">
+    <value nick="left" value="0"/>
+    <value nick="right" value="1"/>
+    <value nick="hidden" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.exit-action">
+    <value nick="close" value="0"/>
+    <value nick="restart" value="1"/>
+    <value nick="hold" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.cursor-shape">
+    <value nick="block" value="0"/>
+    <value nick="ibeam" value="1"/>
+    <value nick="underline" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.cursor-blink-mode">
+    <value nick="system" value="0"/>
+    <value nick="on" value="1"/>
+    <value nick="off" value="2"/>
+  </enum>
+  <enum id="org.mate.terminal.background-type">
+    <value nick="solid" value="0"/>
+    <value nick="image" value="1"/>
+    <value nick="transparent" value="2"/>
+  </enum>
+  <schema id="org.mate.terminal" path="/org/mate/terminal/">
+    <child name="global" schema="org.mate.terminal.global"/>
+    <child name="profiles" schema="org.mate.terminal.profiles"/>
+    <child name="keybindings" schema="org.mate.terminal.keybindings"/>
+  </schema>
+  <schema id="org.mate.terminal.global" path="/org/mate/terminal/global/">
+    <key name="profile-list" type="as">
+      <default>[ 'default' ]</default>
+      <summary>List of profiles</summary>
+      <description>List of profiles known to mate-terminal. The list contains  strings naming subdirectories relative to /org/mate/terminal/profiles.</description>
+    </key>
+    <key name="default-profile" type="s">
+      <default>'default'</default>
+      <summary>Profile to use for new terminals</summary>
+      <description>Profile to be used when opening a new window or tab.  Must be in profile_list.</description>
+    </key>
+    <key name="use-mnemonics" type="b">
+      <default>true</default>
+      <summary>Whether the menubar has access keys</summary>
+      <description>Whether to have Alt+letter access keys for the menubar.  They may interfere with some applications run inside the terminal so it's possible to turn them off.</description>
+    </key>
+    <key name="use-menu-accelerators" type="b">
+      <default>true</default>
+      <summary>Whether the standard GTK shortcut for menubar access is enabled</summary>
+      <description>Normally you can access the menubar with F10. This can also be customized via gtkrc (gtk-menu-bar-accel = "whatever"). This option allows the standard menubar accelerator to be disabled.</description>
+    </key>
+    <key name="active-encodings" type="as">
+      <default context="active-encodings" l10n="messages">[ 'UTF-8', 'current' ]</default>
+      <summary>List of available encodings</summary>
+      <description>A subset of possible encodings are presented in  the Encoding submenu. This is a list of encodings to appear there. The special encoding name "current"  means to display the encoding of the current locale.</description>
+    </key>
+    <key name="confirm-window-close" type="b">
+      <default>true</default>
+      <summary>Whether to ask for confirmation when closing terminal windows</summary>
+      <description>Whether to ask for confirmation when closing a terminal window which has more than one open tab.</description>
+    </key>
+  </schema>
+  <schema id="org.mate.terminal.profiles" path="/org/mate/terminal/profiles/">
+  </schema>
+  <schema id="org.mate.terminal.profile">
+    <key name="visible-name" type="s">
+      <default context="visible-name" l10n="messages">'Default'</default>
+      <summary>Human-readable name of the profile</summary>
+      <description>Human-readable name of the profile.</description>
+    </key>
+    <key name="default-show-menubar" type="b">
+      <default>true</default>
+      <summary>Whether to show menubar in new windows/tabs</summary>
+      <description>True if the menubar should be shown in new windows,  for windows/tabs with this profile.</description>
+    </key>
+    <key name="foreground-color" type="s">
+      <default>'#000000'</default>
+      <summary>Default color of text in the terminal</summary>
+      <description>Default color of text in the terminal, as a color specification (can be HTML-style hex digits, or a color name such as "red").</description>
+    </key>
+    <key name="background-color" type="s">
+      <default>'#FFFFDD'</default>
+      <summary>Default color of terminal background</summary>
+      <description>Default color of terminal background, as a color specification (can be HTML-style hex digits, or a color name such as "red").</description>
+    </key>
+    <key name="bold-color" type="s">
+      <default>'#000000'</default>
+      <summary>Default color of bold text in the terminal</summary>
+      <description>Default color of bold text in the terminal, as a color specification (can be HTML-style hex digits, or a color name such as "red"). This is ignored if bold_color_same_as_fg is true.</description>
+    </key>
+    <key name="bold-color-same-as-fg" type="b">
+      <default>true</default>
+      <summary>Whether bold text should use the same color as normal text</summary>
+      <description>If true, boldface text will be rendered using the same color as normal text.</description>
+    </key>
+    <key name="title-mode" enum="org.mate.terminal.titlemode">
+      <default>'replace'</default>
+      <summary>What to do with dynamic title</summary>
+      <description>If the application in the terminal sets the title  (most typically people have their shell set up to  do this), the dynamically-set title can  erase the configured title, go before it, go after it,  or replace it. The possible values are "replace",  "before", "after", and "ignore".</description>
+    </key>
+    <key name="title" type="s">
+      <default context="title" l10n="messages">'Terminal'</default>
+      <summary>Title for terminal</summary>
+      <description>Title to display for the terminal window or tab.  This title may be replaced by or combined with  the title set by the application inside the terminal,  depending on the title_mode setting.</description>
+    </key>
+    <key name="allow-bold" type="b">
+      <default>true</default>
+      <summary>Whether to allow bold text</summary>
+      <description>If true, allow applications in the terminal to make  text boldface.</description>
+    </key>
+    <key name="silent-bell" type="b">
+      <default>false</default>
+      <summary>Whether to silence terminal bell</summary>
+      <description>If true, don't make a noise when applications send the  escape sequence for the terminal bell.</description>
+    </key>
+    <key name="word-chars" type="s">
+      <default>'-A-Za-z0-9,./?%&amp;#:_=+@~'</default>
+      <summary>Characters that are considered "part of a word"</summary>
+      <description>When selecting text by word, sequences of these characters are considered single words. Ranges can be given as  "A-Z". Literal hyphen (not expressing a range) should be the first character given.</description>
+    </key>
+    <key name="use-custom-default-size" type="b">
+      <default>false</default>
+      <summary>Whether to use custom terminal size for new windows</summary>
+      <description>If true, newly created terminal windows will have custom size specified by default_size_columns and default_size_rows.</description>
+    </key>
+    <key name="default-size-columns" type="i">
+      <default>80</default>
+      <summary>Default number of columns</summary>
+      <description>Number of columns in newly created terminal windows. Has no effect if use_custom_default_size is not enabled.</description>
+    </key>
+    <key name="default-size-rows" type="i">
+      <default>24</default>
+      <summary>Default number of rows</summary>
+      <description>Number of rows in newly created terminal windows. Has no effect if use_custom_default_size is not enabled.</description>
+    </key>
+    <key name="scrollbar-position" enum="org.mate.terminal.scrollbar-position">
+      <default>'right'</default>
+      <summary>Position of the scrollbar</summary>
+      <description>Where to put the terminal scrollbar. Possibilities are  "left", "right", and "hidden".</description>
+    </key>
+    <key name="scrollback-lines" type="i">
+      <default>512</default>
+      <summary>Number of lines to keep in scrollback</summary>
+      <description>Number of scrollback lines to keep around. You can scroll back in the terminal by this number of lines; lines that don't fit in the scrollback are discarded. If scrollback_unlimited is true, this value is ignored.</description>
+    </key>
+    <key name="scrollback-unlimited" type="b">
+      <default>false</default>
+      <summary>Whether an unlimited number of lines should be kept in scrollback</summary>
+      <description>If true, scrollback lines will never be discarded.  The scrollback history is stored on disk temporarily, so this may cause the system to run out of disk space if there is a lot of output to the terminal.</description>
+    </key>
+    <key name="scroll-on-keystroke" type="b">
+      <default>true</default>
+      <summary>Whether to scroll to the bottom when a key is pressed</summary>
+      <description>If true, pressing a key jumps the scrollbar to the bottom.</description>
+    </key>
+    <key name="scroll-on-output" type="b">
+      <default>false</default>
+      <summary>Whether to scroll to the bottom when there's new output</summary>
+      <description>If true, whenever there's new output the terminal will scroll to the bottom.</description>
+    </key>
+    <key name="exit-action" enum="org.mate.terminal.exit-action">
+      <default>'close'</default>
+      <summary>What to do with the terminal when the child command exits</summary>
+      <description>Possible values are "close" to close the terminal, and "restart" to restart the command.</description>
+    </key>
+    <key name="login-shell" type="b">
+      <default>false</default>
+      <summary>Whether to launch the command in the terminal as a login shell</summary>
+      <description>If true, the command inside the terminal will be launched as  a login shell. (argv[0] will have a hyphen in front of it.)</description>
+    </key>
+    <key name="update-records" type="b">
+      <default>true</default>
+      <summary>Whether to update login records when launching terminal command</summary>
+      <description>If true, the system login records utmp and wtmp will be updated when the command inside the terminal is launched.</description>
+    </key>
+    <key name="use-custom-command" type="b">
+      <default>false</default>
+      <summary>Whether to run a custom command instead of the shell</summary>
+      <description>If true, the value of the custom_command setting will  be used in place of running a shell.</description>
+    </key>
+    <key name="cursor-blink-mode" enum="org.mate.terminal.cursor-blink-mode">
+      <default>'system'</default>
+      <summary>Whether to blink the cursor</summary>
+      <description>The possible values are "system" to use the global cursor blinking settings, or "on" or "off" to set the mode explicitly.</description>
+    </key>
+    <key name="cursor-shape" enum="org.mate.terminal.cursor-shape">
+      <default>'block'</default>
+      <summary>The cursor appearance</summary>
+      <description>The possible values are "block" to use a block cursor, "ibeam" to use a vertical line cursor, or "underline" to use an underline cursor.</description>
+    </key>
+    <key name="custom-command" type="s">
+      <default>''</default>
+      <summary>Custom command to use instead of the shell</summary>
+      <description>Run this command in place of the shell, if  use_custom_command is true.</description>
+    </key>
+    <key name="icon" type="s">
+      <default>''</default>
+      <summary>Icon for terminal window</summary>
+      <description>Icon to use for tabs/windows containing this profile.</description>
+    </key>
+    <key name="palette" type="s">
+      <default>'#2E2E34343636:#CCCC00000000:#4E4E9A9A0606:#C4C4A0A00000:#34346565A4A4:#757550507B7B:#060698209A9A:#D3D3D7D7CFCF:#555557575353:#EFEF29292929:#8A8AE2E23434:#FCFCE9E94F4F:#72729F9FCFCF:#ADAD7F7FA8A8:#3434E2E2E2E2:#EEEEEEEEECEC'</default>
+      <summary>Palette for terminal applications</summary>
+      <description>Terminals have a 16-color palette that applications inside  the terminal can use. This is that palette, in the form  of a colon-separated list of color names. Color names  should be in hex format e.g. "#FF00FF"</description>
+    </key>
+    <key name="font" type="s">
+      <default>'Monospace 12'</default>
+      <summary>Font</summary>
+      <description>An Pango font name. Examples are "Sans 12" or "Monospace Bold 14".</description>
+    </key>
+    <key name="background-type" enum="org.mate.terminal.background-type">
+      <default>'solid'</default>
+      <summary>Background type</summary>
+      <description>Type of terminal background. May be "solid" for a solid color, "image" for an image, or "transparent" for either real transparency if a compositing window manager is running, or pseudo-transparency otherwise.</description>
+    </key>
+    <key name="background-image" type="s">
+      <default>''</default>
+      <summary>Background image</summary>
+      <description>Filename of a background image.</description>
+    </key>
+    <key name="scroll-background" type="b">
+      <default>true</default>
+      <summary>Whether to scroll background image</summary>
+      <description>If true, scroll the background image with the foreground  text; if false, keep the image in a fixed position and  scroll the text above it.</description>
+    </key>
+    <key name="background-darkness" type="d">
+      <default>0.5</default>
+      <summary>How much to darken the background image</summary>
+      <description>A value between 0.0 and 1.0 indicating how much to darken  the background image. 0.0 means no darkness, 1.0 means fully  dark. In the current implementation, there are only two levels of  darkness possible, so the setting behaves as a boolean, where 0.0 disables the darkening effect.</description>
+    </key>
+    <key name="backspace-binding" enum="org.mate.terminal.erasebinding">
+      <default>'ascii-del'</default>
+      <summary>Effect of the Backspace key</summary>
+      <description>Sets what code the backspace key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "ascii-del" is normally  considered the correct setting for the Backspace key.</description>
+    </key>
+    <key name="delete-binding" enum="org.mate.terminal.erasebinding">
+      <default>'escape-sequence'</default>
+      <summary>Effect of the Delete key</summary>
+      <description>Sets what code the delete key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "escape-sequence" is normally  considered the correct setting for the Delete key.</description>
+    </key>
+    <key name="use-theme-colors" type="b">
+      <default>true</default>
+      <summary>Whether to use the colors from the theme for the terminal widget</summary>
+      <description>If true, the theme color scheme used for text entry boxes will  be used for the terminal, instead of colors provided by the user.</description>
+    </key>
+    <key name="use-system-font" type="b">
+      <default>true</default>
+      <summary>Whether to use the system font</summary>
+      <description>If true, the terminal will use the desktop-global standard font if it's monospace (and the most similar font it can come up with otherwise).</description>
+    </key>
+    <key name="use-skey" type="b">
+      <default>true</default>
+      <summary>Highlight S/Key challenges</summary>
+      <description>Popup a dialog when an S/Key challenge response query is detected and clicked on.  Typing a password into the dialog will send it to the terminal.</description>
+    </key>
+  </schema>
+  <schema id="org.mate.terminal.keybindings" path="/org/mate/terminal/keybindings/">
+    <key name="new-tab" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;t'</default>
+      <summary>Keyboard shortcut to open a new tab</summary>
+      <description>Keyboard shortcut key for opening a new tab. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="new-window" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;n'</default>
+      <summary>Keyboard shortcut to open a new window</summary>
+      <description>Keyboard shortcut key for opening a new window. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="new-profile" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to create a new profile</summary>
+      <description>Keyboard shortcut key for bringing up the dialog for profile creation. Expressed as a string in the same format used for GTK+ resource files.  If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="save-contents" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to save the current tab contents to file</summary>
+      <description>Keyboard shortcut key to save the current tab contents to a file. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="close-tab" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;w'</default>
+      <summary>Keyboard shortcut to close a tab</summary>
+      <description>Keyboard shortcut key for closing a tab. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="close-window" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;q'</default>
+      <summary>Keyboard shortcut to close a window</summary>
+      <description>Keyboard shortcut key for closing a window. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="copy" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;c'</default>
+      <summary>Keyboard shortcut to copy text</summary>
+      <description>Keyboard shortcut key for copying selected text to the clipboard. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="paste" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;v'</default>
+      <summary>Keyboard shortcut to paste text</summary>
+      <description>Keyboard shortcut key for pasting the contents of the clipboard into the terminal. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="full-screen" type="s">
+      <default>'F11'</default>
+      <summary>Keyboard shortcut to toggle full screen mode</summary>
+      <description>Keyboard shortcut key for toggling full screen mode. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="toggle-menubar" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to toggle the visibility of the menubar</summary>
+      <description>Keyboard shortcut key to toggle the visibility of the menubar. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="set-terminal-title" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to set the terminal title</summary>
+      <description>Keyboard shortcut key to set the terminal title. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="reset" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to reset the terminal</summary>
+      <description>Keyboard shortcut key to reset the terminal. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="reset-and-clear" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to reset and clear the terminal</summary>
+      <description>Keyboard shortcut key to reset and clear the terminal. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="prev-tab" type="s">
+      <default>'&lt;Control&gt;Page_Up'</default>
+      <summary>Keyboard shortcut to switch to the previous tab</summary>
+      <description>Keyboard shortcut key to switch to the previous tab. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="next-tab" type="s">
+      <default>'&lt;Control&gt;Page_Down'</default>
+      <summary>Keyboard shortcut to switch to the next tab</summary>
+      <description>Keyboard shortcut key to switch to the next tab. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="move-tab-left" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;Page_Up'</default>
+      <summary>Accelerator to move the current tab to the left.</summary>
+      <description>Accelerator key to move the current tab to the left. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="move-tab-right" type="s">
+      <default>'&lt;Ctrl&gt;&lt;Shift&gt;Page_Down'</default>
+      <summary>Accelerator to move the current tab to the right.</summary>
+      <description>Accelerator key to move the current tab to the right. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keybinding for this action.</description>
+    </key>
+    <key name="detach-tab" type="s">
+      <default>'disabled'</default>
+      <summary>Accelerator to detach current tab.</summary>
+      <description>Accelerator key to detach current tab. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keybinding for this action.</description>
+    </key>
+    <key name="switch-to-tab-1" type="s">
+      <default>'&lt;Alt&gt;1'</default>
+      <summary>Keyboard shortcut to switch to tab 1</summary>
+      <description>Keyboard shortcut key for switch to tab 1. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-2" type="s">
+      <default>'&lt;Alt&gt;2'</default>
+      <summary>Keyboard shortcut to switch to tab 2</summary>
+      <description>Keyboard shortcut key for switch to tab 2. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-3" type="s">
+      <default>'&lt;Alt&gt;3'</default>
+      <summary>Keyboard shortcut to switch to tab 3</summary>
+      <description>Keyboard shortcut key for switch to tab 3. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-4" type="s">
+      <default>'&lt;Alt&gt;4'</default>
+      <summary>Keyboard shortcut to switch to tab 4</summary>
+      <description>Keyboard shortcut key for switch to tab 4. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-5" type="s">
+      <default>'&lt;Alt&gt;5'</default>
+      <summary>Keyboard shortcut to switch to tab 5</summary>
+      <description>Keyboard shortcut key for switch to tab 5. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-6" type="s">
+      <default>'&lt;Alt&gt;6'</default>
+      <summary>Keyboard shortcut to switch to tab 6</summary>
+      <description>Keyboard shortcut key for switch to tab 6. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-7" type="s">
+      <default>'&lt;Alt&gt;7'</default>
+      <summary>Keyboard shortcut to switch to tab 7</summary>
+      <description>Keyboard shortcut key for switch to tab 7. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-8" type="s">
+      <default>'&lt;Alt&gt;8'</default>
+      <summary>Keyboard shortcut to switch to tab 8</summary>
+      <description>Keyboard shortcut key for switch to tab 8. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-9" type="s">
+      <default>'&lt;Alt&gt;9'</default>
+      <summary>Keyboard shortcut to switch to tab 9</summary>
+      <description>Keyboard shortcut key for switch to tab 9. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-10" type="s">
+      <default>'&lt;Alt&gt;0'</default>
+      <summary>Keyboard shortcut to switch to tab 10</summary>
+      <description>Keyboard shortcut key for switch to tab 10. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-11" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to switch to tab 11</summary>
+      <description>Keyboard shortcut key for switch to tab 11. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="switch-to-tab-12" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to switch to tab 12</summary>
+      <description>Keyboard shortcut key for switch to tab 12. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="help" type="s">
+      <default>'F1'</default>
+      <summary>Keyboard shortcut to launch help</summary>
+      <description>Keyboard shortcut key for launching help. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="zoom-in" type="s">
+      <default>'&lt;Ctrl&gt;plus'</default>
+      <summary>Keyboard shortcut to make font larger</summary>
+      <description>Keyboard shortcut key for making font larger. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="zoom-out" type="s">
+      <default>'&lt;Ctrl&gt;minus'</default>
+      <summary>Keyboard shortcut to make font smaller</summary>
+      <description>Keyboard shortcut key for making font smaller. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+    <key name="zoom-normal" type="s">
+      <default>'&lt;Ctrl&gt;0'</default>
+      <summary>Keyboard shortcut to make font normal-size</summary>
+      <description>Keyboard shortcut key for making font the normal size. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there will be no keyboard shortcut for this action.</description>
+    </key>
+  </schema>
+</schemalist>

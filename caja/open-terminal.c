@@ -27,7 +27,6 @@
 
 #include "caja-open-terminal.h"
 
-#include <mateconf/mateconf-client.h>
 #include <libintl.h>
 
 static GType type_list[1];
@@ -42,11 +41,6 @@ caja_module_initialize (GTypeModule *module)
 
 	bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
-        mateconf_client_add_dir(mateconf_client_get_default(), 
-                             "/desktop/mate/lockdown",
-                             0,
-                             NULL);
 }
 
 void

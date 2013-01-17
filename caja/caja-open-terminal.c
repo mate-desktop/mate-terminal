@@ -34,8 +34,6 @@
 #include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
-#include <mateconf/mateconf.h>
-#include <mateconf/mateconf-client.h>
 #include <libmate/mate-desktop-item.h>
 
 #include <errno.h>
@@ -89,30 +87,26 @@ get_terminal_file_info (const char *uri)
 	return ret;
 }
 
-static MateConfClient *mateconf_client = NULL;
+static GSettings *settings_open = NULL;
+static GSettings *settings_preferences = NULL;
+static GSettings *settings_lockdown = NULL;
 
 static inline gboolean
 desktop_opens_home_dir (void)
 {
-	return mateconf_client_get_bool (mateconf_client,
-				      "/apps/caja-open-terminal/desktop_opens_home_dir",
-				      NULL);
+	return g_settings_get_boolean (settings_open, "desktop-opens-home-dir");
 }
 
 static inline gboolean
 display_mc_item (void)
 {
-	return mateconf_client_get_bool (mateconf_client,
-				      "/apps/caja-open-terminal/display_mc_item",
-				      NULL);
+	return g_settings_get_boolean (settings_open, "display-mc-items");
 }
 
 static inline gboolean
 desktop_is_home_dir ()
 {
-	return mateconf_client_get_bool (mateconf_client,
-				      "/apps/caja/preferences/desktop_is_home_dir",
-				      NULL);
+	return g_settings_get_boolean (settings_preferences, "desktop-is-home-dir");
 }
 
 /* a very simple URI parsing routine from Launchpad #333462, until GLib supports URI parsing (MATE #489862) */
@@ -461,9 +455,7 @@ open_terminal_menu_item_new (cajaFileInfo *file_info,
 static gboolean
 terminal_locked_down (void)
 {
-	return mateconf_client_get_bool (mateconf_client,
-                                      "/desktop/mate/lockdown/disable_command_line",
-                                      NULL);
+	return g_settings_get_boolean (settings_lockdown, "disable-command-line");
 }
 
 /* used to determine for remote URIs whether GVFS is capable of mapping them to ~/.gvfs */
@@ -613,16 +605,23 @@ caja_open_terminal_instance_init (CajaOpenTerminal *cvs)
 static void
 caja_open_terminal_class_init (CajaOpenTerminalClass *class)
 {
-	g_assert (mateconf_client == NULL);
-	mateconf_client = mateconf_client_get_default ();
+	g_assert (settings_open == NULL);
+	settings_open = g_settings_new ("org.mate.caja-open-terminal");
+	g_assert (settings_preferences == NULL);
+	settings_preferences = g_settings_new ("org.mate.caja.preferences");
+	g_assert (settings_lockdown == NULL);
+	settings_lockdown = g_settings_new ("org.mate.lockdown");
 }
 
 static void
 caja_open_terminal_class_finalize (CajaOpenTerminalClass *class)
 {
-	g_assert (mateconf_client != NULL);
-	g_object_unref (mateconf_client);
-	mateconf_client = NULL;
+	g_assert (settings_open != NULL);
+	g_object_unref (settings_open);
+	g_assert (settings_preferences != NULL);
+	g_object_unref (settings_preferences);
+	g_assert (settings_lockdown != NULL);
+	g_object_unref (settings_lockdown);
 }
 
 GType
