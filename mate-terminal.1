@@ -1,0 +1,75 @@
+.TH "mate-terminal" "1" 
+.SH "NAME" 
+mate-terminal \(em is a terminal emulation application. 
+.SH "SYNOPSIS" 
+.PP 
+\fBmate-terminal\fR [\fB-e, \-\-command\fI=STRING\fR\fP]  [\fB\-\-window-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-tab-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-window-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-tab-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-role\fI=ROLE\fR\fP]  [\fB\-\-show-menubar\fP]  [\fB\-\-hide-menubar\fP]  [\fB\-\-geometry\fI=GEOMETRY\fR\fP]  [\fB\-\-disable-factory\fP]  [\fB-t, \-\-title\fI=TITLE\fR\fP]  [\fB\-\-working-directory\fI=DIRNAME\fR\fP]  [\fB-?, \-\-help\fP]  
+.SH "DESCRIPTION" 
+.PP 
+MATE Terminal is a terminal emulation application that you can 
+use to perform the following actions: 
+.PP 
+Access a UNIX shell in the MATE environment. 
+.PP 
+A shell is a program that interprets and executes the commands 
+that you type at a command line prompt. When you start MATE Terminal, 
+the application starts the default shell that is specified in your 
+system account. You can switch to a different shell at any 
+time. 
+.PP 
+Run any application that is designed to run on VT102, VT220, 
+and xterm terminals. 
+.PP 
+MATE Terminal emulates the xterm program developed by the X 
+Consortium. In turn, the xterm program emulates the DEC VT102 terminal 
+and also supports the DEC VT220 escape sequences. An escape sequence 
+is a series of characters that starts with the Esc character. 
+.PP 
+MATE Terminal accepts all of the escape sequences that the VT102 
+and VT220 terminals use for functions such as positioning the cursor 
+and clearing the screen. 
+.SH "OPTIONS" 
+.IP "\fB-e, \-\-command=\fISTRING\fR\fP" 10 
+Execute the argument to this option inside the terminal. 
+.IP "\fB\-\-window-with-profile=\fIPROFILENAME\fR\fP" 10 
+Open a new window containing a tab with the given profile.  
+More than one of these options can be provided. 
+.IP "\fB\-\-tab-with-profile=\fIPROFILENAME\fR\fP" 10 
+Open a tab in the window with the given profile. More than 
+one of these options can be provided, to open 
+several tabs . 
+.IP "\fB\-\-window-with-profile-internal-id=\fIPROFILEID\fR\fP" 10 
+Open a new window containing a tab with the given profile 
+ID. Used internally to save sessions. 
+.IP "\fB\-\-tab-with-profile-internal-id=\fIPROFILEID\fR\fP" 10 
+Open a tab in the window with the given profile ID. 
+Used internally to save sessions. 
+.IP "\fB\-\-role=\fIROLE\fR\fP" 10 
+Set the role for the last-specified window; applies to only 
+one window; can be specified once for each window you create 
+from the command line. 
+.IP "\fB\-\-show-menubar\fP" 10 
+Turn on the menu bar for the last-specified window; applies 
+to only one window; can be specified once for each window you 
+create from the command line. 
+.IP "\fB\-\-hide-menubar\fP" 10 
+Turn off the menu bar for the last-specified window; applies 
+to only one window; can be specified once for each window you 
+create from the command line. 
+.IP "\fB\-\-geometry=\fIGEOMETRY\fR\fP" 10 
+X geometry specification (see "X" man page), can be 
+specified once per window to be opened. 
+.IP "\fB\-\-disable-factory\fP" 10 
+Do not register with the activation name server, do not 
+re-use an active terminal. 
+.IP "\fB-t, \-\-title=\fITITLE\fR\fP" 10 
+Set the terminal's title to \fITITLE\fR. 
+.IP "\fB\-\-working-directory=\fIDIRNAME\fR\fP" 10 
+Set the terminal's working directory to \fIDIRNAME\fR.
+.IP "\fB-?, \-\-help\fP" 10 
+Show help message. 
+.SH "AUTHOR" 
+.PP 
+This manual page was written by Christian Marillat marillat@debian.org for 
+the \fBDebian GNU/Linux\fP system (but may be used by others). 
+.\" created by instant / docbook-to-man, Fri 18 Jan 2013, 14:42 

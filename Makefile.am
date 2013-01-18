@@ -13,6 +13,8 @@ desktop_in_files = @PACKAGE@.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+man_MANS = mate-terminal.1
+
 EXTRA_DIST = 			\
 	ChangeLog.pre-2-23	\
 	ChangeLog.README	\
@@ -20,6 +22,7 @@ EXTRA_DIST = 			\
 	mate-doc-utils.make	\
 	xmldocs.make		\
 	omf.make		\
+	$(man_MANS) 	\
 	$(NULL)
 
 CLEANFILES = \
