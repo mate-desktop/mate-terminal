@@ -33,9 +33,6 @@
 
 G_BEGIN_DECLS
 
-gboolean        terminal_gsettings_is_valid_keyname (const gchar  *key,
-                                                     GError      **error);
-
 gboolean        terminal_gsettings_append_strv (GSettings         *settings,
                                                 const gchar       *key,
                                                 const gchar       *value);
