@@ -39,6 +39,7 @@
 
 #include "terminal-accels.h"
 #include "terminal-app.h"
+#include "terminal-gsettings.h"
 #include "terminal-intl.h"
 #include "terminal-util.h"
 #include "terminal-window.h"
@@ -627,7 +628,8 @@ setup_http_proxy_env (GHashTable *env_table,
 	}
 	g_free (host);
 
-	ignore = terminal_gsettings_strv_to_gslist (g_settings_get_strv (settings_http, "ignore-hosts"));
+	gchar **ignore_strv = g_settings_get_strv (settings_http, "ignore-hosts");
+	ignore = terminal_gsettings_strv_to_gslist (ignore_strv);
 	if (ignore)
 	{
 		GString *buf = g_string_sized_new (64);
@@ -646,6 +648,8 @@ setup_http_proxy_env (GHashTable *env_table,
 		}
 		set_proxy_env (env_table, "no_proxy", g_string_free (buf, FALSE));
 	}
+	if (ignore_strv)
+		g_strfreev(ignore_strv);
 }
 
 static void
