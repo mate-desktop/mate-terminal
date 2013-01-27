@@ -127,7 +127,7 @@ enum
 
 /* Keep these in sync with the GSettings schema! */
 #define DEFAULT_ALLOW_BOLD            (TRUE)
-#define DEFAULT_BACKGROUND_COLOR      ("#FFFFDD")
+#define DEFAULT_BACKGROUND_COLOR      ("#000000")
 #define DEFAULT_BOLD_COLOR_SAME_AS_FG (TRUE)
 #define DEFAULT_BACKGROUND_DARKNESS   (0.5)
 #define DEFAULT_BACKGROUND_IMAGE_FILE ("")
@@ -143,13 +143,13 @@ enum
 #define DEFAULT_DELETE_BINDING        (VTE_ERASE_DELETE_SEQUENCE)
 #define DEFAULT_EXIT_ACTION           (TERMINAL_EXIT_CLOSE)
 #define DEFAULT_FONT                  ("Monospace 12")
-#define DEFAULT_FOREGROUND_COLOR      ("#000000")
+#define DEFAULT_FOREGROUND_COLOR      ("#FFFFFF")
 #define DEFAULT_LOGIN_SHELL           (FALSE)
 #define DEFAULT_NAME                  (NULL)
 #define DEFAULT_PALETTE               (terminal_palettes[TERMINAL_PALETTE_TANGO])
 #define DEFAULT_SCROLL_BACKGROUND     (TRUE)
 #define DEFAULT_SCROLLBACK_LINES      (512)
-#define DEFAULT_SCROLLBACK_UNLIMITED  (FALSE)
+#define DEFAULT_SCROLLBACK_UNLIMITED  (TRUE)
 #define DEFAULT_SCROLLBAR_POSITION    (TERMINAL_SCROLLBAR_RIGHT)
 #define DEFAULT_SCROLL_ON_KEYSTROKE   (TRUE)
 #define DEFAULT_SCROLL_ON_OUTPUT      (FALSE)
@@ -161,7 +161,7 @@ enum
 #define DEFAULT_USE_CUSTOM_DEFAULT_SIZE (FALSE)
 #define DEFAULT_USE_SKEY              (TRUE)
 #define DEFAULT_USE_SYSTEM_FONT       (TRUE)
-#define DEFAULT_USE_THEME_COLORS      (TRUE)
+#define DEFAULT_USE_THEME_COLORS      (FALSE)
 #define DEFAULT_VISIBLE_NAME          (N_("Unnamed"))
 #define DEFAULT_WORD_CHARS            ("-A-Za-z0-9,./?%&#:_=+@~")
 
