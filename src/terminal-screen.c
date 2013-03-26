@@ -23,6 +23,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+#include <gio/gio.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
@@ -1360,6 +1361,8 @@ get_child_environment (TerminalScreen *screen,
 	GHashTableIter iter;
 	GPtrArray *retval;
 	guint i;
+	const char * const *list_schemas;
+	gboolean schema_exists;
 
 	window = gtk_widget_get_toplevel (term);
 	g_assert (window != NULL);
@@ -1400,7 +1403,18 @@ get_child_environment (TerminalScreen *screen,
 	g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (gtk_widget_get_display (window))));
 #endif
 
-	terminal_util_add_proxy_env (env_table);
+	list_schemas = g_settings_list_schemas();
+	schema_exists = FALSE;
+	for (i = 0; list_schemas[i] != NULL; i++) {
+		if (g_strcmp0 (list_schemas[i], "org.gnome.system.proxy") == 0)
+		{
+			schema_exists = TRUE;
+			break;
+		}
+	}
+	if (schema_exists == TRUE) {
+		terminal_util_add_proxy_env (env_table);
+	}
 
 	retval = g_ptr_array_sized_new (g_hash_table_size (env_table));
 	g_hash_table_iter_init (&iter, env_table);
