@@ -593,15 +593,12 @@ setup_http_proxy_env (GHashTable *env_table,
 {
 	gchar *host;
 	gint port;
-	GSList *ignore;
-
-	if (!g_settings_get_boolean (settings_http, "use-http-proxy"))
-		return;
 
 	host = gsettings_get_string (settings_http, "host");
 	port = g_settings_get_int (settings_http, "port");
 	if (host && port)
 	{
+
 		GString *buf = g_string_sized_new (64);
 		g_string_append (buf, "http://");
 
@@ -628,7 +625,15 @@ setup_http_proxy_env (GHashTable *env_table,
 	}
 	g_free (host);
 
-	gchar **ignore_strv = g_settings_get_strv (settings_http, "ignore-hosts");
+}
+
+static void
+setup_ignore_host_env (GHashTable *env_table,
+                      GSettings *settings)
+{
+	GSList *ignore;
+	gchar **ignore_strv = g_settings_get_strv (settings, "ignore-hosts");
+
 	ignore = terminal_gsettings_strv_to_gslist (ignore_strv);
 	if (ignore)
 	{
@@ -654,13 +659,13 @@ setup_http_proxy_env (GHashTable *env_table,
 
 static void
 setup_https_proxy_env (GHashTable *env_table,
-                       GSettings *settings)
+                       GSettings *settings_https)
 {
 	gchar *host;
 	gint port;
 
-	host = gsettings_get_string (settings, "secure-host");
-	port = g_settings_get_int (settings, "secure-port");
+	host = gsettings_get_string (settings_https, "host");
+	port = g_settings_get_int (settings_https, "port");
 	if (host && port)
 	{
 		char *proxy;
@@ -673,13 +678,13 @@ setup_https_proxy_env (GHashTable *env_table,
 
 static void
 setup_ftp_proxy_env (GHashTable *env_table,
-                     GSettings *settings)
+                     GSettings *settings_ftp)
 {
 	gchar *host;
 	gint port;
 
-	host = gsettings_get_string (settings, "ftp-host");
-	port = g_settings_get_int (settings, "ftp-port");
+	host = gsettings_get_string (settings_ftp, "host");
+	port = g_settings_get_int (settings_ftp, "port");
 	if (host && port)
 	{
 		char *proxy;
@@ -692,13 +697,13 @@ setup_ftp_proxy_env (GHashTable *env_table,
 
 static void
 setup_socks_proxy_env (GHashTable *env_table,
-                       GSettings *settings)
+                       GSettings *settings_socks)
 {
 	gchar *host;
 	gint port;
 
-	host = gsettings_get_string (settings, "socks-host");
-	port = g_settings_get_int (settings, "socks-port");
+	host = gsettings_get_string (settings_socks, "host");
+	port = g_settings_get_int (settings_socks, "port");
 	if (host && port)
 	{
 		char *proxy;
@@ -736,19 +741,21 @@ void
 terminal_util_add_proxy_env (GHashTable *env_table)
 {
 	char *proxymode;
-
-	GSettings *settings, *settings_http;
-	settings = g_settings_new (CONF_PROXY_SCHEMA);
-	settings_http = g_settings_new (CONF_HTTP_PROXY_SCHEMA);
+	GSettings *settings = g_settings_new (CONF_PROXY_SCHEMA);
+	GSettings *settings_http = g_settings_new (CONF_HTTP_PROXY_SCHEMA);
+	GSettings *settings_https = g_settings_new (CONF_HTTPS_PROXY_SCHEMA);
+	GSettings *settings_ftp = g_settings_new (CONF_FTP_PROXY_SCHEMA);
+	GSettings *settings_socks = g_settings_new (CONF_SOCKS_PROXY_SCHEMA);
 
 	/* If mode is not manual, nothing to set */
 	proxymode = gsettings_get_string (settings, "mode");
 	if (proxymode && 0 == strcmp (proxymode, "manual"))
 	{
 		setup_http_proxy_env (env_table, settings_http);
-		setup_https_proxy_env (env_table, settings);
-		setup_ftp_proxy_env (env_table, settings);
-		setup_socks_proxy_env (env_table, settings);
+		setup_ignore_host_env (env_table, settings);
+		setup_https_proxy_env (env_table, settings_https);
+		setup_ftp_proxy_env (env_table, settings_ftp);
+		setup_socks_proxy_env (env_table, settings_socks);
 	}
 	else if (proxymode && 0 == strcmp (proxymode, "auto"))
 	{
@@ -758,6 +765,9 @@ terminal_util_add_proxy_env (GHashTable *env_table)
 	g_free (proxymode);
 	g_object_unref (settings);
 	g_object_unref (settings_http);
+	g_object_unref (settings_https);
+	g_object_unref (settings_ftp);
+	g_object_unref (settings_socks);
 }
 
 /* Bidirectional object/widget binding */

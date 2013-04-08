@@ -1406,7 +1406,7 @@ get_child_environment (TerminalScreen *screen,
 	list_schemas = g_settings_list_schemas();
 	schema_exists = FALSE;
 	for (i = 0; list_schemas[i] != NULL; i++) {
-		if (g_strcmp0 (list_schemas[i], "org.gnome.system.proxy") == 0)
+		if (g_strcmp0 (list_schemas[i], CONF_PROXY_SCHEMA) == 0)
 		{
 			schema_exists = TRUE;
 			break;

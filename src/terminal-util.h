@@ -29,6 +29,9 @@ G_BEGIN_DECLS
 
 #define CONF_PROXY_SCHEMA      "org.gnome.system.proxy"
 #define CONF_HTTP_PROXY_SCHEMA "org.gnome.system.proxy.http"
+#define CONF_HTTPS_PROXY_SCHEMA "org.gnome.system.proxy.https"
+#define CONF_FTP_PROXY_SCHEMA "org.gnome.system.proxy.ftp"
+#define CONF_SOCKS_PROXY_SCHEMA "org.gnome.system.proxy.socks"
 
 void terminal_util_set_unique_role (GtkWindow *window, const char *prefix);
 
