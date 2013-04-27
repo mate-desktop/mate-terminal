@@ -98,7 +98,7 @@ struct _TerminalWindowPrivate
 #define SET_ENCODING_UI_PATH              "/menubar/Terminal/TerminalSetEncoding/EncodingsPH"
 #define SET_ENCODING_ACTION_NAME_PREFIX   "TerminalSetEncoding"
 
-#define PROFILES_UI_PATH        "/menubar/Terminal/TerminalProfiles"
+#define PROFILES_UI_PATH        "/menubar/Terminal/TerminalProfiles/ProfilesPH"
 #define PROFILES_POPUP_UI_PATH  "/Popup/PopupTerminalProfiles/ProfilesPH"
 
 #define SIZE_TO_UI_PATH            "/menubar/Terminal/TerminalSizeToPH"
@@ -196,6 +196,8 @@ static void search_find_next_callback         (GtkAction *action,
 static void search_find_prev_callback         (GtkAction *action,
         TerminalWindow *window);
 static void search_clear_highlight_callback   (GtkAction *action,
+        TerminalWindow *window);
+static void terminal_next_or_previous_profile_cb (GtkAction *action,
         TerminalWindow *window);
 static void terminal_set_title_callback       (GtkAction *action,
         TerminalWindow *window);
@@ -1922,6 +1924,16 @@ terminal_window_init (TerminalWindow *window)
 
         /* Terminal menu */
         { "TerminalProfiles", NULL, N_("Change _Profile") },
+        {
+            "ProfilePrevious", NULL, N_("_Previous Profile"), "<alt>Page_Up",
+            NULL,
+            G_CALLBACK (terminal_next_or_previous_profile_cb)
+        },
+        {
+            "ProfileNext", NULL, N_("_Next Profile"), "<alt>Page_Down",
+            NULL,
+            G_CALLBACK (terminal_next_or_previous_profile_cb)
+        },
         {
             "TerminalSetTitle", NULL, N_("_Set Title…"), NULL,
             NULL,
@@ -3774,6 +3786,61 @@ search_clear_highlight_callback (GtkAction *action,
         return;
 
     vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL);
+}
+
+static void
+terminal_next_or_previous_profile_cb (GtkAction *action,
+                              TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    TerminalProfile *active_profile, *new_profile;
+    GList *profiles, *p;
+
+    const char *name;
+    guint backwards = 0;
+
+    name = gtk_action_get_name (action);
+    if (strcmp (name, "ProfilePrevious") == 0)
+    {
+        backwards = 1;
+    }
+
+    profiles = terminal_app_get_profile_list (terminal_app_get ());
+    if (profiles == NULL)
+        return;
+
+    if (priv->active_screen)
+        active_profile = terminal_screen_get_profile (priv->active_screen);
+    else
+        return;
+
+    for (p = profiles; p != NULL; p = p->next)
+    {
+        TerminalProfile *profile = (TerminalProfile *) p->data;
+        if (profile == active_profile)
+        {
+            if (backwards) {
+                p = p->prev;
+                if (p == NULL)
+                    p = g_list_last (profiles);
+                new_profile = p->data;
+                break;
+            }
+            else
+            {
+                p = p->next;
+                if (p == NULL)
+                    p = g_list_first (profiles);
+                new_profile = p->data;
+                break;
+            }
+        }
+    }
+
+    if (new_profile)
+        terminal_screen_set_profile (priv->active_screen, new_profile);
+
+    g_list_free (profiles);
 }
 
 static void
