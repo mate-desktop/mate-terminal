@@ -22,6 +22,7 @@ EXTRA_DIST = 			\
 	mate-doc-utils.make	\
 	xmldocs.make		\
 	omf.make		\
+	mate-terminal.wrapper   \
 	$(man_MANS) 	\
 	$(NULL)
 
