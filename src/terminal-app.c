@@ -950,6 +950,9 @@ terminal_app_system_font_notify_cb (GSettings *settings,
 		font = DEFAULT_MONOSPACE_FONT;
 	g_assert (font != NULL);
 
+	if (font && (strlen (font) == 0))   /* empty string */
+		font = DEFAULT_MONOSPACE_FONT;
+
 	font_desc = pango_font_description_from_string (font);
 	if (app->system_font_desc &&
 	        pango_font_description_equal (app->system_font_desc, font_desc))
