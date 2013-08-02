@@ -21,7 +21,6 @@ EXTRA_DIST = 			\
 	ChangeLog.pre-2-23	\
 	ChangeLog.README	\
 	HACKING			\
-	mate-doc-utils.make	\
 	xmldocs.make		\
 	omf.make		\
 	mate-terminal.wrapper   \
@@ -48,7 +47,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/mkinstalldirs \
 	$(srcdir)/omf.make \
 	$(srcdir)/xmldocs.make \
-	$(srcdir)/mate-doc-utils.make	\
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(NULL)
 
