@@ -29,6 +29,10 @@
 #include "terminal-profile.h"
 #include "terminal-util.h"
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ #include <gdk/gdkkeysyms-compat.h>
+#endif
+
 /* NOTES
  *
  * There are two sources of keybindings changes, from GSettings and from
@@ -814,7 +818,7 @@ accel_edited_callback (GtkCellRendererAccel *cell,
 			                            GTK_BUTTONS_OK,
 			                            _("The shortcut key “%s” is already bound to the “%s” action"),
 			                            name,
-			                            
+
 other_key->user_visible_name ? _(other_key->user_visible_name) : other_key->gsettings_key);
 			g_free (name);
 

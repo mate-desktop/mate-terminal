@@ -43,6 +43,11 @@
 #include "skey-popup.h"
 #endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ #include <gdk/gdk.h>
+ #include <gdk/gdkkeysyms-compat.h>
+#endif
+
 struct _TerminalWindowPrivate
 {
     GtkActionGroup *action_group;
@@ -1518,23 +1523,43 @@ terminal_window_realize (GtkWidget *widget)
     TerminalWindowPrivate *priv = window->priv;
 #ifdef GDK_WINDOWING_X11
     GdkScreen *screen;
-    GdkColormap *colormap;
     GtkAllocation widget_allocation;
-
+    #if GTK_CHECK_VERSION (3, 0, 0)
+      GdkVisual *visual;
+    #else
+      GdkColormap *colormap;
+    #endif
     gtk_widget_get_allocation (widget, &widget_allocation);
     screen = gtk_widget_get_screen (GTK_WIDGET (window));
-    if (gdk_screen_is_composited (screen) &&
-            (colormap = gdk_screen_get_rgba_colormap (screen)) != NULL)
-    {
-        /* Set RGBA colormap if possible so VTE can use real transparency */
-        gtk_widget_set_colormap (widget, colormap);
-        priv->have_argb_visual = TRUE;
-    }
-    else
-    {
-        gtk_widget_set_colormap (widget, gdk_screen_get_default_colormap (screen));
-        priv->have_argb_visual = FALSE;
-    }
+
+    #if GTK_CHECK_VERSION (3, 0, 0)
+      if (gdk_screen_is_composited (screen) &&
+          (visual = gdk_screen_get_rgba_visual (screen)) != NULL)
+        {
+          /* Set RGBA visual if possible so VTE can use real transparency */
+          gtk_widget_set_visual (GTK_WIDGET (widget), visual);
+          priv->have_argb_visual = TRUE;
+        }
+      else
+        {
+          gtk_widget_set_visual (GTK_WIDGET (window), gdk_screen_get_system_visual (screen));
+          priv->have_argb_visual = FALSE;
+        }
+    #else
+      if (gdk_screen_is_composited (screen) &&
+          (colormap = gdk_screen_get_rgba_colormap (screen)) != NULL)
+        {
+          /* Set RGBA colormap if possible so VTE can use real transparency */
+          gtk_widget_set_colormap (widget, colormap);
+          priv->have_argb_visual = TRUE;
+        }
+      else
+        {
+          gtk_widget_set_colormap (widget, gdk_screen_get_default_colormap (screen));
+          priv->have_argb_visual = FALSE;
+        }
+    #endif
+
 #endif
 
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
@@ -2113,7 +2138,11 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook), TRUE);
     gtk_notebook_set_show_border (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
-    gtk_notebook_set_group (GTK_NOTEBOOK (priv->notebook), GUINT_TO_POINTER (1));
+    #if GTK_CHECK_VERSION (3, 0, 0)
+      gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
+    #else
+      gtk_notebook_set_group (GTK_NOTEBOOK (priv->notebook), GUINT_TO_POINTER (1));
+    #endif
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook),
                                  TRUE);
     g_signal_connect (priv->notebook, "button-press-event",
@@ -2129,6 +2158,11 @@ terminal_window_init (TerminalWindow *window)
     g_signal_connect_data (priv->notebook, "page-reordered",
                            G_CALLBACK (terminal_window_update_tabs_menu_sensitivity),
                            window, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+
+    #if GTK_CHECK_VERSION(3, 0, 0)
+    g_signal_connect (priv->notebook, "create-window",
+                    G_CALLBACK (handle_tab_droped_on_desktop), window);
+    #endif
 
     gtk_box_pack_end (GTK_BOX (main_vbox), priv->notebook, TRUE, TRUE, 0);
     gtk_widget_show (priv->notebook);
@@ -2243,7 +2277,9 @@ terminal_window_class_init (TerminalWindowClass *klass)
                          "}\n"
                          "widget \"*.mate-terminal-tab-close-button\" style \"mate-terminal-tab-close-button-style\"");
 
+    #if !GTK_CHECK_VERSION(3, 0, 0)
     gtk_notebook_set_window_creation_hook (handle_tab_droped_on_desktop, NULL, NULL);
+    #endif
 }
 
 static void
@@ -3911,7 +3947,11 @@ tabs_next_or_previous_tab_cb (GtkAction *action,
     gtk_binding_set_activate (gtk_binding_set_by_class (klass),
                               keyval,
                               GDK_CONTROL_MASK,
+                            #if GTK_CHECK_VERSION(3, 0, 0)
+                              G_OBJECT (priv->notebook));
+                            #else
                               GTK_OBJECT (priv->notebook));
+                            #endif
 }
 
 static void

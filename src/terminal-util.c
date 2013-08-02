@@ -44,6 +44,11 @@
 #include "terminal-util.h"
 #include "terminal-window.h"
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ 	#define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
+ 	#define GDK_DRAWABLE_XID GDK_WINDOW_XID
+#endif
+
 void
 terminal_util_set_unique_role (GtkWindow *window, const char *prefix)
 {
@@ -1049,7 +1054,11 @@ gboolean
 terminal_util_x11_get_net_wm_desktop (GdkWindow *window,
                                       guint32   *desktop)
 {
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	GdkDisplay *display = gdk_window_get_display (window);
+	#else
 	GdkDisplay *display = gdk_drawable_get_display (window);
+	#endif
 	Atom type;
 	int format;
 	guchar *data;
@@ -1092,7 +1101,11 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 	 * http://bugzilla.mate.org/show_bug.cgi?id=586311 asks for GTK+
 	 * to just handle everything behind the scenes including the desktop.
 	 */
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	GdkScreen *screen = gdk_window_get_screen (window);
+	#else
 	GdkScreen *screen = gdk_drawable_get_screen (window);
+	#endif
 	GdkDisplay *display = gdk_screen_get_display (screen);
 	Display *xdisplay = GDK_DISPLAY_XDISPLAY (display);
 	char *wm_selection_name;
@@ -1158,7 +1171,12 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 void
 terminal_util_x11_clear_demands_attention (GdkWindow *window)
 {
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	GdkScreen *screen = gdk_window_get_screen (window);
+	#else
 	GdkScreen *screen = gdk_drawable_get_screen (window);
+	#endif
 	GdkDisplay *display = gdk_screen_get_display (screen);
 	XClientMessageEvent xclient;
 
@@ -1195,7 +1213,11 @@ terminal_util_x11_clear_demands_attention (GdkWindow *window)
 gboolean
 terminal_util_x11_window_is_minimized (GdkWindow *window)
 {
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	GdkDisplay *display = gdk_window_get_display (window);
+	#else
 	GdkDisplay *display = gdk_drawable_get_display (window);
+	#endif
 
 	Atom type;
 	gint format;

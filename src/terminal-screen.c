@@ -44,6 +44,11 @@
 
 #include "eggshell.h"
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ #include <gdk/gdkkeysyms-compat.h>
+ #define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
+#endif
+
 #define URL_MATCH_CURSOR  (GDK_HAND2)
 #define SKEY_MATCH_CURSOR (GDK_HAND2)
 

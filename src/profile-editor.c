@@ -522,6 +522,31 @@ reset_compat_defaults_cb (GtkWidget       *button,
 static void
 init_color_scheme_menu (GtkWidget *combo_box)
 {
+	#if GTK_CHECK_VERSION(3, 0, 0)
+
+	GtkCellRenderer *renderer;
+	GtkTreeIter iter;
+	GtkListStore *store;
+	int i;
+
+	store = gtk_list_store_new (1, G_TYPE_STRING);
+	for (i = 0; i < G_N_ELEMENTS (color_schemes); ++i)
+	gtk_list_store_insert_with_values (store, &iter, -1,
+	                                   0, _(color_schemes[i].name),
+	                                   -1);
+	gtk_list_store_insert_with_values (store, &iter, -1,
+	                                  0, _("Custom"),
+	                                  -1);
+
+	gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
+	g_object_unref (store);
+
+	renderer = gtk_cell_renderer_text_new ();
+	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), renderer, TRUE);
+	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), renderer, "text", 0, NULL);
+
+	#else
+
 	int i;
 
 	i = G_N_ELEMENTS (color_schemes);
@@ -530,6 +555,8 @@ init_color_scheme_menu (GtkWidget *combo_box)
 		gtk_combo_box_prepend_text (GTK_COMBO_BOX (combo_box),
 		                            _(color_schemes[--i].name));
 	}
+
+	#endif
 }
 
 static char*
