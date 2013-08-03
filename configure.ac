@@ -159,7 +159,7 @@ AM_CONDITIONAL([ENABLE_SKEY],[test "$enable_skey" = "yes"])
 # Documentation
 # *************
 
-MATE_DOC_INIT
+YELP_HELP_INIT
 
 # ****************************
 
