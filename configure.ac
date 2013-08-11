@@ -10,7 +10,7 @@ AC_INIT([MATE Terminal],[gt_version],[http://www.mate-desktop.org],[mate-termina
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 
-AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([no])])
 
@@ -177,10 +177,6 @@ src/Makefile
 src/terminal-version.h
 src/skey/Makefile
 help/Makefile
-help/bg/Makefile
-help/ro/Makefile
-help/ja/Makefile
-help/zh_TW/Makefile
 po/Makefile.in
 ])
 AC_OUTPUT
