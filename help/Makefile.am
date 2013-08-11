@@ -8,8 +8,8 @@ HELP_MEDIA = figures/mate-terminal-default.png \
 
 HELP_LINGUAS = da de ca cs el en_GB es fr it ko oc pt_BR ru sv uk zh_CN
 
-# Move to HELP_LINGUAS in transition to mate-doc-utils
 
-SUBDIRS = bg ro ja zh_TW
+# Move to HELP_LINGUAS in transition to yelp-tools
+#SUBDIRS = bg ro ja zh_TW
 
 -include $(top_srcdir)/git.mk
