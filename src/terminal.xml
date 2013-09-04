@@ -48,7 +48,12 @@
       -->
     </menu>
     <menu action="Terminal">
-      <menu action="TerminalProfiles" />
+      <menu action="TerminalProfiles">
+        <placeholder name="ProfilesPH" />
+        <separator />
+        <menuitem action="ProfileNext" />
+        <menuitem action="ProfilePrevious" />
+      </menu>
       <menuitem action="TerminalSetTitle" />
       <menu action="TerminalSetEncoding" >
         <placeholder name="EncodingsPH" />
