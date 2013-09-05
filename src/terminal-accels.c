@@ -63,6 +63,8 @@
 #define ACCEL_PATH_FULL_SCREEN          ACCEL_PATH_ROOT "ViewFullscreen"
 #define ACCEL_PATH_RESET                ACCEL_PATH_ROOT "TerminalReset"
 #define ACCEL_PATH_RESET_AND_CLEAR      ACCEL_PATH_ROOT "TerminalResetClear"
+#define ACCEL_PATH_PREV_PROFILE         ACCEL_PATH_ROOT "ProfilePrevious"
+#define ACCEL_PATH_NEXT_PROFILE         ACCEL_PATH_ROOT "ProfileNext"
 #define ACCEL_PATH_PREV_TAB             ACCEL_PATH_ROOT "TabsPrevious"
 #define ACCEL_PATH_NEXT_TAB             ACCEL_PATH_ROOT "TabsNext"
 #define ACCEL_PATH_SET_TERMINAL_TITLE   ACCEL_PATH_ROOT "TerminalSetTitle"
@@ -86,8 +88,10 @@
 #define KEY_NEW_PROFILE         "new-profile"
 #define KEY_NEW_TAB             "new-tab"
 #define KEY_NEW_WINDOW          "new-window"
+#define KEY_NEXT_PROFILE        "next-profile"
 #define KEY_NEXT_TAB            "next-tab"
 #define KEY_PASTE               "paste"
+#define KEY_PREV_PROFILE        "prev-profile"
 #define KEY_PREV_TAB            "prev-tab"
 #define KEY_RESET_AND_CLEAR     "reset-and-clear"
 #define KEY_RESET               "reset"
@@ -213,6 +217,14 @@ static KeyEntry terminal_entries[] =
 	{
 		N_("Reset and Clear"),
 		KEY_RESET_AND_CLEAR, ACCEL_PATH_RESET_AND_CLEAR, 0, 0, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Previous Profile"),
+		KEY_PREV_PROFILE, ACCEL_PATH_PREV_PROFILE, GDK_MOD1_MASK, GDK_Page_Up, NULL, FALSE, TRUE
+	},
+	{
+		N_("Switch to Next Profile"),
+		KEY_NEXT_PROFILE, ACCEL_PATH_NEXT_PROFILE, GDK_MOD1_MASK, GDK_Page_Down, NULL, FALSE, TRUE
 	},
 };
 
