@@ -1,5 +1,7 @@
 SUBDIRS = src po help
 
+ACLOCAL_AMFLAGS = -I m4
+
 NULL =
 
 DISTCHECK_CONFIGURE_FLAGS = \
