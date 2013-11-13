@@ -9,6 +9,7 @@ m4_define([gt_api_version],[0])
 AC_INIT([MATE Terminal],[gt_version],[http://www.mate-desktop.org],[mate-terminal])
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
 
