@@ -150,44 +150,15 @@ terminal_util_show_help (const char *topic,
                          GtkWindow  *parent)
 {
 	GError *error = NULL;
-	const char *lang;
-	char *uri = NULL, *url;
-	guint i;
-
-	const char * const * langs = g_get_language_names ();
-	for (i = 0; langs[i]; i++)
-	{
-		lang = langs[i];
-		if (strchr (lang, '.'))
-		{
-			continue;
-		}
-
-		uri = g_build_filename (TERM_HELPDIR,
-		                        "mate-terminal", /* DOC_MODULE */
-		                        lang,
-		                        "mate-terminal.xml",
-		                        NULL);
-
-		if (g_file_test (uri, G_FILE_TEST_EXISTS))
-		{
-			break;
-		}
-
-		g_free (uri);
-		uri = NULL;
-	}
-
-	if (!uri)
-		return;
+	char *url;
 
 	if (topic)
 	{
-		url = g_strdup_printf ("help://%s?%s", uri, topic);
+		url = g_strdup_printf ("help:mate-terminal/%s", topic);
 	}
 	else
 	{
-		url = g_strdup_printf ("help://%s", uri);
+		url = g_strdup ("help:mate-terminal");
 	}
 
 	if (!open_url (GTK_WINDOW (parent), url, gtk_get_current_event_time (), &error))
@@ -197,7 +168,6 @@ terminal_util_show_help (const char *topic,
 		g_error_free (error);
 	}
 
-	g_free (uri);
 	g_free (url);
 }
 
