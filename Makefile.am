@@ -1,6 +1,6 @@
 SUBDIRS = src po help
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAG}
 
 NULL =
 
