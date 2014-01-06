@@ -20,8 +20,6 @@ man_MANS = mate-terminal.1
 bin_SCRIPTS = mate-terminal.wrapper
 
 EXTRA_DIST = 			\
-	ChangeLog.pre-2-23	\
-	ChangeLog.README	\
 	HACKING			\
 	mate-doc-utils.make	\
 	xmldocs.make		\
