@@ -1,26 +1,25 @@
-# Kazakh translation of mate-terminal.
-# Copyright (C) 2010 HZ
-# This file is distributed under the same license as the brasero package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: master\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-18 14:26+0300\n"
-"PO-Revision-Date: 2010-07-22 22:03+0600\n"
+"POT-Creation-Date: 2012-01-03 00:09+0100\n"
+"PO-Revision-Date: 2013-11-03 06:43+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
+"Language-Team: Kazakh (http://www.transifex.com/projects/p/MATE/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Poedit-Language: Kazakh\n"
-"X-Poedit-Country: KAZAKHSTAN\n"
+"Language: kk\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/mate-terminal.schemas.in.h:130
-#: ../src/terminal-accels.c:242 ../src/terminal.c:549
-#: ../src/terminal-profile.c:160 ../src/terminal-window.c:2000
+#: ../src/terminal-accels.c:309 ../src/terminal.c:569
+#: ../src/terminal-profile.c:160 ../src/terminal-window.c:2104
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -28,32 +27,32 @@ msgstr "Терминал"
 msgid "Use the command line"
 msgstr "Командалық жолды қолдану"
 
-#: ../src/eggsmclient.c:225
+#: ../src/eggsmclient.c:229
 msgid "Disable connection to session manager"
 msgstr "Сессиялар менеджеріне байланыстарды сөндіру"
 
-#: ../src/eggsmclient.c:228
+#: ../src/eggsmclient.c:234
 msgid "Specify file containing saved configuration"
 msgstr "Сақталған баптаулары бар файлды көрсету"
 
-#: ../src/eggsmclient.c:228 ../src/terminal-options.c:957
-#: ../src/terminal-options.c:966
+#: ../src/eggsmclient.c:234 ../src/terminal-options.c:958
+#: ../src/terminal-options.c:967
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: ../src/eggsmclient.c:231
+#: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
 msgstr "Сессия менеджментінің ID-ін көрсету"
 
-#: ../src/eggsmclient.c:231
+#: ../src/eggsmclient.c:239
 msgid "ID"
 msgstr "ID"
 
-#: ../src/eggsmclient.c:252
+#: ../src/eggsmclient.c:265
 msgid "Session management options:"
 msgstr "Сессияны басқару опциялары:"
 
-#: ../src/eggsmclient.c:253
+#: ../src/eggsmclient.c:266
 msgid "Show session management options"
 msgstr "Сессияны басқару опцияларын көрсету"
 
@@ -83,7 +82,7 @@ msgstr ""
 
 #: ../src/find-dialog.glade.h:4
 msgid "Search _backwards"
-msgstr ""
+msgstr "К_ері іздеу"
 
 #: ../src/find-dialog.glade.h:5
 msgid "_Match case"
@@ -100,8 +99,8 @@ msgstr ""
 #: ../src/mate-terminal.schemas.in.h:1
 msgid ""
 "A subset of possible encodings are presented in the Encoding submenu. This "
-"is a list of encodings to appear there. The special encoding name \"current"
-"\" means to display the encoding of the current locale."
+"is a list of encodings to appear there. The special encoding name "
+"\"current\" means to display the encoding of the current locale."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:2
@@ -177,9 +176,9 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:16
 msgid ""
-"Default color of bold text in the terminal, as a color specification (can be "
-"HTML-style hex digits, or a color name such as \"red\"). This is ignored if "
-"bold_color_same_as_fg is true."
+"Default color of bold text in the terminal, as a color specification (can be"
+" HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
+" bold_color_same_as_fg is true."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:17
@@ -198,17 +197,17 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:20
 msgid ""
-"Default color of text in the terminal, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
+"Default color of text in the terminal, as a color specification (can be "
+"HTML-style hex digits, or a color name such as \"red\")."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:21
 msgid "Default number of columns"
-msgstr ""
+msgstr "Үнсіз келісім бойынша бағандар саны"
 
 #: ../src/mate-terminal.schemas.in.h:22
 msgid "Default number of rows"
-msgstr ""
+msgstr "Үнсіз келісім бойынша жолдар саны"
 
 #: ../src/mate-terminal.schemas.in.h:23
 msgid "Effect of the Backspace key"
@@ -255,8 +254,8 @@ msgstr ""
 #: ../src/mate-terminal.schemas.in.h:35
 msgid ""
 "If the application in the terminal sets the title (most typically people "
-"have their shell set up to do this), the dynamically-set title can erase the "
-"configured title, go before it, go after it, or replace it. The possible "
+"have their shell set up to do this), the dynamically-set title can erase the"
+" configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
 
@@ -293,9 +292,9 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:42
 msgid ""
-"If true, scrollback lines will never be discarded. The scrollback history is "
-"stored on disk temporarily, so this may cause the system to run out of disk "
-"space if there is a lot of output to the terminal."
+"If true, scrollback lines will never be discarded. The scrollback history is"
+" stored on disk temporarily, so this may cause the system to run out of disk"
+" space if there is a lot of output to the terminal."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:43
@@ -337,15 +336,16 @@ msgstr ""
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
-"you set the option to the special string \"disabled\", then there will be no "
-"keyboard shortcut for this action."
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:50
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:51
@@ -368,7 +368,8 @@ msgstr ""
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:54
@@ -389,10 +390,10 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:56
 msgid ""
-"Keyboard shortcut key for making font the normal size. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
+"Keyboard shortcut key for making font the normal size. Expressed as a string"
+" in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:57
@@ -405,8 +406,8 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:58
 msgid ""
-"Keyboard shortcut key for opening a new window. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
+"Keyboard shortcut key for opening a new window. Expressed as a string in the"
+" same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
@@ -421,9 +422,10 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:60
 msgid ""
-"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:61
@@ -452,74 +454,82 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:64
 msgid ""
-"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:65
 msgid ""
-"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:66
 msgid ""
-"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:67
 msgid ""
-"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:68
 msgid ""
-"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:69
 msgid ""
-"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:70
 msgid ""
-"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:71
 msgid ""
-"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:72
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:73
 msgid ""
-"Keyboard shortcut key to reset and clear the terminal. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
+"Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
+" in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:74
@@ -558,8 +568,8 @@ msgstr ""
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:79
@@ -572,63 +582,63 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:80
 msgid "Keyboard shortcut to close a tab"
-msgstr ""
+msgstr "Бетті жабу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:81
 msgid "Keyboard shortcut to close a window"
-msgstr ""
+msgstr "Терезені жабу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:82
 msgid "Keyboard shortcut to copy text"
-msgstr ""
+msgstr "Мәтінді көшіріп алу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:83
 msgid "Keyboard shortcut to create a new profile"
-msgstr ""
+msgstr "Жаңа профильді жасау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:84
 msgid "Keyboard shortcut to launch help"
-msgstr ""
+msgstr "Көмекті жөнелту үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:85
 msgid "Keyboard shortcut to make font larger"
-msgstr ""
+msgstr "Қаріпті үлкенірек жасау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:86
 msgid "Keyboard shortcut to make font normal-size"
-msgstr ""
+msgstr "Қаріпті қалыпты өлшемді жасау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:87
 msgid "Keyboard shortcut to make font smaller"
-msgstr ""
+msgstr "Қаріпті кішірек жасау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:88
 msgid "Keyboard shortcut to open a new tab"
-msgstr ""
+msgstr "Жаңа бетті ашу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:89
 msgid "Keyboard shortcut to open a new window"
-msgstr ""
+msgstr "Жаңа терезені ашу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:90
 msgid "Keyboard shortcut to paste text"
-msgstr ""
+msgstr "Мәтінді кірістіру үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:91
 msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr ""
+msgstr "Терминалды тастау және тазарту үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:92
 msgid "Keyboard shortcut to reset the terminal"
-msgstr ""
+msgstr "Терминалды тастау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:93
 msgid "Keyboard shortcut to save the current tab contents to file"
-msgstr ""
+msgstr "Ағымдағы бет құрамасын файлға сақтау үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:94
 msgid "Keyboard shortcut to set the terminal title"
-msgstr ""
+msgstr "Терминал атауын орнату үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:95
 msgid "Keyboard shortcut to switch to tab 1"
@@ -680,19 +690,19 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:107
 msgid "Keyboard shortcut to switch to the next tab"
-msgstr ""
+msgstr "Келесі бетке ауысу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:108
 msgid "Keyboard shortcut to switch to the previous tab"
-msgstr ""
+msgstr "Алдыңғы бетке ауысу үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:109
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr ""
+msgstr "Толық экран режимін ауыстыру үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:110
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr ""
+msgstr "Мәзір жолағының көрінуін ауыстыру үшін пернетақта жарлығы"
 
 #: ../src/mate-terminal.schemas.in.h:111
 msgid "List of available encodings"
@@ -723,7 +733,7 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:116
 msgid "Number of lines to keep in scrollback"
-msgstr ""
+msgstr "Айналдыру тарихында сақтау үшін жолдар саны"
 
 #: ../src/mate-terminal.schemas.in.h:117
 msgid ""
@@ -734,13 +744,13 @@ msgstr ""
 #: ../src/mate-terminal.schemas.in.h:118
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
-"terminal by this number of lines; lines that don't fit in the scrollback are "
-"discarded. If scrollback_unlimited is true, this value is ignored."
+"terminal by this number of lines; lines that don't fit in the scrollback are"
+" discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:119
 msgid "Palette for terminal applications"
-msgstr ""
+msgstr "Терминал қолданбалары үшін палитра"
 
 #. Translators: S/Key is the name of an application, so it should
 #. not be translated.
@@ -762,7 +772,8 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:125
 msgid ""
-"Profile to be used when opening a new window or tab. Must be in profile_list."
+"Profile to be used when opening a new window or tab. Must be in "
+"profile_list."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:126
@@ -775,11 +786,11 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:128
 msgid ""
-"Sets what code the backspace key generates. Possible values are \"ascii-del"
-"\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII "
-"BS character), \"escape-sequence\" for the escape sequence typically bound "
-"to backspace or delete. \"ascii-del\" is normally considered the correct "
-"setting for the Backspace key."
+"Sets what code the backspace key generates. Possible values are \"ascii-"
+"del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
+"ASCII BS character), \"escape-sequence\" for the escape sequence typically "
+"bound to backspace or delete. \"ascii-del\" is normally considered the "
+"correct setting for the Backspace key."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:129
@@ -800,7 +811,7 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:132
 msgid "The cursor appearance"
-msgstr ""
+msgstr "Курсордың сыртқы түрі"
 
 #: ../src/mate-terminal.schemas.in.h:133
 msgid ""
@@ -816,7 +827,7 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:135
 msgid "Title for terminal"
-msgstr ""
+msgstr "Терминал атауы"
 
 #: ../src/mate-terminal.schemas.in.h:136
 msgid ""
@@ -849,8 +860,8 @@ msgstr ""
 #: ../src/mate-terminal.schemas.in.h:141
 msgid ""
 "When selecting text by word, sequences of these characters are considered "
-"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
-"a range) should be the first character given."
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
+" a range) should be the first character given."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:142
@@ -877,7 +888,7 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:147
 msgid "Whether to allow bold text"
-msgstr ""
+msgstr "Жуан мәтінді рұқсат ету керек пе"
 
 #: ../src/mate-terminal.schemas.in.h:148
 msgid ""
@@ -891,13 +902,13 @@ msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:150
 msgid "Whether to blink the cursor"
-msgstr ""
+msgstr "Курсордың жыпылықтауы керек пе"
 
 #: ../src/mate-terminal.schemas.in.h:151
 msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
-"with some applications run inside the terminal so it's possible to turn them "
-"off."
+"with some applications run inside the terminal so it's possible to turn them"
+" off."
 msgstr ""
 
 #: ../src/mate-terminal.schemas.in.h:152
@@ -960,7 +971,7 @@ msgstr ""
 
 #: ../src/keybinding-editor.glade.h:2
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Пернетақта жарлықтары"
 
 #: ../src/keybinding-editor.glade.h:3
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
@@ -970,46 +981,46 @@ msgstr ""
 msgid "_Shortcut keys:"
 msgstr "Ж_арлық батырмалары"
 
-#: ../src/profile-editor.c:42
+#: ../src/profile-editor.c:44
 msgid "Black on light yellow"
 msgstr ""
 
-#: ../src/profile-editor.c:44
+#: ../src/profile-editor.c:48
 msgid "Black on white"
-msgstr ""
+msgstr "Ақ үстіндегі қара"
 
-#: ../src/profile-editor.c:46
+#: ../src/profile-editor.c:52
 msgid "Gray on black"
 msgstr ""
 
-#: ../src/profile-editor.c:48
+#: ../src/profile-editor.c:56
 msgid "Green on black"
 msgstr ""
 
-#: ../src/profile-editor.c:50
+#: ../src/profile-editor.c:60
 msgid "White on black"
-msgstr ""
+msgstr "Қара үстіндегі ақ"
 
-#: ../src/profile-editor.c:476
+#: ../src/profile-editor.c:487
 #, c-format
 msgid "Error parsing command: %s"
 msgstr ""
 
-#: ../src/profile-editor.c:494
+#: ../src/profile-editor.c:505
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr ""
 
-#: ../src/profile-editor.c:632
+#: ../src/profile-editor.c:646
 msgid "Images"
 msgstr "Суреттер"
 
-#: ../src/profile-editor.c:804
+#: ../src/profile-editor.c:820
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr ""
 
-#: ../src/profile-editor.c:808
+#: ../src/profile-editor.c:824
 #, c-format
 msgid "Palette entry %d"
 msgstr "Палитра элементі %d"
@@ -1026,9 +1037,9 @@ msgstr ""
 msgid "C_reate"
 msgstr "_Жасау"
 
-#: ../src/profile-new-dialog.glade.h:2 ../src/terminal-accels.c:139
+#: ../src/profile-new-dialog.glade.h:2 ../src/terminal-accels.c:144
 msgid "New Profile"
-msgstr ""
+msgstr "Жаңа профиль"
 
 #: ../src/profile-new-dialog.glade.h:3
 msgid "Profile _name:"
@@ -1064,8 +1075,8 @@ msgstr ""
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
-"applications and operating systems that expect different terminal behavior.</"
-"i></small>"
+"applications and operating systems that expect different terminal "
+"behavior.</i></small>"
 msgstr ""
 
 #: ../src/profile-preferences.glade.h:7
@@ -1205,7 +1216,7 @@ msgstr "Бат_ырмаларды басу кезінде айналдыру"
 
 #: ../src/profile-preferences.glade.h:49
 msgid "Scroll on _output"
-msgstr ""
+msgstr "Ш_ығыс болса, айналдыру"
 
 #: ../src/profile-preferences.glade.h:50
 msgid "Scroll_back:"
@@ -1282,16 +1293,15 @@ msgstr "Қа_ріп:"
 
 #: ../src/profile-preferences.glade.h:71
 msgid "_Profile name:"
-msgstr ""
+msgstr "_Профиль атауы"
 
 #: ../src/profile-preferences.glade.h:72
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "Үйлесі_мділік опцияларын бастапқы түріне келтіру"
 
 #: ../src/profile-preferences.glade.h:73
-#, fuzzy
 msgid "_Run command as a login shell"
-msgstr "_Run command as login shell"
+msgstr "Команданы жүйеге кіру қ_оршамы ретінде орындау"
 
 #: ../src/profile-preferences.glade.h:74
 msgid "_Same as text color"
@@ -1339,7 +1349,7 @@ msgstr "бағандар"
 
 #: ../src/profile-preferences.glade.h:85
 msgid "lines"
-msgstr ""
+msgstr "жол"
 
 #: ../src/profile-preferences.glade.h:86
 msgid "rows"
@@ -1353,396 +1363,380 @@ msgstr ""
 msgid "_Password:"
 msgstr "_Пароль:"
 
-#: ../src/skey-popup.c:164
+#: ../src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
 msgstr ""
 
-#: ../src/skey-popup.c:175
+#: ../src/skey-popup.c:176
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr ""
 
-#: ../src/terminal-accels.c:135
+#: ../src/terminal-accels.c:136
 msgid "New Tab"
-msgstr ""
+msgstr "Жаңа бет"
 
-#: ../src/terminal-accels.c:137
+#: ../src/terminal-accels.c:140
 msgid "New Window"
 msgstr "Жаңа терезе"
 
-#: ../src/terminal-accels.c:142
+#: ../src/terminal-accels.c:149
 msgid "Save Contents"
 msgstr ""
 
-#: ../src/terminal-accels.c:145
+#: ../src/terminal-accels.c:154
 msgid "Close Tab"
 msgstr "Бетті жабу"
 
-#: ../src/terminal-accels.c:147
+#: ../src/terminal-accels.c:158
 msgid "Close Window"
 msgstr "Терезені жабу"
 
-#: ../src/terminal-accels.c:153
+#: ../src/terminal-accels.c:166
 msgid "Copy"
 msgstr "Көшіру"
 
-#: ../src/terminal-accels.c:155
+#: ../src/terminal-accels.c:170
 msgid "Paste"
 msgstr "Кірістіру"
 
-#: ../src/terminal-accels.c:161
+#: ../src/terminal-accels.c:178
 msgid "Hide and Show menubar"
 msgstr ""
 
-#: ../src/terminal-accels.c:163
+#: ../src/terminal-accels.c:182
 msgid "Full Screen"
 msgstr "Толық экранға"
 
-#: ../src/terminal-accels.c:165
+#: ../src/terminal-accels.c:186
 msgid "Zoom In"
 msgstr "Үлкейту"
 
-#: ../src/terminal-accels.c:167
+#: ../src/terminal-accels.c:190
 msgid "Zoom Out"
 msgstr "Кішірейту"
 
-#: ../src/terminal-accels.c:169
+#: ../src/terminal-accels.c:194
 msgid "Normal Size"
 msgstr "Қалыпты өлшемі"
 
-#: ../src/terminal-accels.c:175 ../src/terminal-window.c:3702
+#: ../src/terminal-accels.c:202 ../src/terminal-window.c:3817
 msgid "Set Title"
 msgstr "Атауын орнату"
 
-#: ../src/terminal-accels.c:177
+#: ../src/terminal-accels.c:206
 msgid "Reset"
 msgstr "Тастау"
 
-#: ../src/terminal-accels.c:179
+#: ../src/terminal-accels.c:210
 msgid "Reset and Clear"
 msgstr "Тастау мен тазарту"
 
-#: ../src/terminal-accels.c:185
+#: ../src/terminal-accels.c:218
 msgid "Switch to Previous Tab"
 msgstr "Алдыңғы бетке өту"
 
-#: ../src/terminal-accels.c:187
+#: ../src/terminal-accels.c:222
 msgid "Switch to Next Tab"
 msgstr "Келесі бетке өту"
 
-#: ../src/terminal-accels.c:189
+#: ../src/terminal-accels.c:226
 msgid "Move Tab to the Left"
 msgstr ""
 
-#: ../src/terminal-accels.c:191
+#: ../src/terminal-accels.c:230
 msgid "Move Tab to the Right"
 msgstr ""
 
-#: ../src/terminal-accels.c:193
+#: ../src/terminal-accels.c:234
 msgid "Detach Tab"
 msgstr "Бетті бөліп жіберу"
 
-#: ../src/terminal-accels.c:195
+#: ../src/terminal-accels.c:238
 msgid "Switch to Tab 1"
 msgstr "1-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:243
 msgid "Switch to Tab 2"
 msgstr "2-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:201
+#: ../src/terminal-accels.c:248
 msgid "Switch to Tab 3"
 msgstr "3-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:204
+#: ../src/terminal-accels.c:253
 msgid "Switch to Tab 4"
 msgstr "4-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:207
+#: ../src/terminal-accels.c:258
 msgid "Switch to Tab 5"
 msgstr "5-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:263
 msgid "Switch to Tab 6"
 msgstr "6-шы бетке ауысу"
 
-#: ../src/terminal-accels.c:213
+#: ../src/terminal-accels.c:268
 msgid "Switch to Tab 7"
 msgstr "7-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:216
+#: ../src/terminal-accels.c:273
 msgid "Switch to Tab 8"
 msgstr "8-ші бетке ауысу"
 
-#: ../src/terminal-accels.c:219
+#: ../src/terminal-accels.c:278
 msgid "Switch to Tab 9"
 msgstr "9-шы бетке ауысу"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:283
 msgid "Switch to Tab 10"
 msgstr ""
 
-#: ../src/terminal-accels.c:225
+#: ../src/terminal-accels.c:288
 msgid "Switch to Tab 11"
 msgstr ""
 
-#: ../src/terminal-accels.c:228
+#: ../src/terminal-accels.c:293
 msgid "Switch to Tab 12"
 msgstr ""
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:301
 msgid "Contents"
 msgstr "Құрамасы"
 
-#: ../src/terminal-accels.c:239
+#: ../src/terminal-accels.c:306
 msgid "File"
 msgstr "Файл"
 
-#: ../src/terminal-accels.c:240
+#: ../src/terminal-accels.c:307
 msgid "Edit"
 msgstr "Түзету"
 
-#: ../src/terminal-accels.c:241
+#: ../src/terminal-accels.c:308
 msgid "View"
 msgstr "Түрі"
 
-#: ../src/terminal-accels.c:243
+#: ../src/terminal-accels.c:310
 msgid "Tabs"
 msgstr "Беттер"
 
-#: ../src/terminal-accels.c:244
+#: ../src/terminal-accels.c:311
 msgid "Help"
 msgstr "Көмек"
 
 #. Translators: Scrollbar is: ...
-#: ../src/terminal-accels.c:301 ../src/extra-strings.c:53
+#: ../src/terminal-accels.c:368 ../src/extra-strings.c:53
 msgid "Disabled"
 msgstr "Сөндірулі"
 
-#: ../src/terminal-accels.c:773
+#: ../src/terminal-accels.c:841
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr ""
 
-#: ../src/terminal-accels.c:931
+#: ../src/terminal-accels.c:1003
 msgid "_Action"
 msgstr "Әр_екет"
 
-#: ../src/terminal-accels.c:950
+#: ../src/terminal-accels.c:1022
 msgid "Shortcut _Key"
 msgstr "Жарлық пернесі"
 
-#: ../src/terminal-app.c:486
+#: ../src/terminal-app.c:487
 msgid "Click button to choose profile"
-msgstr ""
+msgstr "Профильді таңдау үшін батырманы шертіңіз"
 
-#: ../src/terminal-app.c:571
+#: ../src/terminal-app.c:572
 msgid "Profile list"
 msgstr ""
 
-#: ../src/terminal-app.c:632
+#: ../src/terminal-app.c:633
 #, c-format
 msgid "Delete profile “%s”?"
-msgstr ""
+msgstr "“%s” профилін өшіру керек пе?"
 
-#: ../src/terminal-app.c:648
+#: ../src/terminal-app.c:649
 msgid "Delete Profile"
-msgstr ""
+msgstr "Профильді өшіру"
 
-#: ../src/terminal-app.c:1105
+#: ../src/terminal-app.c:1106
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr ""
 
-#: ../src/terminal-app.c:1207
+#: ../src/terminal-app.c:1208
 msgid "Choose base profile"
 msgstr ""
 
-#: ../src/terminal-app.c:1824
+#: ../src/terminal-app.c:1826
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr ""
 
-#: ../src/terminal-app.c:1848
+#: ../src/terminal-app.c:1850
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Қате geometry жолы \"%s\"\n"
 
-#: ../src/terminal-app.c:2026
+#: ../src/terminal-app.c:2028
 msgid "User Defined"
 msgstr "Пайдаланушы функциялары"
 
-#: ../src/terminal.c:544
+#: ../src/terminal.c:564
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Аргументтерді өндеу қатемен аяқталды: %s\n"
 
-#: ../src/terminal-encoding.c:51 ../src/terminal-encoding.c:64
-#: ../src/terminal-encoding.c:78 ../src/terminal-encoding.c:100
-#: ../src/terminal-encoding.c:111
-#, fuzzy
+#: ../src/terminal-encoding.c:53 ../src/terminal-encoding.c:66
+#: ../src/terminal-encoding.c:80 ../src/terminal-encoding.c:102
+#: ../src/terminal-encoding.c:113
 msgid "Western"
-msgstr "Батыс Сахара"
+msgstr ""
 
-#: ../src/terminal-encoding.c:52 ../src/terminal-encoding.c:79
-#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:109
+#: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:81
+#: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:111
 msgid "Central European"
 msgstr ""
 
-#: ../src/terminal-encoding.c:53
+#: ../src/terminal-encoding.c:55
 msgid "South European"
 msgstr ""
 
-#: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:62
-#: ../src/terminal-encoding.c:116
+#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:64
+#: ../src/terminal-encoding.c:118
 msgid "Baltic"
 msgstr ""
 
-#: ../src/terminal-encoding.c:55 ../src/terminal-encoding.c:80
-#: ../src/terminal-encoding.c:86 ../src/terminal-encoding.c:87
-#: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:110
-#, fuzzy
+#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:82
+#: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
+#: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
 msgid "Cyrillic"
-msgstr "Серб (Cyrillic)"
+msgstr ""
 
-#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:83
-#: ../src/terminal-encoding.c:89 ../src/terminal-encoding.c:115
-#, fuzzy
+#: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
+#: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
 msgid "Arabic"
-msgstr ". Араб"
+msgstr ""
 
-#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:95
-#: ../src/terminal-encoding.c:112
-#, fuzzy
+#: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
+#: ../src/terminal-encoding.c:114
 msgid "Greek"
 msgstr "Грек"
 
-#: ../src/terminal-encoding.c:58
+#: ../src/terminal-encoding.c:60
 msgid "Hebrew Visual"
 msgstr ""
 
-#: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:82
-#: ../src/terminal-encoding.c:98 ../src/terminal-encoding.c:114
-#, fuzzy
+#: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
+#: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
 msgid "Hebrew"
-msgstr "Иврит"
+msgstr ""
 
-#: ../src/terminal-encoding.c:60 ../src/terminal-encoding.c:81
-#: ../src/terminal-encoding.c:102 ../src/terminal-encoding.c:113
-#, fuzzy
+#: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
+#: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
 msgid "Turkish"
-msgstr "Түрік (F layout)"
-
-#: ../src/terminal-encoding.c:61
-msgid "Nordic"
 msgstr ""
 
 #: ../src/terminal-encoding.c:63
+msgid "Nordic"
+msgstr ""
+
+#: ../src/terminal-encoding.c:65
 msgid "Celtic"
 msgstr ""
 
-#: ../src/terminal-encoding.c:65 ../src/terminal-encoding.c:101
-#, fuzzy
+#: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:103
 msgid "Romanian"
-msgstr "Румын"
+msgstr ""
 
 #. These encodings do NOT pass-through ASCII, so are always rejected.
 #. * FIXME: why are they in this table; or rather why do we need
 #. * the ASCII pass-through requirement?
-#.
-#: ../src/terminal-encoding.c:66 ../src/terminal-encoding.c:123
-#: ../src/terminal-encoding.c:124 ../src/terminal-encoding.c:125
-#: ../src/terminal-encoding.c:126
-#, fuzzy
+#: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:125
+#: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
+#: ../src/terminal-encoding.c:128
 msgid "Unicode"
-msgstr "RXVT Unicode"
+msgstr ""
 
-#: ../src/terminal-encoding.c:67
-#, fuzzy
+#: ../src/terminal-encoding.c:69
 msgid "Armenian"
-msgstr "# Армян"
+msgstr ""
 
-#: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:69
-#: ../src/terminal-encoding.c:73
+#: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
+#: ../src/terminal-encoding.c:75
 msgid "Chinese Traditional"
 msgstr ""
 
-#: ../src/terminal-encoding.c:70
+#: ../src/terminal-encoding.c:72
 msgid "Cyrillic/Russian"
 msgstr ""
 
-#: ../src/terminal-encoding.c:71 ../src/terminal-encoding.c:84
-#: ../src/terminal-encoding.c:104
-#, fuzzy
+#: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
+#: ../src/terminal-encoding.c:106
 msgid "Japanese"
-msgstr "Жапон"
+msgstr ""
 
-#: ../src/terminal-encoding.c:72 ../src/terminal-encoding.c:85
-#: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:127
+#: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:87
+#: ../src/terminal-encoding.c:109 ../src/terminal-encoding.c:129
 msgid "Korean"
 msgstr ""
 
-#: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:75
-#: ../src/terminal-encoding.c:76
+#: ../src/terminal-encoding.c:76 ../src/terminal-encoding.c:77
+#: ../src/terminal-encoding.c:78
 msgid "Chinese Simplified"
 msgstr ""
 
-#: ../src/terminal-encoding.c:77
-#, fuzzy
+#: ../src/terminal-encoding.c:79
 msgid "Georgian"
-msgstr "# Грузия"
+msgstr ""
 
-#: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:103
+#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
 msgstr ""
 
-#: ../src/terminal-encoding.c:91
-#, fuzzy
-msgid "Croatian"
-msgstr "Хорват"
-
 #: ../src/terminal-encoding.c:93
+msgid "Croatian"
+msgstr "Хорватиялық"
+
+#: ../src/terminal-encoding.c:95
 msgid "Hindi"
 msgstr ""
 
-#: ../src/terminal-encoding.c:94
+#: ../src/terminal-encoding.c:96
 msgid "Persian"
 msgstr ""
 
-#: ../src/terminal-encoding.c:96
+#: ../src/terminal-encoding.c:98
 msgid "Gujarati"
 msgstr ""
 
-#: ../src/terminal-encoding.c:97
+#: ../src/terminal-encoding.c:99
 msgid "Gurmukhi"
 msgstr ""
 
-#: ../src/terminal-encoding.c:99
-#, fuzzy
+#: ../src/terminal-encoding.c:101
 msgid "Icelandic"
-msgstr "Исландиялық"
+msgstr ""
 
-#: ../src/terminal-encoding.c:105 ../src/terminal-encoding.c:108
-#: ../src/terminal-encoding.c:117
-#, fuzzy
+#: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:110
+#: ../src/terminal-encoding.c:119
 msgid "Vietnamese"
-msgstr ". Latin - Вьетнам"
+msgstr "Вьетнам"
 
-#: ../src/terminal-encoding.c:106
-#, fuzzy
+#: ../src/terminal-encoding.c:108
 msgid "Thai"
-msgstr "Тай"
+msgstr ""
 
-#: ../src/terminal-encoding.c:503 ../src/terminal-encoding.c:528
+#: ../src/terminal-encoding.c:507 ../src/terminal-encoding.c:532
 msgid "_Description"
 msgstr "А_нықтамасы"
 
-#: ../src/terminal-encoding.c:512 ../src/terminal-encoding.c:537
+#: ../src/terminal-encoding.c:516 ../src/terminal-encoding.c:541
 msgid "_Encoding"
-msgstr ""
+msgstr "Код_талуы"
 
-#: ../src/terminal-encoding.c:595
+#: ../src/terminal-encoding.c:599
 msgid "Current Locale"
 msgstr "Ағымдағы локаль"
 
@@ -1754,7 +1748,7 @@ msgid ""
 "profile' option\n"
 msgstr ""
 
-#: ../src/terminal-options.c:188 ../src/terminal-window.c:3929
+#: ../src/terminal-options.c:188 ../src/terminal-window.c:4048
 msgid "MATE Terminal"
 msgstr "MATE терминалы"
 
@@ -1788,13 +1782,11 @@ msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr ""
 
 #: ../src/terminal-options.c:646
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr ""
-"Option \"--execute/-x\" requires specifying the command to run on the rest "
-"of the command line"
+msgstr "\"%s\" опциясы командалық жолдың қалған бөлігіне орындау үшін команданы талап етеді"
 
 #: ../src/terminal-options.c:807
 msgid "Not a valid terminal config file."
@@ -1804,136 +1796,136 @@ msgstr ""
 msgid "Incompatible terminal config file version."
 msgstr ""
 
-#: ../src/terminal-options.c:947
+#: ../src/terminal-options.c:948
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 
-#: ../src/terminal-options.c:956
+#: ../src/terminal-options.c:957
 msgid "Load a terminal configuration file"
 msgstr ""
 
-#: ../src/terminal-options.c:965
+#: ../src/terminal-options.c:966
 msgid "Save the terminal configuration to a file"
 msgstr ""
 
-#: ../src/terminal-options.c:979
+#: ../src/terminal-options.c:981
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 
-#: ../src/terminal-options.c:988
+#: ../src/terminal-options.c:990
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 
-#: ../src/terminal-options.c:1001
+#: ../src/terminal-options.c:1004
 msgid "Turn on the menubar"
-msgstr ""
+msgstr "Мәзір жолағын іске қосу"
 
-#: ../src/terminal-options.c:1010
+#: ../src/terminal-options.c:1013
 msgid "Turn off the menubar"
-msgstr ""
+msgstr "Мәзір жолағын сөндіру"
 
-#: ../src/terminal-options.c:1019
+#: ../src/terminal-options.c:1022
 msgid "Maximise the window"
 msgstr ""
 
-#: ../src/terminal-options.c:1028
+#: ../src/terminal-options.c:1031
 msgid "Full-screen the window"
 msgstr ""
 
-#: ../src/terminal-options.c:1037
+#: ../src/terminal-options.c:1040
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
 msgstr ""
 
-#: ../src/terminal-options.c:1038
+#: ../src/terminal-options.c:1041
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: ../src/terminal-options.c:1046
+#: ../src/terminal-options.c:1049
 msgid "Set the window role"
 msgstr ""
 
-#: ../src/terminal-options.c:1047
+#: ../src/terminal-options.c:1050
 msgid "ROLE"
 msgstr "ROLE"
 
-#: ../src/terminal-options.c:1055
+#: ../src/terminal-options.c:1058
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 
-#: ../src/terminal-options.c:1068
+#: ../src/terminal-options.c:1072
 msgid "Execute the argument to this option inside the terminal"
 msgstr ""
 
-#: ../src/terminal-options.c:1077
+#: ../src/terminal-options.c:1081
 msgid "Use the given profile instead of the default profile"
 msgstr ""
 
-#: ../src/terminal-options.c:1078
+#: ../src/terminal-options.c:1082
 msgid "PROFILE-NAME"
-msgstr ""
+msgstr "ПРОФИЛЬ-АТАУЫ"
 
-#: ../src/terminal-options.c:1086
+#: ../src/terminal-options.c:1090
 msgid "Set the terminal title"
 msgstr "Терминал атауын орнату"
 
-#: ../src/terminal-options.c:1087
+#: ../src/terminal-options.c:1091
 msgid "TITLE"
 msgstr "TITLE"
 
-#: ../src/terminal-options.c:1095
+#: ../src/terminal-options.c:1099
 msgid "Set the working directory"
-msgstr ""
+msgstr "Жұмыс бумасын орнату"
 
-#: ../src/terminal-options.c:1096
+#: ../src/terminal-options.c:1100
 msgid "DIRNAME"
-msgstr ""
+msgstr "БУМА_АТАУЫ"
 
-#: ../src/terminal-options.c:1104
+#: ../src/terminal-options.c:1108
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr ""
 
-#: ../src/terminal-options.c:1105
+#: ../src/terminal-options.c:1109
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: ../src/terminal-options.c:1355 ../src/terminal-options.c:1358
+#: ../src/terminal-options.c:1360 ../src/terminal-options.c:1363
 msgid "MATE Terminal Emulator"
 msgstr "Mate терминал эмуляторы"
 
-#: ../src/terminal-options.c:1359
+#: ../src/terminal-options.c:1364
 msgid "Show MATE Terminal options"
 msgstr ""
 
-#: ../src/terminal-options.c:1369
+#: ../src/terminal-options.c:1374
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr ""
 
-#: ../src/terminal-options.c:1370
+#: ../src/terminal-options.c:1375
 msgid "Show terminal options"
 msgstr ""
 
-#: ../src/terminal-options.c:1378
+#: ../src/terminal-options.c:1383
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr ""
 
-#: ../src/terminal-options.c:1379
+#: ../src/terminal-options.c:1384
 msgid "Show per-window options"
 msgstr ""
 
-#: ../src/terminal-options.c:1387
+#: ../src/terminal-options.c:1392
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr ""
 
-#: ../src/terminal-options.c:1388
+#: ../src/terminal-options.c:1393
 msgid "Show per-terminal options"
 msgstr ""
 
@@ -1941,29 +1933,29 @@ msgstr ""
 msgid "Unnamed"
 msgstr "Атаусыз"
 
-#: ../src/terminal-screen.c:1488
+#: ../src/terminal-screen.c:1500
 msgid "_Profile Preferences"
-msgstr ""
+msgstr "_Профиль баптаулары"
 
-#: ../src/terminal-screen.c:1489 ../src/terminal-screen.c:1876
+#: ../src/terminal-screen.c:1501 ../src/terminal-screen.c:1890
 msgid "_Relaunch"
-msgstr ""
+msgstr "Қа_йта жөнелту"
 
-#: ../src/terminal-screen.c:1492
+#: ../src/terminal-screen.c:1504
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: ../src/terminal-screen.c:1880
+#: ../src/terminal-screen.c:1895
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1883
+#: ../src/terminal-screen.c:1900
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1886
+#: ../src/terminal-screen.c:1905
 msgid "The child process was terminated."
 msgstr ""
 
@@ -1973,18 +1965,18 @@ msgstr "Бетті жабу"
 
 #: ../src/terminal-tabs-menu.c:198
 msgid "Switch to this tab"
-msgstr ""
+msgstr "Бұл бетке ауысу"
 
-#: ../src/terminal-util.c:186
+#: ../src/terminal-util.c:192
 msgid "There was an error displaying help"
-msgstr ""
+msgstr "Көмекті көрсету кезінде қате кетті"
 
-#: ../src/terminal-util.c:259
+#: ../src/terminal-util.c:265
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr ""
 
-#: ../src/terminal-util.c:366
+#: ../src/terminal-util.c:373
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1992,291 +1984,281 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/terminal-util.c:370
+#: ../src/terminal-util.c:377
 msgid ""
-"MATE Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
 
-#: ../src/terminal-util.c:374
+#: ../src/terminal-util.c:381
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with"
+" MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#.
 #: ../src/terminal-window.c:470
 #, c-format
 msgid "_%d. %s"
-msgstr ""
+msgstr "_%d. %s"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#.
 #: ../src/terminal-window.c:476
 #, c-format
 msgid "_%c. %s"
-msgstr ""
+msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1787
+#: ../src/terminal-window.c:1793
 msgid "_File"
 msgstr "_Файл"
 
-#. File menu
-#: ../src/terminal-window.c:1788 ../src/terminal-window.c:1800
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1794 ../src/terminal-window.c:1807
+#: ../src/terminal-window.c:2038
 msgid "Open _Terminal"
 msgstr "Терминалды а_шу"
 
-#: ../src/terminal-window.c:1789 ../src/terminal-window.c:1803
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1795 ../src/terminal-window.c:1812
+#: ../src/terminal-window.c:2043
 msgid "Open Ta_b"
-msgstr ""
+msgstr "_Бетті ашу"
 
-#: ../src/terminal-window.c:1790
+#: ../src/terminal-window.c:1796
 msgid "_Edit"
 msgstr "Тү_зету"
 
-#: ../src/terminal-window.c:1791
+#: ../src/terminal-window.c:1797
 msgid "_View"
 msgstr "_Түрі"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1798
 msgid "_Search"
 msgstr "І_здеу"
 
-#: ../src/terminal-window.c:1793
+#: ../src/terminal-window.c:1799
 msgid "_Terminal"
 msgstr "Тер_минал"
 
-#: ../src/terminal-window.c:1794
+#: ../src/terminal-window.c:1800
 msgid "Ta_bs"
-msgstr ""
+msgstr "_Беттер"
 
-#: ../src/terminal-window.c:1795
+#: ../src/terminal-window.c:1801
 msgid "_Help"
 msgstr "_Көмек"
 
-#: ../src/terminal-window.c:1806
+#: ../src/terminal-window.c:1817
 msgid "New _Profile…"
 msgstr ""
 
-#: ../src/terminal-window.c:1809
+#: ../src/terminal-window.c:1822
 msgid "_Save Contents"
-msgstr ""
+msgstr "Құрамасын _сақтау"
 
-#: ../src/terminal-window.c:1812 ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1827 ../src/terminal-window.c:2053
 msgid "C_lose Tab"
 msgstr "Бетті _жабу"
 
-#: ../src/terminal-window.c:1815
+#: ../src/terminal-window.c:1832
 msgid "_Close Window"
 msgstr "Те_резені жабу"
 
-#: ../src/terminal-window.c:1826 ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1849 ../src/terminal-window.c:2033
 msgid "Paste _Filenames"
-msgstr ""
+msgstr "_Файлдар атауларын кірістіру"
 
-#: ../src/terminal-window.c:1832
+#: ../src/terminal-window.c:1859
 msgid "P_rofiles…"
 msgstr ""
 
-#: ../src/terminal-window.c:1835
+#: ../src/terminal-window.c:1864
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: ../src/terminal-window.c:1838
+#: ../src/terminal-window.c:1869
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#. Search menu
-#: ../src/terminal-window.c:1854
+#: ../src/terminal-window.c:1893
 msgid "_Find..."
 msgstr "Ізд_еу..."
 
-#: ../src/terminal-window.c:1857
+#: ../src/terminal-window.c:1898
 msgid "Find Ne_xt"
 msgstr "Ке_лесіні табу"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1903
 msgid "Find Pre_vious"
 msgstr "Ал_дыңғысын табу"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1908
 msgid "_Clear Highlight"
-msgstr ""
+msgstr "_Түстпен ерекшелеуді алып тастау"
 
-#: ../src/terminal-window.c:1867
+#: ../src/terminal-window.c:1914
 msgid "Go to _Line..."
-msgstr ""
+msgstr "Жо _лға өту..."
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1919
 msgid "_Incremental Search..."
-msgstr ""
+msgstr "_Инкременталды іздеу..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1876
+#: ../src/terminal-window.c:1926
 msgid "Change _Profile"
-msgstr ""
+msgstr "_Профильді ауыстыру"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:1928
 msgid "_Set Title…"
-msgstr ""
+msgstr "Атауын ор_нату…"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1932
 msgid "Set _Character Encoding"
-msgstr ""
+msgstr "Таңбалар _кодталуын орнату"
 
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1934
 msgid "_Reset"
 msgstr "_Тастау"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1939
 msgid "Reset and C_lear"
 msgstr "Тастау мен та_зарту"
 
-#. Terminal/Encodings menu
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1946
 msgid "_Add or Remove…"
-msgstr ""
+msgstr "Қ_осу немесе өшіру…"
 
-#. Tabs menu
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1953
 msgid "_Previous Tab"
 msgstr "А_лдыңғы бет"
 
-#: ../src/terminal-window.c:1897
+#: ../src/terminal-window.c:1958
 msgid "_Next Tab"
 msgstr "_Келесі бет"
 
-#: ../src/terminal-window.c:1900
+#: ../src/terminal-window.c:1963
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Бетті со_лға жылжыту"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1968
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Бетті _оңға жылжыту"
 
-#: ../src/terminal-window.c:1906
+#: ../src/terminal-window.c:1973
 msgid "_Detach tab"
 msgstr "Бетті бөліп жіберу"
 
-#. Help menu
-#: ../src/terminal-window.c:1911
+#: ../src/terminal-window.c:1980
 msgid "_Contents"
 msgstr "Құра_масы"
 
-#: ../src/terminal-window.c:1914
+#: ../src/terminal-window.c:1985
 msgid "_About"
 msgstr "О_сы туралы"
 
-#. Popup menu
-#: ../src/terminal-window.c:1919
+#: ../src/terminal-window.c:1992
 msgid "_Send Mail To…"
 msgstr ""
 
-#: ../src/terminal-window.c:1922
+#: ../src/terminal-window.c:1997
 msgid "_Copy E-mail Address"
 msgstr ""
 
-#: ../src/terminal-window.c:1925
+#: ../src/terminal-window.c:2002
 msgid "C_all To…"
 msgstr ""
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:2007
 msgid "_Copy Call Address"
 msgstr ""
 
-#: ../src/terminal-window.c:1931
+#: ../src/terminal-window.c:2012
 msgid "_Open Link"
 msgstr "Сі_лтемені ашу"
 
-#: ../src/terminal-window.c:1934
+#: ../src/terminal-window.c:2017
 msgid "_Copy Link Address"
 msgstr "Сілтеме адр_есін көшіру"
 
-#: ../src/terminal-window.c:1937
+#: ../src/terminal-window.c:2021
 msgid "P_rofiles"
-msgstr ""
+msgstr "П_рофильдер"
 
-#: ../src/terminal-window.c:1953 ../src/terminal-window.c:3166
+#: ../src/terminal-window.c:2048 ../src/terminal-window.c:3273
 msgid "C_lose Window"
-msgstr ""
+msgstr "Терезені жа_бу"
 
-#: ../src/terminal-window.c:1959
+#: ../src/terminal-window.c:2058
 msgid "L_eave Full Screen"
-msgstr ""
+msgstr "Толық экраннан ш_ығу"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:2062
 msgid "_Input Methods"
 msgstr "Ен_гізу тәсілдері"
 
-#. View Menu
-#: ../src/terminal-window.c:1968
+#: ../src/terminal-window.c:2069
 msgid "Show _Menubar"
 msgstr "_Мәзірді көрсету"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:2075
 msgid "_Full Screen"
 msgstr "Толық _экранға"
 
-#: ../src/terminal-window.c:3153
+#: ../src/terminal-window.c:3260
 msgid "Close this window?"
 msgstr "Бұл терезені жабу керек пе?"
 
-#: ../src/terminal-window.c:3153
+#: ../src/terminal-window.c:3260
 msgid "Close this terminal?"
-msgstr ""
+msgstr "Бұл терминалды жабу керек пе?"
 
-#: ../src/terminal-window.c:3157
+#: ../src/terminal-window.c:3264
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: ../src/terminal-window.c:3161
+#: ../src/terminal-window.c:3268
 msgid ""
-"There is still a process running in this terminal. Closing the terminal will "
-"kill it."
+"There is still a process running in this terminal. Closing the terminal will"
+" kill it."
 msgstr ""
 
-#: ../src/terminal-window.c:3166
+#: ../src/terminal-window.c:3273
 msgid "C_lose Terminal"
-msgstr ""
+msgstr "Терминалды _жабу"
 
-#: ../src/terminal-window.c:3239
+#: ../src/terminal-window.c:3346
 msgid "Could not save contents"
-msgstr ""
+msgstr "Құрамасын сақтау мүмкін емес"
 
-#: ../src/terminal-window.c:3263
+#: ../src/terminal-window.c:3370
 msgid "Save as..."
 msgstr "Қалайша сақтау..."
 
-#: ../src/terminal-window.c:3725
+#: ../src/terminal-window.c:3840
 msgid "_Title:"
 msgstr "А_тауы:"
 
-#: ../src/terminal-window.c:3912
+#: ../src/terminal-window.c:4031
 msgid "Contributors:"
 msgstr "Үлесін қосқандар:"
 
-#: ../src/terminal-window.c:3931
+#: ../src/terminal-window.c:4050
 msgid "A terminal emulator for the MATE desktop"
 msgstr ""
 
-#: ../src/terminal-window.c:3938
+#: ../src/terminal-window.c:4057
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010"
 
-#.
 #. * Copyright © 2009 Christian Persch
 #. *
 #. * Mate-terminal is free software; you can redistribute it and/or modify
@@ -2291,11 +2273,9 @@ msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010"
 #. *
 #. * You should have received a copy of the GNU General Public License
 #. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#.
 #. This file contains extra strings that need to be translated, but
 #. * can't be extracted by intltool since the ui files aren't in git, and
 #. * the glade files don't contain them in the right form. See bug #553357.
-#.
 #. Translators: This refers to the Delete keybinding option
 #: ../src/extra-strings.c:24
 msgid "Automatic"
