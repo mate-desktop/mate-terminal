@@ -169,25 +169,22 @@ uimanager_DATA = \
 	terminal.xml \
 	$(NULL)
 
-builder_in_files = \
-	encodings-dialog.glade \
-	find-dialog.glade \
-	keybinding-editor.glade \
-	profile-manager.glade \
-	profile-new-dialog.glade \
-	profile-preferences.glade \
-	skey-challenge.glade \
-	$(NULL)
-
 builderdir = $(pkgdatadir)
-builder_DATA =  $(builder_in_files:.glade=.ui)
+builder_DATA = \
+	encodings-dialog.ui \
+	find-dialog.ui \
+	keybinding-editor.ui \
+	profile-manager.ui \
+	profile-new-dialog.ui \
+	profile-preferences.ui \
+	skey-challenge.ui \
+	$(NULL)
 
 CLEANFILES = \
 	stamp-terminal-type-builtins.h \
 	mate-terminal.schemas \
 	$(gsettings_SCHEMAS) \
 	stamp-terminal-type-builtins.h \
-	$(builder_DATA) \
 	$(BUILT_SOURCES)
 
 EXTRA_DIST = \
@@ -199,14 +196,11 @@ EXTRA_DIST = \
 	$(schema_in_files) \
 	$(gsettingsschema_in_files) \
 	$(uimanager_DATA) \
-	$(builder_in_files) \
+	$(builder_DATA) \
 	$(NULL)
 
 @GSETTINGS_RULES@
 
 @INTLTOOL_SCHEMAS_RULE@
-
-%.ui: %.glade
-	$(AM_V_GEN) $(GTK_BUILDER_CONVERT) $< $@
 
 -include $(top_srcdir)/git.mk
