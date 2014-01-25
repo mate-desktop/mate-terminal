@@ -913,6 +913,7 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT ("bold-color-same-as-fg-checkbox", TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG);
 	CONNECT ("bold-colorpicker", TERMINAL_PROFILE_BOLD_COLOR);
 	CONNECT ("cursor-shape-combobox", TERMINAL_PROFILE_CURSOR_SHAPE);
+	CONNECT ("cursor-blink-combobox", TERMINAL_PROFILE_CURSOR_BLINK_MODE);
 	CONNECT ("custom-command-entry", TERMINAL_PROFILE_CUSTOM_COMMAND);
 	CONNECT ("darken-background-scale", TERMINAL_PROFILE_BACKGROUND_DARKNESS);
 	CONNECT ("default-size-columns-spinbutton", TERMINAL_PROFILE_DEFAULT_SIZE_COLUMNS);
