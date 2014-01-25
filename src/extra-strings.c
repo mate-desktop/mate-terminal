@@ -38,6 +38,13 @@ N_("I-Beam")
 /* Translators: Cursor shape: ... */
 N_("Underline")
 
+/* Translators: Cursor blink: ... */
+N_("Use system settings")
+/* Translators: Cursor blink: ... */
+N_("Always blink")
+/* Translators: Cursor blink: ... */
+N_("Never blink")
+
 /* Translators: When command exits: ... */
 N_("Exit the terminal")
 /* Translators: When command exits: ... */
