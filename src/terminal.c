@@ -31,7 +31,14 @@
 #include <glib/gstdio.h>
 #include <gio/gio.h>
 
+#include <gdk/gdk.h>
+
+#ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#ifndef GDK_IS_X11_DISPLAY
+#define GDK_IS_X11_DISPLAY(display) 1
+#endif
+#endif
 
 #ifdef WITH_SMCLIENT
 #include "eggsmclient.h"
@@ -427,6 +434,7 @@ name_lost_cb (GDBusConnection *connection,
  *
  */
 
+#ifdef GDK_WINDOWING_X11
 /* Copied from libcaja/caja-program-choosing.c; Needed in case
  * we have no DESKTOP_STARTUP_ID (with its accompanying timestamp).
  */
@@ -477,6 +485,7 @@ slowly_and_stupidly_obtain_timestamp (Display *xdisplay)
 
 	return event.xproperty.time;
 }
+#endif
 
 static char *
 get_factory_name_for_display (const char *display_name)
@@ -573,8 +582,12 @@ main (int argc, char **argv)
 	g_unsetenv ("GIO_LAUNCHED_DESKTOP_FILE_PID");
 	g_unsetenv ("GIO_LAUNCHED_DESKTOP_FILE");
 
-	/* Do this here so that gdk_display is initialized */
-	if (options->startup_id == NULL)
+	display = gdk_display_get_default ();
+	display_name = gdk_display_get_name (display);
+	options->display_name = g_strdup (display_name);
+
+#ifdef GDK_WINDOWING_X11
+	if (GDK_IS_X11_DISPLAY(display) && options->startup_id == NULL)
 	{
 		/* Create a fake one containing a timestamp that we can use */
 		Time timestamp;
@@ -583,10 +596,7 @@ main (int argc, char **argv)
 
 		options->startup_id = g_strdup_printf ("_TIME%lu", timestamp);
 	}
-
-	display = gdk_display_get_default ();
-	display_name = gdk_display_get_name (display);
-	options->display_name = g_strdup (display_name);
+#endif
 
 	if (options->use_factory)
 	{
