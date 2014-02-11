@@ -20,6 +20,7 @@ man_MANS = mate-terminal.1
 bin_SCRIPTS = mate-terminal.wrapper
 
 EXTRA_DIST = 			\
+	autogen.sh		\
 	HACKING			\
 	xmldocs.make		\
 	omf.make		\
