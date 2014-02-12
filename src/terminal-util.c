@@ -47,6 +47,8 @@
 #if GTK_CHECK_VERSION(3, 0, 0)
  	#define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
  	#define GDK_DRAWABLE_XID GDK_WINDOW_XID
+#else
+	#define gdk_error_trap_pop_ignored gdk_error_trap_pop
 #endif
 
 void
@@ -609,7 +611,7 @@ setup_ignore_host_env (GHashTable *env_table,
 	GSList *ignore;
 	gchar **ignore_strv = g_settings_get_strv (settings, "ignore-hosts");
 
-	ignore = terminal_gsettings_strv_to_gslist (ignore_strv);
+	ignore = terminal_gsettings_strv_to_gslist ((const gchar *const *)ignore_strv);
 	if (ignore)
 	{
 		GString *buf = g_string_sized_new (64);
@@ -1205,7 +1207,7 @@ terminal_util_x11_window_is_minimized (GdkWindow *window)
 	                    gdk_x11_get_xatom_by_name_for_display (display, "_NET_WM_STATE"),
 	                    0, G_MAXLONG, False, XA_ATOM, &type, &format, &nitems,
 	                    &bytes_after, &data);
-	gdk_error_trap_pop ();
+	gdk_error_trap_pop_ignored ();
 
 	if (type != None)
 	{

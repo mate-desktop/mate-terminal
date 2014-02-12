@@ -364,7 +364,6 @@ terminal_app_get_profile_liststore (TerminalApp *app,
 	GtkListStore *store;
 	GtkTreeIter iter;
 	GList *profiles, *l;
-	TerminalProfile *default_profile;
 
 	store = gtk_list_store_new (NUM_COLUMNS, TERMINAL_TYPE_PROFILE);
 
@@ -375,7 +374,6 @@ terminal_app_get_profile_liststore (TerminalApp *app,
 		selected_profile = NULL;
 
 	profiles = terminal_app_get_profile_list (app);
-	default_profile = terminal_app_get_default_profile (app);
 
 	for (l = profiles; l != NULL; l = l->next)
 	{
@@ -976,7 +974,6 @@ terminal_app_enable_mnemonics_notify_cb (GSettings *settings,
 	gpointer user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
-	GVariant *settings_value;
 	gboolean enable;
 
 	enable = g_settings_get_boolean (settings, key);
@@ -1311,8 +1308,6 @@ G_DEFINE_TYPE (TerminalApp, terminal_app, G_TYPE_OBJECT)
 static void
 terminal_app_init (TerminalApp *app)
 {
-	GError *error = NULL;
-
 	global_app = app;
 
 	gtk_window_set_default_icon_name (MATE_TERMINAL_ICON_NAME);

@@ -41,7 +41,7 @@ gboolean        terminal_gsettings_remove_all_from_strv (GSettings         *sett
                                                          const gchar       *key,
                                                          const gchar       *value);
 
-GSList*         terminal_gsettings_strv_to_gslist (gchar **array);
+GSList*         terminal_gsettings_strv_to_gslist (const gchar *const *array);
 
 G_END_DECLS
 
