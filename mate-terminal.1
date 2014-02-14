@@ -1,13 +1,13 @@
-.TH "mate-terminal" "1" 
+.\" mate-terminal manual page
+.TH "MATE-TERMINAL" 1 "12 February 2014" "MATE Desktop Environment"
+.\" Please adjust this date whenever revising the manpage.
+.\"
 .SH "NAME" 
-mate-terminal \(em is a terminal emulation application. 
+mate-terminal \- The MATE Terminal Emulator 
 .SH "SYNOPSIS" 
-.PP 
 \fBmate-terminal\fR [\fB-e, \-\-command\fI=STRING\fR\fP]  [\fB\-\-window-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-tab-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-window-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-tab-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-role\fI=ROLE\fR\fP]  [\fB\-\-show-menubar\fP]  [\fB\-\-hide-menubar\fP]  [\fB\-\-geometry\fI=GEOMETRY\fR\fP]  [\fB\-\-disable-factory\fP]  [\fB-t, \-\-title\fI=TITLE\fR\fP]  [\fB\-\-working-directory\fI=DIRNAME\fR\fP]  [\fB-?, \-\-help\fP]  
 .SH "DESCRIPTION" 
-.PP 
-MATE Terminal is a terminal emulation application that you can 
-use to perform the following actions: 
+.SS MATE Terminal is a terminal emulation application that you can use to perform the following actions: 
 .PP 
 Access a UNIX shell in the MATE environment. 
 .PP 
@@ -29,47 +29,73 @@ MATE Terminal accepts all of the escape sequences that the VT102
 and VT220 terminals use for functions such as positioning the cursor 
 and clearing the screen. 
 .SH "OPTIONS" 
-.IP "\fB-e, \-\-command=\fISTRING\fR\fP" 10 
+.IP "\fB\-e, \-\-command=\fISTRING\fR\fP" 7 
 Execute the argument to this option inside the terminal. 
-.IP "\fB\-\-window-with-profile=\fIPROFILENAME\fR\fP" 10 
+.IP "\fB\-\-window-with-profile=\fIPROFILENAME\fR\fP" 
 Open a new window containing a tab with the given profile.  
 More than one of these options can be provided. 
-.IP "\fB\-\-tab-with-profile=\fIPROFILENAME\fR\fP" 10 
+.IP "\fB\-\-tab-with-profile=\fIPROFILENAME\fR\fP"
 Open a tab in the window with the given profile. More than 
 one of these options can be provided, to open 
 several tabs . 
-.IP "\fB\-\-window-with-profile-internal-id=\fIPROFILEID\fR\fP" 10 
+.IP "\fB\-\-window-with-profile-internal-id=\fIPROFILEID\fR\fP"
 Open a new window containing a tab with the given profile 
 ID. Used internally to save sessions. 
-.IP "\fB\-\-tab-with-profile-internal-id=\fIPROFILEID\fR\fP" 10 
+.IP "\fB\-\-tab-with-profile-internal-id=\fIPROFILEID\fR\fP"
 Open a tab in the window with the given profile ID. 
 Used internally to save sessions. 
-.IP "\fB\-\-role=\fIROLE\fR\fP" 10 
+.IP "\fB\-\-tab\fP"
+.br
+Open a new tab in the last-opened window with the default profile.
+.IP "\fB\-\-window\fP"
+Open a new window containing a tab with the default profile.
+.IP "\fB\-\-role=\fIROLE\fR\fP"
 Set the role for the last-specified window; applies to only 
 one window; can be specified once for each window you create 
 from the command line. 
-.IP "\fB\-\-show-menubar\fP" 10 
+.IP "\fB\-\-active\fP" 
+Set the last specified tab as the active one in its window. 
+.IP "\fB\-\-show-menubar\fP"
 Turn on the menu bar for the last-specified window; applies 
 to only one window; can be specified once for each window you 
 create from the command line. 
-.IP "\fB\-\-hide-menubar\fP" 10 
+.IP "\fB\-\-hide-menubar\fP"
 Turn off the menu bar for the last-specified window; applies 
 to only one window; can be specified once for each window you 
 create from the command line. 
-.IP "\fB\-\-geometry=\fIGEOMETRY\fR\fP" 10 
+.IP "\fB\-\-maximize\fP"
+Open a new maximized terminal window.
+.IP "\fB\-\-fullscreen\fP"
+Open a new fullscreen terminal window.
+.IP "\fB\-\-geometry=\fIGEOMETRY\fR\fP"
 X geometry specification (see "X" man page), can be 
 specified once per window to be opened. 
-.IP "\fB\-\-disable-factory\fP" 10 
+.IP "\fB\-\-disable-factory\fP"
 Do not register with the activation name server, do not 
 re-use an active terminal. 
-.IP "\fB-t, \-\-title=\fITITLE\fR\fP" 10 
+.IP "\fB\-t, \-\-title=\fITITLE\fR\fP"
 Set the terminal's title to \fITITLE\fR. 
-.IP "\fB\-\-working-directory=\fIDIRNAME\fR\fP" 10 
+.IP "\fB\-\-working-directory=\fIDIRNAME\fR\fP"
 Set the terminal's working directory to \fIDIRNAME\fR.
-.IP "\fB-?, \-\-help\fP" 10 
+.IP "\fB\-\-zoom=\fIZOOM\fR\fP"
+Set the terminal's zoom factor (1.0 = normal size)
+.IP "\fB\-?, \-h \-\-help\fP"
 Show help message. 
+.IP "\fB\-\-help\-terminal\fP"
+Print terminal options.
+.IP "\fB\-\-help\-window-options\fP"
+Print window options.
+.IP "\fB\-\-help\-all\fP"
+Show all help options.
+.SH "BUGS"
+.SS Should you encounter any bugs, they may be reported at: 
+http://github.com/mate-desktop/mate-terminal/issues
 .SH "AUTHOR" 
-.PP 
-This manual page was written by Christian Marillat marillat@debian.org for 
-the \fBDebian GNU/Linux\fP system (but may be used by others). 
-.\" created by instant / docbook-to-man, Fri 18 Jan 2013, 14:42 
+.SS This manual page was originally written by for the Debian GNU/Linux system by: 
+Christian Marillat <marillat@debian.org> (2013)
+.SS It has been updated for the MATE Desktop Environment by:
+Adam Erdman <hekel@archlinux.info> (2014)
+.SH "SEE ALSO"
+.SS
+MATE Terminal documentation can be found from the "Help" menu, or by pressing the F1 key. 
+Further information may also be available at: http://wiki.mate-desktop.org/docs
