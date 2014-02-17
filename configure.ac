@@ -11,7 +11,7 @@ AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([no])])
 
