@@ -169,7 +169,7 @@ void MD4Final(unsigned char* digest, MD4_CTX *ctx)
 
 	if (digest!=NULL)
 		memcpy(digest, ctx->buf, 16);
-	memset(ctx, 0, sizeof(ctx));	/* In case it's sensitive */
+	memset(ctx, 0, sizeof(*ctx));	/* In case it's sensitive */
 }
 
 /* The three core functions */

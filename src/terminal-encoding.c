@@ -289,7 +289,7 @@ update_active_encodings_gsettings (void)
 {
 	GSList *list, *l;
 	GArray *strings;
-	gchar *id_string;
+	const gchar *id_string;
 	GSettings *settings;
 
 	list = terminal_app_get_active_encodings (terminal_app_get ());

@@ -814,7 +814,6 @@ terminal_profile_save (TerminalProfile *profile)
 	TerminalProfilePrivate *priv = profile->priv;
 	GSettings *changeset;
 	GSList *l;
-	GError *error = NULL;
 
 	priv->save_idle_id = 0;
 	changeset = g_settings_new_with_path (CONF_PROFILE_SCHEMA,

@@ -96,7 +96,7 @@ terminal_gsettings_remove_all_from_strv (GSettings   *settings,
 
 /* convert a gchar ** to GList (taken from libmatekbd code) */
 GSList*
-terminal_gsettings_strv_to_gslist (gchar **array)
+terminal_gsettings_strv_to_gslist (const gchar *const *array)
 {
     GSList *list = NULL;
     gint i;

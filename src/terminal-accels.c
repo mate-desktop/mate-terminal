@@ -335,7 +335,7 @@ enum
 };
 
 static void keys_change_notify (GSettings *settings,
-                                gchar *key,
+                                const gchar *key,
                                 gpointer user_data);
 
 static void accel_changed_callback (GtkAccelGroup  *accel_group,
@@ -473,7 +473,7 @@ update_model_foreach (GtkTreeModel *model,
 
 static void
 keys_change_notify (GSettings *settings,
-                    gchar *key,
+                    const gchar *key,
                     gpointer user_data)
 {
 	GVariant *val;
@@ -663,7 +663,6 @@ static gboolean
 sync_idle_cb (gpointer data)
 {
 	GSettings *changeset;
-	GError *error = NULL;
 
 	_terminal_debug_print (TERMINAL_DEBUG_ACCELS,
 	                       "GSettings sync handler\n");
