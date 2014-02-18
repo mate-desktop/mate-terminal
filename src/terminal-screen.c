@@ -27,8 +27,13 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
+#include <gdk/gdk.h>
+
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#ifndef GDK_IS_X11_DISPLAY
+#define GDK_IS_X11_DISPLAY(display) 1
+#endif
 #endif
 
 #include "terminal-accels.h"
@@ -1360,6 +1365,7 @@ get_child_environment (TerminalScreen *screen,
 	TerminalScreenPrivate *priv = screen->priv;
 	GtkWidget *term = GTK_WIDGET (screen);
 	GtkWidget *window;
+	GdkDisplay *display;
 	char **env;
 	char *e, *v;
 	GHashTable *env_table;
@@ -1372,6 +1378,7 @@ get_child_environment (TerminalScreen *screen,
 	window = gtk_widget_get_toplevel (term);
 	g_assert (window != NULL);
 	g_assert (gtk_widget_is_toplevel (window));
+	display = gdk_window_get_display (gtk_widget_get_window (window));
 
 	env_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
@@ -1404,8 +1411,11 @@ get_child_environment (TerminalScreen *screen,
 
 #ifdef GDK_WINDOWING_X11
 	/* FIXME: moving the tab between windows, or the window between displays will make the next two invalid... */
-	g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XWINDOW (gtk_widget_get_window (window))));
-	g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (gtk_widget_get_display (window))));
+	if (GDK_IS_X11_DISPLAY(display))
+	{
+		g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XWINDOW (gtk_widget_get_window (window))));
+		g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (display)));
+	}
 #endif
 
 	list_schemas = g_settings_list_schemas();

@@ -24,6 +24,9 @@
 #include <gtk/gtk.h>
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#ifndef GDK_IS_X11_DISPLAY
+#define GDK_IS_X11_DISPLAY(display) 1
+#endif
 #endif
 #include <gdk/gdkkeysyms.h>
 
@@ -1521,7 +1524,7 @@ terminal_window_realize (GtkWidget *widget)
 {
     TerminalWindow *window = TERMINAL_WINDOW (widget);
     TerminalWindowPrivate *priv = window->priv;
-#ifdef GDK_WINDOWING_X11
+#if defined(GDK_WINDOWING_X11) || defined(GDK_WINDOWING_WAYLAND)
     GdkScreen *screen;
     GtkAllocation widget_allocation;
     #if GTK_CHECK_VERSION (3, 0, 0)
@@ -1735,12 +1738,15 @@ terminal_window_screen_update (TerminalWindow *window,
 {
     TerminalApp *app;
 
-    terminal_window_window_manager_changed_cb (screen, window);
-    g_signal_connect (screen, "window-manager-changed",
-                      G_CALLBACK (terminal_window_window_manager_changed_cb), window);
 #ifdef GDK_WINDOWING_X11
-    g_signal_connect (screen, "composited-changed",
-                      G_CALLBACK (terminal_window_composited_changed_cb), window);
+    if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (screen)))
+    {
+        terminal_window_window_manager_changed_cb (screen, window);
+        g_signal_connect (screen, "window-manager-changed",
+                          G_CALLBACK (terminal_window_window_manager_changed_cb), window);
+        g_signal_connect (screen, "composited-changed",
+                          G_CALLBACK (terminal_window_composited_changed_cb), window);
+    }
 #endif
 
     if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (screen), "GT::HasSettingsConnection")))
@@ -1776,13 +1782,16 @@ terminal_window_screen_changed (GtkWidget *widget,
 
     if (previous_screen)
     {
-        g_signal_handlers_disconnect_by_func (previous_screen,
-                                              G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                              window);
 #ifdef GDK_WINDOWING_X11
-        g_signal_handlers_disconnect_by_func (previous_screen,
-                                              G_CALLBACK (terminal_window_composited_changed_cb),
-                                              window);
+        if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (previous_screen)))
+        {
+            g_signal_handlers_disconnect_by_func (previous_screen,
+                                                  G_CALLBACK (terminal_window_window_manager_changed_cb),
+                                                  window);
+            g_signal_handlers_disconnect_by_func (previous_screen,
+                                                  G_CALLBACK (terminal_window_composited_changed_cb),
+                                                  window);
+        }
 #endif
     }
 
@@ -2331,13 +2340,16 @@ terminal_window_dispose (GObject *object)
     screen = gtk_widget_get_screen (GTK_WIDGET (object));
     if (screen)
     {
-        g_signal_handlers_disconnect_by_func (screen,
-                                              G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                              window);
 #ifdef GDK_WINDOWING_X11
-        g_signal_handlers_disconnect_by_func (screen,
-                                              G_CALLBACK (terminal_window_composited_changed_cb),
-                                              window);
+        if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (screen)))
+        {
+            g_signal_handlers_disconnect_by_func (screen,
+                                                  G_CALLBACK (terminal_window_window_manager_changed_cb),
+                                                  window);
+            g_signal_handlers_disconnect_by_func (screen,
+                                                  G_CALLBACK (terminal_window_composited_changed_cb),
+                                                  window);
+        }
 #endif
     }
 
