@@ -22,6 +22,7 @@ bin_SCRIPTS = mate-terminal.wrapper
 EXTRA_DIST = 			\
 	autogen.sh		\
 	HACKING			\
+	NEWS.GNOME		\
 	xmldocs.make		\
 	omf.make		\
 	mate-terminal.wrapper   \
