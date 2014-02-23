@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-01-03 00:09+0100\n"
-"PO-Revision-Date: 2013-05-26 16:36+0000\n"
-"Last-Translator: Pere O. <gotrunks@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-25 23:34+0100\n"
+"PO-Revision-Date: 2014-01-25 22:35+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,13 +18,18 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mate-terminal.desktop.in.in.h:1 ../src/mate-terminal.schemas.in.h:130
-#: ../src/terminal-accels.c:309 ../src/terminal.c:569
-#: ../src/terminal-profile.c:160 ../src/terminal-window.c:2104
+#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:188
+#: ../src/terminal-window.c:4168
+msgid "MATE Terminal"
+msgstr "Terminal del MATE"
+
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
+#: ../src/terminal.c:567 ../src/terminal-profile.c:158
+#: ../src/terminal-window.c:2140
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../mate-terminal.desktop.in.in.h:2
+#: ../mate-terminal.desktop.in.in.h:3
 msgid "Use the command line"
 msgstr "Obriu la línia d'ordres"
 
@@ -57,931 +62,6 @@ msgstr "Opcions de la gestió de sessió:"
 msgid "Show session management options"
 msgstr "Mostra les opcions de la gestió de sessió"
 
-#: ../src/encodings-dialog.glade.h:1
-msgid "A_vailable encodings:"
-msgstr "Codi_ficacions disponibles:"
-
-#: ../src/encodings-dialog.glade.h:2
-msgid "Add or Remove Terminal Encodings"
-msgstr "Afegeix o suprimeix codificacions del terminal"
-
-#: ../src/encodings-dialog.glade.h:3
-msgid "E_ncodings shown in menu:"
-msgstr "Codificacio_ns mostrades al menú:"
-
-#: ../src/find-dialog.glade.h:1
-msgid "Find"
-msgstr "Cerca"
-
-#: ../src/find-dialog.glade.h:2
-msgid "Match _entire word only"
-msgstr "Només coincid_eix la paraula sencera"
-
-#: ../src/find-dialog.glade.h:3
-msgid "Match as _regular expression"
-msgstr "Fes coincidir amb l'expressió regular"
-
-#: ../src/find-dialog.glade.h:4
-msgid "Search _backwards"
-msgstr "Cerca cap en_rere"
-
-#: ../src/find-dialog.glade.h:5
-msgid "_Match case"
-msgstr "Coi_ncidència de majúscules i minúscules"
-
-#: ../src/find-dialog.glade.h:6
-msgid "_Search for:"
-msgstr "_Cerca: "
-
-#: ../src/find-dialog.glade.h:7
-msgid "_Wrap around"
-msgstr "Continua des de l'_inici"
-
-#: ../src/mate-terminal.schemas.in.h:1
-msgid ""
-"A subset of possible encodings are presented in the Encoding submenu. This "
-"is a list of encodings to appear there. The special encoding name "
-"\"current\" means to display the encoding of the current locale."
-msgstr "Es presenta un subconjunt de codificacions possibles al submenú Codificacions. Aquesta és una llista de codificacions que apareixen allí. El nom de codificació especial «current» vol dir que s'ha de mostrar la codificació del locale actual."
-
-#: ../src/mate-terminal.schemas.in.h:2
-msgid ""
-"A value between 0.0 and 1.0 indicating how much to darken the background "
-"image. 0.0 means no darkness, 1.0 means fully dark. In the current "
-"implementation, there are only two levels of darkness possible, so the "
-"setting behaves as a boolean, where 0.0 disables the darkening effect."
-msgstr "Un valor entre 0.0 i 1.0 que indica quant s'ha d'enfosquir la imatge de fons. 0.0 vol dir sense foscor, 1.0 vol dir foscor total. A la implementació actual, només hi ha dos nivells de foscor possibles, així doncs la configuració actua com un booleà, on 0.0 inhabilita l'efecte de foscor."
-
-#: ../src/mate-terminal.schemas.in.h:3
-msgid ""
-"Accelerator key to detach current tab. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keybinding for this action."
-msgstr "Tecla acceleradora per separar la pestanya actual. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:4
-msgid ""
-"Accelerator key to move the current tab to the left. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keybinding for this "
-"action."
-msgstr "Tecla acceleradora per moure la pestanya actual a l'esquerra. S'expressa com a una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:5
-msgid ""
-"Accelerator key to move the current tab to the right. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keybinding for this "
-"action."
-msgstr "Tecla acceleradora per moure la pestanya actual a la dreta. S'expressa com a una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:6
-msgid "Accelerator to detach current tab."
-msgstr "Accelerador per separar la pestanya actual."
-
-#: ../src/mate-terminal.schemas.in.h:7
-msgid "Accelerator to move the current tab to the left."
-msgstr "Accelerador per moure la pestanya actual a l'esquerra."
-
-#: ../src/mate-terminal.schemas.in.h:8
-msgid "Accelerator to move the current tab to the right."
-msgstr "Accelerador per moure la pestanya actual a la dreta."
-
-#: ../src/mate-terminal.schemas.in.h:9
-msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr "Un nom de tipus de lletra Pango. Per exemple «Sans 12» o «Monospace Bold 14»."
-
-#: ../src/mate-terminal.schemas.in.h:10
-msgid "Background image"
-msgstr "Imatge del fons"
-
-#: ../src/mate-terminal.schemas.in.h:11
-msgid "Background type"
-msgstr "Tipus de fons"
-
-#: ../src/mate-terminal.schemas.in.h:12
-msgid "Characters that are considered \"part of a word\""
-msgstr "Caràcters que es consideren «part d'una paraula»"
-
-#: ../src/mate-terminal.schemas.in.h:13
-msgid "Custom command to use instead of the shell"
-msgstr "L'ordre personalitzada a utilitzar en comptes de l'intèrpret d'ordres"
-
-#: ../src/mate-terminal.schemas.in.h:14
-msgid "Default"
-msgstr "Predeterminat"
-
-#: ../src/mate-terminal.schemas.in.h:15
-msgid "Default color of bold text in the terminal"
-msgstr "Color predeterminat del text en negreta al terminal"
-
-#: ../src/mate-terminal.schemas.in.h:16
-msgid ""
-"Default color of bold text in the terminal, as a color specification (can be"
-" HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
-" bold_color_same_as_fg is true."
-msgstr "Color predeterminat del text en negreta al terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML o un nom de color tal com «red» (vermell)). S'ignorarà si «bold_color_same_as_fg» està habilitat."
-
-#: ../src/mate-terminal.schemas.in.h:17
-msgid "Default color of terminal background"
-msgstr "El color de fons del terminal per defecte"
-
-#: ../src/mate-terminal.schemas.in.h:18
-msgid ""
-"Default color of terminal background, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
-msgstr "Color predeterminat del fons del terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML, o un nom de color tal com «red» (vermell))."
-
-#: ../src/mate-terminal.schemas.in.h:19
-msgid "Default color of text in the terminal"
-msgstr "Color predeterminat del text al terminal"
-
-#: ../src/mate-terminal.schemas.in.h:20
-msgid ""
-"Default color of text in the terminal, as a color specification (can be "
-"HTML-style hex digits, or a color name such as \"red\")."
-msgstr "Color predeterminat del text al terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML o un nom de color tal com «red»)."
-
-#: ../src/mate-terminal.schemas.in.h:21
-msgid "Default number of columns"
-msgstr "Nombre predeterminat de columnes"
-
-#: ../src/mate-terminal.schemas.in.h:22
-msgid "Default number of rows"
-msgstr "Nombre predeterminat de files"
-
-#: ../src/mate-terminal.schemas.in.h:23
-msgid "Effect of the Backspace key"
-msgstr "Efecte de la tecla de retrocés"
-
-#: ../src/mate-terminal.schemas.in.h:24
-msgid "Effect of the Delete key"
-msgstr "Efecte de la tecla de supressió"
-
-#: ../src/mate-terminal.schemas.in.h:25
-msgid "Filename of a background image."
-msgstr "Nom del fitxer d'una imatge de fons."
-
-#: ../src/mate-terminal.schemas.in.h:26
-msgid "Font"
-msgstr "Tipus de lletra"
-
-#. Translators: S/Key is the name of an application, so it should
-#. not be translated.
-#: ../src/mate-terminal.schemas.in.h:29
-msgid "Highlight S/Key challenges"
-msgstr "Ressalta els desafiaments d'S/Key"
-
-#: ../src/mate-terminal.schemas.in.h:30
-msgid "How much to darken the background image"
-msgstr "Quant s'ha d'enfosquir la imatge de fons"
-
-#: ../src/mate-terminal.schemas.in.h:31
-msgid "Human-readable name of the profile"
-msgstr "Nom del perfil llegible per humans"
-
-#: ../src/mate-terminal.schemas.in.h:32
-msgid "Human-readable name of the profile."
-msgstr "Nom del perfil llegible per humans."
-
-#: ../src/mate-terminal.schemas.in.h:33
-msgid "Icon for terminal window"
-msgstr "Icona per a la finestra del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:34
-msgid "Icon to use for tabs/windows containing this profile."
-msgstr "Icona a utilitzar per a les pestanyes/finestres que continguen aquest perfil."
-
-#: ../src/mate-terminal.schemas.in.h:35
-msgid ""
-"If the application in the terminal sets the title (most typically people "
-"have their shell set up to do this), the dynamically-set title can erase the"
-" configured title, go before it, go after it, or replace it. The possible "
-"values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Si l'aplicació dins del terminal estableix el títol (típicament, la gent té el seu intèrpret configurat per fer això), el títol dinàmicament establert pot esborrar el títol configurat, anar davant, darrere o reemplaçar-lo. Els valors possibles són «replace», «before», «after» i «ignore»."
-
-#: ../src/mate-terminal.schemas.in.h:36
-msgid "If true, allow applications in the terminal to make text boldface."
-msgstr "Si està habilitat, permet a les aplicacions dins del terminal mostrar text en negreta."
-
-#: ../src/mate-terminal.schemas.in.h:37
-msgid ""
-"If true, boldface text will be rendered using the same color as normal text."
-msgstr "Si està habilitat, es renderitzarà el text en negreta utilitzant el mateix color que el text normal."
-
-#: ../src/mate-terminal.schemas.in.h:38
-msgid ""
-"If true, don't make a noise when applications send the escape sequence for "
-"the terminal bell."
-msgstr "Si està habilitat, no fa cap soroll quan les aplicacions envien la seqüència d'escapada de l'avís sonor del terminal."
-
-#: ../src/mate-terminal.schemas.in.h:39
-msgid ""
-"If true, newly created terminal windows will have custom size specified by "
-"default_size_columns and default_size_rows."
-msgstr "Si el valor és cert, les finestres noves del terminal tindran la mida especificada per «default_size_columns» (amplada) i «default_size_rows» (alçada)."
-
-#: ../src/mate-terminal.schemas.in.h:40
-msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr "Si està habilitat, en prémer una tecla fa que es desplaci al fons."
-
-#: ../src/mate-terminal.schemas.in.h:41
-msgid ""
-"If true, scroll the background image with the foreground text; if false, "
-"keep the image in a fixed position and scroll the text above it."
-msgstr "Si està habilitat, desplaça la imatge de fons amb el text del primer pla; sinó, manté la imatge en una posició fixa i hi desplaça el text per sobre."
-
-#: ../src/mate-terminal.schemas.in.h:42
-msgid ""
-"If true, scrollback lines will never be discarded. The scrollback history is"
-" stored on disk temporarily, so this may cause the system to run out of disk"
-" space if there is a lot of output to the terminal."
-msgstr "Si està habilitat, les línies de desplaçament no es descartaran mai. L'historial de desplaçament s'emmagatzema temporalment al disc, de manera que això pot provocar que el sistema es quedi sense espai al disc si hi ha molta sortida al terminal."
-
-#: ../src/mate-terminal.schemas.in.h:43
-msgid ""
-"If true, the command inside the terminal will be launched as a login shell. "
-"(argv[0] will have a hyphen in front of it.)"
-msgstr "Si està habilitat, l'ordre dins del terminal s'iniciarà com a un intèrpret d'entrada. (argv[0] tindrà un guió davant seu.)"
-
-#: ../src/mate-terminal.schemas.in.h:44
-msgid ""
-"If true, the system login records utmp and wtmp will be updated when the "
-"command inside the terminal is launched."
-msgstr "Si està habilitat, s'actualitzarà els registres d'entrada quan l'ordre dins del terminal s'executi."
-
-#: ../src/mate-terminal.schemas.in.h:45
-msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
-"monospace (and the most similar font it can come up with otherwise)."
-msgstr "Si està habilitat, el terminal utilitzarà el tipus de lletra estàndard global per a tot l'escriptori si és monoespai (i el tipus de lletra més similar que puga trobar si no és així)."
-
-#: ../src/mate-terminal.schemas.in.h:46
-msgid ""
-"If true, the theme color scheme used for text entry boxes will be used for "
-"the terminal, instead of colors provided by the user."
-msgstr "Si està habilitat, l'esquema de colors del tema utilitzat per a les caixes d'entrada de text s'utilitzarà per al terminal, en comptes dels colors indicats per l'usuari."
-
-#: ../src/mate-terminal.schemas.in.h:47
-msgid ""
-"If true, the value of the custom_command setting will be used in place of "
-"running a shell."
-msgstr "Si està habilitat, el valor de la configuració custom_command s'utilitzarà en comptes d'executar un intèrpret."
-
-#: ../src/mate-terminal.schemas.in.h:48
-msgid ""
-"If true, whenever there's new output the terminal will scroll to the bottom."
-msgstr "Si està habilitat, quan hi hagi nova sortida el terminal, es desplaçarà al fons."
-
-#: ../src/mate-terminal.schemas.in.h:49
-msgid ""
-"Keyboard shortcut key for bringing up the dialog for profile creation. "
-"Expressed as a string in the same format used for GTK+ resource files. If "
-"you set the option to the special string \"disabled\", then there will be no"
-" keyboard shortcut for this action."
-msgstr "Tecla acceleradora per mostrar el diàleg de creació de perfils. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:50
-msgid ""
-"Keyboard shortcut key for closing a tab. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per tancar una pestanya. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:51
-msgid ""
-"Keyboard shortcut key for closing a window. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per tancar una finestra. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:52
-msgid ""
-"Keyboard shortcut key for copying selected text to the clipboard. Expressed "
-"as a string in the same format used for GTK+ resource files. If you set the "
-"option to the special string \"disabled\", then there will be no keyboard "
-"shortcut for this action."
-msgstr "Tecla acceleradora per copiar el text seleccionat al porta-retalls. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:53
-msgid ""
-"Keyboard shortcut key for launching help. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per mostrar l'ajuda. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:54
-msgid ""
-"Keyboard shortcut key for making font larger. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per fer el tipus de lletra més gran. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:55
-msgid ""
-"Keyboard shortcut key for making font smaller. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per fer el tipus de lletra més petit. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:56
-msgid ""
-"Keyboard shortcut key for making font the normal size. Expressed as a string"
-" in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for"
-" this action."
-msgstr "Tecla acceleradora per fer el tipus de lletra de mida normal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:57
-msgid ""
-"Keyboard shortcut key for opening a new tab. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per obrir una nova pestanya. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:58
-msgid ""
-"Keyboard shortcut key for opening a new window. Expressed as a string in the"
-" same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per obrir una nova finestra. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:59
-msgid ""
-"Keyboard shortcut key for pasting the contents of the clipboard into the "
-"terminal. Expressed as a string in the same format used for GTK+ resource "
-"files. If you set the option to the special string \"disabled\", then there "
-"will be no keyboard shortcut for this action."
-msgstr "Tecla acceleradora per enganxar el text seleccionat des del porta-retalls. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:60
-msgid ""
-"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 1. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:61
-msgid ""
-"Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per canviar a la pestanya 10. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:62
-msgid ""
-"Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per canviar a la pestanya 11. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:63
-msgid ""
-"Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per canviar a la pestanya 12. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:64
-msgid ""
-"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 2. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:65
-msgid ""
-"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 3. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:66
-msgid ""
-"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 4. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:67
-msgid ""
-"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 5. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:68
-msgid ""
-"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 6. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:69
-msgid ""
-"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 7. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:70
-msgid ""
-"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 8. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:71
-msgid ""
-"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
-" format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this "
-"action."
-msgstr "Tecla acceleradora per canviar a la pestanya 9. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:72
-msgid ""
-"Keyboard shortcut key for toggling full screen mode. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for"
-" this action."
-msgstr "Tecla acceleradora per commutar el mode a pantalla sencera. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:73
-msgid ""
-"Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
-" in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for"
-" this action."
-msgstr "Tecla acceleradora per reiniciar i netejar el terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:74
-msgid ""
-"Keyboard shortcut key to reset the terminal. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per reiniciar el terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:75
-msgid ""
-"Keyboard shortcut key to save the current tab contents to a file. Expressed "
-"as a string in the same format used for GTK+ resource files. If you set the "
-"option to the special string \"disabled\", then there will be no keyboard "
-"shortcut for this action."
-msgstr "Tecla acceleradora per desar el contingut de la pestanya actual a un fitxer. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:76
-msgid ""
-"Keyboard shortcut key to set the terminal title. Expressed as a string in "
-"the same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per establir el títol del terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:77
-msgid ""
-"Keyboard shortcut key to switch to the next tab. Expressed as a string in "
-"the same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr "Tecla acceleradora per canviar a la pestanya següent. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:78
-msgid ""
-"Keyboard shortcut key to switch to the previous tab. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for"
-" this action."
-msgstr "Tecla acceleradora per canviar a la pestanya anterior. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:79
-msgid ""
-"Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
-"a string in the same format used for GTK+ resource files. If you set the "
-"option to the special string \"disabled\", then there will be no keyboard "
-"shortcut for this action."
-msgstr "Tecla acceleradora per commutar la visibilitat de la barra de menú. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap assignació de tecla per a aquesta acció."
-
-#: ../src/mate-terminal.schemas.in.h:80
-msgid "Keyboard shortcut to close a tab"
-msgstr "Accelerador per tancar una pestanya"
-
-#: ../src/mate-terminal.schemas.in.h:81
-msgid "Keyboard shortcut to close a window"
-msgstr "Accelerador per tancar una finestra"
-
-#: ../src/mate-terminal.schemas.in.h:82
-msgid "Keyboard shortcut to copy text"
-msgstr "Accelerador per copiar text"
-
-#: ../src/mate-terminal.schemas.in.h:83
-msgid "Keyboard shortcut to create a new profile"
-msgstr "Accelerador per crear un nou perfil"
-
-#: ../src/mate-terminal.schemas.in.h:84
-msgid "Keyboard shortcut to launch help"
-msgstr "Accelerador per llançar l'ajuda"
-
-#: ../src/mate-terminal.schemas.in.h:85
-msgid "Keyboard shortcut to make font larger"
-msgstr "Accelerador per fer el tipus de lletra més gran"
-
-#: ../src/mate-terminal.schemas.in.h:86
-msgid "Keyboard shortcut to make font normal-size"
-msgstr "Accelerador per fer el tipus de lletra de mida normal"
-
-#: ../src/mate-terminal.schemas.in.h:87
-msgid "Keyboard shortcut to make font smaller"
-msgstr "Accelerador per fer el tipus de lletra més petit"
-
-#: ../src/mate-terminal.schemas.in.h:88
-msgid "Keyboard shortcut to open a new tab"
-msgstr "Accelerador per obrir una nova pestanya"
-
-#: ../src/mate-terminal.schemas.in.h:89
-msgid "Keyboard shortcut to open a new window"
-msgstr "Accelerador per obrir una nova finestra"
-
-#: ../src/mate-terminal.schemas.in.h:90
-msgid "Keyboard shortcut to paste text"
-msgstr "Accelerador per enganxar text"
-
-#: ../src/mate-terminal.schemas.in.h:91
-msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr "Accelerador per reiniciar i netejar el terminal"
-
-#: ../src/mate-terminal.schemas.in.h:92
-msgid "Keyboard shortcut to reset the terminal"
-msgstr "Accelerador per reiniciar el terminal"
-
-#: ../src/mate-terminal.schemas.in.h:93
-msgid "Keyboard shortcut to save the current tab contents to file"
-msgstr "Accelerador per desar el contingut de la pestanya actual a un fitxer"
-
-#: ../src/mate-terminal.schemas.in.h:94
-msgid "Keyboard shortcut to set the terminal title"
-msgstr "Accelerador per establir el títol del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:95
-msgid "Keyboard shortcut to switch to tab 1"
-msgstr "Accelerador per canviar a la pestanya 1"
-
-#: ../src/mate-terminal.schemas.in.h:96
-msgid "Keyboard shortcut to switch to tab 10"
-msgstr "Accelerador per canviar a la pestanya 10"
-
-#: ../src/mate-terminal.schemas.in.h:97
-msgid "Keyboard shortcut to switch to tab 11"
-msgstr "Accelerador per canviar a la pestanya 11"
-
-#: ../src/mate-terminal.schemas.in.h:98
-msgid "Keyboard shortcut to switch to tab 12"
-msgstr "Accelerador per canviar a la pestanya 12"
-
-#: ../src/mate-terminal.schemas.in.h:99
-msgid "Keyboard shortcut to switch to tab 2"
-msgstr "Accelerador per canviar a la pestanya 2"
-
-#: ../src/mate-terminal.schemas.in.h:100
-msgid "Keyboard shortcut to switch to tab 3"
-msgstr "Accelerador per canviar a la pestanya 3"
-
-#: ../src/mate-terminal.schemas.in.h:101
-msgid "Keyboard shortcut to switch to tab 4"
-msgstr "Accelerador per canviar a la pestanya 4"
-
-#: ../src/mate-terminal.schemas.in.h:102
-msgid "Keyboard shortcut to switch to tab 5"
-msgstr "Accelerador per canviar a la pestanya 5"
-
-#: ../src/mate-terminal.schemas.in.h:103
-msgid "Keyboard shortcut to switch to tab 6"
-msgstr "Accelerador per canviar a la pestanya 6"
-
-#: ../src/mate-terminal.schemas.in.h:104
-msgid "Keyboard shortcut to switch to tab 7"
-msgstr "Accelerador per canviar a la pestanya 7"
-
-#: ../src/mate-terminal.schemas.in.h:105
-msgid "Keyboard shortcut to switch to tab 8"
-msgstr "Accelerador per canviar a la pestanya 8"
-
-#: ../src/mate-terminal.schemas.in.h:106
-msgid "Keyboard shortcut to switch to tab 9"
-msgstr "Accelerador per canviar a la pestanya 9"
-
-#: ../src/mate-terminal.schemas.in.h:107
-msgid "Keyboard shortcut to switch to the next tab"
-msgstr "Accelerador per canviar a la pestanya següent"
-
-#: ../src/mate-terminal.schemas.in.h:108
-msgid "Keyboard shortcut to switch to the previous tab"
-msgstr "Accelerador per canviar a la pestanya anterior"
-
-#: ../src/mate-terminal.schemas.in.h:109
-msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "Accelerador per commutar el mode a pantalla sencera"
-
-#: ../src/mate-terminal.schemas.in.h:110
-msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "Accelerador per canviar la visibilitat de la barra del menú"
-
-#: ../src/mate-terminal.schemas.in.h:111
-msgid "List of available encodings"
-msgstr "Llista de codificacions disponibles"
-
-#: ../src/mate-terminal.schemas.in.h:112
-msgid "List of profiles"
-msgstr "Llista de perfils"
-
-#: ../src/mate-terminal.schemas.in.h:113
-msgid ""
-"List of profiles known to mate-terminal. The list contains strings naming "
-"subdirectories relative to /apps/mate-terminal/profiles."
-msgstr "Llista de perfils coneguts per mate-terminal. La llista conté cadenes que nombren subdirectoris relatius a /apps/mate-terminal/profiles."
-
-#: ../src/mate-terminal.schemas.in.h:114
-msgid ""
-"Normally you can access the menubar with F10. This can also be customized "
-"via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
-"standard menubar accelerator to be disabled."
-msgstr "Normalment podeu accedir a la barra de menú amb F10. Això també es pot personalitzar mitjançant gtkrc (gtk-menu-bar-accel = «whatever»). Aquesta opció permet que l'accelerador de barra de menú estàndard es puga inhabilitar."
-
-#: ../src/mate-terminal.schemas.in.h:115
-msgid ""
-"Number of columns in newly created terminal windows. Has no effect if "
-"use_custom_default_size is not enabled."
-msgstr "Nombre de columnes en les finestres de terminal acabades de crear. No té cap efecte si «use_custom_default_size» està inactiu."
-
-#: ../src/mate-terminal.schemas.in.h:116
-msgid "Number of lines to keep in scrollback"
-msgstr "Nombre de línies a mantenir en el desplaçament"
-
-#: ../src/mate-terminal.schemas.in.h:117
-msgid ""
-"Number of rows in newly created terminal windows. Has no effect if "
-"use_custom_default_size is not enabled."
-msgstr "Nombre de files en les finestres de terminal acabades de crear. No té cap efecte si «use_custom_default_size» està inactiu."
-
-#: ../src/mate-terminal.schemas.in.h:118
-msgid ""
-"Number of scrollback lines to keep around. You can scroll back in the "
-"terminal by this number of lines; lines that don't fit in the scrollback are"
-" discarded. If scrollback_unlimited is true, this value is ignored."
-msgstr "Nombre de línies de desplaçament a mantenir. Podeu desplaçar-vos cap enrere en el terminal aquest nombre de línies; les línies que no càpiguen al desplaçament es descarten. Si «scrollback_unlimited» està habilitat, s'ignorarà aquest valor."
-
-#: ../src/mate-terminal.schemas.in.h:119
-msgid "Palette for terminal applications"
-msgstr "Paleta per a les aplicacions de terminal"
-
-#. Translators: S/Key is the name of an application, so it should
-#. not be translated.
-#: ../src/mate-terminal.schemas.in.h:122
-msgid ""
-"Popup a dialog when an S/Key challenge response query is detected and "
-"clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "Mostra un diàleg quan es detecta i es fa clic a una consulta de resposta d'un desafiament d's/key. Si es tecleja una contrasenya al diàleg, s'enviarà al terminal."
-
-#: ../src/mate-terminal.schemas.in.h:123
-msgid "Position of the scrollbar"
-msgstr "Posició de la barra de desplaçament"
-
-#: ../src/mate-terminal.schemas.in.h:124
-msgid ""
-"Possible values are \"close\" to close the terminal, and \"restart\" to "
-"restart the command."
-msgstr "Els valors possibles són «close» per tancar el terminal i «restart» per tornar a executar l'ordre."
-
-#: ../src/mate-terminal.schemas.in.h:125
-msgid ""
-"Profile to be used when opening a new window or tab. Must be in "
-"profile_list."
-msgstr "Perfil a utilitzar quan s'obre una nova finestra o pestanya. Ha d'estar a profile_list."
-
-#: ../src/mate-terminal.schemas.in.h:126
-msgid "Profile to use for new terminals"
-msgstr "Perfil a utilitzar per a nous terminals"
-
-#: ../src/mate-terminal.schemas.in.h:127
-msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Executa aquesta ordre en comptes de l'intèrpret, si use_custom_command és cert."
-
-#: ../src/mate-terminal.schemas.in.h:128
-msgid ""
-"Sets what code the backspace key generates. Possible values are \"ascii-"
-"del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
-"ASCII BS character), \"escape-sequence\" for the escape sequence typically "
-"bound to backspace or delete. \"ascii-del\" is normally considered the "
-"correct setting for the Backspace key."
-msgstr "Estableix quin codi genera la tecla de retrocés. Els valors possibles són «ascii-del» per al caràcter ASCII DEL, «control-h» per a Control-H (també conegut com el caràcter ASCII BS), «escape-sequence» per a la seqüència d'escapada normalment associada a retrocés o suprimeix. «ascii-del» és considerada normalment la configuració correcta de la tecla de retrocés."
-
-#: ../src/mate-terminal.schemas.in.h:129
-msgid ""
-"Sets what code the delete key generates. Possible values are \"ascii-del\" "
-"for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
-"character), \"escape-sequence\" for the escape sequence typically bound to "
-"backspace or delete. \"escape-sequence\" is normally considered the correct "
-"setting for the Delete key."
-msgstr "Estableix quin codi genera la tecla suprimeix. Els valors possibles són «ascii-del» per al caràcter ASCII DEL, «control-h» per a Control-H (també conegut com el caràcter ASCII BS), «escape-sequence» per a la seqüència d'escapada normalment associada a retrocés o suprimeix. «escape-sequence» és considerada normalment la configuració correcta de la tecla de retrocés."
-
-#: ../src/mate-terminal.schemas.in.h:131
-msgid ""
-"Terminals have a 16-color palette that applications inside the terminal can "
-"use. This is that palette, in the form of a colon-separated list of color "
-"names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr "Els terminals tenen una paleta de 16 colors que poden utilitzar les aplicacions de dins del terminal. Això és aquesta paleta, en la forma d'una llista de noms de colors separats per dos punts. Els colors han d'estar en format hexadecimal, com per exemple «#FF00FF»."
-
-#: ../src/mate-terminal.schemas.in.h:132
-msgid "The cursor appearance"
-msgstr "L'aparença del cursor"
-
-#: ../src/mate-terminal.schemas.in.h:133
-msgid ""
-"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
-"vertical line cursor, or \"underline\" to use an underline cursor."
-msgstr "Els valors possibles són «block» per utilitzar un bloc, «ibeam» per utilitzar una línia vertical o «underline» per utilitzar un subratllat."
-
-#: ../src/mate-terminal.schemas.in.h:134
-msgid ""
-"The possible values are \"system\" to use the global cursor blinking "
-"settings, or \"on\" or \"off\" to set the mode explicitly."
-msgstr "Els valors possibles són «system» (sistema) per utilitzar el paràmetre de parpelleig del cursor global, «on» (activat) o «off» (apagat) per establir explícitament el mode."
-
-#: ../src/mate-terminal.schemas.in.h:135
-msgid "Title for terminal"
-msgstr "Títol pel terminal"
-
-#: ../src/mate-terminal.schemas.in.h:136
-msgid ""
-"Title to display for the terminal window or tab. This title may be replaced "
-"by or combined with the title set by the application inside the terminal, "
-"depending on the title_mode setting."
-msgstr "Títol a mostrar per a la finestra o pestanya del terminal. Aquest títol es pot reemplaçar o combinar amb el títol establert per l'aplicació dins del terminal, depenent de la configuració title_mode."
-
-#: ../src/mate-terminal.schemas.in.h:137
-msgid ""
-"True if the menubar should be shown in new windows, for windows/tabs with "
-"this profile."
-msgstr "Cert si la barra de menú s'ha de mostrar a les noves finestres, per a finestres/pestanyes amb aquest perfil."
-
-#: ../src/mate-terminal.schemas.in.h:138
-msgid ""
-"Type of terminal background. May be \"solid\" for a solid color, \"image\" "
-"for an image, or \"transparent\" for either real transparency if a "
-"compositing window manager is running, or pseudo-transparency otherwise."
-msgstr "Tipus de fons del terminal. Pot ser «solid» per a un color sòlid, «image» per a una imatge o «transparent» per a una transparència real si s'està executant un gestor de finestres de composició (en cas contrari serà una pseudotransparència)."
-
-#: ../src/mate-terminal.schemas.in.h:139
-msgid "What to do with dynamic title"
-msgstr "Què cal fer amb el títol dinàmic"
-
-#: ../src/mate-terminal.schemas.in.h:140
-msgid "What to do with the terminal when the child command exits"
-msgstr "Què cal fer amb el terminal quan l'ordre filla surt"
-
-#: ../src/mate-terminal.schemas.in.h:141
-msgid ""
-"When selecting text by word, sequences of these characters are considered "
-"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
-" a range) should be the first character given."
-msgstr "Una seqüència formada per aquests caràcters es considerarà una paraula quan se seleccioni text per paraules. Es poden donar rangs com «A-Z». El guió literal (que no expressi un rang) ha de ser el primer caràcter donat."
-
-#: ../src/mate-terminal.schemas.in.h:142
-msgid ""
-"Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
-"and \"hidden\"."
-msgstr "A on s'ha de posar la barra de desplaçament. Les possibilitats són «left» (esquerra), «right» (dreta) i «hidden» (oculta)."
-
-#: ../src/mate-terminal.schemas.in.h:143
-msgid "Whether an unlimited number of lines should be kept in scrollback"
-msgstr "Si s'hauria de mantenir un nombre de línies il·limitat en el desplaçament"
-
-#: ../src/mate-terminal.schemas.in.h:144
-msgid "Whether bold text should use the same color as normal text"
-msgstr "Si el text en negreta hauria d'utilitzar el mateix color que el text normal"
-
-#: ../src/mate-terminal.schemas.in.h:145
-msgid "Whether the menubar has access keys"
-msgstr "Si la barra de menú té dreceres"
-
-#: ../src/mate-terminal.schemas.in.h:146
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr "Si la drecera estàndard de GTK per accedir a les barres de menú està activada"
-
-#: ../src/mate-terminal.schemas.in.h:147
-msgid "Whether to allow bold text"
-msgstr "Si es permet o no text en negreta"
-
-#: ../src/mate-terminal.schemas.in.h:148
-msgid ""
-"Whether to ask for confirmation when closing a terminal window which has "
-"more than one open tab."
-msgstr "Si s'ha de demanar confirmació en tancar una finestra del terminal que té més d'una pestanya oberta."
-
-#: ../src/mate-terminal.schemas.in.h:149
-msgid "Whether to ask for confirmation when closing terminal windows"
-msgstr "Si s'ha de demanar confirmació en tancar finestres del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:150
-msgid "Whether to blink the cursor"
-msgstr "Si el cursor ha de parpellejar"
-
-#: ../src/mate-terminal.schemas.in.h:151
-msgid ""
-"Whether to have Alt+letter access keys for the menubar. They may interfere "
-"with some applications run inside the terminal so it's possible to turn them"
-" off."
-msgstr "Si s'han de tenir dreceres Alt+lletra per a la barra de menú. Poden interferir amb algunes aplicacions dins del terminal així doncs és possible inhabilitar-les."
-
-#: ../src/mate-terminal.schemas.in.h:152
-msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Si s'ha d'executar l'ordre dins del terminal com un intèrpret d'entrada"
-
-#: ../src/mate-terminal.schemas.in.h:153
-msgid "Whether to run a custom command instead of the shell"
-msgstr "Si s'executa o no una ordre personalitzada en comptes de l'intèrpret d'ordres"
-
-#: ../src/mate-terminal.schemas.in.h:154
-msgid "Whether to scroll background image"
-msgstr "Si s'ha de desplaçar la imatge de fons"
-
-#: ../src/mate-terminal.schemas.in.h:155
-msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr "Si s'ha de desplaçar al final quan es prem una tecla"
-
-#: ../src/mate-terminal.schemas.in.h:156
-msgid "Whether to scroll to the bottom when there's new output"
-msgstr "Si s'ha de desplaçar al final quan hi ha una sortida nova"
-
-#: ../src/mate-terminal.schemas.in.h:157
-msgid "Whether to show menubar in new windows/tabs"
-msgstr "Si s'ha de mostrar la barra de menú a les finestres/pestanyes noves"
-
-#: ../src/mate-terminal.schemas.in.h:158
-msgid "Whether to silence terminal bell"
-msgstr "Si s'ha de silenciar l'avís sonor del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:159
-msgid "Whether to update login records when launching terminal command"
-msgstr "Si s'ha d'actualitzar el registre d'entrada quan s'executa l'ordre del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:160
-msgid "Whether to use custom terminal size for new windows"
-msgstr "Si s'ha de fer servir una mida personalitzada de la terminal per a les noves finestres"
-
-#: ../src/mate-terminal.schemas.in.h:161
-msgid "Whether to use the colors from the theme for the terminal widget"
-msgstr "Si s'han d'utilitzar els colors del tema per al giny del terminal"
-
-#: ../src/mate-terminal.schemas.in.h:162
-msgid "Whether to use the system font"
-msgstr "Si s'ha d'utilitzar el tipus de lletra del sistema"
-
-#. Translators: Please note that this has to be a list of
-#. valid encodings (which are to be taken from the list in src/encoding.c).
-#. It has to include UTF-8 and the word 'current', which is not to be
-#. translated. This is provided for customization of the default encoding
-#. menu; see bug 144810 for an use case. In most cases, this should be
-#. left alone.
-#: ../src/mate-terminal.schemas.in.h:169
-msgid "[UTF-8,current]"
-msgstr "[UTF-8,ISO-8859-1,current]"
-
-#: ../src/keybinding-editor.glade.h:1
-msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "Habilita la tecla d'accés al _menú (F10 per defecte)"
-
-#: ../src/keybinding-editor.glade.h:2
-msgid "Keyboard Shortcuts"
-msgstr "Dreceres de teclat"
-
-#: ../src/keybinding-editor.glade.h:3
-msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "Habilita _totes les tecles d'accés dels menús (com ara Alt+F per obrir el menú Fitxer)"
-
-#: ../src/keybinding-editor.glade.h:4
-msgid "_Shortcut keys:"
-msgstr "_Dreceres:"
-
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
 msgstr "Negre sobre groc clar"
@@ -1012,67 +92,484 @@ msgstr "S'ha produït un error en analitzar l'ordre: %s"
 msgid "Editing Profile “%s”"
 msgstr "Edició del perfil «%s»"
 
-#: ../src/profile-editor.c:646
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
+#: ../src/extra-strings.c:80
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: ../src/profile-editor.c:673
 msgid "Images"
 msgstr "Imatges"
 
-#: ../src/profile-editor.c:820
+#: ../src/profile-editor.c:847
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Escolliu el color %d de la paleta"
 
-#: ../src/profile-editor.c:824
+#: ../src/profile-editor.c:851
 #, c-format
 msgid "Palette entry %d"
 msgstr "Entrada %d de la paleta"
 
-#: ../src/profile-manager.glade.h:1
+#: ../src/encodings-dialog.ui.h:1
+msgid "Add or Remove Terminal Encodings"
+msgstr "Afegeix o suprimeix codificacions del terminal"
+
+#: ../src/encodings-dialog.ui.h:2
+msgid "A_vailable encodings:"
+msgstr "Codi_ficacions disponibles:"
+
+#: ../src/encodings-dialog.ui.h:3
+msgid "E_ncodings shown in menu:"
+msgstr "Codificacio_ns mostrades al menú:"
+
+#: ../src/find-dialog.ui.h:1
+msgid "Find"
+msgstr "Cerca"
+
+#: ../src/find-dialog.ui.h:2
+msgid "_Search for:"
+msgstr "_Cerca: "
+
+#: ../src/find-dialog.ui.h:3
+msgid "_Match case"
+msgstr "Coi_ncidència de majúscules i minúscules"
+
+#: ../src/find-dialog.ui.h:4
+msgid "Match _entire word only"
+msgstr "Només coincid_eix la paraula sencera"
+
+#: ../src/find-dialog.ui.h:5
+msgid "Match as _regular expression"
+msgstr "Fes coincidir amb l'expressió regular"
+
+#: ../src/find-dialog.ui.h:6
+msgid "Search _backwards"
+msgstr "Cerca cap en_rere"
+
+#: ../src/find-dialog.ui.h:7
+msgid "_Wrap around"
+msgstr "Continua des de l'_inici"
+
+#: ../src/keybinding-editor.ui.h:1
+msgid "Keyboard Shortcuts"
+msgstr "Dreceres de teclat"
+
+#: ../src/keybinding-editor.ui.h:2
+msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
+msgstr "Habilita _totes les tecles d'accés dels menús (com ara Alt+F per obrir el menú Fitxer)"
+
+#: ../src/keybinding-editor.ui.h:3
+msgid "Enable the _menu shortcut key (F10 by default)"
+msgstr "Habilita la tecla d'accés al _menú (F10 per defecte)"
+
+#: ../src/keybinding-editor.ui.h:4
+msgid "_Shortcut keys:"
+msgstr "_Dreceres:"
+
+#: ../src/profile-manager.ui.h:1
 msgid "Profiles"
 msgstr "Perfils"
 
-#: ../src/profile-manager.glade.h:2
+#: ../src/profile-manager.ui.h:2
 msgid "_Profile used when launching a new terminal:"
 msgstr "Perfil _emprat quan es llanci un terminal nou:"
 
-#: ../src/profile-new-dialog.glade.h:1
-msgid "C_reate"
-msgstr "C_rea"
-
-#: ../src/profile-new-dialog.glade.h:2 ../src/terminal-accels.c:144
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:152
 msgid "New Profile"
 msgstr "Perfil nou"
 
-#: ../src/profile-new-dialog.glade.h:3
+#: ../src/profile-new-dialog.ui.h:2
+msgid "C_reate"
+msgstr "C_rea"
+
+#: ../src/profile-new-dialog.ui.h:3
 msgid "Profile _name:"
 msgstr "_Nom del perfil:"
 
-#: ../src/profile-new-dialog.glade.h:4
+#: ../src/profile-new-dialog.ui.h:4
 msgid "_Base on:"
 msgstr "_Basat en:"
 
-#: ../src/profile-preferences.glade.h:1
-msgid "<b>Command</b>"
-msgstr "<b>Ordre</b>"
+#. Translators: Cursor shape: ...
+#: ../src/profile-preferences.ui.h:1 ../src/extra-strings.c:35
+msgid "Block"
+msgstr "Bloc"
 
-#: ../src/profile-preferences.glade.h:2
-msgid "<b>Foreground, Background, Bold and Underline</b>"
-msgstr "<b>Primer pla, fons, negreta i subratllat</b>"
+#. Translators: Cursor shape: ...
+#: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
+msgid "I-Beam"
+msgstr "Forma d'I"
 
-#: ../src/profile-preferences.glade.h:3
-msgid "<b>Palette</b>"
-msgstr "<b>Paleta</b>"
+#. Translators: Cursor shape: ...
+#: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
+msgid "Underline"
+msgstr "Subratllat"
 
-#: ../src/profile-preferences.glade.h:4
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
+msgid "Replace initial title"
+msgstr "Reemplaça el títol inicial"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/profile-preferences.ui.h:5 ../src/extra-strings.c:65
+msgid "Append initial title"
+msgstr "Va abans del títol inicial"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/profile-preferences.ui.h:6 ../src/extra-strings.c:67
+msgid "Prepend initial title"
+msgstr "Va després del títol inicial"
+
+#. Translators: When terminal commands set their own titles: ...
+#: ../src/profile-preferences.ui.h:7 ../src/extra-strings.c:69
+msgid "Keep initial title"
+msgstr "Manté el títol inicial"
+
+#. Translators: When command exits: ...
+#: ../src/profile-preferences.ui.h:8 ../src/extra-strings.c:49
+msgid "Exit the terminal"
+msgstr "Surt del terminal"
+
+#. Translators: When command exits: ...
+#: ../src/profile-preferences.ui.h:9 ../src/extra-strings.c:51
+msgid "Restart the command"
+msgstr "Reinicia l'ordre"
+
+#. Translators: When command exits: ...
+#: ../src/profile-preferences.ui.h:10 ../src/extra-strings.c:53
+msgid "Hold the terminal open"
+msgstr "Mantingues obert el terminal"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.ui.h:12 ../src/extra-strings.c:72
+msgid "Tango"
+msgstr "Tango"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
+msgid "Linux console"
+msgstr "Consola Linux"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
+msgid "XTerm"
+msgstr "XTerm"
+
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.ui.h:15 ../src/extra-strings.c:78
+msgid "Rxvt"
+msgstr "Rxvt"
+
+#. Translators: Scrollbar is: ...
+#: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:56
+msgid "On the left side"
+msgstr "A l'esquerre"
+
+#. Translators: Scrollbar is: ...
+#: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:58
+msgid "On the right side"
+msgstr "A la dreta"
+
+#. Translators: Scrollbar is: ...
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:383
+#: ../src/extra-strings.c:60
+msgid "Disabled"
+msgstr "Inhabilitada"
+
+#. * Copyright © 2009 Christian Persch
+#. *
+#. * Mate-terminal is free software; you can redistribute it and/or modify
+#. * it under the terms of the GNU General Public License as published by
+#. * the Free Software Foundation; either version 3 of the License, or
+#. * (at your option) any later version.
+#. *
+#. * Mate-terminal is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. * GNU General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public License
+#. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#. This file contains extra strings that need to be translated, but
+#. * can't be extracted by intltool since the ui files aren't in git, and
+#. * the glade files don't contain them in the right form. See bug #553357.
+#. Translators: This refers to the Delete keybinding option
+#: ../src/profile-preferences.ui.h:19 ../src/extra-strings.c:24
+msgid "Automatic"
+msgstr "Automàtic"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:26
+msgid "Control-H"
+msgstr "Control-H"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:28
+msgid "ASCII DEL"
+msgstr "Supr ASCII"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/profile-preferences.ui.h:22 ../src/extra-strings.c:30
+msgid "Escape sequence"
+msgstr "Seqüència d'escapada"
+
+#. Translators: This refers to the Delete keybinding option
+#: ../src/profile-preferences.ui.h:23 ../src/extra-strings.c:32
+msgid "TTY Erase"
+msgstr "Esborra la TTY"
+
+#. Translators: Cursor blink: ...
+#: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:42
+msgid "Use system settings"
+msgstr ""
+
+#. Translators: Cursor blink: ...
+#: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:44
+msgid "Always blink"
+msgstr ""
+
+#. Translators: Cursor blink: ...
+#: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:46
+msgid "Never blink"
+msgstr ""
+
+#: ../src/profile-preferences.ui.h:27
+msgid "Profile Editor"
+msgstr "Editor de perfils"
+
+#: ../src/profile-preferences.ui.h:28
+msgid "_Profile name:"
+msgstr "Nom del _perfil:"
+
+#: ../src/profile-preferences.ui.h:29
+msgid "_Use the system fixed width font"
+msgstr "_Utilitza el tipus de lletra d'amplada fixa del sistema"
+
+#: ../src/profile-preferences.ui.h:30
+msgid "_Font:"
+msgstr "Tipus de _lletra:"
+
+#: ../src/profile-preferences.ui.h:31
+msgid "Choose A Terminal Font"
+msgstr "Trieu un tipus de lletra de terminal"
+
+#: ../src/profile-preferences.ui.h:32
+msgid "_Allow bold text"
+msgstr "Permet text en _negreta"
+
+#: ../src/profile-preferences.ui.h:33
+msgid "Show _menubar by default in new terminals"
+msgstr "Mostra la barra del _menú per defecte"
+
+#: ../src/profile-preferences.ui.h:34
+msgid "Terminal _bell"
+msgstr "_Avís sonor del terminal"
+
+#: ../src/profile-preferences.ui.h:35
+msgid "Cursor blin_k:"
+msgstr ""
+
+#: ../src/profile-preferences.ui.h:36
+msgid "Cursor _shape:"
+msgstr "_Forma del cursor:"
+
+#: ../src/profile-preferences.ui.h:37
+msgid "Select-by-_word characters:"
+msgstr "Caràcters de _selecció per paraula:"
+
+#: ../src/profile-preferences.ui.h:38
+msgid "Use custom default terminal si_ze"
+msgstr "Fes servir la mida de la terminal personalitzada per defecte"
+
+#: ../src/profile-preferences.ui.h:39
+msgid "Default size:"
+msgstr "Mida per defecte:"
+
+#: ../src/profile-preferences.ui.h:40
+msgid "columns"
+msgstr "columnes"
+
+#: ../src/profile-preferences.ui.h:41
+msgid "rows"
+msgstr "files"
+
+#: ../src/profile-preferences.ui.h:42
+msgid "General"
+msgstr "General"
+
+#: ../src/profile-preferences.ui.h:43
 msgid "<b>Title</b>"
 msgstr "<b>Títol</b>"
 
-#: ../src/profile-preferences.glade.h:5
+#: ../src/profile-preferences.ui.h:44
+msgid "Initial _title:"
+msgstr "Títol _inicial:"
+
+#: ../src/profile-preferences.ui.h:45
+msgid "When terminal commands set their o_wn titles:"
+msgstr "Quan les ordres del terminal estableixin el seu propi _títol:"
+
+#: ../src/profile-preferences.ui.h:46
+msgid "<b>Command</b>"
+msgstr "<b>Ordre</b>"
+
+#: ../src/profile-preferences.ui.h:47
+msgid "_Run command as a login shell"
+msgstr "_Executa una ordre com a entrada a l'intèrpret d'ordres"
+
+#: ../src/profile-preferences.ui.h:48
+msgid "_Update login records when command is launched"
+msgstr "_Actualitza els registres d'entrada quan s'executi l'ordre"
+
+#: ../src/profile-preferences.ui.h:49
+msgid "Ru_n a custom command instead of my shell"
+msgstr "E_xecuta una ordre personalitzada en comptes del meu intèrpret d'ordres"
+
+#: ../src/profile-preferences.ui.h:50
+msgid "Custom co_mmand:"
+msgstr "_Ordre personalitzada:"
+
+#: ../src/profile-preferences.ui.h:51
+msgid "When command _exits:"
+msgstr "Quan l'ordre _surt:"
+
+#: ../src/profile-preferences.ui.h:52
+msgid "Title and Command"
+msgstr "Títol i ordre"
+
+#: ../src/profile-preferences.ui.h:53
+msgid "<b>Foreground, Background, Bold and Underline</b>"
+msgstr "<b>Primer pla, fons, negreta i subratllat</b>"
+
+#: ../src/profile-preferences.ui.h:54
+msgid "_Use colors from system theme"
+msgstr "_Utilitza els colors del tema del sistema"
+
+#: ../src/profile-preferences.ui.h:55
+msgid "Built-in sche_mes:"
+msgstr "Esquemes _integrats:"
+
+#: ../src/profile-preferences.ui.h:56
+msgid "_Text color:"
+msgstr "Color del _text:"
+
+#: ../src/profile-preferences.ui.h:57
+msgid "_Background color:"
+msgstr "Color del _fons:"
+
+#: ../src/profile-preferences.ui.h:58
+msgid "Choose Terminal Background Color"
+msgstr "Trieu el color de fons del terminal"
+
+#: ../src/profile-preferences.ui.h:59
+msgid "Choose Terminal Text Color"
+msgstr "Trieu el color del text del terminal"
+
+#: ../src/profile-preferences.ui.h:60
+msgid "_Underline color:"
+msgstr "_Color de subratllat:"
+
+#: ../src/profile-preferences.ui.h:61
+msgid "_Same as text color"
+msgstr "El matei_x que el color del text"
+
+#: ../src/profile-preferences.ui.h:62
+msgid "Bol_d color:"
+msgstr "Color de la _negreta:"
+
+#: ../src/profile-preferences.ui.h:63
+msgid "<b>Palette</b>"
+msgstr "<b>Paleta</b>"
+
+#: ../src/profile-preferences.ui.h:64
+msgid "Built-in _schemes:"
+msgstr "_Esquemes integrats:"
+
+#: ../src/profile-preferences.ui.h:65
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>Nota:</b> aquests colors estan disponibles a les aplicacions del terminal.</i></small>"
 
-#: ../src/profile-preferences.glade.h:6
+#: ../src/profile-preferences.ui.h:66
+msgid "Color p_alette:"
+msgstr "_Paleta de colors:"
+
+#: ../src/profile-preferences.ui.h:67
+msgid "Colors"
+msgstr "Colors"
+
+#: ../src/profile-preferences.ui.h:68
+msgid "_Solid color"
+msgstr "Color _sòlid"
+
+#: ../src/profile-preferences.ui.h:69
+msgid "_Background image"
+msgstr "_Imatge de fons"
+
+#: ../src/profile-preferences.ui.h:70
+msgid "Image _file:"
+msgstr "_Fitxer d'imatge:"
+
+#: ../src/profile-preferences.ui.h:71
+msgid "Select Background Image"
+msgstr "Trieu la imatge del fons"
+
+#: ../src/profile-preferences.ui.h:72
+msgid "Background image _scrolls"
+msgstr "La imatge del fons es _desplaça"
+
+#: ../src/profile-preferences.ui.h:73
+msgid "_Transparent background"
+msgstr "F_ons transparent"
+
+#: ../src/profile-preferences.ui.h:74
+msgid "S_hade transparent or image background:"
+msgstr "_Enfosqueix la transparència o imatge de fons:"
+
+#: ../src/profile-preferences.ui.h:75
+msgid "<small><i>None</i></small>"
+msgstr "<small><i>Cap</i></small>"
+
+#: ../src/profile-preferences.ui.h:76
+msgid "<small><i>Maximum</i></small>"
+msgstr "<small><i>Màxim</i></small>"
+
+#: ../src/profile-preferences.ui.h:77
+msgid "Background"
+msgstr "Fons"
+
+#: ../src/profile-preferences.ui.h:78
+msgid "_Scrollbar is:"
+msgstr "La _barra de desplaçament és:"
+
+#: ../src/profile-preferences.ui.h:79
+msgid "Scroll_back:"
+msgstr "Desplaçament cap _enrere:"
+
+#: ../src/profile-preferences.ui.h:80
+msgid "Scroll on _keystroke"
+msgstr "Desplaçament en _prémer una tecla"
+
+#: ../src/profile-preferences.ui.h:81
+msgid "Scroll on _output"
+msgstr "Desplaçament en _sortida"
+
+#: ../src/profile-preferences.ui.h:82
+msgid "_Unlimited"
+msgstr "_Il·limitat"
+
+#: ../src/profile-preferences.ui.h:83
+msgid "lines"
+msgstr "línies"
+
+#: ../src/profile-preferences.ui.h:84
+msgid "Scrolling"
+msgstr "Desplaçament"
+
+#: ../src/profile-preferences.ui.h:85
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1080,287 +577,27 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>Nota:</b> aquestes opcions poden fer que algunes aplicacions no funcionin correctament. Només hi són per permetre-us solucionar aspectes de certes aplicacions i sistemes operatius que esperen un comportament diferent del terminal.</i></small>"
 
-#: ../src/profile-preferences.glade.h:7
-msgid "<small><i>Maximum</i></small>"
-msgstr "<small><i>Màxim</i></small>"
-
-#: ../src/profile-preferences.glade.h:8
-msgid "<small><i>None</i></small>"
-msgstr "<small><i>Cap</i></small>"
-
-#: ../src/profile-preferences.glade.h:9
-msgid ""
-"Automatic\n"
-"Control-H\n"
-"ASCII DEL\n"
-"Escape sequence\n"
-"TTY Erase"
-msgstr "Automàtic\nControl-H\nASCII DEL\nSeqüència d'escapada\nEsborrat TTY"
-
-#: ../src/profile-preferences.glade.h:14
-msgid "Background"
-msgstr "Fons"
-
-#: ../src/profile-preferences.glade.h:15
-msgid "Background image _scrolls"
-msgstr "La imatge del fons es _desplaça"
-
-#: ../src/profile-preferences.glade.h:16
-msgid ""
-"Block\n"
-"I-Beam\n"
-"Underline"
-msgstr "Bloc\nForma d'I\nSubratllat"
-
-#: ../src/profile-preferences.glade.h:19
-msgid "Bol_d color:"
-msgstr "Color de la _negreta:"
-
-#: ../src/profile-preferences.glade.h:20
-msgid "Built-in _schemes:"
-msgstr "_Esquemes integrats:"
-
-#: ../src/profile-preferences.glade.h:21
-msgid "Built-in sche_mes:"
-msgstr "Esquemes _integrats:"
-
-#: ../src/profile-preferences.glade.h:22
-msgid "Choose A Terminal Font"
-msgstr "Trieu un tipus de lletra de terminal"
-
-#: ../src/profile-preferences.glade.h:23
-msgid "Choose Terminal Background Color"
-msgstr "Trieu el color de fons del terminal"
-
-#: ../src/profile-preferences.glade.h:24
-msgid "Choose Terminal Text Color"
-msgstr "Trieu el color del text del terminal"
-
-#: ../src/profile-preferences.glade.h:25
-msgid "Color p_alette:"
-msgstr "_Paleta de colors:"
-
-#: ../src/profile-preferences.glade.h:26
-msgid "Colors"
-msgstr "Colors"
-
-#: ../src/profile-preferences.glade.h:27
-msgid "Compatibility"
-msgstr "Compatibilitat"
-
-#: ../src/profile-preferences.glade.h:28
-msgid "Cursor _shape:"
-msgstr "_Forma del cursor:"
-
-#. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.glade.h:29 ../src/extra-strings.c:73
-msgid "Custom"
-msgstr "Personalitzat"
-
-#: ../src/profile-preferences.glade.h:30
-msgid "Custom co_mmand:"
-msgstr "_Ordre personalitzada:"
-
-#: ../src/profile-preferences.glade.h:31
-msgid "Default size:"
-msgstr "Mida per defecte:"
-
-#: ../src/profile-preferences.glade.h:32
-msgid ""
-"Exit the terminal\n"
-"Restart the command\n"
-"Hold the terminal open"
-msgstr "Surt del terminal\nReinicia l'ordre\nManté el terminal obert"
-
-#: ../src/profile-preferences.glade.h:35
-msgid "General"
-msgstr "General"
-
-#: ../src/profile-preferences.glade.h:36
-msgid "Image _file:"
-msgstr "_Fitxer d'imatge:"
-
-#: ../src/profile-preferences.glade.h:37
-msgid "Initial _title:"
-msgstr "Títol _inicial:"
-
-#: ../src/profile-preferences.glade.h:38
-msgid ""
-"On the left side\n"
-"On the right side\n"
-"Disabled"
-msgstr "A la part esquerra\nA la part dreta\nInhabilitada"
-
-#: ../src/profile-preferences.glade.h:41
-msgid "Profile Editor"
-msgstr "Editor de perfils"
-
-#: ../src/profile-preferences.glade.h:42
-msgid ""
-"Replace initial title\n"
-"Append initial title\n"
-"Prepend initial title\n"
-"Keep initial title"
-msgstr "Reemplaça el títol inicial\nVa abans del títol inicial\nVa després del títol inicial\nManté el títol inicial"
-
-#: ../src/profile-preferences.glade.h:46
-msgid "Ru_n a custom command instead of my shell"
-msgstr "E_xecuta una ordre personalitzada en comptes del meu intèrpret d'ordres"
-
-#: ../src/profile-preferences.glade.h:47
-msgid "S_hade transparent or image background:"
-msgstr "_Enfosqueix la transparència o imatge de fons:"
-
-#: ../src/profile-preferences.glade.h:48
-msgid "Scroll on _keystroke"
-msgstr "Desplaçament en _prémer una tecla"
-
-#: ../src/profile-preferences.glade.h:49
-msgid "Scroll on _output"
-msgstr "Desplaçament en _sortida"
-
-#: ../src/profile-preferences.glade.h:50
-msgid "Scroll_back:"
-msgstr "Desplaçament cap _enrere:"
-
-#: ../src/profile-preferences.glade.h:51
-msgid "Scrolling"
-msgstr "Desplaçament"
-
-#: ../src/profile-preferences.glade.h:52
-msgid "Select Background Image"
-msgstr "Trieu la imatge del fons"
-
-#: ../src/profile-preferences.glade.h:53
-msgid "Select-by-_word characters:"
-msgstr "Caràcters de _selecció per paraula:"
-
-#: ../src/profile-preferences.glade.h:54
-msgid "Show _menubar by default in new terminals"
-msgstr "Mostra la barra del _menú per defecte"
-
-#: ../src/profile-preferences.glade.h:55
-msgid ""
-"Tango\n"
-"Linux console\n"
-"XTerm\n"
-"Rxvt\n"
-"Custom"
-msgstr "Tango\nConsola de Linux\nXTerm\nRxvt\nPersonalitzat"
-
-#: ../src/profile-preferences.glade.h:60
-msgid "Terminal _bell"
-msgstr "_Avís sonor del terminal"
-
-#: ../src/profile-preferences.glade.h:61
-msgid "Title and Command"
-msgstr "Títol i ordre"
-
-#: ../src/profile-preferences.glade.h:62
-msgid "Use custom default terminal si_ze"
-msgstr "Fes servir la mida de la terminal personalitzada per defecte"
-
-#: ../src/profile-preferences.glade.h:63
-msgid "When command _exits:"
-msgstr "Quan l'ordre _surt:"
-
-#: ../src/profile-preferences.glade.h:64
-msgid "When terminal commands set their o_wn titles:"
-msgstr "Quan les ordres del terminal estableixin el seu propi _títol:"
-
-#: ../src/profile-preferences.glade.h:65
-msgid "_Allow bold text"
-msgstr "Permet text en _negreta"
-
-#: ../src/profile-preferences.glade.h:66
-msgid "_Background color:"
-msgstr "Color del _fons:"
-
-#: ../src/profile-preferences.glade.h:67
-msgid "_Background image"
-msgstr "_Imatge de fons"
-
-#: ../src/profile-preferences.glade.h:68
-msgid "_Backspace key generates:"
-msgstr "La tecla de _retrocés genera:"
-
-#: ../src/profile-preferences.glade.h:69
+#: ../src/profile-preferences.ui.h:86
 msgid "_Delete key generates:"
 msgstr "La tecla de _suprimir genera:"
 
-#: ../src/profile-preferences.glade.h:70
-msgid "_Font:"
-msgstr "Tipus de _lletra:"
+#: ../src/profile-preferences.ui.h:87
+msgid "_Backspace key generates:"
+msgstr "La tecla de _retrocés genera:"
 
-#: ../src/profile-preferences.glade.h:71
-msgid "_Profile name:"
-msgstr "Nom del _perfil:"
-
-#: ../src/profile-preferences.glade.h:72
+#: ../src/profile-preferences.ui.h:88
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "Reinicia les _opcions de compatibilitat a aquelles per defecte"
 
-#: ../src/profile-preferences.glade.h:73
-msgid "_Run command as a login shell"
-msgstr "_Executa una ordre com a entrada a l'intèrpret d'ordres"
+#: ../src/profile-preferences.ui.h:89
+msgid "Compatibility"
+msgstr "Compatibilitat"
 
-#: ../src/profile-preferences.glade.h:74
-msgid "_Same as text color"
-msgstr "El matei_x que el color del text"
-
-#: ../src/profile-preferences.glade.h:75
-msgid "_Scrollbar is:"
-msgstr "La _barra de desplaçament és:"
-
-#: ../src/profile-preferences.glade.h:76
-msgid "_Solid color"
-msgstr "Color _sòlid"
-
-#: ../src/profile-preferences.glade.h:77
-msgid "_Text color:"
-msgstr "Color del _text:"
-
-#: ../src/profile-preferences.glade.h:78
-msgid "_Transparent background"
-msgstr "F_ons transparent"
-
-#: ../src/profile-preferences.glade.h:79
-msgid "_Underline color:"
-msgstr "_Color de subratllat:"
-
-#: ../src/profile-preferences.glade.h:80
-msgid "_Unlimited"
-msgstr "_Il·limitat"
-
-#: ../src/profile-preferences.glade.h:81
-msgid "_Update login records when command is launched"
-msgstr "_Actualitza els registres d'entrada quan s'executi l'ordre"
-
-#: ../src/profile-preferences.glade.h:82
-msgid "_Use colors from system theme"
-msgstr "_Utilitza els colors del tema del sistema"
-
-#: ../src/profile-preferences.glade.h:83
-msgid "_Use the system fixed width font"
-msgstr "_Utilitza el tipus de lletra d'amplada fixa del sistema"
-
-#: ../src/profile-preferences.glade.h:84
-msgid "columns"
-msgstr "columnes"
-
-#: ../src/profile-preferences.glade.h:85
-msgid "lines"
-msgstr "línies"
-
-#: ../src/profile-preferences.glade.h:86
-msgid "rows"
-msgstr "files"
-
-#: ../src/skey-challenge.glade.h:1
+#: ../src/skey-challenge.ui.h:1
 msgid "S/Key Challenge Response"
 msgstr "Resposta al desafiament S/Key"
 
-#: ../src/skey-challenge.glade.h:2
+#: ../src/skey-challenge.ui.h:2
 msgid "_Password:"
 msgstr "_Contrasenya:"
 
@@ -1372,219 +609,222 @@ msgstr "El text sobre el que heu fet clic sembla no ser un desafiament S/Key và
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "El text sobre el que heu fet clic sembla no ser un desafiament OTP vàlid."
 
-#: ../src/terminal-accels.c:136
+#: ../src/terminal-accels.c:144
 msgid "New Tab"
 msgstr "Pestanya nova"
 
-#: ../src/terminal-accels.c:140
+#: ../src/terminal-accels.c:148
 msgid "New Window"
 msgstr "Finestra nova"
 
-#: ../src/terminal-accels.c:149
+#: ../src/terminal-accels.c:157
 msgid "Save Contents"
 msgstr "Desa el contingut"
 
-#: ../src/terminal-accels.c:154
+#: ../src/terminal-accels.c:162
 msgid "Close Tab"
 msgstr "Tanca la pestanya"
 
-#: ../src/terminal-accels.c:158
+#: ../src/terminal-accels.c:166
 msgid "Close Window"
 msgstr "Tanca la finestra"
 
-#: ../src/terminal-accels.c:166
+#: ../src/terminal-accels.c:174
 msgid "Copy"
 msgstr "Copia"
 
-#: ../src/terminal-accels.c:170
+#: ../src/terminal-accels.c:178
 msgid "Paste"
 msgstr "Enganxa"
 
-#: ../src/terminal-accels.c:178
+#: ../src/terminal-accels.c:186
 msgid "Hide and Show menubar"
 msgstr "Amaga i mostra la barra de menú"
 
-#: ../src/terminal-accels.c:182
+#: ../src/terminal-accels.c:190
 msgid "Full Screen"
 msgstr "Pantalla completa"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:194
 msgid "Zoom In"
 msgstr "Amplia el zoom"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:198
 msgid "Zoom Out"
 msgstr "Redueix el zoom"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:202
 msgid "Normal Size"
 msgstr "Mida normal"
 
-#: ../src/terminal-accels.c:202 ../src/terminal-window.c:3817
+#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3933
 msgid "Set Title"
 msgstr "Estableix el títol"
 
-#: ../src/terminal-accels.c:206
+#: ../src/terminal-accels.c:214
 msgid "Reset"
 msgstr "Reinicia"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:218
 msgid "Reset and Clear"
 msgstr "Reinicia i neteja"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:222
+msgid "Switch to Previous Profile"
+msgstr ""
+
+#: ../src/terminal-accels.c:226
+msgid "Switch to Next Profile"
+msgstr ""
+
+#: ../src/terminal-accels.c:234
 msgid "Switch to Previous Tab"
 msgstr "Canvia a la pestanya anterior"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:238
 msgid "Switch to Next Tab"
 msgstr "Canvia a la pestanya següent"
 
-#: ../src/terminal-accels.c:226
+#: ../src/terminal-accels.c:242
 msgid "Move Tab to the Left"
 msgstr "Mou pestanya a l'esquerra"
 
-#: ../src/terminal-accels.c:230
+#: ../src/terminal-accels.c:246
 msgid "Move Tab to the Right"
 msgstr "Mou pestanya a la dreta"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:250
 msgid "Detach Tab"
 msgstr "Separa la pestanya"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:254
 msgid "Switch to Tab 1"
 msgstr "Canvia a la pestanya 1"
 
-#: ../src/terminal-accels.c:243
+#: ../src/terminal-accels.c:259
 msgid "Switch to Tab 2"
 msgstr "Canvia a la pestanya 2"
 
-#: ../src/terminal-accels.c:248
+#: ../src/terminal-accels.c:264
 msgid "Switch to Tab 3"
 msgstr "Canvia a la pestanya 3"
 
-#: ../src/terminal-accels.c:253
+#: ../src/terminal-accels.c:269
 msgid "Switch to Tab 4"
 msgstr "Canvia a la pestanya 4"
 
-#: ../src/terminal-accels.c:258
+#: ../src/terminal-accels.c:274
 msgid "Switch to Tab 5"
 msgstr "Canvia a la pestanya 5"
 
-#: ../src/terminal-accels.c:263
+#: ../src/terminal-accels.c:279
 msgid "Switch to Tab 6"
 msgstr "Canvia a la pestanya 6"
 
-#: ../src/terminal-accels.c:268
+#: ../src/terminal-accels.c:284
 msgid "Switch to Tab 7"
 msgstr "Canvia a la pestanya 7"
 
-#: ../src/terminal-accels.c:273
+#: ../src/terminal-accels.c:289
 msgid "Switch to Tab 8"
 msgstr "Canvia a la pestanya 8"
 
-#: ../src/terminal-accels.c:278
+#: ../src/terminal-accels.c:294
 msgid "Switch to Tab 9"
 msgstr "Canvia a la pestanya 9"
 
-#: ../src/terminal-accels.c:283
+#: ../src/terminal-accels.c:299
 msgid "Switch to Tab 10"
 msgstr "Canvia a la pestanya 10"
 
-#: ../src/terminal-accels.c:288
+#: ../src/terminal-accels.c:304
 msgid "Switch to Tab 11"
 msgstr "Canvia a la pestanya 11"
 
-#: ../src/terminal-accels.c:293
+#: ../src/terminal-accels.c:309
 msgid "Switch to Tab 12"
 msgstr "Canvia a la pestanya 12"
 
-#: ../src/terminal-accels.c:301
+#: ../src/terminal-accels.c:317
 msgid "Contents"
 msgstr "Continguts"
 
-#: ../src/terminal-accels.c:306
+#: ../src/terminal-accels.c:322
 msgid "File"
 msgstr "Fitxer"
 
-#: ../src/terminal-accels.c:307
+#: ../src/terminal-accels.c:323
 msgid "Edit"
 msgstr "Edita"
 
-#: ../src/terminal-accels.c:308
+#: ../src/terminal-accels.c:324
 msgid "View"
 msgstr "Visualitza"
 
-#: ../src/terminal-accels.c:310
+#: ../src/terminal-accels.c:326
 msgid "Tabs"
 msgstr "Pestanyes"
 
-#: ../src/terminal-accels.c:311
+#: ../src/terminal-accels.c:327
 msgid "Help"
 msgstr "Ajuda"
 
-#. Translators: Scrollbar is: ...
-#: ../src/terminal-accels.c:368 ../src/extra-strings.c:53
-msgid "Disabled"
-msgstr "Inhabilitada"
-
-#: ../src/terminal-accels.c:841
+#: ../src/terminal-accels.c:831
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "La tecla de drecera «%s» ja està assignada a l'acció «%s»"
 
-#: ../src/terminal-accels.c:1003
+#: ../src/terminal-accels.c:987
 msgid "_Action"
 msgstr "_Acció"
 
-#: ../src/terminal-accels.c:1022
+#: ../src/terminal-accels.c:1006
 msgid "Shortcut _Key"
 msgstr "_Tecla de drecera"
 
-#: ../src/terminal-app.c:487
+#: ../src/terminal-app.c:460
 msgid "Click button to choose profile"
 msgstr "Feu clic per triar el perfil"
 
-#: ../src/terminal-app.c:572
+#: ../src/terminal-app.c:543
 msgid "Profile list"
 msgstr "Llista de perfils"
 
-#: ../src/terminal-app.c:633
+#: ../src/terminal-app.c:604
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Voleu suprimir el perfil «%s»?"
 
-#: ../src/terminal-app.c:649
+#: ../src/terminal-app.c:620
 msgid "Delete Profile"
 msgstr "Suprimeix el perfil"
 
-#: ../src/terminal-app.c:1106
+#: ../src/terminal-app.c:1053
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Ja teniu un perfil anomenat «%s». Voleu crear-ne un altre amb el mateix nom?"
 
-#: ../src/terminal-app.c:1208
+#: ../src/terminal-app.c:1148
 msgid "Choose base profile"
 msgstr "Seleccioneu el perfil base"
 
-#: ../src/terminal-app.c:1826
+#: ../src/terminal-app.c:1751
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "No existeix el perfil «%s», s'utilitzarà el perfil predeterminat\n"
 
-#: ../src/terminal-app.c:1850
+#: ../src/terminal-app.c:1775
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Cadena geomètrica no vàlida «%s»\n"
 
-#: ../src/terminal-app.c:2028
+#: ../src/terminal-app.c:1953
 msgid "User Defined"
 msgstr "Definit per l'usuari"
 
-#: ../src/terminal.c:564
+#: ../src/terminal.c:562
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Ha fallat l'anàlisi dels arguments: %s\n"
@@ -1654,7 +894,6 @@ msgstr "Romanès"
 #. These encodings do NOT pass-through ASCII, so are always rejected.
 #. * FIXME: why are they in this table; or rather why do we need
 #. * the ASCII pass-through requirement?
-#. 
 #: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:125
 #: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
 #: ../src/terminal-encoding.c:128
@@ -1730,15 +969,15 @@ msgstr "Vietnamita"
 msgid "Thai"
 msgstr "Tailandès"
 
-#: ../src/terminal-encoding.c:507 ../src/terminal-encoding.c:532
+#: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
 msgid "_Description"
 msgstr "_Descripció"
 
-#: ../src/terminal-encoding.c:516 ../src/terminal-encoding.c:541
+#: ../src/terminal-encoding.c:515 ../src/terminal-encoding.c:540
 msgid "_Encoding"
 msgstr "_Codificació"
 
-#: ../src/terminal-encoding.c:599
+#: ../src/terminal-encoding.c:598
 msgid "Current Locale"
 msgstr "Localització actual"
 
@@ -1749,10 +988,6 @@ msgid ""
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
 msgstr "L'opció «%s» ja no està implementada en aquesta versió del mate-terminal. Podeu crear un perfil amb la configuració desitjada i utilitzar l'opció nova «--profile»\n"
-
-#: ../src/terminal-options.c:188 ../src/terminal-window.c:4048
-msgid "MATE Terminal"
-msgstr "Terminal del MATE"
 
 #: ../src/terminal-options.c:208
 #, c-format
@@ -1931,33 +1166,33 @@ msgstr "Opcions del terminal. Si s'utilitzen abans del primer argument --window 
 msgid "Show per-terminal options"
 msgstr "Mostra les opcions individuals per terminal"
 
-#: ../src/terminal-profile.c:167
+#: ../src/terminal-profile.c:165
 msgid "Unnamed"
 msgstr "Sense nom"
 
-#: ../src/terminal-screen.c:1500
+#: ../src/terminal-screen.c:1519
 msgid "_Profile Preferences"
 msgstr "_Preferències del perfil"
 
-#: ../src/terminal-screen.c:1501 ../src/terminal-screen.c:1890
+#: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
 msgid "_Relaunch"
 msgstr "_Torna't a executar"
 
-#: ../src/terminal-screen.c:1504
+#: ../src/terminal-screen.c:1523
 msgid "There was an error creating the child process for this terminal"
 msgstr "S'ha produït un error en crear el subprocés per aquest terminal"
 
-#: ../src/terminal-screen.c:1895
+#: ../src/terminal-screen.c:1914
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El subprocés ha sortit correctament amb l'estat %d."
 
-#: ../src/terminal-screen.c:1900
+#: ../src/terminal-screen.c:1919
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "S'ha finalitzat el subprocés amb la senyal %d."
 
-#: ../src/terminal-screen.c:1905
+#: ../src/terminal-screen.c:1924
 msgid "The child process was terminated."
 msgstr "S'ha finalitzat el procés fill."
 
@@ -1969,16 +1204,16 @@ msgstr "Tanca la pestanya"
 msgid "Switch to this tab"
 msgstr "Canvia a aquesta pestanya"
 
-#: ../src/terminal-util.c:192
+#: ../src/terminal-util.c:167
 msgid "There was an error displaying help"
 msgstr "S'ha produït un error en mostrar l'ajuda"
 
-#: ../src/terminal-util.c:265
+#: ../src/terminal-util.c:239
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "No s'ha pogut obrir l'adreça «%s»"
 
-#: ../src/terminal-util.c:373
+#: ../src/terminal-util.c:347
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1986,7 +1221,7 @@ msgid ""
 "any later version."
 msgstr "El Terminal del MATE és programari lliure; podeu distribuir-lo i/o modificar-lo sota els termes de la llicència GNU General Public License tal i com està publicada per la Free Software Foundation; ja sigui la versió 3 de la llicència, o bé (si ho preferiu) qualsevol versió posterior."
 
-#: ../src/terminal-util.c:377
+#: ../src/terminal-util.c:351
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1994,7 +1229,7 @@ msgid ""
 "more details."
 msgstr "El terminal MATE es distribueix amb l'expectativa que serà útil, però SENSE CAP GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o ADEQUACIÓ PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública General GNU per obtenir-ne més detalls."
 
-#: ../src/terminal-util.c:381
+#: ../src/terminal-util.c:355
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2004,8 +1239,7 @@ msgstr "Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#. 
-#: ../src/terminal-window.c:470
+#: ../src/terminal-window.c:477
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2013,376 +1247,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#. 
-#: ../src/terminal-window.c:476
+#: ../src/terminal-window.c:483
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1793
+#: ../src/terminal-window.c:1818
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../src/terminal-window.c:1794 ../src/terminal-window.c:1807
-#: ../src/terminal-window.c:2038
+#: ../src/terminal-window.c:1819 ../src/terminal-window.c:1832
+#: ../src/terminal-window.c:2073
 msgid "Open _Terminal"
 msgstr "Obre un _terminal"
 
-#: ../src/terminal-window.c:1795 ../src/terminal-window.c:1812
-#: ../src/terminal-window.c:2043
+#: ../src/terminal-window.c:1820 ../src/terminal-window.c:1837
+#: ../src/terminal-window.c:2078
 msgid "Open Ta_b"
 msgstr "Obre una _pestanya"
 
-#: ../src/terminal-window.c:1796
+#: ../src/terminal-window.c:1821
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/terminal-window.c:1797
+#: ../src/terminal-window.c:1822
 msgid "_View"
 msgstr "_Visualitza"
 
-#: ../src/terminal-window.c:1798
+#: ../src/terminal-window.c:1823
 msgid "_Search"
 msgstr "_Cerca"
 
-#: ../src/terminal-window.c:1799
+#: ../src/terminal-window.c:1824
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1800
+#: ../src/terminal-window.c:1825
 msgid "Ta_bs"
 msgstr "_Pestanyes"
 
-#: ../src/terminal-window.c:1801
+#: ../src/terminal-window.c:1826
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/terminal-window.c:1817
+#: ../src/terminal-window.c:1842
 msgid "New _Profile…"
 msgstr "_Perfil nou…"
 
-#: ../src/terminal-window.c:1822
+#: ../src/terminal-window.c:1847
 msgid "_Save Contents"
 msgstr "De_sa el contingut"
 
-#: ../src/terminal-window.c:1827 ../src/terminal-window.c:2053
+#: ../src/terminal-window.c:1852 ../src/terminal-window.c:2088
 msgid "C_lose Tab"
 msgstr "Tanca la p_estanya"
 
-#: ../src/terminal-window.c:1832
+#: ../src/terminal-window.c:1857
 msgid "_Close Window"
 msgstr "Tanca la _finestra"
 
-#: ../src/terminal-window.c:1849 ../src/terminal-window.c:2033
+#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
 msgid "Paste _Filenames"
 msgstr "Enganxa els _noms de fitxers"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1884
 msgid "P_rofiles…"
 msgstr "P_erfils…"
 
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1889
 msgid "_Keyboard Shortcuts…"
 msgstr "_Dreceres de teclat…"
 
-#: ../src/terminal-window.c:1869
+#: ../src/terminal-window.c:1894
 msgid "Pr_ofile Preferences"
 msgstr "_Preferències del perfil"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1918
 msgid "_Find..."
 msgstr "_Cerca..."
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1923
 msgid "Find Ne_xt"
 msgstr "Cerca el _següent"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1928
 msgid "Find Pre_vious"
 msgstr "Cerca l'_anterior"
 
-#: ../src/terminal-window.c:1908
+#: ../src/terminal-window.c:1933
 msgid "_Clear Highlight"
 msgstr "_Neteja el ressaltat"
 
-#: ../src/terminal-window.c:1914
+#: ../src/terminal-window.c:1939
 msgid "Go to _Line..."
 msgstr "Vés a la línia..."
 
-#: ../src/terminal-window.c:1919
+#: ../src/terminal-window.c:1944
 msgid "_Incremental Search..."
 msgstr "_Cerca incremental..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1926
+#: ../src/terminal-window.c:1951
 msgid "Change _Profile"
 msgstr "Canvia de _perfil"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1953
+msgid "_Previous Profile"
+msgstr ""
+
+#: ../src/terminal-window.c:1958
+msgid "_Next Profile"
+msgstr ""
+
+#: ../src/terminal-window.c:1963
 msgid "_Set Title…"
 msgstr "_Estableix el títol…"
 
-#: ../src/terminal-window.c:1932
+#: ../src/terminal-window.c:1967
 msgid "Set _Character Encoding"
 msgstr "Estableix la _codificació dels caràcters"
 
-#: ../src/terminal-window.c:1934
+#: ../src/terminal-window.c:1969
 msgid "_Reset"
 msgstr "_Reinicia"
 
-#: ../src/terminal-window.c:1939
+#: ../src/terminal-window.c:1974
 msgid "Reset and C_lear"
 msgstr "Reinicia i _neteja"
 
-#: ../src/terminal-window.c:1946
+#: ../src/terminal-window.c:1981
 msgid "_Add or Remove…"
 msgstr "_Afegeix o suprimeix…"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1988
 msgid "_Previous Tab"
 msgstr "Pestanya _anterior"
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1993
 msgid "_Next Tab"
 msgstr "Pestanya _següent"
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1998
 msgid "Move Tab _Left"
 msgstr "Mou la pestanya a l'_esquerra"
 
-#: ../src/terminal-window.c:1968
+#: ../src/terminal-window.c:2003
 msgid "Move Tab _Right"
 msgstr "Mou la pestanya a la _dreta"
 
-#: ../src/terminal-window.c:1973
+#: ../src/terminal-window.c:2008
 msgid "_Detach tab"
 msgstr "_Separa la pestanya"
 
-#: ../src/terminal-window.c:1980
+#: ../src/terminal-window.c:2015
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../src/terminal-window.c:1985
+#: ../src/terminal-window.c:2020
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/terminal-window.c:1992
+#: ../src/terminal-window.c:2027
 msgid "_Send Mail To…"
 msgstr "En_via un correu a…"
 
-#: ../src/terminal-window.c:1997
+#: ../src/terminal-window.c:2032
 msgid "_Copy E-mail Address"
 msgstr "_Copia l'adreça de correu"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:2037
 msgid "C_all To…"
 msgstr "Truc_a a…"
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2042
 msgid "_Copy Call Address"
 msgstr "_Copia l'adreça de trucada"
 
-#: ../src/terminal-window.c:2012
+#: ../src/terminal-window.c:2047
 msgid "_Open Link"
 msgstr "_Obre l'enllaç"
 
-#: ../src/terminal-window.c:2017
+#: ../src/terminal-window.c:2052
 msgid "_Copy Link Address"
 msgstr "_Copia l'adreça de l'enllaç"
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2056
 msgid "P_rofiles"
 msgstr "Pe_rfils"
 
-#: ../src/terminal-window.c:2048 ../src/terminal-window.c:3273
+#: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
 msgid "C_lose Window"
 msgstr "Tanca la _finestra"
 
-#: ../src/terminal-window.c:2058
+#: ../src/terminal-window.c:2093
 msgid "L_eave Full Screen"
 msgstr "_Surt de la pantalla completa"
 
-#: ../src/terminal-window.c:2062
+#: ../src/terminal-window.c:2097
 msgid "_Input Methods"
 msgstr "Mètodes d'_entrada"
 
-#: ../src/terminal-window.c:2069
+#: ../src/terminal-window.c:2104
 msgid "Show _Menubar"
 msgstr "Mostra la _barra del menú"
 
-#: ../src/terminal-window.c:2075
+#: ../src/terminal-window.c:2110
 msgid "_Full Screen"
 msgstr "_Pantalla completa"
 
-#: ../src/terminal-window.c:3260
+#: ../src/terminal-window.c:3321
 msgid "Close this window?"
 msgstr "Voleu tancar aquesta finestra?"
 
-#: ../src/terminal-window.c:3260
+#: ../src/terminal-window.c:3321
 msgid "Close this terminal?"
 msgstr "Voleu tancar aquest terminal?"
 
-#: ../src/terminal-window.c:3264
+#: ../src/terminal-window.c:3325
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Encara s'estan executant processos en alguns terminals d'aquesta finestra. Si la tanqueu es mataran tots."
 
-#: ../src/terminal-window.c:3268
+#: ../src/terminal-window.c:3329
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Encara s'està executant un procés en aquest terminal. Si el tanqueu es matarà aquest procés."
 
-#: ../src/terminal-window.c:3273
+#: ../src/terminal-window.c:3334
 msgid "C_lose Terminal"
 msgstr "_Tanca el terminal"
 
-#: ../src/terminal-window.c:3346
+#: ../src/terminal-window.c:3407
 msgid "Could not save contents"
 msgstr "No s'ha pogut desar el contingut"
 
-#: ../src/terminal-window.c:3370
+#: ../src/terminal-window.c:3431
 msgid "Save as..."
 msgstr "Anomena i desa..."
 
-#: ../src/terminal-window.c:3840
+#: ../src/terminal-window.c:3956
 msgid "_Title:"
 msgstr "Tít_ol:"
 
-#: ../src/terminal-window.c:4031
+#: ../src/terminal-window.c:4151
 msgid "Contributors:"
 msgstr "Col·laboradors:"
 
-#: ../src/terminal-window.c:4050
+#: ../src/terminal-window.c:4170
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Un emulador de terminal per a l'escriptori MATE"
 
-#: ../src/terminal-window.c:4057
+#: ../src/terminal-window.c:4177
 msgid "translator-credits"
 msgstr "Nada Nada <qk269@hotmail.com>\nJordi Mallach <jordi@sindominio.net>\nJosep Puigdemont <josep.puigdemont@gmail.com>\nJoan Duran <jodufi@gmail.com>\nPere Orga <pere@orga.cat>"
-
-#. * Copyright © 2009 Christian Persch
-#. *
-#. * Mate-terminal is free software; you can redistribute it and/or modify
-#. * it under the terms of the GNU General Public License as published by
-#. * the Free Software Foundation; either version 3 of the License, or
-#. * (at your option) any later version.
-#. *
-#. * Mate-terminal is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. * GNU General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License
-#. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#. 
-#. This file contains extra strings that need to be translated, but
-#. * can't be extracted by intltool since the ui files aren't in git, and
-#. * the glade files don't contain them in the right form. See bug #553357.
-#. 
-#. Translators: This refers to the Delete keybinding option
-#: ../src/extra-strings.c:24
-msgid "Automatic"
-msgstr "Automàtic"
-
-#. Translators: This refers to the Delete keybinding option
-#: ../src/extra-strings.c:26
-msgid "Control-H"
-msgstr "Control-H"
-
-#. Translators: This refers to the Delete keybinding option
-#: ../src/extra-strings.c:28
-msgid "ASCII DEL"
-msgstr "Supr ASCII"
-
-#. Translators: This refers to the Delete keybinding option
-#: ../src/extra-strings.c:30
-msgid "Escape sequence"
-msgstr "Seqüència d'escapada"
-
-#. Translators: This refers to the Delete keybinding option
-#: ../src/extra-strings.c:32
-msgid "TTY Erase"
-msgstr "Esborra la TTY"
-
-#. Translators: Cursor shape: ...
-#: ../src/extra-strings.c:35
-msgid "Block"
-msgstr "Bloc"
-
-#. Translators: Cursor shape: ...
-#: ../src/extra-strings.c:37
-msgid "I-Beam"
-msgstr "Forma d'I"
-
-#. Translators: Cursor shape: ...
-#: ../src/extra-strings.c:39
-msgid "Underline"
-msgstr "Subratllat"
-
-#. Translators: When command exits: ...
-#: ../src/extra-strings.c:42
-msgid "Exit the terminal"
-msgstr "Surt del terminal"
-
-#. Translators: When command exits: ...
-#: ../src/extra-strings.c:44
-msgid "Restart the command"
-msgstr "Reinicia l'ordre"
-
-#. Translators: When command exits: ...
-#: ../src/extra-strings.c:46
-msgid "Hold the terminal open"
-msgstr "Mantingues obert el terminal"
-
-#. Translators: Scrollbar is: ...
-#: ../src/extra-strings.c:49
-msgid "On the left side"
-msgstr "A l'esquerre"
-
-#. Translators: Scrollbar is: ...
-#: ../src/extra-strings.c:51
-msgid "On the right side"
-msgstr "A la dreta"
-
-#. Translators: When terminal commands set their own titles: ...
-#: ../src/extra-strings.c:56
-msgid "Replace initial title"
-msgstr "Reemplaça el títol inicial"
-
-#. Translators: When terminal commands set their own titles: ...
-#: ../src/extra-strings.c:58
-msgid "Append initial title"
-msgstr "Va abans del títol inicial"
-
-#. Translators: When terminal commands set their own titles: ...
-#: ../src/extra-strings.c:60
-msgid "Prepend initial title"
-msgstr "Va després del títol inicial"
-
-#. Translators: When terminal commands set their own titles: ...
-#: ../src/extra-strings.c:62
-msgid "Keep initial title"
-msgstr "Manté el títol inicial"
-
-#. Translators: This is the name of a colour scheme
-#: ../src/extra-strings.c:65
-msgid "Tango"
-msgstr "Tango"
-
-#. Translators: This is the name of a colour scheme
-#: ../src/extra-strings.c:67
-msgid "Linux console"
-msgstr "Consola Linux"
-
-#. Translators: This is the name of a colour scheme
-#: ../src/extra-strings.c:69
-msgid "XTerm"
-msgstr "XTerm"
-
-#. Translators: This is the name of a colour scheme
-#: ../src/extra-strings.c:71
-msgid "Rxvt"
-msgstr "Rxvt"
