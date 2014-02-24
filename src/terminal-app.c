@@ -219,6 +219,29 @@ terminal_app_get_screen_by_display_name (const char *display_name,
 	return screen;
 }
 
+static int
+terminal_app_get_workspace_for_window (TerminalWindow *window)
+{
+  int ret = -1;
+  guchar *data = NULL;
+  GdkAtom atom;
+  GdkAtom cardinal_atom;
+
+  atom = gdk_atom_intern_static_string ("_NET_WM_DESKTOP");
+  cardinal_atom = gdk_atom_intern_static_string ("CARDINAL");
+
+  gdk_property_get (gtk_widget_get_window(GTK_WIDGET(window)),
+                    atom, cardinal_atom, 0, 8, FALSE,
+		    NULL, NULL, NULL, &data);
+
+  if (data)
+    ret = *(int *)data;
+
+  g_free (data);
+  return ret;
+}
+
+
 /* Menubar mnemonics settings handling */
 
 static int
@@ -1688,32 +1711,38 @@ terminal_app_handle_options (TerminalApp *app,
 	for (lw = options->initial_windows;  lw != NULL; lw = lw->next)
 	{
 		InitialWindow *iw = lw->data;
-		TerminalWindow *window;
+		TerminalWindow *window = NULL;
 		GList *lt;
 
 		g_assert (iw->tabs);
 
-		/* Create & setup new window */
-		window = terminal_app_new_window (app, gdk_screen);
+        if ( lw == options->initial_windows && ((InitialTab *)iw->tabs->data)->attach_window )
+            window = terminal_app_get_current_window(app, gdk_screen, options->initial_workspace);
 
-		/* Restored windows shouldn't demand attention; see bug #586308. */
-		if (iw->source_tag == SOURCE_SESSION)
-			terminal_window_set_is_restored (window);
+        if (!window)
+        {
+            /* Create & setup new window */
+            window = terminal_app_new_window (app, gdk_screen);
 
-		if (options->startup_id != NULL)
-			gtk_window_set_startup_id (GTK_WINDOW (window), options->startup_id);
+            /* Restored windows shouldn't demand attention; see bug #586308. */
+            if (iw->source_tag == SOURCE_SESSION)
+                terminal_window_set_is_restored (window);
 
-		/* Overwrite the default, unique window role set in terminal_window_init */
-		if (iw->role)
-			gtk_window_set_role (GTK_WINDOW (window), iw->role);
+            if (options->startup_id != NULL)
+                gtk_window_set_startup_id (GTK_WINDOW (window), options->startup_id);
 
-		if (iw->force_menubar_state)
-			terminal_window_set_menubar_visible (window, iw->menubar_state);
+            /* Overwrite the default, unique window role set in terminal_window_init */
+            if (iw->role)
+                gtk_window_set_role (GTK_WINDOW (window), iw->role);
 
-		if (iw->start_fullscreen)
-			gtk_window_fullscreen (GTK_WINDOW (window));
-		if (iw->start_maximized)
-			gtk_window_maximize (GTK_WINDOW (window));
+            if (iw->force_menubar_state)
+                terminal_window_set_menubar_visible (window, iw->menubar_state);
+
+            if (iw->start_fullscreen)
+                gtk_window_fullscreen (GTK_WINDOW (window));
+            if (iw->start_maximized)
+                gtk_window_maximize (GTK_WINDOW (window));
+        }
 
 		/* Now add the tabs */
 		for (lt = iw->tabs; lt != NULL; lt = lt->next)
@@ -1842,13 +1871,41 @@ terminal_app_edit_encodings (TerminalApp     *app,
 	terminal_encoding_dialog_show (transient_parent);
 }
 
+/*
+* Get the window in the given screen and workspace. If nothing is found,
+* a NULL is returned.
+*/
 TerminalWindow *
-terminal_app_get_current_window (TerminalApp *app)
+terminal_app_get_current_window (TerminalApp *app,
+                                 GdkScreen *from_screen,
+                                 int workspace)
 {
+    GList *res = NULL;
+    TerminalWindow *ret = NULL;
+
 	if (app->windows == NULL)
 		return NULL;
 
-	return g_list_last (app->windows)->data;
+    res = g_list_last (app->windows);
+
+    g_assert (from_screen != NULL);
+
+    while (res)
+    {
+      int win_workspace;
+      if (gtk_window_get_screen(GTK_WINDOW(res->data)) != from_screen)
+        continue;
+
+      win_workspace = terminal_app_get_workspace_for_window(res->data);
+
+      /* Same workspace or if the window is set to show up on all workspaces */
+      if (win_workspace == workspace || win_workspace == -1)
+        ret = terminal_window_get_latest_focused (ret, TERMINAL_WINDOW(res->data));
+
+      res = g_list_previous (res);
+    }
+
+  return ret;
 }
 
 /**

@@ -101,6 +101,9 @@ void terminal_window_save_state (TerminalWindow *window,
                                  GKeyFile *key_file,
                                  const char *group);
 
+TerminalWindow *terminal_window_get_latest_focused (TerminalWindow *window1,
+                                                    TerminalWindow *window2);
+
 G_END_DECLS
 
 #endif /* TERMINAL_WINDOW_H */

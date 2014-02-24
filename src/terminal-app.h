@@ -115,7 +115,9 @@ TerminalScreen *terminal_app_new_terminal (TerminalApp     *app,
         char           **child_env,
         double           zoom);
 
-TerminalWindow *terminal_app_get_current_window (TerminalApp *app);
+TerminalWindow *terminal_app_get_current_window (TerminalApp *app,
+                                                 GdkScreen *screen,
+                                                 int curr_workspace);
 
 void terminal_app_manage_profiles (TerminalApp     *app,
                                    GtkWindow       *transient_parent);
