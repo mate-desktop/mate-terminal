@@ -51,6 +51,7 @@ initial_tab_new (const char *profile,
 	it->zoom = 1.0;
 	it->zoom_set = FALSE;
 	it->active = FALSE;
+    it->attach_window = FALSE;
 
 	return it;
 }
@@ -305,18 +306,22 @@ option_tab_callback (const gchar *option_name,
 {
 	TerminalOptions *options = data;
 	gboolean is_profile_id;
+    InitialWindow *iw;
+    InitialTab *it;    
 
 	is_profile_id = g_str_has_suffix (option_name, "-with-profile-internal-id");
 
 	if (options->initial_windows)
 	{
-		InitialWindow *iw;
-
 		iw = g_list_last (options->initial_windows)->data;
 		iw->tabs = g_list_append (iw->tabs, initial_tab_new (value, is_profile_id));
 	}
 	else
-		add_new_window (options, value, is_profile_id);
+    {
+        iw = add_new_window (options, value, is_profile_id);
+        it = g_list_last(iw->tabs)->data;
+        it->attach_window = TRUE;
+    }
 
 	return TRUE;
 }
@@ -707,6 +712,7 @@ terminal_options_parse (const char *working_directory,
 	options->default_maximize = FALSE;
 	options->execute = FALSE;
 	options->use_factory = TRUE;
+    options->initial_workspace = -1;
 
 	options->env = g_strdupv (env);
 	options->startup_id = g_strdup (startup_id && startup_id[0] ? startup_id : NULL);

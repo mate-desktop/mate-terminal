@@ -155,12 +155,13 @@ method_call_cb (GDBusConnection *connection,
 		TerminalOptions *options = NULL;
 		GVariant *v_wd, *v_display, *v_sid, *v_envv, *v_argv;
 		char *working_directory = NULL, *display_name = NULL, *startup_id = NULL;
+        int initial_workspace = -1;
 		char **envv = NULL, **argv = NULL;
 		int argc;
 		GError *error = NULL;
 
-		g_variant_get (parameters, "(@ay@ay@ay@ay@ay)",
-		               &v_wd, &v_display, &v_sid, &v_envv, &v_argv);
+        g_variant_get (parameters, "(@ay@ay@ay@ayi@ay)",
+                       &v_wd, &v_display, &v_sid, &v_envv, &initial_workspace, &v_argv);
 
 		working_directory = ay_to_string (v_wd, &error);
 		if (error)
@@ -175,10 +176,12 @@ method_call_cb (GDBusConnection *connection,
 		argv = ay_to_strv (v_argv, &argc);
 
 		_terminal_debug_print (TERMINAL_DEBUG_FACTORY,
-		                       "Factory invoked with working-dir='%s' display='%s' startup-id='%s'\n",
+                               "Factory invoked with working-dir='%s' display='%s' startup-id='%s'"
+                               "workspace='%d'\n",
 		                       working_directory ? working_directory : "(null)",
 		                       display_name ? display_name : "(null)",
-		                       startup_id ? startup_id : "(null)");
+		                       startup_id ? startup_id : "(null)",
+                               initial_workspace);
 
 		options = terminal_options_parse (working_directory,
 		                                  display_name,
@@ -189,6 +192,8 @@ method_call_cb (GDBusConnection *connection,
 		                                  &argc, &argv,
 		                                  &error,
 		                                  NULL);
+
+        options->initial_workspace = initial_workspace;
 
 		if (options != NULL)
 		{
@@ -233,6 +238,7 @@ bus_acquired_cb (GDBusConnection *connection,
 	    "<arg type='ay' name='display_name' direction='in' />"
 	    "<arg type='ay' name='startup_id' direction='in' />"
 	    "<arg type='ay' name='environment' direction='in' />"
+        "<arg type='i' name='workspace' direction='in' />"        
 	    "<arg type='ay' name='arguments' direction='in' />"
 	    "</method>"
 	    "</interface>"
@@ -340,8 +346,8 @@ name_lost_cb (GDBusConnection *connection,
 	_terminal_debug_print (TERMINAL_DEBUG_FACTORY,
 	                       "Forwarding arguments to existing instance\n");
 
-	g_variant_builder_init (&builder, G_VARIANT_TYPE ("(ayayayayay)"));
-
+    g_variant_builder_init (&builder, G_VARIANT_TYPE ("(ayayayayiay)"));
+    
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->default_working_dir));
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->display_name));
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->startup_id));
@@ -367,6 +373,8 @@ name_lost_cb (GDBusConnection *connection,
 	s = g_string_free (string, FALSE);
 	g_variant_builder_add (&builder, "@ay",
 	                       g_variant_new_from_data (G_VARIANT_TYPE ("ay"), s, len, TRUE, g_free, s));
+
+    g_variant_builder_add (&builder, "@i", g_variant_new_int32 (data->options->initial_workspace));
 
 	string = g_string_new (NULL);
 
@@ -510,6 +518,29 @@ get_factory_name_for_display (const char *display_name)
 	return g_string_free (name, FALSE);
 }
 
+static int
+get_initial_workspace (void)
+{
+  int ret = -1;
+  GdkWindow *window;
+  guchar *data = NULL;
+  GdkAtom atom;
+  GdkAtom cardinal_atom;
+
+  g_type_init ();
+
+  window = gdk_get_default_root_window();
+
+  atom = gdk_atom_intern_static_string ("_NET_CURRENT_DESKTOP");
+  cardinal_atom = gdk_atom_intern_static_string ("CARDINAL");
+
+  gdk_property_get (window, atom, cardinal_atom, 0, 8, FALSE, NULL, NULL, NULL, &data);
+
+  ret = *(int *)data;
+  g_free (data);
+  return ret;
+}
+
 int
 main (int argc, char **argv)
 {
@@ -609,6 +640,9 @@ main (int argc, char **argv)
 		data->exit_code = -1;
 		data->argv = argv_copy;
 		data->argc = argc_copy;
+
+        gtk_init(&argc, &argv);
+        options->initial_workspace = get_initial_workspace ();
 
 		owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
 		                           data->factory_name,

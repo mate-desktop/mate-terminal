@@ -97,6 +97,7 @@ struct _TerminalWindowPrivate
 
     /* Workaround until gtk+ bug #535557 is fixed */
     guint icon_title_set : 1;
+    time_t focus_time;
 };
 
 #define PROFILE_DATA_KEY "GT::Profile"
@@ -139,6 +140,9 @@ static gboolean terminal_window_state_event (GtkWidget            *widget,
 static gboolean terminal_window_delete_event (GtkWidget *widget,
         GdkEvent *event,
         gpointer data);
+static gboolean terminal_window_focus_in_event (GtkWidget *widget,
+                                                GdkEventFocus *event,
+                                                gpointer data);
 
 static gboolean notebook_button_press_cb     (GtkWidget *notebook,
         GdkEventButton *event,
@@ -2136,6 +2140,10 @@ terminal_window_init (TerminalWindow *window)
     g_signal_connect (G_OBJECT (window), "delete_event",
                       G_CALLBACK(terminal_window_delete_event),
                       NULL);
+    g_signal_connect (G_OBJECT (window), "focus_in_event",
+                      G_CALLBACK(terminal_window_focus_in_event),
+                      NULL);
+
 #ifdef MATE_ENABLE_DEBUG
     _TERMINAL_DEBUG_IF (TERMINAL_DEBUG_GEOMETRY)
     {
@@ -2381,6 +2389,20 @@ terminal_window_delete_event (GtkWidget *widget,
                               gpointer data)
 {
     return confirm_close_window_or_tab (TERMINAL_WINDOW (widget), NULL);
+}
+
+static gboolean
+terminal_window_focus_in_event (GtkWidget *widget,
+                                GdkEventFocus *event,
+                                gpointer data)
+{
+  TerminalWindow *window = TERMINAL_WINDOW (widget);
+  TerminalWindowPrivate *priv = window->priv;
+
+  if (event->in)
+    priv->focus_time = time(NULL);
+
+  return FALSE;
 }
 
 static void
@@ -4263,4 +4285,27 @@ terminal_window_save_state (TerminalWindow *window,
     tab_names = (char **) g_ptr_array_free (tab_names_array, FALSE);
     g_key_file_set_string_list (key_file, group, TERMINAL_CONFIG_WINDOW_PROP_TABS, (const char * const *) tab_names, len);
     g_strfreev (tab_names);
+}
+
+
+TerminalWindow *
+terminal_window_get_latest_focused (TerminalWindow *window1,
+                                    TerminalWindow *window2)
+{
+  TerminalWindowPrivate *priv1 = NULL;
+  TerminalWindowPrivate *priv2 = NULL;
+
+  if (!window1)
+    return window2;
+
+  if (!window2)
+    return window1;
+
+  priv1 = window1->priv;
+  priv2 = window2->priv;
+
+  if (priv2->focus_time > priv1->focus_time)
+    return window2;
+
+  return window1;
 }

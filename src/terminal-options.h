@@ -53,6 +53,7 @@ typedef struct
 	char    *config_file;
 	gboolean load_config;
 	gboolean save_config;
+    int      initial_workspace;
 } TerminalOptions;
 
 typedef struct
@@ -65,6 +66,7 @@ typedef struct
 	double zoom;
 	guint zoom_set : 1;
 	guint active : 1;
+    guint attach_window : 1;
 } InitialTab;
 
 typedef struct
