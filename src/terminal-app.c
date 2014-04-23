@@ -37,7 +37,7 @@
 #include "profile-editor.h"
 #include "terminal-encoding.h"
 #include "terminal-gsettings.h"
-#include "terminal-dconf.h"
+#include <libmate-desktop/mate-dconf.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -331,7 +331,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	terminal_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
-	if (!terminal_dconf_recursive_reset (profile_dir, &error))
+	if (!mate_dconf_recursive_reset (profile_dir, &error))
 	{
 		g_warning ("Failed to recursively unset %s: %s\n", profile_dir, error->message);
 		g_error_free (error);

@@ -23,8 +23,6 @@ mate_terminal_SOURCES= \
 	terminal-accels.h \
 	terminal-app.c \
 	terminal-app.h \
-	terminal-dconf.c \
-	terminal-dconf.h \
 	terminal-debug.c \
 	terminal-debug.h \
 	terminal-encoding.c \
@@ -80,20 +78,17 @@ mate_terminal_CPPFLAGS = \
 	-DGDK_PIXBUF_DISABLE_SINGLE_INCLUDES \
 	-DGTK_DISABLE_SINGLE_INCLUDES \
 	$(DISABLE_DEPRECATED) \
-	$(DCONF_CFLAGS) \
 	$(AM_CPPFLAGS)
 
 mate_terminal_CFLAGS = \
 	$(TERM_CFLAGS) \
 	$(WARN_CFLAGS) \
-	$(DCONF_CFLAGS) \
 	$(AM_CFLAGS)
 
 mate_terminal_LDFLAGS = -lICE
 
 mate_terminal_LDADD = \
 	skey/libskey.la \
-	$(DCONF_LIBS) \
 	$(TERM_LIBS)
 
 if WITH_SMCLIENT
