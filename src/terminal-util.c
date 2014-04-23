@@ -37,9 +37,10 @@
 #include <X11/Xatom.h>
 #endif
 
+#include <libmate-desktop/mate-gsettings.h>
+
 #include "terminal-accels.h"
 #include "terminal-app.h"
-#include "terminal-gsettings.h"
 #include "terminal-intl.h"
 #include "terminal-util.h"
 #include "terminal-window.h"
@@ -611,7 +612,7 @@ setup_ignore_host_env (GHashTable *env_table,
 	GSList *ignore;
 	gchar **ignore_strv = g_settings_get_strv (settings, "ignore-hosts");
 
-	ignore = terminal_gsettings_strv_to_gslist ((const gchar *const *)ignore_strv);
+	ignore = mate_gsettings_strv_to_gslist ((const gchar *const *)ignore_strv);
 	if (ignore)
 	{
 		GString *buf = g_string_sized_new (64);

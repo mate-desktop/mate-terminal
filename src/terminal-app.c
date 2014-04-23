@@ -36,8 +36,8 @@
 #include "terminal-util.h"
 #include "profile-editor.h"
 #include "terminal-encoding.h"
-#include "terminal-gsettings.h"
 #include <libmate-desktop/mate-dconf.h>
+#include <libmate-desktop/mate-gsettings.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -328,7 +328,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
 	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	terminal_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
+	mate_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
 	if (!mate_dconf_recursive_reset (profile_dir, &error))
@@ -756,7 +756,7 @@ terminal_app_profile_list_notify_cb (GSettings *settings,
 	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING)))
 		goto ensure_one_profile;
 
-	value_list = terminal_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
+	value_list = mate_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
 
 	/* Add any new ones */
 	for (sl = value_list; sl != NULL; sl = sl->next)
@@ -928,7 +928,7 @@ terminal_app_encoding_list_notify_cb (GSettings *settings,
 	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
 	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY))
-		strings = terminal_gsettings_strv_to_gslist (g_variant_get_strv (val, NULL));
+		strings = mate_gsettings_strv_to_gslist (g_variant_get_strv (val, NULL));
 	else
 		strings = NULL;
 
@@ -1088,7 +1088,7 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     new_profile /* adopts the refcount */);
 
 		/* And now save the new profile name to GSettings */
-		terminal_gsettings_append_strv (app->settings_global,
+		mate_gsettings_append_strv (app->settings_global,
 						PROFILE_LIST_KEY,
 						new_profile_name);
 

@@ -27,8 +27,6 @@ mate_terminal_SOURCES= \
 	terminal-debug.h \
 	terminal-encoding.c \
 	terminal-encoding.h \
-	terminal-gsettings.c \
-	terminal-gsettings.h \
 	terminal-info-bar.c \
 	terminal-info-bar.h \
 	terminal-intl.h \
