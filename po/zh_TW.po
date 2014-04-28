@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-25 23:34+0100\n"
-"PO-Revision-Date: 2014-02-16 12:32+0000\n"
+"PO-Revision-Date: 2014-04-07 11:05+0000\n"
 "Last-Translator: 柏諺 黃 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgstr "解析指令時發生錯誤： %s"
 #: ../src/profile-editor.c:505
 #, c-format
 msgid "Editing Profile “%s”"
-msgstr "正在編輯側寫檔「%s」"
+msgstr "正在編輯設定檔「%s」"
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
@@ -171,15 +171,15 @@ msgstr "捷徑鍵(_S):"
 
 #: ../src/profile-manager.ui.h:1
 msgid "Profiles"
-msgstr "側寫檔"
+msgstr "設定檔"
 
 #: ../src/profile-manager.ui.h:2
 msgid "_Profile used when launching a new terminal:"
-msgstr "當開啟新的終端機時使用的側寫檔(_P):"
+msgstr "當開啟新的終端機時使用新的設定檔(_P):"
 
 #: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:152
 msgid "New Profile"
-msgstr "新增側寫檔"
+msgstr "新增設定檔"
 
 #: ../src/profile-new-dialog.ui.h:2
 msgid "C_reate"
@@ -187,7 +187,7 @@ msgstr "建立(_R)"
 
 #: ../src/profile-new-dialog.ui.h:3
 msgid "Profile _name:"
-msgstr "側寫檔名稱(_N):"
+msgstr "設定檔名稱(_N):"
 
 #: ../src/profile-new-dialog.ui.h:4
 msgid "_Base on:"
@@ -338,11 +338,11 @@ msgstr "永不閃爍"
 
 #: ../src/profile-preferences.ui.h:27
 msgid "Profile Editor"
-msgstr "側寫檔編輯器"
+msgstr "設定檔編輯器"
 
 #: ../src/profile-preferences.ui.h:28
 msgid "_Profile name:"
-msgstr "側寫檔名稱(_P):"
+msgstr "設定檔名稱(_P):"
 
 #: ../src/profile-preferences.ui.h:29
 msgid "_Use the system fixed width font"
@@ -785,36 +785,36 @@ msgstr "捷徑鍵(_K)"
 
 #: ../src/terminal-app.c:460
 msgid "Click button to choose profile"
-msgstr "按下本按鈕來選取側寫檔"
+msgstr "按下本按鈕來選取設定檔"
 
 #: ../src/terminal-app.c:543
 msgid "Profile list"
-msgstr "側寫檔清單"
+msgstr "設定檔清單"
 
 #: ../src/terminal-app.c:604
 #, c-format
 msgid "Delete profile “%s”?"
-msgstr "刪除側寫檔“%s”？"
+msgstr "刪除設定檔“%s”？"
 
 #: ../src/terminal-app.c:620
 msgid "Delete Profile"
-msgstr "刪除側寫檔"
+msgstr "刪除設定檔"
 
 #: ../src/terminal-app.c:1053
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "名為“%s”的側寫檔已經存在。您是否想建構另一個有相同名字的側寫檔？"
+msgstr "名為“%s”的設定檔已經存在。您是否想建構另一個有相同名字的設定檔？"
 
 #: ../src/terminal-app.c:1148
 msgid "Choose base profile"
-msgstr "選取基礎側寫檔"
+msgstr "選取基礎設定檔"
 
 #: ../src/terminal-app.c:1751
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
-msgstr "指定的側寫檔「%s」不存在，改為使用預設的側寫檔\n"
+msgstr "指定的設定檔「%s」不存在，改為使用預設的設定檔\n"
 
 #: ../src/terminal-app.c:1775
 #, c-format
@@ -988,7 +988,7 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "這個版本的 mate-terminal 不再支援「%s」選項；請建立您需要的側寫檔，然後使用新的「--profile」選項\n"
+msgstr "這個版本的 mate-terminal 不再支援「%s」選項；請建立您需要的設定檔，然後使用新的「--profile」選項\n"
 
 #: ../src/terminal-options.c:208
 #, c-format
@@ -1050,11 +1050,11 @@ msgstr "將終端機組態儲存為檔案"
 
 #: ../src/terminal-options.c:981
 msgid "Open a new window containing a tab with the default profile"
-msgstr "開啟新的終端機視窗，當中含有預設的側寫檔的分頁。"
+msgstr "開啟新的終端機視窗，當中含有預設的設定檔的分頁。"
 
 #: ../src/terminal-options.c:990
 msgid "Open a new tab in the last-opened window with the default profile"
-msgstr "在最後開啟的視窗中，使用預設的側寫檔開啟新的終端機分頁。"
+msgstr "在最後開啟的視窗中，使用預設的設定檔開啟新的終端機分頁。"
 
 #: ../src/terminal-options.c:1004
 msgid "Turn on the menubar"
@@ -1099,11 +1099,11 @@ msgstr "在終端機中執行這個選項的引數"
 
 #: ../src/terminal-options.c:1081
 msgid "Use the given profile instead of the default profile"
-msgstr "使用指定的側寫檔代替預設的側寫檔"
+msgstr "使用指定的設定檔代替預設的設定檔"
 
 #: ../src/terminal-options.c:1082
 msgid "PROFILE-NAME"
-msgstr "側寫檔名稱"
+msgstr "設定檔名稱"
 
 #: ../src/terminal-options.c:1090
 msgid "Set the terminal title"
@@ -1173,7 +1173,7 @@ msgstr "未命名的"
 
 #: ../src/terminal-screen.c:1519
 msgid "_Profile Preferences"
-msgstr "側寫檔偏好設定(_P)"
+msgstr "設定檔偏好設定(_P)"
 
 #: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
 msgid "_Relaunch"
@@ -1294,7 +1294,7 @@ msgstr "求助(_H)"
 
 #: ../src/terminal-window.c:1842
 msgid "New _Profile…"
-msgstr "新增側寫檔(_P)…"
+msgstr "新增設定檔(_P)…"
 
 #: ../src/terminal-window.c:1847
 msgid "_Save Contents"
@@ -1314,7 +1314,7 @@ msgstr "貼上檔案名稱(_F)"
 
 #: ../src/terminal-window.c:1884
 msgid "P_rofiles…"
-msgstr "側寫檔(_R)…"
+msgstr "設定檔(_R)…"
 
 #: ../src/terminal-window.c:1889
 msgid "_Keyboard Shortcuts…"
@@ -1322,7 +1322,7 @@ msgstr "鍵盤捷徑鍵(_K)…"
 
 #: ../src/terminal-window.c:1894
 msgid "Pr_ofile Preferences"
-msgstr "側寫檔偏好設定(_O)"
+msgstr "設定檔偏好設定(_O)"
 
 #: ../src/terminal-window.c:1918
 msgid "_Find..."
@@ -1351,7 +1351,7 @@ msgstr "漸進式搜尋(_I)…"
 #. Terminal menu
 #: ../src/terminal-window.c:1951
 msgid "Change _Profile"
-msgstr "變更側寫檔(_P)"
+msgstr "變更設定檔(_P)"
 
 #: ../src/terminal-window.c:1953
 msgid "_Previous Profile"
@@ -1435,7 +1435,7 @@ msgstr "複製連結位址(_C)"
 
 #: ../src/terminal-window.c:2056
 msgid "P_rofiles"
-msgstr "側寫檔(_R)"
+msgstr "設定檔(_R)"
 
 #: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
 msgid "C_lose Window"
