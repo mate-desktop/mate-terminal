@@ -45,10 +45,7 @@
 #include "terminal-util.h"
 #include "terminal-window.h"
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#define GDK_WINDOW_XWINDOW GDK_WINDOW_XID
- 	#define GDK_DRAWABLE_XID GDK_WINDOW_XID
-#else
+#if !GTK_CHECK_VERSION(3, 0, 0)
 	#define gdk_error_trap_pop_ignored gdk_error_trap_pop
 #endif
 
@@ -1027,11 +1024,7 @@ gboolean
 terminal_util_x11_get_net_wm_desktop (GdkWindow *window,
                                       guint32   *desktop)
 {
-	#if GTK_CHECK_VERSION(3, 0, 0)
 	GdkDisplay *display = gdk_window_get_display (window);
-	#else
-	GdkDisplay *display = gdk_drawable_get_display (window);
-	#endif
 	Atom type;
 	int format;
 	guchar *data;
@@ -1039,7 +1032,7 @@ terminal_util_x11_get_net_wm_desktop (GdkWindow *window,
 	gboolean result = FALSE;
 
 	if (XGetWindowProperty (GDK_DISPLAY_XDISPLAY (display),
-	                        GDK_DRAWABLE_XID (window),
+	                        GDK_WINDOW_XID (window),
 	                        gdk_x11_get_xatom_by_name_for_display (display,
 	                                "_NET_WM_DESKTOP"),
 	                        0, G_MAXLONG, False, AnyPropertyType,
@@ -1074,11 +1067,7 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 	 * http://bugzilla.mate.org/show_bug.cgi?id=586311 asks for GTK+
 	 * to just handle everything behind the scenes including the desktop.
 	 */
-	#if GTK_CHECK_VERSION(3, 0, 0)
 	GdkScreen *screen = gdk_window_get_screen (window);
-	#else
-	GdkScreen *screen = gdk_drawable_get_screen (window);
-	#endif
 	GdkDisplay *display = gdk_screen_get_display (screen);
 	Display *xdisplay = GDK_DISPLAY_XDISPLAY (display);
 	char *wm_selection_name;
@@ -1103,7 +1092,7 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 		xclient.type = ClientMessage;
 		xclient.serial = 0;
 		xclient.send_event = True;
-		xclient.window = GDK_WINDOW_XWINDOW (window);
+		xclient.window = GDK_WINDOW_XID (window);
 		xclient.message_type = gdk_x11_get_xatom_by_name_for_display (display, "_NET_WM_DESKTOP");
 		xclient.format = 32;
 
@@ -1114,7 +1103,7 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 		xclient.data.l[4] = 0;
 
 		XSendEvent (xdisplay,
-		            GDK_WINDOW_XWINDOW (gdk_screen_get_root_window (screen)),
+		            GDK_WINDOW_XID (gdk_screen_get_root_window (screen)),
 		            False,
 		            SubstructureRedirectMask | SubstructureNotifyMask,
 		            (XEvent *)&xclient);
@@ -1124,7 +1113,7 @@ terminal_util_x11_set_net_wm_desktop (GdkWindow *window,
 		gulong long_desktop = desktop;
 
 		XChangeProperty (xdisplay,
-		                 GDK_DRAWABLE_XID (window),
+		                 GDK_WINDOW_XID (window),
 		                 gdk_x11_get_xatom_by_name_for_display (display,
 		                         "_NET_WM_DESKTOP"),
 		                 XA_CARDINAL, 32, PropModeReplace,
@@ -1145,11 +1134,7 @@ void
 terminal_util_x11_clear_demands_attention (GdkWindow *window)
 {
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
 	GdkScreen *screen = gdk_window_get_screen (window);
-	#else
-	GdkScreen *screen = gdk_drawable_get_screen (window);
-	#endif
 	GdkDisplay *display = gdk_screen_get_display (screen);
 	XClientMessageEvent xclient;
 
@@ -1157,7 +1142,7 @@ terminal_util_x11_clear_demands_attention (GdkWindow *window)
 	xclient.type = ClientMessage;
 	xclient.serial = 0;
 	xclient.send_event = True;
-	xclient.window = GDK_WINDOW_XWINDOW (window);
+	xclient.window = GDK_WINDOW_XID (window);
 	xclient.message_type = gdk_x11_get_xatom_by_name_for_display (display, "_NET_WM_STATE");
 	xclient.format = 32;
 
@@ -1168,7 +1153,7 @@ terminal_util_x11_clear_demands_attention (GdkWindow *window)
 	xclient.data.l[4] = 0;
 
 	XSendEvent (GDK_DISPLAY_XDISPLAY (display),
-	            GDK_WINDOW_XWINDOW (gdk_screen_get_root_window (screen)),
+	            GDK_WINDOW_XID (gdk_screen_get_root_window (screen)),
 	            False,
 	            SubstructureRedirectMask | SubstructureNotifyMask,
 	            (XEvent *)&xclient);
@@ -1186,11 +1171,7 @@ terminal_util_x11_clear_demands_attention (GdkWindow *window)
 gboolean
 terminal_util_x11_window_is_minimized (GdkWindow *window)
 {
-	#if GTK_CHECK_VERSION(3, 0, 0)
 	GdkDisplay *display = gdk_window_get_display (window);
-	#else
-	GdkDisplay *display = gdk_drawable_get_display (window);
-	#endif
 
 	Atom type;
 	gint format;

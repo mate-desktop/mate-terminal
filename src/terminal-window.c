@@ -152,11 +152,7 @@ static gboolean notebook_button_press_cb     (GtkWidget *notebook,
 static gboolean notebook_popup_menu_cb       (GtkWidget *notebook,
         TerminalWindow *window);
 static void notebook_page_selected_callback  (GtkWidget       *notebook,
-#if GTK_CHECK_VERSION (2, 90, 6)
         GtkWidget       *page,
-#else
-        gpointer         page,
-#endif
         guint            page_num,
         TerminalWindow  *window);
 static void notebook_page_added_callback     (GtkWidget       *notebook,
@@ -2167,11 +2163,7 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook), TRUE);
     gtk_notebook_set_show_border (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
-    #if GTK_CHECK_VERSION (3, 0, 0)
-      gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
-    #else
-      gtk_notebook_set_group (GTK_NOTEBOOK (priv->notebook), GUINT_TO_POINTER (1));
-    #endif
+    gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook),
                                  TRUE);
     g_signal_connect (priv->notebook, "button-press-event",
@@ -2188,10 +2180,8 @@ terminal_window_init (TerminalWindow *window)
                            G_CALLBACK (terminal_window_update_tabs_menu_sensitivity),
                            window, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
 
-    #if GTK_CHECK_VERSION(3, 0, 0)
     g_signal_connect (priv->notebook, "create-window",
                     G_CALLBACK (handle_tab_droped_on_desktop), window);
-    #endif
 
     gtk_box_pack_end (GTK_BOX (main_vbox), priv->notebook, TRUE, TRUE, 0);
     gtk_widget_show (priv->notebook);
@@ -2306,9 +2296,6 @@ terminal_window_class_init (TerminalWindowClass *klass)
                          "}\n"
                          "widget \"*.mate-terminal-tab-close-button\" style \"mate-terminal-tab-close-button-style\"");
 
-    #if !GTK_CHECK_VERSION(3, 0, 0)
-    gtk_notebook_set_window_creation_hook (handle_tab_droped_on_desktop, NULL, NULL);
-    #endif
 }
 
 static void
@@ -2900,11 +2887,7 @@ notebook_popup_menu_cb (GtkWidget *widget,
 
 static void
 notebook_page_selected_callback (GtkWidget       *notebook,
-#if GTK_CHECK_VERSION (2, 90, 6)
                                  GtkWidget       *page_widget,
-#else
-                                 gpointer         useless_crap,
-#endif
                                  guint            page_num,
                                  TerminalWindow  *window)
 {
@@ -2912,9 +2895,6 @@ notebook_page_selected_callback (GtkWidget       *notebook,
     GtkWidget *widget;
     TerminalScreen *screen;
     int old_grid_width, old_grid_height;
-#if !GTK_CHECK_VERSION (2, 90, 6)
-    GtkWidget *page_widget;
-#endif
 
     _terminal_debug_print (TERMINAL_DEBUG_MDI,
                            "[window %p] MDI: page-selected %d\n",
@@ -2922,10 +2902,6 @@ notebook_page_selected_callback (GtkWidget       *notebook,
 
     if (priv->disposed)
         return;
-
-#if !GTK_CHECK_VERSION (2, 90, 6)
-    page_widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook), page_num);
-#endif
 
     screen = terminal_screen_container_get_screen (TERMINAL_SCREEN_CONTAINER (page_widget));
     widget = GTK_WIDGET (screen);
@@ -3970,14 +3946,8 @@ terminal_set_title_callback (GtkAction *action,
     g_signal_connect (dialog, "delete-event",
                       G_CALLBACK (terminal_util_dialog_response_on_delete), NULL);
 
-#if GTK_CHECK_VERSION (2, 90, 6)
     message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
     gtk_container_foreach (GTK_CONTAINER (message_area), (GtkCallback) gtk_widget_hide, NULL);
-#else
-    label = GTK_MESSAGE_DIALOG (dialog)->label;
-    gtk_widget_hide (label);
-    message_area = gtk_widget_get_parent (label);
-#endif
 
     hbox = gtk_hbox_new (FALSE, 12);
     gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
@@ -4056,11 +4026,7 @@ tabs_next_or_previous_tab_cb (GtkAction *action,
     gtk_binding_set_activate (gtk_binding_set_by_class (klass),
                               keyval,
                               GDK_CONTROL_MASK,
-                            #if GTK_CHECK_VERSION(3, 0, 0)
                               G_OBJECT (priv->notebook));
-                            #else
-                              GTK_OBJECT (priv->notebook));
-                            #endif
 }
 
 static void
