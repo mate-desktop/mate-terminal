@@ -527,8 +527,6 @@ get_initial_workspace (void)
   GdkAtom atom;
   GdkAtom cardinal_atom;
 
-  g_type_init ();
-
   window = gdk_get_default_root_window();
 
   atom = gdk_atom_intern_static_string ("_NET_CURRENT_DESKTOP");
