@@ -468,7 +468,6 @@ profile_palette_notify_colorpickers_cb (TerminalProfile *profile,
 static void
 custom_command_entry_changed_cb (GtkEntry *entry)
 {
-#if GTK_CHECK_VERSION (2, 16, 0)
 	const char *command;
 	GError *error = NULL;
 
@@ -490,7 +489,6 @@ custom_command_entry_changed_cb (GtkEntry *entry)
 
 		g_error_free (error);
 	}
-#endif /* GTK+ >= 2.16.0 */
 }
 
 static void
