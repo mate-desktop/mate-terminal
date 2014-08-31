@@ -241,6 +241,10 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SILENT_BELL))
 		SET_SENSITIVE ("bell-checkbutton",
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_SILENT_BELL));
+		
+	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_COPY_SELECTION))
+		SET_SENSITIVE ("copy-checkbutton",
+		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_COPY_SELECTION));
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_WORD_CHARS))
 		SET_SENSITIVE ("word-chars-entry",
@@ -943,6 +947,8 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT ("use-theme-colors-checkbutton", TERMINAL_PROFILE_USE_THEME_COLORS);
 	CONNECT ("word-chars-entry", TERMINAL_PROFILE_WORD_CHARS);
 	CONNECT_WITH_FLAGS ("bell-checkbutton", TERMINAL_PROFILE_SILENT_BELL, FLAG_INVERT_BOOL);
+	/* CONNECT_WITH_FLAGS ("copy-checkbutton", TERMINAL_PROFILE_COPY_SELECTION, FLAG_INVERT_BOOL); */
+	CONNECT ("copy-checkbutton", TERMINAL_PROFILE_COPY_SELECTION);
 
 #undef CONNECT
 #undef CONNECT_WITH_FLAGS
