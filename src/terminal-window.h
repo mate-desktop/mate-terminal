@@ -100,6 +100,9 @@ gboolean terminal_window_uses_argb_visual (TerminalWindow *window);
 void terminal_window_save_state (TerminalWindow *window,
                                  GKeyFile *key_file,
                                  const char *group);
+void
+terminal_window_update_copy_selection (TerminalScreen *screen, 
+                                       TerminalWindow *window);
 
 TerminalWindow *terminal_window_get_latest_focused (TerminalWindow *window1,
                                                     TerminalWindow *window2);

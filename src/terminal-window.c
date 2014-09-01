@@ -99,7 +99,9 @@ struct _TerminalWindowPrivate
 
     /* Workaround until gtk+ bug #535557 is fixed */
     guint icon_title_set : 1;
-    time_t focus_time;
+    time_t focus_time;    
+    /* should we copy selection to clibpoard */
+    int copy_selection;
 };
 
 #define PROFILE_DATA_KEY "GT::Profile"
@@ -978,6 +980,10 @@ terminal_window_update_copy_sensitivity (TerminalScreen *screen,
 
     action = gtk_action_group_get_action (priv->action_group, "EditCopy");
     gtk_action_set_sensitive (action, can_copy);
+
+    /* 24/07/2014 madars.vitolins@gmail.com, sync to clibboard */
+    if (priv->copy_selection)
+        vte_terminal_copy_clipboard(VTE_TERMINAL(screen));
 }
 
 static void
@@ -2402,16 +2408,17 @@ terminal_window_show (GtkWidget *widget)
 
     gtk_widget_get_allocation (widget, &widget_allocation);
 
-#if 0
     TerminalWindowPrivate *priv = window->priv;
 
     if (priv->active_screen != NULL)
     {
+        terminal_window_update_copy_selection (priv->active_screen, window);
+#if 0
         /* At this point, we have our GdkScreen, and hence the right
          * font size, so we can go ahead and size the window. */
         terminal_window_set_size (window, priv->active_screen, FALSE);
-    }
 #endif
+    }
 
     terminal_window_update_geometry (window);
 
@@ -3096,6 +3103,16 @@ notebook_page_removed_callback (GtkWidget       *notebook,
     {
         gtk_widget_destroy (GTK_WIDGET (window));
     }
+}
+
+void
+terminal_window_update_copy_selection (TerminalScreen *screen, 
+        TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    priv->copy_selection = 
+        terminal_profile_get_property_boolean (terminal_screen_get_profile (screen), 
+            TERMINAL_PROFILE_COPY_SELECTION);
 }
 
 void
