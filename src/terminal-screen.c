@@ -943,6 +943,11 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 		 * update_on_realize
 		 */
 		terminal_window_update_geometry (window);
+		
+		/* madars.vitolins@gmail.com 24/07/2014 - 
+		 * update terminal window config
+		 * with the flag of copy selection to cliboard or not. */
+		terminal_window_update_copy_selection(screen, window);
 	}
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SCROLLBAR_POSITION))
