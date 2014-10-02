@@ -1649,6 +1649,8 @@ terminal_window_state_event (GtkWidget            *widget,
     return FALSE;
 }
 
+#ifdef GDK_WINDOWING_X11
+
 static void
 terminal_window_window_manager_changed_cb (GdkScreen *screen,
         TerminalWindow *window)
@@ -1663,12 +1665,11 @@ terminal_window_window_manager_changed_cb (GdkScreen *screen,
     gtk_action_set_sensitive (action, supports_fs);
 }
 
-#ifdef GDK_WINDOWING_X11
-
 static void
 terminal_window_composited_changed_cb (GdkScreen *screen,
                                        TerminalWindow *window)
 {
+#if 0
     TerminalWindowPrivate *priv = window->priv;
     gboolean composited;
 
@@ -1737,6 +1738,7 @@ terminal_window_composited_changed_cb (GdkScreen *screen,
          */
         priv->clear_demands_attention = TRUE;
     }
+#endif
 }
 
 #endif /* GDK_WINDOWING_X11 */
