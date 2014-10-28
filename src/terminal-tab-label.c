@@ -48,7 +48,7 @@ enum
     LAST_SIGNAL
 };
 
-static guint signals[LAST_SIGNAL];
+static guint signals[LAST_SIGNAL] = { 0 };
 
 G_DEFINE_TYPE (TerminalTabLabel, terminal_tab_label, GTK_TYPE_HBOX);
 
