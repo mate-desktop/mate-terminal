@@ -148,7 +148,7 @@ static char* terminal_screen_check_match       (TerminalScreen            *scree
         int                   row,
         int                  *flavor);
 
-static guint signals[LAST_SIGNAL];
+static guint signals[LAST_SIGNAL] = { 0 };
 
 #define USERCHARS "-[:alnum:]"
 #define USERCHARS_CLASS "[" USERCHARS "]"
