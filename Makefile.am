@@ -10,6 +10,11 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-silent-rules \
 	--with-gtk=2.0
 
+@INTLTOOL_XML_RULE@
+appdatadir = $(datadir)/appdata
+appdata_in_files = mate-terminal.appdata.xml.in
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+
 desktopdir = $(datadir)/applications
 desktop_in_files = @PACKAGE@.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
@@ -26,10 +31,12 @@ EXTRA_DIST = 			\
 	xmldocs.make		\
 	omf.make		\
 	mate-terminal.wrapper   \
-	$(man_MANS) 	\
+	$(appdata_in_files)	\
+	$(man_MANS)		\
 	$(NULL)
 
 CLEANFILES = \
+	mate-terminal.appdata.xml \
 	$(desktop_DATA)	\
 	$(NULL)
 
