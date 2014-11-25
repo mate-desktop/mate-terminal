@@ -532,10 +532,10 @@ get_initial_workspace (void)
   atom = gdk_atom_intern_static_string ("_NET_CURRENT_DESKTOP");
   cardinal_atom = gdk_atom_intern_static_string ("CARDINAL");
 
-  gdk_property_get (window, atom, cardinal_atom, 0, 8, FALSE, NULL, NULL, NULL, &data);
-
-  ret = *(int *)data;
-  g_free (data);
+  if (gdk_property_get (window, atom, cardinal_atom, 0, 8, FALSE, NULL, NULL, NULL, &data)) {
+	  ret = *(int *)data;
+	  g_free (data);
+  }
   return ret;
 }
 
