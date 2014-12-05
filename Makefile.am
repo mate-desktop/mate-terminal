@@ -5,7 +5,6 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 NULL =
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--disable-scrollkeeper \
 	--disable-schemas-install \
 	--disable-silent-rules \
 	--with-gtk=2.0
@@ -58,11 +57,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/xmldocs.make \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(NULL)
-
-# hack from sound-juicer to get around scrollkeeper's leaving a big
-# mess behind.
-distuninstallcheck_listfiles = 	\
-        find -regex '.*/var/scrollkeeper/.*' -prune -or -type f -print
 
 # Build ChangeLog from GIT  history
 dist-hook:
