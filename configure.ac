@@ -58,20 +58,26 @@ AC_MSG_RESULT([$with_gtk])
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
        GTK_REQUIRED=2.24.0
+       GDK_TARGETS="$($PKG_CONFIG --variable target gdk-$GTK_API_VERSION)"
        VTE_PC_VERSION=
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=2.91.1
+       GDK_TARGETS="$($PKG_CONFIG --variable targets gdk-$GTK_API_VERSION)"
        VTE_PC_VERSION=-2.90
        ;;
 esac
 
-GDK_TARGET="$($PKG_CONFIG --variable target gdk-$GTK_API_VERSION)"
-
-case "$GDK_TARGET" in
-  x11) PLATFORM_DEPS="x11" ;;
-  *) PLATFORM_DEPS="" ;;
-esac
+PLATFORM_DEPS=
+for target in $GDK_TARGETS; do
+  case "$target" in
+    x11) PLATFORM_DEPS="x11" ;;
+    broadway) ;;
+    wayland) ;;
+    win32|quartz) AC_MSG_WARN([unsupported GDK backend $target]) ;;
+    *) AC_MSG_WARN([unknown GDK backend $target]) ;;
+  esac
+done
 
 PKG_CHECK_MODULES([TERM],
   [vte$VTE_PC_VERSION >= $VTE_REQUIRED
@@ -91,9 +97,9 @@ AC_MSG_CHECKING([which smclient backend to use])
 AC_ARG_WITH([smclient],
   [AS_HELP_STRING([--with-smclient-backend],[which smclient backend to use (xsmp/win32/quartz)])],
   [],
-  [case "$GDK_TARGET" in
+  [case "$PLATFORM_DEPS" in
     x11) with_smclient=xsmp SMCLIENT_PKGS="sm" ;;
-    win32|quartz) with_smclient=$GDK_TARGET ;;
+    win32|quartz) with_smclient=$PLATFORM_DEPS ;;
     *) with_smclient=no ;;
    esac])
 AC_MSG_RESULT([$with_smclient])
