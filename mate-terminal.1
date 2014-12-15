@@ -1,101 +1,150 @@
-.\" mate-terminal manual page
-.TH "MATE-TERMINAL" 1 "12 February 2014" "MATE Desktop Environment"
+.TH MATE-TERMINAL "1" "11 December 2014" "MATE Desktop Environment" "User Commands"
 .\" Please adjust this date whenever revising the manpage.
 .\"
-.SH "NAME" 
-mate-terminal \- The MATE Terminal Emulator 
-.SH "SYNOPSIS" 
-\fBmate-terminal\fR [\fB-e, \-\-command\fI=STRING\fR\fP]  [\fB\-\-window-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-tab-with-profile\fI=PROFILENAME\fR\fP]  [\fB\-\-window-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-tab-with-profile-internal-id\fI=PROFILEID\fR\fP]  [\fB\-\-role\fI=ROLE\fR\fP]  [\fB\-\-show-menubar\fP]  [\fB\-\-hide-menubar\fP]  [\fB\-\-geometry\fI=GEOMETRY\fR\fP]  [\fB\-\-disable-factory\fP]  [\fB-t, \-\-title\fI=TITLE\fR\fP]  [\fB\-\-working-directory\fI=DIRNAME\fR\fP]  [\fB-?, \-\-help\fP]  
-.SH "DESCRIPTION" 
-.SS MATE Terminal is a terminal emulation application that you can use to perform the following actions: 
-.PP 
-Access a UNIX shell in the MATE environment. 
-.PP 
-A shell is a program that interprets and executes the commands 
-that you type at a command line prompt. When you start MATE Terminal, 
-the application starts the default shell that is specified in your 
-system account. You can switch to a different shell at any 
-time. 
-.PP 
-Run any application that is designed to run on VT102, VT220, 
-and xterm terminals. 
-.PP 
-MATE Terminal emulates the xterm program developed by the X 
-Consortium. In turn, the xterm program emulates the DEC VT102 terminal 
-and also supports the DEC VT220 escape sequences. An escape sequence 
-is a series of characters that starts with the Esc character. 
-.PP 
-MATE Terminal accepts all of the escape sequences that the VT102 
-and VT220 terminals use for functions such as positioning the cursor 
-and clearing the screen. 
-.SH "OPTIONS" 
-.IP "\fB\-e, \-\-command=\fISTRING\fR\fP" 7 
-Execute the argument to this option inside the terminal. 
-.IP "\fB\-\-window-with-profile=\fIPROFILENAME\fR\fP" 
-Open a new window containing a tab with the given profile.  
-More than one of these options can be provided. 
-.IP "\fB\-\-tab-with-profile=\fIPROFILENAME\fR\fP"
-Open a tab in the window with the given profile. More than 
-one of these options can be provided, to open 
-several tabs . 
-.IP "\fB\-\-window-with-profile-internal-id=\fIPROFILEID\fR\fP"
-Open a new window containing a tab with the given profile 
-ID. Used internally to save sessions. 
-.IP "\fB\-\-tab-with-profile-internal-id=\fIPROFILEID\fR\fP"
-Open a tab in the window with the given profile ID. 
-Used internally to save sessions. 
-.IP "\fB\-\-tab\fP"
-.br
-Open a new tab in the last-opened window with the default profile.
-.IP "\fB\-\-window\fP"
-Open a new window containing a tab with the default profile.
-.IP "\fB\-\-role=\fIROLE\fR\fP"
-Set the role for the last-specified window; applies to only 
-one window; can be specified once for each window you create 
-from the command line. 
-.IP "\fB\-\-active\fP" 
-Set the last specified tab as the active one in its window. 
-.IP "\fB\-\-show-menubar\fP"
-Turn on the menu bar for the last-specified window; applies 
-to only one window; can be specified once for each window you 
-create from the command line. 
-.IP "\fB\-\-hide-menubar\fP"
-Turn off the menu bar for the last-specified window; applies 
-to only one window; can be specified once for each window you 
-create from the command line. 
-.IP "\fB\-\-maximize\fP"
-Open a new maximized terminal window.
-.IP "\fB\-\-fullscreen\fP"
-Open a new fullscreen terminal window.
-.IP "\fB\-\-geometry=\fIGEOMETRY\fR\fP"
-X geometry specification (see "X" man page), can be 
-specified once per window to be opened. 
-.IP "\fB\-\-disable-factory\fP"
-Do not register with the activation name server, do not 
-re-use an active terminal. 
-.IP "\fB\-t, \-\-title=\fITITLE\fR\fP"
-Set the terminal's title to \fITITLE\fR. 
-.IP "\fB\-\-working-directory=\fIDIRNAME\fR\fP"
-Set the terminal's working directory to \fIDIRNAME\fR.
-.IP "\fB\-\-zoom=\fIZOOM\fR\fP"
+.SH NAME
+mate-terminal \- manual page for MATE Terminal Emulator
+.SH DESCRIPTION
+.SS "Usage:"
+.IP
+mate\-terminal [OPTION...]
+.SS "Help Options:"
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Show help options
+.TP
+\fB\-\-help\-all\fR
+Show all help options
+.TP
+\fB\-\-help\-terminal\fR
+Show terminal options
+.TP
+\fB\-\-help\-window\-options\fR
+Show per\-window options
+.TP
+\fB\-\-help\-terminal\-options\fR
+Show per\-terminal options
+.TP
+\fB\-\-help\-gtk\fR
+Show GTK+ Options
+.TP
+\fB\-\-help\-sm\-client\fR
+Show session management options
+.SS "Options to open new windows or terminal tabs; more than one of these may be specified:"
+.TP
+\fB\-\-window\fR
+Open a new window containing a tab with the default profile
+.TP
+\fB\-\-tab\fR
+Open a new tab in the last\-opened window with the default profile
+.SS "Window options; if used before the first --window or --tab argument, sets the default for all windows:"
+.TP
+\fB\-\-show\-menubar\fR
+Turn on the menubar
+.TP
+\fB\-\-hide\-menubar\fR
+Turn off the menubar
+.TP
+\fB\-\-maximize\fR
+Maximize the window
+.TP
+\fB\-\-full\-screen\fR
+Full\-screen the window
+.TP
+\fB\-\-geometry\fR=\fIGEOMETRY\fR
+Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)
+.TP
+\fB\-\-role\fR=\fIROLE\fR
+Set the window role
+.TP
+\fB\-\-active\fR
+Set the last specified tab as the active one in its window
+.SS "Terminal options; if used before the first --window or --tab argument, sets the default for all terminals:"
+.TP
+\fB\-e\fR, \fB\-\-command\fR
+Execute the argument to this option inside the terminal
+.TP
+\fB\-\-profile\fR=\fIPROFILE\-NAME\fR
+Use the given profile instead of the default profile
+.TP
+\fB\-t\fR, \fB\-\-title\fR=\fITITLE\fR
+Set the terminal title
+.TP
+\fB\-\-working\-directory\fR=\fIDIRNAME\fR
+Set the working directory
+.TP
+\fB\-\-zoom\fR=\fIZOOM\fR
 Set the terminal's zoom factor (1.0 = normal size)
-.IP "\fB\-?, \-h \-\-help\fP"
-Show help message. 
-.IP "\fB\-\-help\-terminal\fP"
-Print terminal options.
-.IP "\fB\-\-help\-window-options\fP"
-Print window options.
-.IP "\fB\-\-help\-all\fP"
-Show all help options.
-.SH "BUGS"
-.SS Should you encounter any bugs, they may be reported at: 
-http://github.com/mate-desktop/mate-terminal/issues
-.SH "AUTHOR" 
-.SS This manual page was originally written by for the Debian GNU/Linux system by: 
-Christian Marillat <marillat@debian.org> (2013)
-.SS It has been updated for the MATE Desktop Environment by:
-Adam Erdman <hekel@archlinux.info> (2014)
-.SH "SEE ALSO"
-.SS
-MATE Terminal documentation can be found from the "Help" menu, or by pressing the F1 key. 
-Further information may also be available at: http://wiki.mate-desktop.org/docs
+.PP
+GTK+ Options
+.TP
+\fB\-\-class\fR=\fICLASS\fR
+Program class as used by the window manager
+.TP
+\fB\-\-name\fR=\fINAME\fR
+Program name as used by the window manager
+.TP
+\fB\-\-screen\fR=\fISCREEN\fR
+X screen to use
+.TP
+\fB\-\-sync\fR
+Make X calls synchronous
+.TP
+\fB\-\-gtk\-module\fR=\fIMODULES\fR
+Load additional GTK+ modules
+.TP
+\fB\-\-g\-fatal\-warnings\fR
+Make all warnings fatal
+.SS "Session management options:"
+.TP
+\fB\-\-sm\-client\-disable\fR
+Disable connection to session manager
+.TP
+\fB\-\-sm\-client\-state\-file\fR=\fIFILE\fR
+Specify file containing saved configuration
+.TP
+\fB\-\-sm\-client\-id\fR=\fIID\fR
+Specify session management ID
+.SS "Application Options:"
+.TP
+\fB\-\-disable\-factory\fR
+Do not register with the activation nameserver, do not re\-use an active terminal
+.TP
+\fB\-\-load\-config\fR=\fIFILE\fR
+Load a terminal configuration file
+.TP
+\fB\-\-save\-config\fR=\fIFILE\fR
+Save the terminal configuration to a file
+.TP
+\fB\-\-display\fR=\fIDISPLAY\fR
+X display to use
+.PP
+.SH "Author"
+Adam Erdman <hekel@archlinux.info> (2014) and Abel McClendon <hcmmac@hosscomm.com> (2014)
+.P
+for the
+.B Mate Documentation Team.
+.SH "See Also"
+The full documentation for
+.B mate-terminal
+is maintained as a Texinfo manual.
+.PP
+If the
+.B info
+and
+.B mate-terminal
+programs are properly installed at your site, the command
+.IP
+.B info mate-terminal
+.PP
+should give you access to the complete manual.
+.PP
+More
+.B MATE Terminal
+documentation can be found from the
+.B "Help"
+menu, or by pressing the
+.B F1
+key.
+.PP
+Further information may also be available at:
+.B http://wiki.mate-desktop.org/docs
