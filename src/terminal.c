@@ -527,7 +527,9 @@ get_initial_workspace (void)
   GdkAtom atom;
   GdkAtom cardinal_atom;
 
+#if !GLIB_CHECK_VERSION (2, 36, 0)
   g_type_init ();
+#endif
 
   window = gdk_get_default_root_window();
 
