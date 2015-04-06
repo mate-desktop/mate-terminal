@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# RacerBG <georgiev_1994@abv.bg>, 2014
+# Georgi Georgiev <georgiev_1994@abv.bg>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 23:34+0100\n"
-"PO-Revision-Date: 2014-02-14 18:27+0000\n"
-"Last-Translator: RacerBG <georgiev_1994@abv.bg>\n"
+"POT-Creation-Date: 2014-11-10 15:07+0100\n"
+"PO-Revision-Date: 2014-11-10 14:08+0000\n"
+"Last-Translator: infirit <infirit@gmail.com>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/MATE/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,14 +18,29 @@ msgstr ""
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:188
-#: ../src/terminal-window.c:4168
+#: ../mate-terminal.appdata.xml.in.h:1
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr ""
+
+#: ../mate-terminal.appdata.xml.in.h:2
+msgid ""
+"<p> MATE Terminal is a terminal emulation application that you can use to "
+"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
+"xterm program developed by the X Consortium. It supports translucent "
+"backgrounds, opening multiple terminals in a single window (tabs) and "
+"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
+"of the MATE Desktop Environment. If you would like to know more about MATE "
+"and MATE Terminal, please visit the project's home page. </p>"
+msgstr ""
+
+#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
+#: ../src/terminal-window.c:4182
 msgid "MATE Terminal"
 msgstr "Терминалът на MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
-#: ../src/terminal.c:567 ../src/terminal-profile.c:158
-#: ../src/terminal-window.c:2140
+#: ../src/terminal.c:605 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2162
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -41,8 +56,8 @@ msgstr "Изключване на връзката с управлението �
 msgid "Specify file containing saved configuration"
 msgstr "Указване на файла със запазените настройки"
 
-#: ../src/eggsmclient.c:234 ../src/terminal-options.c:958
-#: ../src/terminal-options.c:967
+#: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
+#: ../src/terminal-options.c:973
 msgid "FILE"
 msgstr "ФАЙЛ"
 
@@ -82,32 +97,32 @@ msgstr "Зелено на черно"
 msgid "White on black"
 msgstr "Бяло на черно"
 
-#: ../src/profile-editor.c:487
+#: ../src/profile-editor.c:490
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Грешка при анализа на команда: %s"
 
-#: ../src/profile-editor.c:505
+#: ../src/profile-editor.c:507
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Редактиране на профила „%s“"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "Потребителска"
 
-#: ../src/profile-editor.c:673
+#: ../src/profile-editor.c:675
 msgid "Images"
 msgstr "Изображения"
 
-#: ../src/profile-editor.c:847
+#: ../src/profile-editor.c:849
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Избор на цвят на палитрата № %d"
 
-#: ../src/profile-editor.c:851
+#: ../src/profile-editor.c:853
 #, c-format
 msgid "Palette entry %d"
 msgstr "Палитра — цвят № %d"
@@ -368,208 +383,212 @@ msgid "Terminal _bell"
 msgstr "З_вук на терминала"
 
 #: ../src/profile-preferences.ui.h:35
+msgid "Copy selected text into _clipboard"
+msgstr ""
+
+#: ../src/profile-preferences.ui.h:36
 msgid "Cursor blin_k:"
 msgstr "Премигване на курсора:"
 
-#: ../src/profile-preferences.ui.h:36
+#: ../src/profile-preferences.ui.h:37
 msgid "Cursor _shape:"
 msgstr "_Форма на курсора:"
 
-#: ../src/profile-preferences.ui.h:37
+#: ../src/profile-preferences.ui.h:38
 msgid "Select-by-_word characters:"
 msgstr "Знаци, считани за _букви:"
 
-#: ../src/profile-preferences.ui.h:38
+#: ../src/profile-preferences.ui.h:39
 msgid "Use custom default terminal si_ze"
 msgstr "Използване на стандартен _размер на терминала"
 
-#: ../src/profile-preferences.ui.h:39
+#: ../src/profile-preferences.ui.h:40
 msgid "Default size:"
 msgstr "Стандартен размер:"
 
-#: ../src/profile-preferences.ui.h:40
+#: ../src/profile-preferences.ui.h:41
 msgid "columns"
 msgstr "колони"
 
-#: ../src/profile-preferences.ui.h:41
+#: ../src/profile-preferences.ui.h:42
 msgid "rows"
 msgstr "реда"
 
-#: ../src/profile-preferences.ui.h:42
+#: ../src/profile-preferences.ui.h:43
 msgid "General"
 msgstr "Общи"
 
-#: ../src/profile-preferences.ui.h:43
+#: ../src/profile-preferences.ui.h:44
 msgid "<b>Title</b>"
 msgstr "<b>Заглавие</b>"
 
-#: ../src/profile-preferences.ui.h:44
+#: ../src/profile-preferences.ui.h:45
 msgid "Initial _title:"
 msgstr "_Начално заглавие:"
 
-#: ../src/profile-preferences.ui.h:45
+#: ../src/profile-preferences.ui.h:46
 msgid "When terminal commands set their o_wn titles:"
 msgstr "_Кога командите задават собствено заглавие на прозореца:"
 
-#: ../src/profile-preferences.ui.h:46
+#: ../src/profile-preferences.ui.h:47
 msgid "<b>Command</b>"
 msgstr "<b>Команда</b>"
 
-#: ../src/profile-preferences.ui.h:47
+#: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
 msgstr "_Изпълнение на команда като обвивка при влизане"
 
-#: ../src/profile-preferences.ui.h:48
+#: ../src/profile-preferences.ui.h:49
 msgid "_Update login records when command is launched"
 msgstr "_Обновяване на записите utmp/wtmp при изпълнение на команда"
 
-#: ../src/profile-preferences.ui.h:49
+#: ../src/profile-preferences.ui.h:50
 msgid "Ru_n a custom command instead of my shell"
 msgstr "Изпълнение на команда _вместо стандартната обвивка"
 
-#: ../src/profile-preferences.ui.h:50
+#: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
 msgstr "Потребителска _команда:"
 
-#: ../src/profile-preferences.ui.h:51
+#: ../src/profile-preferences.ui.h:52
 msgid "When command _exits:"
 msgstr "_При приключване на командата:"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr "Заглавие и команда"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Преден план, фон, получер и подчертано</b>"
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
 msgstr "_Използване на цветовете от системната тема"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:56
 msgid "Built-in sche_mes:"
 msgstr "_Вградени схеми:"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "Цвят на _текста:"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:58
 msgid "_Background color:"
 msgstr "Цвят на _фона:"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "Избор на цвета на фона на терминала"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:60
 msgid "Choose Terminal Text Color"
 msgstr "Избор на цвета на текста на терминала"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:61
 msgid "_Underline color:"
 msgstr "Цвят за под_чертаване:"
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:62
 msgid "_Same as text color"
 msgstr "_Еднакъв с цвета на текста"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "Bol_d color:"
 msgstr "Полу_черен цвят:"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>Палитра</b>"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
 msgstr "Вградени _схеми:"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:66
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>Бележка:</b> Приложенията в терминала разполагат с тези цветове.</i></small>"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:67
 msgid "Color p_alette:"
 msgstr "_Цветова палитра:"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "Цветове"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr "_Плътен цвят"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "_Изображение за фон"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "_Файл с изображение:"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "Избор на изображение за фон"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr "Придвижване на _фоновото изображение"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "Про_зрачен фон"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr "_Непрозрачност на изображението или фона:"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:76
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Минимална</i></small>"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Максимална</i></small>"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "Background"
 msgstr "Фон"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "_Scrollbar is:"
 msgstr "_Лентата за придвижване е:"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "Scroll_back:"
 msgstr "Придвижване _назад:"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _keystroke"
 msgstr "Придвижване при _натискане на клавиш"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _output"
 msgstr "Придвижване при _извеждане на текст"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "_Unlimited"
 msgstr "_Без ограничение"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "lines"
 msgstr "реда"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "Scrolling"
 msgstr "Придвижване"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -577,19 +596,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>Бележка:</b> Тези настройки могат да доведат до некоректна работа на някои програми.\nТе са тук, само за да ви позволят да работите с някои програми и операционни системи, които очакват различно поведение на терминала.</i></small>"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid "_Delete key generates:"
 msgstr "Клавишът „Delete“ _генерира:"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid "_Backspace key generates:"
 msgstr "_Клавишът „Backspace“ генерира:"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "_Връщане настройките за съвместимост към стандартните"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "Compatibility"
 msgstr "Съвместимост"
 
@@ -657,7 +676,7 @@ msgstr "Намаляване"
 msgid "Normal Size"
 msgstr "Нормален размер"
 
-#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3933
+#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3958
 msgid "Set Title"
 msgstr "Задаване на заглавие"
 
@@ -769,62 +788,62 @@ msgstr "Подпрозорци"
 msgid "Help"
 msgstr "Помощ"
 
-#: ../src/terminal-accels.c:831
+#: ../src/terminal-accels.c:830
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Клавишната комбинация „%s“ отговаря на действието „%s“"
 
-#: ../src/terminal-accels.c:987
+#: ../src/terminal-accels.c:986
 msgid "_Action"
 msgstr "_Действие"
 
-#: ../src/terminal-accels.c:1006
+#: ../src/terminal-accels.c:1005
 msgid "Shortcut _Key"
 msgstr "_Клавишна комбинация"
 
-#: ../src/terminal-app.c:460
+#: ../src/terminal-app.c:481
 msgid "Click button to choose profile"
 msgstr "Натиснете за избор на профил"
 
-#: ../src/terminal-app.c:543
+#: ../src/terminal-app.c:564
 msgid "Profile list"
 msgstr "Списък на профилите"
 
-#: ../src/terminal-app.c:604
+#: ../src/terminal-app.c:625
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Да бъде ли изтрит профилът „%s“?"
 
-#: ../src/terminal-app.c:620
+#: ../src/terminal-app.c:641
 msgid "Delete Profile"
 msgstr "Изтриване на профил"
 
-#: ../src/terminal-app.c:1053
+#: ../src/terminal-app.c:1073
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Вече съществува профил с име „%s“. Искате ли да се създаде още един профил със същото име?"
 
-#: ../src/terminal-app.c:1148
+#: ../src/terminal-app.c:1168
 msgid "Choose base profile"
 msgstr "Избор на основен профил"
 
-#: ../src/terminal-app.c:1751
+#: ../src/terminal-app.c:1775
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Няма профил „%s“, ще бъде използван стандартният\n"
 
-#: ../src/terminal-app.c:1775
+#: ../src/terminal-app.c:1799
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Грешен низ на геометрията „%s“\n"
 
-#: ../src/terminal-app.c:1953
+#: ../src/terminal-app.c:2005
 msgid "User Defined"
 msgstr "Определено от потребителя"
 
-#: ../src/terminal.c:562
+#: ../src/terminal.c:600
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Аргументите не могат да бъдат анализирани: %s\n"
@@ -981,7 +1000,7 @@ msgstr "_Кодова таблица"
 msgid "Current Locale"
 msgstr "Текущ локал"
 
-#: ../src/terminal-options.c:175
+#: ../src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -989,210 +1008,210 @@ msgid ""
 "profile' option\n"
 msgstr "Опцията „%s“ не се поддържа в тази версия на mate-terminal. Можете да създадете профил с желаните настройки и да използвате новата опция „--profile“\n"
 
-#: ../src/terminal-options.c:208
+#: ../src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Аргументът на „%s“ не е валидна команда: %s"
 
-#: ../src/terminal-options.c:343
+#: ../src/terminal-options.c:348
 msgid "Two roles given for one window"
 msgstr "Дадени са две роли на един прозорец"
 
-#: ../src/terminal-options.c:364 ../src/terminal-options.c:397
+#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Опцията „%s“ е зададена повече от веднъж за един и същи прозорец\n"
 
-#: ../src/terminal-options.c:596
+#: ../src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "„%s“ е грешен коефициент на увеличение"
 
-#: ../src/terminal-options.c:603
+#: ../src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Увеличението „%g“ е прекалено малко, използва се %g\n"
 
-#: ../src/terminal-options.c:611
+#: ../src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Увеличението „%g“ е прекалено голямо, използва се %g\n"
 
-#: ../src/terminal-options.c:646
+#: ../src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "Опцията „%s“ изисква задаване на командата за изпълнение на остатъка от командния ред"
 
-#: ../src/terminal-options.c:807
+#: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "Това не е файл с настройки за терминала."
 
-#: ../src/terminal-options.c:820
+#: ../src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "Несъвместима версия на файла с настройки на терминала."
 
-#: ../src/terminal-options.c:948
+#: ../src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "Да не се регистрира към активиращия\n                                            сървър за имена. Не използва\n                                            повторно активен терминал."
 
-#: ../src/terminal-options.c:957
+#: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "Зареждане на файл с настройки на терминала"
 
-#: ../src/terminal-options.c:966
+#: ../src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "Запазване на настройките на терминала във файл"
 
-#: ../src/terminal-options.c:981
+#: ../src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Отваряне на нов прозорец с\n                                            подпрозорец със стандартен профил."
 
-#: ../src/terminal-options.c:990
+#: ../src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Отваряне на нов подпрозорец със\n                                            стандартния профил в последно\n                                            отворения прозорец."
 
-#: ../src/terminal-options.c:1004
+#: ../src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Показване на менюто"
 
-#: ../src/terminal-options.c:1013
+#: ../src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Скриване на менюто"
 
-#: ../src/terminal-options.c:1022
-msgid "Maximise the window"
-msgstr "Максимизиране на прозореца"
+#: ../src/terminal-options.c:1028
+msgid "Maximize the window"
+msgstr ""
 
-#: ../src/terminal-options.c:1031
+#: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "Прозорецът да заема целия екран"
 
-#: ../src/terminal-options.c:1040
+#: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
 msgstr "Задаване на размера на прозореца.\n                                            Напр. 80x24, или 80x24+200+200\n                                            (РЕДОВЕxКОЛОНИ+X+Y)"
 
-#: ../src/terminal-options.c:1041
+#: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "ГЕОМЕТРИЯ"
 
-#: ../src/terminal-options.c:1049
+#: ../src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "Задаване на ролята на прозореца"
 
-#: ../src/terminal-options.c:1050
+#: ../src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "РОЛЯ"
 
-#: ../src/terminal-options.c:1058
+#: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Задаване на последния избран\n                                            подпрозорец като активен в неговия\n                                            прозорец"
 
-#: ../src/terminal-options.c:1072
+#: ../src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Изпълняване на аргумента на тази\n                                            опция в терминала."
 
-#: ../src/terminal-options.c:1081
+#: ../src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "Използване на дадения профил вместо стандартния"
 
-#: ../src/terminal-options.c:1082
+#: ../src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "ИМЕ_НА_ПРОФИЛ"
 
-#: ../src/terminal-options.c:1090
+#: ../src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Задаване на заглавието на терминала"
 
-#: ../src/terminal-options.c:1091
+#: ../src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "ЗАГЛАВИЕ"
 
-#: ../src/terminal-options.c:1099
+#: ../src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Задаване на работната папка на\n                                            терминала"
 
-#: ../src/terminal-options.c:1100
+#: ../src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "ПАПКА"
 
-#: ../src/terminal-options.c:1108
+#: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Коефициент на мащабиране на\n                                            терминала (1.0 — нормален размер)"
 
-#: ../src/terminal-options.c:1109
+#: ../src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "УВЕЛИЧЕНИЕ"
 
-#: ../src/terminal-options.c:1360 ../src/terminal-options.c:1363
+#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "Терминалният емулатор на MATE"
 
-#: ../src/terminal-options.c:1364
+#: ../src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "Показване на опциите на терминала на MATE"
 
-#: ../src/terminal-options.c:1374
+#: ../src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "Опции за отварянето на нови прозорци или\n                                            подпрозорци. Могат да се указват по-\n                                            вече от една от тях:"
 
-#: ../src/terminal-options.c:1375
+#: ../src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "Показване на опциите на терминала"
 
-#: ../src/terminal-options.c:1383
+#: ../src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr "Опции за прозорците. Използвани преди всички\n                                            опции „--window“ или „--tab“ задават стан-\n                                            дарта за всички прозорци:"
 
-#: ../src/terminal-options.c:1384
+#: ../src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "Показване на опциите за прозорците"
 
-#: ../src/terminal-options.c:1392
+#: ../src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr "Опции за подпрозорците. Използвани преди\n                                            всички опции „--window“ или „--tab“\n                                            задават стандарта за всички подпро-\n                                            зорци:"
 
-#: ../src/terminal-options.c:1393
+#: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "Показване на опциите за подпрозорците"
 
-#: ../src/terminal-profile.c:165
+#: ../src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "Без име"
 
-#: ../src/terminal-screen.c:1519
+#: ../src/terminal-screen.c:1533
 msgid "_Profile Preferences"
 msgstr "_Настройки на профила"
 
-#: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
+#: ../src/terminal-screen.c:1534 ../src/terminal-screen.c:1923
 msgid "_Relaunch"
 msgstr "_Повторно пускане"
 
-#: ../src/terminal-screen.c:1523
+#: ../src/terminal-screen.c:1537
 msgid "There was an error creating the child process for this terminal"
 msgstr "Грешка при създаване на дъщерен процес за този терминал"
 
-#: ../src/terminal-screen.c:1914
+#: ../src/terminal-screen.c:1928
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Дъщерният процес завърши нормално с код за състояние %d."
 
-#: ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1933
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Дъщерният процес бе преустановен от сигнал %d."
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1938
 msgid "The child process was terminated."
 msgstr "Дъщерният процес бе преустановен."
 
@@ -1239,7 +1258,7 @@ msgstr "Трябва да сте получили копие от Общия п�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:477
+#: ../src/terminal-window.c:485
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -1247,259 +1266,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:483
+#: ../src/terminal-window.c:491
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1818
+#: ../src/terminal-window.c:1836
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1819 ../src/terminal-window.c:1832
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:1837 ../src/terminal-window.c:1850
+#: ../src/terminal-window.c:2091
 msgid "Open _Terminal"
 msgstr "_Отваряне на прозорец"
 
-#: ../src/terminal-window.c:1820 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:1838 ../src/terminal-window.c:1855
+#: ../src/terminal-window.c:2096
 msgid "Open Ta_b"
 msgstr "О_тваряне на подпрозорец"
 
-#: ../src/terminal-window.c:1821
+#: ../src/terminal-window.c:1839
 msgid "_Edit"
 msgstr "_Редактиране"
 
-#: ../src/terminal-window.c:1822
+#: ../src/terminal-window.c:1840
 msgid "_View"
 msgstr "_Изглед"
 
-#: ../src/terminal-window.c:1823
+#: ../src/terminal-window.c:1841
 msgid "_Search"
 msgstr "_Търсене"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1842
 msgid "_Terminal"
 msgstr "_Терминал"
 
-#: ../src/terminal-window.c:1825
+#: ../src/terminal-window.c:1843
 msgid "Ta_bs"
 msgstr "По_дпрозорци"
 
-#: ../src/terminal-window.c:1826
+#: ../src/terminal-window.c:1844
 msgid "_Help"
 msgstr "Помо_щ"
 
-#: ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:1860
 msgid "New _Profile…"
 msgstr "Нов _профил…"
 
-#: ../src/terminal-window.c:1847
+#: ../src/terminal-window.c:1865
 msgid "_Save Contents"
 msgstr "_Запазване на съдържанието"
 
-#: ../src/terminal-window.c:1852 ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:1870 ../src/terminal-window.c:2106
 msgid "C_lose Tab"
 msgstr "З_атваряне на този подпрозорец"
 
-#: ../src/terminal-window.c:1857
+#: ../src/terminal-window.c:1875
 msgid "_Close Window"
 msgstr "_Затваряне на този прозорец"
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: ../src/terminal-window.c:1892 ../src/terminal-window.c:2086
 msgid "Paste _Filenames"
 msgstr "Поставяне на име на _файл"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1902
 msgid "P_rofiles…"
 msgstr "П_рофили…"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1907
 msgid "_Keyboard Shortcuts…"
 msgstr "_Клавишни комбинации…"
 
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1912
 msgid "Pr_ofile Preferences"
 msgstr "_Настройки на профила"
 
-#: ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1936
 msgid "_Find..."
 msgstr "_Търсене…"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1941
 msgid "Find Ne_xt"
 msgstr "_Следваща поява"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1946
 msgid "Find Pre_vious"
 msgstr "_Предишна поява"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1951
 msgid "_Clear Highlight"
 msgstr "_Изчистване на осветяването"
 
-#: ../src/terminal-window.c:1939
+#: ../src/terminal-window.c:1957
 msgid "Go to _Line..."
 msgstr "Към _ред…"
 
-#: ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1962
 msgid "_Incremental Search..."
 msgstr "Постепенно _търсене…"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1951
+#: ../src/terminal-window.c:1969
 msgid "Change _Profile"
 msgstr "Смяна на _профила"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1971
 msgid "_Previous Profile"
 msgstr "_Предишен профил"
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1976
 msgid "_Next Profile"
 msgstr "_Следващ профил"
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1981
 msgid "_Set Title…"
 msgstr "_Задаване на заглавие…"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1985
 msgid "Set _Character Encoding"
 msgstr "_Кодова таблица на знаците"
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1987
 msgid "_Reset"
 msgstr "_Възстановяване"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1992
 msgid "Reset and C_lear"
 msgstr "Възстановяване и _изчистване"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1999
 msgid "_Add or Remove…"
 msgstr "_Добавяне или премахване…"
 
-#: ../src/terminal-window.c:1988
+#: ../src/terminal-window.c:2006
 msgid "_Previous Tab"
 msgstr "_Предишен подпрозорец"
 
-#: ../src/terminal-window.c:1993
+#: ../src/terminal-window.c:2011
 msgid "_Next Tab"
 msgstr "_Следващ подпрозорец"
 
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2016
 msgid "Move Tab _Left"
 msgstr "Преместване подпрозореца на_ляво"
 
-#: ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:2021
 msgid "Move Tab _Right"
 msgstr "Преместване подпрозореца на_дясно"
 
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:2026
 msgid "_Detach tab"
 msgstr "_Отделяне на подпрозореца"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:2033
 msgid "_Contents"
 msgstr "_Ръководство"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:2038
 msgid "_About"
 msgstr "_Относно"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:2045
 msgid "_Send Mail To…"
 msgstr "Из_пращане на е-поща до…"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2050
 msgid "_Copy E-mail Address"
 msgstr "_Копиране на адреса на е-пощата"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2055
 msgid "C_all To…"
 msgstr "_Обаждане на…"
 
-#: ../src/terminal-window.c:2042
+#: ../src/terminal-window.c:2060
 msgid "_Copy Call Address"
 msgstr "_Копиране на адреса за обаждане"
 
-#: ../src/terminal-window.c:2047
+#: ../src/terminal-window.c:2065
 msgid "_Open Link"
 msgstr "_Отваряне на връзка"
 
-#: ../src/terminal-window.c:2052
+#: ../src/terminal-window.c:2070
 msgid "_Copy Link Address"
 msgstr "_Копиране на адреса на препратката"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2074
 msgid "P_rofiles"
 msgstr "_Профили"
 
-#: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:2101 ../src/terminal-window.c:3359
 msgid "C_lose Window"
 msgstr "_Затваряне на този прозорец"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2111
 msgid "L_eave Full Screen"
 msgstr "Изход от _цял екран"
 
-#: ../src/terminal-window.c:2097
+#: ../src/terminal-window.c:2115
 msgid "_Input Methods"
 msgstr "Методи за _вход"
 
-#: ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:2122
 msgid "Show _Menubar"
 msgstr "_Показване на менюто"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2128
 msgid "_Full Screen"
 msgstr "На _цял екран"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this window?"
 msgstr "Затваряне на този прозорец?"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this terminal?"
 msgstr "Затваряне на терминала?"
 
-#: ../src/terminal-window.c:3325
+#: ../src/terminal-window.c:3350
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "В някой от подпрозорците на този прозорец поне един процес още не е завършил работа. Затварянето на прозореца ще го убие."
 
-#: ../src/terminal-window.c:3329
+#: ../src/terminal-window.c:3354
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "В този прозорец поне един процес още не е завършил работа. Затварянето на прозореца ще го убие."
 
-#: ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:3359
 msgid "C_lose Terminal"
 msgstr "_Затваряне на терминала"
 
-#: ../src/terminal-window.c:3407
+#: ../src/terminal-window.c:3432
 msgid "Could not save contents"
 msgstr "Съдържанието не може да бъде запазено"
 
-#: ../src/terminal-window.c:3431
+#: ../src/terminal-window.c:3456
 msgid "Save as..."
 msgstr "Запазване като…"
 
-#: ../src/terminal-window.c:3956
+#: ../src/terminal-window.c:3975
 msgid "_Title:"
 msgstr "_Заглавие:"
 
-#: ../src/terminal-window.c:4151
+#: ../src/terminal-window.c:4165
 msgid "Contributors:"
 msgstr "Сътрудници:"
 
-#: ../src/terminal-window.c:4170
+#: ../src/terminal-window.c:4184
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Емулатор на терминал към MATE"
 
-#: ../src/terminal-window.c:4177
+#: ../src/terminal-window.c:4191
 msgid "translator-credits"
 msgstr "Владимир „Kaladan“ Петков <kaladan@gmail.com>\nАлександър Шопов <ash@kambanaria.org>\nБорислав Александров <B.Aleksandrov@cnsys.bg>\nРостислав Райков <zbrox@i-space.org>\nЯсен Праматаров <turin@fsa-bg.org>\n\nПроектът за превод на MATE има нужда от подкрепа.\nНаучете повече за нас на http://mate.cult.bg\nДокладвайте за грешки на http://mate.cult.bg/bugs"

@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Tobias Bannert, 2014
+# Tobias Bannert <tobannert@gmail.com>, 2014
+# Xpistian <xpistianbecker2@web.de>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 23:34+0100\n"
-"PO-Revision-Date: 2014-05-22 21:50+0000\n"
-"Last-Translator: Tobias Bannert\n"
+"POT-Creation-Date: 2014-11-10 15:07+0100\n"
+"PO-Revision-Date: 2014-11-17 21:16+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,14 +19,29 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:188
-#: ../src/terminal-window.c:4168
+#: ../mate-terminal.appdata.xml.in.h:1
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr "Ein Terminalemulator für die MATE-Arbeitsumgebung"
+
+#: ../mate-terminal.appdata.xml.in.h:2
+msgid ""
+"<p> MATE Terminal is a terminal emulation application that you can use to "
+"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
+"xterm program developed by the X Consortium. It supports translucent "
+"backgrounds, opening multiple terminals in a single window (tabs) and "
+"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
+"of the MATE Desktop Environment. If you would like to know more about MATE "
+"and MATE Terminal, please visit the project's home page. </p>"
+msgstr "<p> MATE-Terminal ist eine Terminalemulation, die benutzt werden kann, um auf die UNIX-Shell zuzugreifen. MATE-Terminal emuliert das Programm xterm, das vom X Konsortium entwickelt wird. Es unterstützt durchscheinende Hintergründe, das Öffnen mehrerer Eingabeaufforderungen in einem Fenster (Reiterkarten) und klickbare Adressen. </p> <p> MATE-Terminal ist eine Abspaltung von GNOME-Terminal und Teil der MATE-Arbeitsumgebung. Wenn Sie mehr über MATE und MATE-Terminal erfahren möchten, besuchen Sie bitte die Internetseite des Projektes.</p>"
+
+#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
+#: ../src/terminal-window.c:4182
 msgid "MATE Terminal"
 msgstr "MATE-Terminal"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
-#: ../src/terminal.c:567 ../src/terminal-profile.c:158
-#: ../src/terminal-window.c:2140
+#: ../src/terminal.c:605 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2162
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -41,8 +57,8 @@ msgstr "Verbindung zur Sitzungsverwaltung deaktivieren"
 msgid "Specify file containing saved configuration"
 msgstr "Geben Sie die Datei mit der gespeicherten Konfiguration an"
 
-#: ../src/eggsmclient.c:234 ../src/terminal-options.c:958
-#: ../src/terminal-options.c:967
+#: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
+#: ../src/terminal-options.c:973
 msgid "FILE"
 msgstr "DATEI"
 
@@ -82,32 +98,32 @@ msgstr "Grün auf schwarz"
 msgid "White on black"
 msgstr "Weiß auf schwarz"
 
-#: ../src/profile-editor.c:487
+#: ../src/profile-editor.c:490
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Fehler beim Verarbeiten des Befehls: %s"
 
-#: ../src/profile-editor.c:505
+#: ../src/profile-editor.c:507
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Profil »%s« bearbeiten"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: ../src/profile-editor.c:673
+#: ../src/profile-editor.c:675
 msgid "Images"
 msgstr "Bilder"
 
-#: ../src/profile-editor.c:847
+#: ../src/profile-editor.c:849
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Palettenfarbe %d auswählen"
 
-#: ../src/profile-editor.c:851
+#: ../src/profile-editor.c:853
 #, c-format
 msgid "Palette entry %d"
 msgstr "Paletteneintrag %d"
@@ -368,208 +384,212 @@ msgid "Terminal _bell"
 msgstr "Terminal_glocke"
 
 #: ../src/profile-preferences.ui.h:35
+msgid "Copy selected text into _clipboard"
+msgstr "Den markierten Text in die Zwischenablage kopieren"
+
+#: ../src/profile-preferences.ui.h:36
 msgid "Cursor blin_k:"
 msgstr "_Blinken der Eingabemarke:"
 
-#: ../src/profile-preferences.ui.h:36
+#: ../src/profile-preferences.ui.h:37
 msgid "Cursor _shape:"
 msgstr "_Form der Eingabemarke:"
 
-#: ../src/profile-preferences.ui.h:37
+#: ../src/profile-preferences.ui.h:38
 msgid "Select-by-_word characters:"
 msgstr "Zeichen für _wortweise Auswahl:"
 
-#: ../src/profile-preferences.ui.h:38
+#: ../src/profile-preferences.ui.h:39
 msgid "Use custom default terminal si_ze"
 msgstr "Benut_zerdefinierte Größe des Terminals als Vorgabe verwenden"
 
-#: ../src/profile-preferences.ui.h:39
+#: ../src/profile-preferences.ui.h:40
 msgid "Default size:"
 msgstr "Vorgabegröße:"
 
-#: ../src/profile-preferences.ui.h:40
+#: ../src/profile-preferences.ui.h:41
 msgid "columns"
 msgstr "Spalten"
 
-#: ../src/profile-preferences.ui.h:41
+#: ../src/profile-preferences.ui.h:42
 msgid "rows"
 msgstr "Zeilen"
 
-#: ../src/profile-preferences.ui.h:42
+#: ../src/profile-preferences.ui.h:43
 msgid "General"
 msgstr "Allgemein"
 
-#: ../src/profile-preferences.ui.h:43
+#: ../src/profile-preferences.ui.h:44
 msgid "<b>Title</b>"
 msgstr "<b>Titel</b>"
 
-#: ../src/profile-preferences.ui.h:44
+#: ../src/profile-preferences.ui.h:45
 msgid "Initial _title:"
 msgstr "_Titel:"
 
-#: ../src/profile-preferences.ui.h:45
+#: ../src/profile-preferences.ui.h:46
 msgid "When terminal commands set their o_wn titles:"
 msgstr "Wenn Terminal-Befehle ihren eigenen _Titel setzen:"
 
-#: ../src/profile-preferences.ui.h:46
+#: ../src/profile-preferences.ui.h:47
 msgid "<b>Command</b>"
 msgstr "<b>Befehl</b>"
 
-#: ../src/profile-preferences.ui.h:47
+#: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
 msgstr "Befehl als Login-Shell _starten"
 
-#: ../src/profile-preferences.ui.h:48
+#: ../src/profile-preferences.ui.h:49
 msgid "_Update login records when command is launched"
 msgstr "Anmeldeprotokolle _aktualisieren, wenn Befehl ausgeführt wird"
 
-#: ../src/profile-preferences.ui.h:49
+#: ../src/profile-preferences.ui.h:50
 msgid "Ru_n a custom command instead of my shell"
 msgstr "Einen _benutzerdefinierten Befehl statt meiner Befehlszeile starten"
 
-#: ../src/profile-preferences.ui.h:50
+#: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
 msgstr "_Benutzerdefinierter Befehl:"
 
-#: ../src/profile-preferences.ui.h:51
+#: ../src/profile-preferences.ui.h:52
 msgid "When command _exits:"
 msgstr "Wenn Befehl _beendet:"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr "Titel und Befehl"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Vordergrund, Hintergrund, Fett und Unterstrichen</b>"
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
 msgstr "Farben vom S_ystem-Thema verwenden"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:56
 msgid "Built-in sche_mes:"
 msgstr "_Integrierte Schemata:"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "_Textfarbe:"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:58
 msgid "_Background color:"
 msgstr "_Hintergrundfarbe:"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "Terminal-Hintergrundfarbe auswählen"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:60
 msgid "Choose Terminal Text Color"
 msgstr "Terminal-Textfarbe auswählen"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:61
 msgid "_Underline color:"
 msgstr "_Unterstrichfarbe:"
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:62
 msgid "_Same as text color"
 msgstr "_Genau wie Textfarbe"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "Bol_d color:"
 msgstr "Farbe für _fetten Text:"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>Farbpalette</b>"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
 msgstr "Integrierte _Schemata:"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:66
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>Hinweis:</b> Terminal-Anwendungen dürfen diese Farben verwenden.</i></small>"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:67
 msgid "Color p_alette:"
 msgstr "Farb_palette:"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "Farben"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr "_Keiner (einfarbig)"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "Hinter_grundbild"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "_Bilddatei:"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "Hintergrundbild auswählen"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr "Hintergrundbild _rollen"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "_Transparenter Hintergrund"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr "Transparenz und Bildhintergründe _abdunkeln:"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:76
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Keine</i></small>"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Maximal</i></small>"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "Background"
 msgstr "Hintergrundtyp"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "_Scrollbar is:"
 msgstr "_Rollbalken ist:"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "Scroll_back:"
 msgstr "Zurückro_llen:"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _keystroke"
 msgstr "Bei _Tastendruck weiterrollen"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _output"
 msgstr "Bei _Ausgabe weiterrollen"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "_Unlimited"
 msgstr "_Unbegrenzt"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "lines"
 msgstr "Zeilen"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "Scrolling"
 msgstr "Rollbalken"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -577,19 +597,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>Hinweis:</b> Diese Einstellungen können dazu führen, dass sich einige Anwendungen nicht korrekt verhalten. Sie sind lediglich hier, damit problematische Anwendungen oder Betriebssysteme reibungslos funktionieren, die ein anderes Terminal-Verhalten erwarten.</i></small>"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid "_Delete key generates:"
 msgstr "_Entfernen-Taste erzeugt:"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid "_Backspace key generates:"
 msgstr "_Rücktaste erzeugt:"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "Kompatibilitätseinstellungen auf Vorgabewerte _zurücksetzen"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "Compatibility"
 msgstr "Kompatibilität"
 
@@ -657,7 +677,7 @@ msgstr "Ansicht verkleinern"
 msgid "Normal Size"
 msgstr "Normale Ansichtsgröße"
 
-#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3933
+#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3958
 msgid "Set Title"
 msgstr "Titel festlegen"
 
@@ -769,62 +789,62 @@ msgstr "Reiter"
 msgid "Help"
 msgstr "Hilfe"
 
-#: ../src/terminal-accels.c:831
+#: ../src/terminal-accels.c:830
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Die Tastenkombination »%s« ist bereits der Aktion »%s« zugeordnet."
 
-#: ../src/terminal-accels.c:987
+#: ../src/terminal-accels.c:986
 msgid "_Action"
 msgstr "_Aktion"
 
-#: ../src/terminal-accels.c:1006
+#: ../src/terminal-accels.c:1005
 msgid "Shortcut _Key"
 msgstr "Tasten_kombination"
 
-#: ../src/terminal-app.c:460
+#: ../src/terminal-app.c:481
 msgid "Click button to choose profile"
 msgstr "Klicken Sie diesen Knopf, um ein Profil auszuwählen"
 
-#: ../src/terminal-app.c:543
+#: ../src/terminal-app.c:564
 msgid "Profile list"
 msgstr "Profilliste"
 
-#: ../src/terminal-app.c:604
+#: ../src/terminal-app.c:625
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Soll das Profil »%s« gelöscht werden?"
 
-#: ../src/terminal-app.c:620
+#: ../src/terminal-app.c:641
 msgid "Delete Profile"
 msgstr "Profil löschen"
 
-#: ../src/terminal-app.c:1053
+#: ../src/terminal-app.c:1073
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Es existiert bereits ein Profil namens »%s«. Soll ein weiteres Profil mit diesem Namen erstellt werden?"
 
-#: ../src/terminal-app.c:1148
+#: ../src/terminal-app.c:1168
 msgid "Choose base profile"
 msgstr "Basisprofil wählen"
 
-#: ../src/terminal-app.c:1751
+#: ../src/terminal-app.c:1775
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Profil »%s« existiert nicht, Vorgabe-Profil wird verwendet\n"
 
-#: ../src/terminal-app.c:1775
+#: ../src/terminal-app.c:1799
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Ungültige Geometrie-Zeichenkette »%s«\n"
 
-#: ../src/terminal-app.c:1953
+#: ../src/terminal-app.c:2005
 msgid "User Defined"
 msgstr "Benutzerdefiniert"
 
-#: ../src/terminal.c:562
+#: ../src/terminal.c:600
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Einlesen der Argumente schlug fehl: %s\n"
@@ -981,7 +1001,7 @@ msgstr "Zeichen_kodierung"
 msgid "Current Locale"
 msgstr "Momentan verwendete Standorteinstellungen"
 
-#: ../src/terminal-options.c:175
+#: ../src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -989,210 +1009,210 @@ msgid ""
 "profile' option\n"
 msgstr "Option »%s« wird nicht mehr in dieser Version des Terminals unterstützt. Sie sollten ein Profil mit den gewünschten Einstellungen anlegen und die neue Option »--profile« verwenden\n"
 
-#: ../src/terminal-options.c:208
+#: ../src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Argument von »%s« ist kein gültiger Befehl: %s"
 
-#: ../src/terminal-options.c:343
+#: ../src/terminal-options.c:348
 msgid "Two roles given for one window"
 msgstr "Zwei Funktionen für ein Fenster angegeben"
 
-#: ../src/terminal-options.c:364 ../src/terminal-options.c:397
+#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Option »%s« mehrfach für das gleiche Fenster übergegeben\n"
 
-#: ../src/terminal-options.c:596
+#: ../src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "»%s« ist kein gültiger Vergrößerungsfaktor"
 
-#: ../src/terminal-options.c:603
+#: ../src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Vergrößerungsfaktor »%g« ist zu klein, »%g« wird verwendet\n"
 
-#: ../src/terminal-options.c:611
+#: ../src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Vergrößerungsfaktor »%g« ist zu groß, »%g« wird verwendet\n"
 
-#: ../src/terminal-options.c:646
+#: ../src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "Option »%s« macht es erforderlich, einen Befehl anzugeben, der für den Rest der Befehlszeile laufen soll"
 
-#: ../src/terminal-options.c:807
+#: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "Keine gültige Konfigurationsdatei des Terminals."
 
-#: ../src/terminal-options.c:820
+#: ../src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "Inkompatible Version der Konfigurationsdatei des Terminals."
 
-#: ../src/terminal-options.c:948
+#: ../src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "Nicht am Aktivierungsnamens-Server registrieren, aktives Terminal nicht erneut verwenden"
 
-#: ../src/terminal-options.c:957
+#: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "Konfigurationsdatei des Terminals laden"
 
-#: ../src/terminal-options.c:966
+#: ../src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "Konfiguration des Terminals in eine Datei speichern"
 
-#: ../src/terminal-options.c:981
+#: ../src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Ein neues Fenster öffnen, das einen Reiter mit dem Vorgabeprofil enthält"
 
-#: ../src/terminal-options.c:990
+#: ../src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Einen neuen Reiter in dem zuletzt geöffneten Fenster mit dem Vorgabeprofil öffnen"
 
-#: ../src/terminal-options.c:1004
+#: ../src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Menüleiste anzeigen"
 
-#: ../src/terminal-options.c:1013
+#: ../src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Menüleiste verbergen"
 
-#: ../src/terminal-options.c:1022
-msgid "Maximise the window"
-msgstr "Das Fenster maximieren"
+#: ../src/terminal-options.c:1028
+msgid "Maximize the window"
+msgstr "Fenster vergrößern"
 
-#: ../src/terminal-options.c:1031
+#: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "In den Vollbildmodus wechseln"
 
-#: ../src/terminal-options.c:1040
+#: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
 msgstr "Fenstergröße festlegen; Beispiel: 80x24, oder 80x24+200+200 (ZEILENxSPALTEN+X+Y)"
 
-#: ../src/terminal-options.c:1041
+#: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "GEOMETRIE"
 
-#: ../src/terminal-options.c:1049
+#: ../src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "Die Funktion des Terminals festlegen"
 
-#: ../src/terminal-options.c:1050
+#: ../src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "FUNKTION"
 
-#: ../src/terminal-options.c:1058
+#: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Den zuletzt angegebenen Reiter als aktiven in seinem Fenster festlegen."
 
-#: ../src/terminal-options.c:1072
+#: ../src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Das Argument dieser Option im Terminal ausführen"
 
-#: ../src/terminal-options.c:1081
+#: ../src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "Das angegebene Profil statt dem Vorgabe-Profil verwenden"
 
-#: ../src/terminal-options.c:1082
+#: ../src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "PROFILNAME"
 
-#: ../src/terminal-options.c:1090
+#: ../src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Den Titel des Terminals festlegen"
 
-#: ../src/terminal-options.c:1091
+#: ../src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "TITEL"
 
-#: ../src/terminal-options.c:1099
+#: ../src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Den Arbeitsordner festlegen"
 
-#: ../src/terminal-options.c:1100
+#: ../src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "ORDNERNAME"
 
-#: ../src/terminal-options.c:1108
+#: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Den Vergrößerungsfaktor des Terminals festlegen (1.0 = Normale Größe)"
 
-#: ../src/terminal-options.c:1109
+#: ../src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "VERGRÖSSERUNG"
 
-#: ../src/terminal-options.c:1360 ../src/terminal-options.c:1363
+#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "MATE-Terminalemulator"
 
-#: ../src/terminal-options.c:1364
+#: ../src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "MATE-Terminal-Optionen anzeigen"
 
-#: ../src/terminal-options.c:1374
+#: ../src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "Optionen zum Öffnen von neuen Fenstern und Reitern; mehrere der folgenden dürfen angegeben werden:"
 
-#: ../src/terminal-options.c:1375
+#: ../src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "Terminal-Optionen anzeigen"
 
-#: ../src/terminal-options.c:1383
+#: ../src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr "Fensteroptionen; legt die Vorgaben für alle Fenster fest wenn vor dem ersten »--window«- oder »--tab«-Argument verwendet:"
 
-#: ../src/terminal-options.c:1384
+#: ../src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "Fensterspezifische Optionen anzeigen"
 
-#: ../src/terminal-options.c:1392
+#: ../src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr "Terminal-Optionen; legt die Vorgaben für alle Terminals fest wenn vor dem ersten »--window«- oder »--tab«-Argument verwendet:"
 
-#: ../src/terminal-options.c:1393
+#: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "Terminalspezifische Optionen anzeigen"
 
-#: ../src/terminal-profile.c:165
+#: ../src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "Unbenannt"
 
-#: ../src/terminal-screen.c:1519
+#: ../src/terminal-screen.c:1533
 msgid "_Profile Preferences"
 msgstr "_Profileinstellungen"
 
-#: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
+#: ../src/terminal-screen.c:1534 ../src/terminal-screen.c:1923
 msgid "_Relaunch"
 msgstr "Erneut sta_rten"
 
-#: ../src/terminal-screen.c:1523
+#: ../src/terminal-screen.c:1537
 msgid "There was an error creating the child process for this terminal"
 msgstr "Beim Erzeugen des Kindprozesses für dieses Terminal ist ein Fehler aufgetreten"
 
-#: ../src/terminal-screen.c:1914
+#: ../src/terminal-screen.c:1928
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Der Kindprozess wurde unerwartet mit Status %d beendet."
 
-#: ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1933
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Der Kindprozess wurde mit Signal %d beendet."
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1938
 msgid "The child process was terminated."
 msgstr "Der Kindprozess wurde beendet."
 
@@ -1239,7 +1259,7 @@ msgstr "Mit diesem Programm sollten Sie außerdem eine Kopie der GNU General Pub
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:477
+#: ../src/terminal-window.c:485
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -1247,259 +1267,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:483
+#: ../src/terminal-window.c:491
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1818
+#: ../src/terminal-window.c:1836
 msgid "_File"
 msgstr "_Datei"
 
-#: ../src/terminal-window.c:1819 ../src/terminal-window.c:1832
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:1837 ../src/terminal-window.c:1850
+#: ../src/terminal-window.c:2091
 msgid "Open _Terminal"
 msgstr "Neues _Terminal"
 
-#: ../src/terminal-window.c:1820 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:1838 ../src/terminal-window.c:1855
+#: ../src/terminal-window.c:2096
 msgid "Open Ta_b"
 msgstr "Neuer _Reiter"
 
-#: ../src/terminal-window.c:1821
+#: ../src/terminal-window.c:1839
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/terminal-window.c:1822
+#: ../src/terminal-window.c:1840
 msgid "_View"
 msgstr "_Ansicht"
 
-#: ../src/terminal-window.c:1823
+#: ../src/terminal-window.c:1841
 msgid "_Search"
 msgstr "_Suchen"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1842
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1825
+#: ../src/terminal-window.c:1843
 msgid "Ta_bs"
 msgstr "R_eiter"
 
-#: ../src/terminal-window.c:1826
+#: ../src/terminal-window.c:1844
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:1860
 msgid "New _Profile…"
 msgstr "Neues _Profil …"
 
-#: ../src/terminal-window.c:1847
+#: ../src/terminal-window.c:1865
 msgid "_Save Contents"
 msgstr "I_nhalt speichern"
 
-#: ../src/terminal-window.c:1852 ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:1870 ../src/terminal-window.c:2106
 msgid "C_lose Tab"
 msgstr "Reiter _schließen"
 
-#: ../src/terminal-window.c:1857
+#: ../src/terminal-window.c:1875
 msgid "_Close Window"
 msgstr "Fenster s_chließen"
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: ../src/terminal-window.c:1892 ../src/terminal-window.c:2086
 msgid "Paste _Filenames"
 msgstr "_Dateinamen einfügen"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1902
 msgid "P_rofiles…"
 msgstr "P_rofile …"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1907
 msgid "_Keyboard Shortcuts…"
 msgstr "Tasten_kombinationen …"
 
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1912
 msgid "Pr_ofile Preferences"
 msgstr "Profilei_nstellungen"
 
-#: ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1936
 msgid "_Find..."
 msgstr "_Suchen …"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1941
 msgid "Find Ne_xt"
 msgstr "_Weitersuchen"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1946
 msgid "Find Pre_vious"
 msgstr "_Rückwärts suchen"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1951
 msgid "_Clear Highlight"
 msgstr "Hervorhebung _zurücksetzen"
 
-#: ../src/terminal-window.c:1939
+#: ../src/terminal-window.c:1957
 msgid "Go to _Line..."
 msgstr "Gehe zu _Zeile …"
 
-#: ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1962
 msgid "_Incremental Search..."
 msgstr "In_krementelle Suche …"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1951
+#: ../src/terminal-window.c:1969
 msgid "Change _Profile"
 msgstr "_Profil wechseln"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1971
 msgid "_Previous Profile"
 msgstr "_Vorheriges Profil"
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1976
 msgid "_Next Profile"
 msgstr "_Nächstes Profil"
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1981
 msgid "_Set Title…"
 msgstr "T_itel festlegen …"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1985
 msgid "Set _Character Encoding"
 msgstr "_Zeichenkodierung festlegen"
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1987
 msgid "_Reset"
 msgstr "_Zurücksetzen"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1992
 msgid "Reset and C_lear"
 msgstr "Zurücksetzen und _leeren"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1999
 msgid "_Add or Remove…"
 msgstr "_Hinzufügen / entfernen …"
 
-#: ../src/terminal-window.c:1988
+#: ../src/terminal-window.c:2006
 msgid "_Previous Tab"
 msgstr "_Vorheriger Reiter"
 
-#: ../src/terminal-window.c:1993
+#: ../src/terminal-window.c:2011
 msgid "_Next Tab"
 msgstr "_Nächster Reiter"
 
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2016
 msgid "Move Tab _Left"
 msgstr "Reiter nach _links verschieben"
 
-#: ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:2021
 msgid "Move Tab _Right"
 msgstr "Reiter nach _rechts verschieben"
 
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:2026
 msgid "_Detach tab"
 msgstr "Reiter ab_trennen"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:2033
 msgid "_Contents"
 msgstr "I_nhalt"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:2038
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:2045
 msgid "_Send Mail To…"
 msgstr "E-_Mail senden an …"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2050
 msgid "_Copy E-mail Address"
 msgstr "E-Mail-A_dresse kopieren"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2055
 msgid "C_all To…"
 msgstr "_Anrufen …"
 
-#: ../src/terminal-window.c:2042
+#: ../src/terminal-window.c:2060
 msgid "_Copy Call Address"
 msgstr "Rufadresse _kopieren"
 
-#: ../src/terminal-window.c:2047
+#: ../src/terminal-window.c:2065
 msgid "_Open Link"
 msgstr "Link ö_ffnen"
 
-#: ../src/terminal-window.c:2052
+#: ../src/terminal-window.c:2070
 msgid "_Copy Link Address"
 msgstr "Link-Adresse _kopieren"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2074
 msgid "P_rofiles"
 msgstr "P_rofile"
 
-#: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:2101 ../src/terminal-window.c:3359
 msgid "C_lose Window"
 msgstr "Fenster _schließen"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2111
 msgid "L_eave Full Screen"
 msgstr "_Vollbild verlassen"
 
-#: ../src/terminal-window.c:2097
+#: ../src/terminal-window.c:2115
 msgid "_Input Methods"
 msgstr "_Eingabemethoden"
 
-#: ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:2122
 msgid "Show _Menubar"
 msgstr "Menü_leiste anzeigen"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2128
 msgid "_Full Screen"
 msgstr "_Vollbild"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this window?"
 msgstr "Möchten Sie dieses Fenster schließen?"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this terminal?"
 msgstr "Möchten Sie dieses Terminal schließen?"
 
-#: ../src/terminal-window.c:3325
+#: ../src/terminal-window.c:3350
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Es laufen noch Prozesse in einigen Terminals in diesem Fenster. Ein Schließen des Fensters wird alle beenden."
 
-#: ../src/terminal-window.c:3329
+#: ../src/terminal-window.c:3354
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Es läuft noch ein Prozess in diesem Terminal. Ein Schließen des Terminals wird ihn beenden."
 
-#: ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:3359
 msgid "C_lose Terminal"
 msgstr "Terminal _schließen"
 
-#: ../src/terminal-window.c:3407
+#: ../src/terminal-window.c:3432
 msgid "Could not save contents"
 msgstr "Inhalt konnte nicht gespeichertt werden"
 
-#: ../src/terminal-window.c:3431
+#: ../src/terminal-window.c:3456
 msgid "Save as..."
 msgstr "Speichern unter …"
 
-#: ../src/terminal-window.c:3956
+#: ../src/terminal-window.c:3975
 msgid "_Title:"
 msgstr "_Titel:"
 
-#: ../src/terminal-window.c:4151
+#: ../src/terminal-window.c:4165
 msgid "Contributors:"
 msgstr "Mitwirkende:"
 
-#: ../src/terminal-window.c:4170
+#: ../src/terminal-window.c:4184
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Eine Terminalumgebung für die MATE-Arbeitsumgebung"
 
-#: ../src/terminal-window.c:4177
+#: ../src/terminal-window.c:4191
 msgid "translator-credits"
 msgstr "Christian Meyer <chrisime@gnome.org>\nChristian Neumair <chris@mate-de.org>\nJan Arne Petersen <jpetersen@uni-bonn.de>\nMario Blättermann <mario.blaettermann@t-online.de>\nChristian Kirbach <Christian.Kirbach@googlemail.com>"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 23:34+0100\n"
-"PO-Revision-Date: 2014-01-25 22:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-11-10 15:07+0100\n"
+"PO-Revision-Date: 2014-11-10 14:08+0000\n"
+"Last-Translator: infirit <infirit@gmail.com>\n"
 "Language-Team: Malayalam (http://www.transifex.com/projects/p/MATE/language/ml/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,14 +17,29 @@ msgstr ""
 "Language: ml\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:188
-#: ../src/terminal-window.c:4168
+#: ../mate-terminal.appdata.xml.in.h:1
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr ""
+
+#: ../mate-terminal.appdata.xml.in.h:2
+msgid ""
+"<p> MATE Terminal is a terminal emulation application that you can use to "
+"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
+"xterm program developed by the X Consortium. It supports translucent "
+"backgrounds, opening multiple terminals in a single window (tabs) and "
+"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
+"of the MATE Desktop Environment. If you would like to know more about MATE "
+"and MATE Terminal, please visit the project's home page. </p>"
+msgstr ""
+
+#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
+#: ../src/terminal-window.c:4182
 msgid "MATE Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
-#: ../src/terminal.c:567 ../src/terminal-profile.c:158
-#: ../src/terminal-window.c:2140
+#: ../src/terminal.c:605 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2162
 msgid "Terminal"
 msgstr "ടെര്‍മിനല്‍"
 
@@ -40,8 +55,8 @@ msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള ക�
 msgid "Specify file containing saved configuration"
 msgstr "സൂക്ഷിച്ചിട്ടുള്ള ക്രമീകരണം അടങ്ങുന്ന ഫയല്‍ നല്‍കുക"
 
-#: ../src/eggsmclient.c:234 ../src/terminal-options.c:958
-#: ../src/terminal-options.c:967
+#: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
+#: ../src/terminal-options.c:973
 msgid "FILE"
 msgstr "FILE"
 
@@ -81,32 +96,32 @@ msgstr "കറുപ്പില്‍ പച്ച"
 msgid "White on black"
 msgstr "കറുപ്പില്‍ വെള്ള"
 
-#: ../src/profile-editor.c:487
+#: ../src/profile-editor.c:490
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "ആജ്ഞ മനസിലാക്കുന്നതില്‍ പിശക്: %s"
 
-#: ../src/profile-editor.c:505
+#: ../src/profile-editor.c:507
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "പ്രൊഫൈല്‍ “%s” ചിട്ടപ്പെടുത്തുന്നു"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "യഥേഷ്ടം"
 
-#: ../src/profile-editor.c:673
+#: ../src/profile-editor.c:675
 msgid "Images"
 msgstr "ചിത്രങ്ങള്‍"
 
-#: ../src/profile-editor.c:847
+#: ../src/profile-editor.c:849
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "താലത്തിലുളള നിറം %d തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-editor.c:851
+#: ../src/profile-editor.c:853
 #, c-format
 msgid "Palette entry %d"
 msgstr "നിറക്കൂട്ടു് എന്‍ട്രി %d"
@@ -367,208 +382,212 @@ msgid "Terminal _bell"
 msgstr "ടെര്‍മിനല്‍ _ബെല്ല്"
 
 #: ../src/profile-preferences.ui.h:35
-msgid "Cursor blin_k:"
+msgid "Copy selected text into _clipboard"
 msgstr ""
 
 #: ../src/profile-preferences.ui.h:36
+msgid "Cursor blin_k:"
+msgstr ""
+
+#: ../src/profile-preferences.ui.h:37
 msgid "Cursor _shape:"
 msgstr "കര്‍സറിന്റെ _ആകൃതികള്‍:"
 
-#: ../src/profile-preferences.ui.h:37
+#: ../src/profile-preferences.ui.h:38
 msgid "Select-by-_word characters:"
 msgstr "_വാക്കിലുള്ള അക്ഷരങ്ങളനുസരിച്ചു് തെരഞ്ഞെടുക്കുക:"
 
-#: ../src/profile-preferences.ui.h:38
+#: ../src/profile-preferences.ui.h:39
 msgid "Use custom default terminal si_ze"
 msgstr "ടെര്‍മിനലിനു് യഥേഷ്ടം സജ്ജമാക്കിയ സ്വതവേയുള്ള _വ്യാപ്തി ഉപയോഗിക്കുക"
 
-#: ../src/profile-preferences.ui.h:39
+#: ../src/profile-preferences.ui.h:40
 msgid "Default size:"
 msgstr "സ്വതവേയുള്ള വലിപ്പം: "
 
-#: ../src/profile-preferences.ui.h:40
+#: ../src/profile-preferences.ui.h:41
 msgid "columns"
 msgstr "നിരകള്‍"
 
-#: ../src/profile-preferences.ui.h:41
+#: ../src/profile-preferences.ui.h:42
 msgid "rows"
 msgstr "വരികള്‍"
 
-#: ../src/profile-preferences.ui.h:42
+#: ../src/profile-preferences.ui.h:43
 msgid "General"
 msgstr "സാധാരണമായ"
 
-#: ../src/profile-preferences.ui.h:43
+#: ../src/profile-preferences.ui.h:44
 msgid "<b>Title</b>"
 msgstr "<b>തലക്കെട്ട്</b>"
 
-#: ../src/profile-preferences.ui.h:44
+#: ../src/profile-preferences.ui.h:45
 msgid "Initial _title:"
 msgstr "പ്രാരംഭ _തലക്കെട്ടു്:"
 
-#: ../src/profile-preferences.ui.h:45
+#: ../src/profile-preferences.ui.h:46
 msgid "When terminal commands set their o_wn titles:"
 msgstr "ടെര്‍മിനല്‍ ആജ്ഞകള്‍ അവയുടെ _സ്വന്തം ശീര്‍ഷകങ്ങള്‍ സജ്ജമാക്കുമ്പോള്‍:"
 
-#: ../src/profile-preferences.ui.h:46
+#: ../src/profile-preferences.ui.h:47
 msgid "<b>Command</b>"
 msgstr "<b>നിര്‍ദ്ദേശം</b>"
 
-#: ../src/profile-preferences.ui.h:47
+#: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
 msgstr "ലോഗിന്‍ ഷെല്ലായി ആജ്ഞ _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/profile-preferences.ui.h:48
+#: ../src/profile-preferences.ui.h:49
 msgid "_Update login records when command is launched"
 msgstr "നിര്‍ദ്ദേശം പ്രയോഗിക്കുമ്പോള്‍ ലോഗിന്‍ റേക്കോര്‍ഡുകള്‍ _പുതുക്കുക "
 
-#: ../src/profile-preferences.ui.h:49
+#: ../src/profile-preferences.ui.h:50
 msgid "Ru_n a custom command instead of my shell"
 msgstr "സ്വന്തം ഷെല്ലിന് പകരം ഇഷ്ടമുളള ഒരു നിര്‍ദ്ദേശം _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/profile-preferences.ui.h:50
+#: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
 msgstr "ഇഷ്ട _നിര്‍ദ്ദേശം:"
 
-#: ../src/profile-preferences.ui.h:51
+#: ../src/profile-preferences.ui.h:52
 msgid "When command _exits:"
 msgstr "നിര്‍ദ്ദേശത്തില്‍ നിന്ന് _പുറത്ത് കടക്കുമ്പോള്‍ :"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr "തലക്കെട്ടും ആജ്ഞയും"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
 msgstr "സിസ്റ്റമിലുള്ള പ്രമേയത്തില്‍ നിന്നും നിറങ്ങള്‍ _തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:56
 msgid "Built-in sche_mes:"
 msgstr "ബിള്‍ട്ടിന്‍ _സ്ക്കീമുകള്‍:"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "_പദാവലിയുടെ നിറം: "
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:58
 msgid "_Background color:"
 msgstr "_പശ്ചാത്തലനിറം: "
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "ടെര്‍മിനലിന്റെ പശ്ചാത്തലത്തിനുളള നിറം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:60
 msgid "Choose Terminal Text Color"
 msgstr "ടെര്‍മിനലിലുളള പദാവലിയ്ക്കു് നിറം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:61
 msgid "_Underline color:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:62
 msgid "_Same as text color"
 msgstr "_പദാവലിയുടെ അതേ നിറം: "
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "Bol_d color:"
 msgstr "_കട്ടിയുള്ള നിറം:"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>നിറക്കൂട്ടു്</b>"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
 msgstr "ബിള്‍ട്ടിന്‍ _സ്ക്കീമുകള്‍:"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:66
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>കുറിപ്പ്:</b> ടെര്‍മിനല്‍ പ്രയോഗങ്ങള്‍ക്ക് ഈ നിറങ്ങള്‍ ലഭ്യമാണ്.</i></small>"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:67
 msgid "Color p_alette:"
 msgstr "നിറ_ക്കൂട്ട്:"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "നിറങ്ങള്‍"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr "_സോളിഡ് നിറം"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "_പശ്ചാത്തലത്തിലുളള ചിത്രം"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "ചിത്രത്തിനുള്ള _ഫയല്‍:"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "പശ്ചാത്തല ചിത്രം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr "പശ്ചാത്തലത്തിലുള്ള ചിത്രം _സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "_പുറകിലുള്ളവ കാണാവുന്ന പശ്ചാത്തലം"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr "കട്ടികുറഞ്ഞ _നിറം അല്ലെങ്കില്‍ പശ്ചാത്തലത്തില്‍ ചിത്രം:"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:76
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>ഒന്നുമില്ല</i></small>"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>ഏറ്റവും കൂടിയ</i></small>"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "Background"
 msgstr "പശ്ചാത്തലം"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "_Scrollbar is:"
 msgstr "_സ്ക്രോള്‍ ബാര്‍:"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "Scroll_back:"
 msgstr "സ്ക്രോള്‍_ബാക്ക്:"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _keystroke"
 msgstr "_കീസ്ട്രോക്കില്‍ സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _output"
 msgstr "_ഔട്ട്പുട്ടില്‍ സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "_Unlimited"
 msgstr "_പരിധിയില്ല"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "lines"
 msgstr "വരികള്‍"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "Scrolling"
 msgstr "സ്ക്രോളിങ്"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -576,19 +595,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>കുറിപ്പ്:</b> ചില പ്രയോഗങ്ങള്‍ ശരിയായി പ്രവര്‍ത്തിക്കാതിരിക്കുവാന്‍ ഈ ഐച്ഛികങ്ങള്‍ ചിലപ്പോള്‍ കാരണമാകുന്നു.  വേറെ ടെര്‍മിനല്‍ ഉപയോഗം ആവശ്യമുള്ള ചില പ്രയോഗങ്ങള്‍ക്കും ഓപ്പറേറ്റിങ് സിസ്റ്റങ്ങള്‍ക്കും മാത്രം ഇവ സഹായകമാകുന്നു.</i></small>"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid "_Delete key generates:"
 msgstr "_Delete കീ ഉല്‍പാദിപ്പിക്കുന്നതു്:"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid "_Backspace key generates:"
 msgstr "_Backspace കീ ഉല്‍പാദിപ്പിക്കുന്നതു്:"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "കോപാറ്റിബിളിറ്റി ഐച്ഛികങ്ങള്‍ സഹജമായി _ക്രമീകരിക്കുക "
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "Compatibility"
 msgstr "പൊരുത്തം"
 
@@ -656,7 +675,7 @@ msgstr "ചെറുതാക്കുക"
 msgid "Normal Size"
 msgstr "സാധാരണ വലിപ്പം"
 
-#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3933
+#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3958
 msgid "Set Title"
 msgstr "തലക്കെട്ട് സജ്ജീകരിയ്ക്കുക"
 
@@ -768,62 +787,62 @@ msgstr "കിളിവാതിലുകള്‍"
 msgid "Help"
 msgstr "സഹായം"
 
-#: ../src/terminal-accels.c:831
+#: ../src/terminal-accels.c:830
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "“%s” എന്ന എളുപ്പവഴി നിലവില്‍ “%s” പ്രവര്‍ത്തിയുമായി ചേര്‍ന്നിരിക്കുന്നു"
 
-#: ../src/terminal-accels.c:987
+#: ../src/terminal-accels.c:986
 msgid "_Action"
 msgstr "_പ്രവര്‍ത്തനം"
 
-#: ../src/terminal-accels.c:1006
+#: ../src/terminal-accels.c:1005
 msgid "Shortcut _Key"
 msgstr "_എളുപ്പ വഴി "
 
-#: ../src/terminal-app.c:460
+#: ../src/terminal-app.c:481
 msgid "Click button to choose profile"
 msgstr "പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുന്നതിനായി ബട്ടണ്‍ ക്ളിക്ക് ചെയ്യുക"
 
-#: ../src/terminal-app.c:543
+#: ../src/terminal-app.c:564
 msgid "Profile list"
 msgstr "ഫ്രൊഫൈലിന്റെ പട്ടിക"
 
-#: ../src/terminal-app.c:604
+#: ../src/terminal-app.c:625
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "പ്രൊഫൈല്‍ “%s” നീക്കം ചെയ്യണമോ?"
 
-#: ../src/terminal-app.c:620
+#: ../src/terminal-app.c:641
 msgid "Delete Profile"
 msgstr "പ്രൊഫൈല്‍ നീക്കം ചെയ്യുക"
 
-#: ../src/terminal-app.c:1053
+#: ../src/terminal-app.c:1073
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "“%s” എന്ന പേരില്‍ ഒരു പ്രൊഫൈല്‍ നിലവിലുണ്ടു്. നിങ്ങള്‍ക്കു് ഇതേ പേരില്‍ മറ്റൊരു പ്രൊഫൈല്‍ ഉണ്ടാക്കണമോ?"
 
-#: ../src/terminal-app.c:1148
+#: ../src/terminal-app.c:1168
 msgid "Choose base profile"
 msgstr "ബെയിസ് പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുക"
 
-#: ../src/terminal-app.c:1751
+#: ../src/terminal-app.c:1775
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\" എന്ന പ്രൊഫൈല്‍ ലഭ്യമല്ല, സ്വതവേയുള്ളതു് ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-app.c:1775
+#: ../src/terminal-app.c:1799
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "തെറ്റായ ജ്യാമിതി സ്ട്രിങ് \"%s\"\n"
 
-#: ../src/terminal-app.c:1953
+#: ../src/terminal-app.c:2005
 msgid "User Defined"
 msgstr "ഉപയോക്താവു് നിര്‍വ്വചിച്ച"
 
-#: ../src/terminal.c:562
+#: ../src/terminal.c:600
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"
@@ -980,7 +999,7 @@ msgstr "കോഡ് അല്ലേല്‍ _രഹസ്യ ഭാഷയി�
 msgid "Current Locale"
 msgstr "നിലവിലുളള ലോക്കെയില്‍"
 
-#: ../src/terminal-options.c:175
+#: ../src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -988,210 +1007,210 @@ msgid ""
 "profile' option\n"
 msgstr "\"%s\" ഉപാധി നിലവിലുള്ള mate-terminal പതിപ്പിനു് പിന്തുണ നല്‍കുന്നില്ല; നിങ്ങള്‍ക്കു് ഇഷ്ടമുള്ള ക്രമീകരണത്തില്‍ ഒരു പ്രൊഫൈല്‍ ഉണ്ടാക്കി, പുതിയ '--profile' ഉപാധി ഉപയോഗിക്കാം\n"
 
-#: ../src/terminal-options.c:208
+#: ../src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\"-ലേക്കുളള ആര്‍ഗ്യുമെന്റ് അസാധുവായ ഒരു ആജ്ഞയാണ്: %s"
 
-#: ../src/terminal-options.c:343
+#: ../src/terminal-options.c:348
 msgid "Two roles given for one window"
 msgstr "ഒരു ജാലകത്തിനു് രണ്ടു് ജോലികള്‍ നല്‍കിയിരിക്കുന്നു"
 
-#: ../src/terminal-options.c:364 ../src/terminal-options.c:397
+#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "ഒരേ ജാലകത്തിനു് \"%s\" ഉപാധി രണ്ടും തവണ നല്‍കിയിരിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:596
+#: ../src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" ശരിയായ സൂം ഫാക്ടര്‍ അല്ല"
 
-#: ../src/terminal-options.c:603
+#: ../src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ ചെറുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:611
+#: ../src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ വലുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:646
+#: ../src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "\"%s\" ഐച്ഛികത്തിനു്, ബാക്കിയുള്ള കമാന്‍ഡ് ലൈനില്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി കമാന്‍ഡ് നല്‍കേണ്ടതുണ്ടു്"
 
-#: ../src/terminal-options.c:807
+#: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "ശരിയായ ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ അല്ല."
 
-#: ../src/terminal-options.c:820
+#: ../src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "പൊരുത്തപ്പെടാത്ത ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ പതിപ്പു്."
 
-#: ../src/terminal-options.c:948
+#: ../src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "ആക്ടിവേഷന്‍ nameserver ഉപയോഗിച്ചു് രജിസ്ടര്‍ ചെയ്യരുതു്, സജീവമായ ഒരു ടെര്‍മിനല്‍ വീണ്ടും ഉപയോഗിക്കരുതു്"
 
-#: ../src/terminal-options.c:957
+#: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "ഒരു ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ ലഭ്യമാക്കുക"
 
-#: ../src/terminal-options.c:966
+#: ../src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "ടെര്‍മിനല്‍ ക്രമീകരണം ഒരു ഫയലിലേക്കു് സൂക്ഷിക്കുക"
 
-#: ../src/terminal-options.c:981
+#: ../src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉള്ള ഒരു പുതിയ കിളിവാതില്‍ അടങ്ങുന്ന പുതിയ ഒരു ജാലകം തുറക്കുക"
 
-#: ../src/terminal-options.c:990
+#: ../src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "ഒടുവില്‍ തുറന്ന ജാലകത്തില്‍ സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉപയോഗിച്ചു് ഒരു പുതിയ കിളിവാതിലില്‍ തുറക്കുക"
 
-#: ../src/terminal-options.c:1004
+#: ../src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "മെനുബാര്‍ ഓണ്‍ ചെയ്യുക"
 
-#: ../src/terminal-options.c:1013
+#: ../src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "മെനുബാര്‍ ഓഫ് ചെയ്യുക"
 
-#: ../src/terminal-options.c:1022
-msgid "Maximise the window"
-msgstr "ജാലകം വലുതാക്കുക"
+#: ../src/terminal-options.c:1028
+msgid "Maximize the window"
+msgstr ""
 
-#: ../src/terminal-options.c:1031
+#: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "ജാലകം പൂര്‍ണ്ണവലിപ്പത്തിലാക്കുക"
 
-#: ../src/terminal-options.c:1040
+#: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
 msgstr "ജാലകത്തിനുള്ള വലിപ്പം ക്രമീകരിക്കുക; ഉദാഹരണത്തിനു്: 80x24, അല്ലെങ്കില്‍ 80x24+200+200 (ROWSxCOLS+X+Y)"
 
-#: ../src/terminal-options.c:1041
+#: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: ../src/terminal-options.c:1049
+#: ../src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "ജാലകത്തിനുള്ള റോള്‍ സജ്ജമാക്കകു"
 
-#: ../src/terminal-options.c:1050
+#: ../src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "ROLE"
 
-#: ../src/terminal-options.c:1058
+#: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "ജാലകത്തില്‍ ഏറ്റവും ഒടുവില്‍ പറഞ്ഞിരിക്കുന്ന കിളിവാതില്‍ സജീവമായി ക്രമീകരിക്കുക"
 
-#: ../src/terminal-options.c:1072
+#: ../src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "ടെര്‍മിനലിനുള്ളിലുള്ള ഈ ഉപാധിയിലേക്കു് ആര്‍ഗ്യുമെന്റ് പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/terminal-options.c:1081
+#: ../src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈലിനു് പകരം നല്‍കിയിരിക്കുന്ന പ്രൊഫൈല്‍ ഉപയോഗിക്കുക"
 
-#: ../src/terminal-options.c:1082
+#: ../src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: ../src/terminal-options.c:1090
+#: ../src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "ടെര്‍മിനലിനുള്ള തലക്കെട്ടു് സജ്ജമാക്കുക"
 
-#: ../src/terminal-options.c:1091
+#: ../src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "TITLE"
 
-#: ../src/terminal-options.c:1099
+#: ../src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "പ്രവര്‍ത്തനത്തിലുള്ള തട്ടു് സജ്ജമാക്കുക"
 
-#: ../src/terminal-options.c:1100
+#: ../src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: ../src/terminal-options.c:1108
+#: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "ടെര്‍മിനലിനുള്ള സൂം ഫാക്ടര്‍ സജ്ജമാക്കുക (1.0 = സാധാരണ വലിപ്പം)"
 
-#: ../src/terminal-options.c:1109
+#: ../src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: ../src/terminal-options.c:1360 ../src/terminal-options.c:1363
+#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: ../src/terminal-options.c:1364
+#: ../src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1374
+#: ../src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "പുതിയ ജാലകങ്ങളും ടെര്‍മിനല്‍ റ്റാബുകളും തുറക്കുന്നതിനുള്ള ഐച്ഛികങ്ങള്‍; ഇവയില്‍ ഒന്നില്‍ കൂടുതല്‍ നിഷ്കര്‍ഷിക്കാം:"
 
-#: ../src/terminal-options.c:1375
+#: ../src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1383
+#: ../src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr "ജാലകത്തിന്റെ ഐച്ഛികങ്ങള്‍; ആദ്യത്തെ --window അല്ലെങ്കില്‍ --tab ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ജാലകങ്ങള്‍ക്കും സ്വതവേയുള്ളതായി സജ്ജമാക്കുന്നു:"
 
-#: ../src/terminal-options.c:1384
+#: ../src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "ഓരോ ജാലകത്തിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1392
+#: ../src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍; ആദ്യത്തെ --window അല്ലെങ്കില്‍ --tab ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ടെര്‍മിനലുകള്‍ക്കും സഹജമായി സജ്ജമാക്കുന്നു:"
 
-#: ../src/terminal-options.c:1393
+#: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-profile.c:165
+#: ../src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "പേരില്ലാത്ത"
 
-#: ../src/terminal-screen.c:1519
+#: ../src/terminal-screen.c:1533
 msgid "_Profile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
+#: ../src/terminal-screen.c:1534 ../src/terminal-screen.c:1923
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: ../src/terminal-screen.c:1523
+#: ../src/terminal-screen.c:1537
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: ../src/terminal-screen.c:1914
+#: ../src/terminal-screen.c:1928
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1933
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "സിഗ്നല്‍ %d ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1938
 msgid "The child process was terminated."
 msgstr "ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
@@ -1238,7 +1257,7 @@ msgstr "നിങ്ങള്‍ക്കു് ഗ്നോം ടെര്‍�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:477
+#: ../src/terminal-window.c:485
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -1246,259 +1265,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:483
+#: ../src/terminal-window.c:491
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1818
+#: ../src/terminal-window.c:1836
 msgid "_File"
 msgstr "_ഫയല്‍"
 
-#: ../src/terminal-window.c:1819 ../src/terminal-window.c:1832
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:1837 ../src/terminal-window.c:1850
+#: ../src/terminal-window.c:2091
 msgid "Open _Terminal"
 msgstr "ടെര്‍മിനല്‍ _തുറക്കുക "
 
-#: ../src/terminal-window.c:1820 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:1838 ../src/terminal-window.c:1855
+#: ../src/terminal-window.c:2096
 msgid "Open Ta_b"
 msgstr "_കിളിവാതില്‍ തുറക്കുക"
 
-#: ../src/terminal-window.c:1821
+#: ../src/terminal-window.c:1839
 msgid "_Edit"
 msgstr "_ചിട്ട"
 
-#: ../src/terminal-window.c:1822
+#: ../src/terminal-window.c:1840
 msgid "_View"
 msgstr "_കാഴ്ച"
 
-#: ../src/terminal-window.c:1823
+#: ../src/terminal-window.c:1841
 msgid "_Search"
 msgstr "_തെരച്ചില്‍"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1842
 msgid "_Terminal"
 msgstr "_ടെര്‍മിനല്‍"
 
-#: ../src/terminal-window.c:1825
+#: ../src/terminal-window.c:1843
 msgid "Ta_bs"
 msgstr "_കിളിവാതിലുകള്‍ "
 
-#: ../src/terminal-window.c:1826
+#: ../src/terminal-window.c:1844
 msgid "_Help"
 msgstr "_സഹായം"
 
-#: ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:1860
 msgid "New _Profile…"
 msgstr "പുതിയ _പ്രൊഫൈല്‍"
 
-#: ../src/terminal-window.c:1847
+#: ../src/terminal-window.c:1865
 msgid "_Save Contents"
 msgstr "ഉള്ളടക്കം _സൂക്ഷിക്കുക"
 
-#: ../src/terminal-window.c:1852 ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:1870 ../src/terminal-window.c:2106
 msgid "C_lose Tab"
 msgstr "കിളിവാതില്‍ _അടയ്ക്കുക"
 
-#: ../src/terminal-window.c:1857
+#: ../src/terminal-window.c:1875
 msgid "_Close Window"
 msgstr "ജാലകം _അടയ്ക്കുക "
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: ../src/terminal-window.c:1892 ../src/terminal-window.c:2086
 msgid "Paste _Filenames"
 msgstr "_ഫയല്‍നാമങ്ങള്‍ ഒട്ടിക്കുക"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1902
 msgid "P_rofiles…"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1907
 msgid "_Keyboard Shortcuts…"
 msgstr "_കീബോര്‍ഡിനുള്ള എളുപ്പവഴികള്‍"
 
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1912
 msgid "Pr_ofile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1936
 msgid "_Find..."
 msgstr "കണ്ടെത്തുക..."
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1941
 msgid "Find Ne_xt"
 msgstr "അ_ടുത്തതു് കണ്ടെത്തുക"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1946
 msgid "Find Pre_vious"
 msgstr "_മുമ്പുളളതു് കണ്ടെത്തുക"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1951
 msgid "_Clear Highlight"
 msgstr ""
 
-#: ../src/terminal-window.c:1939
+#: ../src/terminal-window.c:1957
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1962
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:1951
+#: ../src/terminal-window.c:1969
 msgid "Change _Profile"
 msgstr "_പ്രൊഫൈന്‍ മാറ്റം വരുത്തുക "
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1971
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1976
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1981
 msgid "_Set Title…"
 msgstr "തലക്കെട്ടു് _സജ്ജമാക്കുക"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1985
 msgid "Set _Character Encoding"
 msgstr "_അക്ഷരങ്ങള്‍ എന്‍കോഡ് ചെയ്യുന്ന സംവിധാനം ക്രമീകരിക്കുക "
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1987
 msgid "_Reset"
 msgstr "_പുനഃസ്ഥാപിക്കുക "
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1992
 msgid "Reset and C_lear"
 msgstr "പുനഃസ്ഥാപിച്ച് _വെടിപ്പാക്കുക "
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1999
 msgid "_Add or Remove…"
 msgstr "_ചേര്‍ക്കുക അല്ലെങ്കില്‍ നീക്കം ചെയ്യുക… "
 
-#: ../src/terminal-window.c:1988
+#: ../src/terminal-window.c:2006
 msgid "_Previous Tab"
 msgstr "_മുമ്പുളള കിളിവാതില്‍"
 
-#: ../src/terminal-window.c:1993
+#: ../src/terminal-window.c:2011
 msgid "_Next Tab"
 msgstr "_അടുത്ത കിളിവാതില്‍"
 
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2016
 msgid "Move Tab _Left"
 msgstr "കിളിവാതില്‍ _ഇടത്തേക്ക് നീക്കുക"
 
-#: ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:2021
 msgid "Move Tab _Right"
 msgstr "കിളിവാതില്‍ _വലത്തേക്ക് നീക്കുക"
 
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:2026
 msgid "_Detach tab"
 msgstr "കിളിവാതില്‍ _വേര്‍പ്പെടുത്തുക"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:2033
 msgid "_Contents"
 msgstr "_ഉള്ളടക്കം "
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:2038
 msgid "_About"
 msgstr "_സംബന്ധിച്ച് "
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:2045
 msgid "_Send Mail To…"
 msgstr "മെയില്‍ _അയയ്ക്കേണ്ടത്"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2050
 msgid "_Copy E-mail Address"
 msgstr "ഈ-മെയില്‍ മേല്‍വിലാസം _പകര്‍ത്തുക "
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2055
 msgid "C_all To…"
 msgstr "_വിളിയ്ക്കേണ്ടതു്…"
 
-#: ../src/terminal-window.c:2042
+#: ../src/terminal-window.c:2060
 msgid "_Copy Call Address"
 msgstr "വിളിക്കുവാനുള്ള മേല്‍വിലാസം _പകര്‍ത്തുക"
 
-#: ../src/terminal-window.c:2047
+#: ../src/terminal-window.c:2065
 msgid "_Open Link"
 msgstr "ലിങ്ക് _തുറക്കുക "
 
-#: ../src/terminal-window.c:2052
+#: ../src/terminal-window.c:2070
 msgid "_Copy Link Address"
 msgstr "കണ്ണിയുടെ മേല്‍വിലാസം _പകര്‍ത്തുക "
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2074
 msgid "P_rofiles"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:2101 ../src/terminal-window.c:3359
 msgid "C_lose Window"
 msgstr "ജാലകം _അടയ്ക്കുക"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2111
 msgid "L_eave Full Screen"
 msgstr "സ്ക്രീനിന്റെ പൂര്‍ണ്ണവലിപ്പത്തില്‍ നിന്നും പുറത്തു് _കടക്കുക"
 
-#: ../src/terminal-window.c:2097
+#: ../src/terminal-window.c:2115
 msgid "_Input Methods"
 msgstr "_ഇന്‍പുട്ട് മാര്‍ഗ്ഗങ്ങള്‍ "
 
-#: ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:2122
 msgid "Show _Menubar"
 msgstr "_മെനു ബാര്‍ കാണിക്കുക "
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2128
 msgid "_Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമവധി _വലിപ്പമുളളതാക്കുക "
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this window?"
 msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: ../src/terminal-window.c:3325
+#: ../src/terminal-window.c:3350
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ ഇല്ലാതാക്കുന്നതാണു്."
 
-#: ../src/terminal-window.c:3329
+#: ../src/terminal-window.c:3354
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും ഒരു പ്രക്രിയ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അതിനെ ഇല്ലാതാക്കുന്നതാണു്."
 
-#: ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:3359
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അ_ടയ്ക്കുക"
 
-#: ../src/terminal-window.c:3407
+#: ../src/terminal-window.c:3432
 msgid "Could not save contents"
 msgstr "ഉള്ളടക്കം സൂക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/terminal-window.c:3431
+#: ../src/terminal-window.c:3456
 msgid "Save as..."
 msgstr "പുതിയ പേരില്‍ സൂക്ഷിക്കുക..."
 
-#: ../src/terminal-window.c:3956
+#: ../src/terminal-window.c:3975
 msgid "_Title:"
 msgstr "_തലക്കെട്ടു്:"
 
-#: ../src/terminal-window.c:4151
+#: ../src/terminal-window.c:4165
 msgid "Contributors:"
 msgstr "സംഭാവനചെയ്തവര്‍:"
 
-#: ../src/terminal-window.c:4170
+#: ../src/terminal-window.c:4184
 msgid "A terminal emulator for the MATE desktop"
 msgstr "ഗ്നോം പണിയിടത്തിനുള്ള ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: ../src/terminal-window.c:4177
+#: ../src/terminal-window.c:4191
 msgid "translator-credits"
 msgstr "എഫ്എസ്എഫ് ഇന്ത്യ <locale@gnu.org.in>\nസുരേഷ് വിപി <mvpsuresh@yahoo.com>\nഅനി പീറ്റര്‍ <apeter@redhat.com>"

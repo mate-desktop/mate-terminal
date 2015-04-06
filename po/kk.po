@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 23:34+0100\n"
-"PO-Revision-Date: 2014-01-25 22:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-11-10 15:07+0100\n"
+"PO-Revision-Date: 2015-03-26 09:09+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh (http://www.transifex.com/projects/p/MATE/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,14 +18,29 @@ msgstr ""
 "Language: kk\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:188
-#: ../src/terminal-window.c:4168
+#: ../mate-terminal.appdata.xml.in.h:1
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr ""
+
+#: ../mate-terminal.appdata.xml.in.h:2
+msgid ""
+"<p> MATE Terminal is a terminal emulation application that you can use to "
+"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
+"xterm program developed by the X Consortium. It supports translucent "
+"backgrounds, opening multiple terminals in a single window (tabs) and "
+"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
+"of the MATE Desktop Environment. If you would like to know more about MATE "
+"and MATE Terminal, please visit the project's home page. </p>"
+msgstr ""
+
+#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
+#: ../src/terminal-window.c:4182
 msgid "MATE Terminal"
 msgstr "MATE терминалы"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
-#: ../src/terminal.c:567 ../src/terminal-profile.c:158
-#: ../src/terminal-window.c:2140
+#: ../src/terminal.c:605 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2162
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -40,8 +56,8 @@ msgstr "Сессиялар менеджеріне байланыстарды с�
 msgid "Specify file containing saved configuration"
 msgstr "Сақталған баптаулары бар файлды көрсету"
 
-#: ../src/eggsmclient.c:234 ../src/terminal-options.c:958
-#: ../src/terminal-options.c:967
+#: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
+#: ../src/terminal-options.c:973
 msgid "FILE"
 msgstr "ФАЙЛ"
 
@@ -63,7 +79,7 @@ msgstr "Сессияны басқару опцияларын көрсету"
 
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Қара, ашық сарының үстінде"
 
 #: ../src/profile-editor.c:48
 msgid "Black on white"
@@ -71,42 +87,42 @@ msgstr "Ақ үстіндегі қара"
 
 #: ../src/profile-editor.c:52
 msgid "Gray on black"
-msgstr ""
+msgstr "Сұр, қараның үстінде"
 
 #: ../src/profile-editor.c:56
 msgid "Green on black"
-msgstr ""
+msgstr "Жасыл, қараның үстінде"
 
 #: ../src/profile-editor.c:60
 msgid "White on black"
 msgstr "Қара үстіндегі ақ"
 
-#: ../src/profile-editor.c:487
+#: ../src/profile-editor.c:490
 #, c-format
 msgid "Error parsing command: %s"
-msgstr ""
+msgstr "Команданы талдау қатесі: %s"
 
-#: ../src/profile-editor.c:505
+#: ../src/profile-editor.c:507
 #, c-format
 msgid "Editing Profile “%s”"
-msgstr ""
+msgstr "“%s” профилін түзету"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:538 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "Таңдауыңызша"
 
-#: ../src/profile-editor.c:673
+#: ../src/profile-editor.c:675
 msgid "Images"
 msgstr "Суреттер"
 
-#: ../src/profile-editor.c:847
+#: ../src/profile-editor.c:849
 #, c-format
 msgid "Choose Palette Color %d"
-msgstr ""
+msgstr "%d палитра түсін таңдау"
 
-#: ../src/profile-editor.c:851
+#: ../src/profile-editor.c:853
 #, c-format
 msgid "Palette entry %d"
 msgstr "Палитра элементі %d"
@@ -121,7 +137,7 @@ msgstr ""
 
 #: ../src/encodings-dialog.ui.h:3
 msgid "E_ncodings shown in menu:"
-msgstr ""
+msgstr "Мәзірде көрсетілетін _кодтаулар:"
 
 #: ../src/find-dialog.ui.h:1
 msgid "Find"
@@ -137,11 +153,11 @@ msgstr "_Регистрді ескеру"
 
 #: ../src/find-dialog.ui.h:4
 msgid "Match _entire word only"
-msgstr ""
+msgstr "Сөзді то_лығымен сәйкестеу"
 
 #: ../src/find-dialog.ui.h:5
 msgid "Match as _regular expression"
-msgstr ""
+msgstr "Тұ_рақты өрнек ретінде сәйкестеу"
 
 #: ../src/find-dialog.ui.h:6
 msgid "Search _backwards"
@@ -149,7 +165,7 @@ msgstr "К_ері іздеу"
 
 #: ../src/find-dialog.ui.h:7
 msgid "_Wrap around"
-msgstr ""
+msgstr "_Соңына жеткенде басына өту"
 
 #: ../src/keybinding-editor.ui.h:1
 msgid "Keyboard Shortcuts"
@@ -169,11 +185,11 @@ msgstr "Ж_арлық батырмалары"
 
 #: ../src/profile-manager.ui.h:1
 msgid "Profiles"
-msgstr "Профайлдар"
+msgstr "Профильдер"
 
 #: ../src/profile-manager.ui.h:2
 msgid "_Profile used when launching a new terminal:"
-msgstr ""
+msgstr "Жаңа терминалда қолданылатын _профиль:"
 
 #: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:152
 msgid "New Profile"
@@ -194,42 +210,42 @@ msgstr ""
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:1 ../src/extra-strings.c:35
 msgid "Block"
-msgstr "Блоктау"
+msgstr "Блок"
 
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
 msgid "I-Beam"
-msgstr ""
+msgstr "Вертикалды сызық"
 
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
 msgid "Underline"
-msgstr "Асты сызылған"
+msgstr "Астыңғы сызық"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
 msgid "Replace initial title"
-msgstr ""
+msgstr "Бастапқы атауды алмастыру"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:5 ../src/extra-strings.c:65
 msgid "Append initial title"
-msgstr ""
+msgstr "Бастапқы атауға қосу"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:6 ../src/extra-strings.c:67
 msgid "Prepend initial title"
-msgstr ""
+msgstr "Бастапқы атаудың алдына қою"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:7 ../src/extra-strings.c:69
 msgid "Keep initial title"
-msgstr ""
+msgstr "Бастапқы атауды алып қалу"
 
 #. Translators: When command exits: ...
 #: ../src/profile-preferences.ui.h:8 ../src/extra-strings.c:49
 msgid "Exit the terminal"
-msgstr ""
+msgstr "Терминал жұмысын аяқтау"
 
 #. Translators: When command exits: ...
 #: ../src/profile-preferences.ui.h:9 ../src/extra-strings.c:51
@@ -239,7 +255,7 @@ msgstr "Қайта қосу командасы"
 #. Translators: When command exits: ...
 #: ../src/profile-preferences.ui.h:10 ../src/extra-strings.c:53
 msgid "Hold the terminal open"
-msgstr ""
+msgstr "Терминалды ашық ұстау"
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:12 ../src/extra-strings.c:72
@@ -336,7 +352,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:27
 msgid "Profile Editor"
-msgstr ""
+msgstr "Профильдер түзетушісі"
 
 #: ../src/profile-preferences.ui.h:28
 msgid "_Profile name:"
@@ -356,219 +372,223 @@ msgstr "Terminal қарібін таңдаңыз"
 
 #: ../src/profile-preferences.ui.h:32
 msgid "_Allow bold text"
-msgstr ""
+msgstr "Жуан мәтінді рұқс_ат ету"
 
 #: ../src/profile-preferences.ui.h:33
 msgid "Show _menubar by default in new terminals"
-msgstr ""
+msgstr "Жаңа терминалдарда _мәзір жолағын көрсету"
 
 #: ../src/profile-preferences.ui.h:34
 msgid "Terminal _bell"
-msgstr ""
+msgstr "Терминал қ_оңырауы"
 
 #: ../src/profile-preferences.ui.h:35
-msgid "Cursor blin_k:"
+msgid "Copy selected text into _clipboard"
 msgstr ""
 
 #: ../src/profile-preferences.ui.h:36
-msgid "Cursor _shape:"
+msgid "Cursor blin_k:"
 msgstr ""
 
 #: ../src/profile-preferences.ui.h:37
+msgid "Cursor _shape:"
+msgstr "Курсор _пішімі:"
+
+#: ../src/profile-preferences.ui.h:38
 msgid "Select-by-_word characters:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:38
+#: ../src/profile-preferences.ui.h:39
 msgid "Use custom default terminal si_ze"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:39
+#: ../src/profile-preferences.ui.h:40
 msgid "Default size:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:40
-msgid "columns"
-msgstr "бағандар"
-
 #: ../src/profile-preferences.ui.h:41
-msgid "rows"
-msgstr "жолдар"
+msgid "columns"
+msgstr "баған"
 
 #: ../src/profile-preferences.ui.h:42
+msgid "rows"
+msgstr "жол"
+
+#: ../src/profile-preferences.ui.h:43
 msgid "General"
 msgstr "Жалпы"
 
-#: ../src/profile-preferences.ui.h:43
+#: ../src/profile-preferences.ui.h:44
 msgid "<b>Title</b>"
 msgstr "<b>Атауы</b>"
 
-#: ../src/profile-preferences.ui.h:44
+#: ../src/profile-preferences.ui.h:45
 msgid "Initial _title:"
 msgstr "_Бастапқы атауы:"
 
-#: ../src/profile-preferences.ui.h:45
+#: ../src/profile-preferences.ui.h:46
 msgid "When terminal commands set their o_wn titles:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:46
+#: ../src/profile-preferences.ui.h:47
 msgid "<b>Command</b>"
 msgstr "<b>Команда:</b>"
 
-#: ../src/profile-preferences.ui.h:47
+#: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
 msgstr "Команданы жүйеге кіру қ_оршамы ретінде орындау"
 
-#: ../src/profile-preferences.ui.h:48
-msgid "_Update login records when command is launched"
-msgstr ""
-
 #: ../src/profile-preferences.ui.h:49
-msgid "Ru_n a custom command instead of my shell"
-msgstr ""
+msgid "_Update login records when command is launched"
+msgstr "Команда орындалғанда жүйеге кіру жур_налын жаңарту"
 
 #: ../src/profile-preferences.ui.h:50
-msgid "Custom co_mmand:"
-msgstr ""
+msgid "Ru_n a custom command instead of my shell"
+msgstr "Менің қоршамым орнына таңдауыңызша команданы ор_ындау:"
 
 #: ../src/profile-preferences.ui.h:51
-msgid "When command _exits:"
-msgstr ""
+msgid "Custom co_mmand:"
+msgstr "Таңдауыңызша к_оманда:"
 
 #: ../src/profile-preferences.ui.h:52
+msgid "When command _exits:"
+msgstr "Команда өз жұмысын а_яқтағанда:"
+
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:54
-msgid "_Use colors from system theme"
-msgstr ""
-
 #: ../src/profile-preferences.ui.h:55
-msgid "Built-in sche_mes:"
-msgstr ""
+msgid "_Use colors from system theme"
+msgstr "Жүйелік тема түстерін қо_лдану"
 
 #: ../src/profile-preferences.ui.h:56
+msgid "Built-in sche_mes:"
+msgstr "Құрамындағы те_малар:"
+
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "Мә_тін түсі:"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:58
 msgid "_Background color:"
 msgstr "Ф_он түсі:"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "Терминалдың фон түсін таңдаңыз"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:60
 msgid "Choose Terminal Text Color"
 msgstr "Терминал мәтіннің түсін таңдаңыз"
 
-#: ../src/profile-preferences.ui.h:60
-msgid "_Underline color:"
-msgstr ""
-
 #: ../src/profile-preferences.ui.h:61
-msgid "_Same as text color"
-msgstr ""
+msgid "_Underline color:"
+msgstr "Аст_ын сызу түсі:"
 
 #: ../src/profile-preferences.ui.h:62
-msgid "Bol_d color:"
-msgstr ""
+msgid "_Same as text color"
+msgstr "Мәтін түсімен бір_дей"
 
 #: ../src/profile-preferences.ui.h:63
+msgid "Bol_d color:"
+msgstr "Жу_ан түсі:"
+
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>Палитра</b>"
 
-#: ../src/profile-preferences.ui.h:64
-msgid "Built-in _schemes:"
-msgstr ""
-
 #: ../src/profile-preferences.ui.h:65
+msgid "Built-in _schemes:"
+msgstr "Құрамындағы _темалар:"
+
+#: ../src/profile-preferences.ui.h:66
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:66
-msgid "Color p_alette:"
-msgstr ""
-
 #: ../src/profile-preferences.ui.h:67
+msgid "Color p_alette:"
+msgstr "Түстер п_алитрасы:"
+
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "Түстер"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "Фо_н суреті"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "Сур_ет файлы:"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "Фон суреті файлын таңдау"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "Мөлдір фон"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:76
 msgid "<small><i>None</i></small>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>Maximum</i></small>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "Background"
 msgstr "Фон"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "_Scrollbar is:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "Scroll_back:"
 msgstr "Кері а_йналдыру:"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _keystroke"
 msgstr "Бат_ырмаларды басу кезінде айналдыру"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _output"
 msgstr "Ш_ығыс болса, айналдыру"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "_Unlimited"
 msgstr "Ше_ктелмеген"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "lines"
 msgstr "жол"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "Scrolling"
 msgstr "Айналдыру"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -576,19 +596,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid "_Delete key generates:"
 msgstr "Delete баты_рмасы әрекеті:"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid "_Backspace key generates:"
 msgstr "Backspace ба_тырмасы әрекеті:"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "Үйлесі_мділік опцияларын бастапқы түріне келтіру"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "Compatibility"
 msgstr "Үйлесімділік"
 
@@ -618,7 +638,7 @@ msgstr "Жаңа терезе"
 
 #: ../src/terminal-accels.c:157
 msgid "Save Contents"
-msgstr ""
+msgstr "Құрамасын сақтау"
 
 #: ../src/terminal-accels.c:162
 msgid "Close Tab"
@@ -656,7 +676,7 @@ msgstr "Кішірейту"
 msgid "Normal Size"
 msgstr "Қалыпты өлшемі"
 
-#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3933
+#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3958
 msgid "Set Title"
 msgstr "Атауын орнату"
 
@@ -768,62 +788,62 @@ msgstr "Беттер"
 msgid "Help"
 msgstr "Көмек"
 
-#: ../src/terminal-accels.c:831
+#: ../src/terminal-accels.c:830
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr ""
 
-#: ../src/terminal-accels.c:987
+#: ../src/terminal-accels.c:986
 msgid "_Action"
 msgstr "Әр_екет"
 
-#: ../src/terminal-accels.c:1006
+#: ../src/terminal-accels.c:1005
 msgid "Shortcut _Key"
 msgstr "Жарлық пернесі"
 
-#: ../src/terminal-app.c:460
+#: ../src/terminal-app.c:481
 msgid "Click button to choose profile"
 msgstr "Профильді таңдау үшін батырманы шертіңіз"
 
-#: ../src/terminal-app.c:543
+#: ../src/terminal-app.c:564
 msgid "Profile list"
-msgstr ""
+msgstr "Профильдер тізімі"
 
-#: ../src/terminal-app.c:604
+#: ../src/terminal-app.c:625
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "“%s” профилін өшіру керек пе?"
 
-#: ../src/terminal-app.c:620
+#: ../src/terminal-app.c:641
 msgid "Delete Profile"
 msgstr "Профильді өшіру"
 
-#: ../src/terminal-app.c:1053
+#: ../src/terminal-app.c:1073
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr ""
 
-#: ../src/terminal-app.c:1148
+#: ../src/terminal-app.c:1168
 msgid "Choose base profile"
-msgstr ""
-
-#: ../src/terminal-app.c:1751
-#, c-format
-msgid "No such profile \"%s\", using default profile\n"
 msgstr ""
 
 #: ../src/terminal-app.c:1775
 #, c-format
+msgid "No such profile \"%s\", using default profile\n"
+msgstr ""
+
+#: ../src/terminal-app.c:1799
+#, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Қате geometry жолы \"%s\"\n"
 
-#: ../src/terminal-app.c:1953
+#: ../src/terminal-app.c:2005
 msgid "User Defined"
 msgstr "Пайдаланушы функциялары"
 
-#: ../src/terminal.c:562
+#: ../src/terminal.c:600
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Аргументтерді өндеу қатемен аяқталды: %s\n"
@@ -832,32 +852,32 @@ msgstr "Аргументтерді өндеу қатемен аяқталды: %
 #: ../src/terminal-encoding.c:80 ../src/terminal-encoding.c:102
 #: ../src/terminal-encoding.c:113
 msgid "Western"
-msgstr ""
+msgstr "Батыс"
 
 #: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:81
 #: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:111
 msgid "Central European"
-msgstr ""
+msgstr "Орта Еуропалық"
 
 #: ../src/terminal-encoding.c:55
 msgid "South European"
-msgstr ""
+msgstr "Оңтүстік Еуропалық"
 
 #: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:64
 #: ../src/terminal-encoding.c:118
 msgid "Baltic"
-msgstr ""
+msgstr "Балтық"
 
 #: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:82
 #: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
 #: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
 msgid "Cyrillic"
-msgstr ""
+msgstr "Кирил"
 
 #: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
 #: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
 msgid "Arabic"
-msgstr ""
+msgstr "Араб"
 
 #: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
 #: ../src/terminal-encoding.c:114
@@ -866,29 +886,29 @@ msgstr "Грек"
 
 #: ../src/terminal-encoding.c:60
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Визуалды иврит"
 
 #: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
 #: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
 msgid "Hebrew"
-msgstr ""
+msgstr "Иврит"
 
 #: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
 #: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
 msgid "Turkish"
-msgstr ""
+msgstr "Түрік"
 
 #: ../src/terminal-encoding.c:63
 msgid "Nordic"
-msgstr ""
+msgstr "Скандинавтік"
 
 #: ../src/terminal-encoding.c:65
 msgid "Celtic"
-msgstr ""
+msgstr "Келттік"
 
 #: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:103
 msgid "Romanian"
-msgstr ""
+msgstr "Румын"
 
 #. These encodings do NOT pass-through ASCII, so are always rejected.
 #. * FIXME: why are they in this table; or rather why do we need
@@ -897,67 +917,67 @@ msgstr ""
 #: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
 #: ../src/terminal-encoding.c:128
 msgid "Unicode"
-msgstr ""
+msgstr "Юникод"
 
 #: ../src/terminal-encoding.c:69
 msgid "Armenian"
-msgstr ""
+msgstr "Армян"
 
 #: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
 #: ../src/terminal-encoding.c:75
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Қытайша дәстүрлі"
 
 #: ../src/terminal-encoding.c:72
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Кирил/Ресей"
 
 #: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
 #: ../src/terminal-encoding.c:106
 msgid "Japanese"
-msgstr ""
+msgstr "Жапон"
 
 #: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:87
 #: ../src/terminal-encoding.c:109 ../src/terminal-encoding.c:129
 msgid "Korean"
-msgstr ""
+msgstr "Корей"
 
 #: ../src/terminal-encoding.c:76 ../src/terminal-encoding.c:77
 #: ../src/terminal-encoding.c:78
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Қытайша жеңілдеткен"
 
 #: ../src/terminal-encoding.c:79
 msgid "Georgian"
-msgstr ""
+msgstr "Грузин"
 
 #: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Кирил/Украина"
 
 #: ../src/terminal-encoding.c:93
 msgid "Croatian"
-msgstr "Хорватиялық"
+msgstr "Хорват"
 
 #: ../src/terminal-encoding.c:95
 msgid "Hindi"
-msgstr ""
+msgstr "Хинди"
 
 #: ../src/terminal-encoding.c:96
 msgid "Persian"
-msgstr ""
+msgstr "Парсы"
 
 #: ../src/terminal-encoding.c:98
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуджарати"
 
 #: ../src/terminal-encoding.c:99
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмукхи"
 
 #: ../src/terminal-encoding.c:101
 msgid "Icelandic"
-msgstr ""
+msgstr "Исланд"
 
 #: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:110
 #: ../src/terminal-encoding.c:119
@@ -966,7 +986,7 @@ msgstr "Вьетнам"
 
 #: ../src/terminal-encoding.c:108
 msgid "Thai"
-msgstr ""
+msgstr "Тай"
 
 #: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
 msgid "_Description"
@@ -980,7 +1000,7 @@ msgstr "Код_талуы"
 msgid "Current Locale"
 msgstr "Ағымдағы локаль"
 
-#: ../src/terminal-options.c:175
+#: ../src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -988,210 +1008,210 @@ msgid ""
 "profile' option\n"
 msgstr ""
 
-#: ../src/terminal-options.c:208
+#: ../src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
-msgstr ""
+msgstr "\"%s\" үшін аргумент дұрыс команда емес: %s"
 
-#: ../src/terminal-options.c:343
+#: ../src/terminal-options.c:348
 msgid "Two roles given for one window"
-msgstr ""
+msgstr "Бір терезе үшін екі роль берілген"
 
-#: ../src/terminal-options.c:364 ../src/terminal-options.c:397
+#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
-msgstr ""
+msgstr "\"%s\" опциясы бір терезе үшін екі рет көрсетілген\n"
 
-#: ../src/terminal-options.c:596
+#: ../src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
-msgstr ""
+msgstr "\"%s\" дұрыс масштаб емес"
 
-#: ../src/terminal-options.c:603
+#: ../src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
-msgstr ""
+msgstr "\"%g\" масштабы тым кіші, %g қолданылатын болады\n"
 
-#: ../src/terminal-options.c:611
+#: ../src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
-msgstr ""
+msgstr "\"%g\" масштабы тым үлкен, %g қолданылатын болады\n"
 
-#: ../src/terminal-options.c:646
+#: ../src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "\"%s\" опциясы командалық жолдың қалған бөлігіне орындау үшін команданы талап етеді"
 
-#: ../src/terminal-options.c:807
+#: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
-msgstr ""
+msgstr "Жарамды терминал баптаулар файлы емес."
 
-#: ../src/terminal-options.c:820
+#: ../src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
-msgstr ""
+msgstr "Үйлесімді емес терминал баптаулар файлының нұсқасы."
 
-#: ../src/terminal-options.c:948
+#: ../src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 
-#: ../src/terminal-options.c:957
+#: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
-msgstr ""
+msgstr "Терминал баптаулар файлын жүктеу"
 
-#: ../src/terminal-options.c:966
+#: ../src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr ""
 
-#: ../src/terminal-options.c:981
+#: ../src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 
-#: ../src/terminal-options.c:990
+#: ../src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 
-#: ../src/terminal-options.c:1004
+#: ../src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Мәзір жолағын іске қосу"
 
-#: ../src/terminal-options.c:1013
+#: ../src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Мәзір жолағын сөндіру"
 
-#: ../src/terminal-options.c:1022
-msgid "Maximise the window"
-msgstr ""
+#: ../src/terminal-options.c:1028
+msgid "Maximize the window"
+msgstr "Терезені жазық қылу"
 
-#: ../src/terminal-options.c:1031
+#: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
-msgstr ""
+msgstr "Терезені толық экранды қылу"
 
-#: ../src/terminal-options.c:1040
+#: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
 msgstr ""
 
-#: ../src/terminal-options.c:1041
+#: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: ../src/terminal-options.c:1049
+#: ../src/terminal-options.c:1055
 msgid "Set the window role"
-msgstr ""
+msgstr "Терезе ролін орнату"
 
-#: ../src/terminal-options.c:1050
+#: ../src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "ROLE"
 
-#: ../src/terminal-options.c:1058
+#: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 
-#: ../src/terminal-options.c:1072
+#: ../src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr ""
 
-#: ../src/terminal-options.c:1081
+#: ../src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
-msgstr ""
+msgstr "Үнсіз келісім профилі орнына көрсетілген профильді қолдану"
 
-#: ../src/terminal-options.c:1082
+#: ../src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "ПРОФИЛЬ-АТАУЫ"
 
-#: ../src/terminal-options.c:1090
+#: ../src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Терминал атауын орнату"
 
-#: ../src/terminal-options.c:1091
+#: ../src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "TITLE"
 
-#: ../src/terminal-options.c:1099
+#: ../src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Жұмыс бумасын орнату"
 
-#: ../src/terminal-options.c:1100
+#: ../src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "БУМА_АТАУЫ"
 
-#: ../src/terminal-options.c:1108
+#: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr ""
+msgstr "Терминал масштабын орнату (1.0 = қалыпты өлшемі)"
 
-#: ../src/terminal-options.c:1109
+#: ../src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: ../src/terminal-options.c:1360 ../src/terminal-options.c:1363
+#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "Mate терминал эмуляторы"
 
-#: ../src/terminal-options.c:1364
+#: ../src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr ""
 
-#: ../src/terminal-options.c:1374
+#: ../src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr ""
 
-#: ../src/terminal-options.c:1375
+#: ../src/terminal-options.c:1381
 msgid "Show terminal options"
-msgstr ""
+msgstr "Терминал опцияларын көрсету"
 
-#: ../src/terminal-options.c:1383
+#: ../src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr ""
 
-#: ../src/terminal-options.c:1384
+#: ../src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr ""
 
-#: ../src/terminal-options.c:1392
+#: ../src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr ""
 
-#: ../src/terminal-options.c:1393
+#: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr ""
 
-#: ../src/terminal-profile.c:165
+#: ../src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "Атаусыз"
 
-#: ../src/terminal-screen.c:1519
+#: ../src/terminal-screen.c:1533
 msgid "_Profile Preferences"
 msgstr "_Профиль баптаулары"
 
-#: ../src/terminal-screen.c:1520 ../src/terminal-screen.c:1909
+#: ../src/terminal-screen.c:1534 ../src/terminal-screen.c:1923
 msgid "_Relaunch"
 msgstr "Қа_йта жөнелту"
 
-#: ../src/terminal-screen.c:1523
+#: ../src/terminal-screen.c:1537
 msgid "There was an error creating the child process for this terminal"
-msgstr ""
+msgstr "Бұл терминал үшін ұрпақ үрдісін жасауда қате кетті"
 
-#: ../src/terminal-screen.c:1914
+#: ../src/terminal-screen.c:1928
 #, c-format
 msgid "The child process exited normally with status %d."
-msgstr ""
+msgstr "Ұрпақ үрдісі қалыпты түрде %d қалып-күйімен аяқталды."
 
-#: ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1933
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1938
 msgid "The child process was terminated."
 msgstr ""
 
@@ -1210,7 +1230,7 @@ msgstr "Көмекті көрсету кезінде қате кетті"
 #: ../src/terminal-util.c:239
 #, c-format
 msgid "Could not open the address “%s”"
-msgstr ""
+msgstr "“%s” адресін ашу мүмкін емес"
 
 #: ../src/terminal-util.c:347
 msgid ""
@@ -1238,7 +1258,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:477
+#: ../src/terminal-window.c:485
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -1246,259 +1266,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:483
+#: ../src/terminal-window.c:491
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1818
+#: ../src/terminal-window.c:1836
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1819 ../src/terminal-window.c:1832
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:1837 ../src/terminal-window.c:1850
+#: ../src/terminal-window.c:2091
 msgid "Open _Terminal"
 msgstr "Терминалды а_шу"
 
-#: ../src/terminal-window.c:1820 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:1838 ../src/terminal-window.c:1855
+#: ../src/terminal-window.c:2096
 msgid "Open Ta_b"
 msgstr "_Бетті ашу"
 
-#: ../src/terminal-window.c:1821
+#: ../src/terminal-window.c:1839
 msgid "_Edit"
 msgstr "Тү_зету"
 
-#: ../src/terminal-window.c:1822
+#: ../src/terminal-window.c:1840
 msgid "_View"
 msgstr "_Түрі"
 
-#: ../src/terminal-window.c:1823
+#: ../src/terminal-window.c:1841
 msgid "_Search"
 msgstr "І_здеу"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1842
 msgid "_Terminal"
 msgstr "Тер_минал"
 
-#: ../src/terminal-window.c:1825
+#: ../src/terminal-window.c:1843
 msgid "Ta_bs"
 msgstr "_Беттер"
 
-#: ../src/terminal-window.c:1826
+#: ../src/terminal-window.c:1844
 msgid "_Help"
 msgstr "_Көмек"
 
-#: ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:1860
 msgid "New _Profile…"
 msgstr ""
 
-#: ../src/terminal-window.c:1847
+#: ../src/terminal-window.c:1865
 msgid "_Save Contents"
 msgstr "Құрамасын _сақтау"
 
-#: ../src/terminal-window.c:1852 ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:1870 ../src/terminal-window.c:2106
 msgid "C_lose Tab"
 msgstr "Бетті _жабу"
 
-#: ../src/terminal-window.c:1857
+#: ../src/terminal-window.c:1875
 msgid "_Close Window"
 msgstr "Те_резені жабу"
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: ../src/terminal-window.c:1892 ../src/terminal-window.c:2086
 msgid "Paste _Filenames"
 msgstr "_Файлдар атауларын кірістіру"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1902
 msgid "P_rofiles…"
 msgstr ""
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1907
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1912
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#: ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1936
 msgid "_Find..."
 msgstr "Ізд_еу..."
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1941
 msgid "Find Ne_xt"
 msgstr "Ке_лесіні табу"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1946
 msgid "Find Pre_vious"
 msgstr "Ал_дыңғысын табу"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1951
 msgid "_Clear Highlight"
 msgstr "_Түстпен ерекшелеуді алып тастау"
 
-#: ../src/terminal-window.c:1939
+#: ../src/terminal-window.c:1957
 msgid "Go to _Line..."
 msgstr "Жо _лға өту..."
 
-#: ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1962
 msgid "_Incremental Search..."
 msgstr "_Инкременталды іздеу..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1951
+#: ../src/terminal-window.c:1969
 msgid "Change _Profile"
 msgstr "_Профильді ауыстыру"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1971
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1976
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1981
 msgid "_Set Title…"
 msgstr "Атауын ор_нату…"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1985
 msgid "Set _Character Encoding"
 msgstr "Таңбалар _кодталуын орнату"
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1987
 msgid "_Reset"
 msgstr "_Тастау"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1992
 msgid "Reset and C_lear"
 msgstr "Тастау мен та_зарту"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1999
 msgid "_Add or Remove…"
 msgstr "Қ_осу немесе өшіру…"
 
-#: ../src/terminal-window.c:1988
+#: ../src/terminal-window.c:2006
 msgid "_Previous Tab"
 msgstr "А_лдыңғы бет"
 
-#: ../src/terminal-window.c:1993
+#: ../src/terminal-window.c:2011
 msgid "_Next Tab"
 msgstr "_Келесі бет"
 
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2016
 msgid "Move Tab _Left"
 msgstr "Бетті со_лға жылжыту"
 
-#: ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:2021
 msgid "Move Tab _Right"
 msgstr "Бетті _оңға жылжыту"
 
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:2026
 msgid "_Detach tab"
 msgstr "Бетті бөліп жіберу"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:2033
 msgid "_Contents"
 msgstr "Құра_масы"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:2038
 msgid "_About"
 msgstr "О_сы туралы"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:2045
 msgid "_Send Mail To…"
-msgstr ""
+msgstr "Эл. поштаны жі_беру…"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2050
 msgid "_Copy E-mail Address"
-msgstr ""
+msgstr "Эл. пошта адр_есін көшіру"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2055
 msgid "C_all To…"
-msgstr ""
+msgstr "Қоңырау ш_алу…"
 
-#: ../src/terminal-window.c:2042
+#: ../src/terminal-window.c:2060
 msgid "_Copy Call Address"
-msgstr ""
+msgstr "Қоңырау шалу адресін _көшіру"
 
-#: ../src/terminal-window.c:2047
+#: ../src/terminal-window.c:2065
 msgid "_Open Link"
 msgstr "Сі_лтемені ашу"
 
-#: ../src/terminal-window.c:2052
+#: ../src/terminal-window.c:2070
 msgid "_Copy Link Address"
 msgstr "Сілтеме адр_есін көшіру"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2074
 msgid "P_rofiles"
 msgstr "П_рофильдер"
 
-#: ../src/terminal-window.c:2083 ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:2101 ../src/terminal-window.c:3359
 msgid "C_lose Window"
 msgstr "Терезені жа_бу"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2111
 msgid "L_eave Full Screen"
 msgstr "Толық экраннан ш_ығу"
 
-#: ../src/terminal-window.c:2097
+#: ../src/terminal-window.c:2115
 msgid "_Input Methods"
 msgstr "Ен_гізу тәсілдері"
 
-#: ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:2122
 msgid "Show _Menubar"
 msgstr "_Мәзірді көрсету"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2128
 msgid "_Full Screen"
 msgstr "Толық _экранға"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this window?"
 msgstr "Бұл терезені жабу керек пе?"
 
-#: ../src/terminal-window.c:3321
+#: ../src/terminal-window.c:3346
 msgid "Close this terminal?"
 msgstr "Бұл терминалды жабу керек пе?"
 
-#: ../src/terminal-window.c:3325
+#: ../src/terminal-window.c:3350
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
-msgstr ""
+msgstr "Бұл терезенің кейбір терминалдарында орындалып тұрған үрдістер бар. Терезені жабу оларды үзеді."
 
-#: ../src/terminal-window.c:3329
+#: ../src/terminal-window.c:3354
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
-msgstr ""
+msgstr "Бұл терминалда орындалып тұрған үрдістер бар. Терминалды жабу оларды үзеді."
 
-#: ../src/terminal-window.c:3334
+#: ../src/terminal-window.c:3359
 msgid "C_lose Terminal"
 msgstr "Терминалды _жабу"
 
-#: ../src/terminal-window.c:3407
+#: ../src/terminal-window.c:3432
 msgid "Could not save contents"
 msgstr "Құрамасын сақтау мүмкін емес"
 
-#: ../src/terminal-window.c:3431
+#: ../src/terminal-window.c:3456
 msgid "Save as..."
 msgstr "Қалайша сақтау..."
 
-#: ../src/terminal-window.c:3956
+#: ../src/terminal-window.c:3975
 msgid "_Title:"
 msgstr "А_тауы:"
 
-#: ../src/terminal-window.c:4151
+#: ../src/terminal-window.c:4165
 msgid "Contributors:"
 msgstr "Үлесін қосқандар:"
 
-#: ../src/terminal-window.c:4170
+#: ../src/terminal-window.c:4184
 msgid "A terminal emulator for the MATE desktop"
 msgstr ""
 
-#: ../src/terminal-window.c:4177
+#: ../src/terminal-window.c:4191
 msgid "translator-credits"
-msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
