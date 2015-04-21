@@ -6,72 +6,72 @@ while ($opt = shift(@ARGV))
 {
     if ($opt eq '-display')
     {
-    $ENV{'DISPLAY'} = shift(@ARGV);
+        $ENV{'DISPLAY'} = shift(@ARGV);
     }
     elsif ($opt eq '-name')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--window-with-profile=$arg");
+        $arg = shift(@ARGV);
+        push(@args, "--window-with-profile=$arg");
     }
     elsif ($opt eq '-n')
     {
-    # Accept but ignore
-    print STDERR "$0: to set an icon, please use -name <profile> and set a profile icon\n"
+        # Accept but ignore
+        print STDERR "$0: to set an icon, please use -name <profile> and set a profile icon\n"
     }
     elsif ($opt eq '-T' || $opt eq '-title')
     {
-    push(@args, '-t', shift(@ARGV));
+        push(@args, '-t', shift(@ARGV));
     }
     elsif ($opt eq '-ls')
     {
-    $login = 1;
+        $login = 1;
     }
     elsif ($opt eq '+ls')
     {
-    $login = 0;
+        $login = 0;
     }
     elsif ($opt eq '-geometry')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--geometry=$arg");
+        $arg = shift(@ARGV);
+        push(@args, "--geometry=$arg");
     }
     elsif ($opt eq '-fn')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--font=$arg");
+        $arg = shift(@ARGV);
+        push(@args, "--font=$arg");
     }
     elsif ($opt eq '-fg')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--foreground=$arg");
+        $arg = shift(@ARGV);
+        push(@args, "--foreground=$arg");
     }
     elsif ($opt eq '-bg')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--background=$arg");
+        $arg = shift(@ARGV);
+        push(@args, "--background=$arg");
     }
     elsif ($opt eq '-tn')
     {
-    $arg = shift(@ARGV);
-    push(@args, "--termname=$arg");
+       $arg = shift(@ARGV);
+       push(@args, "--termname=$arg");
     }
     elsif ($opt eq '-e')
     {
-    $arg = shift(@ARGV);
-    if (@ARGV)
-    {
-        push(@args, '-x', $arg, @ARGV);
+        $arg = shift(@ARGV);
+        if (@ARGV)
+        {
+            push(@args, '-x', $arg, @ARGV);
+            last;
+        }
+        else
+        {
+            push(@args, '-e', $arg);
+        }
         last;
-    }
-    else
-    {
-        push(@args, '-e', $arg);
-    }
-    last;
     }
     elsif ($opt eq '-h' || $opt eq '--help')
     {
-    push(@args, '--help');
+        push(@args, '--help');
     }
 }
 if ($login == 1)
