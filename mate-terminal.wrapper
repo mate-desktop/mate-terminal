@@ -1,44 +1,81 @@
-#!/usr/bin/env python
+k#! /usr/bin/perl -w
 
-import sys
-import os
-import subprocess
+my $login=0;
 
-newargs = ['mate-terminal']
-oldargs = sys.argv[1:]
-
-while True:
-    try:
-        arg = oldargs.pop(0)
-
-        if arg == '-display':
-            os.environ['DISPLAY'] = oldargs.pop(0)
-        elif arg == '-name':
-            newargs.append('--window-with-profile=' + oldargs.pop(0))
-        elif arg == '-n':
-            sys.stderr.write('Set an icon in your profile')
-        elif arg == '-T' or arg == '-title':
-            newargs.append('-t')
-            newargs.append(oldargs.pop(0))
-        elif arg == '-ls' or arg == '+ls':
-            sys.stderr.write('Login shell not supported.  Set in your profile.')
-        elif arg == '-geometry':
-            newargs.append('--geometry=' + oldargs.pop(0))
-        elif arg == '-fn':
-            newargs.append('--font=' + oldargs.pop(0))
-        elif arg == '-fg':
-            newargs.append('--foreground=' + oldargs.pop(0))
-        elif arg == '-bg':
-            newargs.append('--background=' + oldargs.pop(0))
-        elif arg == '-tn':
-            newargs.append('--termname=' + oldargs.pop(0))
-        elif arg == '-h' or arg == '--help':
-            newargs.append('--help')
-        elif arg == '-e':
-            newargs.append('-x')
-            newargs += oldargs
-            break
-    except IndexError:
-        break
-
-subprocess.call(newargs)
+while ($opt = shift(@ARGV))
+{
+    if ($opt eq '-display')
+    {
+    $ENV{'DISPLAY'} = shift(@ARGV);
+    }
+    elsif ($opt eq '-name')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--window-with-profile=$arg");
+    }
+    elsif ($opt eq '-n')
+    {
+    # Accept but ignore
+    print STDERR "$0: to set an icon, please use -name <profile> and set a profile icon\n"
+    }
+    elsif ($opt eq '-T' || $opt eq '-title')
+    {
+    push(@args, '-t', shift(@ARGV));
+    }
+    elsif ($opt eq '-ls')
+    {
+    $login = 1;
+    }
+    elsif ($opt eq '+ls')
+    {
+    $login = 0;
+    }
+    elsif ($opt eq '-geometry')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--geometry=$arg");
+    }
+    elsif ($opt eq '-fn')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--font=$arg");
+    }
+    elsif ($opt eq '-fg')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--foreground=$arg");
+    }
+    elsif ($opt eq '-bg')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--background=$arg");
+    }
+    elsif ($opt eq '-tn')
+    {
+    $arg = shift(@ARGV);
+    push(@args, "--termname=$arg");
+    }
+    elsif ($opt eq '-e')
+    {
+    $arg = shift(@ARGV);
+    if (@ARGV)
+    {
+        push(@args, '-x', $arg, @ARGV);
+        last;
+    }
+    else
+    {
+        push(@args, '-e', $arg);
+    }
+    last;
+    }
+    elsif ($opt eq '-h' || $opt eq '--help')
+    {
+    push(@args, '--help');
+    }
+}
+if ($login == 1)
+{
+    @args = ('--login', @args);
+}
+exec('mate-terminal',@args);
