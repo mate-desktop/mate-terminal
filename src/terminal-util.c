@@ -154,11 +154,11 @@ terminal_util_show_help (const char *topic,
 
 	if (topic)
 	{
-		url = g_strdup_printf ("help:mate-user-guide/mate-terminal#%s", topic);
+		url = g_strdup_printf ("help:mate-terminal/%s", topic);
 	}
 	else
 	{
-		url = g_strdup ("help:mate-user-guide/mate-terminal");
+		url = g_strdup ("help:mate-terminal");
 	}
 
 	if (!open_url (GTK_WINDOW (parent), url, gtk_get_current_event_time (), &error))
