@@ -49,8 +49,7 @@
 #endif
 
 #if GTK_CHECK_VERSION(3, 0, 0)
- #include <gdk/gdk.h>
- #include <gdk/gdkkeysyms-compat.h>
+#include <gdk/gdk.h>
 #endif
 
 struct _TerminalWindowPrivate
@@ -4035,11 +4034,11 @@ tabs_next_or_previous_tab_cb (GtkAction *action,
     name = gtk_action_get_name (action);
     if (strcmp (name, "TabsNext") == 0)
     {
-        keyval = GDK_Page_Down;
+        keyval = GDK_KEY_Page_Down;
     }
     else if (strcmp (name, "TabsPrevious") == 0)
     {
-        keyval = GDK_Page_Up;
+        keyval = GDK_KEY_Page_Up;
     }
 
     klass = GTK_NOTEBOOK_GET_CLASS (GTK_NOTEBOOK (priv->notebook));

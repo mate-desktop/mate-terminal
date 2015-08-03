@@ -49,10 +49,6 @@
 
 #include "eggshell.h"
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- #include <gdk/gdkkeysyms-compat.h>
-#endif
-
 #define URL_MATCH_CURSOR  (GDK_HAND2)
 #define SKEY_MATCH_CURSOR (GDK_HAND2)
 
@@ -276,9 +272,9 @@ terminal_screen_class_enable_menu_bar_accel_notify_cb (TerminalApp *app,
 
 	binding_set = gtk_binding_set_by_class (klass);
 	if (enable)
-		gtk_binding_entry_remove (binding_set, GDK_F10, GDK_SHIFT_MASK);
+		gtk_binding_entry_remove (binding_set, GDK_KEY_F10, GDK_SHIFT_MASK);
 	else
-		gtk_binding_entry_skip (binding_set, GDK_F10, GDK_SHIFT_MASK);
+		gtk_binding_entry_skip (binding_set, GDK_KEY_F10, GDK_SHIFT_MASK);
 }
 
 static TerminalWindow *
