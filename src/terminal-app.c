@@ -42,12 +42,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#ifdef WITH_SMCLIENT
 #include "eggsmclient.h"
-#ifdef GDK_WINDOWING_X11
 #include "eggdesktopfile.h"
-#endif
-#endif
 
 #define FALLBACK_PROFILE_ID "default"
 
@@ -1305,8 +1301,6 @@ terminal_app_manage_profiles (TerminalApp     *app,
 	gtk_window_present (GTK_WINDOW (app->manage_profiles_dialog));
 }
 
-#ifdef WITH_SMCLIENT
-
 static void
 terminal_app_save_state_cb (EggSMClient *client,
                             GKeyFile *key_file,
@@ -1321,8 +1315,6 @@ terminal_app_client_quit_cb (EggSMClient *client,
 {
 	g_signal_emit (app, signals[QUIT], 0);
 }
-
-#endif /* WITH_SMCLIENT */
 
 /* Class implementation */
 
@@ -1403,27 +1395,21 @@ terminal_app_init (TerminalApp *app)
 
 	terminal_accels_init ();
 
-#ifdef WITH_SMCLIENT
-	{
-		EggSMClient *sm_client;
-#ifdef GDK_WINDOWING_X11
-		char *desktop_file;
+	EggSMClient *sm_client;
+	char *desktop_file;
 
-		desktop_file = g_build_filename (TERM_DATADIR,
-		                                 "applications",
-		                                 PACKAGE ".desktop",
-		                                 NULL);
-		egg_set_desktop_file_without_defaults (desktop_file);
-		g_free (desktop_file);
-#endif /* GDK_WINDOWING_X11 */
+	desktop_file = g_build_filename (TERM_DATADIR,
+	                                 "applications",
+	                                 PACKAGE ".desktop",
+	                                 NULL);
+	egg_set_desktop_file_without_defaults (desktop_file);
+	g_free (desktop_file);
 
-		sm_client = egg_sm_client_get ();
-		g_signal_connect (sm_client, "save-state",
-		                  G_CALLBACK (terminal_app_save_state_cb), app);
-		g_signal_connect (sm_client, "quit",
-		                  G_CALLBACK (terminal_app_client_quit_cb), app);
-	}
-#endif
+	sm_client = egg_sm_client_get ();
+	g_signal_connect (sm_client, "save-state",
+	                  G_CALLBACK (terminal_app_save_state_cb), app);
+	g_signal_connect (sm_client, "quit",
+	                  G_CALLBACK (terminal_app_client_quit_cb), app);
 }
 
 static void
@@ -1431,13 +1417,12 @@ terminal_app_finalize (GObject *object)
 {
 	TerminalApp *app = TERMINAL_APP (object);
 
-#ifdef WITH_SMCLIENT
 	EggSMClient *sm_client;
 
 	sm_client = egg_sm_client_get ();
 	g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
 	                                      0, 0, NULL, NULL, app);
-#endif
+
 	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_profile_list_notify_cb),
 					      app);
@@ -1682,23 +1667,19 @@ terminal_app_handle_options (TerminalApp *app,
 		/* fall-through on success */
 	}
 
-#ifdef WITH_SMCLIENT
+	EggSMClient *sm_client;
+
+	sm_client = egg_sm_client_get ();
+
+	if (allow_resume && egg_sm_client_is_resumed (sm_client))
 	{
-		EggSMClient *sm_client;
+		GKeyFile *key_file;
 
-		sm_client = egg_sm_client_get ();
-
-		if (allow_resume && egg_sm_client_is_resumed (sm_client))
-		{
-			GKeyFile *key_file;
-
-			key_file = egg_sm_client_get_state_file (sm_client);
-			if (key_file != NULL &&
-			        !terminal_options_merge_config (options, key_file, SOURCE_SESSION, error))
-				return FALSE;
-		}
+		key_file = egg_sm_client_get_state_file (sm_client);
+		if (key_file != NULL &&
+		        !terminal_options_merge_config (options, key_file, SOURCE_SESSION, error))
+			return FALSE;
 	}
-#endif
 
 	/* Make sure we open at least one window */
 	terminal_options_ensure_window (options);

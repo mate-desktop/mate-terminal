@@ -61,22 +61,11 @@ case "$with_gtk" in
        VTE_PC_VERSION=
        ;;
   3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=2.91.1
+       GTK_REQUIRED=3.0.0
        GDK_TARGETS="$($PKG_CONFIG --variable targets gdk-$GTK_API_VERSION)"
        VTE_PC_VERSION=-2.90
        ;;
 esac
-
-PLATFORM_DEPS=
-for target in $GDK_TARGETS; do
-  case "$target" in
-    x11) PLATFORM_DEPS="x11" ;;
-    broadway) ;;
-    wayland) ;;
-    win32|quartz) AC_MSG_WARN([unsupported GDK backend $target]) ;;
-    *) AC_MSG_WARN([unknown GDK backend $target]) ;;
-  esac
-done
 
 PKG_CHECK_MODULES([TERM],
   [vte$VTE_PC_VERSION >= $VTE_REQUIRED
@@ -85,38 +74,15 @@ PKG_CHECK_MODULES([TERM],
    gio-2.0 >= $GIO_REQUIRED
    gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
    mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED
-   $PLATFORM_DEPS])
+   x11])
 
 # ********
 # smclient
 # ********
 
-SMCLIENT_PKGS=
-AC_MSG_CHECKING([which smclient backend to use])
-AC_ARG_WITH([smclient],
-  [AS_HELP_STRING([--with-smclient-backend],[which smclient backend to use (xsmp/win32/quartz)])],
-  [],
-  [case "$PLATFORM_DEPS" in
-    x11) with_smclient=xsmp SMCLIENT_PKGS="sm" ;;
-    win32|quartz) with_smclient=$PLATFORM_DEPS ;;
-    *) with_smclient=no ;;
-   esac])
-AC_MSG_RESULT([$with_smclient])
-
-if test "$with_smclient" != "no"; then
-  AC_DEFINE([WITH_SMCLIENT],[1],[Define if smclient is enabled])
-fi
-
-if test -n "$SMCLIENT_PKGS"; then
-  PKG_CHECK_MODULES([SMCLIENT],[$SMCLIENT_PKGS])
-  AC_SUBST([SMCLIENT_CFLAGS])
-  AC_SUBST([SMCLIENT_LIBS])
-fi
-
-AM_CONDITIONAL([WITH_SMCLIENT],[test "$with_smclient" != "no"])
-AM_CONDITIONAL([WITH_SMCLIENT_XSMP],[test "$with_smclient" = "xsmp"])
-AM_CONDITIONAL([WITH_SMCLIENT_WIN32],[test "$with_smclient" = "win32"])
-AM_CONDITIONAL([WITH_SMCLIENT_QUARTZ],[test "$with_smclient" = "quartz"])
+PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0)
+AC_SUBST([SMCLIENT_CFLAGS])
+AC_SUBST([SMCLIENT_LIBS])
 
 # *****
 # GSettings
@@ -180,6 +146,5 @@ echo "
 	source code location:   ${srcdir}
 	compiler:               ${CC}
 
-	using smclient:         ${with_smclient}
 	s/key support:          ${enable_skey}
 "
