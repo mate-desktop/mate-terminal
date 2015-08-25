@@ -40,9 +40,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#ifndef G_OS_WIN32
 #include <pwd.h>
-#endif
 
 #include <glib.h>
 
@@ -57,7 +55,6 @@
 char *
 egg_shell (const char *shell)
 {
-#ifndef G_OS_WIN32
 	struct passwd *pw;
 	int i;
 	static const char shells [][14] =
@@ -105,18 +102,4 @@ egg_shell (const char *shell)
 
 	/* Placate compiler.  */
 	return NULL;
-#else
-	/* g_find_program_in_path() always looks also in the Windows
-	 * and System32 directories, so it should always find either cmd.exe
-	 * or command.com.
-	 */
-	char *retval = g_find_program_in_path ("cmd.exe");
-
-	if (retval == NULL)
-		retval = g_find_program_in_path ("command.com");
-
-	g_assert (retval != NULL);
-
-	return retval;
-#endif
 }

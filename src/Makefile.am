@@ -89,30 +89,18 @@ mate_terminal_LDADD = \
 	skey/libskey.la \
 	$(TERM_LIBS)
 
-if WITH_SMCLIENT
-mate_terminal_SOURCES += \
-	eggsmclient.c \
-	eggsmclient.h \
-	eggsmclient-private.h \
-	$(NULL)
-mate_terminal_CFLAGS += $(SMCLIENT_CFLAGS)
-mate_terminal_LDADD += $(SMCLIENT_LIBS)
-
-if WITH_SMCLIENT_XSMP
 mate_terminal_SOURCES += \
 	eggdesktopfile.c \
 	eggdesktopfile.h \
+	eggsmclient.c \
+	eggsmclient.h \
+	eggsmclient-private.h \
 	eggsmclient-xsmp.c \
 	$(NULL)
+
+mate_terminal_CFLAGS += $(SMCLIENT_CFLAGS)
 mate_terminal_CPPFLAGS += -DEGG_SM_CLIENT_BACKEND_XSMP
-endif
-if WITH_SMCLIENT_WIN32
-mate_terminal_SOURCES += eggsmclient-win32.c
-endif
-if WITH_SMCLIENT_QUARTZ
-mate_terminal_SOURCES += eggsmclient-osx.c
-endif
-endif
+mate_terminal_LDADD += $(SMCLIENT_LIBS)
 
 TYPES_H_FILES = \
 	terminal-profile.h \

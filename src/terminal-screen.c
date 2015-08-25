@@ -28,13 +28,7 @@
 #include <gdk/gdkkeysyms.h>
 
 #include <gdk/gdk.h>
-
-#ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
-#ifndef GDK_IS_X11_DISPLAY
-#define GDK_IS_X11_DISPLAY(display) 1
-#endif
-#endif
 
 #include "terminal-accels.h"
 #include "terminal-app.h"
@@ -1409,14 +1403,9 @@ get_child_environment (TerminalScreen *screen,
 	g_hash_table_replace (env_table, g_strdup ("COLORTERM"), g_strdup (EXECUTABLE_NAME));
 	g_hash_table_replace (env_table, g_strdup ("TERM"), g_strdup ("xterm")); /* FIXME configurable later? */
 
-#ifdef GDK_WINDOWING_X11
 	/* FIXME: moving the tab between windows, or the window between displays will make the next two invalid... */
-	if (GDK_IS_X11_DISPLAY(display))
-	{
-		g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XID (gtk_widget_get_window (window))));
-		g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (display)));
-	}
-#endif
+	g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XID (gtk_widget_get_window (window))));
+	g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (display)));
 
 	list_schemas = g_settings_list_schemas();
 	schema_exists = FALSE;
