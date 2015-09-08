@@ -29,7 +29,7 @@ PKG_PROG_PKG_CONFIG
 AC_PROG_CC
 AC_HEADER_STDC
 AM_PROG_LIBTOOL
-IT_PROG_INTLTOOL([0.40.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 MATE_COMMON_INIT
 MATE_DEBUG_CHECK
@@ -129,6 +129,7 @@ AC_CONFIG_FILES([
 Makefile
 mate-terminal.desktop.in
 src/Makefile
+src/org.mate.terminal.gschema.xml
 src/terminal-version.h
 src/skey/Makefile
 help/Makefile
