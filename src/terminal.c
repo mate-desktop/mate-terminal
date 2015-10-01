@@ -152,7 +152,7 @@ method_call_cb (GDBusConnection *connection,
 		int argc;
 		GError *error = NULL;
 
-        g_variant_get (parameters, "(@ay@ay@ay@ay@i@ay)",
+        g_variant_get (parameters, "(@ay@ay@ay@ayi@ay)",
                        &v_wd, &v_display, &v_sid, &v_envv, &initial_workspace, &v_argv);
 
 		working_directory = ay_to_string (v_wd, &error);
