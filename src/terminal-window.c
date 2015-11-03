@@ -22,12 +22,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
-#ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
-#ifndef GDK_IS_X11_DISPLAY
-#define GDK_IS_X11_DISPLAY(display) 1
-#endif
-#endif
 #include <gdk/gdkkeysyms.h>
 
 #include <libmate-desktop/mate-aboutdialog.h>
@@ -49,8 +44,7 @@
 #endif
 
 #if GTK_CHECK_VERSION(3, 0, 0)
- #include <gdk/gdk.h>
- #include <gdk/gdkkeysyms-compat.h>
+#include <gdk/gdk.h>
 #endif
 
 struct _TerminalWindowPrivate
@@ -1749,16 +1743,11 @@ terminal_window_screen_update (TerminalWindow *window,
 {
     TerminalApp *app;
 
-#ifdef GDK_WINDOWING_X11
-    if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (screen)))
-    {
-        terminal_window_window_manager_changed_cb (screen, window);
-        g_signal_connect (screen, "window-manager-changed",
-                          G_CALLBACK (terminal_window_window_manager_changed_cb), window);
-        g_signal_connect (screen, "composited-changed",
-                          G_CALLBACK (terminal_window_composited_changed_cb), window);
-    }
-#endif
+    terminal_window_window_manager_changed_cb (screen, window);
+    g_signal_connect (screen, "window-manager-changed",
+                      G_CALLBACK (terminal_window_window_manager_changed_cb), window);
+    g_signal_connect (screen, "composited-changed",
+                      G_CALLBACK (terminal_window_composited_changed_cb), window);
 
     if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (screen), "GT::HasSettingsConnection")))
         return;
@@ -1793,17 +1782,12 @@ terminal_window_screen_changed (GtkWidget *widget,
 
     if (previous_screen)
     {
-#ifdef GDK_WINDOWING_X11
-        if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (previous_screen)))
-        {
-            g_signal_handlers_disconnect_by_func (previous_screen,
-                                                  G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                                  window);
-            g_signal_handlers_disconnect_by_func (previous_screen,
-                                                  G_CALLBACK (terminal_window_composited_changed_cb),
-                                                  window);
-        }
-#endif
+        g_signal_handlers_disconnect_by_func (previous_screen,
+                                              G_CALLBACK (terminal_window_window_manager_changed_cb),
+                                              window);
+        g_signal_handlers_disconnect_by_func (previous_screen,
+                                              G_CALLBACK (terminal_window_composited_changed_cb),
+                                              window);
     }
 
     if (!screen)
@@ -2346,17 +2330,12 @@ terminal_window_dispose (GObject *object)
     screen = gtk_widget_get_screen (GTK_WIDGET (object));
     if (screen)
     {
-#ifdef GDK_WINDOWING_X11
-        if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (screen)))
-        {
-            g_signal_handlers_disconnect_by_func (screen,
-                                                  G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                                  window);
-            g_signal_handlers_disconnect_by_func (screen,
-                                                  G_CALLBACK (terminal_window_composited_changed_cb),
-                                                  window);
-        }
-#endif
+        g_signal_handlers_disconnect_by_func (screen,
+                                              G_CALLBACK (terminal_window_window_manager_changed_cb),
+                                              window);
+        g_signal_handlers_disconnect_by_func (screen,
+                                              G_CALLBACK (terminal_window_composited_changed_cb),
+                                              window);
     }
 
     G_OBJECT_CLASS (terminal_window_parent_class)->dispose (object);
@@ -4035,11 +4014,11 @@ tabs_next_or_previous_tab_cb (GtkAction *action,
     name = gtk_action_get_name (action);
     if (strcmp (name, "TabsNext") == 0)
     {
-        keyval = GDK_Page_Down;
+        keyval = GDK_KEY_Page_Down;
     }
     else if (strcmp (name, "TabsPrevious") == 0)
     {
-        keyval = GDK_Page_Up;
+        keyval = GDK_KEY_Page_Up;
     }
 
     klass = GTK_NOTEBOOK_GET_CLASS (GTK_NOTEBOOK (priv->notebook));

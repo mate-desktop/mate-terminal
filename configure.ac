@@ -1,6 +1,6 @@
 m4_define([gt_version_major],[1])
-m4_define([gt_version_minor],[10])
-m4_define([gt_version_micro],[1])
+m4_define([gt_version_minor],[12])
+m4_define([gt_version_micro],[0])
 m4_define([gt_version_extra],[])
 m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
 
@@ -12,8 +12,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
-
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([no])])
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 GETTEXT_PACKAGE=mate-terminal
 AC_SUBST([GETTEXT_PACKAGE])
@@ -28,15 +27,20 @@ AM_MAINTAINER_MODE([enable])
 
 PKG_PROG_PKG_CONFIG
 AC_PROG_CC
-AC_ISC_POSIX
 AC_HEADER_STDC
 AM_PROG_LIBTOOL
-IT_PROG_INTLTOOL([0.40.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 #MATE_MAINTAINER_MODE_DEFINES
+
+# GLib min/max required versions
+AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs added after GLib 2.36])
+AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs deprecated before GLib 2.36])
 
 AM_GLIB_GNU_GETTEXT
 
@@ -62,22 +66,11 @@ case "$with_gtk" in
        VTE_PC_VERSION=
        ;;
   3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=2.91.1
+       GTK_REQUIRED=3.0.0
        GDK_TARGETS="$($PKG_CONFIG --variable targets gdk-$GTK_API_VERSION)"
        VTE_PC_VERSION=-2.90
        ;;
 esac
-
-PLATFORM_DEPS=
-for target in $GDK_TARGETS; do
-  case "$target" in
-    x11) PLATFORM_DEPS="x11" ;;
-    broadway) ;;
-    wayland) ;;
-    win32|quartz) AC_MSG_WARN([unsupported GDK backend $target]) ;;
-    *) AC_MSG_WARN([unknown GDK backend $target]) ;;
-  esac
-done
 
 PKG_CHECK_MODULES([TERM],
   [vte$VTE_PC_VERSION >= $VTE_REQUIRED
@@ -86,38 +79,15 @@ PKG_CHECK_MODULES([TERM],
    gio-2.0 >= $GIO_REQUIRED
    gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
    mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED
-   $PLATFORM_DEPS])
+   x11])
 
 # ********
 # smclient
 # ********
 
-SMCLIENT_PKGS=
-AC_MSG_CHECKING([which smclient backend to use])
-AC_ARG_WITH([smclient],
-  [AS_HELP_STRING([--with-smclient-backend],[which smclient backend to use (xsmp/win32/quartz)])],
-  [],
-  [case "$PLATFORM_DEPS" in
-    x11) with_smclient=xsmp SMCLIENT_PKGS="sm" ;;
-    win32|quartz) with_smclient=$PLATFORM_DEPS ;;
-    *) with_smclient=no ;;
-   esac])
-AC_MSG_RESULT([$with_smclient])
-
-if test "$with_smclient" != "no"; then
-  AC_DEFINE([WITH_SMCLIENT],[1],[Define if smclient is enabled])
-fi
-
-if test -n "$SMCLIENT_PKGS"; then
-  PKG_CHECK_MODULES([SMCLIENT],[$SMCLIENT_PKGS])
-  AC_SUBST([SMCLIENT_CFLAGS])
-  AC_SUBST([SMCLIENT_LIBS])
-fi
-
-AM_CONDITIONAL([WITH_SMCLIENT],[test "$with_smclient" != "no"])
-AM_CONDITIONAL([WITH_SMCLIENT_XSMP],[test "$with_smclient" = "xsmp"])
-AM_CONDITIONAL([WITH_SMCLIENT_WIN32],[test "$with_smclient" = "win32"])
-AM_CONDITIONAL([WITH_SMCLIENT_QUARTZ],[test "$with_smclient" = "quartz"])
+PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0)
+AC_SUBST([SMCLIENT_CFLAGS])
+AC_SUBST([SMCLIENT_LIBS])
 
 # *****
 # GSettings
@@ -165,6 +135,7 @@ AC_CONFIG_FILES([
 Makefile
 mate-terminal.desktop.in
 src/Makefile
+src/org.mate.terminal.gschema.xml
 src/terminal-version.h
 src/skey/Makefile
 help/Makefile
@@ -181,6 +152,5 @@ echo "
 	source code location:   ${srcdir}
 	compiler:               ${CC}
 
-	using smclient:         ${with_smclient}
 	s/key support:          ${enable_skey}
 "
