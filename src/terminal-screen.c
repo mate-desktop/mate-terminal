@@ -292,6 +292,7 @@ terminal_screen_get_window (TerminalScreen *screen)
 	return TERMINAL_WINDOW (toplevel);
 }
 
+#if !VTE_CHECK_VERSION (0, 38, 0)
 static gboolean
 window_uses_argb_visual (TerminalScreen *screen)
 {
@@ -303,13 +304,16 @@ window_uses_argb_visual (TerminalScreen *screen)
 
 	return terminal_window_uses_argb_visual (window);
 }
+#endif
 
 static void
 terminal_screen_realize (GtkWidget *widget)
 {
+#if !VTE_CHECK_VERSION (0, 38, 0)
 	TerminalScreen *screen = TERMINAL_SCREEN (widget);
 	TerminalScreenPrivate *priv = screen->priv;
 	TerminalBackgroundType bg_type;
+#endif
 
 	GTK_WIDGET_CLASS (terminal_screen_parent_class)->realize (widget);
 
@@ -927,7 +931,9 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	GObject *object = G_OBJECT (screen);
 	VteTerminal *vte_terminal = VTE_TERMINAL (screen);
 	const char *prop_name;
+#if !VTE_CHECK_VERSION (0, 38, 0)
 	TerminalBackgroundType bg_type;
+#endif
 	TerminalWindow *window;
 
 	if (pspec)
@@ -971,6 +977,10 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	        prop_name == I_(TERMINAL_PROFILE_USE_THEME_COLORS) ||
 	        prop_name == I_(TERMINAL_PROFILE_FOREGROUND_COLOR) ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_COLOR) ||
+#if VTE_CHECK_VERSION (0, 38, 0)
+	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE) ||
+	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_DARKNESS) ||
+#endif
 	        prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG) ||
 	        prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR) ||
 	        prop_name == I_(TERMINAL_PROFILE_PALETTE))
@@ -1030,7 +1040,8 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	}
 #endif /* ENABLE_SKEY */
 
-/* Background image support was removed in vte 0.38 */
+/* Background image support was removed in vte 0.38.
+ * Transparency for 0.38+ is handled above next to TERMINAL_PROFILE_BACKGROUND_COLOR. */
 #if !VTE_CHECK_VERSION (0, 38, 0)
 	if (!prop_name ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE) ||
@@ -1101,6 +1112,7 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 #if VTE_CHECK_VERSION (0, 38, 0)
 static GdkRGBA *
 gdk_color_to_rgba (const GdkColor *color,
+                   double alpha,
                    GdkRGBA *rgba)
 {
 	if (color == NULL)
@@ -1108,7 +1120,7 @@ gdk_color_to_rgba (const GdkColor *color,
 	rgba->red   = color->red   / 65535.0;
 	rgba->green = color->green / 65535.0;
 	rgba->blue  = color->blue  / 65535.0;
-	rgba->alpha = 1.0;
+	rgba->alpha = alpha;
 	return rgba;
 }
 #endif
@@ -1152,18 +1164,21 @@ update_color_scheme (TerminalScreen *screen)
 	{
 		GdkRGBA colors_rgba[TERMINAL_PALETTE_SIZE];
 		GdkRGBA fg_rgba, bg_rgba, bold_rgba;
+		double alpha = 1.0;
 		int i;
 
 		for (i = 0; i < n_colors; i++)
-			gdk_color_to_rgba (&colors[i], &colors_rgba[i]);
+			gdk_color_to_rgba (&colors[i], 1.0, &colors_rgba[i]);
 
+		if (terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE) == TERMINAL_BACKGROUND_TRANSPARENT)
+			alpha = terminal_profile_get_property_double (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS);
 		vte_terminal_set_colors (VTE_TERMINAL (screen),
-		                         gdk_color_to_rgba (&fg, &fg_rgba),
-		                         gdk_color_to_rgba (&bg, &bg_rgba),
+		                         gdk_color_to_rgba (&fg, 1.0, &fg_rgba),
+		                         gdk_color_to_rgba (&bg, alpha, &bg_rgba),
 		                         colors_rgba, n_colors);
 		if (bold_color)
 			vte_terminal_set_color_bold (VTE_TERMINAL (screen),
-			                             gdk_color_to_rgba (bold_color, &bold_rgba));
+			                             gdk_color_to_rgba (bold_color, 1.0, &bold_rgba));
 	}
 #else
 	vte_terminal_set_colors (VTE_TERMINAL (screen), &fg, &bg,

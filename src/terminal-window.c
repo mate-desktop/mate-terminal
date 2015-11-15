@@ -1165,12 +1165,14 @@ terminal_window_update_tabs_menu_sensitivity (TerminalWindow *window)
     gtk_action_set_sensitive (action, num_pages > 1);
 }
 
+#if !VTE_CHECK_VERSION (0, 38, 0)
 gboolean
 terminal_window_uses_argb_visual (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
     return priv->have_argb_visual;
 }
+#endif
 
 static void
 update_tab_visibility (TerminalWindow *window,
