@@ -766,7 +766,11 @@ terminal_set_encoding_callback (GtkToggleAction *action,
     g_assert (encoding);
 
     vte_terminal_set_encoding (VTE_TERMINAL (priv->active_screen),
+#if VTE_CHECK_VERSION (0, 38, 0)
+                               terminal_encoding_get_charset (encoding), NULL);
+#else
                                terminal_encoding_get_charset (encoding));
+#endif
 }
 
 static void
@@ -1366,6 +1370,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     action = gtk_action_group_get_action (priv->action_group, "PopupInputMethods");
     gtk_action_set_visible (action, show_input_method_menu);
 
+#if !VTE_CHECK_VERSION (0, 38, 0)
     im_menu_item = gtk_ui_manager_get_widget (priv->ui_manager,
                    "/Popup/PopupInputMethods");
     /* FIXME: fix this when gtk+ bug #500065 is done, use vte_terminal_im_merge_ui */
@@ -1381,6 +1386,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     {
         gtk_menu_item_set_submenu (GTK_MENU_ITEM (im_menu_item), NULL);
     }
+#endif
 
     popup_menu = gtk_ui_manager_get_widget (priv->ui_manager, "/Popup");
     g_signal_connect (popup_menu, "deactivate",
@@ -3769,7 +3775,11 @@ search_find_response_callback (GtkWidget *dialog,
 
     flags = terminal_search_dialog_get_search_flags (dialog);
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_search_set_gregex (VTE_TERMINAL (priv->active_screen), regex, 0);
+#else
     vte_terminal_search_set_gregex (VTE_TERMINAL (priv->active_screen), regex);
+#endif
     vte_terminal_search_set_wrap_around (VTE_TERMINAL (priv->active_screen),
                                          (flags & TERMINAL_SEARCH_FLAG_WRAP_AROUND));
 
@@ -3840,7 +3850,11 @@ search_clear_highlight_callback (GtkAction *action,
     if (G_UNLIKELY (!window->priv->active_screen))
         return;
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL, 0);
+#else
     vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL);
+#endif
 }
 
 static void

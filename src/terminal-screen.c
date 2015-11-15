@@ -119,7 +119,11 @@ static gboolean terminal_screen_popup_menu (GtkWidget *widget);
 static gboolean terminal_screen_button_press (GtkWidget *widget,
         GdkEventButton *event);
 static void terminal_screen_launch_child_on_idle (TerminalScreen *screen);
-static void terminal_screen_child_exited  (VteTerminal *terminal);
+#if VTE_CHECK_VERSION (0, 38, 0)
+static void terminal_screen_child_exited (VteTerminal *terminal, int status);
+#else
+static void terminal_screen_child_exited (VteTerminal *terminal);
+#endif
 
 static void terminal_screen_window_title_changed      (VteTerminal *vte_terminal,
         TerminalScreen *screen);
@@ -305,11 +309,13 @@ terminal_screen_realize (GtkWidget *widget)
 
 	GTK_WIDGET_CLASS (terminal_screen_parent_class)->realize (widget);
 
+#if !VTE_CHECK_VERSION (0, 38, 0)
 	/* FIXME: Don't enable this if we have a compmgr. */
 	bg_type = terminal_profile_get_property_enum (priv->profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
 	vte_terminal_set_background_transparent (VTE_TERMINAL (screen),
 	        bg_type == TERMINAL_BACKGROUND_TRANSPARENT &&
 	        !window_uses_argb_visual (screen));
+#endif
 }
 
 static void
@@ -970,8 +976,15 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 		vte_terminal_set_audible_bell (vte_terminal, !terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_SILENT_BELL));
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_WORD_CHARS))
+#if VTE_CHECK_VERSION (0, 40, 0)
+		vte_terminal_set_word_char_exceptions (vte_terminal,
+		                                       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_WORD_CHARS));
+#elif !VTE_CHECK_VERSION (0, 38, 0)
 		vte_terminal_set_word_chars (vte_terminal,
 		                             terminal_profile_get_property_string (profile, TERMINAL_PROFILE_WORD_CHARS));
+#else
+                {}
+#endif
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SCROLL_ON_KEYSTROKE))
 		vte_terminal_set_scroll_on_keystroke (vte_terminal,
 		                                      terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_SCROLL_ON_KEYSTROKE));
@@ -1013,6 +1026,8 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	}
 #endif /* ENABLE_SKEY */
 
+/* Background image support was removed in vte 0.38 */
+#if !VTE_CHECK_VERSION (0, 38, 0)
 	if (!prop_name ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE) ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_IMAGE) ||
@@ -1053,6 +1068,7 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 		        bg_type == TERMINAL_BACKGROUND_TRANSPARENT &&
 		        !window_uses_argb_visual (screen));
 	}
+#endif
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_BACKSPACE_BINDING))
 		vte_terminal_set_backspace_binding (vte_terminal,
@@ -1076,6 +1092,22 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 
 	g_object_thaw_notify (object);
 }
+
+/* TODO: Once Gtk2 support is dropped, mate-terminal should be converted to use GdkRGBA everywhere instead of GdkColor. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+static GdkRGBA *
+gdk_color_to_rgba (const GdkColor *color,
+                   GdkRGBA *rgba)
+{
+	if (color == NULL)
+		return NULL;
+	rgba->red   = color->red   / 65535.0;
+	rgba->green = color->green / 65535.0;
+	rgba->blue  = color->blue  / 65535.0;
+	rgba->alpha = 1.0;
+	return rgba;
+}
+#endif
 
 static void
 update_color_scheme (TerminalScreen *screen)
@@ -1112,11 +1144,30 @@ update_color_scheme (TerminalScreen *screen)
 
 	n_colors = G_N_ELEMENTS (colors);
 	terminal_profile_get_palette (priv->profile, colors, &n_colors);
+#if VTE_CHECK_VERSION (0, 38, 0)
+	{
+		GdkRGBA colors_rgba[TERMINAL_PALETTE_SIZE];
+		GdkRGBA fg_rgba, bg_rgba, bold_rgba;
+		int i;
+
+		for (i = 0; i < n_colors; i++)
+			gdk_color_to_rgba (&colors[i], &colors_rgba[i]);
+
+		vte_terminal_set_colors (VTE_TERMINAL (screen),
+		                         gdk_color_to_rgba (&fg, &fg_rgba),
+		                         gdk_color_to_rgba (&bg, &bg_rgba),
+		                         colors_rgba, n_colors);
+		if (bold_color)
+			vte_terminal_set_color_bold (VTE_TERMINAL (screen),
+			                             gdk_color_to_rgba (bold_color, &bold_rgba));
+	}
+#else
 	vte_terminal_set_colors (VTE_TERMINAL (screen), &fg, &bg,
 	                         colors, n_colors);
 	if (bold_color)
 		vte_terminal_set_color_bold (VTE_TERMINAL (screen), bold_color);
 	vte_terminal_set_background_tint_color (VTE_TERMINAL (screen), &bg);
+#endif
 }
 
 void
@@ -1502,7 +1553,12 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 		pty_flags |= VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP;
 
 	if (!get_child_command (screen, shell, &spawn_flags, &argv, &err) ||
-	        !vte_terminal_fork_command_full (terminal,
+#if VTE_CHECK_VERSION (0, 38, 0)
+	        !vte_terminal_spawn_sync (
+#else
+	        !vte_terminal_fork_command_full (
+#endif
+	                terminal,
 	                pty_flags,
 	                working_dir,
 	                argv,
@@ -1510,6 +1566,9 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 	                spawn_flags,
 	                NULL, NULL,
 	                &pid,
+#if VTE_CHECK_VERSION (0, 38, 0)
+	                NULL,
+#endif
 	                &err))
 	{
 		GtkWidget *info_bar;
@@ -1872,7 +1931,11 @@ terminal_screen_icon_title_changed (VteTerminal *vte_terminal,
 }
 
 static void
+#if VTE_CHECK_VERSION (0, 38, 0)
+terminal_screen_child_exited (VteTerminal *terminal, int status)
+#else
 terminal_screen_child_exited (VteTerminal *terminal)
+#endif
 {
 	TerminalScreen *screen = TERMINAL_SCREEN (terminal);
 	TerminalScreenPrivate *priv = screen->priv;
@@ -1900,9 +1963,11 @@ terminal_screen_child_exited (VteTerminal *terminal)
 	case TERMINAL_EXIT_HOLD:
 	{
 		GtkWidget *info_bar;
+#if !VTE_CHECK_VERSION (0, 38, 0)
 		int status;
 
 		status = vte_terminal_get_child_exit_status (terminal);
+#endif
 
 		info_bar = terminal_info_bar_new (GTK_MESSAGE_INFO,
 		                                  _("_Relaunch"), RESPONSE_RELAUNCH,
