@@ -138,8 +138,12 @@ static void terminal_screen_cook_title      (TerminalScreen *screen);
 static void terminal_screen_cook_icon_title (TerminalScreen *screen);
 
 static char* terminal_screen_check_match       (TerminalScreen            *screen,
+#if VTE_CHECK_VERSION (0, 38, 0)
+        GdkEvent             *event,
+#else
         int                   column,
         int                   row,
+#endif
         int                  *flavor);
 
 static guint signals[LAST_SIGNAL] = { 0 };
@@ -1679,14 +1683,19 @@ terminal_screen_button_press (GtkWidget      *widget,
 	TerminalScreen *screen = TERMINAL_SCREEN (widget);
 	gboolean (* button_press_event) (GtkWidget*, GdkEventButton*) =
 	    GTK_WIDGET_CLASS (terminal_screen_parent_class)->button_press_event;
-	int char_width, char_height, row, col;
 	char *matched_string;
 	int matched_flavor = 0;
 	guint state;
+#if !VTE_CHECK_VERSION (0, 38, 0)
+	int char_width, char_height, row, col;
 	GtkBorder *inner_border = NULL;
+#endif
 
 	state = event->state & gtk_accelerator_get_default_mod_mask ();
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+	matched_string = terminal_screen_check_match (screen, event, &matched_flavor);
+#else
 	terminal_screen_get_cell_size (screen, &char_width, &char_height);
 
 	gtk_widget_style_get (widget, "inner-border", &inner_border, NULL);
@@ -1694,8 +1703,8 @@ terminal_screen_button_press (GtkWidget      *widget,
 	col = (event->y - (inner_border ? inner_border->top : 0)) / char_height;
 	gtk_border_free (inner_border);
 
-	/* FIXMEchpe: add vte API to do this check by widget coords instead of grid coords */
 	matched_string = terminal_screen_check_match (screen, row, col, &matched_flavor);
+#endif
 
 	if (matched_string != NULL &&
 	        (event->button == 1 || event->button == 2) &&
@@ -2334,8 +2343,12 @@ terminal_screen_skey_match_remove (TerminalScreen *screen)
 
 static char*
 terminal_screen_check_match (TerminalScreen *screen,
+#if VTE_CHECK_VERSION (0, 38, 0)
+                             GdkEvent  *event,
+#else
                              int        column,
                              int        row,
+#endif
                              int       *flavor)
 {
 	TerminalScreenPrivate *priv = screen->priv;
@@ -2343,7 +2356,11 @@ terminal_screen_check_match (TerminalScreen *screen,
 	int tag;
 	char *match;
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+	match = vte_terminal_match_check_event (VTE_TERMINAL (screen), event, &tag);
+#else
 	match = vte_terminal_match_check (VTE_TERMINAL (screen), column, row, &tag);
+#endif
 	for (tags = priv->match_tags; tags != NULL; tags = tags->next)
 	{
 		TagData *tag_data = (TagData*) tags->data;

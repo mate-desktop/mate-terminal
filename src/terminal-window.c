@@ -1060,6 +1060,7 @@ update_edit_menu(TerminalWindow *window)
                                    g_object_ref (window));
 }
 
+/* width and height are character-based in vte 0.38, pixel-based in previous versions */
 static void
 screen_resize_window_cb (TerminalScreen *screen,
                          guint width,
@@ -1069,12 +1070,13 @@ screen_resize_window_cb (TerminalScreen *screen,
     TerminalWindowPrivate *priv = window->priv;
     VteTerminal *terminal = VTE_TERMINAL (screen);
     GtkWidget *widget = GTK_WIDGET (screen);
+#if !VTE_CHECK_VERSION (0, 38, 0)
     guint grid_width, grid_height;
     int char_width, char_height;
     GtkBorder *inner_border = NULL;
     GtkAllocation widget_allocation;
+#endif
 
-    gtk_widget_get_allocation (widget, &widget_allocation);
     /* Don't do anything if we're maximised or fullscreened */
     // FIXME: realized && ... instead?
     if (!gtk_widget_get_realized (widget) ||
@@ -1082,6 +1084,11 @@ screen_resize_window_cb (TerminalScreen *screen,
         return;
 
     /* NOTE: width and height already include the VteTerminal's padding! */
+
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_set_size (terminal, width, height);
+#else
+    gtk_widget_get_allocation (widget, &widget_allocation);
 
     /* Short-circuit */
     if (((int) width) == widget_allocation.width &&
@@ -1099,6 +1106,7 @@ screen_resize_window_cb (TerminalScreen *screen,
     gtk_border_free (inner_border);
 
     vte_terminal_set_size (terminal, grid_width, grid_height);
+#endif
 
     if (screen != priv->active_screen)
         return;
@@ -3128,11 +3136,21 @@ terminal_window_update_geometry (TerminalWindow *window)
             char_height != priv->old_char_height ||
             widget != (GtkWidget*) priv->old_geometry_widget)
     {
-        GtkBorder *inner_border = NULL;
-
         /* FIXME Since we're using xthickness/ythickness to compute
          * padding we need to change the hints when the theme changes.
          */
+
+#if VTE_CHECK_VERSION (0, 38, 0)
+        GtkBorder padding;
+
+        gtk_style_context_get_padding(gtk_widget_get_style_context(widget),
+                                      gtk_widget_get_state_flags(widget),
+                                      &padding);
+
+        hints.base_width = padding.left + padding.right;
+        hints.base_height = padding.top + padding.bottom;
+#else
+        GtkBorder *inner_border = NULL;
 
         gtk_widget_style_get (widget, "inner-border", &inner_border, NULL);
 
@@ -3140,6 +3158,7 @@ terminal_window_update_geometry (TerminalWindow *window)
         hints.base_height = (inner_border ? (inner_border->top + inner_border->bottom) : 0);
 
         gtk_border_free (inner_border);
+#endif
 
 #define MIN_WIDTH_CHARS 4
 #define MIN_HEIGHT_CHARS 1
