@@ -145,6 +145,22 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 	gtk_widget_hide (profile_editor_get_widget (editor, "background-image"));
 	gtk_widget_hide (profile_editor_get_widget (editor, "darken-background-transparent-or-image-scale-label"));
 	gtk_widget_show (profile_editor_get_widget (editor, "darken-background-transparent-scale-label"));
+	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE))
+	{
+		gboolean bg_type_locked = terminal_profile_property_locked (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
+		SET_SENSITIVE ("solid-radiobutton", !bg_type_locked);
+		SET_SENSITIVE ("transparent-radiobutton", !bg_type_locked);
+
+		bg_type = terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
+		if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
+		{
+			SET_SENSITIVE ("darken-background-vbox", !terminal_profile_property_locked (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS));
+		}
+		else
+		{
+			SET_SENSITIVE ("darken-background-vbox", FALSE);
+		}
+	}
 #else
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE))
 	{
