@@ -544,8 +544,9 @@ init_color_scheme_menu (GtkWidget *combo_box)
 	g_object_unref (store);
 
 	renderer = gtk_cell_renderer_text_new ();
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), renderer, TRUE);
-	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), renderer, "text", 0, NULL);
+/*FIXME, avoid double loading of color schemes names from UI file */
+/*	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), renderer, TRUE);
+	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), renderer, "text", 0, NULL);*/
 
 	#else
 
