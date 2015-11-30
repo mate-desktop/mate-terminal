@@ -46,7 +46,6 @@ AM_GLIB_GNU_GETTEXT
 
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.25.12
-VTE_REQUIRED=0.27.1
 MATE_DESKTOP_REQUIRED=1.9.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
@@ -63,11 +62,13 @@ case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
        GTK_REQUIRED=2.24.0
        GDK_TARGETS="$($PKG_CONFIG --variable target gdk-$GTK_API_VERSION)"
+       VTE_REQUIRED=0.28
        VTE_PC_VERSION=
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=3.0.0
        GDK_TARGETS="$($PKG_CONFIG --variable targets gdk-$GTK_API_VERSION)"
+       VTE_REQUIRED=0.38
        VTE_PC_VERSION=-2.91
        ;;
 esac
