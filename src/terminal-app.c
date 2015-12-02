@@ -908,7 +908,8 @@ terminal_app_encoding_list_notify_cb (GSettings *settings,
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	GVariant *val;
-	GSList *strings, *tmp;
+	const gchar **strings;
+	int i;
 	TerminalEncoding *encoding;
 	const char *charset;
 
@@ -932,26 +933,32 @@ terminal_app_encoding_list_notify_cb (GSettings *settings,
 	val = g_settings_get_value (settings, key);
 	if (val != NULL &&
 	        g_variant_is_of_type (val, G_VARIANT_TYPE_STRING_ARRAY))
-		strings = mate_gsettings_strv_to_gslist (g_variant_get_strv (val, NULL));
+		strings = g_variant_get_strv (val, NULL);
 	else
 		strings = NULL;
 
-	for (tmp = strings; tmp != NULL; tmp = tmp->next)
+	if (strings != NULL)
 	{
-		charset = tmp->data;
-		if (!charset)
-			continue;
+		for (i = 0; strings[i] != NULL; ++i)
+		{
+			charset = strings[i];
+			if (!charset)
+				continue;
 
-		encoding = terminal_app_ensure_encoding (app, charset);
-		if (!terminal_encoding_is_valid (encoding))
-			continue;
+			encoding = terminal_app_ensure_encoding (app, charset);
+			if (!terminal_encoding_is_valid (encoding))
+				continue;
 
-		encoding->is_active = TRUE;
+			encoding->is_active = TRUE;
+		}
+
+		g_free (strings);
 	}
 
 	g_signal_emit (app, signals[ENCODING_LIST_CHANGED], 0);
-	g_variant_unref (val);
-	g_slist_free_full (strings, g_free);
+
+	if (val != NULL)
+		g_variant_unref (val);
 }
 
 static void
