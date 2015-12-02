@@ -736,7 +736,8 @@ terminal_app_profile_list_notify_cb (GSettings *settings,
 	TerminalApp *app = TERMINAL_APP (user_data);
 	GObject *object = G_OBJECT (app);
 	GVariant *val;
-	GSList *value_list, *sl;
+	const gchar **value_list;
+	int i;
 	GList *profiles_to_delete, *l;
 	gboolean need_new_default;
 	TerminalProfile *fallback;
@@ -752,12 +753,14 @@ terminal_app_profile_list_notify_cb (GSettings *settings,
 	        !g_variant_is_of_type (val, G_VARIANT_TYPE_STRING)))
 		goto ensure_one_profile;
 
-	value_list = mate_gsettings_strv_to_gslist( g_variant_get_strv (val, NULL));
+	value_list = g_variant_get_strv (val, NULL);
+	if (value_list == NULL)
+		goto ensure_one_profile;
 
 	/* Add any new ones */
-	for (sl = value_list; sl != NULL; sl = sl->next)
+	for (i = 0; value_list[i] != NULL; ++i)
 	{
-		const char *profile_name = sl->data;
+		const char *profile_name = value_list[i];
 		GList *link;
 
 		if (!profile_name)
@@ -771,7 +774,12 @@ terminal_app_profile_list_notify_cb (GSettings *settings,
 			terminal_app_create_profile (app, profile_name);
 	}
 
+	g_free (value_list);
+
 ensure_one_profile:
+
+	if (val != NULL)
+		g_variant_unref (val);
 
 	fallback = NULL;
 	count = g_hash_table_size (app->profiles);
