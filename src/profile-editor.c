@@ -600,7 +600,6 @@ init_background_darkness_scale (GtkWidget *scale)
 	                  NULL);
 }
 
-
 static void
 editor_response_cb (GtkWidget *editor,
                     int response,
@@ -614,77 +613,6 @@ editor_response_cb (GtkWidget *editor,
 
 	gtk_widget_destroy (editor);
 }
-
-#if 0
-static GdkPixbuf *
-create_preview_pixbuf (const gchar *filename)
-{
-	GdkPixbuf *pixbuf = NULL;
-	MateThumbnailFactory *thumbs;
-	const char *mime_type = NULL;
-	GFile *gfile;
-	GFileInfo *file_info;
-
-	if (filename == NULL)
-		return NULL;
-
-	gfile = g_file_new_for_uri (filename);
-	file_info = g_file_query_info (gfile,
-	                               G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
-	                               0, NULL, NULL);
-	if (file_info != NULL)
-		mime_type = g_file_info_get_content_type (file_info);
-
-	g_object_unref (gfile);
-
-	if (mime_type != NULL)
-	{
-		thumbs = mate_thumbnail_factory_new (MATE_THUMBNAIL_SIZE_NORMAL);
-
-		pixbuf = mate_thumbnail_factory_generate_thumbnail (thumbs,
-		         filename,
-		         mime_type);
-		g_object_unref (thumbs);
-	}
-
-	if (file_info != NULL)
-		g_object_unref (file_info);
-
-	return pixbuf;
-}
-
-static void
-update_image_preview (GtkFileChooser *chooser)
-{
-	GtkWidget *image;
-	gchar *file;
-
-	image = gtk_file_chooser_get_preview_widget (GTK_FILE_CHOOSER (chooser));
-	file = gtk_file_chooser_get_preview_uri (chooser);
-
-	if (file != NULL)
-	{
-
-		GdkPixbuf *pixbuf = NULL;
-
-		pixbuf = create_preview_pixbuf (file);
-		g_free (file);
-
-		if (pixbuf != NULL)
-		{
-			gtk_image_set_from_pixbuf (GTK_IMAGE (image), pixbuf);
-			g_object_unref (pixbuf);
-		}
-		else
-		{
-			gtk_image_set_from_stock (GTK_IMAGE (image),
-			                          "gtk-dialog-question",
-			                          GTK_ICON_SIZE_DIALOG);
-		}
-	}
-	gtk_file_chooser_set_preview_widget_active (chooser, file != NULL);
-}
-#endif
 
 static void
 setup_background_filechooser (GtkWidget *filechooser,
@@ -704,36 +632,6 @@ setup_background_filechooser (GtkWidget *filechooser,
 	home_dir = g_get_home_dir ();
 	if (home_dir)
 		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (filechooser), home_dir);
-
-#if 0
-	GtkWidget *image_preview;
-	GdkPixbuf *pixbuf = NULL;
-
-	image_preview = gtk_image_new ();
-	/* FIXMchpe this is bogus */
-	pixbuf = create_preview_pixbuf (terminal_profile_get_property_string (profile, TERMINAL_PROFILE_BACKGROUND_IMAGE_FILE));
-	if (pixbuf != NULL)
-	{
-		gtk_image_set_from_pixbuf (GTK_IMAGE (image_preview), pixbuf);
-		g_object_unref (pixbuf);
-	}
-	else
-	{
-		gtk_image_set_from_stock (GTK_IMAGE (image_preview),
-		                          "gtk-dialog-question",
-		                          GTK_ICON_SIZE_DIALOG);
-	}
-
-	gtk_file_chooser_set_preview_widget (GTK_FILE_CHOOSER (filechooser),
-	                                     image_preview);
-	gtk_file_chooser_set_use_preview_label (GTK_FILE_CHOOSER (filechooser),
-	                                        FALSE);
-	gtk_widget_set_size_request (image_preview, 128, -1);
-	gtk_widget_show (image_preview);
-
-	g_signal_connect (filechooser, "update-preview",
-	                  G_CALLBACK (update_image_preview), NULL);
-#endif
 }
 
 static void
