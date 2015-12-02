@@ -37,8 +37,6 @@
 #include <X11/Xatom.h>
 #endif
 
-#include <libmate-desktop/mate-gsettings.h>
-
 #include "terminal-accels.h"
 #include "terminal-app.h"
 #include "terminal-intl.h"
@@ -606,30 +604,23 @@ static void
 setup_ignore_host_env (GHashTable *env_table,
                       GSettings *settings)
 {
-	GSList *ignore;
-	gchar **ignore_strv = g_settings_get_strv (settings, "ignore-hosts");
+	gchar **ignore = g_settings_get_strv (settings, "ignore-hosts");
+	if (ignore == NULL)
+		return;
 
-	ignore = mate_gsettings_strv_to_gslist ((const gchar *const *)ignore_strv);
-	if (ignore)
+	GString *buf = g_string_sized_new (64);
+	int i;
+
+	for (i = 0; ignore[i] != NULL; ++i)
 	{
-		GString *buf = g_string_sized_new (64);
-		while (ignore != NULL)
-		{
-			GSList *old;
-
-			if (buf->len)
-				g_string_append_c (buf, ',');
-			g_string_append (buf, ignore->data);
-
-			old = ignore;
-			ignore = g_slist_next (ignore);
-			g_free (old->data);
-			g_slist_free_1 (old);
-		}
-		set_proxy_env (env_table, "no_proxy", g_string_free (buf, FALSE));
+		if (buf->len)
+			g_string_append_c (buf, ',');
+		g_string_append (buf, ignore[i]);
 	}
-	if (ignore_strv)
-		g_strfreev(ignore_strv);
+
+	set_proxy_env (env_table, "no_proxy", g_string_free (buf, FALSE));
+
+	g_strfreev(ignore);
 }
 
 static void
