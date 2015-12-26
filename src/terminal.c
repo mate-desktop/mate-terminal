@@ -32,7 +32,6 @@
 #include <gio/gio.h>
 
 #include <gdk/gdk.h>
-#include <gdk/gdkx.h>
 
 #include "eggsmclient.h"
 
@@ -437,53 +436,6 @@ name_lost_cb (GDBusConnection *connection,
 /* Copied from libcaja/caja-program-choosing.c; Needed in case
  * we have no DESKTOP_STARTUP_ID (with its accompanying timestamp).
  */
-static Time
-slowly_and_stupidly_obtain_timestamp (Display *xdisplay)
-{
-	Window xwindow;
-	XEvent event;
-
-	{
-		XSetWindowAttributes attrs;
-		Atom atom_name;
-		Atom atom_type;
-		const char *name;
-
-		attrs.override_redirect = True;
-		attrs.event_mask = PropertyChangeMask | StructureNotifyMask;
-
-		xwindow =
-		    XCreateWindow (xdisplay,
-		                   RootWindow (xdisplay, 0),
-		                   -100, -100, 1, 1,
-		                   0,
-		                   CopyFromParent,
-		                   CopyFromParent,
-		                   (Visual *)CopyFromParent,
-		                   CWOverrideRedirect | CWEventMask,
-		                   &attrs);
-
-		atom_name = XInternAtom (xdisplay, "WM_NAME", TRUE);
-		g_assert (atom_name != None);
-		atom_type = XInternAtom (xdisplay, "STRING", TRUE);
-		g_assert (atom_type != None);
-
-		name = "Fake Window";
-		XChangeProperty (xdisplay,
-		                 xwindow, atom_name,
-		                 atom_type,
-		                 8, PropModeReplace, (unsigned char *)name, strlen (name));
-	}
-
-	XWindowEvent (xdisplay,
-	              xwindow,
-	              PropertyChangeMask,
-	              &event);
-
-	XDestroyWindow(xdisplay, xwindow);
-
-	return event.xproperty.time;
-}
 
 static char *
 get_factory_name_for_display (const char *display_name)
@@ -542,6 +494,7 @@ main (int argc, char **argv)
 	char *working_directory;
 	int ret = EXIT_SUCCESS;
 
+	srand(time(NULL));
 	setlocale (LC_ALL, "");
 
 	bindtextdomain (GETTEXT_PACKAGE, TERM_LOCALEDIR);
@@ -606,11 +559,10 @@ main (int argc, char **argv)
 	if (options->startup_id == NULL)
 	{
 		/* Create a fake one containing a timestamp that we can use */
-		Time timestamp;
-
-		timestamp = slowly_and_stupidly_obtain_timestamp (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
-
-		options->startup_id = g_strdup_printf ("_TIME%lu", timestamp);
+		unsigned long timestamp = time(NULL);
+		unsigned rand_id = rand() & 0xFF;
+		options->startup_id = g_strdup_printf ("_TIME%lu",
+						       timestamp*16 + rand_id);
 	}
 
 	if (options->use_factory)
@@ -625,8 +577,8 @@ main (int argc, char **argv)
 		data->argv = argv_copy;
 		data->argc = argc_copy;
 
-        gtk_init(&argc, &argv);
-        options->initial_workspace = get_initial_workspace ();
+		gtk_init(&argc, &argv);
+		options->initial_workspace = get_initial_workspace ();
 
 		owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
 		                           data->factory_name,
