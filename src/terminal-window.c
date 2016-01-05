@@ -3426,9 +3426,15 @@ save_contents_dialog_on_response (GtkDialog *dialog, gint response_id, gpointer 
          * This is a sync operation.
          * Should be replaced with the async version when vte implements that.
          */
+#if VTE_CHECK_VERSION (0, 38, 0)
+        vte_terminal_write_contents_sync (terminal, stream,
+                                          VTE_WRITE_DEFAULT,
+                                          NULL, &error);
+#else
         vte_terminal_write_contents (terminal, stream,
                                      VTE_TERMINAL_WRITE_DEFAULT,
                                      NULL, &error);
+#endif
         g_object_unref (stream);
     }
 
