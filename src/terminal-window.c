@@ -1660,7 +1660,6 @@ terminal_window_state_event (GtkWidget            *widget,
 }
 
 #ifdef GDK_WINDOWING_X11
-
 static void
 terminal_window_window_manager_changed_cb (GdkScreen *screen,
         TerminalWindow *window)
@@ -1674,84 +1673,7 @@ terminal_window_window_manager_changed_cb (GdkScreen *screen,
     action = gtk_action_group_get_action (priv->action_group, "ViewFullscreen");
     gtk_action_set_sensitive (action, supports_fs);
 }
-
-static void
-terminal_window_composited_changed_cb (GdkScreen *screen,
-                                       TerminalWindow *window)
-{
-#if 0
-    TerminalWindowPrivate *priv = window->priv;
-    gboolean composited;
-
-    composited = gdk_screen_is_composited (screen);
-    if ((composited != priv->have_argb_visual) &&
-            gtk_widget_get_realized (GTK_WIDGET (window)))
-    {
-        GtkWidget *widget = GTK_WIDGET (window);
-        GdkWindow *widget_window;
-        guint32 user_time;
-        gboolean have_desktop;
-        guint32 desktop = 0; /* Quiet GCC */
-        gboolean was_minimized;
-        int x, y;
-
-        widget_window = gtk_widget_get_window (widget);
-
-        user_time = gdk_x11_display_get_user_time (gtk_widget_get_display (widget));
-
-        /* If compositing changed, re-realize the window. Bug #563561 */
-
-        /* Save the position; this isn't perfect, because the position
-         * that gtk_window_get_position() returns is the position of the
-         * frame window, and we are racing with the new window manager
-         * framing our window, so we might see a funky intermediate state.
-         * But at worst, we'll be off by a few pixels (the frame size). */
-        gtk_window_get_position (GTK_WINDOW (window), &x, &y);
-
-        /* GtkWindow tries to save whether the window was iconified
-         * and restore it, but that doesn't work because of problems
-         * GDK_WINDOW_STATE_ICONIFIED. For details, see comment for
-         * terminal_util_x11_window_is_minimized()
-         */
-        was_minimized = terminal_util_x11_window_is_minimized (widget_window);
-
-        /* And the desktop */
-        have_desktop = terminal_util_x11_get_net_wm_desktop (widget_window, &desktop);
-
-        gtk_widget_hide (widget);
-        gtk_widget_unrealize (widget);
-
-        /* put the window back where it was before */
-        gtk_window_move (GTK_WINDOW (window), x, y);
-        gtk_widget_realize (widget);
-
-        /* Get new GdkWindow */
-        widget_window = gtk_widget_get_window (widget);
-
-        gdk_x11_window_set_user_time (widget_window, user_time);
-
-        if (was_minimized)
-            gtk_window_iconify (GTK_WINDOW (window));
-        else
-            gtk_window_deiconify (GTK_WINDOW (window));
-
-        gtk_widget_show (widget);
-        if (have_desktop)
-            terminal_util_x11_set_net_wm_desktop (widget_window, desktop);
-
-        /* Mapping the window is likely to have set the "demands-attention" state.
-         * In particular, Marco will always set the state if a window is mapped,
-         * is not given the focus (because of an old user time), and is covered
-         * by some other window. We have no way of preventing this, so we just
-         * wait for our window to be mapped, and then tell the window manager
-         * to turn off the bit. If it wasn't set, no harm.
-         */
-        priv->clear_demands_attention = TRUE;
-    }
 #endif
-}
-
-#endif /* GDK_WINDOWING_X11 */
 
 static void
 terminal_window_screen_update (TerminalWindow *window,
@@ -1762,8 +1684,6 @@ terminal_window_screen_update (TerminalWindow *window,
     terminal_window_window_manager_changed_cb (screen, window);
     g_signal_connect (screen, "window-manager-changed",
                       G_CALLBACK (terminal_window_window_manager_changed_cb), window);
-    g_signal_connect (screen, "composited-changed",
-                      G_CALLBACK (terminal_window_composited_changed_cb), window);
 
     if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (screen), "GT::HasSettingsConnection")))
         return;
@@ -1800,9 +1720,6 @@ terminal_window_screen_changed (GtkWidget *widget,
     {
         g_signal_handlers_disconnect_by_func (previous_screen,
                                               G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                              window);
-        g_signal_handlers_disconnect_by_func (previous_screen,
-                                              G_CALLBACK (terminal_window_composited_changed_cb),
                                               window);
     }
 
@@ -2348,9 +2265,6 @@ terminal_window_dispose (GObject *object)
     {
         g_signal_handlers_disconnect_by_func (screen,
                                               G_CALLBACK (terminal_window_window_manager_changed_cb),
-                                              window);
-        g_signal_handlers_disconnect_by_func (screen,
-                                              G_CALLBACK (terminal_window_composited_changed_cb),
                                               window);
     }
 
