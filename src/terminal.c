@@ -619,8 +619,8 @@ main (int argc, char **argv)
 		data->argv = argv_copy;
 		data->argc = argc_copy;
 
-        gtk_init(&argc, &argv);
-        options->initial_workspace = get_initial_workspace ();
+		gtk_init(&argc, &argv);
+		options->initial_workspace = get_initial_workspace ();
 
 		owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
 		                           data->factory_name,
