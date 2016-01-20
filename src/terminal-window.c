@@ -3915,7 +3915,12 @@ terminal_set_title_callback (GtkAction *action,
     gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
 
     label = gtk_label_new_with_mnemonic (_("_Title:"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+    gtk_label_set_yalign (GTK_LABEL (label), 0.5);
+#else
     gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
     gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
 
     entry = gtk_entry_new ();
