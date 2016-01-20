@@ -117,7 +117,7 @@ terminal_info_bar_format_text (TerminalInfoBar *bar,
 
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 	gtk_label_set_yalign (GTK_LABEL (label), 0.0);
 #else

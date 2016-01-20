@@ -136,7 +136,7 @@ terminal_tab_label_constructor (GType type,
 
 	priv->label = label = gtk_label_new (NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 	gtk_label_set_yalign (GTK_LABEL (label), 0.5);
 #else
