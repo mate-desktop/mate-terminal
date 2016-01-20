@@ -103,8 +103,7 @@ terminal_tab_label_style_set (GtkWidget *widget,
 	if (style_set)
 		style_set (widget, previous_style);
 
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (widget),
-	                                   GTK_ICON_SIZE_MENU, &w, &h);
+	gtk_icon_size_lookup (GTK_ICON_SIZE_MENU, &w, &h);
 	gtk_widget_set_size_request (priv->close_button, w + 2, h + 2);
 }
 
