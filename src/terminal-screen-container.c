@@ -52,7 +52,7 @@ enum
     PROP_WINDOW_PLACEMENT_SET
 };
 
-G_DEFINE_TYPE (TerminalScreenContainer, terminal_screen_container, GTK_TYPE_VBOX)
+G_DEFINE_TYPE (TerminalScreenContainer, terminal_screen_container, GTK_TYPE_BOX)
 
 /* helper functions */
 
@@ -123,6 +123,8 @@ terminal_screen_container_init (TerminalScreenContainer *container)
 	priv->vscrollbar_policy = GTK_POLICY_AUTOMATIC;
 	priv->window_placement = GTK_CORNER_BOTTOM_RIGHT;
 	priv->window_placement_set = FALSE;
+
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (container), GTK_ORIENTATION_VERTICAL);
 }
 
 static GObject *
@@ -165,7 +167,11 @@ terminal_screen_container_constructor (GType type,
 
 #else
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	priv->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	priv->hbox = gtk_hbox_new (FALSE, 0);
+#endif
 
 #if VTE_CHECK_VERSION (0, 38, 0)
 	priv->vscrollbar = gtk_vscrollbar_new (gtk_scrollable_get_vadjustment (GTK_SCROLLABLE (priv->screen)));
