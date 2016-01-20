@@ -156,7 +156,7 @@ terminal_tab_label_constructor (GType type,
 	gtk_widget_set_name (close_button, "mate-terminal-tab-close-button");
 	gtk_widget_set_tooltip_text (close_button, _("Close tab"));
 
-	image = gtk_image_new_from_stock (GTK_STOCK_CLOSE, GTK_ICON_SIZE_MENU);
+	image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_MENU);
 	gtk_container_add (GTK_CONTAINER (close_button), image);
 	gtk_box_pack_end (GTK_BOX (hbox), close_button, FALSE, FALSE, 0);
 
