@@ -2076,6 +2076,13 @@ terminal_window_init (TerminalWindow *window)
     }
 #endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkStyleContext *context;
+
+    context = gtk_widget_get_style_context (GTK_WIDGET (window));
+    gtk_style_context_add_class (context, "mate-terminal");
+#endif
+
     gtk_window_set_title (GTK_WINDOW (window), _("Terminal"));
 
     priv->active_screen = NULL;
