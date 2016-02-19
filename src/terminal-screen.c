@@ -952,7 +952,7 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 
 		/* madars.vitolins@gmail.com 24/07/2014 -
 		 * update terminal window config
-		 * with the flag of copy selection to cliboard or not. */
+		 * with the flag of copy selection to clipboard or not. */
 		terminal_window_update_copy_selection(screen, window);
 	}
 
