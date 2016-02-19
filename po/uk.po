@@ -5,15 +5,16 @@
 # Translators:
 # Микола Ткач <Stuartlittle1970@gmail.com>, 2013
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2012
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2015
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2016
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-10 15:07+0100\n"
-"PO-Revision-Date: 2015-05-03 14:35+0000\n"
-"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
-"Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
+"POT-Creation-Date: 2016-02-19 16:58+0300\n"
+"PO-Revision-Date: 2016-02-19 13:59+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,13 +37,13 @@ msgid ""
 msgstr "<p> MATE Terminal – емулятор терміналу, що використовується для доступу до командної оболонки UNIX у середовищі MATE. MATE Terminal емулює застосунок xterm, розроблений консорціумом X. Він підтримує прозоре тло, відкриття декількох терміналів у одному вікні (вкладки) і натискувані URL. </p> <p> MATE Terminal – відгалудження(форк) GNOME Terminal і частина стільничного середовища MATE. Якщо Ви бажаєте знати більше про MATE і MATE Terminal, будь ласка, відвідайте домашню сторінку проєкту. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4182
+#: ../src/terminal-window.c:4129
 msgid "MATE Terminal"
 msgstr "Термінал MATE"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:325
-#: ../src/terminal.c:605 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2162
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
+#: ../src/terminal.c:587 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2079
 msgid "Terminal"
 msgstr "Термінал"
 
@@ -79,6 +80,904 @@ msgstr "Параметри сеансів:"
 msgid "Show session management options"
 msgstr "Показати параметри взаємодії з менеджером сеансів"
 
+#: ../src/org.mate.terminal.gschema.xml.in.h:1
+msgid "List of profiles"
+msgstr "Перелік профілів"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:2
+msgid ""
+"List of profiles known to mate-terminal. The list contains strings naming "
+"subdirectories relative to /org/mate/terminal/profiles."
+msgstr "Перелік відомих терміналу профілів. Список містить рядки з назвами підкаталогів, що відносяться до /org/mate/terminal/profiles."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:3
+msgid "Profile to use for new terminals"
+msgstr "Профіль, що використовується у нових терміналах"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:4
+msgid ""
+"Profile to be used when opening a new window or tab. Must be in "
+"profile_list."
+msgstr "Профіль, що використовується при відкриванні нового вікна чи вкладки. Повинен бути присутнім у profile_list."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:5
+msgid "Whether the menubar has access keys"
+msgstr "Чи увімкнено клавіші швидкого доступу до панелі меню"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:6
+msgid ""
+"Whether to have Alt+letter access keys for the menubar. They may interfere "
+"with some applications run inside the terminal so it's possible to turn them"
+" off."
+msgstr "Чи використовувати комбінації клавіш Alt+літера для доступу до меню. Ця функція може заважати роботі деяких додатків всередині терміналу, у цьому випадку її потрібно вимкнути."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:7
+msgid "Whether the standard GTK shortcut for menubar access is enabled"
+msgstr "Чи дозволяти стандартну комбінацію клавіш GTK для доступу до меню"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:8
+msgid ""
+"Normally you can access the menubar with F10. This can also be customized "
+"via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
+"standard menubar accelerator to be disabled."
+msgstr "Як правило Ви можете отримати доступ до меню, натиснувши F10. Ця клавіша може бути змінена у файлі gtkrc (gtk-menu-bar-accel = «що-небуть»). Цей ключ дозволяє вимкнути стандартний акселератор доступу до меню."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:9
+msgctxt "active-encodings"
+msgid "[ 'UTF-8', 'current' ]"
+msgstr "[ 'UTF-8', 'current' ]"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:10
+msgid "List of available encodings"
+msgstr "Перелік доступних кодувань"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:11
+msgid ""
+"A subset of possible encodings are presented in the Encoding submenu. This "
+"is a list of encodings to appear there. The special encoding name "
+"\"current\" means to display the encoding of the current locale."
+msgstr "Підмножина можливих кодувань, представлених у меню \"Кодування\". Цей перелік кодувань з’явиться там. Спеціяльна назва кодування \"current\" означає для відображення кодування поточної локалі."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:12
+msgid "Whether to ask for confirmation when closing terminal windows"
+msgstr "Чи запитувати підтвердження при закритті вікон терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:13
+msgid ""
+"Whether to ask for confirmation when closing a terminal window which has "
+"more than one open tab."
+msgstr "Чи запитувати підтвердження при закритті вікна терміналу, яке має більше однієї відкритої вкладки."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:14
+msgctxt "visible-name"
+msgid "'Default'"
+msgstr "'Типово'"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:15
+msgid "Human-readable name of the profile"
+msgstr "Читана назва профілю"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:16
+msgid "Human-readable name of the profile."
+msgstr "Читана назва профілю"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:17
+msgid "Whether to show menubar in new windows/tabs"
+msgstr "Чи показувати меню у нових вікнах/вкладках"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:18
+msgid ""
+"True if the menubar should be shown in new windows, for windows/tabs with "
+"this profile."
+msgstr "Якщо встановлено, показувати панель меню у нових вікнах, для вікон/вкладок з цим профілем."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:19
+msgid "Default color of text in the terminal"
+msgstr "Типовий колір тексту у терміналі"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:20
+msgid ""
+"Default color of text in the terminal, as a color specification (can be "
+"HTML-style hex digits, or a color name such as \"red\")."
+msgstr "Типовий колір тексту у терміналі (може бути у шістнадцятковому HTML-стилі або назвою кольору, наприклад, «red»)."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:21
+msgid "Default color of terminal background"
+msgstr "Типовий колір тла терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:22
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr "Типовий колір тла у терміналі (може бути у шістнадцятковому HTML-стилі або назвою кольору, наприклад, «red»)."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:23
+msgid "Default color of bold text in the terminal"
+msgstr "Типовий колір напівжирного тексту у терміналі"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:24
+msgid ""
+"Default color of bold text in the terminal, as a color specification (can be"
+" HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
+" bold_color_same_as_fg is true."
+msgstr "Типовий колір напівжирного тексту у терміналі (може бути у шістнадцятковому HTML-стилі або назвою кольору, наприклад, «red»). Нехтується, якщо вказано опцію \"bold_color_same_as_fg\"."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:25
+msgid "Whether bold text should use the same color as normal text"
+msgstr "Чи виводити напівжирний текст тим самим кольором що й звичайний текст"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:26
+msgid ""
+"If true, boldface text will be rendered using the same color as normal text."
+msgstr "Якщо увімкнено, виділений напівжирним текст буде виводитися тим самим кольором що й звичайний текст."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:27
+msgid "What to do with dynamic title"
+msgstr "Що робити з динамічним заголовком"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:28
+msgid ""
+"If the application in the terminal sets the title (most typically people "
+"have their shell set up to do this), the dynamically-set title can erase the"
+" configured title, go before it, go after it, or replace it. The possible "
+"values are \"replace\", \"before\", \"after\", and \"ignore\"."
+msgstr "Якщо застосунок у терміналі вказує заголовок (як правило, в людей командна оболонка налаштована на це), динамічно-вказуваний заголовок може стерти налаштований, бути до чи після нього або замінити. Можливі значення: \"replace\", \"before\", \"after\", і \"ignore\"."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:29
+msgctxt "title"
+msgid "'Terminal'"
+msgstr "Термінал'"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:30
+msgid "Title for terminal"
+msgstr "Заголовок терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:31
+msgid ""
+"Title to display for the terminal window or tab. This title may be replaced "
+"by or combined with the title set by the application inside the terminal, "
+"depending on the title_mode setting."
+msgstr "Заголовок вікна або вкладки терміналу. Цей заголовок може бути замінений або суміщений з заголовком, що встановлюється додатком всередині терміналу, залежно від значення \"title_mode\"."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:32
+msgid "Whether to allow bold text"
+msgstr "Чи дозволяти напівжирний текст"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:33
+msgid "If true, allow applications in the terminal to make text boldface."
+msgstr "Якщо увімкнено, дозволяє застосункам у терміналі встановлювати напівжирний шрифт."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:34
+msgid "Whether to silence terminal bell"
+msgstr "Чи пригнічувати сигнал терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:35
+msgid ""
+"If true, don't make a noise when applications send the escape sequence for "
+"the terminal bell."
+msgstr "Якщо увімкнено, не шуміти, коли додатки надсилають escape-послідовність для термінального дзвінка."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:36
+msgid "Copy selection to clipboard"
+msgstr "Копіювати виділення у буфер обміну"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:37
+msgid "If true, selection is automatically copied to clipboard buffer."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:38
+msgid "Characters that are considered \"part of a word\""
+msgstr "Символи, що вважаються «частиною слова»"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:39
+msgid ""
+"When selecting text by word, sequences of these characters are considered "
+"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
+" a range) should be the first character given."
+msgstr "При виборі тексту за словами послідовности цих символів сприймається як окремі слова. Діяпазони можуть бути вказані як «A-Z». Знак перенесення (що не означає діяпазон) повинен бути першим із вказаних символів."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:40
+msgid "Whether to use custom terminal size for new windows"
+msgstr "Чи використовувати вказаний користувачем розмір для створюваних вікон терміналів"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:41
+msgid ""
+"If true, newly created terminal windows will have custom size specified by "
+"default_size_columns and default_size_rows."
+msgstr "Якщо увімкнено, нові вікна терміналів будуть мати розмір, що визначається параметрами default_size_columns та default_size_rows."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:42
+msgid "Default number of columns"
+msgstr "Типове число стовпчиків"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:43
+msgid ""
+"Number of columns in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr "Кількість стовпчиків у створюваних вікнах терміналів. Використовується при увімкненому use_custom_default_size."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:44
+msgid "Default number of rows"
+msgstr "Типове число рядків"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:45
+msgid ""
+"Number of rows in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr "Кількість рядків у створюваних вікнах терміналів. Використовується при увімкненому use_custom_default_size."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:46
+msgid "Position of the scrollbar"
+msgstr "Позиція лінійки прокручування"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:47
+msgid ""
+"Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
+"and \"hidden\"."
+msgstr "Розташування лінійки прокручування терміналу. Можливі варіянти «left», «right» і «hidden»."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:48
+msgid "Number of lines to keep in scrollback"
+msgstr "Кількість рядків у буфері прокручування"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:49
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don't fit in the scrollback are"
+" discarded. If scrollback_unlimited is true, this value is ignored."
+msgstr "Кількість рядків, що зберігаються у буфері прокручування. Ви можете прокрутити вивід терміналу назад на цю кількість рядків, при перевищенні цієї кількости найстаріші рядки відкидуються. Якщо scrollback_unlimited дорівнює true, то це значення нехтується."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:50
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr "Включення у буфері прокручування нескінченної кількости рядків"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:51
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is"
+" stored on disk temporarily, so this may cause the system to run out of disk"
+" space if there is a lot of output to the terminal."
+msgstr "Якщо увімкнено, то перемотані рядки не будуть відкидуватися. Вони будуть тимчасово зберігатися на диск, що при більшій кількости виводу у термінал може призвести до заповнення дискового простору."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:52
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr "Чи прокручувати вікно вниз при натисканні клавіші"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:53
+msgid "If true, pressing a key jumps the scrollbar to the bottom."
+msgstr "Якщо увімкнено, натискання клавіші призводить до перемотування до низу."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:54
+msgid "Whether to scroll to the bottom when there's new output"
+msgstr "Чи прокручувати вниз за появи нового виводу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:55
+msgid ""
+"If true, whenever there's new output the terminal will scroll to the bottom."
+msgstr "Якщо встановлено, поява нового виводу у терміналі буде призводити до прокрутки вниз."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:56
+msgid "What to do with the terminal when the child command exits"
+msgstr "Що робити з терміналом після завершення дочірньої команди"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:57
+msgid ""
+"Possible values are \"close\" to close the terminal, and \"restart\" to "
+"restart the command."
+msgstr "Можливі значення: «close» - закрити термінал, «restart» - перезапустити команду."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:58
+msgid "Whether to launch the command in the terminal as a login shell"
+msgstr "Чи запускати команду у терміналі як реєстраційну оболонку (login shell)"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:59
+msgid ""
+"If true, the command inside the terminal will be launched as a login shell. "
+"(argv[0] will have a hyphen in front of it.)"
+msgstr "Якщо увімкнено, команда у терміналі буде запущена як login shell. (буде поставлено дефіс перед argv[0].)"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:60
+msgid "Whether to update login records when launching terminal command"
+msgstr "Чи оновлювати utmp/wtmp при запуску команди терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:61
+msgid ""
+"If true, the system login records utmp and wtmp will be updated when the "
+"command inside the terminal is launched."
+msgstr "Якщо так, файли utmp/wtmp будуть оновлені при запуску команди всередині терміналу."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:62
+msgid "Whether to run a custom command instead of the shell"
+msgstr "Чи запускати іншу команду замість оболонки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:63
+msgid ""
+"If true, the value of the custom_command setting will be used in place of "
+"running a shell."
+msgstr "Якщо цей ключ встановлений, замість оболонки буде використовуватися значення параметру custom_command."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:64
+msgid "Whether to blink the cursor"
+msgstr "Чи повинен вказівник блимати"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:65
+msgid ""
+"The possible values are \"system\" to use the global cursor blinking "
+"settings, or \"on\" or \"off\" to set the mode explicitly."
+msgstr "Можливі значення: «system» для використання системних налаштувань блимання вказівника, або «on» або«off» для явного встановлення режиму блимання."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:66
+msgid "The cursor appearance"
+msgstr "Зовнішній вигляд вказівника"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:67
+msgid ""
+"The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
+"vertical line cursor, or \"underline\" to use an underline cursor."
+msgstr "Можливі значення: «block» - прямокутний вказівник, «ibeam» - вказівник у вигляді вертикальної лінії або «underline» - вказівник у вигляді підкреслювання."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:68
+msgid "Custom command to use instead of the shell"
+msgstr "Команда, що використовується замість оболонки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:69
+msgid "Run this command in place of the shell, if use_custom_command is true."
+msgstr "Виконувати цю команду замість оболонки, якщо встановлено ключ \"use_custom_command\"."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:70
+msgid "Icon for terminal window"
+msgstr "Піктограма вікна терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:71
+msgid "Icon to use for tabs/windows containing this profile."
+msgstr "Піктограма для використання у вкладках/вікнах, що містять даний профіль."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:72
+msgid "Palette for terminal applications"
+msgstr "Палітра для термінальних додатків"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:73
+msgid ""
+"Terminals have a 16-color palette that applications inside the terminal can "
+"use. This is that palette, in the form of a colon-separated list of color "
+"names. Color names should be in hex format e.g. \"#FF00FF\""
+msgstr "Термінали мають 16-колірну палітру, яку можуть використовувати запущені у терміналі застосунки. Цей ключ містить палітру у вигляді розділеного комами переліку імен кольорів. Імена кольорів повинні бути у шістнадцятковому форматі, наприклад «#FF00FF»"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:74
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:75
+msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Ім’я шрифта Pango, наприклад «Sans 12» або «Monospace Bold 14»."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:76
+msgid "Background type"
+msgstr "Тип тла"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:77
+msgid ""
+"Type of terminal background. May be \"solid\" for a solid color, \"image\" "
+"for an image, or \"transparent\" for either real transparency if a "
+"compositing window manager is running, or pseudo-transparency otherwise."
+msgstr "Тип тла терміналу. Допустимі значення: «solid» - суцільне тло, «image» - зображення, «transparent» - напівпрозоре, якщо увімкнено композитний менеджер вікон або псевдо-напівпрозоре, якщо вимкнено."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:78
+msgid "Background image"
+msgstr "Зображення тла"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:79
+msgid "Filename of a background image."
+msgstr "Ім’я файлу зображення тла."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:80
+msgid "Whether to scroll background image"
+msgstr "Чи прокручувати зображення тла"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:81
+msgid ""
+"If true, scroll the background image with the foreground text; if false, "
+"keep the image in a fixed position and scroll the text above it."
+msgstr "Якщо увімкнено, перемотувати зображення тла разом з текстом. Якщо вимкнено, залишити зображення у фіксованій позиції й перемотувати текст поверх нього."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:82
+msgid "How much to darken the background image"
+msgstr "Як сильно затемнювати зображення тла"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:83
+msgid ""
+"A value between 0.0 and 1.0 indicating how much to darken the background "
+"image. 0.0 means no darkness, 1.0 means fully dark. In the current "
+"implementation, there are only two levels of darkness possible, so the "
+"setting behaves as a boolean, where 0.0 disables the darkening effect."
+msgstr "Значення від 0.0 до 1.0 вказує, на скільки затемнювати зображення тла. 0.0 означає «не затемнювати», 1.0 означає повне затемнення. У поточній реалізації можливі лише два рівні затемнення, тобто параметр працює як булевий, де 0.0 вимикає ефект затемнення."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:84
+msgid "Effect of the Backspace key"
+msgstr "Дія клавіші «Backspace»"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:85
+msgid ""
+"Sets what code the backspace key generates. Possible values are \"ascii-"
+"del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
+"ASCII BS character), \"escape-sequence\" for the escape sequence typically "
+"bound to backspace or delete. \"ascii-del\" is normally considered the "
+"correct setting for the Backspace key."
+msgstr "Встановлює, який код генерує клавіша «Backspace». Можливі значення - «ascii-del» (ASCII DEL), «control-h» (ASCII BS), «escape-sequence» (escape-послідовність, зазвичай відповідає клавішам «Backspace» або «Delete»). Рекомендовано встановити значення «ascii-del»."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:86
+msgid "Effect of the Delete key"
+msgstr "Дія клавіші «Delete»"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:87
+msgid ""
+"Sets what code the delete key generates. Possible values are \"ascii-del\" "
+"for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
+"character), \"escape-sequence\" for the escape sequence typically bound to "
+"backspace or delete. \"escape-sequence\" is normally considered the correct "
+"setting for the Delete key."
+msgstr "Встановлює, який код генерує клавіша «Delete». Можливі значення - «ascii-del» (ASCII DEL), «control-h» (ASCII BS), «escape-sequence» (escape-послідовність, зазвичай відповідає клавішам «Backspace» або «Delete»). Рекомендовано встановити значення «escape-sequence»."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:88
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Чи використовувати шрифт з поточної теми для об’єкту терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:89
+msgid ""
+"If true, the theme color scheme used for text entry boxes will be used for "
+"the terminal, instead of colors provided by the user."
+msgstr "Якщо встановлено, для терміналу буде використовуватися колірна схема полів уведення з поточної теми, а не кольори користувача."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:90
+msgid "Whether to use the system font"
+msgstr "Чи використовувати системний шрифт"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:91
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr "Якщо увімкнено, термінал буде використовувати глобальний стандартний шрифт, якщо він моноширинний (і найбільш схожий шрифт у протилежному випадку)."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:92
+msgid "Highlight S/Key challenges"
+msgstr "Виділяти запити S/Key"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:93
+msgid ""
+"Popup a dialog when an S/Key challenge response query is detected and "
+"clicked on. Typing a password into the dialog will send it to the terminal."
+msgstr "Показувати діялоґ при виявленні відповіді на запит S/Key й натисканні на нього. Ввід паролю у діялозі призведе до відправки його у термінал."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:94
+msgid "Keyboard shortcut to open a new tab"
+msgstr "Комбінація клавіш для відкриття нової вкладки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:95
+msgid ""
+"Keyboard shortcut key for opening a new tab. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для відкриття нової вкладки. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:96
+msgid "Keyboard shortcut to open a new window"
+msgstr "Комбінація клавіш для відкриття нового вікна"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:97
+msgid ""
+"Keyboard shortcut key for opening a new window. Expressed as a string in the"
+" same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для відкриття нового вікна. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:98
+msgid "Keyboard shortcut to create a new profile"
+msgstr "Комбінація клавіш для створення нового профілю"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:99
+msgid ""
+"Keyboard shortcut key for bringing up the dialog for profile creation. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr "Комбінація клавіш для виклику діялоґу створення профілю. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:100
+msgid "Keyboard shortcut to save the current tab contents to file"
+msgstr "Комбінація клавіш для запису вмісту поточної вкладки у файл"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:101
+msgid ""
+"Keyboard shortcut key to save the current tab contents to a file. Expressed "
+"as a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr "Комбінація клавіш для запису вмісту поточної вкладки у файл. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:102
+msgid "Keyboard shortcut to close a tab"
+msgstr "Комбінація клавіш для закриття вкладки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:103
+msgid ""
+"Keyboard shortcut key for closing a tab. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для закриття вкладки. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:104
+msgid "Keyboard shortcut to close a window"
+msgstr "Комбінація клавіш для закриття вікна"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:105
+msgid ""
+"Keyboard shortcut key for closing a window. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для закриття вікна. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:106
+msgid "Keyboard shortcut to copy text"
+msgstr "Комбінація клавіш для копіювання тексту"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:107
+msgid ""
+"Keyboard shortcut key for copying selected text to the clipboard. Expressed "
+"as a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr "КомбІнація клавіш для копіювання виділеного тексту у буфер обміну. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:108
+msgid "Keyboard shortcut to paste text"
+msgstr "Комбінація клавіш для вставки тексту"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:109
+msgid ""
+"Keyboard shortcut key for pasting the contents of the clipboard into the "
+"terminal. Expressed as a string in the same format used for GTK+ resource "
+"files. If you set the option to the special string \"disabled\", then there "
+"will be no keyboard shortcut for this action."
+msgstr "Комбінація клавіш для вставки вмісту буферу обмену у термінал. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:110
+msgid "Keyboard shortcut to toggle full screen mode"
+msgstr "Комбінація клавіш для перемикання у повноекранний режим"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
+msgid ""
+"Keyboard shortcut key for toggling full screen mode. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
+msgstr "Комбінація клавіш для перемикання повноекранного режиму. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
+msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgstr "Комбінація клавіш для перемикання видимості меню"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
+msgid ""
+"Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
+"a string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr "Комбінація клавіш для перемикання видимості рядка меню. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
+msgid "Keyboard shortcut to set the terminal title"
+msgstr "Комбінація клавіш для встановлення заголовку терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
+msgid ""
+"Keyboard shortcut key to set the terminal title. Expressed as a string in "
+"the same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для встановлення заголовку терміналу. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
+msgid "Keyboard shortcut to reset the terminal"
+msgstr "Комбінація клавіш для скидання терміналу"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
+msgid ""
+"Keyboard shortcut key to reset the terminal. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для скидання терміналу. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
+msgid "Keyboard shortcut to reset and clear the terminal"
+msgstr "Комбінація клавіш для скидання та очистки термінал"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
+msgid ""
+"Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
+" in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
+msgstr "Комбінація клавіш для скидання та очистки терміналу. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
+msgid "Keyboard shortcut to switch to the previous tab"
+msgstr "Комбінація клавіш для перемикання на попередню вкладку"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
+msgid ""
+"Keyboard shortcut key to switch to the previous tab. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
+msgstr "Комбінація клавіш для перемикання на попередню вкладку. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
+msgid "Keyboard shortcut to switch to the next tab"
+msgstr "Комбінація клавіш для перемикання на наступну вкладку"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
+msgid ""
+"Keyboard shortcut key to switch to the next tab. Expressed as a string in "
+"the same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для перемикання на наступну вкладку. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
+msgid "Keyboard shortcut to switch to the previous profile"
+msgstr "Комбінація клавіш для перемикання на попередній профіль"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
+msgid ""
+"Keyboard shortcut key to switch to the previous profile. Expressed as a "
+"string in the same format used for GTK+ resource files. If you set the "
+"option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr "Комбінація клавіш для перемикання на попередній профіль. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення \"disabled\", для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
+msgid "Keyboard shortcut to switch to the next profile"
+msgstr "Комбінація клавіш для перемикання на наступний профіль"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
+msgid ""
+"Keyboard shortcut key to switch to the next profile. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
+msgstr "Комбінація клавіш для переходу на наступний профіль. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення \"disabled\", для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
+msgid "Accelerator to move the current tab to the left."
+msgstr "Комбінація клавіш для переміщення поточної вкладки вліво."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
+msgid ""
+"Accelerator key to move the current tab to the left. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr "Комбінація клавіш для переміщення поточної вкладки вліво. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», то для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
+msgid "Accelerator to move the current tab to the right."
+msgstr "Комбінація клавіш для переміщення поточної вкладки вправо."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
+msgid ""
+"Accelerator key to move the current tab to the right. Expressed as a string "
+"in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keybinding for this "
+"action."
+msgstr "Комбінація клавіш для переміщення поточної вкладки вправо. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», то для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
+msgid "Accelerator to detach current tab."
+msgstr "Комбінація клавіш для відділення поточної вкладки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
+msgid ""
+"Accelerator key to detach current tab. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keybinding for this action."
+msgstr "Комбінація клавіш для відділення поточної вкладки. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», то для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
+msgid "Keyboard shortcut to switch to tab 1"
+msgstr "Комбінація клавіш для перемикання на вкладку 1"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
+msgid ""
+"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 1. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
+msgid "Keyboard shortcut to switch to tab 2"
+msgstr "Комбінація клавіш для перемикання на вкладку 2"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
+msgid ""
+"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 2. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
+msgid "Keyboard shortcut to switch to tab 3"
+msgstr "Комбінація клавіш для перемикання на вкладку 3"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
+msgid ""
+"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 3. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
+msgid "Keyboard shortcut to switch to tab 4"
+msgstr "Комбінація клавіш для перемикання на вкладку 4"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
+msgid ""
+"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 4. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
+msgid "Keyboard shortcut to switch to tab 5"
+msgstr "Комбінація клавіш для перемикання на вкладку 5"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
+msgid ""
+"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 5. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
+msgid "Keyboard shortcut to switch to tab 6"
+msgstr "Комбінація клавіш для перемикання на вкладку 6"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
+msgid ""
+"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 6. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
+msgid "Keyboard shortcut to switch to tab 7"
+msgstr "Комбінація клавіш для перемикання на вкладку 7"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
+msgid ""
+"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 7. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
+msgid "Keyboard shortcut to switch to tab 8"
+msgstr "Комбінація клавіш для перемикання на вкладку 8"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
+msgid ""
+"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 8. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
+msgid "Keyboard shortcut to switch to tab 9"
+msgstr "Комбінація клавіш для перемикання на вкладку 9"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
+msgid ""
+"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
+" format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для перемикання на вкладку 9. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
+msgid "Keyboard shortcut to switch to tab 10"
+msgstr "Комбінація клавіш для перемикання на вкладку 10"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
+msgid ""
+"Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для перемикання на вкладку 10. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
+msgid "Keyboard shortcut to switch to tab 11"
+msgstr "Комбінація клавіш для перемикання на вкладку 11"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
+msgid ""
+"Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для перемикання на вкладку 11. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
+msgid "Keyboard shortcut to switch to tab 12"
+msgstr "Комбінація клавіш для перемикання на вкладку 12"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
+msgid ""
+"Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для перемикання на вкладку 12. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
+msgid "Keyboard shortcut to launch help"
+msgstr "Комбінація клавіш для відкриття довідки"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
+msgid ""
+"Keyboard shortcut key for launching help. Expressed as a string in the same "
+"format used for GTK+ resource files. If you set the option to the special "
+"string \"disabled\", then there will be no keyboard shortcut for this "
+"action."
+msgstr "Комбінація клавіш для відкриття довідки. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
+msgid "Keyboard shortcut to make font larger"
+msgstr "Комбінація клавіш для збільшення шрифту"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
+msgid ""
+"Keyboard shortcut key for making font larger. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для збільшення шрифту. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
+msgid "Keyboard shortcut to make font smaller"
+msgstr "Комбінація клавіш для зменшення шрифту"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
+msgid ""
+"Keyboard shortcut key for making font smaller. Expressed as a string in the "
+"same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr "Комбінація клавіш для зменшення шрифту. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
+msgid "Keyboard shortcut to make font normal-size"
+msgstr "Комбінація клавіш для встановлення звичайного розміру шрифту"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
+msgid ""
+"Keyboard shortcut key for making font the normal size. Expressed as a string"
+" in the same format used for GTK+ resource files. If you set the option to "
+"the special string \"disabled\", then there will be no keyboard shortcut for"
+" this action."
+msgstr "Комбінація клавіш для встановлення звичайного розміру шрифту. Вказується у вигляді рядка у форматі файлів ресурсів GTK+. Якщо встановити спеціяльне значення «disabled», для цієї дії не буде комбінації клавіш."
+
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
 msgstr "Чорний на світло-жовтому"
@@ -99,32 +998,32 @@ msgstr "Зелений на чорному"
 msgid "White on black"
 msgstr "Білий на чорному"
 
-#: ../src/profile-editor.c:490
+#: ../src/profile-editor.c:512
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Помилка у синтаксисі команди: %s"
 
-#: ../src/profile-editor.c:507
+#: ../src/profile-editor.c:529
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Редагування профілю \"%s\""
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:562 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "Інше"
 
-#: ../src/profile-editor.c:675
+#: ../src/profile-editor.c:626
 msgid "Images"
 msgstr "Зображення"
 
-#: ../src/profile-editor.c:849
+#: ../src/profile-editor.c:770
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Вибір кольору палітри %d"
 
-#: ../src/profile-editor.c:853
+#: ../src/profile-editor.c:774
 #, c-format
 msgid "Palette entry %d"
 msgstr "Елемент палітри %d"
@@ -193,7 +1092,7 @@ msgstr "Профілі"
 msgid "_Profile used when launching a new terminal:"
 msgstr "Профіль, типовий для н_ових терміналів:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:152
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
 msgid "New Profile"
 msgstr "Створення профілю"
 
@@ -290,7 +1189,7 @@ msgid "On the right side"
 msgstr "Праворуч"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:383
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "Вимкнено"
@@ -551,46 +1450,50 @@ msgid "S_hade transparent or image background:"
 msgstr "Зат_емнювати прозорість чи зображення тла:"
 
 #: ../src/profile-preferences.ui.h:76
+msgid "S_hade transparent background:"
+msgstr "За_темнювати прозорысть тла:"
+
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Немає</i></small>"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Максимум</i></small>"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "Background"
 msgstr "Тип тла"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "_Scrollbar is:"
 msgstr "С_муга прокручування:"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll_back:"
 msgstr "З_воротня прокрутка:"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _keystroke"
 msgstr "_Прокручувати при натисканні клавіші"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "Scroll on _output"
 msgstr "Про_кручувати при виводі"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "_Unlimited"
 msgstr "_Нескінченно"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "lines"
 msgstr "рядків"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid "Scrolling"
 msgstr "Прокрутка"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -598,19 +1501,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>Note:</b> Ці параметри можуть спричинити неналежну роботу деяких проґрам.\nВони існують лише для того, щоб дозволити працювати з деякими\nпроґрамами і ОС, що розраховують на іншу поведінку терміналу.</i></small>"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid "_Delete key generates:"
 msgstr "Клавіша _Delete генерує:"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Backspace key generates:"
 msgstr "Клавіша _Backspace генерує:"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "С_кинути параметри сумісності у початкові значення"
 
-#: ../src/profile-preferences.ui.h:90
+#: ../src/profile-preferences.ui.h:91
 msgid "Compatibility"
 msgstr "Сумісність"
 
@@ -630,222 +1533,222 @@ msgstr "Текст, на якому ви клацнули, не схожий н�
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "Текст, на якому ви клацнули, не схожий на запит OTP."
 
-#: ../src/terminal-accels.c:144
+#: ../src/terminal-accels.c:140
 msgid "New Tab"
 msgstr "Нова вкладка"
 
-#: ../src/terminal-accels.c:148
+#: ../src/terminal-accels.c:144
 msgid "New Window"
 msgstr "Нове вікно"
 
-#: ../src/terminal-accels.c:157
+#: ../src/terminal-accels.c:153
 msgid "Save Contents"
 msgstr "Зберегти вміст"
 
-#: ../src/terminal-accels.c:162
+#: ../src/terminal-accels.c:158
 msgid "Close Tab"
 msgstr "Закрити вкладку"
 
-#: ../src/terminal-accels.c:166
+#: ../src/terminal-accels.c:162
 msgid "Close Window"
 msgstr "Закрити вікно"
 
-#: ../src/terminal-accels.c:174
+#: ../src/terminal-accels.c:170
 msgid "Copy"
 msgstr "Копіювати"
 
-#: ../src/terminal-accels.c:178
+#: ../src/terminal-accels.c:174
 msgid "Paste"
 msgstr "Вставити"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:182
 msgid "Hide and Show menubar"
 msgstr "Показати чи сховати панель меню"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:186
 msgid "Full Screen"
 msgstr "На увесь екран"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:190
 msgid "Zoom In"
 msgstr "Збільшити"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:194
 msgid "Zoom Out"
 msgstr "Зменшити"
 
-#: ../src/terminal-accels.c:202
+#: ../src/terminal-accels.c:198
 msgid "Normal Size"
 msgstr "Звичайний розмір"
 
-#: ../src/terminal-accels.c:210 ../src/terminal-window.c:3958
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
 msgid "Set Title"
 msgstr "Встановлення заголовка"
 
-#: ../src/terminal-accels.c:214
+#: ../src/terminal-accels.c:210
 msgid "Reset"
 msgstr "Скинути"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:214
 msgid "Reset and Clear"
 msgstr "Скинути та очистити"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:218
 msgid "Switch to Previous Profile"
 msgstr "Перейти до попереднього профілю"
 
-#: ../src/terminal-accels.c:226
+#: ../src/terminal-accels.c:222
 msgid "Switch to Next Profile"
 msgstr "Перейти до наступного профілю"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:230
 msgid "Switch to Previous Tab"
 msgstr "До попередньої вкладки"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:234
 msgid "Switch to Next Tab"
 msgstr "До наступної вкладки"
 
-#: ../src/terminal-accels.c:242
+#: ../src/terminal-accels.c:238
 msgid "Move Tab to the Left"
 msgstr "Перемістити вкладку ліворуч"
 
-#: ../src/terminal-accels.c:246
+#: ../src/terminal-accels.c:242
 msgid "Move Tab to the Right"
 msgstr "Перемістити вкладку праворуч"
 
-#: ../src/terminal-accels.c:250
+#: ../src/terminal-accels.c:246
 msgid "Detach Tab"
 msgstr "Від'єднати вкладку"
 
-#: ../src/terminal-accels.c:254
+#: ../src/terminal-accels.c:250
 msgid "Switch to Tab 1"
 msgstr "До вкладки 1"
 
-#: ../src/terminal-accels.c:259
+#: ../src/terminal-accels.c:255
 msgid "Switch to Tab 2"
 msgstr "До вкладки 2"
 
-#: ../src/terminal-accels.c:264
+#: ../src/terminal-accels.c:260
 msgid "Switch to Tab 3"
 msgstr "До вкладки 3"
 
-#: ../src/terminal-accels.c:269
+#: ../src/terminal-accels.c:265
 msgid "Switch to Tab 4"
 msgstr "До вкладки 4"
 
-#: ../src/terminal-accels.c:274
+#: ../src/terminal-accels.c:270
 msgid "Switch to Tab 5"
 msgstr "До вкладки 5"
 
-#: ../src/terminal-accels.c:279
+#: ../src/terminal-accels.c:275
 msgid "Switch to Tab 6"
 msgstr "До вкладки 6"
 
-#: ../src/terminal-accels.c:284
+#: ../src/terminal-accels.c:280
 msgid "Switch to Tab 7"
 msgstr "До вкладки 7"
 
-#: ../src/terminal-accels.c:289
+#: ../src/terminal-accels.c:285
 msgid "Switch to Tab 8"
 msgstr "До вкладки 8"
 
-#: ../src/terminal-accels.c:294
+#: ../src/terminal-accels.c:290
 msgid "Switch to Tab 9"
 msgstr "До вкладки 9"
 
-#: ../src/terminal-accels.c:299
+#: ../src/terminal-accels.c:295
 msgid "Switch to Tab 10"
 msgstr "До вкладки 10"
 
-#: ../src/terminal-accels.c:304
+#: ../src/terminal-accels.c:300
 msgid "Switch to Tab 11"
 msgstr "До вкладки 11"
 
-#: ../src/terminal-accels.c:309
+#: ../src/terminal-accels.c:305
 msgid "Switch to Tab 12"
 msgstr "До вкладки 12"
 
-#: ../src/terminal-accels.c:317
+#: ../src/terminal-accels.c:313
 msgid "Contents"
 msgstr "Зміст"
 
-#: ../src/terminal-accels.c:322
+#: ../src/terminal-accels.c:318
 msgid "File"
 msgstr "Файл"
 
-#: ../src/terminal-accels.c:323
+#: ../src/terminal-accels.c:319
 msgid "Edit"
-msgstr "Правка"
+msgstr "Зміни"
 
-#: ../src/terminal-accels.c:324
+#: ../src/terminal-accels.c:320
 msgid "View"
 msgstr "Вигляд"
 
-#: ../src/terminal-accels.c:326
+#: ../src/terminal-accels.c:322
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: ../src/terminal-accels.c:327
+#: ../src/terminal-accels.c:323
 msgid "Help"
 msgstr "Довідка"
 
-#: ../src/terminal-accels.c:830
+#: ../src/terminal-accels.c:826
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Комбінація клавіш \"%s\" вже прив'язана до дії \"%s\""
 
-#: ../src/terminal-accels.c:986
+#: ../src/terminal-accels.c:982
 msgid "_Action"
 msgstr "Д_ія"
 
-#: ../src/terminal-accels.c:1005
+#: ../src/terminal-accels.c:1001
 msgid "Shortcut _Key"
 msgstr "Комбінація к_лавіш"
 
-#: ../src/terminal-app.c:481
+#: ../src/terminal-app.c:477
 msgid "Click button to choose profile"
 msgstr "Клацніть, щоб вибрати профіль"
 
-#: ../src/terminal-app.c:564
+#: ../src/terminal-app.c:560
 msgid "Profile list"
 msgstr "Перелік профілів"
 
-#: ../src/terminal-app.c:625
+#: ../src/terminal-app.c:621
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Вилучити профіль \"%s\"?"
 
-#: ../src/terminal-app.c:641
+#: ../src/terminal-app.c:637
 msgid "Delete Profile"
 msgstr "Вилучення профілю"
 
-#: ../src/terminal-app.c:1073
+#: ../src/terminal-app.c:1084
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Профіль з назвою \"%s\" вже існує. Бажаєте створити інший профіль з такою самою назвою?"
 
-#: ../src/terminal-app.c:1168
+#: ../src/terminal-app.c:1179
 msgid "Choose base profile"
 msgstr "Виберіть базовий профіль"
 
-#: ../src/terminal-app.c:1775
+#: ../src/terminal-app.c:1771
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Відсутній профіль \"%s\", використовується типовий профіль\n"
 
-#: ../src/terminal-app.c:1799
+#: ../src/terminal-app.c:1795
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Неправильний рядок геометрії \"%s\"\n"
 
-#: ../src/terminal-app.c:2005
+#: ../src/terminal-app.c:2001
 msgid "User Defined"
 msgstr "Визначене користувачем"
 
-#: ../src/terminal.c:600
+#: ../src/terminal.c:582
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не вдається визначити аргументи: %s\n"
@@ -1191,33 +2094,33 @@ msgstr "Показати параметри, що застосовуються �
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: ../src/terminal-screen.c:1533
+#: ../src/terminal-screen.c:1596
 msgid "_Profile Preferences"
 msgstr "Налаштування _профілю"
 
-#: ../src/terminal-screen.c:1534 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
 msgid "_Relaunch"
 msgstr "_Перезапустити"
 
-#: ../src/terminal-screen.c:1537
+#: ../src/terminal-screen.c:1600
 msgid "There was an error creating the child process for this terminal"
 msgstr "Помилка створення процесу-нащадка для цього терміналу"
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:2002
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Дочірній процес завершився нормально зі статусом %d."
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:2007
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Дочірній процес припинено сигналом %d."
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:2012
 msgid "The child process was terminated."
 msgstr "Дочірній процес припинено."
 
-#: ../src/terminal-tab-label.c:151
+#: ../src/terminal-tab-label.c:156
 msgid "Close tab"
 msgstr "Закрити вкладку"
 
@@ -1225,16 +2128,16 @@ msgstr "Закрити вкладку"
 msgid "Switch to this tab"
 msgstr "До наступної вкладки"
 
-#: ../src/terminal-util.c:167
+#: ../src/terminal-util.c:165
 msgid "There was an error displaying help"
 msgstr "Помилка відкриття довідки"
 
-#: ../src/terminal-util.c:239
+#: ../src/terminal-util.c:237
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Не вдається відкрити адресу «%s»"
 
-#: ../src/terminal-util.c:347
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1242,7 +2145,7 @@ msgid ""
 "any later version."
 msgstr "MATE Terminal є вільним проґрамним забезпеченням. Ви можете розповсюджувати та/чи модифікувати його з дотриманням умов GNU General Public License у тому вигляді, як це описано Free Software Foundation. Дозволяється використовувати version 3 of the License, or (at your option) any later version."
 
-#: ../src/terminal-util.c:351
+#: ../src/terminal-util.c:349
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1250,7 +2153,7 @@ msgid ""
 "more details."
 msgstr "Проґрама MATE Terminal поширюється зі сподіванням, що вона буде корисною але БЕЗ БУДЬ-ЯКОЇ ГАРАНТІЇ; навіть без неявної гарантії ПРИДАТНОСТІ ДО ПРОДАЖУ чи ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.  Докладнішу інформацію дивіться у GNU General Public License."
 
-#: ../src/terminal-util.c:355
+#: ../src/terminal-util.c:353
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1260,7 +2163,7 @@ msgstr "Ви мали б отримати копію GNU General Public License 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:485
+#: ../src/terminal-window.c:479
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -1268,259 +2171,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:491
+#: ../src/terminal-window.c:485
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1836
+#: ../src/terminal-window.c:1753
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1837 ../src/terminal-window.c:1850
-#: ../src/terminal-window.c:2091
+#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
+#: ../src/terminal-window.c:2008
 msgid "Open _Terminal"
 msgstr "Відкрити _термінал"
 
-#: ../src/terminal-window.c:1838 ../src/terminal-window.c:1855
-#: ../src/terminal-window.c:2096
+#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
+#: ../src/terminal-window.c:2013
 msgid "Open Ta_b"
 msgstr "Відкрити вк_ладку"
 
-#: ../src/terminal-window.c:1839
+#: ../src/terminal-window.c:1756
 msgid "_Edit"
-msgstr "_Правка"
+msgstr "_Зміни"
 
-#: ../src/terminal-window.c:1840
+#: ../src/terminal-window.c:1757
 msgid "_View"
 msgstr "_Вигляд"
 
-#: ../src/terminal-window.c:1841
+#: ../src/terminal-window.c:1758
 msgid "_Search"
 msgstr "З_найти"
 
-#: ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:1759
 msgid "_Terminal"
 msgstr "_Термінал"
 
-#: ../src/terminal-window.c:1843
+#: ../src/terminal-window.c:1760
 msgid "Ta_bs"
 msgstr "В_кладки"
 
-#: ../src/terminal-window.c:1844
+#: ../src/terminal-window.c:1761
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1777
 msgid "New _Profile…"
 msgstr "Створити _профіль…"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:1782
 msgid "_Save Contents"
 msgstr "З_берегти вміст"
 
-#: ../src/terminal-window.c:1870 ../src/terminal-window.c:2106
+#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
 msgid "C_lose Tab"
 msgstr "Закр_ити вкладку"
 
-#: ../src/terminal-window.c:1875
+#: ../src/terminal-window.c:1792
 msgid "_Close Window"
 msgstr "_Закрити вікно"
 
-#: ../src/terminal-window.c:1892 ../src/terminal-window.c:2086
+#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
 msgid "Paste _Filenames"
 msgstr "Вставити _імена файлів"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1819
 msgid "P_rofiles…"
 msgstr "_Профілі…"
 
-#: ../src/terminal-window.c:1907
+#: ../src/terminal-window.c:1824
 msgid "_Keyboard Shortcuts…"
 msgstr "_Комбінації клавіш…"
 
-#: ../src/terminal-window.c:1912
+#: ../src/terminal-window.c:1829
 msgid "Pr_ofile Preferences"
 msgstr "_Параметри профілю"
 
-#: ../src/terminal-window.c:1936
+#: ../src/terminal-window.c:1853
 msgid "_Find..."
 msgstr "З_найти..."
 
-#: ../src/terminal-window.c:1941
+#: ../src/terminal-window.c:1858
 msgid "Find Ne_xt"
 msgstr "Зна_йти далі"
 
-#: ../src/terminal-window.c:1946
+#: ../src/terminal-window.c:1863
 msgid "Find Pre_vious"
 msgstr "Знайти _попередній"
 
-#: ../src/terminal-window.c:1951
+#: ../src/terminal-window.c:1868
 msgid "_Clear Highlight"
 msgstr "_Очистити виділення"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1874
 msgid "Go to _Line..."
 msgstr "Йти до _рядка..."
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1879
 msgid "_Incremental Search..."
 msgstr "_Шукати при наборі..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1886
 msgid "Change _Profile"
 msgstr "Змінити _профіль"
 
-#: ../src/terminal-window.c:1971
+#: ../src/terminal-window.c:1888
 msgid "_Previous Profile"
 msgstr "_Попередній профіль"
 
-#: ../src/terminal-window.c:1976
+#: ../src/terminal-window.c:1893
 msgid "_Next Profile"
 msgstr "_Наступний профіль"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1898
 msgid "_Set Title…"
 msgstr "_Встановити заголовок…"
 
-#: ../src/terminal-window.c:1985
+#: ../src/terminal-window.c:1902
 msgid "Set _Character Encoding"
 msgstr "Встановити _кодування символів"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1904
 msgid "_Reset"
 msgstr "_Скинути"
 
-#: ../src/terminal-window.c:1992
+#: ../src/terminal-window.c:1909
 msgid "Reset and C_lear"
 msgstr "Скинути і о_чистити"
 
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1916
 msgid "_Add or Remove…"
 msgstr "_Додати чи вилучити…"
 
-#: ../src/terminal-window.c:2006
+#: ../src/terminal-window.c:1923
 msgid "_Previous Tab"
 msgstr "_Попередня вкладка"
 
-#: ../src/terminal-window.c:2011
+#: ../src/terminal-window.c:1928
 msgid "_Next Tab"
 msgstr "_Наступна вкладка"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1933
 msgid "Move Tab _Left"
 msgstr "Перемістити вкладку _ліворуч"
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:1938
 msgid "Move Tab _Right"
 msgstr "Перемістити вкладку _праворуч"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:1943
 msgid "_Detach tab"
 msgstr "Від'_єднати вкладку"
 
-#: ../src/terminal-window.c:2033
+#: ../src/terminal-window.c:1950
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: ../src/terminal-window.c:2038
+#: ../src/terminal-window.c:1955
 msgid "_About"
 msgstr "_Про проґраму"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:1962
 msgid "_Send Mail To…"
 msgstr "_Надіслати ел.пошту..."
 
-#: ../src/terminal-window.c:2050
+#: ../src/terminal-window.c:1967
 msgid "_Copy E-mail Address"
 msgstr "_Копіювати E-mail адресу"
 
-#: ../src/terminal-window.c:2055
+#: ../src/terminal-window.c:1972
 msgid "C_all To…"
 msgstr "_Зателефонувати…"
 
-#: ../src/terminal-window.c:2060
+#: ../src/terminal-window.c:1977
 msgid "_Copy Call Address"
 msgstr "_Копіювати адресу E-mail"
 
-#: ../src/terminal-window.c:2065
+#: ../src/terminal-window.c:1982
 msgid "_Open Link"
 msgstr "_Відкрити посилання"
 
-#: ../src/terminal-window.c:2070
+#: ../src/terminal-window.c:1987
 msgid "_Copy Link Address"
 msgstr "_Копіювати адресу посилання"
 
-#: ../src/terminal-window.c:2074
+#: ../src/terminal-window.c:1991
 msgid "P_rofiles"
 msgstr "П_рофілі"
 
-#: ../src/terminal-window.c:2101 ../src/terminal-window.c:3359
+#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
 msgid "C_lose Window"
 msgstr "Закр_ити вікно"
 
-#: ../src/terminal-window.c:2111
+#: ../src/terminal-window.c:2028
 msgid "L_eave Full Screen"
 msgstr "_Лишити на увесь екран"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2032
 msgid "_Input Methods"
 msgstr "Методи _вводу"
 
-#: ../src/terminal-window.c:2122
+#: ../src/terminal-window.c:2039
 msgid "Show _Menubar"
 msgstr "Показати _панель меню"
 
-#: ../src/terminal-window.c:2128
+#: ../src/terminal-window.c:2045
 msgid "_Full Screen"
 msgstr "_На увесь екран"
 
-#: ../src/terminal-window.c:3346
+#: ../src/terminal-window.c:3270
 msgid "Close this window?"
 msgstr "Закрити вікно?"
 
-#: ../src/terminal-window.c:3346
+#: ../src/terminal-window.c:3270
 msgid "Close this terminal?"
 msgstr "Закрити цей термінал?"
 
-#: ../src/terminal-window.c:3350
+#: ../src/terminal-window.c:3274
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "У деяких терміналах цього вікна запущені процеси. Закриття вікна призведе до переривання усіх цих процесів."
 
-#: ../src/terminal-window.c:3354
+#: ../src/terminal-window.c:3278
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "У терміналі запущено процес.  Закриття терміналу призведе до переривання процесу."
 
-#: ../src/terminal-window.c:3359
+#: ../src/terminal-window.c:3283
 msgid "C_lose Terminal"
 msgstr "_закрити термінал"
 
-#: ../src/terminal-window.c:3432
+#: ../src/terminal-window.c:3362
 msgid "Could not save contents"
 msgstr "Неможливо зберегти вміст"
 
-#: ../src/terminal-window.c:3456
+#: ../src/terminal-window.c:3386
 msgid "Save as..."
 msgstr "Зберегти як..."
 
-#: ../src/terminal-window.c:3975
+#: ../src/terminal-window.c:3917
 msgid "_Title:"
 msgstr "За_головок:"
 
-#: ../src/terminal-window.c:4165
+#: ../src/terminal-window.c:4112
 msgid "Contributors:"
 msgstr "Помічники:"
 
-#: ../src/terminal-window.c:4184
+#: ../src/terminal-window.c:4131
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Емулятор терміналу для середовища MATE"
 
-#: ../src/terminal-window.c:4191
+#: ../src/terminal-window.c:4138
 msgid "translator-credits"
 msgstr "Юрій Сирота\nМаксим Дзюманенко <dziumanenko@gmail.com>\nМикола Ткач <Stuartlittle1970@gmail.com>"
