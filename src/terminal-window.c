@@ -3044,8 +3044,14 @@ terminal_window_update_geometry (TerminalWindow *window)
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *widget;
     GdkGeometry hints;
-    int char_width;
-    int char_height;
+#if GTK_CHECK_VERSION (3, 0, 0)
+    GtkBorder padding;
+#else
+    GtkBorder *inner_border = NULL;
+#endif
+    GtkRequisition toplevel_request, widget_request;
+    int base_width, base_height;
+    int char_width, char_height;
 
     if (priv->active_screen == NULL)
         return;
@@ -3067,24 +3073,32 @@ terminal_window_update_geometry (TerminalWindow *window)
          * padding we need to change the hints when the theme changes.
          */
 
-#if VTE_CHECK_VERSION (0, 38, 0)
-        GtkBorder padding;
-
-        gtk_style_context_get_padding(gtk_widget_get_style_context(widget),
-                                      gtk_widget_get_state_flags(widget),
-                                      &padding);
-
-        hints.base_width = padding.left + padding.right;
-        hints.base_height = padding.top + padding.bottom;
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gtk_widget_get_preferred_size (GTK_WIDGET (window), NULL, &toplevel_request);
+        gtk_widget_get_preferred_size (widget, NULL, &widget_request);
 #else
-        GtkBorder *inner_border = NULL;
+        gtk_widget_size_request (GTK_WIDGET (window), &toplevel_request);
+        gtk_widget_size_request (widget, &widget_request);
+#endif
 
+        base_width = toplevel_request.width - widget_request.width;
+        base_height = toplevel_request.height - widget_request.height;
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+        gtk_style_context_get_padding (gtk_widget_get_style_context (widget),
+                                       gtk_widget_get_state_flags (widget),
+                                       &padding);
+
+        hints.base_width = base_width + padding.left + padding.right;
+        hints.base_height = base_height + padding.top + padding.bottom;
+#else
         gtk_widget_style_get (widget, "inner-border", &inner_border, NULL);
 
-        hints.base_width = (inner_border ? (inner_border->left + inner_border->right) : 0);
-        hints.base_height = (inner_border ? (inner_border->top + inner_border->bottom) : 0);
+        hints.base_width = base_width + (inner_border ? (inner_border->left + inner_border->right) : 0);
+        hints.base_height = base_height + (inner_border ? (inner_border->top + inner_border->bottom) : 0);
 
         gtk_border_free (inner_border);
+        inner_border = NULL;
 #endif
 
 #define MIN_WIDTH_CHARS 4
@@ -3093,12 +3107,12 @@ terminal_window_update_geometry (TerminalWindow *window)
         hints.width_inc = char_width;
         hints.height_inc = char_height;
 
-        /* min size is min size of just the geometry widget, remember. */
+        /* min size is min size of the whole window, remember. */
         hints.min_width = hints.base_width + hints.width_inc * MIN_WIDTH_CHARS;
         hints.min_height = hints.base_height + hints.height_inc * MIN_HEIGHT_CHARS;
 
         gtk_window_set_geometry_hints (GTK_WINDOW (window),
-                                       widget,
+                                       NULL,
                                        &hints,
                                        GDK_HINT_RESIZE_INC |
                                        GDK_HINT_MIN_SIZE |
