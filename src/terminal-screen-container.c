@@ -100,13 +100,13 @@ terminal_screen_container_set_placement_set (TerminalScreenContainer *container,
 
 #if defined(USE_SCROLLED_WINDOW) && defined(MATE_ENABLE_DEBUG)
 static void
-size_request_cb (GtkWidget *widget,
-                 GtkRequisition *req,
-                 TerminalScreenContainer *container)
+size_allocate_cb (GtkWidget *widget,
+                  GdkRectangle *rect,
+                  TerminalScreenContainer *container)
 {
 	_terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
-	                       "[screen %p] scrolled-window size req %d : %d\n",
-	                       container->priv->screen, req->width, req->height);
+	                       "[screen %p] scrolled-window size alloc %d : %d\n",
+	                       container->priv->screen, rect->width, rect->height);
 }
 #endif
 
@@ -162,7 +162,7 @@ terminal_screen_container_constructor (GType type,
 	gtk_widget_show (priv->scrolled_window);
 
 #ifdef MATE_ENABLE_DEBUG
-	g_signal_connect (priv->scrolled_window, "size-request", G_CALLBACK (size_request_cb), container);
+	g_signal_connect (priv->scrolled_window, "size-allocate", G_CALLBACK (size_allocate_cb), container);
 #endif
 
 #else

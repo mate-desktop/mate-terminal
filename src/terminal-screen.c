@@ -344,15 +344,6 @@ terminal_screen_style_set (GtkWidget *widget,
 
 #ifdef MATE_ENABLE_DEBUG
 static void
-size_request (GtkWidget *widget,
-              GtkRequisition *req)
-{
-	_terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
-	                       "[screen %p] size-request %d : %d\n",
-	                       widget, req->width, req->height);
-}
-
-static void
 size_allocate (GtkWidget *widget,
                GtkAllocation *allocation)
 {
@@ -436,7 +427,6 @@ terminal_screen_init (TerminalScreen *screen)
 #ifdef MATE_ENABLE_DEBUG
 	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_GEOMETRY)
 	{
-		g_signal_connect_after (screen, "size-request", G_CALLBACK (size_request), NULL);
 		g_signal_connect_after (screen, "size-allocate", G_CALLBACK (size_allocate), NULL);
 	}
 #endif

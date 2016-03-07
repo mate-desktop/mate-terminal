@@ -1518,15 +1518,6 @@ terminal_window_accel_activate_cb (GtkAccelGroup  *accel_group,
 
 #ifdef MATE_ENABLE_DEBUG
 static void
-terminal_window_size_request_cb (GtkWidget *widget,
-                                 GtkRequisition *req)
-{
-    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
-                           "[window %p] size-request result %d : %d\n",
-                           widget, req->width, req->height);
-}
-
-static void
 terminal_window_size_allocate_cb (GtkWidget *widget,
                                   GtkAllocation *allocation)
 {
@@ -2071,7 +2062,6 @@ terminal_window_init (TerminalWindow *window)
 #ifdef MATE_ENABLE_DEBUG
     _TERMINAL_DEBUG_IF (TERMINAL_DEBUG_GEOMETRY)
     {
-        g_signal_connect_after (window, "size-request", G_CALLBACK (terminal_window_size_request_cb), NULL);
         g_signal_connect_after (window, "size-allocate", G_CALLBACK (terminal_window_size_allocate_cb), NULL);
     }
 #endif
