@@ -395,8 +395,13 @@ position_menu_under_widget (GtkMenu *menu,
     gtk_widget_get_allocation (widget, &widget_allocation);
     container = gtk_widget_get_ancestor (widget, GTK_TYPE_CONTAINER);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+    gtk_widget_get_preferred_size (widget, &req, NULL);
+    gtk_widget_get_preferred_size (GTK_WIDGET (menu), &menu_req, NULL);
+#else
     gtk_widget_size_request (widget, &req);
     gtk_widget_size_request (GTK_WIDGET (menu), &menu_req);
+#endif
 
     screen = gtk_widget_get_screen (GTK_WIDGET (menu));
     monitor_num = gdk_screen_get_monitor_at_window (screen, widget_window);
