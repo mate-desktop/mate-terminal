@@ -618,7 +618,7 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 		GError *error = NULL;
 
 		url_regexes[i] = g_regex_new (url_regex_patterns[i].pattern,
-		                              url_regex_patterns[i].flags | G_REGEX_OPTIMIZE,
+		                              url_regex_patterns[i].flags | G_REGEX_OPTIMIZE | G_REGEX_MULTILINE,
 		                              0, &error);
 		if (error)
 		{
@@ -637,7 +637,9 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 	{
 		GError *error = NULL;
 
-		skey_regexes[i] = g_regex_new (skey_regex_patterns[i].pattern, G_REGEX_OPTIMIZE, 0, &error);
+		skey_regexes[i] = g_regex_new (skey_regex_patterns[i].pattern,
+		                               G_REGEX_OPTIMIZE | G_REGEX_MULTILINE,
+		                               0, &error);
 		if (error)
 		{
 			g_message ("%s", error->message);
