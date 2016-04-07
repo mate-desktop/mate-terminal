@@ -4,13 +4,14 @@
 # 
 # Translators:
 # , 2014-2015
+# , 2014-2015, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-28 19:16+0000\n"
+"Last-Translator: Mihail Varantsou <meequz@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/mate/MATE/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,13 +35,13 @@ msgid ""
 msgstr "<p> Тэрмінал MATE - гэта праграма эмуляцыі тэрміналу. Служыць для доступу да UNIX-абалонкі ў асяроддзі MATE. Тэрмінал MATE эмулюе праграму xterm, распрацаваную X Consortium. Падтрымлівае празрыстасць фону, адкрыванне некалькіх тэрміналаў у адным акне (праз карткі) і распазнаванне спасылак. </p> <p> Тэрмінал MATE ёсць форкам Тэрмінала GNOME і часткай асяроддзя MATE. Каб даведацца больш пра MATE і Тэрмінал MATE, завітайце на хатнюю старонку праекта. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "Тэрмінал MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
 msgstr "Тэрмінал"
 
@@ -95,7 +96,7 @@ msgstr "Профіль для новых тэрміналаў"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr ""
+msgstr "Профіль, што аўтаматычна ўжываецца для новых картак і вокнаў. Мае быць у profile_list."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
@@ -106,11 +107,11 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr ""
+msgstr "Ці павінны скароты Alt+літара кіраваць радком меню. Яны могуць чакацца іншымі праграмамі, запушчанымі ў тэрмінале, таму іх можна адключыць."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr ""
+msgstr "Ці ўключаны стандартны скарот GTK для доступу да радка меню"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -137,7 +138,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
-msgstr ""
+msgstr "Ці запытваць пацверджанне пры закрыванні вокнаў тэрмінала"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:13
 msgid ""
@@ -201,7 +202,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Whether bold text should use the same color as normal text"
-msgstr ""
+msgstr "Ці выкарыстоўваць для тоўстага тэксту той жа колер, што і для звычайнага"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:26
 msgid ""
@@ -260,7 +261,7 @@ msgstr "Капіяваць вылучанае ў буфер абмену"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr ""
+msgstr "Калі true, вылучанае будзе аўтаматычна трапляць у буфер абмену."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Characters that are considered \"part of a word\""
@@ -315,7 +316,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Number of lines to keep in scrollback"
-msgstr ""
+msgstr "Колькасць радкоў у буферы пракруткі"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:49
 msgid ""
@@ -326,7 +327,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Whether an unlimited number of lines should be kept in scrollback"
-msgstr ""
+msgstr "Памятаць усе папярэднія радкі"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:51
 msgid ""
@@ -337,15 +338,15 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr ""
+msgstr "Ці пракручваць долу пры націсканні любой кнопкі"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:53
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr ""
+msgstr "Калі true, націсканне кнопкі пасуне паласу пракруткі долу."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether to scroll to the bottom when there's new output"
-msgstr ""
+msgstr "Ці пракручваць долу пры з'яўленні новага вываду"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:55
 msgid ""
@@ -354,7 +355,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "What to do with the terminal when the child command exits"
-msgstr ""
+msgstr "Што рабіць з тэрміналам, калі даччыны загад завяршыўся"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:57
 msgid ""
@@ -364,7 +365,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr ""
+msgstr "Ці запускаць загад у тэрмінале як рэгістрацыйную абалонку (login shell)"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
@@ -374,7 +375,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "Whether to update login records when launching terminal command"
-msgstr ""
+msgstr "Ці абнаўляць запісы пра ўваходы пры выкананні загаду тэрмінала"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:61
 msgid ""
@@ -384,7 +385,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to run a custom command instead of the shell"
-msgstr ""
+msgstr "Ці запускаць іншы загад замест абалонкі"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
@@ -400,7 +401,7 @@ msgstr "Ці мігцець курсорам"
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
-msgstr ""
+msgstr "Дапушчальныя значэнні: \"system\", каб выкарыстоўваць сістэмныя настáўленні мігцення курсора, або \"on\" ці \"off\", каб задаць рэжым яўна."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "The cursor appearance"
@@ -426,7 +427,7 @@ msgstr "Значок акна тэрмінала"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:71
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr ""
+msgstr "Значок, які будзе ўжыты на карткі і вокны тэрмінала з гэтым профілем."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Palette for terminal applications"
@@ -445,7 +446,7 @@ msgstr "Шрыфт"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
+msgstr "Назва шрыфта Pango. Прыклады: \"Sans 12\", \"Monospace Bold 14\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Background type"
@@ -464,21 +465,21 @@ msgstr "Выява фону"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid "Filename of a background image."
-msgstr ""
+msgstr "Назва файла фонавай выявы"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Whether to scroll background image"
-msgstr ""
+msgstr "Ці пракручваць фонавую выяву"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
-msgstr ""
+msgstr "Калі true, пракручваць выяву фону разам з тэкстам; калі false, выява будзе зафіксавана на адным месцы, а тэкст будзе гартацца над ёй."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "How much to darken the background image"
-msgstr ""
+msgstr "Як моцна зацямніць фонавую выяву"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid ""
@@ -516,7 +517,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Whether to use the colors from the theme for the terminal widget"
-msgstr ""
+msgstr "Ці выкарыстоўваць колеры тэмы для віджэта тэрмінала"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:89
 msgid ""
@@ -750,7 +751,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Accelerator to move the current tab to the left."
-msgstr ""
+msgstr "Паскаральнік для перасоўвання дзейнай карткі ўлева."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
@@ -762,7 +763,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the right."
-msgstr ""
+msgstr "Паскаральнік для перасоўвання дзейнай карткі ўправа."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
@@ -774,7 +775,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to detach current tab."
-msgstr ""
+msgstr "Паскаральнік для адчаплення дзейнай карткі."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
@@ -785,7 +786,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to tab 1"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 1"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
@@ -797,7 +798,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to tab 2"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 2"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
@@ -809,7 +810,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to tab 3"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 3"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
@@ -821,7 +822,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Keyboard shortcut to switch to tab 4"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 4"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
@@ -833,7 +834,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Keyboard shortcut to switch to tab 5"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 5"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
@@ -845,7 +846,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 6"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 6"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
@@ -857,7 +858,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 7"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 7"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
@@ -869,7 +870,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 8"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 8"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
@@ -881,7 +882,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 9"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 9"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
@@ -893,7 +894,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 10"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 10"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
@@ -905,7 +906,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 11"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 11"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
@@ -917,7 +918,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 12"
-msgstr ""
+msgstr "Клавіятурны скарот для пераходу да карткі 12"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
@@ -929,7 +930,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to launch help"
-msgstr ""
+msgstr "Клавіятурны скарот для паказу даведкі"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
@@ -941,7 +942,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to make font larger"
-msgstr ""
+msgstr "Клавіятурны скарот для павелічэння шрыфту"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
@@ -953,7 +954,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to make font smaller"
-msgstr ""
+msgstr "Клавіятурны скарот для змяншэння шрыфту"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
@@ -965,7 +966,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to make font normal-size"
-msgstr ""
+msgstr "Клавіятурны скарот для стандартнага памеру шрыфта"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
@@ -1464,7 +1465,7 @@ msgstr "Фон"
 
 #: ../src/profile-preferences.ui.h:80
 msgid "_Scrollbar is:"
-msgstr "Панэль пракр_уткі:"
+msgstr "Паласа пракр_уткі:"
 
 #: ../src/profile-preferences.ui.h:81
 msgid "Scroll_back:"
@@ -1578,7 +1579,7 @@ msgstr "Зменшыць"
 msgid "Normal Size"
 msgstr "Звычайны памер"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "Вызначыць загаловак"
 
@@ -1994,8 +1995,8 @@ msgstr "Акно на ўвесь экран"
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
-msgstr "Задаць памер акна; напрыклад: 80x24, або 80x24+200+200 (РАДКІxСЛУПКІ+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr "Задаць памер акна; напрыклад: 80x24 ці 80x24+200+200 (СЛУПКІxРАДКІ+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2091,29 +2092,29 @@ msgstr "Паказаць параметры для тэрмінала"
 msgid "Unnamed"
 msgstr "Безназоўны"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr "_Настáўленні профіля"
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr "_Перазапуск"
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "Падчас стварэння працэса-нашчадка для гэтага тэрмінала ўзнікла памылка"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Даччыны працэс завяршыўся нармальна са статусам %d."
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Даччыны працэс быў забіты сігналам %d."
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr "Даччыны працэс быў забіты."
 
@@ -2174,253 +2175,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "Адкрыць _тэрмінал"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "Адкрыць _картку"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "_Змяніць"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "_Выгляд"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "По_шук"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "_Тэрмінал"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "Ка_рткі"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "_Даведка"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "Стварыць _профіль…"
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr "_Захаваць змесціва"
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "Закрыць к_артку"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "_Закрыць акно"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "Уставіць _назвы файлаў"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "Пр_офілі…"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "_Скароты"
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "Настáўленні пр_офіля"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "_Пошук..."
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "Шукаць далей"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "Шукаць _раней"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr "_Ачысціць афарбоўку"
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr "Перайсці да р_адка..."
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr "_Імгненны пошук..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "Змяніць _профіль"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr "_Папярэдні профіль"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr "_Наступны профіль"
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "_Задаць загаловак…"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "Задацаь _кадаванне знакаў"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "С_кінуць"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "Скінуць і а_чысціць"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "_Дадаць ці выдаліць…"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "Да _папярэдняй карткі"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "Да на_ступнай карткі"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "Пасунуць картку ў_лева"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "Пасунуць картку ў_права"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "Ад_чапіць картку"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "_Змест"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "_Пра праграму"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "Да_слаць ліст…"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "С_капіяваць паштовы адрас"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "Выкл_ікаць…"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "С_капіяваць адрас выкліку"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "Адкрыць спа_сылку"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "Скапіяваць а_драс"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "Про_філі"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "З_акрыць акно"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr "Пак_інуць поўнаэкранны рэжым"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "_Метады ўводу"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "Паказаць _меню"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "_На ўвесь экран"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "Закрыць гэтае акно?"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "Закрыць гэты тэрмінал?"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "У некаторых тэрміналах дагэтуль выконваюцца працэсы. Закрыванне гэтага акна заб'е іх."
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "У гэтым тэрмінале дагэтуль выконваецца працэс. Закрыванне тэрмінала заб'е яго."
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr "За_крыць тэрмінал"
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr "Не выйшла захаваць змесціва"
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr "Захаваць як..."
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "За_галовак:"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "Удзельнікі:"
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Эмулятар тэрмінала для асяроддзя MATE"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "Ігар Грачышка <ihar.hrachyshka@gmail.com>, 2006\nАляксандар Няхайчык <nab@mail.by>, 2003, 2004, 2005, 2009\nВіталь Хілько <dojlid@mova.org>, 2003\nМіхась Варанцоў <meequz@gmail.com>, 2014"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-09 11:33+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/mate/MATE/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "Thiết bị cuối MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
 msgstr "Thiết bị cuối"
 
@@ -1577,7 +1577,7 @@ msgstr "Thu nhỏ"
 msgid "Normal Size"
 msgstr "Cỡ bình thường"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "Đặt tựa đề"
 
@@ -1993,7 +1993,7 @@ msgstr "Đặt cửa sổ chiếm toàn màn hình"
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
 #: ../src/terminal-options.c:1047
@@ -2090,29 +2090,29 @@ msgstr "Hiện các tuỳ chọn cho mỗi thiết bị cuối"
 msgid "Unnamed"
 msgstr "Không tên"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "Gặp lỗi khi tạo tiến trình con cho thiết bị cuối này."
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2173,253 +2173,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "_Tập tin"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "Mở _Thiết bị cuối"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "Mở th_anh"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "_Sửa"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "_Xem"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "_Tìm"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "_Thiết bị cuối"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "Th_anh"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "Trợ g_iúp"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "_Hồ sơ mới..."
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "Đó_ng thanh"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "Đón_g cửa sổ"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "Dán _tên tập tin"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "Hồ _sơ..."
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "_Phím tắt..."
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "Tùy thích Hồ _sơ"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "_Tìm..."
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "Tìm _kế"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "Tìm _lùi"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr ""
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "Đổi _hồ sơ"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "Đặt tự_a đề"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "Đặt _bảng mã"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "Đặt _lại"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "Đặt lại và _dọn"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "Thê_m hay Bỏ..."
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "Thanh t_rước"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "Thanh _sau"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "Chuyển thanh sang t_rái"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "Chuyển thanh sang _phải"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "Gỡ _ra thanh"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "Mụ_c lục"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "_Gửi thư cho..."
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "_Chép địa chỉ thư"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "Gọ_i cho..."
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "_Chép địa chỉ gọi"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "_Mở liên kết"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "_Chép địa chỉ liên kết"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "Hồ _sơ"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "Đón_g cửa sổ"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "K_iểu gõ"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "Hiện thanh t_rình đơn"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "T_oàn màn hình"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "Đóng cửa sổ này ?"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "Đóng thiết bị cuối này ?"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép buộc kết thúc tất cả."
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Vẫn còn có một tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép buộc kết thúc nó."
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "_Tựa đề:"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "Người đóng góp:"
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Một bộ mô phỏng thiết bị cuối cho môi trường Mate"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "Nhóm Việt hoá MATE (http://matevi.sourceforge.net)"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-09 11:33+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Asturian (http://www.transifex.com/mate/MATE/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -1577,7 +1577,7 @@ msgstr "Amenorgar zoom"
 msgid "Normal Size"
 msgstr "Tamañu normal"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "Afitar títulu"
 
@@ -1993,7 +1993,7 @@ msgstr "Ventana a pantalla completa"
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
 #: ../src/terminal-options.c:1047
@@ -2090,29 +2090,29 @@ msgstr "Amuesa les opciones por terminal"
 msgid "Unnamed"
 msgstr "Ensin nome"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "Hebo un fallu al criar el procesu fíu pa esta terminal"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2173,253 +2173,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "_Ficheru"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "Abrir _Terminal"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "Abrir sola_pa"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "_Ver"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "_Guetar"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "_Solapas"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "_Aida"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "_Perfil nuevu..."
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "Pe_sllar llingüeta"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "_Pesllar ventana"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "Apegar los _nomes de ficheru"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "Pe_rfiles..."
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "Combinaciones de _tecles..."
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "Pre_ferencies del perfil"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "_Atopar..."
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "Atopar Sig_uiente"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "Atopar Anter_ior"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr ""
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "Camudar _Perfil"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "A_fitar títulu..."
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "Afitar _Codificación carauteres"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "_Reaniciar"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "Reaniciar y _llimpiar"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "_Amestar o quitar…"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "Llingüeta _Previa"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "Llingüeta S_iguiente"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "Mover Llingüeta a la _Esquierda"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "Mover Llingüeta a la _Drecha"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "_Desacoplar llingüeta"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "_Índiz"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "Tocante _a"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "_Unviar corréu a…"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "_Copiar la direición de corréu-e"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "_Llamar a..."
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "_Copiar la direición de llamada"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "_Abrir enllaz"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "_Copiar direición del enllaz"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "Pe_rfiles"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "_Pesllar ventana"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "Mé_todos d'entrada"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "Amosar la barra de _menú"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "Pantalla _completa"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "¿Zarrar esta ventana?"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "¿Zarrar esta terminal?"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Entá hai procesos executándose en dalgunas terminales d' esta ventana. Zarrar la ventana matará tolos procesos."
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Entá hai un procesu executándose nesta terminal. Zarrar la terminal matarálu."
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "_Títulu:"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "Andecharon:"
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Un emulador de terminal pal escritoriu Mate"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "Launchpad Contributions:\n  Astur https://launchpad.net/~malditoastur\n  alea https://launchpad.net/~alvaro-asturlinux"

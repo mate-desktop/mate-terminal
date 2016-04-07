@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Jeff Huang <s8321414@gmail.com>, 2014-2015
+# Jeff Huang <s8321414@gmail.com>, 2014-2016
 # 趙惟倫 <bluebat@member.fsf.org>, 2012
 # Jeff Huang <s8321414@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-09 14:29+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,13 +36,13 @@ msgid ""
 msgstr "<p> MATE 終端機是一個可以讓您在 MATE 桌面環境下使用 UNIX 殼層的終端機模擬應用程式。MATE 終端機模擬由 X.Org 基金會所開發的 xterm 程式。它支援半透明背景、在單一視窗中開啟多個終端機模擬器頁籤及可點擊的 URL。 </p> <p> MATE 終端機是一個 GNOME 終端機的衍生產品，且為 MATE 桌面環境的一部份。如果您想要知道關於 MATE 及 MATE 終端機的更多資訊，請參觀專案首頁。 </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "MATE 終端機"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
 msgstr "終端機"
 
@@ -262,7 +262,7 @@ msgstr "將選取的文字複製至剪貼簿"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr ""
+msgstr "若設定為真，選擇的文字將會自動複製到剪貼簿的緩衝區。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Characters that are considered \"part of a word\""
@@ -1580,7 +1580,7 @@ msgstr "拉遠"
 msgid "Normal Size"
 msgstr "原來大小"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "設定標題"
 
@@ -1996,8 +1996,8 @@ msgstr "將視窗轉為全螢幕"
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
-msgstr "設定視窗的大小；例如：80x24、或 80x24+200+200 (列x欄+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr "設定視窗的大小；例如：80x24、或 80x24+200+200 (欄x列+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2093,29 +2093,29 @@ msgstr "顯示各別終端機選項"
 msgid "Unnamed"
 msgstr "未命名的"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr "設定檔偏好設定(_P)"
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr "重新執行(_R)"
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "產生該終端機的副行程時出現錯誤"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子程序正常的以狀態 %d 結束。"
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子程序被信號 %d 中止。"
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr "子程序被中止。"
 
@@ -2176,253 +2176,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "檔案(_F)"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "開啟視窗(_T)"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "開啟分頁(_B)"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "檢視(_V)"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "搜尋(_S)"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "終端機(_T)"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "分頁(_B)"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "新增設定檔(_P)…"
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr "儲存內容(_S)"
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "關閉分頁(_L)"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "關閉視窗(_C)"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "貼上檔案名稱(_F)"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "設定檔(_R)…"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "鍵盤捷徑鍵(_K)…"
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "設定檔偏好設定(_O)"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "尋找(_F)…"
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "找下一個(_X)"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "找上一個(_V)"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr "清除標示(_C)"
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr "前往列數(_L)…"
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr "漸進式搜尋(_I)…"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "變更設定檔(_P)"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr "上一個設定檔(_P)"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr "下一個設定檔(_N)"
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "設定標題(_S)…"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "設定字元編碼(_C)"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "重設(_R)"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "重設並清除畫面(_L)"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "加入或移除(_A)…"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "上一個分頁(_P)"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "下一個分頁(_N)"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "將分頁左移(_L)"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "將分頁右移(_R)"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "轉為獨立視窗(_D)"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "內容(_C)"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "傳送郵件給(_S)…"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "複製電郵地址(_C)"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "呼叫到(_A)…"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "複製呼叫位址(_C)"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "開啟連結(_O)"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "複製連結位址(_C)"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "設定檔(_R)"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "關閉視窗(_L)"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr "離開全螢幕(_E)"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "輸入法(_I)"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "顯示選單列(_M)"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "全螢幕(_F)"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "是否關閉這個視窗？"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "是否關閉這個終端機？"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "在這個視窗的部分終端機還有程序在執行。關閉視窗會終結它們。"
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "在這個終端機還有程序在執行。關閉終端機會終結它們。"
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr "關閉終端機(_L)"
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr "無法儲存內容"
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr "另存新檔…"
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "標題(_T):"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "貢獻者："
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE 桌面環境的終端機模擬器"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n趙惟倫 <bluebat@member.fsf.org>, 2012\nWoodman Tuen <wmtuen@gmail.com>, 2004-07\nAnthony Tang <tkyanthony@yahoo.com.hk>, 2004\nAbel Cheung <abel@oaka.org>, 2002-04"

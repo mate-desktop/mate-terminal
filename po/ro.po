@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel <danny34ever@yahoo.com>, 2015
+# Daniel <danny34ever@yahoo.com>, 2015-2016
 # sorinn <nemes.sorin@gmail.com>, 2015
+# sidro <slacky2005@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-09 11:33+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: ../mate-terminal.appdata.xml.in.h:1
 msgid "A terminal emulator for the MATE desktop environment"
-msgstr "Un emulator de terminal pentru mediul desktop MATE"
+msgstr "Un emulator de terminal pentru desktop-ul MATE"
 
 #: ../mate-terminal.appdata.xml.in.h:2
 msgid ""
@@ -35,15 +36,15 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Terminator"
 
 #: ../mate-terminal.desktop.in.in.h:3
 msgid "Use the command line"
@@ -107,7 +108,7 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr ""
+msgstr "Scurtăturile pentru menubar pot fi de genul Alt+literă. Acestea pot interfera cu alte aplicații pornite in terminal făcând posibilă dezactivarea lor. "
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
@@ -123,7 +124,7 @@ msgstr ""
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
-msgstr "[ „UTF-8”, „curent” ]"
+msgstr "[ „UTF-8”, „actual” ]"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:10
 msgid "List of available encodings"
@@ -167,7 +168,7 @@ msgstr "Dacă să fie afișată bara de meniu în noile ferestre/pagini"
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
-msgstr ""
+msgstr "True dacă bara de meniu ar trebui să fie afișată în noile ferestre, pentru ferestrele/taburile cu acest profil."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:19
 msgid "Default color of text in the terminal"
@@ -207,7 +208,7 @@ msgstr "Dacă textul aldin ar trebui să folosească aceeași culoare cu textul 
 #: ../src/org.mate.terminal.gschema.xml.in.h:26
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
-msgstr ""
+msgstr "Dacă este true, textul solid va fi afișat folosind aceeași culoare ca și textul normal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "What to do with dynamic title"
@@ -261,7 +262,7 @@ msgstr "Copiază selecția în clipboard."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr ""
+msgstr "Dacă este true, selecția este copiată în mod automat în clipboard."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Characters that are considered \"part of a word\""
@@ -342,7 +343,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:53
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr ""
+msgstr "Dacă este true, atunci apăsarea unei taste duce bara de derulare în jos."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether to scroll to the bottom when there's new output"
@@ -381,7 +382,7 @@ msgstr ""
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
-msgstr ""
+msgstr "Dacă este true, atunci înregistrările de autentificare la sistem utmp și wtmp vor fi actualizate când comanda din terminal va fi lansată."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to run a custom command instead of the shell"
@@ -415,11 +416,11 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Custom command to use instead of the shell"
-msgstr ""
+msgstr "Comanda personalizată rulată în locul shell-ului"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr ""
+msgstr "Execută această comandă în locul shell-ului dacă „use_custom_command” este true."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Icon for terminal window"
@@ -446,7 +447,7 @@ msgstr "Font"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
+msgstr "Un nume de font Pango. De exemplu „Sans 12” sau „Monospace Bold 14”."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Background type"
@@ -763,7 +764,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the right."
-msgstr "Combinație de taste pentru a muta pagina curentă la dreapta."
+msgstr "Combinație de taste pentru a muta pagina actuală la dreapta."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
@@ -775,7 +776,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to detach current tab."
-msgstr "Combinație de taste pentru a detașa pagina curentă."
+msgstr "Combinație de taste pentru a detașa pagina actuală."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
@@ -1579,7 +1580,7 @@ msgstr "Micșorează"
 msgid "Normal Size"
 msgstr "Mărime normală"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "Definire titlu"
 
@@ -1901,7 +1902,7 @@ msgstr "Codar_e"
 
 #: ../src/terminal-encoding.c:598
 msgid "Current Locale"
-msgstr "Codarea curentă"
+msgstr "Codarea actuală"
 
 #: ../src/terminal-options.c:176
 #, c-format
@@ -1995,8 +1996,8 @@ msgstr "Pe tot ecranul"
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
-msgstr "Definește dimensiunea ferestrei; de exemplu: 80x24 sau 80x24+200+200 (RÂNDURIxCOLOANE+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2092,29 +2093,29 @@ msgstr "Afișează opțiuni per-terminal"
 msgid "Unnamed"
 msgstr "Fără nume"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr "Preferințe _Profil"
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr "_Relansează"
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "A intervenit o eroare la crearea unui proces copil pentru acest terminal"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Procesul copil a ieșit normal cu starea %d."
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Procesul copil a fost terminat de semnalul %d."
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr "Procesul copil a fost terminat."
 
@@ -2175,253 +2176,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "_Fișier"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "Deschide _terminal"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "Deschide _pagină"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "_Vizualizare"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "_Căutare"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "Ta_buri"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "_Profil nou..."
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr "_Salvează conținutul"
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "Î_nchide tabul"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "În_chide fereastră"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "Lipește nume _fișiere"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "P_rofiluri..."
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "_Scurtături tastatură..."
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "Preferințe pr_ofil"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "Cau_tă..."
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "Caută _următorul"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "Caută _precedentul"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr "E_limină evidențierea"
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr "Mergi la _Linia..."
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr "Căutare _incrementală..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "Schimbă _profil"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr "Profilul _precedent"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr "Profilul _următor"
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "_Definire titlu..."
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "Definește codarea _caracterelor"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "_Restabilește"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "Restabilește și _șterge"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "_Adaugă sau șterge..."
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "Tab _anterior"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "Tab _următor"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "Mută pagina _la stânga"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "Mută pagina la d_reapta"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "_Detașează tabul"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "_Conținut"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "_Despre"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "_Trimitere e-mail către..."
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "_Copiază adresa email"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "_Apel la..."
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "_Copiază adresa de apel"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "_Deschide legătură"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "_Copiază adresa legăturii"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "P_rofiluri"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "Î_nchide fereastra"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr "Părăs_ește pe tot ecranul"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "Metode de _intrare"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "Arată bara de _meniu"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "_Pe tot ecranul"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "Închide acestă fereastră?"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "Închideți acest terminal?"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Momentan rulează unele procese în unul din terminalele din această fereastră. Închiderea ferestrei le va distruge pe toate."
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Momentan rulează un proces în terminal. Închiderea terminalului îl va distruge."
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr "Închide termina_l"
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr "Nu s-a putut salva conținutul"
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr "Salvează ca..."
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "_Titlu:"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "Colaboratori:"
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Un emulator de terminal pentru desktop-ul MATE"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "Adi Roiban\nDaniel Alămiță <danny3@tutanota.com>\nMugurel Tudor <mugurelu@mate.ro>"

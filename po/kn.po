@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:58+0300\n"
-"PO-Revision-Date: 2016-02-19 13:59+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"PO-Revision-Date: 2016-03-09 11:33+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Kannada (http://www.transifex.com/mate/MATE/language/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4129
+#: ../src/terminal-window.c:4140
 msgid "MATE Terminal"
 msgstr "MATE ಟರ್ಮಿನಲ್"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2079
+#: ../src/terminal-window.c:2076
 msgid "Terminal"
 msgstr "ಟರ್ಮಿನಲ್"
 
@@ -1577,7 +1577,7 @@ msgstr "ಕುಗ್ಗಿಸು"
 msgid "Normal Size"
 msgstr "ಸಾಮಾನ್ಯ ಗಾತ್ರ"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3896
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
 msgid "Set Title"
 msgstr "ಶೀರ್ಷಿಕೆಯನ್ನು ನೀಡು"
 
@@ -1993,8 +1993,8 @@ msgstr "ವಿಂಡೋವನ್ನು ಪೂರ್ಣ ತೆರೆಗೆ ಹೊ
 
 #: ../src/terminal-options.c:1046
 msgid ""
-"Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
-msgstr "ವಿಂಡೊ ಗಾತ್ರವನ್ನು ಹೊಂದಿಸಿ; ಉದಾಹರಣೆಗೆ: 80x24, ಅಥವ 80x24+200+200 (ROWSxCOLS+X+Y)"
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2090,29 +2090,29 @@ msgstr "ಪ್ರತಿ ಟರ್ಮಿನಲ್ ಆಯ್ಕೆಗಳನ್ನ�
 msgid "Unnamed"
 msgstr "ಹೆಸರಿಸದ"
 
-#: ../src/terminal-screen.c:1596
+#: ../src/terminal-screen.c:1586
 msgid "_Profile Preferences"
 msgstr "ಪ್ರೊಫೈಲಿನ ಆದ್ಯತೆಗಳು(_P)"
 
-#: ../src/terminal-screen.c:1597 ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
 msgid "_Relaunch"
 msgstr "ಮರಳಿ ಆರಂಭಿಸು(_R)"
 
-#: ../src/terminal-screen.c:1600
+#: ../src/terminal-screen.c:1590
 msgid "There was an error creating the child process for this terminal"
 msgstr "ಈ ಟರ್ಮಿನಲ್‌ಗಾಗಿ ಉಪ ಪ್ರಕ್ರಿಯೆಯನ್ನು ನಿರ್ಮಿಸುವಾಗ ಒಂದು ದೋಷ ಉಂಟಾಗಿದೆ"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1992
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು %d ಸ್ಥಿತಿಯೊಂದಿಗೆ ಸಾಮಾನ್ಯ ರೀತಿಯಲ್ಲಿ ಅಂತ್ಯಗೊಂಡಿದೆ"
 
-#: ../src/terminal-screen.c:2007
+#: ../src/terminal-screen.c:1997
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು %d ಸಂಕೇತದೊಂದಿಗೆ ಅಂತ್ಯಗೊಂಡಿದೆ."
 
-#: ../src/terminal-screen.c:2012
+#: ../src/terminal-screen.c:2002
 msgid "The child process was terminated."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು ಅಂತ್ಯಗೊಂಡಿದೆ"
 
@@ -2173,253 +2173,253 @@ msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1753
+#: ../src/terminal-window.c:1744
 msgid "_File"
 msgstr "ಕಡತ(_F)"
 
-#: ../src/terminal-window.c:1754 ../src/terminal-window.c:1767
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1999
 msgid "Open _Terminal"
 msgstr "ಟರ್ಮಿನಲ್ ಅನ್ನು ತೆರೆ(_T)"
 
-#: ../src/terminal-window.c:1755 ../src/terminal-window.c:1772
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
+#: ../src/terminal-window.c:2004
 msgid "Open Ta_b"
 msgstr "ಹಾಳೆಯನ್ನು ತೆರೆ(_b)"
 
-#: ../src/terminal-window.c:1756
+#: ../src/terminal-window.c:1747
 msgid "_Edit"
 msgstr "ಸಂಪಾದನೆ (_E)"
 
-#: ../src/terminal-window.c:1757
+#: ../src/terminal-window.c:1748
 msgid "_View"
 msgstr "ನೋಟ(_V)"
 
-#: ../src/terminal-window.c:1758
+#: ../src/terminal-window.c:1749
 msgid "_Search"
 msgstr "ಹುಡುಕು(_S)"
 
-#: ../src/terminal-window.c:1759
+#: ../src/terminal-window.c:1750
 msgid "_Terminal"
 msgstr "ಟರ್ಮಿನಲ್(_T)"
 
-#: ../src/terminal-window.c:1760
+#: ../src/terminal-window.c:1751
 msgid "Ta_bs"
 msgstr "ಹಾಳೆಗಳು(_b)"
 
-#: ../src/terminal-window.c:1761
+#: ../src/terminal-window.c:1752
 msgid "_Help"
 msgstr "ನೆರವು(_H)"
 
-#: ../src/terminal-window.c:1777
+#: ../src/terminal-window.c:1768
 msgid "New _Profile…"
 msgstr "ಹೊಸ ಪ್ರೊಫೈಲ್(_P)"
 
-#: ../src/terminal-window.c:1782
+#: ../src/terminal-window.c:1773
 msgid "_Save Contents"
 msgstr "ಒಳ ವಿಷಯಗಳನ್ನು ಉಳಿಸು(_S)"
 
-#: ../src/terminal-window.c:1787 ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
 msgid "C_lose Tab"
 msgstr "ಹಾಳೆಯನ್ನು ಮುಚ್ಚು(_l)"
 
-#: ../src/terminal-window.c:1792
+#: ../src/terminal-window.c:1783
 msgid "_Close Window"
 msgstr "ವಿಂಡೋವನ್ನು ಮುಚ್ಚು(_C)"
 
-#: ../src/terminal-window.c:1809 ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
 msgid "Paste _Filenames"
 msgstr "ಕಡತದ ಹೆಸರುಗಳನ್ನು ಅಂಟಿಸು(_F)"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:1810
 msgid "P_rofiles…"
 msgstr "ಪ್ರೊಫೈಲ್‌ಗಳು(_r)"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:1815
 msgid "_Keyboard Shortcuts…"
 msgstr "ಕೀಲಿಮಣೆಯ ಶಾರ್ಟ್-ಕಟ್(_K)"
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1820
 msgid "Pr_ofile Preferences"
 msgstr "ಪ್ರೊಫೈಲಿನ ಆದ್ಯತೆಗಳು(_o)"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:1844
 msgid "_Find..."
 msgstr "ಹುಡುಕು(_F)..."
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:1849
 msgid "Find Ne_xt"
 msgstr "ಮುಂದಕ್ಕೆ ಹುಡುಕು(_x)"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1854
 msgid "Find Pre_vious"
 msgstr "ಹಿಂದಿನದನ್ನು ಹುಡುಕು(_v)"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1859
 msgid "_Clear Highlight"
 msgstr ""
 
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1865
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1870
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1877
 msgid "Change _Profile"
 msgstr "ಪ್ರೊಫೈಲನ್ನು ಬದಲಾಯಿಸು(_P)"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1879
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1884
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1889
 msgid "_Set Title…"
 msgstr "ಶೀರ್ಷಿಕೆಯನ್ನು ನೀಡು(_S)"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:1893
 msgid "Set _Character Encoding"
 msgstr "ಅಕ್ಷರಗಳ ಎನ್ಕೋಡಿಂಗನ್ನು ಹೊಂದಿಸು(_C)"
 
-#: ../src/terminal-window.c:1904
+#: ../src/terminal-window.c:1895
 msgid "_Reset"
 msgstr "ಮರುಹೊಂದಿಸು(_R)"
 
-#: ../src/terminal-window.c:1909
+#: ../src/terminal-window.c:1900
 msgid "Reset and C_lear"
 msgstr "ಮರುಹೊಂದಿಸು ಹಾಗು ಅಳಿಸು(_l)"
 
-#: ../src/terminal-window.c:1916
+#: ../src/terminal-window.c:1907
 msgid "_Add or Remove…"
 msgstr "ಸೇರಿಸು ಅಥವ ತೆಗೆದು ಹಾಕು(_A)"
 
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1914
 msgid "_Previous Tab"
 msgstr "ಹಿಂದಿನ ಹಾಳೆ(_P)"
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1919
 msgid "_Next Tab"
 msgstr "ಮುಂದಿನ ಹಾಳೆ(_N)"
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1924
 msgid "Move Tab _Left"
 msgstr "ಹಾಳೆಯನ್ನು ಎಡಕ್ಕೆ ಜರುಗಿಸು(_R)"
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1929
 msgid "Move Tab _Right"
 msgstr "ಹಾಳೆಯನ್ನು ಬಲಕ್ಕೆ ಜರುಗಿಸು(_R)"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:1934
 msgid "_Detach tab"
 msgstr "ಹಾಳೆಯನ್ನು ಪ್ರತ್ಯೇಕಿಸು(_D)"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1941
 msgid "_Contents"
 msgstr "ಒಳ ವಿಷಯಗಳು(_C)"
 
-#: ../src/terminal-window.c:1955
+#: ../src/terminal-window.c:1946
 msgid "_About"
 msgstr "ತಂತ್ರಾಂಶದ ಬಗ್ಗೆ(_A)"
 
-#: ../src/terminal-window.c:1962
+#: ../src/terminal-window.c:1953
 msgid "_Send Mail To…"
 msgstr "ಇಲ್ಲಿಗೆ ಮೈಲನ್ನು ಕಳಿಸು(_S)"
 
-#: ../src/terminal-window.c:1967
+#: ../src/terminal-window.c:1958
 msgid "_Copy E-mail Address"
 msgstr "ಇ-ಮೈಲ್‌ ವಿಳಾಸವನ್ನು ಕಾಪಿ ಮಾಡು(_C)"
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:1963
 msgid "C_all To…"
 msgstr "ಇಲ್ಲಿಗೆ ಕರೆ ಮಾಡು (_a)"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1968
 msgid "_Copy Call Address"
 msgstr "ಎಲ್ಲಾ ವಿಳಾಸಗಳನ್ನು ಕಾಪಿ ಮಾಡು(_C)"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1973
 msgid "_Open Link"
 msgstr "ಕೊಂಡಿಯನ್ನು ತೆರೆ(_O)"
 
-#: ../src/terminal-window.c:1987
+#: ../src/terminal-window.c:1978
 msgid "_Copy Link Address"
 msgstr "ಕೊಂಡಿ ವಿಳಾಸವನ್ನು ಕಾಪಿ ಮಾಡು(_C)"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1982
 msgid "P_rofiles"
 msgstr "ಪ್ರೊಫೈಲ್‌ಗಳು(_r)"
 
-#: ../src/terminal-window.c:2018 ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
 msgid "C_lose Window"
 msgstr "ವಿಂಡೊವನ್ನು ಮುಚ್ಚು(_l)"
 
-#: ../src/terminal-window.c:2028
+#: ../src/terminal-window.c:2019
 msgid "L_eave Full Screen"
 msgstr "ಸಂಪೂರ್ಣ ತೆರೆಯನ್ನು ಬಿಟ್ಟುಬಿಡು(_e)"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2023
 msgid "_Input Methods"
 msgstr "ಇನ್‌ಪುಟ್ ಕ್ರಮಗಳು(_I)"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:2030
 msgid "Show _Menubar"
 msgstr "ಮೆನುಪಟ್ಟಿಯನ್ನು ತೋರಿಸು( _M)"
 
-#: ../src/terminal-window.c:2045
+#: ../src/terminal-window.c:2036
 msgid "_Full Screen"
 msgstr "ಸಂಪೂರ್ಣ ತೆರೆ(_F)"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this window?"
 msgstr "ವಿಂಡೋವನ್ನು ಮುಚ್ಚಬೇಕೆ?"
 
-#: ../src/terminal-window.c:3270
+#: ../src/terminal-window.c:3281
 msgid "Close this terminal?"
 msgstr "ಈ ಟರ್ಮಿನಲ್‌ ಅನ್ನು ಮುಚ್ಚಬೇಕೆ?"
 
-#: ../src/terminal-window.c:3274
+#: ../src/terminal-window.c:3285
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "ಇನ್ನೂ ಸಹ ಪ್ರಕ್ರಿಯೆಗಳು ಚಾಲನೆಯಲ್ಲಿವೆ. ಟರ್ಮಿನಲ್ ಅನ್ನು ಮುಚ್ಚುವುದರಿಂದ ಅವು ಕೊಲ್ಲಲ್ಪಡುತ್ತವೆ."
 
-#: ../src/terminal-window.c:3278
+#: ../src/terminal-window.c:3289
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "ಇನ್ನೂ ಸಹ ಒಂದು ಪ್ರಕ್ರಿಯೆಯು ಚಾಲನೆಯಲ್ಲಿದೆ. ಟರ್ಮಿನಲ್ ಅನ್ನು ಮುಚ್ಚುವುದರಿಂದ ಅದು ಕೊಲ್ಲಲ್ಪಡುತ್ತದೆ."
 
-#: ../src/terminal-window.c:3283
+#: ../src/terminal-window.c:3294
 msgid "C_lose Terminal"
 msgstr "ಟರ್ಮಿನಲ್ ಅನ್ನು ಮುಚ್ಚು(_l)"
 
-#: ../src/terminal-window.c:3362
+#: ../src/terminal-window.c:3373
 msgid "Could not save contents"
 msgstr "ಒಳ ವಿಷಯಗಳನ್ನು ಉಳಿಸಲಾಗಿಲ್ಲ"
 
-#: ../src/terminal-window.c:3386
+#: ../src/terminal-window.c:3397
 msgid "Save as..."
 msgstr "ಹೀಗೆ ಉಳಿಸು..."
 
-#: ../src/terminal-window.c:3917
+#: ../src/terminal-window.c:3928
 msgid "_Title:"
 msgstr "ಶೀರ್ಷಿಕೆ(_T):"
 
-#: ../src/terminal-window.c:4112
+#: ../src/terminal-window.c:4123
 msgid "Contributors:"
 msgstr "ನೆರವಾದವರು:"
 
-#: ../src/terminal-window.c:4131
+#: ../src/terminal-window.c:4142
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE ಗಣಕತೆರೆಗಾಗಿ ಒಂದು ಟರ್ಮಿನಲ್ ಎಮ್ಯುಲೇಟರ್"
 
-#: ../src/terminal-window.c:4138
+#: ../src/terminal-window.c:4149
 msgid "translator-credits"
 msgstr "ಶಂಕರ್ ಪ್ರಸಾದ್ <svenkate@redhat.com>"
