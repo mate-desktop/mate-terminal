@@ -37,7 +37,6 @@
 #include "terminal-util.h"
 #include "profile-editor.h"
 #include "terminal-encoding.h"
-#include <libmate-desktop/mate-gsettings.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -154,6 +153,70 @@ static TerminalApp *global_app = NULL;
 #define DEFAULT_PROFILE_KEY "default-profile"
 
 #define ENCODING_LIST_KEY "active-encodings"
+
+
+/* two following functions were copied from libmate-desktop to get rid
+ * of dependency on it
+ *
+ * FIXME: I suspect there's no need for excessive copies, we might use
+ * existing profile list to form GVariant's and write them to GSettings
+ */
+static gboolean
+gsettings_append_strv (GSettings   *settings,
+                            const gchar *key,
+                            const gchar *value)
+{
+    gchar    **old;
+    gchar    **new;
+    gint       size;
+    gboolean   retval;
+
+    old = g_settings_get_strv (settings, key);
+
+    for (size = 0; old[size] != NULL; size++);
+
+    size += 1; /* appended value */
+    size += 1; /* NULL */
+
+    new = g_realloc_n (old, size, sizeof (gchar *));
+
+    new[size - 2] = g_strdup (value);
+    new[size - 1] = NULL;
+
+    retval = g_settings_set_strv (settings, key,
+                                  (const gchar **) new);
+
+    g_strfreev (new);
+
+    return retval;
+}
+
+static gboolean
+gsettings_remove_all_from_strv (GSettings   *settings,
+                                     const gchar *key,
+                                     const gchar *value)
+{
+    GArray    *array;
+    gchar    **old;
+    gint       i;
+    gboolean   retval;
+
+    old = g_settings_get_strv (settings, key);
+    array = g_array_new (TRUE, TRUE, sizeof (gchar *));
+
+    for (i = 0; old[i] != NULL; i++) {
+        if (g_strcmp0 (old[i], value) != 0)
+            array = g_array_append_val (array, old[i]);
+    }
+
+    retval = g_settings_set_strv (settings, key,
+                                  (const gchar **) array->data);
+
+    g_strfreev (old);
+    g_array_free (array, TRUE);
+
+    return retval;
+}
 
 /* Helper functions */
 
@@ -324,7 +387,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
 	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	mate_gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
+	gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
 	DConfClient *client = dconf_client_new ();
@@ -1101,7 +1164,7 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     new_profile /* adopts the refcount */);
 
 		/* And now save the new profile name to GSettings */
-		mate_gsettings_append_strv (app->settings_global,
+		gsettings_append_strv (app->settings_global,
 						PROFILE_LIST_KEY,
 						new_profile_name);
 
