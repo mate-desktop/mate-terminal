@@ -27,8 +27,6 @@
 #endif
 #include <gdk/gdkkeysyms.h>
 
-#include <libmate-desktop/mate-aboutdialog.h>
-
 #include "terminal-accels.h"
 #include "terminal-app.h"
 #include "terminal-debug.h"
@@ -4164,7 +4162,7 @@ help_about_callback (GtkAction *action,
 
     licence_text = terminal_util_get_licence_text ();
 
-    mate_show_about_dialog (GTK_WINDOW (window),
+    gtk_show_about_dialog (GTK_WINDOW (window),
                            "program-name", _("MATE Terminal"),
                            "copyright", copyright,
                            "comments", _("A terminal emulator for the MATE desktop"),
