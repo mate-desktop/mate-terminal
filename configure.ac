@@ -46,39 +46,16 @@ AM_GLIB_GNU_GETTEXT
 
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.25.12
+GTK_REQUIRED=3.14.0
+VTE_REQUIRED=0.38
 DCONF_REQUIRED=0.13.4
 
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.24.0
-       GDK_TARGETS="$($PKG_CONFIG --variable target gdk-$GTK_API_VERSION)"
-       VTE_REQUIRED=0.28
-       VTE_PC_VERSION=
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=3.0.0
-       GDK_TARGETS="$($PKG_CONFIG --variable targets gdk-$GTK_API_VERSION)"
-       VTE_REQUIRED=0.38
-       VTE_PC_VERSION=-2.91
-       ;;
-esac
-
 PKG_CHECK_MODULES([TERM],
-  [vte$VTE_PC_VERSION >= $VTE_REQUIRED
+  [vte-2.91 >= $VTE_REQUIRED
    glib-2.0 >= $GLIB_REQUIRED
    gthread-2.0
    gio-2.0 >= $GIO_REQUIRED
-   gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
+   gtk+-3.0 >= $GTK_REQUIRED
    dconf >= $DCONF_REQUIRED
    x11])
 
