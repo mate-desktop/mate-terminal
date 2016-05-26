@@ -95,10 +95,6 @@ void terminal_window_set_size_force_grid (TerminalWindow *window,
 
 GtkWidget* terminal_window_get_notebook (TerminalWindow *window);
 
-#if !VTE_CHECK_VERSION (0, 38, 0)
-gboolean terminal_window_uses_argb_visual (TerminalWindow *window);
-#endif
-
 void terminal_window_save_state (TerminalWindow *window,
                                  GKeyFile *key_file,
                                  const char *group);

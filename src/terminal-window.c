@@ -763,11 +763,7 @@ terminal_set_encoding_callback (GtkToggleAction *action,
     g_assert (encoding);
 
     vte_terminal_set_encoding (VTE_TERMINAL (priv->active_screen),
-#if VTE_CHECK_VERSION (0, 38, 0)
                                terminal_encoding_get_charset (encoding), NULL);
-#else
-                               terminal_encoding_get_charset (encoding));
-#endif
 }
 
 static void
@@ -1057,7 +1053,6 @@ update_edit_menu(TerminalWindow *window)
                                    g_object_ref (window));
 }
 
-/* width and height are character-based in vte 0.38, pixel-based in previous versions */
 static void
 screen_resize_window_cb (TerminalScreen *screen,
                          guint width,
@@ -1067,12 +1062,6 @@ screen_resize_window_cb (TerminalScreen *screen,
     TerminalWindowPrivate *priv = window->priv;
     VteTerminal *terminal = VTE_TERMINAL (screen);
     GtkWidget *widget = GTK_WIDGET (screen);
-#if !VTE_CHECK_VERSION (0, 38, 0)
-    guint grid_width, grid_height;
-    int char_width, char_height;
-    GtkBorder *inner_border = NULL;
-    GtkAllocation widget_allocation;
-#endif
 
     /* Don't do anything if we're maximised or fullscreened */
     // FIXME: realized && ... instead?
@@ -1080,35 +1069,12 @@ screen_resize_window_cb (TerminalScreen *screen,
             (gdk_window_get_state (gtk_widget_get_window (widget)) & (GDK_WINDOW_STATE_MAXIMIZED | GDK_WINDOW_STATE_FULLSCREEN)) != 0)
         return;
 
-    /* NOTE: width and height already include the VteTerminal's padding! */
-
-#if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_set_size (terminal, width, height);
-#else
-    gtk_widget_get_allocation (widget, &widget_allocation);
-
-    /* Short-circuit */
-    if (((int) width) == widget_allocation.width &&
-            ((int) height) == widget_allocation.height)
-        return;
-
-    /* The resize-window signal sucks. Re-compute grid widths */
-
-    char_width = vte_terminal_get_char_width (terminal);
-    char_height = vte_terminal_get_char_height (terminal);
-
-    gtk_widget_style_get (GTK_WIDGET (terminal), "inner-border", &inner_border, NULL);
-    grid_width = (width - (inner_border ? (inner_border->left + inner_border->right) : 0)) / char_width;
-    grid_height = (height - (inner_border ? (inner_border->top + inner_border->bottom) : 0)) / char_height;
-    gtk_border_free (inner_border);
-
-    vte_terminal_set_size (terminal, grid_width, grid_height);
-#endif
 
     if (screen != priv->active_screen)
         return;
 
-    terminal_window_set_size_force_grid (window, screen, TRUE, -1, -1); //grid_width, grid_height);
+    terminal_window_set_size_force_grid (window, screen, TRUE, -1, -1);
 }
 
 static void
@@ -1161,15 +1127,6 @@ terminal_window_update_tabs_menu_sensitivity (TerminalWindow *window)
     action = gtk_action_group_get_action (action_group, "FileCloseTab");
     gtk_action_set_sensitive (action, num_pages > 1);
 }
-
-#if !VTE_CHECK_VERSION (0, 38, 0)
-gboolean
-terminal_window_uses_argb_visual (TerminalWindow *window)
-{
-    TerminalWindowPrivate *priv = window->priv;
-    return priv->have_argb_visual;
-}
-#endif
 
 static void
 update_tab_visibility (TerminalWindow *window,
@@ -1376,24 +1333,6 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
 
     action = gtk_action_group_get_action (priv->action_group, "PopupInputMethods");
     gtk_action_set_visible (action, show_input_method_menu);
-
-#if !VTE_CHECK_VERSION (0, 38, 0)
-    im_menu_item = gtk_ui_manager_get_widget (priv->ui_manager,
-                   "/Popup/PopupInputMethods");
-    /* FIXME: fix this when gtk+ bug #500065 is done, use vte_terminal_im_merge_ui */
-    if (show_input_method_menu)
-    {
-        im_menu = gtk_menu_new ();
-        vte_terminal_im_append_menuitems (VTE_TERMINAL (screen),
-                                          GTK_MENU_SHELL (im_menu));
-        gtk_widget_show (im_menu);
-        gtk_menu_item_set_submenu (GTK_MENU_ITEM (im_menu_item), im_menu);
-    }
-    else
-    {
-        gtk_menu_item_set_submenu (GTK_MENU_ITEM (im_menu_item), NULL);
-    }
-#endif
 
     popup_menu = gtk_ui_manager_get_widget (priv->ui_manager, "/Popup");
     g_signal_connect (popup_menu, "deactivate",
@@ -3261,20 +3200,12 @@ save_contents_dialog_on_response (GtkDialog *dialog, gint response_id, gpointer 
 
     if (stream)
     {
-        /* XXX
-         * FIXME
-         * This is a sync operation.
+        /* FIXME
          * Should be replaced with the async version when vte implements that.
          */
-#if VTE_CHECK_VERSION (0, 38, 0)
         vte_terminal_write_contents_sync (terminal, stream,
                                           VTE_WRITE_DEFAULT,
                                           NULL, &error);
-#else
-        vte_terminal_write_contents (terminal, stream,
-                                     VTE_TERMINAL_WRITE_DEFAULT,
-                                     NULL, &error);
-#endif
         g_object_unref (stream);
     }
 
@@ -3642,11 +3573,7 @@ search_find_response_callback (GtkWidget *dialog,
 
     flags = terminal_search_dialog_get_search_flags (dialog);
 
-#if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_search_set_gregex (VTE_TERMINAL (priv->active_screen), regex, 0);
-#else
-    vte_terminal_search_set_gregex (VTE_TERMINAL (priv->active_screen), regex);
-#endif
     vte_terminal_search_set_wrap_around (VTE_TERMINAL (priv->active_screen),
                                          (flags & TERMINAL_SEARCH_FLAG_WRAP_AROUND));
 
@@ -3717,11 +3644,7 @@ search_clear_highlight_callback (GtkAction *action,
     if (G_UNLIKELY (!window->priv->active_screen))
         return;
 
-#if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL, 0);
-#else
-    vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL);
-#endif
 }
 
 static void
