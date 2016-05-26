@@ -167,11 +167,7 @@ terminal_screen_container_constructor (GType type,
 
 #else
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	priv->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-#else
-	priv->hbox = gtk_hbox_new (FALSE, 0);
-#endif
 
 #if VTE_CHECK_VERSION (0, 38, 0)
 	priv->vscrollbar = gtk_vscrollbar_new (gtk_scrollable_get_vadjustment (GTK_SCROLLABLE (priv->screen)));

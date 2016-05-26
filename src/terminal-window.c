@@ -22,6 +22,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
+#include <gdk/gdk.h>
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
@@ -41,10 +42,6 @@
 
 #ifdef ENABLE_SKEY
 #include "skey-popup.h"
-#endif
-
-#if GTK_CHECK_VERSION(3, 0, 0)
-#include <gdk/gdk.h>
 #endif
 
 struct _TerminalWindowPrivate
@@ -395,13 +392,8 @@ position_menu_under_widget (GtkMenu *menu,
     gtk_widget_get_allocation (widget, &widget_allocation);
     container = gtk_widget_get_ancestor (widget, GTK_TYPE_CONTAINER);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
     gtk_widget_get_preferred_size (widget, &req, NULL);
     gtk_widget_get_preferred_size (GTK_WIDGET (menu), &menu_req, NULL);
-#else
-    gtk_widget_size_request (widget, &req);
-    gtk_widget_size_request (GTK_WIDGET (menu), &menu_req);
-#endif
 
     screen = gtk_widget_get_screen (GTK_WIDGET (menu));
     monitor_num = gdk_screen_get_monitor_at_window (screen, widget_window);
@@ -1542,42 +1534,23 @@ terminal_window_realize (GtkWidget *widget)
 #if defined(GDK_WINDOWING_X11) || defined(GDK_WINDOWING_WAYLAND)
     GdkScreen *screen;
     GtkAllocation widget_allocation;
-    #if GTK_CHECK_VERSION (3, 0, 0)
-      GdkVisual *visual;
-    #else
-      GdkColormap *colormap;
-    #endif
+    GdkVisual *visual;
+
     gtk_widget_get_allocation (widget, &widget_allocation);
     screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
-    #if GTK_CHECK_VERSION (3, 0, 0)
-      if (gdk_screen_is_composited (screen) &&
-          (visual = gdk_screen_get_rgba_visual (screen)) != NULL)
-        {
+    if (gdk_screen_is_composited (screen) &&
+        (visual = gdk_screen_get_rgba_visual (screen)) != NULL)
+    {
           /* Set RGBA visual if possible so VTE can use real transparency */
-          gtk_widget_set_visual (GTK_WIDGET (widget), visual);
-          priv->have_argb_visual = TRUE;
-        }
-      else
-        {
-          gtk_widget_set_visual (GTK_WIDGET (window), gdk_screen_get_system_visual (screen));
-          priv->have_argb_visual = FALSE;
-        }
-    #else
-      if (gdk_screen_is_composited (screen) &&
-          (colormap = gdk_screen_get_rgba_colormap (screen)) != NULL)
-        {
-          /* Set RGBA colormap if possible so VTE can use real transparency */
-          gtk_widget_set_colormap (widget, colormap);
-          priv->have_argb_visual = TRUE;
-        }
-      else
-        {
-          gtk_widget_set_colormap (widget, gdk_screen_get_default_colormap (screen));
-          priv->have_argb_visual = FALSE;
-        }
-    #endif
-
+        gtk_widget_set_visual (GTK_WIDGET (widget), visual);
+        priv->have_argb_visual = TRUE;
+    }
+    else
+    {
+        gtk_widget_set_visual (GTK_WIDGET (window), gdk_screen_get_system_visual (screen));
+        priv->have_argb_visual = FALSE;
+    }
 #endif
 
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
@@ -1678,11 +1651,7 @@ terminal_window_screen_update (TerminalWindow *window,
     TerminalApp *app;
 
 #ifdef GDK_WINDOWING_X11
-#if GTK_CHECK_VERSION (3, 0, 0)
     if (screen && GDK_IS_X11_SCREEN (screen))
-#else
-    if (screen)
-#endif
     {
         terminal_window_window_manager_changed_cb (screen, window);
         g_signal_connect (screen, "window-manager-changed",
@@ -1722,11 +1691,7 @@ terminal_window_screen_changed (GtkWidget *widget,
         return;
 
 #ifdef GDK_WINDOWING_X11
-#if GTK_CHECK_VERSION (3, 0, 0)
     if (previous_screen && GDK_IS_X11_SCREEN (previous_screen))
-#else
-    if (previous_screen)
-#endif
     {
         g_signal_handlers_disconnect_by_func (previous_screen,
                                               G_CALLBACK (terminal_window_window_manager_changed_cb),
@@ -2086,23 +2051,17 @@ terminal_window_init (TerminalWindow *window)
     }
 #endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
     GtkStyleContext *context;
 
     context = gtk_widget_get_style_context (GTK_WIDGET (window));
     gtk_style_context_add_class (context, "mate-terminal");
-#endif
 
     gtk_window_set_title (GTK_WINDOW (window), _("Terminal"));
 
     priv->active_screen = NULL;
     priv->menubar_visible = FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
     main_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-#else
-    main_vbox = gtk_vbox_new (FALSE, 0);
-#endif
     gtk_container_add (GTK_CONTAINER (window), main_vbox);
     gtk_widget_show (main_vbox);
 
@@ -2283,11 +2242,7 @@ terminal_window_dispose (GObject *object)
 
 #ifdef GDK_WINDOWING_X11
     screen = gtk_widget_get_screen (GTK_WIDGET (object));
-#if GTK_CHECK_VERSION (3, 0, 0)
     if (screen && GDK_IS_X11_SCREEN (screen))
-#else
-    if (screen)
-#endif
     {
         g_signal_handlers_disconnect_by_func (screen,
                                               G_CALLBACK (terminal_window_window_manager_changed_cb),
@@ -2671,15 +2626,6 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
     GtkWidget *app;
     int grid_width;
     int grid_height;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-    /* Owen's hack from gnome-terminal */
-    GtkRequisition toplevel_request;
-    GtkRequisition widget_request;
-    int w, h;
-    int char_width;
-    int char_height;
-    GtkBorder *inner_border = NULL;
-#endif
 
     /* be sure our geometry is up-to-date */
     terminal_window_update_geometry (window);
@@ -2689,7 +2635,6 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
     app = gtk_widget_get_toplevel (widget);
     g_assert (app != NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
     terminal_screen_get_size (screen, &grid_width, &grid_height);
 
     if (force_grid_width >= 0)
@@ -2700,47 +2645,6 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
         gtk_window_resize_to_geometry (GTK_WINDOW (app), grid_width, grid_height);
     else
         gtk_window_set_default_geometry (GTK_WINDOW (app), grid_width, grid_height);
-#else
-    gtk_widget_size_request (app, &toplevel_request);
-    gtk_widget_size_request (widget, &widget_request);
-
-    terminal_screen_get_cell_size (screen, &char_width, &char_height);
-    terminal_screen_get_size (screen, &grid_width, &grid_height);
-
-    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
-                           "[window %p] set size: toplevel %dx%d widget %dx%d grid %dx%d char-cell %dx%d\n",
-                           window,
-                           toplevel_request.width, toplevel_request.height,
-                           widget_request.width, widget_request.height,
-                           grid_width, grid_height, char_width, char_height);
-
-    w = toplevel_request.width - widget_request.width;
-    h = toplevel_request.height - widget_request.height;
-
-    if (force_grid_width >= 0)
-        grid_width = force_grid_width;
-    if (force_grid_height >= 0)
-        grid_height = force_grid_height;
-
-    gtk_widget_style_get (widget, "inner-border", &inner_border, NULL);
-    w += (inner_border ? (inner_border->left + inner_border->right) : 0) + char_width * grid_width;
-    h += (inner_border ? (inner_border->top + inner_border->bottom) : 0) + char_height * grid_height;
-    gtk_border_free (inner_border);
-
-    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
-                           "[window %p] set size: grid %dx%d force %dx%d setting %dx%d pixels\n",
-                           window,
-                           grid_width, grid_height, force_grid_width, force_grid_height, w, h);
-
-    if (even_if_mapped && gtk_widget_get_mapped (app))
-    {
-        gtk_window_resize (GTK_WINDOW (app), w, h);
-    }
-    else
-    {
-        gtk_window_set_default_size (GTK_WINDOW (app), w, h);
-    }
-#endif
 }
 
 void
@@ -3060,11 +2964,7 @@ terminal_window_update_geometry (TerminalWindow *window)
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *widget;
     GdkGeometry hints;
-#if GTK_CHECK_VERSION (3, 0, 0)
     GtkBorder padding;
-#else
-    GtkBorder *inner_border = NULL;
-#endif
     GtkRequisition toplevel_request, widget_request;
     int base_width, base_height;
     int char_width, char_height;
@@ -3089,33 +2989,18 @@ terminal_window_update_geometry (TerminalWindow *window)
          * padding we need to change the hints when the theme changes.
          */
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         gtk_widget_get_preferred_size (GTK_WIDGET (window), NULL, &toplevel_request);
         gtk_widget_get_preferred_size (widget, NULL, &widget_request);
-#else
-        gtk_widget_size_request (GTK_WIDGET (window), &toplevel_request);
-        gtk_widget_size_request (widget, &widget_request);
-#endif
 
         base_width = toplevel_request.width - widget_request.width;
         base_height = toplevel_request.height - widget_request.height;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         gtk_style_context_get_padding (gtk_widget_get_style_context (widget),
                                        gtk_widget_get_state_flags (widget),
                                        &padding);
 
         hints.base_width = base_width + padding.left + padding.right;
         hints.base_height = base_height + padding.top + padding.bottom;
-#else
-        gtk_widget_style_get (widget, "inner-border", &inner_border, NULL);
-
-        hints.base_width = base_width + (inner_border ? (inner_border->left + inner_border->right) : 0);
-        hints.base_height = base_height + (inner_border ? (inner_border->top + inner_border->bottom) : 0);
-
-        gtk_border_free (inner_border);
-        inner_border = NULL;
-#endif
 
 #define MIN_WIDTH_CHARS 4
 #define MIN_HEIGHT_CHARS 1
@@ -3944,11 +3829,7 @@ terminal_set_title_callback (GtkAction *action,
     message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
     gtk_container_foreach (GTK_CONTAINER (message_area), (GtkCallback) gtk_widget_hide, NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
     hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-#else
-    hbox = gtk_hbox_new (FALSE, 12);
-#endif
     gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
 
     label = gtk_label_new_with_mnemonic (_("_Title:"));

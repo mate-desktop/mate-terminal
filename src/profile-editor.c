@@ -546,8 +546,6 @@ reset_compat_defaults_cb (GtkWidget       *button,
 static void
 init_color_scheme_menu (GtkWidget *combo_box)
 {
-	#if GTK_CHECK_VERSION(3, 0, 0)
-
 	GtkCellRenderer *renderer;
 	GtkTreeIter iter;
 	GtkListStore *store;
@@ -569,19 +567,6 @@ init_color_scheme_menu (GtkWidget *combo_box)
 /*FIXME, avoid double loading of color schemes names from UI file */
 /*	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), renderer, TRUE);
 	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), renderer, "text", 0, NULL);*/
-
-	#else
-
-	int i;
-
-	i = G_N_ELEMENTS (color_schemes);
-	while (i > 0)
-	{
-		gtk_combo_box_prepend_text (GTK_COMBO_BOX (combo_box),
-		                            _(color_schemes[--i].name));
-	}
-
-	#endif
 }
 
 static char*

@@ -43,10 +43,6 @@
 #include "terminal-util.h"
 #include "terminal-window.h"
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
-	#define gdk_error_trap_pop_ignored gdk_error_trap_pop
-#endif
-
 void
 terminal_util_set_unique_role (GtkWindow *window, const char *prefix)
 {

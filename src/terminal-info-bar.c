@@ -41,11 +41,7 @@ terminal_info_bar_init (TerminalInfoBar *bar)
 
 	priv = bar->priv = TERMINAL_INFO_BAR_GET_PRIVATE (bar);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	priv->content_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-#else
-	priv->content_box = gtk_vbox_new (FALSE, 6);
-#endif
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (info_bar)),
 	                    priv->content_box, TRUE, TRUE, 0);
 }
