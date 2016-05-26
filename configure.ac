@@ -46,6 +46,7 @@ AM_GLIB_GNU_GETTEXT
 
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.25.12
+DCONF_REQUIRED=0.13.4
 MATE_DESKTOP_REQUIRED=1.9.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
@@ -79,6 +80,7 @@ PKG_CHECK_MODULES([TERM],
    gthread-2.0
    gio-2.0 >= $GIO_REQUIRED
    gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
+   dconf >= $DCONF_REQUIRED
    mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED
    x11])
 
