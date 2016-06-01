@@ -1278,7 +1278,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     TerminalWindow *window = info->window;
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreen *screen = info->screen;
-    GtkWidget *popup_menu, *im_menu, *im_menu_item;
+    GtkWidget *popup_menu;
     GtkAction *action;
     gboolean can_paste, can_paste_uris, show_link, show_email_link, show_call_link, show_input_method_menu;
     int n_pages;
