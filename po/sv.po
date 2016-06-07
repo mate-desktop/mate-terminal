@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Patrik Nilsson <asavartzeth@gmail.com>, 2014
+# Claes-Göran Nydahl <goldug@gmail.com>, 2016
 # Erik, 2016
 # Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-09 14:42+0300\n"
-"PO-Revision-Date: 2016-03-09 11:33+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-04-28 01:37+0000\n"
+"Last-Translator: Claes-Göran Nydahl <goldug@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +36,7 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr ""
+msgstr "<p> MATE Terminal är ett terminalemuleringsprogram som du kan använda för att få tillgång till ett UNIX-skal i MATE miljön. MATE Terminal emulerar xterm programmet som utvecklats av X Consortium. Det stöder genomskinliga bakgrunder, att öppna flera terminaler i ett enda fönster (flikar) och klickbara webbadresser. </p> <p> MATE Terminal är en avknoppning av GNOME Terminal och en del av MATE Skrivbordsmiljön. Om du vill veta mer om MATE och MATE Terminal, besök projektets hemsida. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
 #: ../src/terminal-window.c:4140
@@ -264,7 +265,7 @@ msgstr "Kopiera markerad text till urklipp"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr ""
+msgstr "Om sant kopieras markerad text automatiskt till urklipp."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Characters that are considered \"part of a word\""
@@ -358,43 +359,43 @@ msgstr "Om sant kommer terminalfönstret att rulla till nedersta läget när det
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "What to do with the terminal when the child command exits"
-msgstr ""
+msgstr "Vad som ska göras med terminalfönstret när barnkommandot avslutar"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:57
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
-msgstr ""
+msgstr "Möjliga värden är \"close\" för att stänga terminalfönstret och \"restart\" för att starta om kommandot."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr ""
+msgstr "Huruvida kommandot inuti terminalfönstret ska startas som inloggningsskal"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr ""
+msgstr "Om sant kommer kommandot inuti terminalfönstret att startas som ett inloggningsskal (argv[0] kommer att ha ett bindestreck före)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "Whether to update login records when launching terminal command"
-msgstr ""
+msgstr "Huruvida inloggningsposter ska uppdateras då ett nytt terminalkommando startas"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:61
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
-msgstr ""
+msgstr "Om sant kommer systemets inloggningsposter, utmp och wtmp, att uppdateras när kommandot inuti terminalfönstret startas."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to run a custom command instead of the shell"
-msgstr ""
+msgstr "Huruvida ett eget kommando ska köras istället för skalet"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr ""
+msgstr "Om sant kommer värdet för inställningen custom_command att användas istället för att ett skal körs."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to blink the cursor"
@@ -418,11 +419,11 @@ msgstr "Möjliga värden är \"block\" för att använda en blockmarkör, \"ibea
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Custom command to use instead of the shell"
-msgstr ""
+msgstr "Eget kommando att använda istället för skalet"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr ""
+msgstr "Kör detta kommando istället för skalet, om use_custom_command är sant."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Icon for terminal window"
@@ -540,13 +541,13 @@ msgstr "Om sant kommer terminalfönstret att använda det globala skrivbordstyps
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Highlight S/Key challenges"
-msgstr ""
+msgstr "Framhäv svar på S/key-utmaningar"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:93
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr ""
+msgstr "Visa ett dialogfönster då en svar på S/key-utmaning efterfrågas, detekteras och klickas på. Genom att ange ett lösenord i dialogfönstret kommer det att skickas till terminalfönstret."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Keyboard shortcut to open a new tab"
@@ -754,7 +755,7 @@ msgstr "Snabbtangent för att byta till nästa profil. Uttryckt som en sträng i
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Accelerator to move the current tab to the left."
-msgstr ""
+msgstr "Snabbtangent för att flytta aktuell flik till vänster."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
@@ -762,11 +763,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr ""
+msgstr "Snabbtangent för att flytta aktuell flik till vänster. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the right."
-msgstr ""
+msgstr "Snabbtangent för att flytta aktuell flik till höger."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
@@ -774,18 +775,18 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr ""
+msgstr "Snabbtangent för att flytta aktuell flik till höger. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to detach current tab."
-msgstr ""
+msgstr "Snabbtangent för att frigöra aktuell flik."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
-msgstr ""
+msgstr "Snabbtangent för att frigöra aktuell flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to tab 1"
@@ -1452,7 +1453,7 @@ msgstr "För_mörka genomskinlig bakgrund eller bildbakgrund:"
 
 #: ../src/profile-preferences.ui.h:76
 msgid "S_hade transparent background:"
-msgstr ""
+msgstr "För_mörka genomskinlig bakgrund:"
 
 #: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
@@ -1999,7 +2000,7 @@ msgstr "Helskärm för fönstret"
 #: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr ""
+msgstr "Ställ in fönsterstorleken; till exempel: 80x24 eller 80x24+200+200 (COLSxROWS+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
