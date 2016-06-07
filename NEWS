@@ -1,3 +1,19 @@
+1.15.0
+
+  * Translations update
+  * fix deprecated usage of GtkVScrollbar
+  * remove dead code
+  * remove some unused variables
+  * drop old code for VTE < 0.38 (it was used in GTK+2 build)
+  * drop old GTK+2 code
+  * require GTK+ 3.14 and VTE 0.38 (API 2.91), drop --with-gtk option
+  * drop build-dep on libmate-desktop, it's not needed anymore
+  * copy gsettings helpers from libmate-desktop (see also FIXME there)
+  * use dconf directly instead of wrapper functions from libmate-desktop
+  * use About dialog from GTK+ instead of forked one from libmate-desktop
+  * window: react on WM change only on X11
+  * drop ancient and irrelevant gnome files
+
 1.14.0
 
   * Compile dingu regexes with MULTILINE option
