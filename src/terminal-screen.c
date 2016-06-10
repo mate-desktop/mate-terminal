@@ -290,19 +290,16 @@ terminal_screen_realize (GtkWidget *widget)
 }
 
 static void
-terminal_screen_style_set (GtkWidget *widget,
-                           GtkStyle *previous_style)
+terminal_screen_style_updated (GtkWidget *widget)
 {
-	TerminalScreen *screen = TERMINAL_SCREEN (widget);
-	void (* style_set) (GtkWidget*, GtkStyle*) = GTK_WIDGET_CLASS (terminal_screen_parent_class)->style_set;
+    TerminalScreen *screen = TERMINAL_SCREEN (widget);
 
-	if (style_set)
-		style_set (widget, previous_style);
+    GTK_WIDGET_CLASS (terminal_screen_parent_class)->style_updated (widget);
 
-	update_color_scheme (screen);
+    update_color_scheme (screen);
 
-	if (gtk_widget_get_realized (widget))
-		terminal_screen_change_font (screen);
+    if (gtk_widget_get_realized (widget))
+      terminal_screen_change_font (screen);
 }
 
 #ifdef MATE_ENABLE_DEBUG
@@ -479,7 +476,7 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 	object_class->set_property = terminal_screen_set_property;
 
 	widget_class->realize = terminal_screen_realize;
-	widget_class->style_set = terminal_screen_style_set;
+	widget_class->style_updated = terminal_screen_style_updated;
 	widget_class->drag_data_received = terminal_screen_drag_data_received;
 	widget_class->button_press_event = terminal_screen_button_press;
 	widget_class->popup_menu = terminal_screen_popup_menu;
@@ -1028,18 +1025,21 @@ update_color_scheme (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
 	TerminalProfile *profile = priv->profile;
-	GtkStyle *style;
 	GdkColor colors[TERMINAL_PALETTE_SIZE];
 	const GdkColor *fg_color, *bg_color, *bold_color;
 	GdkColor fg, bg;
 	guint n_colors;
+	GtkStyleContext *context;
+	GdkRGBA rgba;
 
-	style = gtk_widget_get_style (GTK_WIDGET (screen));
-	if (!style)
-		return;
+	context = gtk_widget_get_style_context (GTK_WIDGET (screen));
+	gtk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
+	rgba_to_color (&fg, &rgba);
+	g_print ("fg %g,%g,%g ", rgba.red, rgba.green, rgba.blue);
+	gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
+	rgba_to_color (&bg, &rgba);
+	g_print ("bg %g,%g,%g\n", rgba.red, rgba.green, rgba.blue);
 
-	fg = style->text[GTK_STATE_NORMAL];
-	bg = style->base[GTK_STATE_NORMAL];
 	bold_color = NULL;
 
 	if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_THEME_COLORS))
