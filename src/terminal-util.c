@@ -816,18 +816,18 @@ object_change_notify_cb (PropertyChange *change)
 		g_object_get (object, object_prop, &value, NULL);
 		gtk_range_set_value (GTK_RANGE (widget), value);
 	}
-	else if (GTK_IS_COLOR_BUTTON (widget))
+	else if (GTK_IS_COLOR_CHOOSER (widget))
 	{
-		GdkColor *color;
-		GdkColor old_color;
+		GdkRGBA *color;
+		GdkRGBA old_color;
 
 		g_object_get (object, object_prop, &color, NULL);
-		gtk_color_button_get_color (GTK_COLOR_BUTTON (widget), &old_color);
+		gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (widget), &old_color);
 
-		if (color && !gdk_color_equal (color, &old_color))
-			gtk_color_button_set_color (GTK_COLOR_BUTTON (widget), color);
+		if (color && !gdk_rgba_equal (color, &old_color))
+			gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (widget), color);
 		if (color)
-			gdk_color_free (color);
+			gdk_rgba_free (color);
 	}
 	else if (GTK_IS_FONT_BUTTON (widget))
 	{
@@ -912,11 +912,11 @@ widget_change_notify_cb (PropertyChange *change)
 		value = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 		g_object_set (object, object_prop, value, NULL);
 	}
-	else if (GTK_IS_COLOR_BUTTON (widget))
+	else if (GTK_IS_COLOR_CHOOSER (widget))
 	{
-		GdkColor color;
+		GdkRGBA color;
 
-		gtk_color_button_get_color (GTK_COLOR_BUTTON (widget), &color);
+		gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (widget), &color);
 		g_object_set (object, object_prop, &color, NULL);
 	}
 	else if (GTK_IS_FONT_BUTTON (widget))
@@ -977,7 +977,7 @@ terminal_util_bind_object_property_to_widget (GObject *object,
 		signal_name = "notify::text";
 	else if (GTK_IS_COMBO_BOX (widget))
 		signal_name = "notify::active";
-	else if (GTK_IS_COLOR_BUTTON (widget))
+	else if (GTK_IS_COLOR_CHOOSER (widget))
 		signal_name = "notify::color";
 	else if (GTK_IS_FONT_BUTTON (widget))
 		signal_name = "notify::font-name";

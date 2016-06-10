@@ -34,31 +34,36 @@ typedef struct _TerminalColorScheme TerminalColorScheme;
 struct _TerminalColorScheme
 {
 	const char *name;
-	const GdkColor foreground;
-	const GdkColor background;
+	const GdkRGBA foreground;
+	const GdkRGBA background;
 };
 
 static const TerminalColorScheme color_schemes[] =
 {
 	{
 		N_("Black on light yellow"),
-		{ 0, 0x0000, 0x0000, 0x0000 }, { 0, 0xFFFF, 0xFFFF, 0xDDDD }
+		{ 0, 0, 0, 1 },
+		{ 1, 1, 0.866667, 1 }
 	},
 	{
 		N_("Black on white"),
-		{ 0, 0x0000, 0x0000, 0x0000 }, { 0, 0xFFFF, 0xFFFF, 0xFFFF }
+		{ 0, 0, 0, 1 },
+		{ 1, 1, 1, 1 }
 	},
 	{
 		N_("Gray on black"),
-		{ 0, 0xAAAA, 0xAAAA, 0xAAAA }, { 0, 0x0000, 0x0000, 0x0000 }
+		{ 0.666667, 0.666667, 0.666667, 1 },
+		{ 0, 0, 0, 1 }
 	},
 	{
 		N_("Green on black"),
-		{ 0, 0x0000, 0xFFFF, 0x0000 }, { 0, 0x0000, 0x0000, 0x0000 }
+		{ 0, 1, 0, 1 },
+		{ 0, 0, 0, 1 }
 	},
 	{
 		N_("White on black"),
-		{ 0, 0xFFFF, 0xFFFF, 0xFFFF }, { 0, 0x0000, 0x0000, 0x0000 }
+		{ 1, 1, 1, 1 },
+		{ 0, 0, 0, 1 }
 	}
 };
 
@@ -349,7 +354,7 @@ profile_colors_notify_scheme_combo_cb (TerminalProfile *profile,
                                        GParamSpec *pspec,
                                        GtkComboBox *combo)
 {
-	const GdkColor *fg, *bg;
+	const GdkRGBA *fg, *bg;
 	guint i;
 
 	fg = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_FOREGROUND_COLOR);
@@ -359,8 +364,8 @@ profile_colors_notify_scheme_combo_cb (TerminalProfile *profile,
 	{
 		for (i = 0; i < G_N_ELEMENTS (color_schemes); ++i)
 		{
-			if (gdk_color_equal (fg, &color_schemes[i].foreground) &&
-			        gdk_color_equal (bg, &color_schemes[i].background))
+			if (gdk_rgba_equal (&fg, &color_schemes[i].foreground) &&
+			        gdk_rgba_equal (&bg, &color_schemes[i].background))
 				break;
 		}
 	}
@@ -413,15 +418,15 @@ profile_palette_notify_scheme_combo_cb (TerminalProfile *profile,
 }
 
 static void
-palette_color_notify_cb (GtkColorButton *button,
+palette_color_notify_cb (GtkColorChooser *button,
                          GParamSpec *pspec,
                          TerminalProfile *profile)
 {
 	GtkWidget *editor;
-	GdkColor color;
+	GdkRGBA color;
 	guint i;
 
-	gtk_color_button_get_color (button, &color);
+	gtk_color_chooser_get_rgba (button, &color);
 	i = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (button), "palette-entry-index"));
 
 	editor = gtk_widget_get_toplevel (GTK_WIDGET (button));
@@ -436,7 +441,7 @@ profile_palette_notify_colorpickers_cb (TerminalProfile *profile,
                                         GtkWidget *editor)
 {
 	GtkWidget *w;
-	GdkColor colors[TERMINAL_PALETTE_SIZE];
+	GdkRGBA colors[TERMINAL_PALETTE_SIZE];
 	guint n_colors, i;
 
 	n_colors = G_N_ELEMENTS (colors);
@@ -446,16 +451,16 @@ profile_palette_notify_colorpickers_cb (TerminalProfile *profile,
 	for (i = 0; i < n_colors; i++)
 	{
 		char name[32];
-		GdkColor old_color;
+		GdkRGBA old_color;
 
 		g_snprintf (name, sizeof (name), "palette-colorpicker-%d", i + 1);
 		w = profile_editor_get_widget (editor, name);
 
-		gtk_color_button_get_color (GTK_COLOR_BUTTON (w), &old_color);
-		if (!gdk_color_equal (&old_color, &colors[i]))
+		gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (w), &old_color);
+		if (!gdk_rgba_equal (&old_color, &colors[i]))
 		{
 			g_signal_handlers_block_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
-			gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &colors[i]);
+			gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (w), &colors[i]);
 			g_signal_handlers_unblock_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
 		}
 	}
@@ -730,7 +735,7 @@ terminal_profile_edit (TerminalProfile *profile,
 		gtk_widget_set_tooltip_text (w, text);
 		g_free (text);
 
-		g_signal_connect (w, "notify::color",
+		g_signal_connect (w, "notify::rgba",
 		                  G_CALLBACK (palette_color_notify_cb),
 		                  profile);
 	}

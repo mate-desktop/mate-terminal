@@ -174,7 +174,7 @@ const char*       terminal_profile_get_property_string    (TerminalProfile *prof
         const char *prop_name);
 
 gboolean          terminal_profile_get_palette            (TerminalProfile *profile,
-        GdkColor *colors,
+        GdkRGBA *colors,
         guint *n_colors);
 
 gboolean          terminal_profile_get_palette_is_builtin (TerminalProfile *profile,
@@ -185,7 +185,7 @@ void              terminal_profile_set_palette_builtin    (TerminalProfile *prof
 
 gboolean          terminal_profile_modify_palette_entry   (TerminalProfile *profile,
         guint            i,
-        const GdkColor  *color);
+        const GdkRGBA  *color);
 
 G_END_DECLS
 

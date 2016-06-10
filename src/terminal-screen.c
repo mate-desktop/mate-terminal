@@ -1009,74 +1009,54 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	g_object_thaw_notify (object);
 }
 
-/* TODO: Once Gtk2 support is dropped, mate-terminal should be converted to use GdkRGBA everywhere instead of GdkColor. */
-static GdkRGBA *
-gdk_color_to_rgba (const GdkColor *color,
-                   double alpha,
-                   GdkRGBA *rgba)
-{
-	if (color == NULL)
-		return NULL;
-	rgba->red   = color->red   / 65535.0;
-	rgba->green = color->green / 65535.0;
-	rgba->blue  = color->blue  / 65535.0;
-	rgba->alpha = alpha;
-	return rgba;
-}
-
 static void
 update_color_scheme (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
 	TerminalProfile *profile = priv->profile;
-	GdkColor colors[TERMINAL_PALETTE_SIZE];
-	const GdkColor *fg_color, *bg_color, *bold_color;
-	GdkColor fg, bg;
+	GdkRGBA colors[TERMINAL_PALETTE_SIZE];
+	const GdkRGBA *fg_rgba, *bg_rgba, *bold_rgba;
+	double bg_alpha = 1.0;
+	GdkRGBA fg, bg;
 	guint n_colors;
 	GtkStyleContext *context;
-	GdkRGBA rgba;
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (screen));
-	gtk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
-	rgba_to_color (&fg, &rgba);
-	gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
-	rgba_to_color (&bg, &rgba);
+	gtk_style_context_save (context);
+	gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+	gtk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &fg);
+	gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
+	gtk_style_context_restore (context);
 
-	bold_color = NULL;
+	bold_rgba = NULL;
 
 	if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_THEME_COLORS))
 	{
-		fg_color = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_FOREGROUND_COLOR);
-		bg_color = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_BACKGROUND_COLOR);
+		fg_rgba = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_FOREGROUND_COLOR);
+		bg_rgba = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_BACKGROUND_COLOR);
 
 		if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG))
-			bold_color = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_BOLD_COLOR);
+			bold_rgba = terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_BOLD_COLOR);
 
-		if (fg_color)
-			fg = *fg_color;
-		if (bg_color)
-			bg = *bg_color;
+		if (fg_rgba)
+			fg = *fg_rgba;
+		if (bg_rgba)
+			bg = *bg_rgba;
 	}
 
 	n_colors = G_N_ELEMENTS (colors);
 	terminal_profile_get_palette (priv->profile, colors, &n_colors);
-	GdkRGBA colors_rgba[TERMINAL_PALETTE_SIZE];
-	GdkRGBA fg_rgba, bg_rgba, bold_rgba;
-	double alpha = 1.0;
-	int i;
-
-	for (i = 0; i < n_colors; i++)
-		gdk_color_to_rgba (&colors[i], 1.0, &colors_rgba[i]);
 
 	if (terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE) == TERMINAL_BACKGROUND_TRANSPARENT)
-		alpha = terminal_profile_get_property_double (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS);
+		bg_alpha = terminal_profile_get_property_double (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS);
+	bg.alpha = bg_alpha;
+
 	vte_terminal_set_colors (VTE_TERMINAL (screen),
-	                         gdk_color_to_rgba (&fg, 1.0, &fg_rgba),
-	                         gdk_color_to_rgba (&bg, alpha, &bg_rgba),
-	                         colors_rgba, n_colors);
-	if (bold_color)
+	                         &fg, &bg,
+	                         colors, n_colors);
+	if (bold_rgba)
 		vte_terminal_set_color_bold (VTE_TERMINAL (screen),
-		                             gdk_color_to_rgba (bold_color, 1.0, &bold_rgba));
+		                             bold_rgba);
 }
 
 void
@@ -1975,7 +1955,7 @@ terminal_screen_drag_data_received (GtkWidget        *widget,
 		case TARGET_COLOR:
 		{
 			guint16 *data = (guint16 *)selection_data_data;
-			GdkColor color;
+			GdkRGBA color;
 
 			/* We accept drops with the wrong format, since the KDE color
 			 * chooser incorrectly drops application/x-color with format 8.
@@ -1984,9 +1964,10 @@ terminal_screen_drag_data_received (GtkWidget        *widget,
 			if (selection_data_length != 8)
 				return;
 
-			color.red = data[0];
-			color.green = data[1];
-			color.blue = data[2];
+			color.red = (double) data[0] / 65535.;
+			color.green = (double) data[1] / 65535.;
+			color.blue = (double) data[2] / 65535.;
+			color.alpha = 1.;
 			/* FIXME: use opacity from data[3] */
 
 			g_object_set (priv->profile,

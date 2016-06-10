@@ -186,91 +186,88 @@ struct _TerminalProfilePrivate
 	guint forgotten : 1;
 };
 
-static const GdkColor terminal_palettes[TERMINAL_PALETTE_N_BUILTINS][TERMINAL_PALETTE_SIZE] =
+static const GdkRGBA terminal_palettes[TERMINAL_PALETTE_N_BUILTINS][TERMINAL_PALETTE_SIZE] =
 {
 	/* Tango palette */
 	{
-		{ 0, 0x0000, 0x0000, 0x0000 },
-		{ 0, 0xcccc, 0x0000, 0x0000 },
-		{ 0, 0x4e4e, 0x9a9a, 0x0606 },
-		{ 0, 0xc4c4, 0xa0a0, 0x0000 },
-		{ 0, 0x3434, 0x6565, 0xa4a4 },
-		{ 0, 0x7575, 0x5050, 0x7b7b },
-		{ 0, 0x0606, 0x9820, 0x9a9a },
-		{ 0, 0xd3d3, 0xd7d7, 0xcfcf },
-		{ 0, 0x5555, 0x5757, 0x5353 },
-		{ 0, 0xefef, 0x2929, 0x2929 },
-		{ 0, 0x8a8a, 0xe2e2, 0x3434 },
-		{ 0, 0xfcfc, 0xe9e9, 0x4f4f },
-		{ 0, 0x7272, 0x9f9f, 0xcfcf },
-		{ 0, 0xadad, 0x7f7f, 0xa8a8 },
-		{ 0, 0x3434, 0xe2e2, 0xe2e2 },
-		{ 0, 0xeeee, 0xeeee, 0xecec }
+		{ 0,         0,        0,         1 },
+		{ 0.8,       0,        0,         1 },
+		{ 0.305882,  0.603922, 0.0235294, 1 },
+		{ 0.768627,  0.627451, 0,         1 },
+		{ 0.203922,  0.396078, 0.643137,  1 },
+		{ 0.458824,  0.313725, 0.482353,  1 },
+		{ 0.0235294, 0.596078, 0.603922,  1 },
+		{ 0.827451,  0.843137, 0.811765,  1 },
+		{ 0.333333,  0.341176, 0.32549,   1 },
+		{ 0.937255,  0.160784, 0.160784,  1 },
+		{ 0.541176,  0.886275, 0.203922,  1 },
+		{ 0.988235,  0.913725, 0.309804,  1 },
+		{ 0.447059,  0.623529, 0.811765,  1 },
+		{ 0.678431,  0.498039, 0.658824,  1 },
+		{ 0.203922,  0.886275, 0.886275,  1 },
+		{ 0.933333,  0.933333, 0.92549,   1 },
 	},
 
 	/* Linux palette */
 	{
-		{ 0, 0x0000, 0x0000, 0x0000 },
-		{ 0, 0xaaaa, 0x0000, 0x0000 },
-		{ 0, 0x0000, 0xaaaa, 0x0000 },
-		{ 0, 0xaaaa, 0x5555, 0x0000 },
-		{ 0, 0x0000, 0x0000, 0xaaaa },
-		{ 0, 0xaaaa, 0x0000, 0xaaaa },
-		{ 0, 0x0000, 0xaaaa, 0xaaaa },
-		{ 0, 0xaaaa, 0xaaaa, 0xaaaa },
-		{ 0, 0x5555, 0x5555, 0x5555 },
-		{ 0, 0xffff, 0x5555, 0x5555 },
-		{ 0, 0x5555, 0xffff, 0x5555 },
-		{ 0, 0xffff, 0xffff, 0x5555 },
-		{ 0, 0x5555, 0x5555, 0xffff },
-		{ 0, 0xffff, 0x5555, 0xffff },
-		{ 0, 0x5555, 0xffff, 0xffff },
-		{ 0, 0xffff, 0xffff, 0xffff }
+		{ 0,        0,        0,        1 },
+		{ 0.666667, 0,        0,        1 },
+		{ 0,        0.666667, 0,        1 },
+		{ 0.666667, 0.333333, 0,        1 },
+		{ 0,        0,        0.666667, 1 },
+		{ 0.666667, 0,        0.666667, 1 },
+		{ 0,        0.666667, 0.666667, 1 },
+		{ 0.666667, 0.666667, 0.666667, 1 },
+		{ 0.333333, 0.333333, 0.333333, 1 },
+		{ 1,        0.333333, 0.333333, 1 },
+		{ 0.333333, 1,        0.333333, 1 },
+		{ 1,        1,        0.333333, 1 },
+		{ 0.333333, 0.333333, 1,        1 },
+		{ 1,        0.333333, 1,        1 },
+		{ 0.333333, 1,        1,        1 },
+		{ 1,        1,        1,        1 },
 	},
 
 	/* XTerm palette */
 	{
-		{ 0, 0x0000, 0x0000, 0x0000 },
-		{ 0, 0xcdcb, 0x0000, 0x0000 },
-		{ 0, 0x0000, 0xcdcb, 0x0000 },
-		{ 0, 0xcdcb, 0xcdcb, 0x0000 },
-		{ 0, 0x1e1a, 0x908f, 0xffff },
-		{ 0, 0xcdcb, 0x0000, 0xcdcb },
-		{ 0, 0x0000, 0xcdcb, 0xcdcb },
-		{ 0, 0xe5e2, 0xe5e2, 0xe5e2 },
-		{ 0, 0x4ccc, 0x4ccc, 0x4ccc },
-		{ 0, 0xffff, 0x0000, 0x0000 },
-		{ 0, 0x0000, 0xffff, 0x0000 },
-		{ 0, 0xffff, 0xffff, 0x0000 },
-		{ 0, 0x4645, 0x8281, 0xb4ae },
-		{ 0, 0xffff, 0x0000, 0xffff },
-		{ 0, 0x0000, 0xffff, 0xffff },
-		{ 0, 0xffff, 0xffff, 0xffff }
+		{ 0,        0,        0,        1 },
+		{ 0.803922, 0,        0,        1 },
+		{ 0,        0.803922, 0,        1 },
+		{ 0.803922, 0.803922, 0,        1 },
+		{ 0.117647, 0.564706, 1,        1 },
+		{ 0.803922, 0,        0.803922, 1 },
+		{ 0,        0.803922, 0.803922, 1 },
+		{ 0.898039, 0.898039, 0.898039, 1 },
+		{ 0.298039, 0.298039, 0.298039, 1 },
+		{ 1,        0,        0,        1 },
+		{ 0,        1,        0,        1 },
+		{ 1,        1,        0,        1 },
+		{ 0.27451,  0.509804, 0.705882, 1 },
+		{ 1,        0,        1,        1 },
+		{ 0,        1,        1,        1 },
+		{ 1,        1,        1,        1 },
 	},
 
 	/* RXVT palette */
 	{
-		{ 0, 0x0000, 0x0000, 0x0000 },
-		{ 0, 0xcdcd, 0x0000, 0x0000 },
-		{ 0, 0x0000, 0xcdcd, 0x0000 },
-		{ 0, 0xcdcd, 0xcdcd, 0x0000 },
-		{ 0, 0x0000, 0x0000, 0xcdcd },
-		{ 0, 0xcdcd, 0x0000, 0xcdcd },
-		{ 0, 0x0000, 0xcdcd, 0xcdcd },
-		{ 0, 0xfafa, 0xebeb, 0xd7d7 },
-		{ 0, 0x4040, 0x4040, 0x4040 },
-		{ 0, 0xffff, 0x0000, 0x0000 },
-		{ 0, 0x0000, 0xffff, 0x0000 },
-		{ 0, 0xffff, 0xffff, 0x0000 },
-		{ 0, 0x0000, 0x0000, 0xffff },
-		{ 0, 0xffff, 0x0000, 0xffff },
-		{ 0, 0x0000, 0xffff, 0xffff },
-		{ 0, 0xffff, 0xffff, 0xffff }
+		{ 0,        0,        0,        1 },
+		{ 0.803922, 0,        0,        1 },
+		{ 0,        0.803922, 0,        1 },
+		{ 0.803922, 0.803922, 0,        1 },
+		{ 0,        0,        0.803922, 1 },
+		{ 0.803922, 0,        0.803922, 1 },
+		{ 0,        0.803922, 0.803922, 1 },
+		{ 0.980392, 0.921569, 0.843137, 1 },
+		{ 0.25098,  0.25098,  0.25098,  1 },
+		{ 1, 0, 0, 1 },
+		{ 0, 1, 0, 1 },
+		{ 1, 1, 0, 1 },
+		{ 0, 0, 1, 1 },
+		{ 1, 0, 1, 1 },
+		{ 0, 1, 1, 1 },
+		{ 1, 1, 1, 1 },
 	}
 };
-
-static const GdkColor default_fg_color = { 0, 0, 0, 0 };
-static const GdkColor default_bg_color = { 0, 0xffff, 0xffff, 0xdddd };
 
 enum
 {
@@ -293,17 +290,32 @@ static GQuark gsettings_key_quark;
 
 G_DEFINE_TYPE (TerminalProfile, terminal_profile, G_TYPE_OBJECT);
 
+/* gdk_rgba_equal is too strict! */
 static gboolean
-palette_cmp (const GdkColor *ca,
-             const GdkColor *cb)
+rgba_equal (const GdkRGBA *a,
+            const GdkRGBA *b)
 {
-	guint i;
+    gdouble dr, dg, db, da;
 
-	for (i = 0; i < TERMINAL_PALETTE_SIZE; ++i)
-		if (!gdk_color_equal (&ca[i], &cb[i]))
-			return FALSE;
+    dr = a->red - b->red;
+    dg = a->green - b->green;
+    db = a->blue - b->blue;
+    da = a->alpha - b->alpha;
 
-	return TRUE;
+    return (dr * dr + dg * dg + db * db + da * da) < 1e-4;
+}
+
+static gboolean
+palette_cmp (const GdkRGBA *ca,
+             const GdkRGBA *cb)
+{
+    guint i;
+
+    for (i = 0; i < TERMINAL_PALETTE_SIZE; ++i)
+        if (!rgba_equal (&ca[i], &cb[i]))
+            return FALSE;
+
+    return TRUE;
 }
 
 static GParamSpec *
@@ -340,7 +352,7 @@ get_prop_value_from_prop_name (TerminalProfile *profile,
 
 static void
 set_value_from_palette (GValue *ret_value,
-                        const GdkColor *colors,
+                        const GdkRGBA *colors,
                         guint n_colors)
 {
 	GValueArray *array;
@@ -388,7 +400,7 @@ values_equal (GParamSpec *pspec,
 		return TRUE;
 
 	if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
-		return gdk_color_equal (g_value_get_boxed (va), g_value_get_boxed (vb));
+		return rgba_equal (g_value_get_boxed (va), g_value_get_boxed (vb));
 
 	if (G_PARAM_SPEC_VALUE_TYPE (pspec) == PANGO_TYPE_FONT_DESCRIPTION)
 		return pango_font_description_equal (g_value_get_boxed (va), g_value_get_boxed (vb));
@@ -406,7 +418,7 @@ values_equal (GParamSpec *pspec,
 			return FALSE;
 
 		for (i = 0; i < ara->n_values; ++i)
-			if (!gdk_color_equal (g_value_get_boxed (g_value_array_get_nth (ara, i)),
+			if (!rgba_equal (g_value_get_boxed (g_value_array_get_nth (ara, i)),
 			                      g_value_get_boxed (g_value_array_get_nth (arb, i))))
 				return FALSE;
 
@@ -575,12 +587,12 @@ terminal_profile_gsettings_notify_cb (GSettings *settings,
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
 	{
-		GdkColor color;
+		GdkRGBA color;
 
 		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
 			goto out;
 
-		if (!gdk_color_parse (g_variant_get_string (settings_value, NULL), &color))
+		if (!gdk_rgba_parse (&color, g_variant_get_string (settings_value, NULL)))
 			goto out;
 
 		g_value_set_boxed (&value, &color);
@@ -612,7 +624,7 @@ terminal_profile_gsettings_notify_cb (GSettings *settings,
 	         G_PARAM_SPEC_VALUE_TYPE (G_PARAM_SPEC_VALUE_ARRAY (pspec)->element_spec) == GDK_TYPE_COLOR)
 	{
 		char **color_strings;
-		GdkColor *colors;
+		GdkRGBA *colors;
 		int n_colors, i;
 
 		if (!g_variant_is_of_type (settings_value, G_VARIANT_TYPE_STRING))
@@ -623,10 +635,10 @@ terminal_profile_gsettings_notify_cb (GSettings *settings,
 			goto out;
 
 		n_colors = g_strv_length (color_strings);
-		colors = g_new0 (GdkColor, n_colors);
+		colors = g_new0 (GdkRGBA, n_colors);
 		for (i = 0; i < n_colors; ++i)
 		{
-			if (!gdk_color_parse (color_strings[i], &colors[i]))
+			if (!gdk_rgba_parse (&colors[i], color_strings[i]))
 				continue; /* ignore errors */
 		}
 		g_strfreev (color_strings);
@@ -734,7 +746,7 @@ terminal_profile_gsettings_changeset_add (TerminalProfile *profile,
 	}
 	else if (G_PARAM_SPEC_VALUE_TYPE (pspec) == GDK_TYPE_COLOR)
 	{
-		GdkColor *color;
+		GdkRGBA *color;
 		char str[16];
 
 		color = g_value_get_boxed (value);
@@ -743,9 +755,9 @@ terminal_profile_gsettings_changeset_add (TerminalProfile *profile,
 
 		g_snprintf (str, sizeof (str),
 		            "#%04X%04X%04X",
-		            color->red,
-		            color->green,
-		            color->blue);
+		            (guint) (color->red * 65535),
+		            (guint) (color->green * 65535),
+		            (guint) (color->blue * 65535));
 
 		g_settings_set_string (changeset, key, str);
 	}
@@ -785,7 +797,7 @@ terminal_profile_gsettings_changeset_add (TerminalProfile *profile,
 		string = g_string_sized_new (n_colors * (1 /* # */ + 3 * 4) + n_colors /* : separators and terminating \0 */);
 		for (i = 0; i < n_colors; ++i)
 		{
-			GdkColor *color;
+			GdkRGBA *color;
 
 			if (i > 0)
 				g_string_append_c (string, ':');
@@ -796,9 +808,9 @@ terminal_profile_gsettings_changeset_add (TerminalProfile *profile,
 
 			g_string_append_printf (string,
 			                        "#%04X%04X%04X",
-			                        color->red,
-			                        color->green,
-			                        color->blue);
+			                        (guint) (color->red * 65535),
+			                        (guint) (color->green * 65535),
+			                        (guint) (color->blue * 65535));
 		}
 
 		g_settings_set_string (changeset, key, string->str);
@@ -1544,7 +1556,7 @@ terminal_profile_reset_property (TerminalProfile *profile,
 
 gboolean
 terminal_profile_get_palette (TerminalProfile *profile,
-                              GdkColor *colors,
+                              GdkRGBA *colors,
                               guint *n_colors)
 {
 	TerminalProfilePrivate *priv;
@@ -1562,7 +1574,7 @@ terminal_profile_get_palette (TerminalProfile *profile,
 	n = MIN (array->n_values, *n_colors);
 	for (i = 0; i < n; ++i)
 	{
-		GdkColor *color = g_value_get_boxed (g_value_array_get_nth (array, i));
+		GdkRGBA *color = g_value_get_boxed (g_value_array_get_nth (array, i));
 		if (!color)
 			continue; /* shouldn't happen!! */
 
@@ -1577,7 +1589,7 @@ gboolean
 terminal_profile_get_palette_is_builtin (TerminalProfile *profile,
         guint *n)
 {
-	GdkColor colors[TERMINAL_PALETTE_SIZE];
+	GdkRGBA colors[TERMINAL_PALETTE_SIZE];
 	guint n_colors;
 	guint i;
 
@@ -1613,12 +1625,12 @@ terminal_profile_set_palette_builtin (TerminalProfile *profile,
 gboolean
 terminal_profile_modify_palette_entry (TerminalProfile *profile,
                                        guint            i,
-                                       const GdkColor  *color)
+                                       const GdkRGBA   *color)
 {
 	TerminalProfilePrivate *priv = profile->priv;
 	GValueArray *array;
 	GValue *value;
-	GdkColor *old_color;
+	GdkRGBA *old_color;
 
 	array = g_value_get_boxed (g_value_array_get_nth (priv->properties, PROP_PALETTE));
 	if (!array ||
@@ -1628,7 +1640,7 @@ terminal_profile_modify_palette_entry (TerminalProfile *profile,
 	value = g_value_array_get_nth (array, i);
 	old_color = g_value_get_boxed (value);
 	if (!old_color ||
-	        !gdk_color_equal (old_color, color))
+	        !rgba_equal (old_color, color))
 	{
 		g_value_set_boxed (value, color);
 		g_object_notify (G_OBJECT (profile), TERMINAL_PROFILE_PALETTE);
