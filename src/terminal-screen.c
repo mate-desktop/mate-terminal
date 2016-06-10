@@ -286,7 +286,11 @@ terminal_screen_get_window (TerminalScreen *screen)
 static void
 terminal_screen_realize (GtkWidget *widget)
 {
-	GTK_WIDGET_CLASS (terminal_screen_parent_class)->realize (widget);
+    TerminalScreen *screen = TERMINAL_SCREEN (widget);
+
+    GTK_WIDGET_CLASS (terminal_screen_parent_class)->realize (widget);
+
+    terminal_screen_set_font (screen);
 }
 
 static void
