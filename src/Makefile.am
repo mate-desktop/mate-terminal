@@ -23,6 +23,8 @@ mate_terminal_SOURCES= \
 	terminal-accels.h \
 	terminal-app.c \
 	terminal-app.h \
+	terminal-close-button.h \
+	terminal-close-button.c \
 	terminal-debug.c \
 	terminal-debug.h \
 	terminal-encoding.c \

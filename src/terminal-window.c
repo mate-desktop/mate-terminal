@@ -2131,16 +2131,6 @@ terminal_window_class_init (TerminalWindowClass *klass)
     widget_class->screen_changed = terminal_window_screen_changed;
 
     g_type_class_add_private (object_class, sizeof (TerminalWindowPrivate));
-
-    gtk_rc_parse_string ("style \"mate-terminal-tab-close-button-style\"\n"
-                         "{\n"
-                         "GtkWidget::focus-padding = 0\n"
-                         "GtkWidget::focus-line-width = 0\n"
-                         "xthickness = 0\n"
-                         "ythickness = 0\n"
-                         "}\n"
-                         "widget \"*.mate-terminal-tab-close-button\" style \"mate-terminal-tab-close-button-style\"");
-
 }
 
 static void
