@@ -519,7 +519,7 @@ reset_compat_defaults_cb (GtkWidget       *button,
  */
 
 static void
-init_color_scheme_menu (GtkWidget *combo_box)
+init_color_scheme_menu (GtkWidget *widget)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeIter iter;
@@ -535,13 +535,12 @@ init_color_scheme_menu (GtkWidget *combo_box)
 	                                  0, _("Custom"),
 	                                  -1);
 
-	gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
+	gtk_combo_box_set_model (GTK_COMBO_BOX (widget), GTK_TREE_MODEL (store));
 	g_object_unref (store);
 
 	renderer = gtk_cell_renderer_text_new ();
-/*FIXME, avoid double loading of color schemes names from UI file */
-/*	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), renderer, TRUE);
-	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), renderer, "text", 0, NULL);*/
+	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (widget), renderer, TRUE);
+	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (widget), renderer, "text", 0, NULL);
 }
 
 static char*
