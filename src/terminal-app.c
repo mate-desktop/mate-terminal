@@ -692,10 +692,7 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 	                        GTK_STOCK_DELETE,
 	                        GTK_RESPONSE_ACCEPT,
 	                        NULL);
-	gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog),
-	        GTK_RESPONSE_ACCEPT,
-	        GTK_RESPONSE_REJECT,
-	        -1);
+
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog),
 	                                 GTK_RESPONSE_ACCEPT);
 
@@ -1245,10 +1242,6 @@ terminal_app_new_profile (TerminalApp     *app,
 
 		gtk_label_set_mnemonic_widget (GTK_LABEL (base_label), combo);
 
-		gtk_dialog_set_alternative_button_order (GTK_DIALOG (app->new_profile_dialog),
-		        GTK_RESPONSE_ACCEPT,
-		        GTK_RESPONSE_CANCEL,
-		        -1);
 		gtk_dialog_set_default_response (GTK_DIALOG (app->new_profile_dialog), GTK_RESPONSE_ACCEPT);
 		gtk_dialog_set_response_sensitive (GTK_DIALOG (app->new_profile_dialog), GTK_RESPONSE_ACCEPT, FALSE);
 	}
