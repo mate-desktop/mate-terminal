@@ -1208,12 +1208,12 @@ terminal_app_new_profile (TerminalApp     *app,
 {
 	if (app->new_profile_dialog == NULL)
 	{
-		GtkWidget *create_button, *table, *name_label, *name_entry, *base_label, *combo;
+		GtkWidget *create_button, *grid, *name_label, *name_entry, *base_label, *combo;
 
 		if (!terminal_util_load_builder_file ("profile-new-dialog.ui",
 		                                      "new-profile-dialog", &app->new_profile_dialog,
 		                                      "new-profile-create-button", &create_button,
-		                                      "new-profile-table", &table,
+		                                      "new-profile-grid", &grid,
 		                                      "new-profile-name-label", &name_label,
 		                                      "new-profile-name-entry", &name_entry,
 		                                      "new-profile-base-label", &base_label,
@@ -1236,7 +1236,7 @@ terminal_app_new_profile (TerminalApp     *app,
 
 		/* the base profile option menu */
 		combo = profile_combo_box_new (app);
-		gtk_table_attach_defaults (GTK_TABLE (table), combo, 1, 2, 1, 2);
+		gtk_grid_attach (GTK_GRID (grid), combo, 2, 1, 1, 1);
 		g_object_set_data (G_OBJECT (app->new_profile_dialog), "base_option_menu", combo);
 		terminal_util_set_atk_name_description (combo, NULL, _("Choose base profile"));
 
