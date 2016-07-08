@@ -1568,7 +1568,7 @@ terminal_screen_button_press (GtkWidget      *widget,
 
 	state = event->state & gtk_accelerator_get_default_mod_mask ();
 
-	matched_string = terminal_screen_check_match (screen, event, &matched_flavor);
+	matched_string = terminal_screen_check_match (screen, (GdkEvent*)event, &matched_flavor);
 
 	if (matched_string != NULL &&
 	        (event->button == 1 || event->button == 2) &&
