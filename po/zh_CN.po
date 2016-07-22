@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"POT-Creation-Date: 2016-07-20 12:55+0300\n"
 "PO-Revision-Date: 2016-03-26 12:39+0000\n"
 "Last-Translator: liushuyu011 <liushuyu011@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
@@ -43,13 +43,13 @@ msgid ""
 msgstr "<p> MATE 终端是一个终端模拟应用程序，让你可在 MATE 桌面环境下访问 UNIX 命令提示符。MATE 终端可模拟 X 协会的 xterm 程序。它还支持透明背景、在同一窗口下开启多个终端模拟器（标签页）以及 URL 浏览。</p> <p> MATE 终端是一个 GNOME Terminal 的 fork，也是 MATE 桌面环境的一部分。欲知更多关于 MATE 及 MATE 终端的信息，请访问项目主页。</p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4140
+#: ../src/terminal-window.c:3955
 msgid "MATE Terminal"
 msgstr "MATE 终端"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2076
+#: ../src/terminal-window.c:1998
 msgid "Terminal"
 msgstr "终端"
 
@@ -988,48 +988,48 @@ msgstr "设为普通字体的快捷键。以 GTK+ 资源文件所用格式给出
 msgid "Black on light yellow"
 msgstr "浅黄背景黑字"
 
-#: ../src/profile-editor.c:48
+#: ../src/profile-editor.c:49
 msgid "Black on white"
 msgstr "白底黑字"
 
-#: ../src/profile-editor.c:52
+#: ../src/profile-editor.c:54
 msgid "Gray on black"
 msgstr "黑底灰字"
 
-#: ../src/profile-editor.c:56
+#: ../src/profile-editor.c:59
 msgid "Green on black"
 msgstr "黑底绿字"
 
-#: ../src/profile-editor.c:60
+#: ../src/profile-editor.c:64
 msgid "White on black"
 msgstr "黑底白字"
 
-#: ../src/profile-editor.c:512
+#: ../src/profile-editor.c:487
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "分析命令时出错：%s"
 
-#: ../src/profile-editor.c:529
+#: ../src/profile-editor.c:504
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "编辑配置文件“%s”"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:562 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:535 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "自定义"
 
-#: ../src/profile-editor.c:626
+#: ../src/profile-editor.c:585
 msgid "Images"
 msgstr "图像"
 
-#: ../src/profile-editor.c:770
+#: ../src/profile-editor.c:729
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "选择调色板颜色 %d"
 
-#: ../src/profile-editor.c:774
+#: ../src/profile-editor.c:733
 #, c-format
 msgid "Palette entry %d"
 msgstr "调色板项 %d"
@@ -1382,28 +1382,28 @@ msgid "_Text color:"
 msgstr "文本颜色(_T)："
 
 #: ../src/profile-preferences.ui.h:58
-msgid "_Background color:"
-msgstr "背景颜色(_B)："
-
-#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "选择终端背景颜色"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Text Color"
 msgstr "选择终端文本颜色"
 
+#: ../src/profile-preferences.ui.h:60
+msgid "_Background color:"
+msgstr "背景颜色(_B)："
+
 #: ../src/profile-preferences.ui.h:61
+msgid "Bol_d color:"
+msgstr "粗体颜色(_D)："
+
+#: ../src/profile-preferences.ui.h:62
 msgid "_Underline color:"
 msgstr "下划线颜色(_U)："
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "_Same as text color"
 msgstr "与文本颜色相同(_S)"
-
-#: ../src/profile-preferences.ui.h:63
-msgid "Bol_d color:"
-msgstr "粗体颜色(_D)："
 
 #: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
@@ -1414,14 +1414,14 @@ msgid "Built-in _schemes:"
 msgstr "内置方案(_S)："
 
 #: ../src/profile-preferences.ui.h:66
+msgid "Color p_alette:"
+msgstr "调色板(_A)："
+
+#: ../src/profile-preferences.ui.h:67
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>注意：</b>终端应用程序可用下列颜色。</i></small>"
-
-#: ../src/profile-preferences.ui.h:67
-msgid "Color p_alette:"
-msgstr "调色板(_A)："
 
 #: ../src/profile-preferences.ui.h:68
 msgid "Colors"
@@ -1476,24 +1476,24 @@ msgid "_Scrollbar is:"
 msgstr "滚动条(_S)："
 
 #: ../src/profile-preferences.ui.h:81
-msgid "Scroll_back:"
-msgstr "回滚(_B)："
+msgid "Scroll on _output"
+msgstr "输出时滚动(_O)"
 
 #: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _keystroke"
 msgstr "击键时滚动(_K)"
 
 #: ../src/profile-preferences.ui.h:83
-msgid "Scroll on _output"
-msgstr "输出时滚动(_O)"
-
-#: ../src/profile-preferences.ui.h:84
-msgid "_Unlimited"
-msgstr "不限制(_U)"
-
-#: ../src/profile-preferences.ui.h:85
 msgid "lines"
 msgstr "行"
+
+#: ../src/profile-preferences.ui.h:84
+msgid "Scroll_back:"
+msgstr "回滚(_B)："
+
+#: ../src/profile-preferences.ui.h:85
+msgid "_Unlimited"
+msgstr "不限制(_U)"
 
 #: ../src/profile-preferences.ui.h:86
 msgid "Scrolling"
@@ -1587,7 +1587,7 @@ msgstr "缩小"
 msgid "Normal Size"
 msgstr "普通大小"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
 msgid "Set Title"
 msgstr "设置标题"
 
@@ -1712,45 +1712,45 @@ msgstr "动作(_A)"
 msgid "Shortcut _Key"
 msgstr "快捷键(_K)"
 
-#: ../src/terminal-app.c:477
+#: ../src/terminal-app.c:542
 msgid "Click button to choose profile"
 msgstr "单击此按钮以选择配置文件"
 
-#: ../src/terminal-app.c:560
+#: ../src/terminal-app.c:625
 msgid "Profile list"
 msgstr "配置文件列表"
 
-#: ../src/terminal-app.c:621
+#: ../src/terminal-app.c:686
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "删除配置文件“%s”吗？"
 
-#: ../src/terminal-app.c:637
+#: ../src/terminal-app.c:699
 msgid "Delete Profile"
 msgstr "删除配置文件"
 
-#: ../src/terminal-app.c:1084
+#: ../src/terminal-app.c:1146
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "您已经有名为“%s”的配置文件。您是否想要使用相同的名称创建另外一个配置文件？"
 
-#: ../src/terminal-app.c:1179
+#: ../src/terminal-app.c:1241
 msgid "Choose base profile"
 msgstr "选择基础配置文件"
 
-#: ../src/terminal-app.c:1771
+#: ../src/terminal-app.c:1829
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "不存在配置文件“%s”，使用默认配置文件\n"
 
-#: ../src/terminal-app.c:1795
+#: ../src/terminal-app.c:1853
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "无效的几何属性字符串“%s”\n"
 
-#: ../src/terminal-app.c:2001
+#: ../src/terminal-app.c:2059
 msgid "User Defined"
 msgstr "用户定义"
 
@@ -2100,33 +2100,33 @@ msgstr "显示每个终端的选项"
 msgid "Unnamed"
 msgstr "未命名"
 
-#: ../src/terminal-screen.c:1586
+#: ../src/terminal-screen.c:1460
 msgid "_Profile Preferences"
 msgstr "配置文件首选项(_P)"
 
-#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
+#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: ../src/terminal-screen.c:1590
+#: ../src/terminal-screen.c:1464
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: ../src/terminal-screen.c:1992
+#: ../src/terminal-screen.c:1842
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子进程以状态%d正常的退出。"
 
-#: ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1847
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子进程被信号%d中断。"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1852
 msgid "The child process was terminated."
 msgstr "子进程被中断。"
 
-#: ../src/terminal-tab-label.c:156
+#: ../src/terminal-tab-label.c:137
 msgid "Close tab"
 msgstr "关闭标签页"
 
@@ -2134,16 +2134,16 @@ msgstr "关闭标签页"
 msgid "Switch to this tab"
 msgstr "切换到这一标签页"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:161
 msgid "There was an error displaying help"
 msgstr "显示帮助时出错"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:233
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "无法打开地址“%s”"
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:341
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2151,7 +2151,7 @@ msgid ""
 "any later version."
 msgstr "MATE 终端是自由软件；您可以在自由软件基金会发布的 GNU 通用公共许可证下重新发布或修改它；许可证应使用第三版本或您所选择的更新的版本。"
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2159,7 +2159,7 @@ msgid ""
 "more details."
 msgstr "发布 MATE 终端的目的是希望它能够在一定程度上帮到您。但我们并不为它提供任何形式的担保，也无法保证它可以在特定用途中得到您希望的结果。请参看 GNU GPL 许可中的更多细节。"
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:349
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2169,7 +2169,7 @@ msgstr "您应该在收到 MATE Web 浏览器的同时收到了 GNU GPL 协议�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:479
+#: ../src/terminal-window.c:476
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2177,259 +2177,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:485
+#: ../src/terminal-window.c:482
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1668
 msgid "_File"
 msgstr "文件(_F)"
 
-#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
+#: ../src/terminal-window.c:1923
 msgid "Open _Terminal"
 msgstr "打开终端(_T)"
 
-#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
-#: ../src/terminal-window.c:2004
+#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
+#: ../src/terminal-window.c:1928
 msgid "Open Ta_b"
 msgstr "打开标签(_B)"
 
-#: ../src/terminal-window.c:1747
+#: ../src/terminal-window.c:1671
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/terminal-window.c:1748
+#: ../src/terminal-window.c:1672
 msgid "_View"
 msgstr "查看(_V)"
 
-#: ../src/terminal-window.c:1749
+#: ../src/terminal-window.c:1673
 msgid "_Search"
 msgstr "搜索(_S)"
 
-#: ../src/terminal-window.c:1750
+#: ../src/terminal-window.c:1674
 msgid "_Terminal"
 msgstr "终端(_T)"
 
-#: ../src/terminal-window.c:1751
+#: ../src/terminal-window.c:1675
 msgid "Ta_bs"
 msgstr "标签(_B)"
 
-#: ../src/terminal-window.c:1752
+#: ../src/terminal-window.c:1676
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1692
 msgid "New _Profile…"
 msgstr "新建配置文件(_P)..."
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1697
 msgid "_Save Contents"
 msgstr "保存内容(_S)"
 
-#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
 msgid "C_lose Tab"
 msgstr "关闭标签页(_L)"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1707
 msgid "_Close Window"
 msgstr "关闭窗口(_C)"
 
-#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
+#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
 msgid "Paste _Filenames"
 msgstr "粘贴文件名(_F)"
 
-#: ../src/terminal-window.c:1810
+#: ../src/terminal-window.c:1734
 msgid "P_rofiles…"
 msgstr "配置文件(_R)..."
 
-#: ../src/terminal-window.c:1815
+#: ../src/terminal-window.c:1739
 msgid "_Keyboard Shortcuts…"
 msgstr "键盘快捷键(_K)..."
 
-#: ../src/terminal-window.c:1820
+#: ../src/terminal-window.c:1744
 msgid "Pr_ofile Preferences"
 msgstr "配置文件首选项(_O)"
 
-#: ../src/terminal-window.c:1844
+#: ../src/terminal-window.c:1768
 msgid "_Find..."
 msgstr "查找(_F)..."
 
-#: ../src/terminal-window.c:1849
+#: ../src/terminal-window.c:1773
 msgid "Find Ne_xt"
 msgstr "查找下一个(_X)"
 
-#: ../src/terminal-window.c:1854
+#: ../src/terminal-window.c:1778
 msgid "Find Pre_vious"
 msgstr "查找上一个(_V)"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1783
 msgid "_Clear Highlight"
 msgstr "清除高亮(_C)"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:1789
 msgid "Go to _Line..."
 msgstr "跳转到指定行(_L)..."
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1794
 msgid "_Incremental Search..."
 msgstr "增量搜索(_I)..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:1801
 msgid "Change _Profile"
 msgstr "更改配置文件(_P)"
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1803
 msgid "_Previous Profile"
 msgstr "上个配置:(_P)"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1808
 msgid "_Next Profile"
 msgstr "下个配置:(_N)"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1813
 msgid "_Set Title…"
 msgstr "设置标题(_S)..."
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1817
 msgid "Set _Character Encoding"
 msgstr "设定字符编码(_C)"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1819
 msgid "_Reset"
 msgstr "复位(_R)"
 
-#: ../src/terminal-window.c:1900
+#: ../src/terminal-window.c:1824
 msgid "Reset and C_lear"
 msgstr "复位并清屏(_L)"
 
-#: ../src/terminal-window.c:1907
+#: ../src/terminal-window.c:1831
 msgid "_Add or Remove…"
 msgstr "添加或删除(_A)..."
 
-#: ../src/terminal-window.c:1914
+#: ../src/terminal-window.c:1838
 msgid "_Previous Tab"
 msgstr "前一标签页(_P)"
 
-#: ../src/terminal-window.c:1919
+#: ../src/terminal-window.c:1843
 msgid "_Next Tab"
 msgstr "后一标签页(_N)"
 
-#: ../src/terminal-window.c:1924
+#: ../src/terminal-window.c:1848
 msgid "Move Tab _Left"
 msgstr "标签页左移(_L)"
 
-#: ../src/terminal-window.c:1929
+#: ../src/terminal-window.c:1853
 msgid "Move Tab _Right"
 msgstr "标签页右移(_R)"
 
-#: ../src/terminal-window.c:1934
+#: ../src/terminal-window.c:1858
 msgid "_Detach tab"
 msgstr "分离标签页(_D)"
 
-#: ../src/terminal-window.c:1941
+#: ../src/terminal-window.c:1865
 msgid "_Contents"
 msgstr "目录(_C)"
 
-#: ../src/terminal-window.c:1946
+#: ../src/terminal-window.c:1870
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1877
 msgid "_Send Mail To…"
 msgstr "发送邮件给(_S)..."
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1882
 msgid "_Copy E-mail Address"
 msgstr "复制电子邮件地址(_C)"
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1887
 msgid "C_all To…"
 msgstr "呼叫(_A)..."
 
-#: ../src/terminal-window.c:1968
+#: ../src/terminal-window.c:1892
 msgid "_Copy Call Address"
 msgstr "复制呼叫地址(_C)"
 
-#: ../src/terminal-window.c:1973
+#: ../src/terminal-window.c:1897
 msgid "_Open Link"
 msgstr "打开链接(_O)"
 
-#: ../src/terminal-window.c:1978
+#: ../src/terminal-window.c:1902
 msgid "_Copy Link Address"
 msgstr "复制链接地址(_C)"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1906
 msgid "P_rofiles"
 msgstr "配置文件(_R)"
 
-#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
+#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
 msgid "C_lose Window"
 msgstr "关闭窗口(_L)"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:1943
 msgid "L_eave Full Screen"
 msgstr "退出全屏(_E)"
 
-#: ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1947
 msgid "_Input Methods"
 msgstr "输入法(_I)"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:1954
 msgid "Show _Menubar"
 msgstr "显示菜单栏(_M)"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:1960
 msgid "_Full Screen"
 msgstr "全屏(_F)"
 
-#: ../src/terminal-window.c:3281
+#: ../src/terminal-window.c:3121
 msgid "Close this window?"
 msgstr "关闭这个窗口？"
 
-#: ../src/terminal-window.c:3281
+#: ../src/terminal-window.c:3121
 msgid "Close this terminal?"
 msgstr "关闭此终端？"
 
-#: ../src/terminal-window.c:3285
+#: ../src/terminal-window.c:3125
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "在这个窗口的一些终端中仍然有进程在运行。关闭该窗口将杀死所有这些进程。"
 
-#: ../src/terminal-window.c:3289
+#: ../src/terminal-window.c:3129
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "该终端中仍然有一个进程在运行。关闭终端将杀死该进程。"
 
-#: ../src/terminal-window.c:3294
+#: ../src/terminal-window.c:3134
 msgid "C_lose Terminal"
 msgstr "关闭终端(_L)"
 
-#: ../src/terminal-window.c:3373
+#: ../src/terminal-window.c:3200
 msgid "Could not save contents"
 msgstr "无法保存内容"
 
-#: ../src/terminal-window.c:3397
+#: ../src/terminal-window.c:3224
 msgid "Save as..."
 msgstr "另存为..."
 
-#: ../src/terminal-window.c:3928
+#: ../src/terminal-window.c:3743
 msgid "_Title:"
 msgstr "标题(_T)："
 
-#: ../src/terminal-window.c:4123
+#: ../src/terminal-window.c:3938
 msgid "Contributors:"
 msgstr "贡献者："
 
-#: ../src/terminal-window.c:4142
+#: ../src/terminal-window.c:3957
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE 桌面的终端模拟器"
 
-#: ../src/terminal-window.c:4149
+#: ../src/terminal-window.c:3964
 msgid "translator-credits"
 msgstr "He Qiangqiang <carton@linux.net.cn>, 2002\nFunda Wang <fundawang@linux.net.cn>, 2003\n2004甘露(Gan Lu) <rhythm.gan@gmail.com>, 2009\nFan Qijiang <fqj1994@linux.com>,2010"

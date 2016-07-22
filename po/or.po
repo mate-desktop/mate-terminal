@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-09 14:42+0300\n"
+"POT-Creation-Date: 2016-07-20 12:55+0300\n"
 "PO-Revision-Date: 2016-03-09 11:33+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Oriya (http://www.transifex.com/mate/MATE/language/or/)\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4140
+#: ../src/terminal-window.c:3955
 msgid "MATE Terminal"
 msgstr "MATE ଟର୍ମିନାଲ"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2076
+#: ../src/terminal-window.c:1998
 msgid "Terminal"
 msgstr "ଟର୍ମିନାଲ"
 
@@ -978,48 +978,48 @@ msgstr ""
 msgid "Black on light yellow"
 msgstr "ଫିକା ହଳଦିଆରେ କଳା"
 
-#: ../src/profile-editor.c:48
+#: ../src/profile-editor.c:49
 msgid "Black on white"
 msgstr "ଧଳାରେ କଳା"
 
-#: ../src/profile-editor.c:52
+#: ../src/profile-editor.c:54
 msgid "Gray on black"
 msgstr "କଳାରେ ଧୂସର"
 
-#: ../src/profile-editor.c:56
+#: ../src/profile-editor.c:59
 msgid "Green on black"
 msgstr "କଳାରେ ସବୁଜ"
 
-#: ../src/profile-editor.c:60
+#: ../src/profile-editor.c:64
 msgid "White on black"
 msgstr "କଳାରେ ଧଳା"
 
-#: ../src/profile-editor.c:512
+#: ../src/profile-editor.c:487
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "ନିର୍ଦ୍ଦେଶ ବିଶ୍ଳେଷଣ କରିବାରେ ତ୍ରୁଟି: %s"
 
-#: ../src/profile-editor.c:529
+#: ../src/profile-editor.c:504
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "ରୂପରେଖ “%s” କୁ ସମ୍ପାଦନ କରନ୍ତୁ"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:562 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:535 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
 msgstr "ଇଚ୍ଛାମୁତାବକ"
 
-#: ../src/profile-editor.c:626
+#: ../src/profile-editor.c:585
 msgid "Images"
 msgstr "ପ୍ରତିଛବି"
 
-#: ../src/profile-editor.c:770
+#: ../src/profile-editor.c:729
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "ବର୍ଣ୍ଣଫଳକ ରଙ୍ଗ ବାଛ %d"
 
-#: ../src/profile-editor.c:774
+#: ../src/profile-editor.c:733
 #, c-format
 msgid "Palette entry %d"
 msgstr "ବର୍ଣ୍ଣଫଳକ ପ୍ରବେଶ %d"
@@ -1372,28 +1372,28 @@ msgid "_Text color:"
 msgstr "ଟେକ୍ସଟ ରଙ୍ଗ (_T):"
 
 #: ../src/profile-preferences.ui.h:58
-msgid "_Background color:"
-msgstr "ପ୍ରୁଷ୍ଠଭୂମି ରଙ୍ଗ (_B):"
-
-#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "ଟର୍ମିନାଲ ପୃଷ୍ଠଭୂମି ରଙ୍ଗ ବାଛ"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Text Color"
 msgstr "ଟର୍ମିନାଲ ଟେକ୍ସଟ ରଙ୍ଗ ବାଛ"
 
+#: ../src/profile-preferences.ui.h:60
+msgid "_Background color:"
+msgstr "ପ୍ରୁଷ୍ଠଭୂମି ରଙ୍ଗ (_B):"
+
 #: ../src/profile-preferences.ui.h:61
+msgid "Bol_d color:"
+msgstr "କଠିନ ରଙ୍ଗ (_d):"
+
+#: ../src/profile-preferences.ui.h:62
 msgid "_Underline color:"
 msgstr "ରେଖାଙ୍କିତ ରଙ୍ଗ (_U):"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "_Same as text color"
 msgstr "ପାଠ୍ୟ ରଙ୍ଗ ପରି ସମାନ (_S)"
-
-#: ../src/profile-preferences.ui.h:63
-msgid "Bol_d color:"
-msgstr "କଠିନ ରଙ୍ଗ (_d):"
 
 #: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
@@ -1404,14 +1404,14 @@ msgid "Built-in _schemes:"
 msgstr "ଅନ୍ତଃନିର୍ମିତ ଯୋଜନାଗୁଡିକ (_s):"
 
 #: ../src/profile-preferences.ui.h:66
+msgid "Color p_alette:"
+msgstr "ରଙ୍ଗ ଥାଳି (_a):"
+
+#: ../src/profile-preferences.ui.h:67
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>ଟାପ୍ପଣୀ:</b> ଟର୍ମିନାଲ ପ୍ରଯୋଗ ଗୁଡିକରେ ସେମାନଙ୍କ ପାଇଁ ଏହି ରଙ୍ଗ ଗୁଡିକ ଉପଲବ୍ଧ ରହିଅଛି।</i></small>"
-
-#: ../src/profile-preferences.ui.h:67
-msgid "Color p_alette:"
-msgstr "ରଙ୍ଗ ଥାଳି (_a):"
 
 #: ../src/profile-preferences.ui.h:68
 msgid "Colors"
@@ -1466,24 +1466,24 @@ msgid "_Scrollbar is:"
 msgstr "ସ୍କ୍ରୋଲବାର ହେଉଛି (_S):"
 
 #: ../src/profile-preferences.ui.h:81
-msgid "Scroll_back:"
-msgstr "ପଛକୁ ବଢ଼ାନ୍ତୁ (_b):"
+msgid "Scroll on _output"
+msgstr "ଫଳାଫଳ ଉପରେ ଟାଣନ୍ତୁ (_o)"
 
 #: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _keystroke"
 msgstr "କି ଆଘାତରେ ସ୍କ୍ରୋଲ କର (_k)"
 
 #: ../src/profile-preferences.ui.h:83
-msgid "Scroll on _output"
-msgstr "ଫଳାଫଳ ଉପରେ ଟାଣନ୍ତୁ (_o)"
-
-#: ../src/profile-preferences.ui.h:84
-msgid "_Unlimited"
-msgstr "ଅସୀମିତ (_U)"
-
-#: ../src/profile-preferences.ui.h:85
 msgid "lines"
 msgstr "ଧାଡ଼ିଗୁଡ଼ିକ"
+
+#: ../src/profile-preferences.ui.h:84
+msgid "Scroll_back:"
+msgstr "ପଛକୁ ବଢ଼ାନ୍ତୁ (_b):"
+
+#: ../src/profile-preferences.ui.h:85
+msgid "_Unlimited"
+msgstr "ଅସୀମିତ (_U)"
 
 #: ../src/profile-preferences.ui.h:86
 msgid "Scrolling"
@@ -1577,7 +1577,7 @@ msgstr "ସାନ କରନ୍ତୁ"
 msgid "Normal Size"
 msgstr "ସାଧାରଣ ଆକାର"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3907
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
 msgid "Set Title"
 msgstr "ଶୀର୍ଷକ ସ୍ଥିର କର"
 
@@ -1702,45 +1702,45 @@ msgstr "କାର୍ଯ୍ଯ (_A)"
 msgid "Shortcut _Key"
 msgstr "ସଂକ୍ଷିପ୍ତ ପଥ ଚାବି (_K)"
 
-#: ../src/terminal-app.c:477
+#: ../src/terminal-app.c:542
 msgid "Click button to choose profile"
 msgstr "ପ୍ରୋଫାଇଲ ବାଛିବା ପାଇଁ ବଟନକୁ କ୍ଲିକ କର"
 
-#: ../src/terminal-app.c:560
+#: ../src/terminal-app.c:625
 msgid "Profile list"
 msgstr "ପ୍ରୋଫାଇଲ ତାଲିକା"
 
-#: ../src/terminal-app.c:621
+#: ../src/terminal-app.c:686
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "ରୂପରେଖ “%s”କୁ ଅପସାରଣ କରିବେ କି?"
 
-#: ../src/terminal-app.c:637
+#: ../src/terminal-app.c:699
 msgid "Delete Profile"
 msgstr "ରୂପରେଖ ଲିଭାନ୍ତୁ"
 
-#: ../src/terminal-app.c:1084
+#: ../src/terminal-app.c:1146
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "ଆପଣଙ୍କ ପାଖରେ ପୂର୍ବରୁ “%s” ନାମକ ଗୋଟିଏ ରୂପରେଖା ଅଛି। ଆପଣ ସମାନ ନାମରେ ଅନ୍ୟ ଏକ ରୂପରେଖା ନିର୍ମାଣ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?"
 
-#: ../src/terminal-app.c:1179
+#: ../src/terminal-app.c:1241
 msgid "Choose base profile"
 msgstr "ଆଧାର ପ୍ରୋଫାଇଲ ବାଛ"
 
-#: ../src/terminal-app.c:1771
+#: ../src/terminal-app.c:1829
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\"ନାମକ କୌଣସି ରୂପରେଖ ନାହିଁ, ପୂର୍ବନିର୍ଦ୍ଧାରିତ ରୂପରେଖକୁ ବ୍ୟବହାର କରି\n"
 
-#: ../src/terminal-app.c:1795
+#: ../src/terminal-app.c:1853
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "ଅମାନ୍ଯ ଜ୍ଯାମିତି ସ୍ଟ୍ରିଙ୍ଗ \"%s\"\n"
 
-#: ../src/terminal-app.c:2001
+#: ../src/terminal-app.c:2059
 msgid "User Defined"
 msgstr "ଚାଳକ ନିର୍ଦ୍ଦିଷ୍ଟ"
 
@@ -2090,33 +2090,33 @@ msgstr "ପ୍ରାକ-ଟର୍ମିନାଲ ବିକଳ୍ପଗୁଡ଼�
 msgid "Unnamed"
 msgstr "ଅନାମିତ"
 
-#: ../src/terminal-screen.c:1586
+#: ../src/terminal-screen.c:1460
 msgid "_Profile Preferences"
 msgstr "ରୂପରେଖ ପସନ୍ଦ (_P)"
 
-#: ../src/terminal-screen.c:1587 ../src/terminal-screen.c:1987
+#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "ପୁନଃପ୍ରାରମ୍ଭ କରନ୍ତୁ (_R)"
 
-#: ../src/terminal-screen.c:1590
+#: ../src/terminal-screen.c:1464
 msgid "There was an error creating the child process for this terminal"
 msgstr "ଏହି ଟର୍ମିନାଲ ପାଇଁ ଶିଶୁ ପ୍ରକ୍ରିଯା ସୃଷ୍ଟି କରିବା ବେଳେ ଗୋଟିଏ ତ୍ରୁଟି ଘଟିଥିଲା। "
 
-#: ../src/terminal-screen.c:1992
+#: ../src/terminal-screen.c:1842
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ନିମ୍ନ ସ୍ତରର ପ୍ରକ୍ରିୟାଟି ସାଧାରଣ ଭାବରେ ସ୍ଥିତି %d ସହିତ ପ୍ରସ୍ଥାନ କରିଛି।"
 
-#: ../src/terminal-screen.c:1997
+#: ../src/terminal-screen.c:1847
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "ନିମ୍ନ ସ୍ତରର ପ୍ରକ୍ରିୟାଟି ସଂକେତ %d ଦ୍ୱାରା ପ୍ରସ୍ଥାନ କରିଛି।"
 
-#: ../src/terminal-screen.c:2002
+#: ../src/terminal-screen.c:1852
 msgid "The child process was terminated."
 msgstr "ନିମ୍ନ ସ୍ତରର ପ୍ରକ୍ରିୟାଟିକୁ ସମାପ୍ତ କରାଯାଇଛି।"
 
-#: ../src/terminal-tab-label.c:156
+#: ../src/terminal-tab-label.c:137
 msgid "Close tab"
 msgstr "ଟ୍ୟାବ ବନ୍ଦ କରନ୍ତୁ"
 
@@ -2124,16 +2124,16 @@ msgstr "ଟ୍ୟାବ ବନ୍ଦ କରନ୍ତୁ"
 msgid "Switch to this tab"
 msgstr "ଏହି ଟ୍ୟାବକୁ ବଦଳାନ୍ତୁ"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:161
 msgid "There was an error displaying help"
 msgstr "ସହାୟତା ପ୍ରଦର୍ଶନ କରିବା ସମୟରେ ଗୋଟିଏ ତ୍ରୁଟି"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:233
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "ଠିକଣା “%s”କୁ ଖୋଲି ହେଲା ନାହିଁ"
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:341
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2141,7 +2141,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2149,7 +2149,7 @@ msgid ""
 "more details."
 msgstr "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:349
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2159,7 +2159,7 @@ msgstr "You should have received a copy of the GNU General Public License along 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:479
+#: ../src/terminal-window.c:476
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2167,259 +2167,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:485
+#: ../src/terminal-window.c:482
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1668
 msgid "_File"
 msgstr "ଫାଇଲ (_F)"
 
-#: ../src/terminal-window.c:1745 ../src/terminal-window.c:1758
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
+#: ../src/terminal-window.c:1923
 msgid "Open _Terminal"
 msgstr "ଟର୍ମିନାଲ ଖୋଲ (_T)"
 
-#: ../src/terminal-window.c:1746 ../src/terminal-window.c:1763
-#: ../src/terminal-window.c:2004
+#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
+#: ../src/terminal-window.c:1928
 msgid "Open Ta_b"
 msgstr "ଟାବ ଖୋଲ (_b)"
 
-#: ../src/terminal-window.c:1747
+#: ../src/terminal-window.c:1671
 msgid "_Edit"
 msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (_E)"
 
-#: ../src/terminal-window.c:1748
+#: ../src/terminal-window.c:1672
 msgid "_View"
 msgstr "ଦ୍ରୁଶ୍ଯ (_V)"
 
-#: ../src/terminal-window.c:1749
+#: ../src/terminal-window.c:1673
 msgid "_Search"
 msgstr "ସନ୍ଧାନ କରନ୍ତୁ (_S)"
 
-#: ../src/terminal-window.c:1750
+#: ../src/terminal-window.c:1674
 msgid "_Terminal"
 msgstr "ଟର୍ମିନାଲ (_T)"
 
-#: ../src/terminal-window.c:1751
+#: ../src/terminal-window.c:1675
 msgid "Ta_bs"
 msgstr "ଟ୍ଯାବ (_b)"
 
-#: ../src/terminal-window.c:1752
+#: ../src/terminal-window.c:1676
 msgid "_Help"
 msgstr "ସହାୟତା (_H)"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1692
 msgid "New _Profile…"
 msgstr "ନୂତନ ରୂପରେଖ (_P)..."
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1697
 msgid "_Save Contents"
 msgstr "ବିଷୟବସ୍ତୁକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ (_S)"
 
-#: ../src/terminal-window.c:1778 ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
 msgid "C_lose Tab"
 msgstr "ଟାବ ବନ୍ଦକରନ୍ତୁ (_l)"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1707
 msgid "_Close Window"
 msgstr "ୱିଣ୍ଡୋ ବନ୍ଦ କରନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1800 ../src/terminal-window.c:1994
+#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
 msgid "Paste _Filenames"
 msgstr "ଫାଇଲ ନାମ ଲଗାନ୍ତୁ (_F)"
 
-#: ../src/terminal-window.c:1810
+#: ../src/terminal-window.c:1734
 msgid "P_rofiles…"
 msgstr "ରୂପରେଖ (_r)..."
 
-#: ../src/terminal-window.c:1815
+#: ../src/terminal-window.c:1739
 msgid "_Keyboard Shortcuts…"
 msgstr "କି ବୋର୍ଡ ସଂକ୍ଷିପ୍ତ ପଥ (_K)…"
 
-#: ../src/terminal-window.c:1820
+#: ../src/terminal-window.c:1744
 msgid "Pr_ofile Preferences"
 msgstr "ରୂପରେଖ ପସନ୍ଦ (_o)"
 
-#: ../src/terminal-window.c:1844
+#: ../src/terminal-window.c:1768
 msgid "_Find..."
 msgstr "ଖୋଜନ୍ତୁ (_F)..."
 
-#: ../src/terminal-window.c:1849
+#: ../src/terminal-window.c:1773
 msgid "Find Ne_xt"
 msgstr "ପରବର୍ତ୍ତି ସନ୍ଧାନ କରନ୍ତୁ (_x)"
 
-#: ../src/terminal-window.c:1854
+#: ../src/terminal-window.c:1778
 msgid "Find Pre_vious"
 msgstr "ପୂର୍ବବର୍ତ୍ତି ସନ୍ଧାନ କରନ୍ତୁ (_v)"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1783
 msgid "_Clear Highlight"
 msgstr "ଆଲୋକିତକୁ ହଟାଇଦିଅନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:1789
 msgid "Go to _Line..."
 msgstr "ଏହି ଧାଡ଼ି ସଂଖ୍ୟାକୁ ଯାଆନ୍ତୁ (_L)..."
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1794
 msgid "_Incremental Search..."
 msgstr "କ୍ରମବର୍ଦ୍ଧିଷ୍ଣୁ ସନ୍ଧାନ (_I)..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:1801
 msgid "Change _Profile"
 msgstr "ପ୍ରୋଫାଇଲ ବଦଳାଅ (_P)"
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1803
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1808
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1813
 msgid "_Set Title…"
 msgstr "ଶୀର୍ଷକ ସେଟକରନ୍ତୁ (_S)..."
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1817
 msgid "Set _Character Encoding"
 msgstr "ଅକ୍ଷର ଏନକୋଡିଙ୍ଗ ସ୍ଥିର କରନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1819
 msgid "_Reset"
 msgstr "ପୁନଃ ସ୍ଥିରକରନ୍ତୁ (_R)"
 
-#: ../src/terminal-window.c:1900
+#: ../src/terminal-window.c:1824
 msgid "Reset and C_lear"
 msgstr "ପୁନଃସ୍ଥିର କର ଏବଂ ପରିଷ୍କାରକରନ୍ତୁ (_l)"
 
-#: ../src/terminal-window.c:1907
+#: ../src/terminal-window.c:1831
 msgid "_Add or Remove…"
 msgstr "ଯୋଗକରନ୍ତୁ କିମ୍ବା କାଢ଼ନ୍ତୁ (_A)…"
 
-#: ../src/terminal-window.c:1914
+#: ../src/terminal-window.c:1838
 msgid "_Previous Tab"
 msgstr "ପୂର୍ବ ଟ୍ୟାବ (_P)"
 
-#: ../src/terminal-window.c:1919
+#: ../src/terminal-window.c:1843
 msgid "_Next Tab"
 msgstr "ପରବର୍ତ୍ତି ଟ୍ୟାବ (_N)"
 
-#: ../src/terminal-window.c:1924
+#: ../src/terminal-window.c:1848
 msgid "Move Tab _Left"
 msgstr "ଟ୍ୟାବକୁ ବାମ ପଟକୁ ଘୁଞ୍ଚାନ୍ତୁ (_L)"
 
-#: ../src/terminal-window.c:1929
+#: ../src/terminal-window.c:1853
 msgid "Move Tab _Right"
 msgstr "ଟ୍ୟାବକୁ ଡ଼ାହାଣ ପଟକୁ ଘୁଞ୍ଚାନ୍ତୁ (_R)"
 
-#: ../src/terminal-window.c:1934
+#: ../src/terminal-window.c:1858
 msgid "_Detach tab"
 msgstr "ଟ୍ୟାବ ଅଲଗା କରନ୍ତୁ (_D)"
 
-#: ../src/terminal-window.c:1941
+#: ../src/terminal-window.c:1865
 msgid "_Contents"
 msgstr "ସୂଚୀପତ୍ର (_C)"
 
-#: ../src/terminal-window.c:1946
+#: ../src/terminal-window.c:1870
 msgid "_About"
 msgstr "ବିବରଣୀ (_A)"
 
-#: ../src/terminal-window.c:1953
+#: ../src/terminal-window.c:1877
 msgid "_Send Mail To…"
 msgstr "କୁ ମେଲ ପଠାନ୍ତୁ (_S)…"
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1882
 msgid "_Copy E-mail Address"
 msgstr "ଇ-ମେଲ ଠିକଣା ପ୍ରତିଲିପି କରନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:1887
 msgid "C_all To…"
 msgstr "କୁ ଡ଼ାକନ୍ତୁ (_a)…"
 
-#: ../src/terminal-window.c:1968
+#: ../src/terminal-window.c:1892
 msgid "_Copy Call Address"
 msgstr "ସଂଯୋଗ ଠିକଣାକୁ ନକଲ କରନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1973
+#: ../src/terminal-window.c:1897
 msgid "_Open Link"
 msgstr "ସଂଯୋଗକୁ ଖୋଲନ୍ତୁ (_O)"
 
-#: ../src/terminal-window.c:1978
+#: ../src/terminal-window.c:1902
 msgid "_Copy Link Address"
 msgstr "ସଂଯୋଗ ଠିକଣାକୁ ନକଲ କରନ୍ତୁ (_C)"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:1906
 msgid "P_rofiles"
 msgstr "ରୂପରେଖ (_r)"
 
-#: ../src/terminal-window.c:2009 ../src/terminal-window.c:3294
+#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
 msgid "C_lose Window"
 msgstr "ୱିଣ୍ଡୋ ବନ୍ଦ କରନ୍ତୁ (_l)"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:1943
 msgid "L_eave Full Screen"
 msgstr "ପୂର୍ଣ୍ଣ ପରଦା ଛାଡନ୍ତୁ (_e)"
 
-#: ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:1947
 msgid "_Input Methods"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ (_I)"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:1954
 msgid "Show _Menubar"
 msgstr "ମେନୁବାର ଦେଖାନ୍ତୁ (_M)"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:1960
 msgid "_Full Screen"
 msgstr "ପୂର୍ଣ୍ଣ ପରଦା (_F)"
 
-#: ../src/terminal-window.c:3281
+#: ../src/terminal-window.c:3121
 msgid "Close this window?"
 msgstr "ଏହି ୱିଣ୍ଡୋକୁ ବନ୍ଦ କରିବେ କି?"
 
-#: ../src/terminal-window.c:3281
+#: ../src/terminal-window.c:3121
 msgid "Close this terminal?"
 msgstr "ଏହି ଟର୍ମିନାଲକୁ ବନ୍ଦ କରିବେ କି?"
 
-#: ../src/terminal-window.c:3285
+#: ../src/terminal-window.c:3125
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "ଏହି ୱିଣ୍ଡୋରେ ଏପର୍ଯ୍ୟନ୍ତ ଟର୍ମିନାଲରେ କିଛି ପଦ୍ଧତି ଚାଲୁଅଛି। ଏହି ୱିଣ୍ଡୋକୁ ବନ୍ଦ କରିବା ଫଳରେ ଏହା ସମସ୍ତଙ୍କୁ ବନ୍ଦ କରିଦେବ।"
 
-#: ../src/terminal-window.c:3289
+#: ../src/terminal-window.c:3129
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "ଏହି ୱିଣ୍ଡୋରେ ଏପର୍ଯ୍ୟନ୍ତ ଟର୍ମିନାଲରେ ଗୋଟିଏ ପଦ୍ଧତି ଚାଲୁଅଛି। ଏହି ୱିଣ୍ଡୋକୁ ବନ୍ଦ କରିବା ଫଳରେ ଏହା ସମସ୍ତଙ୍କୁ ବନ୍ଦ କରିଦେବ।"
 
-#: ../src/terminal-window.c:3294
+#: ../src/terminal-window.c:3134
 msgid "C_lose Terminal"
 msgstr "ଟର୍ମିନାଲ ବନ୍ଦକରନ୍ତୁ (_l)"
 
-#: ../src/terminal-window.c:3373
+#: ../src/terminal-window.c:3200
 msgid "Could not save contents"
 msgstr "ବିଷୟବସ୍ତୁକୁ ସଂରକ୍ଷଣ କରି ପାରିଲା ନାହିଁ"
 
-#: ../src/terminal-window.c:3397
+#: ../src/terminal-window.c:3224
 msgid "Save as..."
 msgstr "ଏହିପରି ଭାବରେ ସଂରକ୍ଷଣ କରନ୍ତୁ..."
 
-#: ../src/terminal-window.c:3928
+#: ../src/terminal-window.c:3743
 msgid "_Title:"
 msgstr "ଶୀର୍ଷକ (_T):"
 
-#: ../src/terminal-window.c:4123
+#: ../src/terminal-window.c:3938
 msgid "Contributors:"
 msgstr "ଆଂଶଦାନକାରୀମାନେ:"
 
-#: ../src/terminal-window.c:4142
+#: ../src/terminal-window.c:3957
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE ଡେସ୍କଟପ ପାଇଁ ଗୋଟିଏ ଟର୍ମିନାଲ ପ୍ରତିଦ୍ବନ୍ଦୀ"
 
-#: ../src/terminal-window.c:4149
+#: ../src/terminal-window.c:3964
 msgid "translator-credits"
 msgstr "ମନୋଜ କୁମାର ଗିରି <mgiri@redhat.com>"
