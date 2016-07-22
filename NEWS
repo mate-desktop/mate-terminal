@@ -1,5 +1,26 @@
 1.15.1
 
+  * sync with transiflex
+  * skey-challange.ui: avoid deprecated elements
+  * profile-manager.ui: avoid deprecated elements
+  * keybinding-editor.ui: clean up deprecations
+  * find-dialog.ui: fix deprecated elements
+  * encodings-dialog.ui: fix deprecated elements
+  * screen: fix a Wincompatible-pointer-types warning
+  * profile-preferences.ui: avoid deprecations
+  * profile-new-dialog.ui: avoid deprecated GtkTable and Gtk{H/V}Box
+  * avoid deprecated GtkTable
+  * man: add missing description of -x / --execute command line option
+  * Borrow pluma-close-button class and use it.
+  * do not use deprecated gtk_dialog_set_alternative_button_order
+  * profile-editor: render text in color scheme combobox
+  * UI prefrenences: enable alpha color for colorchooser
+  * terminal-profile: replace deprecated GDK_TYPE_COLOR
+  * port GdkColors to GdkRGBA and GtkColorButton to GtkColorChooser
+  * Update font on realize
+  * Remove debug printfs
+  * Add style-updated handler to TerminalScreen
+
 1.15.0
 
   * Translations update
@@ -20,7 +41,7 @@
 
   * Compile dingu regexes with MULTILINE option
   * Fix incorrect ordering of COLS and ROWS in command-line option
-    description and in the manpage
+  * description and in the manpage
   * GTK+3: add style class mate-terminal
   * GTK+3: fix window sizes for 3.20
   * GTK+3: fix several deprecations
