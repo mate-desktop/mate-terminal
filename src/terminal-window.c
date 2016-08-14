@@ -2009,8 +2009,6 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_show_border (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
-    gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook),
-                                 TRUE);
     g_signal_connect (priv->notebook, "button-press-event",
                       G_CALLBACK (notebook_button_press_cb), window);
     g_signal_connect (priv->notebook, "popup-menu",
