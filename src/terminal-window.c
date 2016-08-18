@@ -3901,7 +3901,7 @@ help_about_callback (GtkAction *action,
         "Copyright © 2006 Guilherme de S. Pastore\n"
         "Copyright © 2007–2010 Christian Persch\n"
         "Copyright © 2011 Perberos\n"
-        "Copyright © 2012-2014 MATE developers";
+        "Copyright © 2012-2016 MATE developers";
     char *licence_text;
     GKeyFile *key_file;
     GError *error = NULL;
