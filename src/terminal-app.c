@@ -1849,7 +1849,10 @@ terminal_app_handle_options (TerminalApp *app,
 			                       "[window %p] applying geometry %s\n",
 			                       window, iw->geometry);
 
-			if (!gtk_window_parse_geometry (GTK_WINDOW (window), iw->geometry))
+			if (!terminal_window_set_size_force_grid (window,
+			                                          terminal_window_get_active (window),
+			                                          FALSE,
+			                                          iw->geometry))
 				g_printerr (_("Invalid geometry string \"%s\"\n"), iw->geometry);
 		}
 
