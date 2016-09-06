@@ -321,6 +321,176 @@ app_setting_notify_destroy_cb (GdkScreen *screen)
 
 /* utility functions */
 
+/*
+  Derived from XParseGeometry() in X.org
+
+  Copyright 1985, 1986, 1987, 1998  The Open Group
+
+  All Rights Reserved.
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  OTHER DEALINGS IN THE SOFTWARE.
+
+  Except as contained in this notice, the name of The Open Group shall
+  not be used in advertising or otherwise to promote the sale, use or
+  other dealings in this Software without prior written authorization
+  from The Open Group.
+*/
+
+/*
+ *    XParseGeometry parses strings of the form
+ *   "=<width>x<height>{+-}<xoffset>{+-}<yoffset>", where
+ *   width, height, xoffset, and yoffset are unsigned integers.
+ *   Example: "=80x24+300-49"
+ *   The equal sign is optional.
+ *   It returns a bitmask that indicates which of the four values
+ *   were actually found in the string. For each value found,
+ *   the corresponding argument is updated; for each value
+ *   not found, the corresponding argument is left unchanged.
+ */
+
+/* The following code is from Xlib, and is minimally modified, so we
+ * can track any upstream changes if required. Don’t change this
+ * code. Or if you do, put in a huge comment marking which thing
+ * changed.
+ */
+
+static int
+terminal_window_ReadInteger (char  *string,
+                             char **NextString)
+{
+    register int Result = 0;
+    int Sign = 1;
+
+    if (*string == '+')
+	string++;
+    else if (*string == '-')
+    {
+	string++;
+	Sign = -1;
+    }
+    for (; (*string >= '0') && (*string <= '9'); string++)
+    {
+	Result = (Result * 10) + (*string - '0');
+    }
+    *NextString = string;
+    if (Sign >= 0)
+	return (Result);
+    else
+	return (-Result);
+}
+
+/*
+ * Bitmask returned by XParseGeometry(). Each bit tells if the corresponding
+ * value (x, y, width, height) was found in the parsed string.
+ */
+#define NoValue         0x0000
+#define XValue          0x0001
+#define YValue          0x0002
+#define WidthValue      0x0004
+#define HeightValue     0x0008
+#define AllValues       0x000F
+#define XNegative       0x0010
+#define YNegative       0x0020
+
+static int
+terminal_window_XParseGeometry (const char *string,
+                                int *x, int *y,
+                                unsigned int *width,
+                                unsigned int *height)
+{
+	int mask = NoValue;
+	register char *strind;
+	unsigned int tempWidth = 0, tempHeight = 0;
+	int tempX = 0, tempY = 0;
+	char *nextCharacter;
+
+	if ( (string == NULL) || (*string == '\0')) return(mask);
+	if (*string == '=')
+		string++;  /* ignore possible '=' at beg of geometry spec */
+
+	strind = (char *)string;
+	if (*strind != '+' && *strind != '-' && *strind != 'x') {
+		tempWidth = terminal_window_ReadInteger(strind, &nextCharacter);
+		if (strind == nextCharacter)
+		    return (0);
+		strind = nextCharacter;
+		mask |= WidthValue;
+	}
+
+	if (*strind == 'x' || *strind == 'X') {
+		strind++;
+		tempHeight = terminal_window_ReadInteger(strind, &nextCharacter);
+		if (strind == nextCharacter)
+		    return (0);
+		strind = nextCharacter;
+		mask |= HeightValue;
+	}
+
+	if ((*strind == '+') || (*strind == '-')) {
+		if (*strind == '-') {
+			strind++;
+			tempX = -terminal_window_ReadInteger(strind, &nextCharacter);
+			if (strind == nextCharacter)
+			    return (0);
+			strind = nextCharacter;
+			mask |= XNegative;
+
+		}
+		else
+		{	strind++;
+			tempX = terminal_window_ReadInteger(strind, &nextCharacter);
+			if (strind == nextCharacter)
+			    return(0);
+			strind = nextCharacter;
+		}
+		mask |= XValue;
+		if ((*strind == '+') || (*strind == '-')) {
+			if (*strind == '-') {
+				strind++;
+				tempY = -terminal_window_ReadInteger(strind, &nextCharacter);
+				if (strind == nextCharacter)
+				    return(0);
+				strind = nextCharacter;
+				mask |= YNegative;
+
+			}
+			else
+			{
+				strind++;
+				tempY = terminal_window_ReadInteger(strind, &nextCharacter);
+				if (strind == nextCharacter)
+				    return(0);
+				strind = nextCharacter;
+			}
+			mask |= YValue;
+		}
+	}
+
+	/* If strind isn't at the end of the string the it's an invalid
+		geometry specification. */
+
+	if (*strind != '\0') return (0);
+
+	if (x != NULL && mask & XValue)
+	    *x = tempX;
+	if (y != NULL && mask & YValue)
+	    *y = tempY;
+	if (width != NULL && mask & WidthValue)
+            *width = tempWidth;
+	if (height != NULL && mask & HeightValue)
+            *height = tempHeight;
+	return (mask);
+}
+
 static char *
 escape_underscores (const char *name)
 {
@@ -2566,19 +2736,21 @@ terminal_window_set_size (TerminalWindow *window,
                           TerminalScreen *screen,
                           gboolean        even_if_mapped)
 {
-    terminal_window_set_size_force_grid (window, screen, even_if_mapped, -1, -1);
+    terminal_window_set_size_force_grid (window, screen, even_if_mapped, NULL);
 }
 
-void
+gboolean
 terminal_window_set_size_force_grid (TerminalWindow *window,
                                      TerminalScreen *screen,
                                      gboolean        even_if_mapped,
-                                     int             force_grid_width,
-                                     int             force_grid_height)
+                                     gchar          *force_grid_string)
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *widget;
     GtkWidget *app;
+    gboolean result;
+    int parse_result;
+    unsigned int force_grid_width, force_grid_height;
     int grid_width, grid_height;
     gint pixel_width, pixel_height;
     GdkWindow *gdk_window;
@@ -2609,9 +2781,21 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
 
     terminal_screen_get_size (screen, &grid_width, &grid_height);
 
-    if (force_grid_width >= 0)
+    if (force_grid_string != NULL)
+    {
+        parse_result = terminal_window_XParseGeometry (force_grid_string,
+                                                       NULL, NULL,
+                                                       &force_grid_width,
+                                                       &force_grid_height);
+        if (parse_result == NoValue)
+            result = FALSE;
+    }
+    else
+        parse_result = NoValue;
+
+    if (parse_result & WidthValue)
         grid_width = force_grid_width;
-    if (force_grid_height >= 0)
+    if (parse_result & HeightValue)
         grid_height = force_grid_height;
 
     /* the "old" struct members were updated by update_geometry */
