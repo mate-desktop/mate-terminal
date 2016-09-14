@@ -66,9 +66,24 @@ struct _TerminalWindowPrivate
 
     GtkWidget *menubar;
     GtkWidget *notebook;
+    GtkWidget *main_vbox;
     TerminalScreen *active_screen;
+
+    /* Size of a character cell in pixels */
     int old_char_width;
     int old_char_height;
+
+    /* Width and height added to the actual terminal grid by "chrome" inside
+     * what was traditionally the X11 window: menu bar, title bar,
+     * style-provided padding. This must be included when resizing the window
+     * and also included in geometry hints. */
+    int old_chrome_width;
+    int old_chrome_height;
+
+    /* Width and height of the padding around the geometry widget. */
+    int old_padding_width;
+    int old_padding_height;
+
     void *old_geometry_widget; /* only used for pointer value as it may be freed */
 
     GtkWidget *confirm_close_dialog;
@@ -305,6 +320,176 @@ app_setting_notify_destroy_cb (GdkScreen *screen)
 }
 
 /* utility functions */
+
+/*
+  Derived from XParseGeometry() in X.org
+
+  Copyright 1985, 1986, 1987, 1998  The Open Group
+
+  All Rights Reserved.
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  OTHER DEALINGS IN THE SOFTWARE.
+
+  Except as contained in this notice, the name of The Open Group shall
+  not be used in advertising or otherwise to promote the sale, use or
+  other dealings in this Software without prior written authorization
+  from The Open Group.
+*/
+
+/*
+ *    XParseGeometry parses strings of the form
+ *   "=<width>x<height>{+-}<xoffset>{+-}<yoffset>", where
+ *   width, height, xoffset, and yoffset are unsigned integers.
+ *   Example: "=80x24+300-49"
+ *   The equal sign is optional.
+ *   It returns a bitmask that indicates which of the four values
+ *   were actually found in the string. For each value found,
+ *   the corresponding argument is updated; for each value
+ *   not found, the corresponding argument is left unchanged.
+ */
+
+/* The following code is from Xlib, and is minimally modified, so we
+ * can track any upstream changes if required. Don’t change this
+ * code. Or if you do, put in a huge comment marking which thing
+ * changed.
+ */
+
+static int
+terminal_window_ReadInteger (char  *string,
+                             char **NextString)
+{
+    register int Result = 0;
+    int Sign = 1;
+
+    if (*string == '+')
+	string++;
+    else if (*string == '-')
+    {
+	string++;
+	Sign = -1;
+    }
+    for (; (*string >= '0') && (*string <= '9'); string++)
+    {
+	Result = (Result * 10) + (*string - '0');
+    }
+    *NextString = string;
+    if (Sign >= 0)
+	return (Result);
+    else
+	return (-Result);
+}
+
+/*
+ * Bitmask returned by XParseGeometry(). Each bit tells if the corresponding
+ * value (x, y, width, height) was found in the parsed string.
+ */
+#define NoValue         0x0000
+#define XValue          0x0001
+#define YValue          0x0002
+#define WidthValue      0x0004
+#define HeightValue     0x0008
+#define AllValues       0x000F
+#define XNegative       0x0010
+#define YNegative       0x0020
+
+static int
+terminal_window_XParseGeometry (const char *string,
+                                int *x, int *y,
+                                unsigned int *width,
+                                unsigned int *height)
+{
+	int mask = NoValue;
+	register char *strind;
+	unsigned int tempWidth = 0, tempHeight = 0;
+	int tempX = 0, tempY = 0;
+	char *nextCharacter;
+
+	if ( (string == NULL) || (*string == '\0')) return(mask);
+	if (*string == '=')
+		string++;  /* ignore possible '=' at beg of geometry spec */
+
+	strind = (char *)string;
+	if (*strind != '+' && *strind != '-' && *strind != 'x') {
+		tempWidth = terminal_window_ReadInteger(strind, &nextCharacter);
+		if (strind == nextCharacter)
+		    return (0);
+		strind = nextCharacter;
+		mask |= WidthValue;
+	}
+
+	if (*strind == 'x' || *strind == 'X') {
+		strind++;
+		tempHeight = terminal_window_ReadInteger(strind, &nextCharacter);
+		if (strind == nextCharacter)
+		    return (0);
+		strind = nextCharacter;
+		mask |= HeightValue;
+	}
+
+	if ((*strind == '+') || (*strind == '-')) {
+		if (*strind == '-') {
+			strind++;
+			tempX = -terminal_window_ReadInteger(strind, &nextCharacter);
+			if (strind == nextCharacter)
+			    return (0);
+			strind = nextCharacter;
+			mask |= XNegative;
+
+		}
+		else
+		{	strind++;
+			tempX = terminal_window_ReadInteger(strind, &nextCharacter);
+			if (strind == nextCharacter)
+			    return(0);
+			strind = nextCharacter;
+		}
+		mask |= XValue;
+		if ((*strind == '+') || (*strind == '-')) {
+			if (*strind == '-') {
+				strind++;
+				tempY = -terminal_window_ReadInteger(strind, &nextCharacter);
+				if (strind == nextCharacter)
+				    return(0);
+				strind = nextCharacter;
+				mask |= YNegative;
+
+			}
+			else
+			{
+				strind++;
+				tempY = terminal_window_ReadInteger(strind, &nextCharacter);
+				if (strind == nextCharacter)
+				    return(0);
+				strind = nextCharacter;
+			}
+			mask |= YValue;
+		}
+	}
+
+	/* If strind isn't at the end of the string the it's an invalid
+		geometry specification. */
+
+	if (*strind != '\0') return (0);
+
+	if (x != NULL && mask & XValue)
+	    *x = tempX;
+	if (y != NULL && mask & YValue)
+	    *y = tempY;
+	if (width != NULL && mask & WidthValue)
+            *width = tempWidth;
+	if (height != NULL && mask & HeightValue)
+            *height = tempHeight;
+	return (mask);
+}
 
 static char *
 escape_underscores (const char *name)
@@ -902,7 +1087,7 @@ terminal_size_to_cb (GtkAction *action,
 
     vte_terminal_set_size (VTE_TERMINAL (priv->active_screen), width, height);
 
-    terminal_window_set_size_force_grid (window, priv->active_screen, TRUE, -1, -1);
+    terminal_window_set_size (window, priv->active_screen, TRUE);
 }
 
 static void
@@ -1077,7 +1262,7 @@ screen_resize_window_cb (TerminalScreen *screen,
     if (screen != priv->active_screen)
         return;
 
-    terminal_window_set_size_force_grid (window, screen, TRUE, -1, -1);
+    terminal_window_set_size (window, screen, TRUE);
 }
 
 static void
@@ -1971,7 +2156,6 @@ terminal_window_init (TerminalWindow *window)
     GtkActionGroup *action_group;
     GtkAction *action;
     GtkUIManager *manager;
-    GtkWidget *main_vbox;
     GError *error;
     GtkWindowGroup *window_group;
     GtkAccelGroup *accel_group;
@@ -2003,9 +2187,9 @@ terminal_window_init (TerminalWindow *window)
     priv->active_screen = NULL;
     priv->menubar_visible = FALSE;
 
-    main_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    gtk_container_add (GTK_CONTAINER (window), main_vbox);
-    gtk_widget_show (main_vbox);
+    priv->main_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+    gtk_container_add (GTK_CONTAINER (window), priv->main_vbox);
+    gtk_widget_show (priv->main_vbox);
 
     priv->notebook = gtk_notebook_new ();
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook), TRUE);
@@ -2033,11 +2217,17 @@ terminal_window_init (TerminalWindow *window)
     g_signal_connect (priv->notebook, "create-window",
                     G_CALLBACK (handle_tab_droped_on_desktop), window);
 
-    gtk_box_pack_end (GTK_BOX (main_vbox), priv->notebook, TRUE, TRUE, 0);
+    gtk_box_pack_end (GTK_BOX (priv->main_vbox), priv->notebook, TRUE, TRUE, 0);
     gtk_widget_show (priv->notebook);
 
     priv->old_char_width = -1;
     priv->old_char_height = -1;
+
+    priv->old_chrome_width = -1;
+    priv->old_chrome_height = -1;
+    priv->old_padding_width = -1;
+    priv->old_padding_height = -1;
+
     priv->old_geometry_widget = NULL;
 
     /* Create the UI manager */
@@ -2087,7 +2277,7 @@ terminal_window_init (TerminalWindow *window)
     }
 
     priv->menubar = gtk_ui_manager_get_widget (manager, "/menubar");
-    gtk_box_pack_start (GTK_BOX (main_vbox),
+    gtk_box_pack_start (GTK_BOX (priv->main_vbox),
                         priv->menubar,
                         FALSE, FALSE, 0);
 
@@ -2546,39 +2736,90 @@ terminal_window_set_size (TerminalWindow *window,
                           TerminalScreen *screen,
                           gboolean        even_if_mapped)
 {
-    terminal_window_set_size_force_grid (window, screen, even_if_mapped, -1, -1);
+    terminal_window_set_size_force_grid (window, screen, even_if_mapped, NULL);
 }
 
-void
+gboolean
 terminal_window_set_size_force_grid (TerminalWindow *window,
                                      TerminalScreen *screen,
                                      gboolean        even_if_mapped,
-                                     int             force_grid_width,
-                                     int             force_grid_height)
+                                     gchar          *force_grid_string)
 {
+    TerminalWindowPrivate *priv = window->priv;
     GtkWidget *widget;
     GtkWidget *app;
-    int grid_width;
-    int grid_height;
+    gboolean result;
+    int parse_result;
+    unsigned int force_grid_width, force_grid_height;
+    int grid_width, grid_height;
+    gint pixel_width, pixel_height;
+    GdkWindow *gdk_window;
+
+    gdk_window = gtk_widget_get_window (GTK_WIDGET (window));
+    result = TRUE;
+
+    if (gdk_window != NULL &&
+        (gdk_window_get_state (gdk_window) &
+         (GDK_WINDOW_STATE_MAXIMIZED | GDK_WINDOW_STATE_TILED)))
+    {
+        /* Don't adjust the size of maximized or tiled (snapped, half-maximized)
+         * windows: if we do, there will be ugly gaps of up to 1 character cell
+         * around otherwise tiled windows. */
+        return result;
+    }
 
     /* be sure our geometry is up-to-date */
     terminal_window_update_geometry (window);
 
-    widget = GTK_WIDGET (screen);
+    if (GTK_IS_WIDGET (screen))
+        widget = GTK_WIDGET (screen);
+    else
+        widget = GTK_WIDGET (window);
 
     app = gtk_widget_get_toplevel (widget);
     g_assert (app != NULL);
 
     terminal_screen_get_size (screen, &grid_width, &grid_height);
 
-    if (force_grid_width >= 0)
-        grid_width = force_grid_width;
-    if (force_grid_height >= 0)
-        grid_height = force_grid_height;
-    if (even_if_mapped && gtk_widget_get_mapped (app))
-        gtk_window_resize_to_geometry (GTK_WINDOW (app), grid_width, grid_height);
+    if (force_grid_string != NULL)
+    {
+        parse_result = terminal_window_XParseGeometry (force_grid_string,
+                                                       NULL, NULL,
+                                                       &force_grid_width,
+                                                       &force_grid_height);
+        if (parse_result == NoValue)
+            result = FALSE;
+    }
     else
-        gtk_window_set_default_geometry (GTK_WINDOW (app), grid_width, grid_height);
+        parse_result = NoValue;
+
+    if (parse_result & WidthValue)
+        grid_width = force_grid_width;
+    if (parse_result & HeightValue)
+        grid_height = force_grid_height;
+
+    /* the "old" struct members were updated by update_geometry */
+    pixel_width = priv->old_chrome_width + grid_width * priv->old_char_width;
+    pixel_height = priv->old_chrome_height + grid_height * priv->old_char_height;
+
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
+                           "[window %p] size is %dx%d cells of %dx%d px\n",
+                           window, grid_width, grid_height,
+                           priv->old_char_width, priv->old_char_height);
+
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
+                           "[window %p] %dx%d + %dx%d = %dx%d\n",
+                           window, grid_width * priv->old_char_width,
+                           grid_height * priv->old_char_height,
+                           priv->old_chrome_width, priv->old_chrome_height,
+                           pixel_width, pixel_height);
+
+    if (even_if_mapped && gtk_widget_get_mapped (app))
+        gtk_window_resize (GTK_WINDOW (app), pixel_width, pixel_height);
+    else
+        gtk_window_set_default_size (GTK_WINDOW (app), pixel_width, pixel_height);
+
+    return result;
 }
 
 void
@@ -2961,9 +3202,10 @@ terminal_window_update_geometry (TerminalWindow *window)
     GtkWidget *widget;
     GdkGeometry hints;
     GtkBorder padding;
-    GtkRequisition toplevel_request, widget_request;
-    int base_width, base_height;
+    GtkRequisition toplevel_request, vbox_request, widget_request;
+    int grid_width, grid_height;
     int char_width, char_height;
+    int chrome_width, chrome_height;
 
     if (priv->active_screen == NULL)
         return;
@@ -2977,26 +3219,46 @@ terminal_window_update_geometry (TerminalWindow *window)
      */
     terminal_screen_get_cell_size (priv->active_screen, &char_width, &char_height);
 
+    terminal_screen_get_size (priv->active_screen, &grid_width, &grid_height);
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "%dx%d cells of %dx%d px = %dx%d px\n",
+                           grid_width, grid_height, char_width, char_height,
+                           char_width * grid_width, char_height * grid_height);
+
+    gtk_style_context_get_padding(gtk_widget_get_style_context (widget),
+                                  gtk_widget_get_state_flags (widget),
+                                  &padding);
+
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "padding = %dx%d px\n",
+                           padding.left + padding.right,
+                           padding.top + padding.bottom);
+
+    gtk_widget_get_preferred_size (priv->main_vbox, NULL, &vbox_request);
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "content area requests %dx%d px\n",
+                           vbox_request.width, vbox_request.height);
+
+    gtk_widget_get_preferred_size (GTK_WIDGET (window), NULL, &toplevel_request);
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "window requests %dx%d px\n",
+                           toplevel_request.width, toplevel_request.height);
+
+    chrome_width = vbox_request.width - (char_width * grid_width);
+    chrome_height = vbox_request.height - (char_height * grid_height);
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "chrome: %dx%d px\n",
+                           chrome_width, chrome_height);
+
+    gtk_widget_get_preferred_size (widget, NULL, &widget_request);
+    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "terminal widget requests %dx%d px\n",
+                           widget_request.width, widget_request.height);
+
     if (char_width != priv->old_char_width ||
-            char_height != priv->old_char_height ||
-            widget != (GtkWidget*) priv->old_geometry_widget)
+             char_height != priv->old_char_height ||
+             padding.left + padding.right != priv->old_padding_width ||
+             padding.top + padding.bottom != priv->old_padding_height ||
+             chrome_width != priv->old_chrome_width ||
+             chrome_height != priv->old_chrome_height ||
+             widget != GTK_WIDGET (priv->old_geometry_widget))
     {
-        /* FIXME Since we're using xthickness/ythickness to compute
-         * padding we need to change the hints when the theme changes.
-         */
-
-        gtk_widget_get_preferred_size (GTK_WIDGET (window), NULL, &toplevel_request);
-        gtk_widget_get_preferred_size (widget, NULL, &widget_request);
-
-        base_width = toplevel_request.width - widget_request.width;
-        base_height = toplevel_request.height - widget_request.height;
-
-        gtk_style_context_get_padding (gtk_widget_get_style_context (widget),
-                                       gtk_widget_get_state_flags (widget),
-                                       &padding);
-
-        hints.base_width = base_width + padding.left + padding.right;
-        hints.base_height = base_height + padding.top + padding.bottom;
+        hints.base_width = chrome_width;
+        hints.base_height = chrome_height;
 
 #define MIN_WIDTH_CHARS 4
 #define MIN_HEIGHT_CHARS 1
@@ -3025,8 +3287,6 @@ terminal_window_update_geometry (TerminalWindow *window)
                                hints.width_inc,
                                hints.height_inc);
 
-        priv->old_char_width = hints.width_inc;
-        priv->old_char_height = hints.height_inc;
         priv->old_geometry_widget = widget;
     }
     else
@@ -3035,6 +3295,15 @@ terminal_window_update_geometry (TerminalWindow *window)
                                "[window %p] hints: increment unchanged, not setting\n",
                                window);
     }
+
+    /* We need these for the size calculation in terminal_window_set_size(),
+     * so we set them unconditionally. */
+    priv->old_char_width = char_width;
+    priv->old_char_height = char_height;
+    priv->old_chrome_width = chrome_width;
+    priv->old_chrome_height = chrome_height;
+    priv->old_padding_width = padding.left + padding.right;
+    priv->old_padding_height = padding.top + padding.bottom;
 }
 
 static void
@@ -3929,23 +4198,17 @@ tabs_detach_tab_callback (GtkAction *action,
     TerminalApp *app;
     TerminalWindow *new_window;
     TerminalScreen *screen;
-    char *geometry;
-    int width, height;
 
     app = terminal_app_get ();
 
     screen = priv->active_screen;
 
-    /* FIXME: this seems wrong if tabs are shown in the window */
-    terminal_screen_get_size (screen, &width, &height);
-    geometry = g_strdup_printf ("%dx%d", width, height);
-
     new_window = terminal_app_new_window (app, gtk_widget_get_screen (GTK_WIDGET (window)));
 
     terminal_window_move_screen (window, new_window, screen, -1);
 
-    gtk_window_parse_geometry (GTK_WINDOW (new_window), geometry);
-    g_free (geometry);
+    /* FIXME: this seems wrong if tabs are shown in the window */
+    terminal_window_set_size (new_window, screen, FALSE);
 
     gtk_window_present_with_time (GTK_WINDOW (new_window), gtk_get_current_event_time ());
 }
