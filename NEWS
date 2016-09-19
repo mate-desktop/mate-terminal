@@ -1,41 +1,19 @@
-1.15.1
+1.16.0
 
-  * sync with transiflex
-  * skey-challange.ui: avoid deprecated elements
-  * profile-manager.ui: avoid deprecated elements
-  * keybinding-editor.ui: clean up deprecations
-  * find-dialog.ui: fix deprecated elements
-  * encodings-dialog.ui: fix deprecated elements
-  * screen: fix a Wincompatible-pointer-types warning
-  * profile-preferences.ui: avoid deprecations
-  * profile-new-dialog.ui: avoid deprecated GtkTable and Gtk{H/V}Box
-  * avoid deprecated GtkTable
-  * man: add missing description of -x / --execute command line option
-  * Borrow pluma-close-button class and use it.
-  * do not use deprecated gtk_dialog_set_alternative_button_order
-  * profile-editor: render text in color scheme combobox
-  * UI prefrenences: enable alpha color for colorchooser
-  * terminal-profile: replace deprecated GDK_TYPE_COLOR
-  * port GdkColors to GdkRGBA and GtkColorButton to GtkColorChooser
-  * Update font on realize
-  * Remove debug printfs
-  * Add style-updated handler to TerminalScreen
-
-1.15.0
-
+  * Move to GTK+3, require GTK+ 3.14 and VTE 0.38 (API 2.91)
+  * Drop GTK+2 code and --with-gtk build option
+  * Use GtkAboutDialog instead of MateAboutDialog
+  * Copy dconf and gsettings helpers from libmate-desktop and drop
+    dependency on libmate-desktop
+  * React on WM change only on X11
+  * Fix lots of GTK+ deprecations
+  * Some more fixes and cleanups
   * Translations update
-  * fix deprecated usage of GtkVScrollbar
-  * remove dead code
-  * remove some unused variables
-  * drop old code for VTE < 0.38 (it was used in GTK+2 build)
-  * drop old GTK+2 code
-  * require GTK+ 3.14 and VTE 0.38 (API 2.91), drop --with-gtk option
-  * drop build-dep on libmate-desktop, it's not needed anymore
-  * copy gsettings helpers from libmate-desktop (see also FIXME there)
-  * use dconf directly instead of wrapper functions from libmate-desktop
-  * use About dialog from GTK+ instead of forked one from libmate-desktop
-  * window: react on WM change only on X11
-  * drop ancient and irrelevant gnome files
+
+1.14.1
+
+  * man: add missing description of -x / --execute command line option
+  * Translations update
 
 1.14.0
 
