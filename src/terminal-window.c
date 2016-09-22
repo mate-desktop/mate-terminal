@@ -480,13 +480,13 @@ terminal_window_XParseGeometry (const char *string,
 
 	if (*strind != '\0') return (0);
 
-	if (x != NULL && mask & XValue)
+	if (mask & XValue)
 	    *x = tempX;
-	if (y != NULL && mask & YValue)
+	if (mask & YValue)
 	    *y = tempY;
-	if (width != NULL && mask & WidthValue)
+	if (mask & WidthValue)
             *width = tempWidth;
-	if (height != NULL && mask & HeightValue)
+	if (mask & HeightValue)
             *height = tempHeight;
 	return (mask);
 }
@@ -1087,7 +1087,7 @@ terminal_size_to_cb (GtkAction *action,
 
     vte_terminal_set_size (VTE_TERMINAL (priv->active_screen), width, height);
 
-    terminal_window_set_size (window, priv->active_screen, TRUE);
+    terminal_window_update_size (window, priv->active_screen, TRUE);
 }
 
 static void
@@ -1262,7 +1262,7 @@ screen_resize_window_cb (TerminalScreen *screen,
     if (screen != priv->active_screen)
         return;
 
-    terminal_window_set_size (window, screen, TRUE);
+    terminal_window_update_size (window, screen, TRUE);
 }
 
 static void
@@ -2434,7 +2434,7 @@ terminal_window_show (GtkWidget *widget)
 #if 0
         /* At this point, we have our GdkScreen, and hence the right
          * font size, so we can go ahead and size the window. */
-        terminal_window_set_size (window, priv->active_screen, FALSE);
+        terminal_window_update_size (window, priv->active_screen, FALSE);
 #endif
     }
 
@@ -2709,7 +2709,7 @@ terminal_window_set_menubar_visible (TerminalWindow *window,
                                "[window %p] setting size after toggling menubar visibility\n",
                                window);
 
-        terminal_window_set_size (window, priv->active_screen, TRUE);
+        terminal_window_update_size (window, priv->active_screen, TRUE);
     }
 }
 
@@ -2732,28 +2732,31 @@ terminal_window_get_notebook (TerminalWindow *window)
 }
 
 void
-terminal_window_set_size (TerminalWindow *window,
+terminal_window_update_size (TerminalWindow *window,
                           TerminalScreen *screen,
                           gboolean        even_if_mapped)
 {
-    terminal_window_set_size_force_grid (window, screen, even_if_mapped, NULL);
+    terminal_window_update_size_set_geometry (window, screen,
+                                              even_if_mapped, NULL);
 }
 
 gboolean
-terminal_window_set_size_force_grid (TerminalWindow *window,
-                                     TerminalScreen *screen,
-                                     gboolean        even_if_mapped,
-                                     gchar          *force_grid_string)
+terminal_window_update_size_set_geometry (TerminalWindow *window,
+                                          TerminalScreen *screen,
+                                          gboolean        even_if_mapped,
+                                          gchar          *geometry_string)
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *widget;
     GtkWidget *app;
     gboolean result;
-    int parse_result;
-    unsigned int force_grid_width, force_grid_height;
+    int geom_result;
+    gint force_pos_x = 0, force_pos_y = 0;
+    unsigned int force_grid_width = 0, force_grid_height = 0;
     int grid_width, grid_height;
     gint pixel_width, pixel_height;
     GdkWindow *gdk_window;
+    GdkGravity pos_gravity;
 
     gdk_window = gtk_widget_get_window (GTK_WIDGET (window));
     result = TRUE;
@@ -2780,22 +2783,22 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
     g_assert (app != NULL);
 
     terminal_screen_get_size (screen, &grid_width, &grid_height);
-
-    if (force_grid_string != NULL)
+    if (geometry_string != NULL)
     {
-        parse_result = terminal_window_XParseGeometry (force_grid_string,
-                                                       NULL, NULL,
-                                                       &force_grid_width,
-                                                       &force_grid_height);
-        if (parse_result == NoValue)
+        geom_result = terminal_window_XParseGeometry (geometry_string,
+                                                      &force_pos_x,
+                                                      &force_pos_y,
+                                                      &force_grid_width,
+                                                      &force_grid_height);
+        if (geom_result == NoValue)
             result = FALSE;
     }
     else
-        parse_result = NoValue;
+        geom_result = NoValue;
 
-    if (parse_result & WidthValue)
+    if ((geom_result & WidthValue) != 0)
         grid_width = force_grid_width;
-    if (parse_result & HeightValue)
+    if ((geom_result & HeightValue) != 0)
         grid_height = force_grid_height;
 
     /* the "old" struct members were updated by update_geometry */
@@ -2814,10 +2817,46 @@ terminal_window_set_size_force_grid (TerminalWindow *window,
                            priv->old_chrome_width, priv->old_chrome_height,
                            pixel_width, pixel_height);
 
+    pos_gravity = GDK_GRAVITY_NORTH_WEST;
+    if ((geom_result & XNegative) != 0 && (geom_result & YNegative) != 0)
+        pos_gravity = GDK_GRAVITY_SOUTH_EAST;
+    else if ((geom_result & XNegative) != 0)
+        pos_gravity = GDK_GRAVITY_NORTH_EAST;
+    else if ((geom_result & YNegative) != 0)
+        pos_gravity = GDK_GRAVITY_SOUTH_WEST;
+
+    if ((geom_result & XValue) == 0)
+        force_pos_x = 0;
+    if ((geom_result & YValue) == 0)
+        force_pos_y = 0;
+
+    if (pos_gravity == GDK_GRAVITY_SOUTH_EAST ||
+        pos_gravity == GDK_GRAVITY_NORTH_EAST)
+        force_pos_x = gdk_screen_get_width (gtk_widget_get_screen (app)) -
+                      pixel_width + force_pos_x;
+    if (pos_gravity == GDK_GRAVITY_SOUTH_WEST ||
+        pos_gravity == GDK_GRAVITY_SOUTH_EAST)
+        force_pos_y = gdk_screen_get_height (gtk_widget_get_screen (app)) -
+                      pixel_height + force_pos_y;
+
+    /* we don't let you put a window offscreen; maybe some people would
+     * prefer to be able to, but it's kind of a bogus thing to do.
+     */
+    if (force_pos_x < 0)
+        force_pos_x = 0;
+    if (force_pos_y < 0)
+        force_pos_y = 0;
+
     if (even_if_mapped && gtk_widget_get_mapped (app))
         gtk_window_resize (GTK_WINDOW (app), pixel_width, pixel_height);
     else
         gtk_window_set_default_size (GTK_WINDOW (app), pixel_width, pixel_height);
+
+    if ((geom_result & XValue) != 0 || (geom_result & YValue) != 0)
+    {
+        gtk_window_set_gravity (GTK_WINDOW (app), pos_gravity);
+        gtk_window_move (GTK_WINDOW (app), force_pos_x, force_pos_y);
+    }
 
     return result;
 }
@@ -2976,7 +3015,7 @@ notebook_page_selected_callback (GtkWidget       *notebook,
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
                            "[window %p] setting size after flipping notebook pages\n",
                            window);
-    terminal_window_set_size (window, screen, TRUE);
+    terminal_window_update_size (window, screen, TRUE);
 
     terminal_window_update_tabs_menu_sensitivity (window);
     terminal_window_update_encoding_menu_active_encoding (window);
@@ -3115,7 +3154,7 @@ notebook_page_removed_callback (GtkWidget       *notebook,
     pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
     if (pages == 1)
     {
-        terminal_window_set_size (window, priv->active_screen, TRUE);
+        terminal_window_update_size (window, priv->active_screen, TRUE);
     }
     else if (pages == 0)
     {
@@ -3296,7 +3335,7 @@ terminal_window_update_geometry (TerminalWindow *window)
                                window);
     }
 
-    /* We need these for the size calculation in terminal_window_set_size(),
+    /* We need these for the size calculation in terminal_window_update_size(),
      * so we set them unconditionally. */
     priv->old_char_width = char_width;
     priv->old_char_height = char_height;
@@ -4208,7 +4247,7 @@ tabs_detach_tab_callback (GtkAction *action,
     terminal_window_move_screen (window, new_window, screen, -1);
 
     /* FIXME: this seems wrong if tabs are shown in the window */
-    terminal_window_set_size (new_window, screen, FALSE);
+    terminal_window_update_size (new_window, screen, FALSE);
 
     gtk_window_present_with_time (GTK_WINDOW (new_window), gtk_get_current_event_time ());
 }
