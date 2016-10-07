@@ -2633,8 +2633,13 @@ terminal_window_remove_screen (TerminalWindow *window,
     update_tab_visibility (window, -1);
 
     screen_container = terminal_screen_container_get_from_screen (screen);
+#if GTK_CHECK_VERSION(3, 16, 0)
+    gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
+                             GTK_WIDGET (screen_container));
+#else
     gtk_container_remove (GTK_CONTAINER (priv->notebook),
                           GTK_WIDGET (screen_container));
+#endif
 }
 
 void
