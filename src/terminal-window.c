@@ -3038,6 +3038,7 @@ notebook_page_added_callback (GtkWidget       *notebook,
 {
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreen *screen;
+    int pages;
 
     screen = terminal_screen_container_get_screen (TERMINAL_SCREEN_CONTAINER (container));
 
@@ -3096,6 +3097,8 @@ notebook_page_added_callback (GtkWidget       *notebook,
         gtk_window_present_with_time (GTK_WINDOW (window), gtk_get_current_event_time ());
         priv->present_on_insert = FALSE;
     }
+    pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+    if (pages == 2) terminal_window_update_size (window, priv->active_screen, TRUE);
 }
 
 static void
