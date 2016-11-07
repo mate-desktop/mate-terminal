@@ -2673,6 +2673,7 @@ terminal_window_move_screen (TerminalWindow *source_window,
     g_object_unref (screen_container);
 
     terminal_window_add_screen (dest_window, screen, dest_position);
+    gtk_notebook_set_current_page (GTK_NOTEBOOK (dest_window->priv->notebook), dest_position);
     g_object_unref (screen);
 }
 
