@@ -2842,6 +2842,16 @@ notebook_button_press_cb (GtkWidget *widget,
     GtkAction *action;
     int tab_clicked;
 
+    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+    {
+        tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
+        if (tab_clicked >= 0)
+        {
+           update_tab_visibility (window, -1);
+	   gtk_notebook_remove_page(notebook, tab_clicked);
+        }
+    }
+
     if (event->type != GDK_BUTTON_PRESS ||
             event->button != 3 ||
             (event->state & gtk_accelerator_get_default_mod_mask ()) != 0)
