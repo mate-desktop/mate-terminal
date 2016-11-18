@@ -65,7 +65,6 @@ struct _TerminalScreenPrivate
 	char **initial_env;
 	char **override_command;
 	int child_pid;
-	int pty_fd;
 	double font_scale;
 	gboolean user_title; /* title was manually set */
 	GSList *match_tags;
@@ -341,7 +340,6 @@ terminal_screen_init (TerminalScreen *screen)
 	vte_terminal_set_mouse_autohide (VTE_TERMINAL (screen), TRUE);
 
 	priv->child_pid = -1;
-	priv->pty_fd = -1;
 
 	priv->font_scale = PANGO_SCALE_MEDIUM;
 
@@ -1480,7 +1478,6 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 	}
 
 	priv->child_pid = pid;
-	priv->pty_fd = vte_terminal_get_pty (terminal);
 
 	g_free (shell);
 	g_strfreev (argv);
@@ -1714,8 +1711,10 @@ terminal_screen_get_current_dir (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
 	char *cwd;
+	VtePty *pty;
 
-	if (priv->pty_fd != -1)
+	pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
+	if (pty != NULL)
 	{
 #if 0
 		/* Get the foreground process ID */
@@ -1747,9 +1746,11 @@ terminal_screen_get_current_dir (TerminalScreen *screen)
 char*
 terminal_screen_get_current_dir_with_fallback (TerminalScreen *screen)
 {
+	VtePty *pty;
 	TerminalScreenPrivate *priv = screen->priv;
 
-	if (priv->pty_fd == -1)
+	pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
+	if (pty == NULL)
 		return g_strdup (priv->initial_working_directory);
 
 	return terminal_screen_get_current_dir (screen);
@@ -1817,7 +1818,6 @@ terminal_screen_child_exited (VteTerminal *terminal, int status)
 	                       screen);
 
 	priv->child_pid = -1;
-	priv->pty_fd = -1;
 
 	action = terminal_profile_get_property_enum (priv->profile, TERMINAL_PROFILE_EXIT_ACTION);
 
@@ -2271,12 +2271,19 @@ gboolean
 terminal_screen_has_foreground_process (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
+	VtePty *pty;
+	int fd;
 	int fgpid;
 
-	if (priv->pty_fd == -1)
+	pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
+	if (pty == NULL)
 		return FALSE;
 
-	fgpid = tcgetpgrp (priv->pty_fd);
+	fd = vte_pty_get_fd (pty);
+	if (fd == -1)
+		return FALSE;
+
+	fgpid = tcgetpgrp (fd);
 	if (fgpid == -1 || fgpid == priv->child_pid)
 		return FALSE;
 
