@@ -8,14 +8,15 @@
 # Angelos Chraniotis <chraniotis@gmail.com>, 2016
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2014-2016
 # Νίκος Κοντ. <nkontopos@gmail.com>, 2016
+# takis b, 2016
 # thunk <thunk77@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-20 12:55+0300\n"
-"PO-Revision-Date: 2016-04-30 19:50+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"POT-Creation-Date: 2016-12-06 01:12+0300\n"
+"PO-Revision-Date: 2016-12-05 22:13+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Greek (http://www.transifex.com/mate/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,16 +37,16 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> Η εφαρμογή MATE Terminal προσομοιώνει ένα τερματικό μλεσω του οποίου μπορείτε να έχετε πρόσβαση σε κάποιο κέλυφος του UNIX ενώ βρίσκεστε στο περιβάλλον του MATΕ. Η εφαρμογή MATE Terminal προσομοιώνει το πρόγραμμα xterm που έχει αναπτυχθεί από το X Consortium. Υποστηρίζει διαφανή παρασκήνια, άνοιγμα πολλαπλών τερματικών σε ένα παράθυρο (καρτέλες) και προσβάσιμους υπερσυνδέσμους URL. </p> <p> Η εφαρμογή MATE Terminal είναι ένα παρακλάδι του GNOME Terminal και μέρος του περιβάλλοντος εργασίας MATE. Εάν θέλε να μάθετε περισσότερα σχετικά με το MATE και την εφαρμογή MATE Terminal, παρακαλούμε επισκεφθείτε την ιστοσελίδα τους. </p>"
+msgstr "<p> Η εφαρμογή MATE Terminal προσομοιώνει ένα τερματικό μέσω του οποίου μπορείτε να έχετε πρόσβαση σε κάποιο κέλυφος του UNIX ενώ βρίσκεστε στο περιβάλλον του MATΕ. Η εφαρμογή MATE Terminal προσομοιώνει το πρόγραμμα xterm που έχει αναπτυχθεί από το X Consortium. Υποστηρίζει διαφανή παρασκήνια, άνοιγμα πολλαπλών τερματικών σε ένα παράθυρο (καρτέλες) και προσβάσιμους υπερσυνδέσμους URL. </p> <p> Η εφαρμογή MATE Terminal είναι ένα παρακλάδι του GNOME Terminal και μέρος του περιβάλλοντος εργασίας MATE. Εάν θέλε να μάθετε περισσότερα σχετικά με το MATE και την εφαρμογή MATE Terminal, παρακαλούμε επισκεφθείτε την ιστοσελίδα τους. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:3955
+#: ../src/terminal-window.c:4345
 msgid "MATE Terminal"
 msgstr "Τερματικό MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2185
 msgid "Terminal"
 msgstr "Τερματικό"
 
@@ -114,8 +115,8 @@ msgid ""
 msgstr "Αν θα ισχύουν τα πλήκτρα πρόσβασης Alt+γράμμα για τη γραμμή μενού. Η απενεργοποίησή τους επιτρέπεται, γιατί υπάρχει κίνδυνος συγκρούσεων με εφαρμογές που εκτελούνται μέσα στο τερματικό."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr "Αν θα είναι ενεργοποιημένη η κανονική συντόμευση του GTK για πρόσβαση στη γραμμή μενού"
+msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
+msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -1583,7 +1584,7 @@ msgstr "Σμίκρυνση"
 msgid "Normal Size"
 msgstr "Κανονικό μέγεθος"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
 msgid "Set Title"
 msgstr "Ορισμός τίτλου"
 
@@ -1741,12 +1742,12 @@ msgstr "Επιλέξτε βασικό προφίλ"
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Δεν υπάρχει το προφίλ \"%s\". Θα χρησιμοποιηθεί το προεπιλεγμένο\n"
 
-#: ../src/terminal-app.c:1853
+#: ../src/terminal-app.c:1856
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Μη έγκυρο αλφαριθμητικό γεωμετρίας \"%s\"\n"
 
-#: ../src/terminal-app.c:2059
+#: ../src/terminal-app.c:2062
 msgid "User Defined"
 msgstr "Καθορισμένη από το χρήστη"
 
@@ -2096,15 +2097,15 @@ msgstr "Προβολή επιλογών ανά τερματικό"
 msgid "Unnamed"
 msgstr "Ανώνυμο"
 
-#: ../src/terminal-screen.c:1460
+#: ../src/terminal-screen.c:1458
 msgid "_Profile Preferences"
 msgstr "_Προτιμήσεις προφίλ"
 
-#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
+#: ../src/terminal-screen.c:1459 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "Επα_νεκκίνηση"
 
-#: ../src/terminal-screen.c:1464
+#: ../src/terminal-screen.c:1462
 msgid "There was an error creating the child process for this terminal"
 msgstr "Σφάλμα κατά τη δημιουργία της θυγατρικής διεργασίας για αυτό το τερματικό"
 
@@ -2165,7 +2166,7 @@ msgstr "Θα πρέπει να έχετε λάβει ένα αντίγραφο �
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:476
+#: ../src/terminal-window.c:664
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2173,259 +2174,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:482
+#: ../src/terminal-window.c:670
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1668
+#: ../src/terminal-window.c:1856
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2111
 msgid "Open _Terminal"
 msgstr "Άνοιγμα _τερματικού"
 
-#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
+#: ../src/terminal-window.c:2116
 msgid "Open Ta_b"
 msgstr "Άνοιγμα _καρτέλας"
 
-#: ../src/terminal-window.c:1671
+#: ../src/terminal-window.c:1859
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../src/terminal-window.c:1672
+#: ../src/terminal-window.c:1860
 msgid "_View"
 msgstr "_Προβολή"
 
-#: ../src/terminal-window.c:1673
+#: ../src/terminal-window.c:1861
 msgid "_Search"
 msgstr "Α_ναζήτηση"
 
-#: ../src/terminal-window.c:1674
+#: ../src/terminal-window.c:1862
 msgid "_Terminal"
 msgstr "_Τερματικό"
 
-#: ../src/terminal-window.c:1675
+#: ../src/terminal-window.c:1863
 msgid "Ta_bs"
 msgstr "_Καρτέλες"
 
-#: ../src/terminal-window.c:1676
+#: ../src/terminal-window.c:1864
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/terminal-window.c:1692
+#: ../src/terminal-window.c:1880
 msgid "New _Profile…"
 msgstr "Νέο _προφίλ…"
 
-#: ../src/terminal-window.c:1697
+#: ../src/terminal-window.c:1885
 msgid "_Save Contents"
 msgstr "_Αποθήκευση περιεχομένου"
 
-#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
 msgid "C_lose Tab"
 msgstr "Κ_λείσιμο καρτέλας"
 
-#: ../src/terminal-window.c:1707
+#: ../src/terminal-window.c:1895
 msgid "_Close Window"
 msgstr "Κλεί_σιμο παραθύρου"
 
-#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
 msgid "Paste _Filenames"
 msgstr "Επικόλληση _ονομάτων αρχείων"
 
-#: ../src/terminal-window.c:1734
+#: ../src/terminal-window.c:1922
 msgid "P_rofiles…"
 msgstr "Π_ροφίλ…"
 
-#: ../src/terminal-window.c:1739
+#: ../src/terminal-window.c:1927
 msgid "_Keyboard Shortcuts…"
 msgstr "_Συντομεύσεις πληκτρολογίου…"
 
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1932
 msgid "Pr_ofile Preferences"
 msgstr "_Προτιμήσεις προφίλ"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1956
 msgid "_Find..."
 msgstr "_Εύρεση…"
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1961
 msgid "Find Ne_xt"
 msgstr "Εύρεση επομέ_νου"
 
-#: ../src/terminal-window.c:1778
+#: ../src/terminal-window.c:1966
 msgid "Find Pre_vious"
 msgstr "Εύρεση προη_γουμένου"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1971
 msgid "_Clear Highlight"
 msgstr "Εκκα_θάριση επισήμανσης"
 
-#: ../src/terminal-window.c:1789
+#: ../src/terminal-window.c:1977
 msgid "Go to _Line..."
 msgstr "Μετά_βαση στη γραμμή…"
 
-#: ../src/terminal-window.c:1794
+#: ../src/terminal-window.c:1982
 msgid "_Incremental Search..."
 msgstr "Αυ_ξητική αναζήτηση…"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1801
+#: ../src/terminal-window.c:1989
 msgid "Change _Profile"
 msgstr "Αλλαγή _προφίλ"
 
-#: ../src/terminal-window.c:1803
+#: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
 msgstr "_Προηγούμενο Προφίλ"
 
-#: ../src/terminal-window.c:1808
+#: ../src/terminal-window.c:1996
 msgid "_Next Profile"
 msgstr "_Επόμενο Προφίλ"
 
-#: ../src/terminal-window.c:1813
+#: ../src/terminal-window.c:2001
 msgid "_Set Title…"
 msgstr "_Ορισμός τίτλου…"
 
-#: ../src/terminal-window.c:1817
+#: ../src/terminal-window.c:2005
 msgid "Set _Character Encoding"
 msgstr "Ορισμός κωδικοποίησης _χαρακτήρων"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:2007
 msgid "_Reset"
 msgstr "Επαναφο_ρά"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:2012
 msgid "Reset and C_lear"
 msgstr "Επαναφορά και καθαρι_σμός"
 
-#: ../src/terminal-window.c:1831
+#: ../src/terminal-window.c:2019
 msgid "_Add or Remove…"
 msgstr "_Προσθήκη ή αφαίρεση…"
 
-#: ../src/terminal-window.c:1838
+#: ../src/terminal-window.c:2026
 msgid "_Previous Tab"
 msgstr "_Προηγούμενη καρτέλα"
 
-#: ../src/terminal-window.c:1843
+#: ../src/terminal-window.c:2031
 msgid "_Next Tab"
 msgstr "_Επόμενη καρτέλα"
 
-#: ../src/terminal-window.c:1848
+#: ../src/terminal-window.c:2036
 msgid "Move Tab _Left"
 msgstr "Μετακίνηση καρτέλας στα α_ριστερά"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:2041
 msgid "Move Tab _Right"
 msgstr "Μετακίνηση καρτέλας στα _δεξιά"
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:2046
 msgid "_Detach tab"
 msgstr "_Απόσπαση καρτέλας"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:2053
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2058
 msgid "_About"
 msgstr "Π_ερί"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:2065
 msgid "_Send Mail To…"
 msgstr "_Αποστολή μηνύματος προς…"
 
-#: ../src/terminal-window.c:1882
+#: ../src/terminal-window.c:2070
 msgid "_Copy E-mail Address"
 msgstr "Αντιγρα_φή ηλεκτρονικής διεύθυνσης"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:2075
 msgid "C_all To…"
 msgstr "_Κλήση…"
 
-#: ../src/terminal-window.c:1892
+#: ../src/terminal-window.c:2080
 msgid "_Copy Call Address"
 msgstr "_Αντιγραφή διεύθυνσης κλήσης"
 
-#: ../src/terminal-window.c:1897
+#: ../src/terminal-window.c:2085
 msgid "_Open Link"
 msgstr "Άν_οιγμα συνδέσμου"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:2090
 msgid "_Copy Link Address"
 msgstr "Αντιγρα_φή διεύθυνσης συνδέσμου"
 
-#: ../src/terminal-window.c:1906
+#: ../src/terminal-window.c:2094
 msgid "P_rofiles"
 msgstr "_Προφίλ"
 
-#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
 msgid "C_lose Window"
 msgstr "_Κλείσιμο παραθύρου"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:2131
 msgid "L_eave Full Screen"
 msgstr "Έ_ξοδος από την πλήρη οθόνη"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:2135
 msgid "_Input Methods"
 msgstr "Μέθοδοι ε_ισαγωγής"
 
-#: ../src/terminal-window.c:1954
+#: ../src/terminal-window.c:2142
 msgid "Show _Menubar"
 msgstr "Εμφάνιση γραμμής _μενού"
 
-#: ../src/terminal-window.c:1960
+#: ../src/terminal-window.c:2148
 msgid "_Full Screen"
 msgstr "_Πλήρης οθόνη"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this window?"
 msgstr "Κλείσιμο παραθύρου;"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this terminal?"
 msgstr "Κλείσιμο τερματικού;"
 
-#: ../src/terminal-window.c:3125
+#: ../src/terminal-window.c:3521
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Εκτελούνται ακόμη διεργασίες στα τερματικά αυτού του παραθύρου. Αν κλείσετε το τερματικό, θα τερματιστούν όλες οι διεργασίες."
 
-#: ../src/terminal-window.c:3129
+#: ../src/terminal-window.c:3525
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Εκτελείται μία διεργασία. Αν κλείσετε το τερματικό, η διεργασία θα τερματιστεί."
 
-#: ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:3530
 msgid "C_lose Terminal"
 msgstr "Κλείσιμο τε_ρματικού"
 
-#: ../src/terminal-window.c:3200
+#: ../src/terminal-window.c:3596
 msgid "Could not save contents"
 msgstr "Αδύνατη η αποθήκευση του περιεχομένου"
 
-#: ../src/terminal-window.c:3224
+#: ../src/terminal-window.c:3620
 msgid "Save as..."
 msgstr "Αποθήκευση ως…"
 
-#: ../src/terminal-window.c:3743
+#: ../src/terminal-window.c:4139
 msgid "_Title:"
 msgstr "_Τίτλος:"
 
-#: ../src/terminal-window.c:3938
+#: ../src/terminal-window.c:4328
 msgid "Contributors:"
 msgstr "Συντελεστές:"
 
-#: ../src/terminal-window.c:3957
+#: ../src/terminal-window.c:4347
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Προσομοιωτής τερματικού για την επιφάνεια εργασίας του MATE"
 
-#: ../src/terminal-window.c:3964
+#: ../src/terminal-window.c:4354
 msgid "translator-credits"
 msgstr "Σίμος Ξενιτέλλης <simos@gnome.org>\nΚώστας Παπαδήμας <pkst@gnome.org>\nΝίκος Χαρωνιτάκης <charosn@her.forthnet.gr>\nΤζένη Πετούμενου <epetoumenou@gmail.com>\nΜιχάλης Κοτσαρίνης <mk73628@gmail.com>"

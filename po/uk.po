@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-20 12:55+0300\n"
-"PO-Revision-Date: 2016-03-31 07:35+0000\n"
-"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
+"POT-Creation-Date: 2016-12-06 01:12+0300\n"
+"PO-Revision-Date: 2016-12-05 22:13+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,16 +34,16 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> MATE Terminal – емулятор терміналу, що використовується для доступу до командної оболонки UNIX у середовищі MATE. MATE Terminal емулює застосунок xterm, розроблений консорціумом X. Він підтримує прозоре тло, відкриття декількох терміналів у одному вікні (вкладки) і натискувані URL. </p> <p> MATE Terminal – відгалудження(форк) GNOME Terminal і частина стільничного середовища MATE. Якщо Ви бажаєте знати більше про MATE і MATE Terminal, будь ласка, відвідайте домашню сторінку проєкту. </p>"
+msgstr "<p> MATE Terminal – емулятор терміналу, що використовується для доступу до командної оболонки UNIX у середовищі MATE. MATE Terminal емулює застосунок xterm, розроблений консорціумом X. Він підтримує прозоре тло, відкриття декількох терміналів у одному вікні (вкладки) і натискувані URL. </p> <p> MATE Terminal – відгалуження(форк) GNOME Terminal і частина стільничного середовища MATE. Якщо Ви бажаєте знати більше про MATE і MATE Terminal, будь ласка, відвідайте домашню сторінку проєкту. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:3955
+#: ../src/terminal-window.c:4345
 msgid "MATE Terminal"
 msgstr "Термінал MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2185
 msgid "Terminal"
 msgstr "Термінал"
 
@@ -112,8 +112,8 @@ msgid ""
 msgstr "Чи використовувати сполучення клявіш Alt+літера для доступу до меню. Ця функція може заважати роботі деяких додатків всередині терміналу, у цьому випадку її потрібно вимкнути."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr "Чи дозволяти стандартне сполучення клявіш GTK для доступу до меню"
+msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
+msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -1581,7 +1581,7 @@ msgstr "Зменшити"
 msgid "Normal Size"
 msgstr "Звичайний розмір"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
 msgid "Set Title"
 msgstr "Встановлення заголовку"
 
@@ -1739,12 +1739,12 @@ msgstr "Виберіть базовий профіль"
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Відсутній профіль \"%s\", використовується типовий профіль\n"
 
-#: ../src/terminal-app.c:1853
+#: ../src/terminal-app.c:1856
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Неправильний рядок геометрії \"%s\"\n"
 
-#: ../src/terminal-app.c:2059
+#: ../src/terminal-app.c:2062
 msgid "User Defined"
 msgstr "Визначене користувачем"
 
@@ -2094,15 +2094,15 @@ msgstr "Показати параметри, що застосовуються �
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: ../src/terminal-screen.c:1460
+#: ../src/terminal-screen.c:1458
 msgid "_Profile Preferences"
 msgstr "Налаштування _профілю"
 
-#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
+#: ../src/terminal-screen.c:1459 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "_Перезапустити"
 
-#: ../src/terminal-screen.c:1464
+#: ../src/terminal-screen.c:1462
 msgid "There was an error creating the child process for this terminal"
 msgstr "Помилка створення процесу-нащадка для цього терміналу"
 
@@ -2163,7 +2163,7 @@ msgstr "Ви мали б отримати копію GNU General Public License 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:476
+#: ../src/terminal-window.c:664
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2171,259 +2171,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:482
+#: ../src/terminal-window.c:670
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1668
+#: ../src/terminal-window.c:1856
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2111
 msgid "Open _Terminal"
 msgstr "Відкрити _термінал"
 
-#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
+#: ../src/terminal-window.c:2116
 msgid "Open Ta_b"
 msgstr "Відкрити вк_ладку"
 
-#: ../src/terminal-window.c:1671
+#: ../src/terminal-window.c:1859
 msgid "_Edit"
 msgstr "_Зміни"
 
-#: ../src/terminal-window.c:1672
+#: ../src/terminal-window.c:1860
 msgid "_View"
 msgstr "_Вигляд"
 
-#: ../src/terminal-window.c:1673
+#: ../src/terminal-window.c:1861
 msgid "_Search"
 msgstr "З_найти"
 
-#: ../src/terminal-window.c:1674
+#: ../src/terminal-window.c:1862
 msgid "_Terminal"
 msgstr "_Термінал"
 
-#: ../src/terminal-window.c:1675
+#: ../src/terminal-window.c:1863
 msgid "Ta_bs"
 msgstr "В_кладки"
 
-#: ../src/terminal-window.c:1676
+#: ../src/terminal-window.c:1864
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../src/terminal-window.c:1692
+#: ../src/terminal-window.c:1880
 msgid "New _Profile…"
 msgstr "Створити _профіль…"
 
-#: ../src/terminal-window.c:1697
+#: ../src/terminal-window.c:1885
 msgid "_Save Contents"
 msgstr "З_берегти вміст"
 
-#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
 msgid "C_lose Tab"
 msgstr "Закр_ити вкладку"
 
-#: ../src/terminal-window.c:1707
+#: ../src/terminal-window.c:1895
 msgid "_Close Window"
 msgstr "_Закрити вікно"
 
-#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
 msgid "Paste _Filenames"
 msgstr "Вставити _імена файлів"
 
-#: ../src/terminal-window.c:1734
+#: ../src/terminal-window.c:1922
 msgid "P_rofiles…"
 msgstr "_Профілі…"
 
-#: ../src/terminal-window.c:1739
+#: ../src/terminal-window.c:1927
 msgid "_Keyboard Shortcuts…"
 msgstr "_Сполучення клявіш…"
 
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1932
 msgid "Pr_ofile Preferences"
 msgstr "_Параметри профілю"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1956
 msgid "_Find..."
 msgstr "З_найти..."
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1961
 msgid "Find Ne_xt"
 msgstr "Зна_йти далі"
 
-#: ../src/terminal-window.c:1778
+#: ../src/terminal-window.c:1966
 msgid "Find Pre_vious"
 msgstr "Знайти _попередній"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1971
 msgid "_Clear Highlight"
 msgstr "_Очистити виділення"
 
-#: ../src/terminal-window.c:1789
+#: ../src/terminal-window.c:1977
 msgid "Go to _Line..."
 msgstr "Йти до _рядка..."
 
-#: ../src/terminal-window.c:1794
+#: ../src/terminal-window.c:1982
 msgid "_Incremental Search..."
 msgstr "_Шукати при наборі..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1801
+#: ../src/terminal-window.c:1989
 msgid "Change _Profile"
 msgstr "Змінити _профіль"
 
-#: ../src/terminal-window.c:1803
+#: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
 msgstr "_Попередній профіль"
 
-#: ../src/terminal-window.c:1808
+#: ../src/terminal-window.c:1996
 msgid "_Next Profile"
 msgstr "_Наступний профіль"
 
-#: ../src/terminal-window.c:1813
+#: ../src/terminal-window.c:2001
 msgid "_Set Title…"
 msgstr "_Встановити заголовок…"
 
-#: ../src/terminal-window.c:1817
+#: ../src/terminal-window.c:2005
 msgid "Set _Character Encoding"
 msgstr "Встановити _кодування символів"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:2007
 msgid "_Reset"
 msgstr "_Скинути"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:2012
 msgid "Reset and C_lear"
 msgstr "Скинути і о_чистити"
 
-#: ../src/terminal-window.c:1831
+#: ../src/terminal-window.c:2019
 msgid "_Add or Remove…"
 msgstr "_Додати чи вилучити…"
 
-#: ../src/terminal-window.c:1838
+#: ../src/terminal-window.c:2026
 msgid "_Previous Tab"
 msgstr "_Попередня вкладка"
 
-#: ../src/terminal-window.c:1843
+#: ../src/terminal-window.c:2031
 msgid "_Next Tab"
 msgstr "_Наступна вкладка"
 
-#: ../src/terminal-window.c:1848
+#: ../src/terminal-window.c:2036
 msgid "Move Tab _Left"
 msgstr "Перемістити вкладку _ліворуч"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:2041
 msgid "Move Tab _Right"
 msgstr "Перемістити вкладку _праворуч"
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:2046
 msgid "_Detach tab"
 msgstr "Від'_єднати вкладку"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:2053
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2058
 msgid "_About"
 msgstr "_Про проґраму"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:2065
 msgid "_Send Mail To…"
 msgstr "_Надіслати ел.пошту..."
 
-#: ../src/terminal-window.c:1882
+#: ../src/terminal-window.c:2070
 msgid "_Copy E-mail Address"
 msgstr "_Копіювати E-mail адресу"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:2075
 msgid "C_all To…"
 msgstr "_Зателефонувати…"
 
-#: ../src/terminal-window.c:1892
+#: ../src/terminal-window.c:2080
 msgid "_Copy Call Address"
 msgstr "_Копіювати адресу E-mail"
 
-#: ../src/terminal-window.c:1897
+#: ../src/terminal-window.c:2085
 msgid "_Open Link"
 msgstr "_Відкрити посилання"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:2090
 msgid "_Copy Link Address"
 msgstr "_Копіювати адресу посилання"
 
-#: ../src/terminal-window.c:1906
+#: ../src/terminal-window.c:2094
 msgid "P_rofiles"
 msgstr "П_рофілі"
 
-#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
 msgid "C_lose Window"
 msgstr "Закр_ити вікно"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:2131
 msgid "L_eave Full Screen"
 msgstr "_Лишити на увесь екран"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:2135
 msgid "_Input Methods"
 msgstr "Методи _вводу"
 
-#: ../src/terminal-window.c:1954
+#: ../src/terminal-window.c:2142
 msgid "Show _Menubar"
 msgstr "Показати _панель меню"
 
-#: ../src/terminal-window.c:1960
+#: ../src/terminal-window.c:2148
 msgid "_Full Screen"
 msgstr "_На увесь екран"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this window?"
 msgstr "Закрити вікно?"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this terminal?"
 msgstr "Закрити цей термінал?"
 
-#: ../src/terminal-window.c:3125
+#: ../src/terminal-window.c:3521
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "У деяких терміналах цього вікна запущені процеси. Закриття вікна призведе до переривання усіх цих процесів."
 
-#: ../src/terminal-window.c:3129
+#: ../src/terminal-window.c:3525
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "У терміналі запущено процес.  Закриття терміналу призведе до переривання процесу."
 
-#: ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:3530
 msgid "C_lose Terminal"
 msgstr "_закрити термінал"
 
-#: ../src/terminal-window.c:3200
+#: ../src/terminal-window.c:3596
 msgid "Could not save contents"
 msgstr "Неможливо зберегти вміст"
 
-#: ../src/terminal-window.c:3224
+#: ../src/terminal-window.c:3620
 msgid "Save as..."
 msgstr "Зберегти як..."
 
-#: ../src/terminal-window.c:3743
+#: ../src/terminal-window.c:4139
 msgid "_Title:"
 msgstr "За_головок:"
 
-#: ../src/terminal-window.c:3938
+#: ../src/terminal-window.c:4328
 msgid "Contributors:"
 msgstr "Помічники:"
 
-#: ../src/terminal-window.c:3957
+#: ../src/terminal-window.c:4347
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Емулятор терміналу для середовища MATE"
 
-#: ../src/terminal-window.c:3964
+#: ../src/terminal-window.c:4354
 msgid "translator-credits"
 msgstr "Юрій Сирота\nМаксим Дзюманенко <dziumanenko@gmail.com>\nМикола Ткач <Stuartlittle1970@gmail.com>"

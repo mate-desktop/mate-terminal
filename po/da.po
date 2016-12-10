@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-20 12:55+0300\n"
-"PO-Revision-Date: 2016-03-25 17:12+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"POT-Creation-Date: 2016-12-06 01:12+0300\n"
+"PO-Revision-Date: 2016-12-08 12:53+0000\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish (http://www.transifex.com/mate/MATE/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,13 +35,13 @@ msgid ""
 msgstr "<p> MATE Terminal er en terminalemulator, som du kan bruge til at tilgå en UNIX-skal i MATE-miljøet. MATE Terminal emulerer xterm-programmet udviklet af X Consortium. Den understøtter gennemskinnelige baggrunde, åbning af flere terminaler i et enkelt vindue (faneblade) og adresser, der kan klikkes på. </p> <p> MATE Terminal er en forgrening af GNOME Terminal og en del af skrivebordsmiljøet MATE. Hvis du ønsker at vide mere om MATE og MATE Terminal så besøg projektets hjemmeside. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:3955
+#: ../src/terminal-window.c:4345
 msgid "MATE Terminal"
 msgstr "Mate-terminal"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2185
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -110,8 +110,8 @@ msgid ""
 msgstr "Om der skal være genveje på formen Alt+bogstav for menulinjen. Sådanne genveje kan interferere med nogle programmer der kører inden i terminalen så det er muligt at slå dem fra."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr "Om standard GTK+-genvejene for menulinjen er aktiverede"
+msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
+msgstr "Om GTK+'s standardgenvejen for menulinjeadgang er aktiveret"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -1579,7 +1579,7 @@ msgstr "Zoom ud"
 msgid "Normal Size"
 msgstr "Normal størrelse"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
 msgid "Set Title"
 msgstr "Sæt titel"
 
@@ -1737,12 +1737,12 @@ msgstr "Vælg grundprofil"
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Ingen profil ved navn »%s«, bruger standardprofil\n"
 
-#: ../src/terminal-app.c:1853
+#: ../src/terminal-app.c:1856
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Ugyldig geometriangivelse »%s«\n"
 
-#: ../src/terminal-app.c:2059
+#: ../src/terminal-app.c:2062
 msgid "User Defined"
 msgstr "Brugerdefineret"
 
@@ -2092,15 +2092,15 @@ msgstr "Vis terminalvise tilvalg"
 msgid "Unnamed"
 msgstr "Unavngivet"
 
-#: ../src/terminal-screen.c:1460
+#: ../src/terminal-screen.c:1458
 msgid "_Profile Preferences"
 msgstr "Pr_ofilindstillinger"
 
-#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
+#: ../src/terminal-screen.c:1459 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "_Genstart"
 
-#: ../src/terminal-screen.c:1464
+#: ../src/terminal-screen.c:1462
 msgid "There was an error creating the child process for this terminal"
 msgstr "Der opstod en fejl under oprettelse af underprocessen for denne terminal"
 
@@ -2161,7 +2161,7 @@ msgstr "Du bør have modtaget en kopi af GNU General Public License sammen med M
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:476
+#: ../src/terminal-window.c:664
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2169,259 +2169,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:482
+#: ../src/terminal-window.c:670
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1668
+#: ../src/terminal-window.c:1856
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2111
 msgid "Open _Terminal"
 msgstr "Åbn _terminal"
 
-#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
+#: ../src/terminal-window.c:2116
 msgid "Open Ta_b"
 msgstr "Åbn fane_blad"
 
-#: ../src/terminal-window.c:1671
+#: ../src/terminal-window.c:1859
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: ../src/terminal-window.c:1672
+#: ../src/terminal-window.c:1860
 msgid "_View"
 msgstr "_Vis"
 
-#: ../src/terminal-window.c:1673
+#: ../src/terminal-window.c:1861
 msgid "_Search"
 msgstr "_Søg"
 
-#: ../src/terminal-window.c:1674
+#: ../src/terminal-window.c:1862
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1675
+#: ../src/terminal-window.c:1863
 msgid "Ta_bs"
 msgstr "Fane_blade"
 
-#: ../src/terminal-window.c:1676
+#: ../src/terminal-window.c:1864
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/terminal-window.c:1692
+#: ../src/terminal-window.c:1880
 msgid "New _Profile…"
 msgstr "Ny _profil…"
 
-#: ../src/terminal-window.c:1697
+#: ../src/terminal-window.c:1885
 msgid "_Save Contents"
 msgstr "_Gem indhold"
 
-#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
 msgid "C_lose Tab"
 msgstr "L_uk faneblad"
 
-#: ../src/terminal-window.c:1707
+#: ../src/terminal-window.c:1895
 msgid "_Close Window"
 msgstr "_Luk vindue"
 
-#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
 msgid "Paste _Filenames"
 msgstr "Indsæt _filnavne"
 
-#: ../src/terminal-window.c:1734
+#: ../src/terminal-window.c:1922
 msgid "P_rofiles…"
 msgstr "P_rofiler…"
 
-#: ../src/terminal-window.c:1739
+#: ../src/terminal-window.c:1927
 msgid "_Keyboard Shortcuts…"
 msgstr "_Tastaturgenveje…"
 
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1932
 msgid "Pr_ofile Preferences"
 msgstr "Pr_ofilindstillinger"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1956
 msgid "_Find..."
 msgstr "_Søg …"
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1961
 msgid "Find Ne_xt"
 msgstr "Find _næste"
 
-#: ../src/terminal-window.c:1778
+#: ../src/terminal-window.c:1966
 msgid "Find Pre_vious"
 msgstr "Find f_orrige"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1971
 msgid "_Clear Highlight"
 msgstr "_Ryd fremhævning"
 
-#: ../src/terminal-window.c:1789
+#: ../src/terminal-window.c:1977
 msgid "Go to _Line..."
 msgstr "Hop til _linje …"
 
-#: ../src/terminal-window.c:1794
+#: ../src/terminal-window.c:1982
 msgid "_Incremental Search..."
 msgstr "_Trinvis søgning …"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1801
+#: ../src/terminal-window.c:1989
 msgid "Change _Profile"
 msgstr "Skift _profil"
 
-#: ../src/terminal-window.c:1803
+#: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
 msgstr "_Foregående profil"
 
-#: ../src/terminal-window.c:1808
+#: ../src/terminal-window.c:1996
 msgid "_Next Profile"
 msgstr "_Næste profil"
 
-#: ../src/terminal-window.c:1813
+#: ../src/terminal-window.c:2001
 msgid "_Set Title…"
 msgstr "_Sæt titel…"
 
-#: ../src/terminal-window.c:1817
+#: ../src/terminal-window.c:2005
 msgid "Set _Character Encoding"
 msgstr "Sæt _tegnkodning"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:2007
 msgid "_Reset"
 msgstr "_Nulstil"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:2012
 msgid "Reset and C_lear"
 msgstr "Nulstil og r_yd"
 
-#: ../src/terminal-window.c:1831
+#: ../src/terminal-window.c:2019
 msgid "_Add or Remove…"
 msgstr "_Tilføj eller fjern…"
 
-#: ../src/terminal-window.c:1838
+#: ../src/terminal-window.c:2026
 msgid "_Previous Tab"
 msgstr "_Foregående faneblad"
 
-#: ../src/terminal-window.c:1843
+#: ../src/terminal-window.c:2031
 msgid "_Next Tab"
 msgstr "_Næste faneblad"
 
-#: ../src/terminal-window.c:1848
+#: ../src/terminal-window.c:2036
 msgid "Move Tab _Left"
 msgstr "Flyt faneblad til _venstre"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:2041
 msgid "Move Tab _Right"
 msgstr "Flyt faneblad til _højre"
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:2046
 msgid "_Detach tab"
 msgstr "_Frigør faneblad"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:2053
 msgid "_Contents"
 msgstr "_Indhold"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2058
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:2065
 msgid "_Send Mail To…"
 msgstr "_Send post til…"
 
-#: ../src/terminal-window.c:1882
+#: ../src/terminal-window.c:2070
 msgid "_Copy E-mail Address"
 msgstr "K_opier e-postadresse"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:2075
 msgid "C_all To…"
 msgstr "R_ing til…"
 
-#: ../src/terminal-window.c:1892
+#: ../src/terminal-window.c:2080
 msgid "_Copy Call Address"
 msgstr "_Kopier opkaldsadresse"
 
-#: ../src/terminal-window.c:1897
+#: ../src/terminal-window.c:2085
 msgid "_Open Link"
 msgstr "_Åbn adresse"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:2090
 msgid "_Copy Link Address"
 msgstr "K_opier adresse"
 
-#: ../src/terminal-window.c:1906
+#: ../src/terminal-window.c:2094
 msgid "P_rofiles"
 msgstr "P_rofiler"
 
-#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
 msgid "C_lose Window"
 msgstr "_Luk vindue"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:2131
 msgid "L_eave Full Screen"
 msgstr "F_orlad fuldskærm"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:2135
 msgid "_Input Methods"
 msgstr "_Indtastningsmetoder"
 
-#: ../src/terminal-window.c:1954
+#: ../src/terminal-window.c:2142
 msgid "Show _Menubar"
 msgstr "Vis _menulinje"
 
-#: ../src/terminal-window.c:1960
+#: ../src/terminal-window.c:2148
 msgid "_Full Screen"
 msgstr "_Fuldskærm"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this window?"
 msgstr "Luk dette vindue?"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this terminal?"
 msgstr "Luk denne terminal?"
 
-#: ../src/terminal-window.c:3125
+#: ../src/terminal-window.c:3521
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Der er stadig kørende processer i visse terminaler i dette vindue. At lukke vinduet vil dræbe dem alle."
 
-#: ../src/terminal-window.c:3129
+#: ../src/terminal-window.c:3525
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Der er stadig en kørende proces i denne terminal. Lukkes terminalen, vil den blive dræbt."
 
-#: ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:3530
 msgid "C_lose Terminal"
 msgstr "_Luk terminal"
 
-#: ../src/terminal-window.c:3200
+#: ../src/terminal-window.c:3596
 msgid "Could not save contents"
 msgstr "Kunne ikke gemme indholdet"
 
-#: ../src/terminal-window.c:3224
+#: ../src/terminal-window.c:3620
 msgid "Save as..."
 msgstr "Gem som …"
 
-#: ../src/terminal-window.c:3743
+#: ../src/terminal-window.c:4139
 msgid "_Title:"
 msgstr "_Titel:"
 
-#: ../src/terminal-window.c:3938
+#: ../src/terminal-window.c:4328
 msgid "Contributors:"
 msgstr "Bidragydere:"
 
-#: ../src/terminal-window.c:3957
+#: ../src/terminal-window.c:4347
 msgid "A terminal emulator for the MATE desktop"
 msgstr "En terminal-emulator til MATE"
 
-#: ../src/terminal-window.c:3964
+#: ../src/terminal-window.c:4354
 msgid "translator-credits"
 msgstr "Martin Willemoes Hansen\nOle Laursen\nLasse Bang Mikkelsen\nKenneth Nielsen\nAsk Hjorth Larsen\n\nDansk-gruppen <dansk@klid.dk>\nMere info: http://www.klid.dk/dansk/"
