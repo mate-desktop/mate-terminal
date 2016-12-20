@@ -2904,12 +2904,17 @@ notebook_button_press_cb (GtkWidget *widget,
     GtkWidget *menu;
     GtkAction *action;
     int tab_clicked;
+    int page_num;
+    int before_pages;
+    int later_pages;
 
     if (event->type == GDK_BUTTON_PRESS && event->button == 2)
     {
         tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
         if (tab_clicked >= 0)
         {
+            before_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+            page_num = gtk_notebook_get_current_page (notebook);
             gtk_notebook_set_current_page (notebook, tab_clicked);
             TerminalScreen *active_screen = priv->active_screen;
 
@@ -2917,7 +2922,19 @@ notebook_button_press_cb (GtkWidget *widget,
                 {
                     update_tab_visibility (window, -1);
                     gtk_notebook_remove_page(notebook, tab_clicked);
+
                 }
+
+                later_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+
+                if (before_pages > later_pages) {
+                    if (tab_clicked > page_num)
+                        gtk_notebook_set_current_page (notebook, page_num);
+                    else if (tab_clicked < page_num)
+                        gtk_notebook_set_current_page (notebook, page_num - 1);
+                }
+                else
+                    gtk_notebook_set_current_page (notebook, page_num);
 
         }
     }
