@@ -560,16 +560,16 @@ init_background_darkness_scale (GtkWidget *scale)
 }
 
 static void
-editor_response_cb (GtkWidget *editor,
-                    int response,
-                    gpointer use_data)
+editor_help_button_clicked_cb (GtkWidget *button,
+                               GtkWidget *editor)
 {
-	if (response == GTK_RESPONSE_HELP)
-	{
-		terminal_util_show_help ("mate-terminal-prefs", GTK_WINDOW (editor));
-		return;
-	}
+	terminal_util_show_help ("mate-terminal-prefs", GTK_WINDOW (editor));
+}
 
+static void
+editor_close_button_clicked_cb (GtkWidget *button,
+                                GtkWidget *editor)
+{
 	gtk_widget_destroy (editor);
 }
 
@@ -701,9 +701,11 @@ terminal_profile_edit (TerminalProfile *profile,
 	                  G_CALLBACK (profile_editor_destroyed),
 	                  profile);
 
-	g_signal_connect (editor, "response",
-	                  G_CALLBACK (editor_response_cb),
-	                  NULL);
+	w = (GtkWidget *) gtk_builder_get_object  (builder, "close-button");
+	g_signal_connect (w, "clicked", G_CALLBACK (editor_close_button_clicked_cb), editor);
+
+	w = (GtkWidget *) gtk_builder_get_object  (builder, "help-button");
+	g_signal_connect (w, "clicked", G_CALLBACK (editor_help_button_clicked_cb), editor);
 
 	w = (GtkWidget *) gtk_builder_get_object  (builder, "color-scheme-combobox");
 	init_color_scheme_menu (w);
