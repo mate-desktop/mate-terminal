@@ -44,6 +44,8 @@
 #include "skey-popup.h"
 #endif
 
+static gboolean detach_tab = FALSE;
+
 struct _TerminalWindowPrivate
 {
     GtkActionGroup *action_group;
@@ -2637,8 +2639,15 @@ terminal_window_remove_screen (TerminalWindow *window,
 
     screen_container = terminal_screen_container_get_from_screen (screen);
 #if GTK_CHECK_VERSION(3, 16, 0)
-    gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
-                             GTK_WIDGET (screen_container));
+    if (detach_tab)
+    {
+        gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
+                                 GTK_WIDGET (screen_container));
+        detach_tab = FALSE;
+    }
+    else
+        gtk_container_remove (GTK_CONTAINER (priv->notebook),
+                              GTK_WIDGET (screen_container));
 #else
     gtk_container_remove (GTK_CONTAINER (priv->notebook),
                           GTK_WIDGET (screen_container));
@@ -2669,6 +2678,9 @@ terminal_window_move_screen (TerminalWindow *source_window,
      */
     g_object_ref_sink (screen_container);
     g_object_ref_sink (screen);
+
+    detach_tab = TRUE;
+
     terminal_window_remove_screen (source_window, screen);
 
     /* Now we can safely remove the screen from the container and let the container die */
