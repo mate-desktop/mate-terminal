@@ -2203,6 +2203,8 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
                       G_CALLBACK (notebook_button_press_cb), window);
+    g_signal_connect (priv->notebook, "button-release-event",
+                      G_CALLBACK (notebook_button_press_cb), window);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2915,16 +2917,19 @@ notebook_button_press_cb (GtkWidget *widget,
     GtkWidget *tab;
     GtkWidget *menu;
     GtkAction *action;
+    static int tab_clicked_press;
     int tab_clicked;
     int page_num;
     int before_pages;
     int later_pages;
 
-    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+    if (event->type == GDK_BUTTON_RELEASE && event->button == 2)
     {
         tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
-        if (tab_clicked >= 0)
+
+        if ((tab_clicked == tab_clicked_press) && (tab_clicked >= 0))
         {
+            tab_clicked_press == NULL;
             before_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
             page_num = gtk_notebook_get_current_page (notebook);
             gtk_notebook_set_current_page (notebook, tab_clicked);
@@ -2948,6 +2953,11 @@ notebook_button_press_cb (GtkWidget *widget,
                     gtk_notebook_set_current_page (notebook, page_num);
 
         }
+    }
+
+    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+        {
+            tab_clicked_press = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
     }
 
     if (event->type != GDK_BUTTON_PRESS ||
