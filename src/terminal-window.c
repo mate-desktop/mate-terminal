@@ -2929,7 +2929,7 @@ notebook_button_press_cb (GtkWidget *widget,
 
         if ((tab_clicked == tab_clicked_press) && (tab_clicked >= 0))
         {
-            tab_clicked_press == NULL;
+            tab_clicked_press = -1;
             before_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
             page_num = gtk_notebook_get_current_page (notebook);
             gtk_notebook_set_current_page (notebook, tab_clicked);
