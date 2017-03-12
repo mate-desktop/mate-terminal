@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2016-12-06 15:01+0000\n"
+"PO-Revision-Date: 2016-12-27 12:25+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -220,7 +220,7 @@ msgid ""
 "have their shell set up to do this), the dynamically-set title can erase the"
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Jei programa terminale nustato antraštę (paprastai tai apliekama aplinkos nustatymuose), kintama antraštė gali pašalinti nustatytą lango antraštę, būti įrašyta prieš ją, eiti po jos arba ją pakeisti. Galimos reikšmės yra \"replace\", \"before\", \"after\", ir \"ignore\"."
+msgstr "Jei programa terminale nustato antraštę (paprastai tai atliekama apvalkalo nustatymuose), kintama antraštė gali pašalinti nustatytą lango antraštę, būti įrašyta prieš ją, eiti po jos arba ją pakeisti. Galimos reikšmės yra \"replace\", \"before\", \"after\", ir \"ignore\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgctxt "title"
@@ -366,13 +366,13 @@ msgstr "Galimos reikšmės yra „close“ (užveria terminalą) ir „restart�
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Ar paleisti programą terminale naudojant prisijungimo aplinkos parametrus"
+msgstr "Ar paleisti programą terminale kaip prisijungimo apvalkalą"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "Jei teigiama, terminale paleista komanda naudos prisijungimo aplinkos nustatymus (prieš argv[0] bus įrašytas minusas)."
+msgstr "Jei teigiama, terminale vykdoma komanda bus paleista kaip prisijungimo apvalkalas (prieš argv[0] bus įrašytas brūkšnelis)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "Whether to update login records when launching terminal command"
@@ -386,13 +386,13 @@ msgstr "Jei teigiama, sistemos prisijungimo įrašai utmp ir wtmp bus atnaujinti
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to run a custom command instead of the shell"
-msgstr "Paleisti kitą komandą vietoj įprastos aplinkos"
+msgstr "Ar paleisti pasirinktinę komandą vietoj apvalkalo"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "Jei teigiama, custom_command nustatymo reikšmė bus panaudota vietoj darbinės aplinkos."
+msgstr "Jei teigiama, custom_command nustatymo reikšmė bus panaudota vietoj vykdomo apvalkalo."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to blink the cursor"
@@ -416,11 +416,11 @@ msgstr "Galimos vertės: „block“ – naudoti blokinį žymeklį, „ibeam“
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Custom command to use instead of the shell"
-msgstr "Komanda naudojama vietoj standartinės aplinkos"
+msgstr "Pasirinktinė komanda naudojama vietoj apvalkalo"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Jei use_custom_command reikšmė yra teigiama, naudoti šią komandą vietoj įprastos aplinkos."
+msgstr "Jei use_custom_command reikšmė yra teigiama, naudoti šią komandą vietoj apvalkalo."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Icon for terminal window"
@@ -1165,7 +1165,7 @@ msgstr "Tango"
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
 msgid "Linux console"
-msgstr "Linux konsolė"
+msgstr "Linux pultas"
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
@@ -1336,7 +1336,7 @@ msgstr "<b>Komanda</b>"
 
 #: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
-msgstr "Paleisti komandą kaip p_risijungimo aplinką"
+msgstr "Paleisti komandą kaip p_risijungimo apvalkalą"
 
 #: ../src/profile-preferences.ui.h:49
 msgid "_Update login records when command is launched"
@@ -1344,7 +1344,7 @@ msgstr "Atna_ujinti prisijungimų žurnalo įrašus, kai paleidžiama komanda"
 
 #: ../src/profile-preferences.ui.h:50
 msgid "Ru_n a custom command instead of my shell"
-msgstr "Vietoje mano aplinkos paleisti kitą koma_ndą"
+msgstr "Vietoje mano apvalkalo paleisti pasirinktinę koma_ndą"
 
 #: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
@@ -2409,7 +2409,7 @@ msgstr "Nepavyko įrašyti turinio"
 
 #: ../src/terminal-window.c:3620
 msgid "Save as..."
-msgstr "Įrašyti taip..."
+msgstr "Įrašyti kaip..."
 
 #: ../src/terminal-window.c:4139
 msgid "_Title:"
