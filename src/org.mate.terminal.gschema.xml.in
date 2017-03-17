@@ -89,12 +89,12 @@
       <description>True if the menubar should be shown in new windows,  for windows/tabs with this profile.</description>
     </key>
     <key name="foreground-color" type="s">
-      <default>'#000000'</default>
+      <default>'#FFFFFF'</default>
       <summary>Default color of text in the terminal</summary>
       <description>Default color of text in the terminal, as a color specification (can be HTML-style hex digits, or a color name such as "red").</description>
     </key>
     <key name="background-color" type="s">
-      <default>'#FFFFDD'</default>
+      <default>'#000000'</default>
       <summary>Default color of terminal background</summary>
       <description>Default color of terminal background, as a color specification (can be HTML-style hex digits, or a color name such as "red").</description>
     </key>
@@ -164,7 +164,7 @@
       <description>Number of scrollback lines to keep around. You can scroll back in the terminal by this number of lines; lines that don't fit in the scrollback are discarded. If scrollback_unlimited is true, this value is ignored.</description>
     </key>
     <key name="scrollback-unlimited" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Whether an unlimited number of lines should be kept in scrollback</summary>
       <description>If true, scrollback lines will never be discarded.  The scrollback history is stored on disk temporarily, so this may cause the system to run out of disk space if there is a lot of output to the terminal.</description>
     </key>
@@ -259,7 +259,7 @@
       <description>Sets what code the delete key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "escape-sequence" is normally  considered the correct setting for the Delete key.</description>
     </key>
     <key name="use-theme-colors" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Whether to use the colors from the theme for the terminal widget</summary>
       <description>If true, the theme color scheme used for text entry boxes will  be used for the terminal, instead of colors provided by the user.</description>
     </key>
