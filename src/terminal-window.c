@@ -1535,9 +1535,9 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     if (info->button == 0)
         gtk_menu_shell_select_first (GTK_MENU_SHELL (popup_menu), FALSE);
 
-    if (gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
-      gtk_menu_detach (GTK_MENU (popup_menu));
-    gtk_menu_attach_to_widget (GTK_MENU (popup_menu), GTK_WIDGET (screen), NULL);
+    if (!gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
+        gtk_menu_attach_to_widget (GTK_MENU (popup_menu),GTK_WIDGET (screen),NULL);
+
     gtk_menu_popup (GTK_MENU (popup_menu),
                     NULL, NULL,
                     NULL, NULL,
