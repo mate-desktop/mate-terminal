@@ -281,30 +281,43 @@ terminal_util_resolve_relative_path (const char *path,
 void
 terminal_util_transform_uris_to_quoted_fuse_paths (char **uris)
 {
-	guint i;
-
 	if (!uris)
 		return;
 
+	guint i, j;
+	const char blacklist[] = "|&;()<>!\\\'\"`* $";
+	char *target;
+	char *filename;
+	char *ptr;
+	gsize n = 0;
 	for (i = 0; uris[i]; ++i)
 	{
-		GFile *file;
-		char *path;
-
-		file = g_file_new_for_uri (uris[i]);
-
-		if ((path = g_file_get_path (file)))
+		filename = g_filename_from_uri (uris[i], NULL, NULL);
+		if (G_LIKELY (filename != NULL))
 		{
-			char *quoted;
-
-			quoted = g_shell_quote (path);
+			n = strlen (filename);
+			/* prepended space + worst-case scenario (every char gets quoted) + '\0' */
+			target = g_malloc (n * 2 + 2);
+			ptr = target;
+			*(ptr++) = ' ';
+			for(j = 0; j < n; j++)
+			{
+				if (strchr(blacklist, (char) filename[j]) == NULL)
+				{
+					*(ptr++) = filename[j];
+				}
+				else
+				{
+					*(ptr++) = '\\';
+					*(ptr++) = filename[j];
+				}
+			}
+			*ptr = '\0';
 			g_free (uris[i]);
-			g_free (path);
-
-			uris[i] = quoted;
+			uris[i] = g_filename_display_name (target);
+			g_free (target);
 		}
-
-		g_object_unref (file);
+		g_free (filename);
 	}
 }
 
@@ -313,22 +326,18 @@ terminal_util_concat_uris (char **uris,
                            gsize *length)
 {
 	GString *string;
-	gsize len;
+	gsize len = 0;
 	guint i;
 
-	len = 0;
 	for (i = 0; uris[i]; ++i)
-		len += strlen (uris[i]) + 1;
+		len += strlen (uris[i]);
 
 	if (length)
 		*length = len;
 
-	string = g_string_sized_new (len + 1);
+	string = g_string_sized_new (len);
 	for (i = 0; uris[i]; ++i)
-	{
 		g_string_append (string, uris[i]);
-		g_string_append_c (string, ' ');
-	}
 
 	return g_string_free (string, FALSE);
 }
