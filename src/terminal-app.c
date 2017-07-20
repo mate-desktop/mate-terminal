@@ -270,9 +270,7 @@ terminal_app_get_screen_by_display_name (const char *display_name,
 
 	if (display == NULL)
 		return NULL;
-	if (screen_number >= 0)
-		screen = gdk_display_get_screen (display, screen_number);
-	if (screen == NULL)
+	else
 		screen = gdk_display_get_default_screen (display);
 
 	return screen;
