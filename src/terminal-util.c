@@ -129,6 +129,9 @@ open_url (GtkWindow *parent,
           guint32 user_time,
           GError **error)
 {
+#if GTK_CHECK_VERSION (3, 22, 0)
+	return gtk_show_uri_on_window (parent, uri, user_time, error);
+#else
 	GdkScreen *screen;
 
 	if (parent)
@@ -137,6 +140,7 @@ open_url (GtkWindow *parent,
 		screen = gdk_screen_get_default ();
 
 	return gtk_show_uri (screen, uri, user_time, error);
+#endif
 }
 
 void
