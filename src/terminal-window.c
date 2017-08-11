@@ -3507,7 +3507,9 @@ confirm_close_window_or_tab (TerminalWindow *window,
     GtkWidget *dialog;
     GSettings *settings;
     gboolean do_confirm;
+    gboolean has_processes;
     int n_tabs;
+    char *confirm_msg;
 
     if (priv->confirm_close_dialog)
     {
@@ -3524,7 +3526,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
 
     if (screen)
     {
-        do_confirm = terminal_screen_has_foreground_process (screen);
+        has_processes = terminal_screen_has_foreground_process (screen);
         n_tabs = 1;
     }
     else
@@ -3541,16 +3543,25 @@ confirm_close_window_or_tab (TerminalWindow *window,
             TerminalScreen *terminal_screen;
 
             terminal_screen = terminal_screen_container_get_screen (TERMINAL_SCREEN_CONTAINER (t->data));
-            if (terminal_screen_has_foreground_process (terminal_screen))
-            {
-                do_confirm = TRUE;
+            has_processes = terminal_screen_has_foreground_process (terminal_screen);
+            if (has_processes)
                 break;
-            }
         }
         g_list_free (tabs);
     }
 
-    if (!do_confirm)
+
+    if (has_processes)
+    {
+        if (n_tabs > 1)
+            confirm_msg = _("There are still processes running in some terminals in this window. "
+                            "Closing the window will kill all of them.");
+        else
+            confirm_msg = _("There is still a process running in this terminal. "
+                            "Closing the terminal will kill it.");
+    } else if (n_tabs > 1)
+            confirm_msg = _("There are multiple tabs open in this window.");
+    else
         return FALSE;
 
     dialog = priv->confirm_close_dialog =
@@ -3560,14 +3571,8 @@ confirm_close_window_or_tab (TerminalWindow *window,
                                          GTK_BUTTONS_CANCEL,
                                          "%s", n_tabs > 1 ? _("Close this window?") : _("Close this terminal?"));
 
-    if (n_tabs > 1)
-        gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                "%s", _("There are still processes running in some terminals in this window. "
-                        "Closing the window will kill all of them."));
-    else
-        gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                "%s", _("There is still a process running in this terminal. "
-                        "Closing the terminal will kill it."));
+    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+            "%s", confirm_msg);
 
     gtk_window_set_title (GTK_WINDOW (dialog), "");
 
