@@ -146,9 +146,9 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_CUSTOM_COMMAND));
 	}
 
-	gtk_widget_hide (profile_editor_get_widget (editor, "background-image"));
 	gtk_widget_hide (profile_editor_get_widget (editor, "darken-background-transparent-or-image-scale-label"));
 	gtk_widget_show (profile_editor_get_widget (editor, "darken-background-transparent-scale-label"));
+	gtk_widget_hide (profile_editor_get_widget (editor, "scroll-background-checkbutton"));
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE))
 	{
 		gboolean bg_type_locked = terminal_profile_property_locked (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
