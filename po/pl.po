@@ -8,24 +8,25 @@
 # Darek Witkowski, 2016
 # m4sk1n <m4sk1n@vivaldi.net>, 2016
 # Marcin Kralka <marcink96@gmail.com>, 2014
+# Piotr Drąg <piotrdrag@gmail.com>, 2017
 # Piotr Strębski <strebski@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2016-12-16 20:07+0000\n"
-"Last-Translator: m4sk1n <m4sk1n@vivaldi.net>\n"
+"PO-Revision-Date: 2017-09-23 18:07+0000\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: ../mate-terminal.appdata.xml.in.h:1
 msgid "A terminal emulator for the MATE desktop environment"
-msgstr "Emulator terminala dla środowiska graficznego MATE"
+msgstr "Emulator terminala dla środowiska MATE"
 
 #: ../mate-terminal.appdata.xml.in.h:2
 msgid ""
@@ -36,7 +37,7 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> Terminal MATE jest aplikacją emulacji terminala którą możesz użyć aby zyskać dostęp do shella UNIXa w środowisku MATE. Terminal MATE emuluje program xterm stworzonym przez Konsorcjum X. Wspiera przezroczyste tła, otwieranie wielu terminali w pojedynczym oknie (karty) oraz klikalne adresy URL. </p> <p> Terminal MATE jest forkiem Terminala GNOME i jest częścią Środowiska Graficznego MATE. Jeżeli chciałbyś się dowiedzieć więcej na temat MATE i Terminala MATE, proszę odwiedzić stronę domową projektu. </p>"
+msgstr "<p> Terminal MATE jest aplikacją emulacji terminala, którą możesz użyć, aby zyskać dostęp do powłoki UNIX-a w środowisku MATE. Terminal MATE emuluje program xterm stworzony przez Konsorcjum X. Obsługuje przezroczyste tła, otwieranie wielu terminali w pojedynczym oknie (karty) oraz klikalne adresy URL. </p> <p> Terminal MATE jest forkiem Terminala GNOME i jest częścią środowiska MATE. Jeżeli chcesz się dowiedzieć więcej na temat MATE i Terminala MATE, proszę odwiedzić stronę domową projektu. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
 #: ../src/terminal-window.c:4345
@@ -153,7 +154,7 @@ msgstr "Czy pytać o potwierdzenie podczas zamykania okna terminala zawierające
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Domyślne'"
+msgstr "'Domyślny'"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "Human-readable name of the profile"
@@ -495,7 +496,7 @@ msgstr "Wartość pomiędzy 0,0 a 1,0 wskazująca stopień przyciemnienia obrazu
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:84
 msgid "Effect of the Backspace key"
-msgstr "Działanie klawisza backspace"
+msgstr "Działanie klawisza Backspace"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:85
 msgid ""
@@ -504,11 +505,11 @@ msgid ""
 "ASCII BS character), \"escape-sequence\" for the escape sequence typically "
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
-msgstr "Określa kod generowany przez klawisz backspace. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\"  dla Control-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy backspace lub delete. Dla klawisza backspace standardowo przyjmuje się \"ascii-del\"."
+msgstr "Określa kod generowany przez klawisz Backspace. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\"  dla Ctrl-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy Backspace lub Delete. Dla klawisza Backspace standardowo przyjmuje się \"ascii-del\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "Effect of the Delete key"
-msgstr "Działanie klawisza delete"
+msgstr "Działanie klawisza Delete"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:87
 msgid ""
@@ -517,7 +518,7 @@ msgid ""
 "character), \"escape-sequence\" for the escape sequence typically bound to "
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
-msgstr "Określa kod generowany przez klawisz delete. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\" dla Control-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy backspace lub delete. Dla klawisza delete standardowo przyjmuje się \"escape-sequence\"."
+msgstr "Określa kod generowany przez klawisz Delete. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\" dla Ctrl-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy Backspace lub Delete. Dla klawisza Delete standardowo przyjmuje się \"escape-sequence\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -531,13 +532,13 @@ msgstr "Jeśli true, zamiast kolorów użytkownika w terminalu używany będzie 
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Whether to use the system font"
-msgstr "Czy używać fontu systemowego"
+msgstr "Czy używać czcionki systemowej"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:91
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
-msgstr "Jeśli true, terminal użyje standardowego globalnego fontu jeśli jest to font o stałej szerokości znaków (lub najbardziej podobnego fontu w innym przypadku)."
+msgstr "Jeśli true, terminal użyje standardowego globalnej czcionki, jeśli jest to czcionka o stałej szerokości znaków (lub najbardziej podobnej czcionki w innym przypadku)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Highlight S/Key challenges"
@@ -1221,7 +1222,7 @@ msgstr "Automatycznie"
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:26
 msgid "Control-H"
-msgstr "Control-H"
+msgstr "Ctrl-H"
 
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:28
@@ -1597,11 +1598,11 @@ msgstr "Zresetowanie i wyczyszczenie"
 
 #: ../src/terminal-accels.c:218
 msgid "Switch to Previous Profile"
-msgstr "Zmień na Poprzedni Profil"
+msgstr "Zmień na poprzedni profil"
 
 #: ../src/terminal-accels.c:222
 msgid "Switch to Next Profile"
-msgstr "Zmień na Następny Profil"
+msgstr "Zmień na następny profil"
 
 #: ../src/terminal-accels.c:230
 msgid "Switch to Previous Tab"
@@ -1828,7 +1829,7 @@ msgstr "unikod"
 
 #: ../src/terminal-encoding.c:69
 msgid "Armenian"
-msgstr "armeńskie"
+msgstr "ormiańskie"
 
 #: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
 #: ../src/terminal-encoding.c:75
@@ -2160,7 +2161,7 @@ msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Z pewnością wraz z niniejszym programem dostarczono także egzemplarz Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-130159 USA"
+msgstr "Z pewnością wraz z niniejszym programem dostarczono także egzemplarz Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
@@ -2280,11 +2281,11 @@ msgstr "Z_mień profil"
 
 #: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
-msgstr "_Poprzedni Profil"
+msgstr "_Poprzedni profil"
 
 #: ../src/terminal-window.c:1996
 msgid "_Next Profile"
-msgstr "_Następny Profil"
+msgstr "_Następny profil"
 
 #: ../src/terminal-window.c:2001
 msgid "_Set Title…"
@@ -2428,4 +2429,4 @@ msgstr "Emulator terminala dla środowiska MATE"
 
 #: ../src/terminal-window.c:4354
 msgid "translator-credits"
-msgstr "Aviary.pl <matepl@aviary.pl>, 2008, 2009, 2010\nMarcin Kralka <marcink96@gmail.com>, 2014"
+msgstr "Tłumacze środowiska MATE, 2014-2017\n\nZbigniew Chyla, 2002-2003\nArtur Flinta, 2003-2005\nWadim Dziedzic, 2007-2009\nTomasz Dominikowski, 2008-2009\nJoanna Mazgaj, 2009\nPiotr Drąg, 2010\nAviary.pl, 2007-2010"
