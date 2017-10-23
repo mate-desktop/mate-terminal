@@ -1932,7 +1932,7 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "EditSelectAll", GTK_STOCK_SELECT_ALL, NULL, NULL,
+            "EditSelectAll", GTK_STOCK_SELECT_ALL, NULL, "<shift><control>A",
             NULL,
             G_CALLBACK (edit_select_all_callback)
         },

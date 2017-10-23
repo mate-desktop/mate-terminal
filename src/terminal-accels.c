@@ -55,6 +55,7 @@
 #define ACCEL_PATH_CLOSE_WINDOW         ACCEL_PATH_ROOT "FileCloseWindow"
 #define ACCEL_PATH_COPY                 ACCEL_PATH_ROOT "EditCopy"
 #define ACCEL_PATH_PASTE                ACCEL_PATH_ROOT "EditPaste"
+#define ACCEL_PATH_SELECT_ALL           ACCEL_PATH_ROOT "EditSelectAll"
 #define ACCEL_PATH_TOGGLE_MENUBAR       ACCEL_PATH_ROOT "ViewMenubar"
 #define ACCEL_PATH_FULL_SCREEN          ACCEL_PATH_ROOT "ViewFullscreen"
 #define ACCEL_PATH_RESET                ACCEL_PATH_ROOT "TerminalReset"
@@ -91,6 +92,7 @@
 #define KEY_PREV_TAB            "prev-tab"
 #define KEY_RESET_AND_CLEAR     "reset-and-clear"
 #define KEY_RESET               "reset"
+#define KEY_SELECT_ALL          "select-all"
 #define KEY_SAVE_CONTENTS       "save-contents"
 #define KEY_SET_TERMINAL_TITLE  "set-terminal-title"
 #define KEY_TOGGLE_MENUBAR      "toggle-menubar"
@@ -174,6 +176,10 @@ static KeyEntry edit_entries[] =
 		N_("Paste"),
 		KEY_PASTE, ACCEL_PATH_PASTE, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_v, NULL, FALSE, TRUE
 	},
+	{
+		N_("Select All"),
+		KEY_SELECT_ALL, ACCEL_PATH_SELECT_ALL, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_a, NULL, FALSE, TRUE
+	}
 };
 
 static KeyEntry view_entries[] =
