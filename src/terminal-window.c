@@ -1199,7 +1199,11 @@ terminal_window_update_search_sensitivity (TerminalScreen *screen,
     if (screen != priv->active_screen)
         return;
 
+#if VTE_CHECK_VERSION (0, 46, 0)
+    can_search = vte_terminal_search_get_regex (VTE_TERMINAL (screen)) != NULL;
+#else
     can_search = vte_terminal_search_get_gregex (VTE_TERMINAL (screen)) != NULL;
+#endif
 
     action = gtk_action_group_get_action (priv->action_group, "SearchFindNext");
     gtk_action_set_sensitive (action, can_search);
