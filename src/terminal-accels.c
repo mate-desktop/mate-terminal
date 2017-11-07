@@ -56,6 +56,9 @@
 #define ACCEL_PATH_COPY                 ACCEL_PATH_ROOT "EditCopy"
 #define ACCEL_PATH_PASTE                ACCEL_PATH_ROOT "EditPaste"
 #define ACCEL_PATH_SELECT_ALL           ACCEL_PATH_ROOT "EditSelectAll"
+#define ACCEL_PATH_SEARCH_FIND          ACCEL_PATH_ROOT "SearchFind"
+#define ACCEL_PATH_SEARCH_FIND_NEXT     ACCEL_PATH_ROOT "SearchFindNext"
+#define ACCEL_PATH_SEARCH_FIND_PREVIOUS ACCEL_PATH_ROOT "SearchFindPrevious"
 #define ACCEL_PATH_TOGGLE_MENUBAR       ACCEL_PATH_ROOT "ViewMenubar"
 #define ACCEL_PATH_FULL_SCREEN          ACCEL_PATH_ROOT "ViewFullscreen"
 #define ACCEL_PATH_RESET                ACCEL_PATH_ROOT "TerminalReset"
@@ -74,32 +77,35 @@
 #define ACCEL_PATH_DETACH_TAB           ACCEL_PATH_ROOT "TabsDetach"
 #define ACCEL_PATH_SWITCH_TAB_PREFIX    ACCEL_PATH_ROOT "TabsSwitch"
 
-#define KEY_CLOSE_TAB           "close-tab"
-#define KEY_CLOSE_WINDOW        "close-window"
-#define KEY_COPY                "copy"
-#define KEY_DETACH_TAB          "detach-tab"
-#define KEY_FULL_SCREEN         "full-screen"
-#define KEY_HELP                "help"
-#define KEY_MOVE_TAB_LEFT       "move-tab-left"
-#define KEY_MOVE_TAB_RIGHT      "move-tab-right"
-#define KEY_NEW_PROFILE         "new-profile"
-#define KEY_NEW_TAB             "new-tab"
-#define KEY_NEW_WINDOW          "new-window"
-#define KEY_NEXT_PROFILE        "next-profile"
-#define KEY_NEXT_TAB            "next-tab"
-#define KEY_PASTE               "paste"
-#define KEY_PREV_PROFILE        "prev-profile"
-#define KEY_PREV_TAB            "prev-tab"
-#define KEY_RESET_AND_CLEAR     "reset-and-clear"
-#define KEY_RESET               "reset"
-#define KEY_SELECT_ALL          "select-all"
-#define KEY_SAVE_CONTENTS       "save-contents"
-#define KEY_SET_TERMINAL_TITLE  "set-terminal-title"
-#define KEY_TOGGLE_MENUBAR      "toggle-menubar"
-#define KEY_ZOOM_IN             "zoom-in"
-#define KEY_ZOOM_NORMAL         "zoom-normal"
-#define KEY_ZOOM_OUT            "zoom-out"
-#define KEY_SWITCH_TAB_PREFIX   "switch-to-tab-"
+#define KEY_CLOSE_TAB            "close-tab"
+#define KEY_CLOSE_WINDOW         "close-window"
+#define KEY_COPY                 "copy"
+#define KEY_DETACH_TAB           "detach-tab"
+#define KEY_FULL_SCREEN          "full-screen"
+#define KEY_HELP                 "help"
+#define KEY_MOVE_TAB_LEFT        "move-tab-left"
+#define KEY_MOVE_TAB_RIGHT       "move-tab-right"
+#define KEY_NEW_PROFILE          "new-profile"
+#define KEY_NEW_TAB              "new-tab"
+#define KEY_NEW_WINDOW           "new-window"
+#define KEY_NEXT_PROFILE         "next-profile"
+#define KEY_NEXT_TAB             "next-tab"
+#define KEY_PASTE                "paste"
+#define KEY_PREV_PROFILE         "prev-profile"
+#define KEY_PREV_TAB             "prev-tab"
+#define KEY_RESET_AND_CLEAR      "reset-and-clear"
+#define KEY_RESET                "reset"
+#define KEY_SEARCH_FIND          "search-find"
+#define KEY_SEARCH_FIND_NEXT     "search-find-next"
+#define KEY_SEARCH_FIND_PREVIOUS "search-find-previous"
+#define KEY_SELECT_ALL           "select-all"
+#define KEY_SAVE_CONTENTS        "save-contents"
+#define KEY_SET_TERMINAL_TITLE   "set-terminal-title"
+#define KEY_TOGGLE_MENUBAR       "toggle-menubar"
+#define KEY_ZOOM_IN              "zoom-in"
+#define KEY_ZOOM_NORMAL          "zoom-normal"
+#define KEY_ZOOM_OUT             "zoom-out"
+#define KEY_SWITCH_TAB_PREFIX    "switch-to-tab-"
 
 #if 1
 /*
@@ -203,6 +209,22 @@ static KeyEntry view_entries[] =
 	{
 		N_("Normal Size"),
 		KEY_ZOOM_NORMAL, ACCEL_PATH_ZOOM_NORMAL, GDK_CONTROL_MASK, GDK_KEY_0, NULL, FALSE, TRUE
+	}
+};
+
+static KeyEntry search_entries[] =
+{
+	{
+		N_("Find..."),
+		KEY_SEARCH_FIND, ACCEL_PATH_SEARCH_FIND, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_f, NULL, FALSE, TRUE
+	},
+	{
+		N_("Find Next"),
+		KEY_SEARCH_FIND_NEXT, ACCEL_PATH_SEARCH_FIND_NEXT, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_h, NULL, FALSE, TRUE
+	},
+	{
+		N_("Find Previous"),
+		KEY_SEARCH_FIND_PREVIOUS, ACCEL_PATH_SEARCH_FIND_PREVIOUS, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_g, NULL, FALSE, TRUE
 	}
 };
 
@@ -324,6 +346,7 @@ static KeyEntryList all_entries[] =
 	{ file_entries, G_N_ELEMENTS (file_entries), N_("File") },
 	{ edit_entries, G_N_ELEMENTS (edit_entries), N_("Edit") },
 	{ view_entries, G_N_ELEMENTS (view_entries), N_("View") },
+	{ search_entries, G_N_ELEMENTS (search_entries), N_("Search") },
 	{ terminal_entries, G_N_ELEMENTS (terminal_entries), N_("Terminal") },
 	{ tabs_entries, G_N_ELEMENTS (tabs_entries), N_("Tabs") },
 	{ help_entries, G_N_ELEMENTS (help_entries), N_("Help") }
