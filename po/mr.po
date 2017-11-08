@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2017-09-19 11:04+0000\n"
+"POT-Creation-Date: 2017-10-29 21:53+0300\n"
+"PO-Revision-Date: 2017-10-29 19:01+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Marathi (http://www.transifex.com/mate/MATE/language/mr/)\n"
 "MIME-Version: 1.0\n"
@@ -34,13 +34,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4345
+#: ../src/terminal-window.c:4405
 msgid "MATE Terminal"
 msgstr "MATE टर्मिनल"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
-#: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2185
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:327
+#: ../src/terminal.c:589 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2203
 msgid "Terminal"
 msgstr "टर्मिनल"
 
@@ -641,10 +641,22 @@ msgid ""
 msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
-msgid "Keyboard shortcut to toggle full screen mode"
+msgid "Keyboard shortcut to select all text"
 msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:111
+msgid ""
+"Keyboard shortcut key for selecting all the text into the terminal. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
+msgid "Keyboard shortcut to toggle full screen mode"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -652,11 +664,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -664,11 +676,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to set the terminal title"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -676,11 +688,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to reset the terminal"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -688,11 +700,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -700,11 +712,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -712,11 +724,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -724,11 +736,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -736,11 +748,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -748,11 +760,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the left."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -760,11 +772,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to move the current tab to the right."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -772,22 +784,22 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Accelerator to detach current tab."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -795,11 +807,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -807,11 +819,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -819,11 +831,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -831,11 +843,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -843,11 +855,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -855,11 +867,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -867,11 +879,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -879,11 +891,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -891,11 +903,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -903,11 +915,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -915,11 +927,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -927,11 +939,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to launch help"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -939,11 +951,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to make font larger"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -951,11 +963,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to make font smaller"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -963,11 +975,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to make font normal-size"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1089,7 +1101,7 @@ msgstr "प्रोफाइल"
 msgid "_Profile used when launching a new terminal:"
 msgstr "नविन टर्मिनल दाखल करतेवेळी वापरले गेलेले प्रोफाइल (_P):"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:150
 msgid "New Profile"
 msgstr "नविन प्रोफाइल"
 
@@ -1186,7 +1198,7 @@ msgid "On the right side"
 msgstr "उजव्या बाजूला"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:385
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "अकार्यान्वीतित"
@@ -1530,222 +1542,226 @@ msgstr "तुम्ही किल्क केलेल्याला पा
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "तुम्ही किल्क केलेल्याला पाठ्यकडे वैध OTP आव्हान नाही असे दिसून येते."
 
-#: ../src/terminal-accels.c:140
+#: ../src/terminal-accels.c:142
 msgid "New Tab"
 msgstr "नविन टॅब"
 
-#: ../src/terminal-accels.c:144
+#: ../src/terminal-accels.c:146
 msgid "New Window"
 msgstr "नविन चौकट"
 
-#: ../src/terminal-accels.c:153
+#: ../src/terminal-accels.c:155
 msgid "Save Contents"
 msgstr "अंतर्भुत माहिती साठवा"
 
-#: ../src/terminal-accels.c:158
+#: ../src/terminal-accels.c:160
 msgid "Close Tab"
 msgstr "टॅब बंद करा"
 
-#: ../src/terminal-accels.c:162
+#: ../src/terminal-accels.c:164
 msgid "Close Window"
 msgstr "चौकट बंद करा"
 
-#: ../src/terminal-accels.c:170
+#: ../src/terminal-accels.c:172
 msgid "Copy"
 msgstr "प्रतिकृत करा"
 
-#: ../src/terminal-accels.c:174
+#: ../src/terminal-accels.c:176
 msgid "Paste"
 msgstr "चिटकवा"
 
-#: ../src/terminal-accels.c:182
+#: ../src/terminal-accels.c:180
+msgid "Select All"
+msgstr ""
+
+#: ../src/terminal-accels.c:188
 msgid "Hide and Show menubar"
 msgstr "मेनुपट्टी लपवा व दर्शवा"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:192
 msgid "Full Screen"
 msgstr "पूर्ण स्क्रीन"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:196
 msgid "Zoom In"
 msgstr "मोठ्यात मोठे करा"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:200
 msgid "Zoom Out"
 msgstr "लहानात लहान करा"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:204
 msgid "Normal Size"
 msgstr "सामान्य आकार"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
+#: ../src/terminal-accels.c:212 ../src/terminal-window.c:4182
 msgid "Set Title"
 msgstr "शिर्षक निश्चित करा"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:216
 msgid "Reset"
 msgstr "पुनःस्थापित"
 
-#: ../src/terminal-accels.c:214
+#: ../src/terminal-accels.c:220
 msgid "Reset and Clear"
 msgstr "पुनःस्थापित व पुसून टाका"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:224
 msgid "Switch to Previous Profile"
 msgstr "मागील प्रोफाईलला जा"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:228
 msgid "Switch to Next Profile"
 msgstr "पुढील प्रोफाईलला जा"
 
-#: ../src/terminal-accels.c:230
+#: ../src/terminal-accels.c:236
 msgid "Switch to Previous Tab"
 msgstr "मागील टॅबवर जा"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:240
 msgid "Switch to Next Tab"
 msgstr "पुढील टॅबवर जा"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:244
 msgid "Move Tab to the Left"
 msgstr "टॅब डावीकडे हलवा"
 
-#: ../src/terminal-accels.c:242
+#: ../src/terminal-accels.c:248
 msgid "Move Tab to the Right"
 msgstr "टॅब उजवीकडे हलवा"
 
-#: ../src/terminal-accels.c:246
+#: ../src/terminal-accels.c:252
 msgid "Detach Tab"
 msgstr "टॅब तोडा"
 
-#: ../src/terminal-accels.c:250
+#: ../src/terminal-accels.c:256
 msgid "Switch to Tab 1"
 msgstr "टॅब 1 वापरा"
 
-#: ../src/terminal-accels.c:255
+#: ../src/terminal-accels.c:261
 msgid "Switch to Tab 2"
 msgstr "टॅब 2 वापरा"
 
-#: ../src/terminal-accels.c:260
+#: ../src/terminal-accels.c:266
 msgid "Switch to Tab 3"
 msgstr "टॅब 3 वापरा"
 
-#: ../src/terminal-accels.c:265
+#: ../src/terminal-accels.c:271
 msgid "Switch to Tab 4"
 msgstr "टॅब 4 वापरा"
 
-#: ../src/terminal-accels.c:270
+#: ../src/terminal-accels.c:276
 msgid "Switch to Tab 5"
 msgstr "टॅब 5 वापरा"
 
-#: ../src/terminal-accels.c:275
+#: ../src/terminal-accels.c:281
 msgid "Switch to Tab 6"
 msgstr "टॅब 6 वापरा"
 
-#: ../src/terminal-accels.c:280
+#: ../src/terminal-accels.c:286
 msgid "Switch to Tab 7"
 msgstr "टॅब 7 वापरा"
 
-#: ../src/terminal-accels.c:285
+#: ../src/terminal-accels.c:291
 msgid "Switch to Tab 8"
 msgstr "टॅब 8 वापरा"
 
-#: ../src/terminal-accels.c:290
+#: ../src/terminal-accels.c:296
 msgid "Switch to Tab 9"
 msgstr "टॅब 9 वापरा"
 
-#: ../src/terminal-accels.c:295
+#: ../src/terminal-accels.c:301
 msgid "Switch to Tab 10"
 msgstr "टॅब 10 वापरा"
 
-#: ../src/terminal-accels.c:300
+#: ../src/terminal-accels.c:306
 msgid "Switch to Tab 11"
 msgstr "टॅब 11 वापरा"
 
-#: ../src/terminal-accels.c:305
+#: ../src/terminal-accels.c:311
 msgid "Switch to Tab 12"
 msgstr "टॅब 12 वापरा"
 
-#: ../src/terminal-accels.c:313
+#: ../src/terminal-accels.c:319
 msgid "Contents"
 msgstr "अंतर्भुत माहिती"
 
-#: ../src/terminal-accels.c:318
+#: ../src/terminal-accels.c:324
 msgid "File"
 msgstr "फाइल"
 
-#: ../src/terminal-accels.c:319
+#: ../src/terminal-accels.c:325
 msgid "Edit"
 msgstr "संपादन करा"
 
-#: ../src/terminal-accels.c:320
+#: ../src/terminal-accels.c:326
 msgid "View"
 msgstr "दृश्य"
 
-#: ../src/terminal-accels.c:322
+#: ../src/terminal-accels.c:328
 msgid "Tabs"
 msgstr "टॅब"
 
-#: ../src/terminal-accels.c:323
+#: ../src/terminal-accels.c:329
 msgid "Help"
 msgstr "मदत"
 
-#: ../src/terminal-accels.c:826
+#: ../src/terminal-accels.c:832
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "“%s” ही शार्टकट कि “%s” या कृतीशी संलग्न आहे"
 
-#: ../src/terminal-accels.c:982
+#: ../src/terminal-accels.c:988
 msgid "_Action"
 msgstr "क्रिया (_A)"
 
-#: ../src/terminal-accels.c:1001
+#: ../src/terminal-accels.c:1007
 msgid "Shortcut _Key"
 msgstr "शॉर्टकट कि (_K)"
 
-#: ../src/terminal-app.c:542
+#: ../src/terminal-app.c:540
 msgid "Click button to choose profile"
 msgstr "प्रोफाइल निवडण्याकरीता बटन क्लिक करा"
 
-#: ../src/terminal-app.c:625
+#: ../src/terminal-app.c:623
 msgid "Profile list"
 msgstr "प्रोफाइल यादी"
 
-#: ../src/terminal-app.c:686
+#: ../src/terminal-app.c:684
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "“%s” प्रोफाइल काढून टाकायचे?"
 
-#: ../src/terminal-app.c:699
+#: ../src/terminal-app.c:697
 msgid "Delete Profile"
 msgstr "प्रोफाइल काढून टाका"
 
-#: ../src/terminal-app.c:1146
+#: ../src/terminal-app.c:1144
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "तुमच्याकडे आधिपासूनच “%s” नावाचे प्रोफाइल आहे. तुम्हाला समान नावाचे दूसरे प्रोफाइल निर्माण करायचे?"
 
-#: ../src/terminal-app.c:1241
+#: ../src/terminal-app.c:1239
 msgid "Choose base profile"
 msgstr "मुळ प्रोफाइल निवडा"
 
-#: ../src/terminal-app.c:1829
+#: ../src/terminal-app.c:1827
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "पूर्वनिर्धारीत प्रोफाइलचा वापर करून, प्रोफाइल \"%s\" आढळले नाही\n"
 
-#: ../src/terminal-app.c:1856
+#: ../src/terminal-app.c:1854
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "अवैध भूमिती अक्षरमाळा \"%s\"\n"
 
-#: ../src/terminal-app.c:2062
+#: ../src/terminal-app.c:2060
 msgid "User Defined"
 msgstr "वापरकर्ता व्याख्यीत"
 
-#: ../src/terminal.c:582
+#: ../src/terminal.c:584
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "घटकं वाचण्यास अपयशी: %s\n"
@@ -2125,16 +2141,16 @@ msgstr "टॅब बंद करा"
 msgid "Switch to this tab"
 msgstr "या टॅबवर जा"
 
-#: ../src/terminal-util.c:161
+#: ../src/terminal-util.c:165
 msgid "There was an error displaying help"
 msgstr "मदत दाखवतेवेळी त्रूटी आढळली"
 
-#: ../src/terminal-util.c:233
+#: ../src/terminal-util.c:237
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "पत्ता “%s” उघडणे अशक्य"
 
-#: ../src/terminal-util.c:341
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2142,7 +2158,7 @@ msgid ""
 "any later version."
 msgstr "MATE Terminal मुक्त सॉफ्टवेअर आहे; तुम्ही याचे वितरण व/किंवा संपादन Free Software Foundation प्रकाशीत GNU General Public License च्या अंतर्गत; एकतर परवानातील आवृत्ती 3 , किंवा (तुमच्या पर्यायनुसारे) पुढील कुठल्याही आवृत्तीनुसारे करू शकता."
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:349
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2150,7 +2166,7 @@ msgid ""
 "more details."
 msgstr "MATE टर्मिनलचा वापर लाभदायी ठरावा या हेतुने त्याचे वितरन केले आहे, पण कुठल्याही हमी विना; व्यापारहेतु अंतर्भुतीत किंवा कुठल्याही हेतुकरीता वापरकरीतायेण्याजोगी हमी विना.  अधिक माहितीकरीता GNU General Public License पहा."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:353
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2160,7 +2176,7 @@ msgstr "तुम्हाला GNU General Public License ची प्रत�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:664
+#: ../src/terminal-window.c:679
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2168,259 +2184,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:670
+#: ../src/terminal-window.c:685
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1856
+#: ../src/terminal-window.c:1874
 msgid "_File"
 msgstr "फाइल (_F)"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
-#: ../src/terminal-window.c:2111
+#: ../src/terminal-window.c:1875 ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:2129
 msgid "Open _Terminal"
 msgstr "टर्मिनल उघडा (_T)"
 
-#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
-#: ../src/terminal-window.c:2116
+#: ../src/terminal-window.c:1876 ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:2134
 msgid "Open Ta_b"
 msgstr "टॅब उघडा (_b)"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1877
 msgid "_Edit"
 msgstr "संपादन (_E)"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1878
 msgid "_View"
 msgstr "अवलोकन (_V)"
 
-#: ../src/terminal-window.c:1861
+#: ../src/terminal-window.c:1879
 msgid "_Search"
 msgstr "शोधा (_S)"
 
-#: ../src/terminal-window.c:1862
+#: ../src/terminal-window.c:1880
 msgid "_Terminal"
 msgstr "टर्मिनल (_T)"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1881
 msgid "Ta_bs"
 msgstr "टॅबस् (_b)"
 
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1882
 msgid "_Help"
 msgstr "मदत(_H)"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1898
 msgid "New _Profile…"
 msgstr "नवीन संक्षिप्त माहिती (_P)…"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1903
 msgid "_Save Contents"
 msgstr "अंतर्भुत माहिती साठवा (_S)"
 
-#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
+#: ../src/terminal-window.c:1908 ../src/terminal-window.c:2144
 msgid "C_lose Tab"
 msgstr "टॅब बंद करा (_l)"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1913
 msgid "_Close Window"
 msgstr "चौकट बंद करा(_C)"
 
-#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
+#: ../src/terminal-window.c:1930 ../src/terminal-window.c:2124
 msgid "Paste _Filenames"
 msgstr "फाइलनाव चिकटवा (_F)"
 
-#: ../src/terminal-window.c:1922
+#: ../src/terminal-window.c:1940
 msgid "P_rofiles…"
 msgstr "संक्षिप्त माहिती (_r)…"
 
-#: ../src/terminal-window.c:1927
+#: ../src/terminal-window.c:1945
 msgid "_Keyboard Shortcuts…"
 msgstr "कळफलक शॉर्टकट (_K)…"
 
-#: ../src/terminal-window.c:1932
+#: ../src/terminal-window.c:1950
 msgid "Pr_ofile Preferences"
 msgstr "प्रोफाइल आवड-निवड (_o)"
 
-#: ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1974
 msgid "_Find..."
 msgstr "शोधा (_F)..."
 
-#: ../src/terminal-window.c:1961
+#: ../src/terminal-window.c:1979
 msgid "Find Ne_xt"
 msgstr "पुढील शोधा (_x)"
 
-#: ../src/terminal-window.c:1966
+#: ../src/terminal-window.c:1984
 msgid "Find Pre_vious"
 msgstr "मागील शोधा (_v)"
 
-#: ../src/terminal-window.c:1971
+#: ../src/terminal-window.c:1989
 msgid "_Clear Highlight"
 msgstr "ठळककेलेले नष्ट करा (_C)"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1995
 msgid "Go to _Line..."
 msgstr "ओळीवर जा (_L)..."
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:2000
 msgid "_Incremental Search..."
 msgstr "इंक्रिमेंटल शर्च् (_I)..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1989
+#: ../src/terminal-window.c:2007
 msgid "Change _Profile"
 msgstr "प्रोफाइल बदलवा (_P)"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:2009
 msgid "_Previous Profile"
 msgstr "मागील प्रोफाईल"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:2014
 msgid "_Next Profile"
 msgstr "पुढील प्रोफाईल"
 
-#: ../src/terminal-window.c:2001
+#: ../src/terminal-window.c:2019
 msgid "_Set Title…"
 msgstr "शिर्षक सेट करा (_S)…"
 
-#: ../src/terminal-window.c:2005
+#: ../src/terminal-window.c:2023
 msgid "Set _Character Encoding"
 msgstr "अक्षर एनकोडिंग निश्चित करा (_C)"
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2025
 msgid "_Reset"
 msgstr "स्वच्छ करा (_R)"
 
-#: ../src/terminal-window.c:2012
+#: ../src/terminal-window.c:2030
 msgid "Reset and C_lear"
 msgstr "स्वच्छ करा व पुसा (_l)"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:2037
 msgid "_Add or Remove…"
 msgstr "समावेश करा किंवा काढून टाका (_A)…"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2044
 msgid "_Previous Tab"
 msgstr "मागील टॅब (_P)"
 
-#: ../src/terminal-window.c:2031
+#: ../src/terminal-window.c:2049
 msgid "_Next Tab"
 msgstr "पुढील टॅब(_N)"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:2054
 msgid "Move Tab _Left"
 msgstr "टॅब डावीकडे हलवा (_L)"
 
-#: ../src/terminal-window.c:2041
+#: ../src/terminal-window.c:2059
 msgid "Move Tab _Right"
 msgstr "टॅब उजवीकडे हलवा (_R)"
 
-#: ../src/terminal-window.c:2046
+#: ../src/terminal-window.c:2064
 msgid "_Detach tab"
 msgstr "टॅब मोडून टाका (_D)"
 
-#: ../src/terminal-window.c:2053
+#: ../src/terminal-window.c:2071
 msgid "_Contents"
 msgstr "विषयसूची (_C)"
 
-#: ../src/terminal-window.c:2058
+#: ../src/terminal-window.c:2076
 msgid "_About"
 msgstr "विषयी(_A)"
 
-#: ../src/terminal-window.c:2065
+#: ../src/terminal-window.c:2083
 msgid "_Send Mail To…"
 msgstr "मेल पाठवा (_S)…"
 
-#: ../src/terminal-window.c:2070
+#: ../src/terminal-window.c:2088
 msgid "_Copy E-mail Address"
 msgstr "ई-मेल पत्ता प्रतिकृत करा (_C)"
 
-#: ../src/terminal-window.c:2075
+#: ../src/terminal-window.c:2093
 msgid "C_all To…"
 msgstr "प्रतिसह बोला (_a)…"
 
-#: ../src/terminal-window.c:2080
+#: ../src/terminal-window.c:2098
 msgid "_Copy Call Address"
 msgstr "सर्व पत्ता प्रतिकृत करा (_C)"
 
-#: ../src/terminal-window.c:2085
+#: ../src/terminal-window.c:2103
 msgid "_Open Link"
 msgstr "दुवा उघडा (_O)"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2108
 msgid "_Copy Link Address"
 msgstr "लिंक पत्ता प्रतिकृत करा(_C)"
 
-#: ../src/terminal-window.c:2094
+#: ../src/terminal-window.c:2112
 msgid "P_rofiles"
 msgstr "प्रोफाइल (_r)"
 
-#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:2139 ../src/terminal-window.c:3590
 msgid "C_lose Window"
 msgstr "चौकट बंद करा (_l)"
 
-#: ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:2149
 msgid "L_eave Full Screen"
 msgstr "पडदाभर सोडून द्या (_e)"
 
-#: ../src/terminal-window.c:2135
+#: ../src/terminal-window.c:2153
 msgid "_Input Methods"
 msgstr "इनपुट पध्दती (_I)"
 
-#: ../src/terminal-window.c:2142
+#: ../src/terminal-window.c:2160
 msgid "Show _Menubar"
 msgstr "मेनुपट्टी दर्शवा (_M)"
 
-#: ../src/terminal-window.c:2148
+#: ../src/terminal-window.c:2166
 msgid "_Full Screen"
 msgstr "पूर्ण पडदा (_F)"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this window?"
 msgstr "खिडकी बंद करा?"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this terminal?"
 msgstr "हे टर्मिनल बंद करा?"
 
-#: ../src/terminal-window.c:3521
+#: ../src/terminal-window.c:3581
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "या टर्मिनलवर अजूनही कार्य चालू आहे. टर्मिनल बंद केल्यास ते पूर्णपणे बंद होतील."
 
-#: ../src/terminal-window.c:3525
+#: ../src/terminal-window.c:3585
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "या टर्मिनलवर अजूनही कार्य चालू आहे. टर्मिनल बंद केल्यास ते पूर्णपणे बंद होतील."
 
-#: ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:3590
 msgid "C_lose Terminal"
 msgstr "टर्मिनल बंद करा (_C)"
 
-#: ../src/terminal-window.c:3596
+#: ../src/terminal-window.c:3656
 msgid "Could not save contents"
 msgstr "अंतर्भुत माहिती"
 
-#: ../src/terminal-window.c:3620
+#: ../src/terminal-window.c:3680
 msgid "Save as..."
 msgstr "या प्रमाणे साठवा..."
 
-#: ../src/terminal-window.c:4139
+#: ../src/terminal-window.c:4199
 msgid "_Title:"
 msgstr "शिर्षक (_T):"
 
-#: ../src/terminal-window.c:4328
+#: ../src/terminal-window.c:4388
 msgid "Contributors:"
 msgstr "सहभागी:"
 
-#: ../src/terminal-window.c:4347
+#: ../src/terminal-window.c:4407
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE डेस्कटॉपकरीता टर्मिनल एम्युलेटर"
 
-#: ../src/terminal-window.c:4354
+#: ../src/terminal-window.c:4414
 msgid "translator-credits"
 msgstr "संदिप शेडमाके <sandeep.shedmake@gmail.com>, 2007, 2008, 2009; संदिप शेडमाके <sshedmak@redhat.com>, 2009, 2010."

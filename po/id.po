@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2017-09-19 11:04+0000\n"
-"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"POT-Creation-Date: 2017-10-29 21:53+0300\n"
+"PO-Revision-Date: 2017-10-29 19:01+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Indonesian (http://www.transifex.com/mate/MATE/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,13 +41,13 @@ msgid ""
 msgstr "<p>MATE Terminal adalah aplikasi emulasi terminal yang dapat Anda gunakan untuk mengakses shell UNIX pada lingkungan MATE. MATE Terminal mengemulasikan program xterm yang dikembangkan oleh Konsorsium X. MATE Terminal mendukung latar belakang yang translusen, banyak terminal dalam satu jendela (tab) dan URL yang dapat di klik. </p> <p> MATE Terminal adalah fork dari GNOME Terminal dan bagian dari Lingkungan Desktop MATE. Jika Anda hendak mengetahui lebih lanjut tentang MATE dan MATE Terminal, harap mengunjungi halaman home page proyek. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4345
+#: ../src/terminal-window.c:4405
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
-#: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2185
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:327
+#: ../src/terminal.c:589 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2203
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -648,10 +648,22 @@ msgid ""
 msgstr "Tombol singkat untuk menempelkan isi papan klip ke dalam terminal. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
+msgid "Keyboard shortcut to select all text"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
+msgid ""
+"Keyboard shortcut key for selecting all the text into the terminal. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Tombol singkat untuk menjungkit mode layar penuh"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -659,11 +671,11 @@ msgid ""
 " this action."
 msgstr "Tombol singkat untuk menjungkitkan mode layar penuh. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "Tombol singkat untuk menjungkitkan kenampakan bilah menu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -671,11 +683,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Tombol singkat untuk menjungkitkan kenampakan bilah menu. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "Tombol singkat untuk menentukan judul terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -683,11 +695,11 @@ msgid ""
 "this action."
 msgstr "Tombol singkat untuk mengatur judul terminal. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Tombol singkat untuk menata ulang terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -695,11 +707,11 @@ msgid ""
 "this action."
 msgstr "Tombol singkat untuk menata ulang terminal. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Tombol singkat untuk menata ulang dan membersihkan layar terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -707,11 +719,11 @@ msgid ""
 " this action."
 msgstr "Tombol singkat untuk menata ulang dan membersihkan layar terminal. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Tombol singkat untuk berpindah ke tab sebelumnya"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -719,11 +731,11 @@ msgid ""
 " this action."
 msgstr "Tombol singkat untuk berpindah ke tab sebelumnya. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Tombol singkat untuk berpindah ke tab berikutnya"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -731,11 +743,11 @@ msgid ""
 "this action."
 msgstr "Tombol singkat untuk berpindah ke tab berikutnya. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "Tombol singkat untuk berpindah ke profil sebelumnya"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -743,11 +755,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Tombol singkat untuk berpindah ke profil sebelumnya. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "Tombol singkat untuk berpindah ke profil berikutnya"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -755,11 +767,11 @@ msgid ""
 " this action."
 msgstr "Tombol singkat untuk berpindah ke profil berikutnya. Ini ditulis dalam bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the left."
 msgstr "Akselerator untuk pindahkan tab sekarang ke kiri."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -767,11 +779,11 @@ msgid ""
 "action."
 msgstr "Tombol singkat untuk memindah tab saat ini ke kiri. Ini ditulis dalam bentuk string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to move the current tab to the right."
 msgstr "Akselerator untuk pindahkan tab sekarang ke kanan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -779,22 +791,22 @@ msgid ""
 "action."
 msgstr "Tombol singkat untuk memindah tab saat ini ke kanan. Ini ditulis dalam bentuk string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Accelerator to detach current tab."
 msgstr "Akselerator untuk melepas tab saat ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr "Tombol singkat untuk melepas tab saat ini. Ini ditulis dalam bentuk string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "Shortcut keyboard untuk berpindah ke tab 1"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -802,11 +814,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 1. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "Shortcut keyboard untuk berpindah ke tab 2"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -814,11 +826,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 2. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "Shortcut keyboard untuk berpindah ke tab 3"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -826,11 +838,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 3. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "Shortcut keyboard untuk berpindah ke tab 4"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -838,11 +850,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 4. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "Shortcut keyboard untuk berpindah ke tab 5"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -850,11 +862,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 5. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "Shortcut keyboard untuk berpindah ke tab 6"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -862,11 +874,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 6. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "Shortcut keyboard untuk berpindah ke tab 7"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -874,11 +886,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 7. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "Shortcut keyboard untuk berpindah ke tab 8"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -886,11 +898,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 8. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "Shortcut keyboard untuk berpindah ke tab 9"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -898,11 +910,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 9. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "Shortcut keyboard untuk berpindah ke tab 10"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -910,11 +922,11 @@ msgid ""
 "this action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 10. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "Shortcut keyboard untuk berpindah ke tab 11"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -922,11 +934,11 @@ msgid ""
 "this action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 11. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "Shortcut keyboard untuk berpindah ke tab 12"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -934,11 +946,11 @@ msgid ""
 "this action."
 msgstr "Shortcut keyboard untuk berpindah ke tab 12. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to launch help"
 msgstr "Shortcut keyboard untuk menjalankan bantuan"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -946,11 +958,11 @@ msgid ""
 "action."
 msgstr "Shortcut keyboard untuk menjalankan bantuan. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to make font larger"
 msgstr "Shortcut keyboard untuk memperbesar ukuran font"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -958,11 +970,11 @@ msgid ""
 "this action."
 msgstr "Shortcut keyboard untuk memperbesar ukuran font. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Shortcut keyboard untuk memperkecil ukuran font"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -970,11 +982,11 @@ msgid ""
 "this action."
 msgstr "Shortcut keyboard untuk memperkecil ukuran font. Diekspresikan sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut keyboard untuk tindakan ini."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Shortcut keyboard untuk membuat ukuran font menjadi normal."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1096,7 +1108,7 @@ msgstr "Profil"
 msgid "_Profile used when launching a new terminal:"
 msgstr "_Profil yang digunakan saat membuka terminal baru:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:150
 msgid "New Profile"
 msgstr "Profil Baru"
 
@@ -1193,7 +1205,7 @@ msgid "On the right side"
 msgstr "Pada sisi kanan"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:385
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "Dinonaktifkan"
@@ -1537,222 +1549,226 @@ msgstr "Teks yang Anda klik kelihatannya bukan S/Key challenge yang benar."
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "Teks yang Anda klik kelihatannya bukan OTP challenge yang benar."
 
-#: ../src/terminal-accels.c:140
+#: ../src/terminal-accels.c:142
 msgid "New Tab"
 msgstr "Tab Baru"
 
-#: ../src/terminal-accels.c:144
+#: ../src/terminal-accels.c:146
 msgid "New Window"
 msgstr "Jendela Baru"
 
-#: ../src/terminal-accels.c:153
+#: ../src/terminal-accels.c:155
 msgid "Save Contents"
 msgstr "Simpan Isi"
 
-#: ../src/terminal-accels.c:158
+#: ../src/terminal-accels.c:160
 msgid "Close Tab"
 msgstr "Tutup Tab"
 
-#: ../src/terminal-accels.c:162
+#: ../src/terminal-accels.c:164
 msgid "Close Window"
 msgstr "Tutup Jendela"
 
-#: ../src/terminal-accels.c:170
+#: ../src/terminal-accels.c:172
 msgid "Copy"
 msgstr "Salin"
 
-#: ../src/terminal-accels.c:174
+#: ../src/terminal-accels.c:176
 msgid "Paste"
 msgstr "Tempel"
 
-#: ../src/terminal-accels.c:182
+#: ../src/terminal-accels.c:180
+msgid "Select All"
+msgstr ""
+
+#: ../src/terminal-accels.c:188
 msgid "Hide and Show menubar"
 msgstr "Menyembunyikan/Menampilkan bilah menu"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:192
 msgid "Full Screen"
 msgstr "Layar Penuh"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:196
 msgid "Zoom In"
 msgstr "Perbesar Tampilan"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:200
 msgid "Zoom Out"
 msgstr "Perkecil Tampilan"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:204
 msgid "Normal Size"
 msgstr "Ukuran Normal"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
+#: ../src/terminal-accels.c:212 ../src/terminal-window.c:4182
 msgid "Set Title"
 msgstr "Atur Judul"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:216
 msgid "Reset"
 msgstr "Atur Ulang"
 
-#: ../src/terminal-accels.c:214
+#: ../src/terminal-accels.c:220
 msgid "Reset and Clear"
 msgstr "Atur Ulang dan Bersihkan"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:224
 msgid "Switch to Previous Profile"
 msgstr "Pindah ke Profil Sebelumnya"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:228
 msgid "Switch to Next Profile"
 msgstr "Pindah ke Profil Selanjutnya"
 
-#: ../src/terminal-accels.c:230
+#: ../src/terminal-accels.c:236
 msgid "Switch to Previous Tab"
 msgstr "Tab Sebelumnya"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:240
 msgid "Switch to Next Tab"
 msgstr "Tab Selanjutnya"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:244
 msgid "Move Tab to the Left"
 msgstr "Pindahkan Tab ke Kiri"
 
-#: ../src/terminal-accels.c:242
+#: ../src/terminal-accels.c:248
 msgid "Move Tab to the Right"
 msgstr "Pindahkan Tab ke Kanan"
 
-#: ../src/terminal-accels.c:246
+#: ../src/terminal-accels.c:252
 msgid "Detach Tab"
 msgstr "Pisahkan Tab"
 
-#: ../src/terminal-accels.c:250
+#: ../src/terminal-accels.c:256
 msgid "Switch to Tab 1"
 msgstr "Pindah ke Tab 1"
 
-#: ../src/terminal-accels.c:255
+#: ../src/terminal-accels.c:261
 msgid "Switch to Tab 2"
 msgstr "Pindah ke Tab 2"
 
-#: ../src/terminal-accels.c:260
+#: ../src/terminal-accels.c:266
 msgid "Switch to Tab 3"
 msgstr "Pindah ke Tab 3"
 
-#: ../src/terminal-accels.c:265
+#: ../src/terminal-accels.c:271
 msgid "Switch to Tab 4"
 msgstr "Pindah ke Tab 4"
 
-#: ../src/terminal-accels.c:270
+#: ../src/terminal-accels.c:276
 msgid "Switch to Tab 5"
 msgstr "Pindah ke Tab 5"
 
-#: ../src/terminal-accels.c:275
+#: ../src/terminal-accels.c:281
 msgid "Switch to Tab 6"
 msgstr "Pindah ke Tab 6"
 
-#: ../src/terminal-accels.c:280
+#: ../src/terminal-accels.c:286
 msgid "Switch to Tab 7"
 msgstr "Pindah ke Tab 7"
 
-#: ../src/terminal-accels.c:285
+#: ../src/terminal-accels.c:291
 msgid "Switch to Tab 8"
 msgstr "Pindah ke Tab 8"
 
-#: ../src/terminal-accels.c:290
+#: ../src/terminal-accels.c:296
 msgid "Switch to Tab 9"
 msgstr "Pindah ke Tab 9"
 
-#: ../src/terminal-accels.c:295
+#: ../src/terminal-accels.c:301
 msgid "Switch to Tab 10"
 msgstr "Pindah ke Tab 10"
 
-#: ../src/terminal-accels.c:300
+#: ../src/terminal-accels.c:306
 msgid "Switch to Tab 11"
 msgstr "Pindah ke Tab 11"
 
-#: ../src/terminal-accels.c:305
+#: ../src/terminal-accels.c:311
 msgid "Switch to Tab 12"
 msgstr "Pindah ke Tab 12"
 
-#: ../src/terminal-accels.c:313
+#: ../src/terminal-accels.c:319
 msgid "Contents"
 msgstr "Isi"
 
-#: ../src/terminal-accels.c:318
+#: ../src/terminal-accels.c:324
 msgid "File"
 msgstr "Berkas"
 
-#: ../src/terminal-accels.c:319
+#: ../src/terminal-accels.c:325
 msgid "Edit"
 msgstr "Sunting"
 
-#: ../src/terminal-accels.c:320
+#: ../src/terminal-accels.c:326
 msgid "View"
 msgstr "Tampilan"
 
-#: ../src/terminal-accels.c:322
+#: ../src/terminal-accels.c:328
 msgid "Tabs"
 msgstr "Tab"
 
-#: ../src/terminal-accels.c:323
+#: ../src/terminal-accels.c:329
 msgid "Help"
 msgstr "Bantuan"
 
-#: ../src/terminal-accels.c:826
+#: ../src/terminal-accels.c:832
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Tombol singkat \"%s\" sudah terlebih dahulu dipasangkan pada aksi \"%s\""
 
-#: ../src/terminal-accels.c:982
+#: ../src/terminal-accels.c:988
 msgid "_Action"
 msgstr "_Aksi"
 
-#: ../src/terminal-accels.c:1001
+#: ../src/terminal-accels.c:1007
 msgid "Shortcut _Key"
 msgstr "_Tombol Pintas"
 
-#: ../src/terminal-app.c:542
+#: ../src/terminal-app.c:540
 msgid "Click button to choose profile"
 msgstr "Klik tombol untuk memilih profil"
 
-#: ../src/terminal-app.c:625
+#: ../src/terminal-app.c:623
 msgid "Profile list"
 msgstr "Daftar profil"
 
-#: ../src/terminal-app.c:686
+#: ../src/terminal-app.c:684
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Hapus profil \"%s\"?"
 
-#: ../src/terminal-app.c:699
+#: ../src/terminal-app.c:697
 msgid "Delete Profile"
 msgstr "Hapus Profil"
 
-#: ../src/terminal-app.c:1146
+#: ../src/terminal-app.c:1144
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Anda sudah memiliki profil bernama \"%s\". Apakah Anda ingin membuat profil lain dengan nama yang sama?"
 
-#: ../src/terminal-app.c:1241
+#: ../src/terminal-app.c:1239
 msgid "Choose base profile"
 msgstr "Pilih profil dasar"
 
-#: ../src/terminal-app.c:1829
+#: ../src/terminal-app.c:1827
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Profil '%s' tidak ada, digunakan profil baku\n"
 
-#: ../src/terminal-app.c:1856
+#: ../src/terminal-app.c:1854
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "String geometeri '%s' salah\n"
 
-#: ../src/terminal-app.c:2062
+#: ../src/terminal-app.c:2060
 msgid "User Defined"
 msgstr "Bebas"
 
-#: ../src/terminal.c:582
+#: ../src/terminal.c:584
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Gagal mengurai argumen: \"%s\"\n"
@@ -2132,16 +2148,16 @@ msgstr "Tutup tab"
 msgid "Switch to this tab"
 msgstr "Pindah ke tab ini"
 
-#: ../src/terminal-util.c:161
+#: ../src/terminal-util.c:165
 msgid "There was an error displaying help"
 msgstr "Terjadi galat ketika menampilkan bantuan"
 
-#: ../src/terminal-util.c:233
+#: ../src/terminal-util.c:237
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Tidak dapat membuka alamat \"%s\""
 
-#: ../src/terminal-util.c:341
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2149,7 +2165,7 @@ msgid ""
 "any later version."
 msgstr "MATE Terminal adalah perangkat lunak bebas, Anda dapat menyebarluaskannya/atau memodifikasinya di bawah ketentuan GNU General Public License seperti dipublikasikan oleh Free Software Foundation; baik versi 3 dari Lisensi, atau (menurut pilihan anda) versi manapun setelahnya."
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:349
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2157,7 +2173,7 @@ msgid ""
 "more details."
 msgstr "Terminal MATE didistribusikan dengan harapan dapat berguna, tetapi TANPA ADANYA JAMINAN; termasuk tanpa jaminan DAYA JUAL atau KELAIKAN UNTUK TUJUAN TERTENTU. Lihat GNU General Public License untuk rincian lebih lanjut."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:353
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2167,7 +2183,7 @@ msgstr "Salinan GNU General Public License seharusnya sudah Anda dapatkan bersam
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:664
+#: ../src/terminal-window.c:679
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2175,259 +2191,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:670
+#: ../src/terminal-window.c:685
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1856
+#: ../src/terminal-window.c:1874
 msgid "_File"
 msgstr "_Berkas"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
-#: ../src/terminal-window.c:2111
+#: ../src/terminal-window.c:1875 ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:2129
 msgid "Open _Terminal"
 msgstr "Buka _Terminal"
 
-#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
-#: ../src/terminal-window.c:2116
+#: ../src/terminal-window.c:1876 ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:2134
 msgid "Open Ta_b"
 msgstr "Buka Ta_b"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1877
 msgid "_Edit"
 msgstr "_Sunting"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1878
 msgid "_View"
 msgstr "_Tampilan"
 
-#: ../src/terminal-window.c:1861
+#: ../src/terminal-window.c:1879
 msgid "_Search"
 msgstr "_Cari"
 
-#: ../src/terminal-window.c:1862
+#: ../src/terminal-window.c:1880
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1881
 msgid "Ta_bs"
 msgstr "Ta_b"
 
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1882
 msgid "_Help"
 msgstr "Ba_ntuan"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1898
 msgid "New _Profile…"
 msgstr "_Profil Baru..."
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1903
 msgid "_Save Contents"
 msgstr "_Simpan Isi"
 
-#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
+#: ../src/terminal-window.c:1908 ../src/terminal-window.c:2144
 msgid "C_lose Tab"
 msgstr "_Tutup Tab"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1913
 msgid "_Close Window"
 msgstr "T_utup Jendela"
 
-#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
+#: ../src/terminal-window.c:1930 ../src/terminal-window.c:2124
 msgid "Paste _Filenames"
 msgstr "Tempel Nama _Berkas"
 
-#: ../src/terminal-window.c:1922
+#: ../src/terminal-window.c:1940
 msgid "P_rofiles…"
 msgstr "P_rofil..."
 
-#: ../src/terminal-window.c:1927
+#: ../src/terminal-window.c:1945
 msgid "_Keyboard Shortcuts…"
 msgstr "Tombol Pintas Papan _Ketik..."
 
-#: ../src/terminal-window.c:1932
+#: ../src/terminal-window.c:1950
 msgid "Pr_ofile Preferences"
 msgstr "Preferensi Pr_ofil"
 
-#: ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1974
 msgid "_Find..."
 msgstr "_Cari..."
 
-#: ../src/terminal-window.c:1961
+#: ../src/terminal-window.c:1979
 msgid "Find Ne_xt"
 msgstr "Cari _Selanjutnya"
 
-#: ../src/terminal-window.c:1966
+#: ../src/terminal-window.c:1984
 msgid "Find Pre_vious"
 msgstr "Cari Sebe_lumnya"
 
-#: ../src/terminal-window.c:1971
+#: ../src/terminal-window.c:1989
 msgid "_Clear Highlight"
 msgstr "_Bersihkan Sorotan"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1995
 msgid "Go to _Line..."
 msgstr "_Menuju Baris..."
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:2000
 msgid "_Incremental Search..."
 msgstr "Pencar_ian Bertahap..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1989
+#: ../src/terminal-window.c:2007
 msgid "Change _Profile"
 msgstr "Ubah _Profil"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:2009
 msgid "_Previous Profile"
 msgstr "_Profil Sebelumnya"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:2014
 msgid "_Next Profile"
 msgstr "Profil _Selanjutnya"
 
-#: ../src/terminal-window.c:2001
+#: ../src/terminal-window.c:2019
 msgid "_Set Title…"
 msgstr "_Atur Judul..."
 
-#: ../src/terminal-window.c:2005
+#: ../src/terminal-window.c:2023
 msgid "Set _Character Encoding"
 msgstr "Atur _Enkoding Karakter"
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2025
 msgid "_Reset"
 msgstr "Atu_r Ulang"
 
-#: ../src/terminal-window.c:2012
+#: ../src/terminal-window.c:2030
 msgid "Reset and C_lear"
 msgstr "Atur U_lang dan Bersihkan"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:2037
 msgid "_Add or Remove…"
 msgstr "T_ambah atau Hapus..."
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2044
 msgid "_Previous Tab"
 msgstr "_Tab Sebelumnya"
 
-#: ../src/terminal-window.c:2031
+#: ../src/terminal-window.c:2049
 msgid "_Next Tab"
 msgstr "Tab Sela_njutnya"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:2054
 msgid "Move Tab _Left"
 msgstr "_Pindahkan ke Kiri"
 
-#: ../src/terminal-window.c:2041
+#: ../src/terminal-window.c:2059
 msgid "Move Tab _Right"
 msgstr "Pindahkan _ke Kanan"
 
-#: ../src/terminal-window.c:2046
+#: ../src/terminal-window.c:2064
 msgid "_Detach tab"
 msgstr "Pi_sahkan"
 
-#: ../src/terminal-window.c:2053
+#: ../src/terminal-window.c:2071
 msgid "_Contents"
 msgstr "_Isi"
 
-#: ../src/terminal-window.c:2058
+#: ../src/terminal-window.c:2076
 msgid "_About"
 msgstr "Tent_ang"
 
-#: ../src/terminal-window.c:2065
+#: ../src/terminal-window.c:2083
 msgid "_Send Mail To…"
 msgstr "Kirim _Surat Ke..."
 
-#: ../src/terminal-window.c:2070
+#: ../src/terminal-window.c:2088
 msgid "_Copy E-mail Address"
 msgstr "_Salin Alamat Surel"
 
-#: ../src/terminal-window.c:2075
+#: ../src/terminal-window.c:2093
 msgid "C_all To…"
 msgstr "P_anggil Ke…"
 
-#: ../src/terminal-window.c:2080
+#: ../src/terminal-window.c:2098
 msgid "_Copy Call Address"
 msgstr "_Salin Alamat Panggil"
 
-#: ../src/terminal-window.c:2085
+#: ../src/terminal-window.c:2103
 msgid "_Open Link"
 msgstr "_Buka Taut"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2108
 msgid "_Copy Link Address"
 msgstr "Salin _Alamat Taut"
 
-#: ../src/terminal-window.c:2094
+#: ../src/terminal-window.c:2112
 msgid "P_rofiles"
 msgstr "P_rofil"
 
-#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:2139 ../src/terminal-window.c:3590
 msgid "C_lose Window"
 msgstr "Tutup Jende_la"
 
-#: ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:2149
 msgid "L_eave Full Screen"
 msgstr "Tinggalkan Layar P_enuh"
 
-#: ../src/terminal-window.c:2135
+#: ../src/terminal-window.c:2153
 msgid "_Input Methods"
 msgstr "_Metode Masukan"
 
-#: ../src/terminal-window.c:2142
+#: ../src/terminal-window.c:2160
 msgid "Show _Menubar"
 msgstr "Tampilkan Bilah _Menu"
 
-#: ../src/terminal-window.c:2148
+#: ../src/terminal-window.c:2166
 msgid "_Full Screen"
 msgstr "Layar _Penuh"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this window?"
 msgstr "Tutup jendela ini?"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this terminal?"
 msgstr "Tutup terminal ini?"
 
-#: ../src/terminal-window.c:3521
+#: ../src/terminal-window.c:3581
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Ada proses masih berjalan pada beberapa terminal di jendela ini. Menutup jendela akan menghentikan semuanya."
 
-#: ../src/terminal-window.c:3525
+#: ../src/terminal-window.c:3585
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Masih ada proses berjalan pada terminal ini. Menutup terminal akan menghentikannya."
 
-#: ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:3590
 msgid "C_lose Terminal"
 msgstr "Tutup Termina_l"
 
-#: ../src/terminal-window.c:3596
+#: ../src/terminal-window.c:3656
 msgid "Could not save contents"
 msgstr "Tidak dapat menyimpan isi"
 
-#: ../src/terminal-window.c:3620
+#: ../src/terminal-window.c:3680
 msgid "Save as..."
 msgstr "Simpan sebagai..."
 
-#: ../src/terminal-window.c:4139
+#: ../src/terminal-window.c:4199
 msgid "_Title:"
 msgstr "_Judul:"
 
-#: ../src/terminal-window.c:4328
+#: ../src/terminal-window.c:4388
 msgid "Contributors:"
 msgstr "Kontributor:"
 
-#: ../src/terminal-window.c:4347
+#: ../src/terminal-window.c:4407
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Emulator terminal untuk desktop MATE"
 
-#: ../src/terminal-window.c:4354
+#: ../src/terminal-window.c:4414
 msgid "translator-credits"
 msgstr "Mohammad DAMT <mdamt@bisnisweb.com>\nAhmad Riza H Nst  <rizahnst@eriagempita.co.id>, 2006.\nAndika Triwidada <andika@gmail.com>, 2009, 2010.\nDirgita <dirgitadevina@yahoo.co.id>, 2010.\nKukuh Syafaat <syafaatkukuh@gmail.com>, 2016."

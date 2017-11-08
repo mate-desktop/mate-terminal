@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2017-09-19 11:04+0000\n"
+"POT-Creation-Date: 2017-10-29 21:53+0300\n"
+"PO-Revision-Date: 2017-10-29 19:01+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -34,13 +34,13 @@ msgid ""
 msgstr "<p>MATE Տերմինալը  տերմինալային էմուլացիոն կրրառական ծրագիր է, որը օգտագործողը կարող է օգտագործել որպես մուտքի թույլտվություն UNIX shell MATE գրաֆիկական միջավայրում։ MATE տերմինալը էմուլյացիոն xterm ծրագիրը մշակվել է X Կոնսորցիումի կողմից։ Այն աջակցում է կիսաթափանց ֆոները, բազմաթիվ բաց տերմիանալներ մեկ պատուհանում (էջեր) և չխկացնելի URL֊ներ։ </p><p> MATE Տերմինալը համանման է GNOME Տերմինալին և MATE Աշխատասեղանի Միջավայրի մի մասն է։ Եթե ցանկանում եք ավելին իմանալ MATE֊ի և MATE Տերմինալի մասին խնդրում ենք այցելեք ծրագրի գլխավոր էջ։</p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4345
+#: ../src/terminal-window.c:4405
 msgid "MATE Terminal"
 msgstr "ԳՆՈՄ Տերմինալ"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
-#: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2185
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:327
+#: ../src/terminal.c:589 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2203
 msgid "Terminal"
 msgstr "Տերմինալ"
 
@@ -641,10 +641,22 @@ msgid ""
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն փոխանակման բուֆերի բովանդակությունը տերմինալի մեջ պատճենահանելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
+msgid "Keyboard shortcut to select all text"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
+msgid ""
+"Keyboard shortcut key for selecting all the text into the terminal. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Լրիվ էկրանի փոխանջատման ռեժիմի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -652,11 +664,11 @@ msgid ""
 " this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն լրիվ էկրանի ռեժիմը փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "Ընտրացանկի տեսանելությունը փոխանջատող ստեղնաշարի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -664,11 +676,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն ընտրացանկի բարի տեսանելիության փոխանջատման համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "Տերմինալի վերնագիրը սահմանելու կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -676,11 +688,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն տերմինալի վերմագիրը սահմանելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Տերմինալի թարմացման կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -688,11 +700,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն տերմինալը վերականգնելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Տերմինալի մաքրման և թարմացման կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -700,11 +712,11 @@ msgid ""
 " this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն տերմինալը վերականգնելու և մաքրելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Հաջորդ էջը փոխանջատելու ստեղնաշարի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -712,11 +724,11 @@ msgid ""
 " this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն հաջորդ էջը փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Հաջորդ էջ փոխանջատելու ստեղնաշարի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -724,11 +736,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն հաջորդ էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "Նախորդ պրոֆիլ փոխանջատելու ստեղնաշարի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -736,11 +748,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն նախորդ պրոֆիլը փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "Հաջորդ պրոֆիլը փոխանջատելու ստեղնաշարի կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -748,11 +760,11 @@ msgid ""
 " this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն հաջորդ պրոֆիլը փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the left."
 msgstr " Ընթացիկ թեթը ձախ տեղափոխելու արագացուցիչ։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -760,11 +772,11 @@ msgid ""
 "action."
 msgstr "Արագացնող ստեղն ընթացիկ էջը ձախ տեղափոխելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to move the current tab to the right."
 msgstr " Ընթացիկ թեթը աջ տեղափոխելու արագացուցիչ։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -772,22 +784,22 @@ msgid ""
 "action."
 msgstr "Արագացնող ստեղն ընթացիկ էջը աջ տեղափոխելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Accelerator to detach current tab."
 msgstr "Ընթացիկ թերթը բաժանելու արագացուցիչ։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr "Արագացնող ստեղն ընթացիկ էջը բաժանելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 1"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -795,11 +807,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 1 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 2"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -807,11 +819,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 2 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 3"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -819,11 +831,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 3 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 4"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -831,11 +843,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 4 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 5"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -843,11 +855,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 5 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 6"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -855,11 +867,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 6 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 7"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -867,11 +879,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 7 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 8"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -879,11 +891,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 8 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 9"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -891,11 +903,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 9 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 10"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -903,11 +915,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 10 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 11"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -915,11 +927,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 11 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "Ստեղնաշարի կրճատ ստեղնաշարային հրաման անջատել էջանիշ 12"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -927,11 +939,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն 12 էջ փոխանջատելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to launch help"
 msgstr "Օգնության գործարկման կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -939,11 +951,11 @@ msgid ""
 "action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն օգնության գործարկման համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to make font larger"
 msgstr "Տառատեսակն ավելի խոշոր դարձնելու կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -951,11 +963,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն տառատեսակը ավելի մեծ դարձնելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Տառատեսակն ավելի փոքր դարձնելու կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -963,11 +975,11 @@ msgid ""
 "this action."
 msgstr "Կրճատ ստեղնաշարային հրամանի ստեղն տառատեսակը ավելի փոքր դարձնելու համար։ Արտահայտված է որպես տող նույն օգտագոործված ձևաչափով GTK+ ռեսուրսային ֆայլերի համար։ Եթե դուք սահմանել հատուկ տողի \"disabled\" տարբերակը, ապա այնտեղ չի լինի կրճատ ստեղնաշարային հրաման այս գործողության համար։"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Տառատեսակն նորմալ չափս դարձնելու կրճատ ստեղնաշարային հրաման"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1089,7 +1101,7 @@ msgstr "Պրոֆիլներ"
 msgid "_Profile used when launching a new terminal:"
 msgstr "_Պրեֆիլը օգտագործվում է, երբ գործարկվում է նոր տերմինալը:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:150
 msgid "New Profile"
 msgstr "Նոր Պրոֆիլ"
 
@@ -1186,7 +1198,7 @@ msgid "On the right side"
 msgstr "Աջակողմյան"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:385
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "Անաշխատունակ"
@@ -1530,222 +1542,226 @@ msgstr "Տեքստի սեղմելը չի թվում որ կլինի վավեր S
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "Տեքստի սեղմելը չի թվում որ կլինի վավեր OTP մարտահրավերը։"
 
-#: ../src/terminal-accels.c:140
+#: ../src/terminal-accels.c:142
 msgid "New Tab"
 msgstr "Նոր Թերթ"
 
-#: ../src/terminal-accels.c:144
+#: ../src/terminal-accels.c:146
 msgid "New Window"
 msgstr "Նոր Պատուհան"
 
-#: ../src/terminal-accels.c:153
+#: ../src/terminal-accels.c:155
 msgid "Save Contents"
 msgstr "Պահպանել Բովանդակությունը"
 
-#: ../src/terminal-accels.c:158
+#: ../src/terminal-accels.c:160
 msgid "Close Tab"
 msgstr "Փակել Թերթը"
 
-#: ../src/terminal-accels.c:162
+#: ../src/terminal-accels.c:164
 msgid "Close Window"
 msgstr "Փակել Պատուհանը"
 
-#: ../src/terminal-accels.c:170
+#: ../src/terminal-accels.c:172
 msgid "Copy"
 msgstr "Պատճենել"
 
-#: ../src/terminal-accels.c:174
+#: ../src/terminal-accels.c:176
 msgid "Paste"
 msgstr "Փակցնել"
 
-#: ../src/terminal-accels.c:182
+#: ../src/terminal-accels.c:180
+msgid "Select All"
+msgstr ""
+
+#: ../src/terminal-accels.c:188
 msgid "Hide and Show menubar"
 msgstr "Թակցնել և ցուցադրել ցանկի երիզը"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:192
 msgid "Full Screen"
 msgstr "Ամբողջ էկրանով"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:196
 msgid "Zoom In"
 msgstr "Մեծացնել"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:200
 msgid "Zoom Out"
 msgstr "Փոքրացնել"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:204
 msgid "Normal Size"
 msgstr "Նորմալ Չափ"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
+#: ../src/terminal-accels.c:212 ../src/terminal-window.c:4182
 msgid "Set Title"
 msgstr "Նշել վերնագիրը"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:216
 msgid "Reset"
 msgstr "Դադարեցնել"
 
-#: ../src/terminal-accels.c:214
+#: ../src/terminal-accels.c:220
 msgid "Reset and Clear"
 msgstr "Դադարեցնել և Ջնջել"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:224
 msgid "Switch to Previous Profile"
 msgstr "Անջատել Նախորդ Պրոֆիլը"
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:228
 msgid "Switch to Next Profile"
 msgstr "Անջատել Հաջորդ Պրոֆիլը"
 
-#: ../src/terminal-accels.c:230
+#: ../src/terminal-accels.c:236
 msgid "Switch to Previous Tab"
 msgstr "Դեպի Նախորդ Թերթը"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:240
 msgid "Switch to Next Tab"
 msgstr "Դեպի Հաջորդ Թերթը"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:244
 msgid "Move Tab to the Left"
 msgstr "Տեղափոխել Էջանշանը դեպի Ձախ"
 
-#: ../src/terminal-accels.c:242
+#: ../src/terminal-accels.c:248
 msgid "Move Tab to the Right"
 msgstr "Տեղափոխել Էջանշանը դեպի Աջ"
 
-#: ../src/terminal-accels.c:246
+#: ../src/terminal-accels.c:252
 msgid "Detach Tab"
 msgstr "Հաջորդ Թերթը"
 
-#: ../src/terminal-accels.c:250
+#: ../src/terminal-accels.c:256
 msgid "Switch to Tab 1"
 msgstr "Դեպի 1-ին թերթը"
 
-#: ../src/terminal-accels.c:255
+#: ../src/terminal-accels.c:261
 msgid "Switch to Tab 2"
 msgstr "Դեպի 2-րդ թերթը"
 
-#: ../src/terminal-accels.c:260
+#: ../src/terminal-accels.c:266
 msgid "Switch to Tab 3"
 msgstr "Դեպի 3-րդ թերթը"
 
-#: ../src/terminal-accels.c:265
+#: ../src/terminal-accels.c:271
 msgid "Switch to Tab 4"
 msgstr "Դեպի 4-րդ թերթը"
 
-#: ../src/terminal-accels.c:270
+#: ../src/terminal-accels.c:276
 msgid "Switch to Tab 5"
 msgstr "Դեպի 5-րդ թերթը"
 
-#: ../src/terminal-accels.c:275
+#: ../src/terminal-accels.c:281
 msgid "Switch to Tab 6"
 msgstr "Դեպի 6-րդ թերթը"
 
-#: ../src/terminal-accels.c:280
+#: ../src/terminal-accels.c:286
 msgid "Switch to Tab 7"
 msgstr "Դեպի 7-րդ թերթը"
 
-#: ../src/terminal-accels.c:285
+#: ../src/terminal-accels.c:291
 msgid "Switch to Tab 8"
 msgstr "Դեպի 8-րդ թերթը"
 
-#: ../src/terminal-accels.c:290
+#: ../src/terminal-accels.c:296
 msgid "Switch to Tab 9"
 msgstr "Դեպի 9-րդ թերթը"
 
-#: ../src/terminal-accels.c:295
+#: ../src/terminal-accels.c:301
 msgid "Switch to Tab 10"
 msgstr "Դեպի 10-րդ թերթը"
 
-#: ../src/terminal-accels.c:300
+#: ../src/terminal-accels.c:306
 msgid "Switch to Tab 11"
 msgstr "Դեպի 11-րդ թերթը"
 
-#: ../src/terminal-accels.c:305
+#: ../src/terminal-accels.c:311
 msgid "Switch to Tab 12"
 msgstr "Դեպի 12-րդ թերթը"
 
-#: ../src/terminal-accels.c:313
+#: ../src/terminal-accels.c:319
 msgid "Contents"
 msgstr "Բովանդակություն"
 
-#: ../src/terminal-accels.c:318
+#: ../src/terminal-accels.c:324
 msgid "File"
 msgstr "Ֆայլ"
 
-#: ../src/terminal-accels.c:319
+#: ../src/terminal-accels.c:325
 msgid "Edit"
 msgstr "Խմբագրել"
 
-#: ../src/terminal-accels.c:320
+#: ../src/terminal-accels.c:326
 msgid "View"
 msgstr "Տեսք"
 
-#: ../src/terminal-accels.c:322
+#: ../src/terminal-accels.c:328
 msgid "Tabs"
 msgstr "Թերթեր"
 
-#: ../src/terminal-accels.c:323
+#: ../src/terminal-accels.c:329
 msgid "Help"
 msgstr "Ձեռնարկ"
 
-#: ../src/terminal-accels.c:826
+#: ../src/terminal-accels.c:832
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Դյուրանցման “%s” ստեղնը արդեն կապված է “%s” գործողության հետ"
 
-#: ../src/terminal-accels.c:982
+#: ../src/terminal-accels.c:988
 msgid "_Action"
 msgstr "Գործողություն"
 
-#: ../src/terminal-accels.c:1001
+#: ../src/terminal-accels.c:1007
 msgid "Shortcut _Key"
 msgstr "Դյուրանցման _Ստեղն"
 
-#: ../src/terminal-app.c:542
+#: ../src/terminal-app.c:540
 msgid "Click button to choose profile"
 msgstr "Կտացրեք ստեղնը պրոֆիլ ընտրելու համար"
 
-#: ../src/terminal-app.c:625
+#: ../src/terminal-app.c:623
 msgid "Profile list"
 msgstr "Պրոֆիլների ցանկ"
 
-#: ../src/terminal-app.c:686
+#: ../src/terminal-app.c:684
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Ջնջե՞լ \"%s\" պրոֆիլը"
 
-#: ../src/terminal-app.c:699
+#: ../src/terminal-app.c:697
 msgid "Delete Profile"
 msgstr "Ջնջել Պրոֆիլը"
 
-#: ../src/terminal-app.c:1146
+#: ../src/terminal-app.c:1144
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "Ձեր պրոֆիլը արդեն կանչված է “%s”։ Ցանկանու՞մ եք ստեղծել ևս մեկ պրոֆիկ այդ նույն անունով։"
 
-#: ../src/terminal-app.c:1241
+#: ../src/terminal-app.c:1239
 msgid "Choose base profile"
 msgstr "Ընտրե;ք հիմնական պրոֆիլը"
 
-#: ../src/terminal-app.c:1829
+#: ../src/terminal-app.c:1827
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Չկա այսպիսի պրոֆիլ \"%s\", օգտագործել հաստատուն պրոֆիլը\n"
 
-#: ../src/terminal-app.c:1856
+#: ../src/terminal-app.c:1854
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Անվավեր երկրաչափության տող \"%s\"\n"
 
-#: ../src/terminal-app.c:2062
+#: ../src/terminal-app.c:2060
 msgid "User Defined"
 msgstr "Օգտագործողը սահմանված է"
 
-#: ../src/terminal.c:582
+#: ../src/terminal.c:584
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Չհաջողվեց վերլուծել փաստարկները: %s\n"
@@ -2125,16 +2141,16 @@ msgstr "Փակել Թերթը"
 msgid "Switch to this tab"
 msgstr "Անջատել այս թերթը"
 
-#: ../src/terminal-util.c:161
+#: ../src/terminal-util.c:165
 msgid "There was an error displaying help"
 msgstr "Ձեռնարկի ցուցադրման ժամանակ սխալ է կատարվել"
 
-#: ../src/terminal-util.c:233
+#: ../src/terminal-util.c:237
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Չհաջողվեց բացել այս հասցեն “%s”"
 
-#: ../src/terminal-util.c:341
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2142,7 +2158,7 @@ msgid ""
 "any later version."
 msgstr "MATE Տերմինալը հանդիսանում է ազատ ծրագրային ապահովում. Դուք կարող եք վերաբաշխել և/կամ ձեւափոխել այն՝ համաձայն GNU Համընդհանուր Հանրային Արտոնագրի պայմանների, ինչպես հրապարակվել է Ազատ Ծրագրային Ապահովության Հիմնադրամի կողմից, կամ տարբերակ 3 լիցենզիայի, կամ (ձեր ընտրությամբ) ցանկացած ավելի ուշ տարբերակը։ "
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:349
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2150,7 +2166,7 @@ msgid ""
 "more details."
 msgstr "MATE Տերմինալը տարածվում է այն հույսով, որ օգտակար կլինի, սակայն ԱՌԱՆՑ ՈՐԵՒԷ ԵՐԱՇԽԻՔՆԵՐԻ; բացակայում են նույնիսկ ՎԱՃԱՌՔԻ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐԸ, ԲԱՎԱՐԱՐ ՈՐԱԿԸ կամ ՈՐՈՇ ՆՊԱՏԱԿՈՎ ԿԻՐԱՌԵԼԻՈՒԹՅՈՒՆԸ։ Մանրամասները տեսեք GNU համընդհանուր հանրային արտոնագրի մեջ։"
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:353
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2160,7 +2176,7 @@ msgstr "Դուք պետք է ընդունեք GNU համընդհանուր հա�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:664
+#: ../src/terminal-window.c:679
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2168,259 +2184,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:670
+#: ../src/terminal-window.c:685
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1856
+#: ../src/terminal-window.c:1874
 msgid "_File"
 msgstr "Ֆայլ"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
-#: ../src/terminal-window.c:2111
+#: ../src/terminal-window.c:1875 ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:2129
 msgid "Open _Terminal"
 msgstr "Բացել Տերմինալը"
 
-#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
-#: ../src/terminal-window.c:2116
+#: ../src/terminal-window.c:1876 ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:2134
 msgid "Open Ta_b"
 msgstr "Բացել Թերթը"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1877
 msgid "_Edit"
 msgstr "Խմբագրել"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1878
 msgid "_View"
 msgstr "Տեսք"
 
-#: ../src/terminal-window.c:1861
+#: ../src/terminal-window.c:1879
 msgid "_Search"
 msgstr "Փնտրել"
 
-#: ../src/terminal-window.c:1862
+#: ../src/terminal-window.c:1880
 msgid "_Terminal"
 msgstr "Տերմինալ"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1881
 msgid "Ta_bs"
 msgstr "Թերթեր"
 
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1882
 msgid "_Help"
 msgstr "Ձեռնարկ"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1898
 msgid "New _Profile…"
 msgstr "Նոր _Պրոֆիլ․․․"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1903
 msgid "_Save Contents"
 msgstr "_Պահպանել Պարունակությունը"
 
-#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
+#: ../src/terminal-window.c:1908 ../src/terminal-window.c:2144
 msgid "C_lose Tab"
 msgstr "Փակել Թերթը"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1913
 msgid "_Close Window"
 msgstr "Փակել Պատուհանը"
 
-#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
+#: ../src/terminal-window.c:1930 ../src/terminal-window.c:2124
 msgid "Paste _Filenames"
 msgstr "Տեղադրեք _Ֆայլի անուններ"
 
-#: ../src/terminal-window.c:1922
+#: ../src/terminal-window.c:1940
 msgid "P_rofiles…"
 msgstr "Պրոֆիլներ․․․"
 
-#: ../src/terminal-window.c:1927
+#: ../src/terminal-window.c:1945
 msgid "_Keyboard Shortcuts…"
 msgstr "_Ստեղնային դյուրանցում…"
 
-#: ../src/terminal-window.c:1932
+#: ../src/terminal-window.c:1950
 msgid "Pr_ofile Preferences"
 msgstr "Պրոֆիլի Նախընտրանքներ"
 
-#: ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1974
 msgid "_Find..."
 msgstr "Գտնել…"
 
-#: ../src/terminal-window.c:1961
+#: ../src/terminal-window.c:1979
 msgid "Find Ne_xt"
 msgstr "Գտնել հաջորդը"
 
-#: ../src/terminal-window.c:1966
+#: ../src/terminal-window.c:1984
 msgid "Find Pre_vious"
 msgstr "Գտնել նախկինը"
 
-#: ../src/terminal-window.c:1971
+#: ../src/terminal-window.c:1989
 msgid "_Clear Highlight"
 msgstr "_Մաքրել Ընդգծումը"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1995
 msgid "Go to _Line..."
 msgstr "Անցնել _Տողին…"
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:2000
 msgid "_Incremental Search..."
 msgstr "_Ինկրեմենտային որոնում․․․"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1989
+#: ../src/terminal-window.c:2007
 msgid "Change _Profile"
 msgstr "Փոխել պրոֆիլը"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:2009
 msgid "_Previous Profile"
 msgstr "_Նախորդ Պրոֆիլ"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:2014
 msgid "_Next Profile"
 msgstr "_Հաջորդ Պրոֆիլ"
 
-#: ../src/terminal-window.c:2001
+#: ../src/terminal-window.c:2019
 msgid "_Set Title…"
 msgstr "_Նշել վերնագիր…"
 
-#: ../src/terminal-window.c:2005
+#: ../src/terminal-window.c:2023
 msgid "Set _Character Encoding"
 msgstr "Նշել կոդավորումը"
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2025
 msgid "_Reset"
 msgstr "Դադարեցնել"
 
-#: ../src/terminal-window.c:2012
+#: ../src/terminal-window.c:2030
 msgid "Reset and C_lear"
 msgstr "Դադարեցնել և ջնջել"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:2037
 msgid "_Add or Remove…"
 msgstr "_Ավելացնել կամ Հեռացնել․․․"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2044
 msgid "_Previous Tab"
 msgstr "Նախորդ Թերթը"
 
-#: ../src/terminal-window.c:2031
+#: ../src/terminal-window.c:2049
 msgid "_Next Tab"
 msgstr "Հաջորդ Թերթը"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:2054
 msgid "Move Tab _Left"
 msgstr "Տեղափոխել Թերթը _Ձախ"
 
-#: ../src/terminal-window.c:2041
+#: ../src/terminal-window.c:2059
 msgid "Move Tab _Right"
 msgstr "Տեղափոխել Թերթը _Աջ"
 
-#: ../src/terminal-window.c:2046
+#: ../src/terminal-window.c:2064
 msgid "_Detach tab"
 msgstr "_Բաժանել էջանշանը"
 
-#: ../src/terminal-window.c:2053
+#: ../src/terminal-window.c:2071
 msgid "_Contents"
 msgstr "Բովանդակություն"
 
-#: ../src/terminal-window.c:2058
+#: ../src/terminal-window.c:2076
 msgid "_About"
 msgstr "Ծրագրի մասին"
 
-#: ../src/terminal-window.c:2065
+#: ../src/terminal-window.c:2083
 msgid "_Send Mail To…"
 msgstr "_Ուղարկում է փոստ․․․"
 
-#: ../src/terminal-window.c:2070
+#: ../src/terminal-window.c:2088
 msgid "_Copy E-mail Address"
 msgstr "Պատճենել Էլ.փոստ Հասցեն"
 
-#: ../src/terminal-window.c:2075
+#: ../src/terminal-window.c:2093
 msgid "C_all To…"
 msgstr "Կանչում է…"
 
-#: ../src/terminal-window.c:2080
+#: ../src/terminal-window.c:2098
 msgid "_Copy Call Address"
 msgstr "_Պատճենել Կանչի Հասցեն"
 
-#: ../src/terminal-window.c:2085
+#: ../src/terminal-window.c:2103
 msgid "_Open Link"
 msgstr "_Բացել Հղումը"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2108
 msgid "_Copy Link Address"
 msgstr "Պատճենել հղման հասցեն"
 
-#: ../src/terminal-window.c:2094
+#: ../src/terminal-window.c:2112
 msgid "P_rofiles"
 msgstr "Պ_րոֆիլներ"
 
-#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:2139 ../src/terminal-window.c:3590
 msgid "C_lose Window"
 msgstr "Փակել Պատուհանը"
 
-#: ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:2149
 msgid "L_eave Full Screen"
 msgstr "Թ_ողնել Ամբողջ էկրանով"
 
-#: ../src/terminal-window.c:2135
+#: ../src/terminal-window.c:2153
 msgid "_Input Methods"
 msgstr "_Մուտքագրման մեթոդներ"
 
-#: ../src/terminal-window.c:2142
+#: ../src/terminal-window.c:2160
 msgid "Show _Menubar"
 msgstr "Ցուցադրել Ցանկի երիզը"
 
-#: ../src/terminal-window.c:2148
+#: ../src/terminal-window.c:2166
 msgid "_Full Screen"
 msgstr "Ամբողջ Էկրանով"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this window?"
 msgstr "Փակե՞լ այս պատուհանը"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this terminal?"
 msgstr "Պակե՞լ այս տերմինալը"
 
-#: ../src/terminal-window.c:3521
+#: ../src/terminal-window.c:3581
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Այս պատուհանի որոշ տերմինալներում դեռ կա ընթացող գործընթացներ։ Փակելով պատուհանը բոլորը կսպանվեն։"
 
-#: ../src/terminal-window.c:3525
+#: ../src/terminal-window.c:3585
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Այս տերմինալում դեռ կա ընթացող գործընթաց։ Փակելով տերմինալը այն կսպանվի։"
 
-#: ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:3590
 msgid "C_lose Terminal"
 msgstr "Փակել Տերմինալը"
 
-#: ../src/terminal-window.c:3596
+#: ../src/terminal-window.c:3656
 msgid "Could not save contents"
 msgstr "Չհաջողվեց պահպանել բովանդակությունը"
 
-#: ../src/terminal-window.c:3620
+#: ../src/terminal-window.c:3680
 msgid "Save as..."
 msgstr "Պահպանել որպես․․․"
 
-#: ../src/terminal-window.c:4139
+#: ../src/terminal-window.c:4199
 msgid "_Title:"
 msgstr "Վերնագիր՝"
 
-#: ../src/terminal-window.c:4328
+#: ../src/terminal-window.c:4388
 msgid "Contributors:"
 msgstr "Ներդրումներ։"
 
-#: ../src/terminal-window.c:4347
+#: ../src/terminal-window.c:4407
 msgid "A terminal emulator for the MATE desktop"
 msgstr " MATE աշխատանքային սեղանի համար տերմինալի էմուլյատոր"
 
-#: ../src/terminal-window.c:4354
+#: ../src/terminal-window.c:4414
 msgid "translator-credits"
 msgstr "թարգմանությունը՝"

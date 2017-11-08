@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 01:12+0300\n"
-"PO-Revision-Date: 2017-09-19 11:04+0000\n"
+"POT-Creation-Date: 2017-10-29 21:53+0300\n"
+"PO-Revision-Date: 2017-10-29 19:01+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Tamil (http://www.transifex.com/mate/MATE/language/ta/)\n"
 "MIME-Version: 1.0\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4345
+#: ../src/terminal-window.c:4405
 msgid "MATE Terminal"
 msgstr "கனோம் முனையம்"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
-#: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2185
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:327
+#: ../src/terminal.c:589 ../src/terminal-profile.c:161
+#: ../src/terminal-window.c:2203
 msgid "Terminal"
 msgstr "முனையம்"
 
@@ -640,10 +640,22 @@ msgid ""
 msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
-msgid "Keyboard shortcut to toggle full screen mode"
+msgid "Keyboard shortcut to select all text"
 msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:111
+msgid ""
+"Keyboard shortcut key for selecting all the text into the terminal. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
+msgid "Keyboard shortcut to toggle full screen mode"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -651,11 +663,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -663,11 +675,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to set the terminal title"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -675,11 +687,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to reset the terminal"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -687,11 +699,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -699,11 +711,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -711,11 +723,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -723,11 +735,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -735,11 +747,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -747,11 +759,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Accelerator to move the current tab to the left."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -759,11 +771,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Accelerator to move the current tab to the right."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -771,22 +783,22 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Accelerator to detach current tab."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -794,11 +806,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -806,11 +818,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -818,11 +830,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -830,11 +842,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -842,11 +854,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -854,11 +866,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -866,11 +878,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -878,11 +890,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -890,11 +902,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -902,11 +914,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -914,11 +926,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -926,11 +938,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to launch help"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -938,11 +950,11 @@ msgid ""
 "action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to make font larger"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -950,11 +962,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to make font smaller"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -962,11 +974,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to make font normal-size"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1088,7 +1100,7 @@ msgstr "விவரங்கள்:"
 msgid "_Profile used when launching a new terminal:"
 msgstr "(_P) புதிய முனையத்தை துவக்கும்போது பயன்படுத்த வேண்டிய வரையுரு:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:150
 msgid "New Profile"
 msgstr "புதிய விபரம்"
 
@@ -1185,7 +1197,7 @@ msgid "On the right side"
 msgstr "வலது பக்கத்தில்"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
+#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:385
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "முடமாகியது"
@@ -1529,222 +1541,226 @@ msgstr "நீங்கள் சொடுக்கிய உரை சரிய
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "நீங்கள் சொடுக்கிய உரை சரியான OTP சவால் இல்லை"
 
-#: ../src/terminal-accels.c:140
+#: ../src/terminal-accels.c:142
 msgid "New Tab"
 msgstr "புதிய கீற்று"
 
-#: ../src/terminal-accels.c:144
+#: ../src/terminal-accels.c:146
 msgid "New Window"
 msgstr "புதிய சாளரம்"
 
-#: ../src/terminal-accels.c:153
+#: ../src/terminal-accels.c:155
 msgid "Save Contents"
 msgstr "உள்ளடக்கங்களை சேமி"
 
-#: ../src/terminal-accels.c:158
+#: ../src/terminal-accels.c:160
 msgid "Close Tab"
 msgstr "கீற்று  மூடவும்"
 
-#: ../src/terminal-accels.c:162
+#: ../src/terminal-accels.c:164
 msgid "Close Window"
 msgstr "சாளரம் மூடவும்"
 
-#: ../src/terminal-accels.c:170
+#: ../src/terminal-accels.c:172
 msgid "Copy"
 msgstr "நகல்"
 
-#: ../src/terminal-accels.c:174
+#: ../src/terminal-accels.c:176
 msgid "Paste"
 msgstr "ஒட்டு"
 
-#: ../src/terminal-accels.c:182
+#: ../src/terminal-accels.c:180
+msgid "Select All"
+msgstr ""
+
+#: ../src/terminal-accels.c:188
 msgid "Hide and Show menubar"
 msgstr "பட்டி-பட்டையை மறை/காட்டுக"
 
-#: ../src/terminal-accels.c:186
+#: ../src/terminal-accels.c:192
 msgid "Full Screen"
 msgstr "முழு-திரையிலும் காண்பி"
 
-#: ../src/terminal-accels.c:190
+#: ../src/terminal-accels.c:196
 msgid "Zoom In"
 msgstr "சிறிதாக்கு"
 
-#: ../src/terminal-accels.c:194
+#: ../src/terminal-accels.c:200
 msgid "Zoom Out"
 msgstr "பெரிதாக்கு"
 
-#: ../src/terminal-accels.c:198
+#: ../src/terminal-accels.c:204
 msgid "Normal Size"
 msgstr "சாதாரண அளவு"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
+#: ../src/terminal-accels.c:212 ../src/terminal-window.c:4182
 msgid "Set Title"
 msgstr "தலைப்பை அமைக்க"
 
-#: ../src/terminal-accels.c:210
+#: ../src/terminal-accels.c:216
 msgid "Reset"
 msgstr "நிலை மீள்"
 
-#: ../src/terminal-accels.c:214
+#: ../src/terminal-accels.c:220
 msgid "Reset and Clear"
 msgstr "நிலை மீட்டி துப்புரவு செய்"
 
-#: ../src/terminal-accels.c:218
+#: ../src/terminal-accels.c:224
 msgid "Switch to Previous Profile"
 msgstr ""
 
-#: ../src/terminal-accels.c:222
+#: ../src/terminal-accels.c:228
 msgid "Switch to Next Profile"
 msgstr ""
 
-#: ../src/terminal-accels.c:230
+#: ../src/terminal-accels.c:236
 msgid "Switch to Previous Tab"
 msgstr "முந்தைய கீற்று க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:234
+#: ../src/terminal-accels.c:240
 msgid "Switch to Next Tab"
 msgstr "அடுத்த கீற்று க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:238
+#: ../src/terminal-accels.c:244
 msgid "Move Tab to the Left"
 msgstr "கீற்றை இடப்பக்கம் நகர்த்து"
 
-#: ../src/terminal-accels.c:242
+#: ../src/terminal-accels.c:248
 msgid "Move Tab to the Right"
 msgstr "கீற்றை வலப்பக்கம் நகர்த்து"
 
-#: ../src/terminal-accels.c:246
+#: ../src/terminal-accels.c:252
 msgid "Detach Tab"
 msgstr "கீற்றை நீக்கு"
 
-#: ../src/terminal-accels.c:250
+#: ../src/terminal-accels.c:256
 msgid "Switch to Tab 1"
 msgstr " கீற்று 1 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:255
+#: ../src/terminal-accels.c:261
 msgid "Switch to Tab 2"
 msgstr "கீற்று 2 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:260
+#: ../src/terminal-accels.c:266
 msgid "Switch to Tab 3"
 msgstr "கீற்று 3 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:265
+#: ../src/terminal-accels.c:271
 msgid "Switch to Tab 4"
 msgstr "கீற்று 4 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:270
+#: ../src/terminal-accels.c:276
 msgid "Switch to Tab 5"
 msgstr "கீற்று 5 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:275
+#: ../src/terminal-accels.c:281
 msgid "Switch to Tab 6"
 msgstr "கீற்று 6 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:280
+#: ../src/terminal-accels.c:286
 msgid "Switch to Tab 7"
 msgstr "கீற்று 7க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:285
+#: ../src/terminal-accels.c:291
 msgid "Switch to Tab 8"
 msgstr "கீற்று 8 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:290
+#: ../src/terminal-accels.c:296
 msgid "Switch to Tab 9"
 msgstr "கீற்று 9 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:295
+#: ../src/terminal-accels.c:301
 msgid "Switch to Tab 10"
 msgstr "கீற்று10 க்கு்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:300
+#: ../src/terminal-accels.c:306
 msgid "Switch to Tab 11"
 msgstr "கீற்று 11 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:305
+#: ../src/terminal-accels.c:311
 msgid "Switch to Tab 12"
 msgstr "கீற்று 12 க்கு மாற்றவும்"
 
-#: ../src/terminal-accels.c:313
+#: ../src/terminal-accels.c:319
 msgid "Contents"
 msgstr "உள்ளடக்கம்"
 
-#: ../src/terminal-accels.c:318
+#: ../src/terminal-accels.c:324
 msgid "File"
 msgstr "கோப்பு"
 
-#: ../src/terminal-accels.c:319
+#: ../src/terminal-accels.c:325
 msgid "Edit"
 msgstr "தொகு"
 
-#: ../src/terminal-accels.c:320
+#: ../src/terminal-accels.c:326
 msgid "View"
 msgstr "காட்சி"
 
-#: ../src/terminal-accels.c:322
+#: ../src/terminal-accels.c:328
 msgid "Tabs"
 msgstr "கீற்றுகள்"
 
-#: ../src/terminal-accels.c:323
+#: ../src/terminal-accels.c:329
 msgid "Help"
 msgstr "உதவி"
 
-#: ../src/terminal-accels.c:826
+#: ../src/terminal-accels.c:832
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "குறுக்கு விசை “%s” ஏற்கெனவே “%s” செயலுக்கு பிணைக்கப்பட்டது"
 
-#: ../src/terminal-accels.c:982
+#: ../src/terminal-accels.c:988
 msgid "_Action"
 msgstr "செயல் (_A)"
 
-#: ../src/terminal-accels.c:1001
+#: ../src/terminal-accels.c:1007
 msgid "Shortcut _Key"
 msgstr "குறுக்கு விசை (_K)"
 
-#: ../src/terminal-app.c:542
+#: ../src/terminal-app.c:540
 msgid "Click button to choose profile"
 msgstr "விபரத்தை தெரிவு செய்த பொத்தானை அமுத்தவும்"
 
-#: ../src/terminal-app.c:625
+#: ../src/terminal-app.c:623
 msgid "Profile list"
 msgstr "விபரம் பட்டி"
 
-#: ../src/terminal-app.c:686
+#: ../src/terminal-app.c:684
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "“%s” விவரங்களை நீக்க வேண்டுமா?"
 
-#: ../src/terminal-app.c:699
+#: ../src/terminal-app.c:697
 msgid "Delete Profile"
 msgstr "விபரத்தை அழிக்கவும்"
 
-#: ../src/terminal-app.c:1146
+#: ../src/terminal-app.c:1144
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "நீங்கள் இந்த “%s” விவரக்குறிப்பினை ஏற்கனவே கொண்டுள்ளீர்கள். அதே பெயரில் வேறு விவரக்குறிப்பினை உருவாக்க வேண்டுமா?"
 
-#: ../src/terminal-app.c:1241
+#: ../src/terminal-app.c:1239
 msgid "Choose base profile"
 msgstr "விவரத்தை தேர்வு செய்"
 
-#: ../src/terminal-app.c:1829
+#: ../src/terminal-app.c:1827
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\" என்ற வரியுரு கிடையாது, முன்னிருப்பு வரியுரு பயன்படுத்தப்படும்\n"
 
-#: ../src/terminal-app.c:1856
+#: ../src/terminal-app.c:1854
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "செல்லாத வடிவியல் சரம் \"%s\"\n"
 
-#: ../src/terminal-app.c:2062
+#: ../src/terminal-app.c:2060
 msgid "User Defined"
 msgstr "உபயோகிப்பாளர் அமைப்புகள்"
 
-#: ../src/terminal.c:582
+#: ../src/terminal.c:584
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "துணையலகுகளை பகுக்க முடியவில்லை: %s\n"
@@ -2124,16 +2140,16 @@ msgstr "கீற்றை மூடவும்"
 msgid "Switch to this tab"
 msgstr "இந்த கீற்றுக்கு மாற்றவும்"
 
-#: ../src/terminal-util.c:161
+#: ../src/terminal-util.c:165
 msgid "There was an error displaying help"
 msgstr "உதவியை காட்டும் போது பிழை"
 
-#: ../src/terminal-util.c:233
+#: ../src/terminal-util.c:237
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "“%s” முகவரியை திறக்க முடியவில்லை "
 
-#: ../src/terminal-util.c:341
+#: ../src/terminal-util.c:345
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2141,7 +2157,7 @@ msgid ""
 "any later version."
 msgstr "க்னோம் முனையம்  இலவச மென் பொருளாகும்.நீங்கள்  இலவச மென் பொருள் அமைப்பினால் வெளியிடப்பட்ட ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் படி இந்த 3 ஆம் பதிப்பையோ அல்லது அடுத்த பதிப்புகளையோ நீங்கள் (விருப்பப்படி) மாற்றலாம். அல்லது மீண்டும் பறிமாறலாம்."
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:349
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2149,7 +2165,7 @@ msgid ""
 "more details."
 msgstr "க்னோம் முனையம் உபயோகப்படும் என்ற எதிர்பார்ப்புடன் வெளியிடப்படுகிறது. ஆனால் விற்க தகுதி,குறிப்பிட்ட  செயலுக்கான தகுதி உள்பட எந்த உத்திரவாதமும் அளிக்கப்படவில்லை. மேற் கொண்டு விவரங்களுக்கு ஜிஎன்யு பொது அனுமதிக்கான விதிகளை பார்க்கவும்."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:353
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2159,7 +2175,7 @@ msgstr " இத்துடன் ஜிஎன்யு பொது அனு�
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:664
+#: ../src/terminal-window.c:679
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2167,259 +2183,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:670
+#: ../src/terminal-window.c:685
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1856
+#: ../src/terminal-window.c:1874
 msgid "_File"
 msgstr "_கோப்பு"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
-#: ../src/terminal-window.c:2111
+#: ../src/terminal-window.c:1875 ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:2129
 msgid "Open _Terminal"
 msgstr "(_T)முனையத்தை திற"
 
-#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
-#: ../src/terminal-window.c:2116
+#: ../src/terminal-window.c:1876 ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:2134
 msgid "Open Ta_b"
 msgstr "(_b)கீற்றை திற"
 
-#: ../src/terminal-window.c:1859
+#: ../src/terminal-window.c:1877
 msgid "_Edit"
 msgstr "_E தொகு"
 
-#: ../src/terminal-window.c:1860
+#: ../src/terminal-window.c:1878
 msgid "_View"
 msgstr "_V காட்சி"
 
-#: ../src/terminal-window.c:1861
+#: ../src/terminal-window.c:1879
 msgid "_Search"
 msgstr "_த தேடு"
 
-#: ../src/terminal-window.c:1862
+#: ../src/terminal-window.c:1880
 msgid "_Terminal"
 msgstr "_Tமுனையம்"
 
-#: ../src/terminal-window.c:1863
+#: ../src/terminal-window.c:1881
 msgid "Ta_bs"
 msgstr "_b கீற்றுகள்"
 
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1882
 msgid "_Help"
 msgstr "_H உதவி"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1898
 msgid "New _Profile…"
 msgstr "(_P) புதிய வரியுரு..."
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1903
 msgid "_Save Contents"
 msgstr "_உள்ளடக்கங்களை சேமி"
 
-#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
+#: ../src/terminal-window.c:1908 ../src/terminal-window.c:2144
 msgid "C_lose Tab"
 msgstr "_l கீற்றை மூடுக"
 
-#: ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:1913
 msgid "_Close Window"
 msgstr "_C சாளரத்தை மூடுக"
 
-#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
+#: ../src/terminal-window.c:1930 ../src/terminal-window.c:2124
 msgid "Paste _Filenames"
 msgstr "(_F) கோப்பு பெயர்களை ஒட்டு"
 
-#: ../src/terminal-window.c:1922
+#: ../src/terminal-window.c:1940
 msgid "P_rofiles…"
 msgstr "(_r) வரியுருக்கள்..."
 
-#: ../src/terminal-window.c:1927
+#: ../src/terminal-window.c:1945
 msgid "_Keyboard Shortcuts…"
 msgstr "(_K) விசைப்பலகை குறுக்கு விசைகள்..."
 
-#: ../src/terminal-window.c:1932
+#: ../src/terminal-window.c:1950
 msgid "Pr_ofile Preferences"
 msgstr "(_o) வரியுரு தேர்வுகள்"
 
-#: ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1974
 msgid "_Find..."
 msgstr "_த கண்டுபிடி..."
 
-#: ../src/terminal-window.c:1961
+#: ../src/terminal-window.c:1979
 msgid "Find Ne_xt"
 msgstr "_அடுத்ததை தேடுக"
 
-#: ../src/terminal-window.c:1966
+#: ../src/terminal-window.c:1984
 msgid "Find Pre_vious"
 msgstr "_ம முந்தையதை தேடுக"
 
-#: ../src/terminal-window.c:1971
+#: ../src/terminal-window.c:1989
 msgid "_Clear Highlight"
 msgstr "_C சிறப்புச் சுட்டுதலை துடைக்கவும்"
 
-#: ../src/terminal-window.c:1977
+#: ../src/terminal-window.c:1995
 msgid "Go to _Line..."
 msgstr "_L  இந்த வரிசைக்குப் போகவும்..."
 
-#: ../src/terminal-window.c:1982
+#: ../src/terminal-window.c:2000
 msgid "_Incremental Search..."
 msgstr "_I அதிகரிப்பு தேடல்..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1989
+#: ../src/terminal-window.c:2007
 msgid "Change _Profile"
 msgstr "(_P)விவரத்தை மாற்று"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:2009
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:2014
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:2001
+#: ../src/terminal-window.c:2019
 msgid "_Set Title…"
 msgstr "(_S) தலைப்பை அமைக்க..."
 
-#: ../src/terminal-window.c:2005
+#: ../src/terminal-window.c:2023
 msgid "Set _Character Encoding"
 msgstr "(_C)எழுத்துரு குறிமுறையை அமை"
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2025
 msgid "_Reset"
 msgstr "நிலை மீள் "
 
-#: ../src/terminal-window.c:2012
+#: ../src/terminal-window.c:2030
 msgid "Reset and C_lear"
 msgstr "_l நிலை மீட்டு துப்புரவு செய்"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:2037
 msgid "_Add or Remove…"
 msgstr "(_A) சேர் அல்லது நீக்கு..."
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2044
 msgid "_Previous Tab"
 msgstr "முந்தைய கீற்று (_P)"
 
-#: ../src/terminal-window.c:2031
+#: ../src/terminal-window.c:2049
 msgid "_Next Tab"
 msgstr "அடுத்த கீற்று (_N)"
 
-#: ../src/terminal-window.c:2036
+#: ../src/terminal-window.c:2054
 msgid "Move Tab _Left"
 msgstr "இடப்பக்கம் கீற்றை நகர்த்து (_L)"
 
-#: ../src/terminal-window.c:2041
+#: ../src/terminal-window.c:2059
 msgid "Move Tab _Right"
 msgstr "வலப்பக்கம் கீற்றை நகர்த்து (_R)"
 
-#: ../src/terminal-window.c:2046
+#: ../src/terminal-window.c:2064
 msgid "_Detach tab"
 msgstr "கீற்றை பிரிக்கவும். (_D)"
 
-#: ../src/terminal-window.c:2053
+#: ../src/terminal-window.c:2071
 msgid "_Contents"
 msgstr "_உள்ளடக்கங்கள்"
 
-#: ../src/terminal-window.c:2058
+#: ../src/terminal-window.c:2076
 msgid "_About"
 msgstr "_A பற்றி"
 
-#: ../src/terminal-window.c:2065
+#: ../src/terminal-window.c:2083
 msgid "_Send Mail To…"
 msgstr "இவருக்கு அஞ்சல் அனுப்பு... (_S)"
 
-#: ../src/terminal-window.c:2070
+#: ../src/terminal-window.c:2088
 msgid "_Copy E-mail Address"
 msgstr "மின்னஞ்சல் முகவரியை நகலெடு (_C)"
 
-#: ../src/terminal-window.c:2075
+#: ../src/terminal-window.c:2093
 msgid "C_all To…"
 msgstr "(_a) இவருக்கு அழைப்பு...."
 
-#: ../src/terminal-window.c:2080
+#: ../src/terminal-window.c:2098
 msgid "_Copy Call Address"
 msgstr "அழைப்பு முகவரியை நகலெடு (_C)"
 
-#: ../src/terminal-window.c:2085
+#: ../src/terminal-window.c:2103
 msgid "_Open Link"
 msgstr "_O இணைப்பை திறக்கவும்"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2108
 msgid "_Copy Link Address"
 msgstr "_C இணைப்பு முகவரியை நகல் செய்"
 
-#: ../src/terminal-window.c:2094
+#: ../src/terminal-window.c:2112
 msgid "P_rofiles"
 msgstr "(_r) வரியுருக்கள்:"
 
-#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:2139 ../src/terminal-window.c:3590
 msgid "C_lose Window"
 msgstr "_l சாளரத்தை மூடவும்"
 
-#: ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:2149
 msgid "L_eave Full Screen"
 msgstr "முழுத்திரை விட்டு விலகு (_e)"
 
-#: ../src/terminal-window.c:2135
+#: ../src/terminal-window.c:2153
 msgid "_Input Methods"
 msgstr "உள்ளீடு முறைகள் (_I)"
 
-#: ../src/terminal-window.c:2142
+#: ../src/terminal-window.c:2160
 msgid "Show _Menubar"
 msgstr "பட்டி-பட்டையைக் காட்டுக (_M)"
 
-#: ../src/terminal-window.c:2148
+#: ../src/terminal-window.c:2166
 msgid "_Full Screen"
 msgstr "முழுத்திரை (_F)"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this window?"
 msgstr "சாளரம் மூடவா?"
 
-#: ../src/terminal-window.c:3517
+#: ../src/terminal-window.c:3577
 msgid "Close this terminal?"
 msgstr "முனையத்தை மூடவா?"
 
-#: ../src/terminal-window.c:3521
+#: ../src/terminal-window.c:3581
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "இந்த சாளரத்தில்  இன்னும் சில நடப்புகள் சில முனையங்களில் இயங்கிக்கொண்டு உள்ளன. சாளரத்தை மூடினால் அனைத்தும் செயலிழக்கும்."
 
-#: ../src/terminal-window.c:3525
+#: ../src/terminal-window.c:3585
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "இந்த முனையத்தில் இன்னும் ஒரு நடப்பு இயங்கிக்கொண்டு உள்ளது. சாளரத்தை மூடினால் அது செயலிழக்கும்."
 
-#: ../src/terminal-window.c:3530
+#: ../src/terminal-window.c:3590
 msgid "C_lose Terminal"
 msgstr "முனையம் மூடு (_l)"
 
-#: ../src/terminal-window.c:3596
+#: ../src/terminal-window.c:3656
 msgid "Could not save contents"
 msgstr "உள்ளடக்கங்களை சேமிக்க முடியவில்லை"
 
-#: ../src/terminal-window.c:3620
+#: ../src/terminal-window.c:3680
 msgid "Save as..."
 msgstr "இப்படி சேமி..."
 
-#: ../src/terminal-window.c:4139
+#: ../src/terminal-window.c:4199
 msgid "_Title:"
 msgstr "_T தலைப்பு:"
 
-#: ../src/terminal-window.c:4328
+#: ../src/terminal-window.c:4388
 msgid "Contributors:"
 msgstr "பங்களித்தவர்கள்:"
 
-#: ../src/terminal-window.c:4347
+#: ../src/terminal-window.c:4407
 msgid "A terminal emulator for the MATE desktop"
 msgstr "க்னோம் பணிமேடைக்கு ஒரு முனைய போன்றி"
 
-#: ../src/terminal-window.c:4354
+#: ../src/terminal-window.c:4414
 msgid "translator-credits"
 msgstr "I. Felix <ifelix@redhat.com>. Dr. T. Vasudevan <agnihot3@gmail.com>"
