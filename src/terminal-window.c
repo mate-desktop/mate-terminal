@@ -160,6 +160,9 @@ static gboolean terminal_window_focus_in_event (GtkWidget *widget,
 static gboolean notebook_button_press_cb     (GtkWidget *notebook,
         GdkEventButton *event,
         TerminalWindow *window);
+static gboolean window_key_press_cb     (GtkWidget *notebook,
+        GdkEventKey *event,
+        TerminalWindow *window);
 static gboolean notebook_popup_menu_cb       (GtkWidget *notebook,
         TerminalWindow *window);
 static void notebook_page_selected_callback  (GtkWidget       *notebook,
@@ -2220,6 +2223,8 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
                       G_CALLBACK (notebook_button_press_cb), window);
+    g_signal_connect (window, "key-press-event",
+                      G_CALLBACK (window_key_press_cb), window);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2995,6 +3000,45 @@ notebook_button_press_cb (GtkWidget *widget,
                     event->button, event->time);
 
     return TRUE;
+}
+
+static gboolean
+window_key_press_cb (GtkWidget *widget,
+                     GdkEventKey *event,
+                     TerminalWindow *window)
+{
+    GSettings *settings; 
+
+    settings = g_settings_new ("org.mate.terminal.global"); 
+
+    if (g_settings_get_boolean (settings, "ctrl-tab-switch-tabs") &&
+        event->state & GDK_CONTROL_MASK)
+    {
+        TerminalWindowPrivate *priv = window->priv;
+        GtkNotebook *notebook = GTK_NOTEBOOK (priv->notebook);
+
+        int pages = gtk_notebook_get_n_pages (notebook);
+        int page_num = gtk_notebook_get_current_page (notebook);
+
+        if (event->keyval == GDK_KEY_ISO_Left_Tab)
+        {
+            if (page_num != 0)
+                gtk_notebook_prev_page (notebook);
+            else
+                gtk_notebook_set_current_page (notebook, (pages - 1));
+            return TRUE;
+        }
+
+        if (event->keyval == GDK_KEY_Tab)
+        {
+            if (page_num != (pages -1))
+                gtk_notebook_next_page (notebook);
+            else
+                gtk_notebook_set_current_page (notebook, 0);
+            return TRUE;
+        }
+    }
+    return FALSE;
 }
 
 static gboolean
