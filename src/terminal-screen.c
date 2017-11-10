@@ -1128,6 +1128,8 @@ update_color_scheme (TerminalScreen *screen)
 			g_printerr ("Failed to load background image: %s\n", error->message);
 			g_clear_error (&error);
 		}
+
+		gtk_widget_queue_draw (GTK_WIDGET (screen));
 	} else {
 		if (priv->bg_image_callback_id)
 		{
