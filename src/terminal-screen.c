@@ -29,6 +29,8 @@
 
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cairo.h>
 
 #include "terminal-accels.h"
 #include "terminal-app.h"
@@ -69,6 +71,8 @@ struct _TerminalScreenPrivate
 	gboolean user_title; /* title was manually set */
 	GSList *match_tags;
 	guint launch_child_source_id;
+	gulong bg_image_callback_id;
+	GdkPixbuf *bg_image;
 };
 
 enum
@@ -386,6 +390,9 @@ terminal_screen_init (TerminalScreen *screen)
 	g_signal_connect (terminal_app_get (), "notify::system-font",
 	                  G_CALLBACK (terminal_screen_system_font_notify_cb), screen);
 
+	priv->bg_image_callback_id = 0;
+	priv->bg_image = NULL;
+
 #ifdef MATE_ENABLE_DEBUG
 	_TERMINAL_DEBUG_IF (TERMINAL_DEBUG_GEOMETRY)
 	{
@@ -662,7 +669,58 @@ terminal_screen_finalize (GObject *object)
 	g_slist_foreach (priv->match_tags, (GFunc) free_tag_data, NULL);
 	g_slist_free (priv->match_tags);
 
+	if (priv->bg_image)
+		g_object_unref (priv->bg_image);
+
 	G_OBJECT_CLASS (terminal_screen_parent_class)->finalize (object);
+}
+
+static gboolean
+terminal_screen_image_draw_cb (GtkWidget *widget, cairo_t *cr, void *userdata)
+{
+	TerminalScreen *screen = TERMINAL_SCREEN (widget);
+	TerminalScreenPrivate *priv = screen->priv;
+	GdkPixbuf *bg_image = priv->bg_image;
+	gint bgw, bgh;
+	GdkRectangle target_rect;
+	GtkAllocation alloc;
+	cairo_surface_t *child_surface;
+	cairo_t *child_cr;
+
+	if (!bg_image)
+		return FALSE;
+
+	gtk_widget_get_allocation (widget, &alloc);
+
+	target_rect.x = 0;
+	target_rect.y = 0;
+	target_rect.width = alloc.width;
+	target_rect.height = alloc.height;
+
+	child_surface = cairo_image_surface_create (CAIRO_FORMAT_ARGB32, alloc.width, alloc.height);
+	child_cr = cairo_create (child_surface);
+
+	g_signal_handler_block (screen, priv->bg_image_callback_id);
+	gtk_widget_draw (widget, child_cr);
+	g_signal_handler_unblock (screen, priv->bg_image_callback_id);
+
+	bgw = gdk_pixbuf_get_width (bg_image);
+	bgh = gdk_pixbuf_get_height (bg_image);
+
+	gdk_cairo_set_source_pixbuf (cr, bg_image, 0, 0);
+	cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_REPEAT);
+
+	gdk_cairo_rectangle (cr, &target_rect);
+	cairo_fill (cr);
+
+	cairo_set_source_surface (cr, child_surface, 0, 0);
+	cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
+	cairo_paint (cr);
+
+	cairo_destroy (child_cr);
+	cairo_surface_destroy (child_surface);
+
+	return TRUE;
 }
 
 TerminalScreen *
@@ -930,6 +988,7 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_COLOR) ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE) ||
 	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_DARKNESS) ||
+	        prop_name == I_(TERMINAL_PROFILE_BACKGROUND_IMAGE) ||
 	        prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG) ||
 	        prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR) ||
 	        prop_name == I_(TERMINAL_PROFILE_PALETTE))
@@ -1014,10 +1073,13 @@ update_color_scheme (TerminalScreen *screen)
 	TerminalProfile *profile = priv->profile;
 	GdkRGBA colors[TERMINAL_PALETTE_SIZE];
 	const GdkRGBA *fg_rgba, *bg_rgba, *bold_rgba;
+	TerminalBackgroundType bg_type;
+	const gchar *bg_image_file;
 	double bg_alpha = 1.0;
 	GdkRGBA fg, bg;
 	guint n_colors;
 	GtkStyleContext *context;
+	GError *error = NULL;
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (screen));
 	gtk_style_context_save (context);
@@ -1045,9 +1107,36 @@ update_color_scheme (TerminalScreen *screen)
 	n_colors = G_N_ELEMENTS (colors);
 	terminal_profile_get_palette (priv->profile, colors, &n_colors);
 
-	if (terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE) == TERMINAL_BACKGROUND_TRANSPARENT)
+	bg_type = terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
+	bg_image_file = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_BACKGROUND_IMAGE_FILE);
+
+	if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
 		bg_alpha = terminal_profile_get_property_double (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS);
+	else if (bg_type == TERMINAL_BACKGROUND_IMAGE)
+	  bg_alpha = 0.0;
 	bg.alpha = bg_alpha;
+
+	if (bg_type == TERMINAL_BACKGROUND_IMAGE)
+	{
+		if (!priv->bg_image_callback_id)
+			priv->bg_image_callback_id = g_signal_connect (screen, "draw", G_CALLBACK (terminal_screen_image_draw_cb), NULL);
+
+		g_clear_object (&priv->bg_image);
+		priv->bg_image = gdk_pixbuf_new_from_file (bg_image_file, &error);
+
+		if (error) {
+			g_printerr ("Failed to load background image: %s\n", error->message);
+			g_clear_error (&error);
+		}
+
+		gtk_widget_queue_draw (GTK_WIDGET (screen));
+	} else {
+		if (priv->bg_image_callback_id)
+		{
+			g_signal_handler_disconnect (screen, priv->bg_image_callback_id);
+			priv->bg_image_callback_id = 0;
+		}
+	}
 
 	vte_terminal_set_colors (VTE_TERMINAL (screen),
 	                         &fg, &bg,
