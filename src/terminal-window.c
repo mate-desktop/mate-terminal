@@ -2798,7 +2798,6 @@ terminal_window_update_size_set_geometry (TerminalWindow *window,
     unsigned int force_grid_width = 0, force_grid_height = 0;
     int grid_width, grid_height;
     gint pixel_width, pixel_height;
-    gint sc_width, sc_height;
     GdkWindow *gdk_window;
     GdkGravity pos_gravity;
 
@@ -2874,16 +2873,14 @@ terminal_window_update_size_set_geometry (TerminalWindow *window,
     if ((geom_result & YValue) == 0)
         force_pos_y = 0;
 
-    gdk_window_get_geometry (gdk_screen_get_root_window (gtk_widget_get_screen (app)),
-                             NULL, NULL, &sc_width, &sc_height);
-
     if (pos_gravity == GDK_GRAVITY_SOUTH_EAST ||
         pos_gravity == GDK_GRAVITY_NORTH_EAST)
-        force_pos_x = sc_width - pixel_width + force_pos_x;
-
+        force_pos_x = WidthOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (app))) -
+                      pixel_width + force_pos_x;
     if (pos_gravity == GDK_GRAVITY_SOUTH_WEST ||
         pos_gravity == GDK_GRAVITY_SOUTH_EAST)
-        force_pos_y = sc_height - pixel_height + force_pos_y;
+        force_pos_y = HeightOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (app))) -
+                      pixel_height + force_pos_y;
 
     /* we don't let you put a window offscreen; maybe some people would
      * prefer to be able to, but it's kind of a bogus thing to do.
