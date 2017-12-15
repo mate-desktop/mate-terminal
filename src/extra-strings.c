@@ -77,4 +77,6 @@ N_("XTerm")
 /* Translators: This is the name of a colour scheme */
 N_("Rxvt")
 /* Translators: This is the name of a colour scheme */
+N_("Solarized")
+/* Translators: This is the name of a colour scheme */
 N_("Custom")
