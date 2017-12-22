@@ -47,17 +47,17 @@
     <key name="profile-list" type="as">
       <default>[ 'default' ]</default>
       <summary>List of profiles</summary>
-      <description>List of profiles known to mate-terminal. The list contains  strings naming subdirectories relative to /org/mate/terminal/profiles.</description>
+      <description>List of profiles known to mate-terminal. The list contains strings naming subdirectories relative to /org/mate/terminal/profiles.</description>
     </key>
     <key name="default-profile" type="s">
       <default>'default'</default>
       <summary>Profile to use for new terminals</summary>
-      <description>Profile to be used when opening a new window or tab.  Must be in profile_list.</description>
+      <description>Profile to be used when opening a new window or tab. Must be in profile_list.</description>
     </key>
     <key name="use-mnemonics" type="b">
       <default>true</default>
       <summary>Whether the menubar has access keys</summary>
-      <description>Whether to have Alt+letter access keys for the menubar.  They may interfere with some applications run inside the terminal so it's possible to turn them off.</description>
+      <description>Whether to have Alt+letter access keys for the menubar. They may interfere with some applications run inside the terminal so it's possible to turn them off.</description>
     </key>
     <key name="use-menu-accelerators" type="b">
       <default>true</default>
@@ -67,7 +67,7 @@
     <key name="active-encodings" type="as">
       <default context="active-encodings" l10n="messages">[ 'UTF-8', 'current' ]</default>
       <summary>List of available encodings</summary>
-      <description>A subset of possible encodings are presented in  the Encoding submenu. This is a list of encodings to appear there. The special encoding name "current"  means to display the encoding of the current locale.</description>
+      <description>A subset of possible encodings are presented in the "Encoding" submenu. This is a list of encodings to appear there. The special encoding name "current"  means to display the encoding of the current locale.</description>
     </key>
     <key name="confirm-window-close" type="b">
       <default>true</default>
@@ -76,8 +76,8 @@
     </key>
     <key name="ctrl-tab-switch-tabs" type="b">
       <default>false</default>
-      <summary>Switch tabs with [ctrl] + [tab]</summary>
-      <description>If true, it enables the ability to switch tabs using [ctrl + tab] and [ctrl + shift + tab].</description>
+      <summary>Switch tabs with [Ctrl]+[Tab]</summary>
+      <description>If true, it enables the ability to switch tabs using [Ctrl+Tab] and [Ctrl+Shift+Tab].</description>
     </key>
   </schema>
   <schema id="org.mate.terminal.profiles" path="/org/mate/terminal/profiles/">
@@ -91,7 +91,7 @@
     <key name="default-show-menubar" type="b">
       <default>true</default>
       <summary>Whether to show menubar in new windows/tabs</summary>
-      <description>True if the menubar should be shown in new windows,  for windows/tabs with this profile.</description>
+      <description>True if the menubar should be shown in new windows, for windows/tabs with this profile.</description>
     </key>
     <key name="foreground-color" type="s">
       <default>'#000000'</default>
@@ -116,22 +116,22 @@
     <key name="title-mode" enum="org.mate.terminal.titlemode">
       <default>'replace'</default>
       <summary>What to do with dynamic title</summary>
-      <description>If the application in the terminal sets the title  (most typically people have their shell set up to  do this), the dynamically-set title can  erase the configured title, go before it, go after it,  or replace it. The possible values are "replace",  "before", "after", and "ignore".</description>
+      <description>If the application in the terminal sets the title (most typically people have their shell set up to  do this), the dynamically-set title can  erase the configured title, go before it, go after it,  or replace it. The possible values are "replace",  "before", "after", and "ignore".</description>
     </key>
     <key name="title" type="s">
       <default context="title" l10n="messages">'Terminal'</default>
       <summary>Title for terminal</summary>
-      <description>Title to display for the terminal window or tab.  This title may be replaced by or combined with  the title set by the application inside the terminal,  depending on the title_mode setting.</description>
+      <description>Title to display for the terminal window or tab. This title may be replaced by or combined with  the title set by the application inside the terminal,  depending on the title_mode setting.</description>
     </key>
     <key name="allow-bold" type="b">
       <default>true</default>
       <summary>Whether to allow bold text</summary>
-      <description>If true, allow applications in the terminal to make  text boldface.</description>
+      <description>If true, allow applications in the terminal to make text boldface.</description>
     </key>
     <key name="silent-bell" type="b">
       <default>false</default>
       <summary>Whether to silence terminal bell</summary>
-      <description>If true, don't make a noise when applications send the  escape sequence for the terminal bell.</description>
+      <description>If true, don't make a noise when applications send the escape sequence for the terminal bell.</description>
     </key>
     <key name="copy-selection" type="b">
       <default>false</default>
@@ -171,7 +171,7 @@
     <key name="scrollback-unlimited" type="b">
       <default>false</default>
       <summary>Whether an unlimited number of lines should be kept in scrollback</summary>
-      <description>If true, scrollback lines will never be discarded.  The scrollback history is stored on disk temporarily, so this may cause the system to run out of disk space if there is a lot of output to the terminal.</description>
+      <description>If true, scrollback lines will never be discarded. The scrollback history is stored on disk temporarily, so this may cause the system to run out of disk space if there is a lot of output to the terminal.</description>
     </key>
     <key name="scroll-on-keystroke" type="b">
       <default>true</default>
@@ -191,7 +191,7 @@
     <key name="login-shell" type="b">
       <default>false</default>
       <summary>Whether to launch the command in the terminal as a login shell</summary>
-      <description>If true, the command inside the terminal will be launched as  a login shell. (argv[0] will have a hyphen in front of it.)</description>
+      <description>If true, the command inside the terminal will be launched as a login shell. (argv[0] will have a hyphen in front of it.)</description>
     </key>
     <key name="update-records" type="b">
       <default>true</default>
@@ -216,7 +216,7 @@
     <key name="custom-command" type="s">
       <default>''</default>
       <summary>Custom command to use instead of the shell</summary>
-      <description>Run this command in place of the shell, if  use_custom_command is true.</description>
+      <description>Run this command in place of the shell, if use_custom_command is true.</description>
     </key>
     <key name="icon" type="s">
       <default>''</default>
@@ -226,7 +226,7 @@
     <key name="palette" type="s">
       <default>'#2E2E34343636:#CCCC00000000:#4E4E9A9A0606:#C4C4A0A00000:#34346565A4A4:#757550507B7B:#060698209A9A:#D3D3D7D7CFCF:#555557575353:#EFEF29292929:#8A8AE2E23434:#FCFCE9E94F4F:#72729F9FCFCF:#ADAD7F7FA8A8:#3434E2E2E2E2:#EEEEEEEEECEC'</default>
       <summary>Palette for terminal applications</summary>
-      <description>Terminals have a 16-color palette that applications inside  the terminal can use. This is that palette, in the form  of a colon-separated list of color names. Color names  should be in hex format e.g. "#FF00FF"</description>
+      <description>Terminals have a 16-color palette that applications inside the terminal can use. This is that palette, in the form of a colon-separated list of color names. Color names should be in hex format e.g. "#FF00FF"</description>
     </key>
     <key name="font" type="s">
       <default>'Monospace 12'</default>
@@ -246,27 +246,27 @@
     <key name="scroll-background" type="b">
       <default>true</default>
       <summary>Whether to scroll background image</summary>
-      <description>If true, scroll the background image with the foreground  text; if false, keep the image in a fixed position and  scroll the text above it.</description>
+      <description>If true, scroll the background image with the foreground text; if false, keep the image in a fixed position and scroll the text above it.</description>
     </key>
     <key name="background-darkness" type="d">
       <default>0.5</default>
       <summary>How much to darken the background image</summary>
-      <description>A value between 0.0 and 1.0 indicating how much to darken  the background image. 0.0 means no darkness, 1.0 means fully  dark. In the current implementation, there are only two levels of  darkness possible, so the setting behaves as a boolean, where 0.0 disables the darkening effect.</description>
+      <description>A value between 0.0 and 1.0 indicating how much to darken the background image. 0.0 means no darkness, 1.0 means fully dark. In the current implementation, there are only two levels of darkness possible, so the setting behaves as a boolean, where 0.0 disables the darkening effect.</description>
     </key>
     <key name="backspace-binding" enum="org.mate.terminal.erasebinding">
       <default>'ascii-del'</default>
       <summary>Effect of the Backspace key</summary>
-      <description>Sets what code the backspace key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "ascii-del" is normally  considered the correct setting for the Backspace key.</description>
+      <description>Sets what code the backspace key generates. Possible values are "ascii-del" for the ASCII DEL character, "control-h" for Control-H (AKA the ASCII BS character), "escape-sequence" for the escape sequence typically  bound to backspace or delete. "ascii-del" is normally considered the correct setting for the Backspace key.</description>
     </key>
     <key name="delete-binding" enum="org.mate.terminal.erasebinding">
       <default>'escape-sequence'</default>
       <summary>Effect of the Delete key</summary>
-      <description>Sets what code the delete key generates. Possible values  are "ascii-del" for the ASCII DEL character,  "control-h" for Control-H (AKA the ASCII BS character),  "escape-sequence" for the escape sequence typically  bound to backspace or delete. "escape-sequence" is normally  considered the correct setting for the Delete key.</description>
+      <description>Sets what code the delete key generates. Possible values are "ascii-del" for the ASCII DEL character, "control-h" for Control-H (AKA the ASCII BS character), "escape-sequence" for the escape sequence typically  bound to backspace or delete. "escape-sequence" is normally considered the correct setting for the Delete key.</description>
     </key>
     <key name="use-theme-colors" type="b">
       <default>true</default>
       <summary>Whether to use the colors from the theme for the terminal widget</summary>
-      <description>If true, the theme color scheme used for text entry boxes will  be used for the terminal, instead of colors provided by the user.</description>
+      <description>If true, the theme color scheme used for text entry boxes will be used for the terminal, instead of colors provided by the user.</description>
     </key>
     <key name="use-system-font" type="b">
       <default>true</default>
@@ -276,7 +276,7 @@
     <key name="use-skey" type="b">
       <default>true</default>
       <summary>Highlight S/Key challenges</summary>
-      <description>Popup a dialog when an S/Key challenge response query is detected and clicked on.  Typing a password into the dialog will send it to the terminal.</description>
+      <description>Popup a dialog when an S/Key challenge response query is detected and clicked on. Typing a password into the dialog will send it to the terminal.</description>
     </key>
   </schema>
   <schema id="org.mate.terminal.keybindings" path="/org/mate/terminal/keybindings/">
@@ -318,7 +318,7 @@
     <key name="paste" type="s">
       <default>'&lt;Ctrl&gt;&lt;Shift&gt;v'</default>
       <summary>Keyboard shortcut to paste text</summary>
-      <description>Keyboard shortcut key for pasting the contents of the clipboard into the terminal. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
+      <description>Keyboard shortcut key for pasting the contents of the clipboard in the terminal. Expressed as a string in the same format used for GTK+ resource files. If you set the option to the special string "disabled", then there  will be no keyboard shortcut for this action.</description>
     </key>
     <key name="select-all" type="s">
       <default>'&lt;Ctrl&gt;&lt;Shift&gt;a'</default>
