@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-29 21:53+0300\n"
-"PO-Revision-Date: 2017-10-29 19:01+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2017-12-22 17:40+0100\n"
+"PO-Revision-Date: 2017-12-22 16:42+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,13 +40,13 @@ msgid ""
 msgstr "<p> Terminal MATE jest aplikacją emulacji terminala, którą możesz użyć, aby zyskać dostęp do powłoki UNIX-a w środowisku MATE. Terminal MATE emuluje program xterm stworzony przez Konsorcjum X. Obsługuje przezroczyste tła, otwieranie wielu terminali w pojedynczym oknie (karty) oraz klikalne adresy URL. </p> <p> Terminal MATE jest forkiem Terminala GNOME i jest częścią środowiska MATE. Jeżeli chcesz się dowiedzieć więcej na temat MATE i Terminala MATE, proszę odwiedzić stronę domową projektu. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4405
+#: ../src/terminal-window.c:4450
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:327
+#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:589 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2203
+#: ../src/terminal-window.c:2210
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -136,10 +136,10 @@ msgstr "Lista dostępnych kodowań"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:11
 msgid ""
-"A subset of possible encodings are presented in the Encoding submenu. This "
-"is a list of encodings to appear there. The special encoding name "
+"A subset of possible encodings are presented in the \"Encoding\" submenu. "
+"This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
-msgstr "Podzbiór możliwych kodowań jest wyświetlany w podmenu Kodowanie w postaci listy. Nazwa kodowania specjalnego \"current\" oznacza wyświetlanie kodowania na podstawie bieżących ustawień regionalnych."
+msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -152,73 +152,83 @@ msgid ""
 msgstr "Czy pytać o potwierdzenie podczas zamykania okna terminala zawierającego więcej niż jedną otwartą kartę."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
+msgid "Switch tabs with [Ctrl]+[Tab]"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:15
+msgid ""
+"If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
+"[Ctrl+Shift+Tab]."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Domyślny'"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:15
+#: ../src/org.mate.terminal.gschema.xml.in.h:17
 msgid "Human-readable name of the profile"
 msgstr "Zrozumiała dla człowieka nazwa profilu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:16
+#: ../src/org.mate.terminal.gschema.xml.in.h:18
 msgid "Human-readable name of the profile."
 msgstr "Zrozumiała dla człowieka nazwa profilu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:17
+#: ../src/org.mate.terminal.gschema.xml.in.h:19
 msgid "Whether to show menubar in new windows/tabs"
 msgstr "Czy pokazywać pasek menu w nowych oknach/kartach"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:18
+#: ../src/org.mate.terminal.gschema.xml.in.h:20
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr "Ustaw na true dla pokazywania paska menu w nowych oknach, dla okien/kart z tym profilem."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:19
+#: ../src/org.mate.terminal.gschema.xml.in.h:21
 msgid "Default color of text in the terminal"
 msgstr "Domyślny kolor tekstu w terminalu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:20
+#: ../src/org.mate.terminal.gschema.xml.in.h:22
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
 msgstr "Domyślny kolor tekstu w terminalu, w postaci specyfikacji koloru (zapis szesnastkowy HTML lub angielska nazwa koloru jak np. \"red\")."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:21
+#: ../src/org.mate.terminal.gschema.xml.in.h:23
 msgid "Default color of terminal background"
 msgstr "Domyślny kolor tła w terminalu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:22
+#: ../src/org.mate.terminal.gschema.xml.in.h:24
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr "Domyślny kolor tła w terminalu, w postaci specyfikacji koloru (zapis szesnastkowy HTML lub angielska nazwa koloru, jak np. \"red\")."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:23
+#: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Default color of bold text in the terminal"
 msgstr "Domyślny kolor pogrubionego tekstu w terminalu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:24
+#: ../src/org.mate.terminal.gschema.xml.in.h:26
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
 msgstr "Domyślny kolor pogrubionego tekstu w terminalu, w postaci specyfikacji koloru (zapis szesnastkowy HTML lub angielska nazwa koloru, jak np. \"red\"). Zostanie zignorowany, jeśli ustawiono na true wartość bold_color_same_as_fg."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:25
+#: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Whether bold text should use the same color as normal text"
 msgstr "Czy pogrubiony tekst powinien korzystać z tego samego koloru co tekst zwykły"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:26
+#: ../src/org.mate.terminal.gschema.xml.in.h:28
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr "Jeśli true, tekst pogrubiony będzie renderowany z użyciem tego samego koloru co tekst zwykły."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:27
+#: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgid "What to do with dynamic title"
 msgstr "Sposób postępowania z tytułem dynamicznym"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:28
+#: ../src/org.mate.terminal.gschema.xml.in.h:30
 msgid ""
 "If the application in the terminal sets the title (most typically people "
 "have their shell set up to do this), the dynamically-set title can erase the"
@@ -226,267 +236,267 @@ msgid ""
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr "Gdy aplikacja w terminalu ustawia tytuł (większość zwykłych użytkowników ustawia tak swoje powłoki), dynamicznie ustawiony tytuł może usunąć tytuł skonfigurowany, może wstawić go przed lub za niego albo go zastąpić. Możliwymi wartościami są \"replace\" (zastąp), \"before\" (wstaw przed), \"after\" (wstaw za) oraz \"ignore\" (ignoruj)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:29
+#: ../src/org.mate.terminal.gschema.xml.in.h:31
 msgctxt "title"
 msgid "'Terminal'"
 msgstr "'Terminal'"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:30
+#: ../src/org.mate.terminal.gschema.xml.in.h:32
 msgid "Title for terminal"
 msgstr "Tytuł terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:31
+#: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
 msgstr "Tytuł wyświetlany dla okna terminala lub karty. Tytuł ten może zostać zastąpiony lub połączony z tytułem ustawianym przez aplikację wewnątrz terminala, w zależności od ustawień trybu title_mode."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:32
+#: ../src/org.mate.terminal.gschema.xml.in.h:34
 msgid "Whether to allow bold text"
 msgstr "Czy zezwolić na pogrubiony tekst"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:33
+#: ../src/org.mate.terminal.gschema.xml.in.h:35
 msgid "If true, allow applications in the terminal to make text boldface."
 msgstr "Jeśli true, pozwala aplikacjom w terminalu na stosowanie tekstu pogrubionego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:34
+#: ../src/org.mate.terminal.gschema.xml.in.h:36
 msgid "Whether to silence terminal bell"
 msgstr "Czy wyciszyć dzwonek terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:35
+#: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
 msgstr "Jeśli true, nie wydaje dźwięku kiedy aplikacje wysyłają sekwencję ucieczki dla uruchomienia dzwonka terminala."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:36
+#: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Copy selection to clipboard"
 msgstr "Kopiuj selekcję do schowka"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:37
+#: ../src/org.mate.terminal.gschema.xml.in.h:39
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr "Jeśli prawda, wybór jest automatycznie kopiowany do bufora schowka."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:38
+#: ../src/org.mate.terminal.gschema.xml.in.h:40
 msgid "Characters that are considered \"part of a word\""
 msgstr "Znaki, które są traktowane jako \"część słowa\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:39
+#: ../src/org.mate.terminal.gschema.xml.in.h:41
 msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
 msgstr "Podczas zaznaczania tekstu po słowach, sekwencja tych znaków będzie rozumiana jako pojedyncze słowa. Zakres może być wprowadzany jako \"A-Z\". Znak dywiza (nie wyrażającego zakresu) powinien być pierwszym podanym znakiem."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:40
+#: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Whether to use custom terminal size for new windows"
 msgstr "Czy używać niestandardowego rozmiaru terminala dla nowych okien"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:41
+#: ../src/org.mate.terminal.gschema.xml.in.h:43
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
 msgstr "Jeśli true, nowo utworzone okna terminala będą posiadały niestandardowy rozmiar, określony przez default_size_columns i default_size_rows."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:42
+#: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Default number of columns"
 msgstr "Domyślna liczba kolumn"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:43
+#: ../src/org.mate.terminal.gschema.xml.in.h:45
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr "Liczba kolumn w nowo utworzonych oknach terminala. Nie daje efektu, jeśli use_custom_default_size nie jest włączone."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:44
+#: ../src/org.mate.terminal.gschema.xml.in.h:46
 msgid "Default number of rows"
 msgstr "Domyślna liczba wierszy"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:45
+#: ../src/org.mate.terminal.gschema.xml.in.h:47
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr "Liczba wierszy w nowo utworzonych oknach terminala. Nie daje efektu, jeśli use_custom_default_size nie jest włączone."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:46
+#: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Position of the scrollbar"
 msgstr "Pozycja paska przewijania"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:47
+#: ../src/org.mate.terminal.gschema.xml.in.h:49
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr "Gdzie umieścić pasek przewijania terminala. Możliwe są \"left\" (po lewej), \"right\" (po prawej) i \"hidden\" (ukryty)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:48
+#: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Number of lines to keep in scrollback"
 msgstr "Liczba linii umieszczanych w buforze przewijania"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:49
+#: ../src/org.mate.terminal.gschema.xml.in.h:51
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr "Liczba linii umieszczanych w buforze przewijania. Możesz przewijać wstecz w terminalu o tą liczbę linii; natomiast linie niemieszczące się w buforze są usuwane. Jeśli scrollback_unlimited jest true, wartość ta jest ignorowana."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:50
+#: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "Czy nieograniczona liczba linii powinna być trzymana w buforze przewijania"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:51
+#: ../src/org.mate.terminal.gschema.xml.in.h:53
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
 msgstr "Jeśli true, linie w buforze przewijania nigdy nie będą usuwane. Historia przewijania jest tymczasowo przechowywana na dysku, więc jeśli w terminalu znajdzie się dużo tekstu wynikowego, może to doprowadzić do wyczerpania się wolnej przestrzeni dyskowej."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:52
+#: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "Czy przewijać do końca gdy klawisz jest wciśnięty"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:53
+#: ../src/org.mate.terminal.gschema.xml.in.h:55
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr "Jeśli true, wciśnięcie klawisza przenosi pasek przewijania na sam dół."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:54
+#: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "Whether to scroll to the bottom when there's new output"
 msgstr "Czy przewinąć do końca jeśli są nowe wyniki"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:55
+#: ../src/org.mate.terminal.gschema.xml.in.h:57
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr "Jeśli true, terminal zostanie przewinięty do końca jeśli są nowe wyniki"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:56
+#: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "What to do with the terminal when the child command exits"
 msgstr "Co zrobić z terminalem, gdy polecenie potomne się zakończy"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:57
+#: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr "Możliwymi wartościami są \"close\" dla zamknięcia terminala oraz \"restart\" dla ponownego uruchomienia polecenia."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:58
+#: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr "Czy uruchomić polecenie w terminalu jako powłokę logowania"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:59
+#: ../src/org.mate.terminal.gschema.xml.in.h:61
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
 msgstr "Jeśli true, polecenie wewnątrz terminala zostanie uruchomione jako powłoka logowania. (argv[0] będzie miał myślnik na swoim początku.)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:60
+#: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to update login records when launching terminal command"
 msgstr "Czy aktualizować wpisy logowania podczas uruchamianiu polecenia terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:61
+#: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
 msgstr "Jeśli true, systemowe wpisy logowania utmp i wtmp będą uaktualniane podczas uruchamiania polecenia w terminalu."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:62
+#: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to run a custom command instead of the shell"
 msgstr "Czy uruchomić własne polecenie zamiast powłoki"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:63
+#: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr "Jeśli true, wartość ustawienia \"custom_command\" będzie użyta zamiast uruchomienia powłoki."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:64
+#: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to blink the cursor"
 msgstr "Czy kursor ma migać"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:65
+#: ../src/org.mate.terminal.gschema.xml.in.h:67
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr "Dostępne wartości to \"system\" w celu użycia globalnych ustawień migania kursora, albo \"on\" (włącz) lub \"off\" (wyłącz) by ustawić tryb jawnie."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:66
+#: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "The cursor appearance"
 msgstr "Wygląd kursora"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:67
+#: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr "Możliwe wartości to \"block\" dla kursora blokowego, \"ibeam\" dla kursora w postaci kreski z szeryfami lub \"underline\" dla kursora w formie znaku podkreślenia."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:68
+#: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Custom command to use instead of the shell"
 msgstr "Własne polecenie do użycia zamiast powłoki"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:69
+#: ../src/org.mate.terminal.gschema.xml.in.h:71
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr "Uruchom to polecenie zamiast powłoki, jeżeli use_custom_command jest true."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:70
+#: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Icon for terminal window"
 msgstr "Ikona dla okna terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:71
+#: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Icon to use for tabs/windows containing this profile."
 msgstr "Ikona używana w kartach/oknach zawierających ten profil."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:72
+#: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Palette for terminal applications"
 msgstr "Paleta dla aplikacji terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:73
+#: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr "Terminale mają 16-kolorową paletę z której mogą korzystać aplikacje wewnątrz terminala. Chodzi o paletę w formie listy kolorów oddzielonych dwukropkiem. Nazwy kolorów powinny być w formacie szesnastkowym np. \"#FF00FF\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:74
+#: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Font"
 msgstr "Czcionka"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:75
+#: ../src/org.mate.terminal.gschema.xml.in.h:77
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr "Nazwa czcionki Pango. Przykładowo \"Sans 12\" lub \"Monospace Bold 14\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:76
+#: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Background type"
 msgstr "Typ tła"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:77
+#: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
 msgstr "Rodzaj tła terminala. Może mieć wartość \"solid\" dla jednolitego koloru, \"image\" dla obrazu lub \"transparent\" zarówno dla przezroczystości kompozytowego menedżera okien jak i pseudo-przezroczystości."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:78
+#: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background image"
 msgstr "Obraz tła"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:79
+#: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid "Filename of a background image."
 msgstr "Nazwa pliku obrazu tła."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:80
+#: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Whether to scroll background image"
 msgstr "Czy przewijać obraz tła"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:81
+#: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr "Jeśli true, przewija obraz tła razem z pierwszoplanowym tekstem; jeżeli false, obraz tła będzie nieruchomy, a ponad nim będzie przewijany tekst."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:82
+#: ../src/org.mate.terminal.gschema.xml.in.h:84
 msgid "How much to darken the background image"
 msgstr "W jakim stopniu przyciemniać obraz tła"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:83
+#: ../src/org.mate.terminal.gschema.xml.in.h:85
 msgid ""
 "A value between 0.0 and 1.0 indicating how much to darken the background "
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
@@ -494,11 +504,11 @@ msgid ""
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
 msgstr "Wartość pomiędzy 0,0 a 1,0 wskazująca stopień przyciemnienia obrazu tła. Wartość 0,0 oznacza brak przyciemniania, 1,0 oznacza pełne zaciemnienie. W obecnej implementacji możliwe są tylko dwa poziomy przyciemnienia, czyli ustawienie zachowuje się jak zmienna logiczna, gdzie 0,0 wyłącza efekt zaciemnienia."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:84
+#: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "Effect of the Backspace key"
 msgstr "Działanie klawisza Backspace"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:85
+#: ../src/org.mate.terminal.gschema.xml.in.h:87
 msgid ""
 "Sets what code the backspace key generates. Possible values are \"ascii-"
 "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
@@ -507,11 +517,11 @@ msgid ""
 "correct setting for the Backspace key."
 msgstr "Określa kod generowany przez klawisz Backspace. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\"  dla Ctrl-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy Backspace lub Delete. Dla klawisza Backspace standardowo przyjmuje się \"ascii-del\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:86
+#: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Delete key"
 msgstr "Działanie klawisza Delete"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:87
+#: ../src/org.mate.terminal.gschema.xml.in.h:89
 msgid ""
 "Sets what code the delete key generates. Possible values are \"ascii-del\" "
 "for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
@@ -520,41 +530,41 @@ msgid ""
 "setting for the Delete key."
 msgstr "Określa kod generowany przez klawisz Delete. Możliwe wartości to \"ascii-del\" dla znaku ASCII DEL, \"control-h\" dla Ctrl-H (znanego jako znak ASCII BS), \"escape-sequence\" dla sekwencji sterującej charakterystycznej dla klawiszy Backspace lub Delete. Dla klawisza Delete standardowo przyjmuje się \"escape-sequence\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:88
+#: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "Czy używać kolorów z motywu dla widżetu terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:89
+#: ../src/org.mate.terminal.gschema.xml.in.h:91
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr "Jeśli true, zamiast kolorów użytkownika w terminalu używany będzie schemat koloru motywu dla edycyjnych pól tekstowych."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:90
+#: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the system font"
 msgstr "Czy używać czcionki systemowej"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:91
+#: ../src/org.mate.terminal.gschema.xml.in.h:93
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr "Jeśli true, terminal użyje standardowego globalnej czcionki, jeśli jest to czcionka o stałej szerokości znaków (lub najbardziej podobnej czcionki w innym przypadku)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:92
+#: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Highlight S/Key challenges"
 msgstr "Podświetlanie zapytań S/Key"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:93
+#: ../src/org.mate.terminal.gschema.xml.in.h:95
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr "Wyświetl okno dialogowe gdy zostanie wykryte i kliknięte żądanie S/Key zapytanie-odpowiedź. Hasło podane w oknie dialogowym zostanie przesłane do terminala."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:94
+#: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Keyboard shortcut to open a new tab"
 msgstr "Klawisz skrótu otwierający nową kartę"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:95
+#: ../src/org.mate.terminal.gschema.xml.in.h:97
 msgid ""
 "Keyboard shortcut key for opening a new tab. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -562,11 +572,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu otwierający nową kartę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Jeśli wprowadzisz tutaj specjalny ciąg znaków \"disabled\", akcja ta nie będzie posiadać skrótu klawiszowego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:96
+#: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new window"
 msgstr "Klawisz skrótu otwierający nowe okno"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:97
+#: ../src/org.mate.terminal.gschema.xml.in.h:99
 msgid ""
 "Keyboard shortcut key for opening a new window. Expressed as a string in the"
 " same format used for GTK+ resource files. If you set the option to the "
@@ -574,11 +584,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu otwierający nowe okno. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Jeśli wprowadzisz tutaj specjalny ciąg znaków \"disabled\", akcja ta nie będzie posiadać skrótu klawiszowego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:98
+#: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to create a new profile"
 msgstr "Klawisz skrótu tworzący nowy profil"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:99
+#: ../src/org.mate.terminal.gschema.xml.in.h:101
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -586,11 +596,11 @@ msgid ""
 " keyboard shortcut for this action."
 msgstr "Klawisz skrótu wywołujący okno dialogowe tworzenia profili. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Jeśli wprowadzisz tutaj specjalny ciąg znaków \"disabled\", akcja ta nie będzie posiadać skrótu klawiszowego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:100
+#: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to save the current tab contents to file"
 msgstr "Klawisz skrótu zapisujący zawartość bieżącej karty do pliku"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:101
+#: ../src/org.mate.terminal.gschema.xml.in.h:103
 msgid ""
 "Keyboard shortcut key to save the current tab contents to a file. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -598,11 +608,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Klawisz skrótu zapisujący zawartość bieżącej karty do pliku. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Jeśli wprowadzisz tutaj specjalny ciąg znaków \"disabled\", akcja ta nie będzie posiadać skrótu klawiszowego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:102
+#: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to close a tab"
 msgstr "Klawisz skrótu zamykający kartę"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:103
+#: ../src/org.mate.terminal.gschema.xml.in.h:105
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -610,11 +620,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu zamykający nową kartę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Jeśli wprowadzisz tutaj specjalny ciąg znaków \"disabled\", akcja ta nie będzie posiadać skrótu klawiszowego."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:104
+#: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a window"
 msgstr "Klawisz skrótu zamykający okno"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:105
+#: ../src/org.mate.terminal.gschema.xml.in.h:107
 msgid ""
 "Keyboard shortcut key for closing a window. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -622,11 +632,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu zamykający okno. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:106
+#: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to copy text"
 msgstr "Klawisz skrótu kopiowania tekstu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:107
+#: ../src/org.mate.terminal.gschema.xml.in.h:109
 msgid ""
 "Keyboard shortcut key for copying selected text to the clipboard. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -634,23 +644,23 @@ msgid ""
 "shortcut for this action."
 msgstr "Klawisz skrótu kopiujący zaznaczony tekst do schowka. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:108
+#: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to paste text"
 msgstr "Klawisz skrótu wklejania tekstu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:109
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
 msgid ""
-"Keyboard shortcut key for pasting the contents of the clipboard into the "
+"Keyboard shortcut key for pasting the contents of the clipboard in the "
 "terminal. Expressed as a string in the same format used for GTK+ resource "
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
-msgstr "Klawisz skrótu wklejający zawartość schowka do terminala. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
+msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:110
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to select all text"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for selecting all the text into the terminal. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -658,11 +668,47 @@ msgid ""
 " keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
+msgid "Keyboard shortcut to show the find dialog"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
+msgid ""
+"Keyboard shortcut key for showing the find dialog. Expressed as a string in "
+"the same format used for GTK+ resource files. If you set the option to the "
+"special string \"disabled\", then there will be no keyboard shortcut for "
+"this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
+msgid "Keyboard shortcut to find the next text"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
+msgid ""
+"Keyboard shortcut key for finding the next text into the terminal. Expressed"
+" as a string in the same format used for GTK+ resource files. If you set the"
+" option to the special string \"disabled\", then there will be no keyboard "
+"shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
+msgid "Keyboard shortcut to find the previous text"
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
+msgid ""
+"Keyboard shortcut key for finding the previous text into the terminal. "
+"Expressed as a string in the same format used for GTK+ resource files. If "
+"you set the option to the special string \"disabled\", then there will be no"
+" keyboard shortcut for this action."
+msgstr ""
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Klawisz skrótu przełączania trybu pełnoekranowego"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -670,11 +716,11 @@ msgid ""
 " this action."
 msgstr "Klawisz skrótu przełączający tryb pełnoekranowy. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "Klawisz skrótu przełączania widoczności paska menu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -682,11 +728,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Klawisz skrótu przełączający widoczność paska menu. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "Klawisz skrótu ustawiania tytułu terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -694,11 +740,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu ustawiający tytuł terminala. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Klawisz skrótu resetowania terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -706,11 +752,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu resetujący terminal. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Klawisz skrótu resetowania i czyszczenia terminala"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -718,11 +764,11 @@ msgid ""
 " this action."
 msgstr "Klawisz skrótu resetujący i czyszczący terminal. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Klawisz skrótu przełączania na poprzednią kartę"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -730,11 +776,11 @@ msgid ""
 " this action."
 msgstr "Klawisz skrótu przełączający na poprzednią kartę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Klawisz skrótu przełączania na następną kartę"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -742,11 +788,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu przełączający na następną kartę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "Klawisz skrótu przełączania na poprzedni profil"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -754,11 +800,11 @@ msgid ""
 "shortcut for this action."
 msgstr "Klawisz skrótu przełączający na poprzedni profil. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "Klawisz skrótu przełączania na następny profil"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -766,11 +812,11 @@ msgid ""
 " this action."
 msgstr "Klawisz skrótu przełączający na następny profil. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Accelerator to move the current tab to the left."
 msgstr "Klawisz przesuwania bieżącej karty w lewo."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -778,11 +824,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu przesuwający bieżącą kartę w lewo. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the right."
 msgstr "Klawisz przesuwania bieżącej karty w prawo."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -790,22 +836,22 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu przesuwający bieżącą kartę w prawo. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to detach current tab."
 msgstr "Klawisz odłączania bieżącej karty."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr "Klawisz skrótu odłączający bieżącą kartę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "Klawisz skrótu przełączania na kartę 1"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -813,11 +859,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 1. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "Klawisz skrótu przełączania na kartę 2"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -825,11 +871,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 2. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "Klawisz skrótu przełączania na kartę 3"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -837,11 +883,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 3. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "Klawisz skrótu przełączania na kartę 4"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -849,11 +895,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 4. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "Klawisz skrótu przełączania na kartę 5"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -861,11 +907,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 5. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "Klawisz skrótu przełączania na kartę 6"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -873,11 +919,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 6. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "Klawisz skrótu przełączania na kartę 7"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -885,11 +931,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 7. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "Klawisz skrótu przełączania na kartę 8"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -897,11 +943,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 8. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "Klawisz skrótu przełączania na kartę 9"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -909,11 +955,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu aktywujący kartę 9. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "Klawisz skrótu przełączania na kartę 10"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -921,11 +967,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu aktywujący kartę 10. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "Klawisz skrótu przełączania na kartę 11"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -933,11 +979,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu aktywujący kartę 11. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "Klawisz skrótu przełączania na kartę 12"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -945,11 +991,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu aktywujący kartę 12. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wpisanie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to launch help"
 msgstr "Klawisz skrótu uruchamiania pomocy"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:169
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -957,11 +1003,11 @@ msgid ""
 "action."
 msgstr "Klawisz skrótu uruchamiający pomoc. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to make font larger"
 msgstr "Klawisz skrótu powiększania fontu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:171
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -969,11 +1015,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu powiększający czcionkę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Klawisz skrótu pomniejszania fontu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:173
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -981,11 +1027,11 @@ msgid ""
 "this action."
 msgstr "Klawisz skrótu pomniejszający czcionkę. Wyrażony jako ciąg znaków w takim samym formacie jak pliki zasobów GTK+. Klawisz skrótu można wyłączyć poprzez wprowadzenie specjalnego ciągu znaków: \"disabled\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:166
+#: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Klawisz skrótu ustawiający domyślny rozmiar fontu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:167
+#: ../src/org.mate.terminal.gschema.xml.in.h:175
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1013,32 +1059,44 @@ msgstr "Zielone na czarnym"
 msgid "White on black"
 msgstr "Białe na czarnym"
 
-#: ../src/profile-editor.c:487
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be
+#. translated
+#: ../src/profile-editor.c:69
+msgid "Solarized light"
+msgstr ""
+
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
+#. translated
+#: ../src/profile-editor.c:74
+msgid "Solarized dark"
+msgstr ""
+
+#: ../src/profile-editor.c:497
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Błąd podczas przetwarzania polecenia: %s"
 
-#: ../src/profile-editor.c:504
+#: ../src/profile-editor.c:514
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Modyfikowanie profilu \"%s\""
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:535 ../src/profile-preferences.ui.h:11
-#: ../src/extra-strings.c:80
+#: ../src/profile-editor.c:545 ../src/profile-preferences.ui.h:11
+#: ../src/extra-strings.c:82
 msgid "Custom"
 msgstr "Użytkownika"
 
-#: ../src/profile-editor.c:585
+#: ../src/profile-editor.c:595
 msgid "Images"
 msgstr "Obrazy"
 
-#: ../src/profile-editor.c:729
+#: ../src/profile-editor.c:739
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Wybór %d koloru palety"
 
-#: ../src/profile-editor.c:733
+#: ../src/profile-editor.c:743
 #, c-format
 msgid "Palette entry %d"
 msgstr "%d element palety"
@@ -1107,7 +1165,7 @@ msgstr "Profile"
 msgid "_Profile used when launching a new terminal:"
 msgstr "_Profil używany przy uruchamianiu nowego terminala:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:150
+#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:156
 msgid "New Profile"
 msgstr "Nowy profil"
 
@@ -1193,18 +1251,23 @@ msgstr "XTerm"
 msgid "Rxvt"
 msgstr "Rxvt"
 
+#. Translators: This is the name of a colour scheme
+#: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:80
+msgid "Solarized"
+msgstr ""
+
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:56
+#: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:56
 msgid "On the left side"
 msgstr "Po lewej"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:58
+#: ../src/profile-preferences.ui.h:18 ../src/extra-strings.c:58
 msgid "On the right side"
 msgstr "Po prawej"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:385
+#: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
 #: ../src/extra-strings.c:60
 msgid "Disabled"
 msgstr "Wyłączone"
@@ -1227,288 +1290,288 @@ msgstr "Wyłączone"
 #. * can't be extracted by intltool since the ui files aren't in git, and
 #. * the glade files don't contain them in the right form. See bug #553357.
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:19 ../src/extra-strings.c:24
+#: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:24
 msgid "Automatic"
 msgstr "Automatycznie"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:26
+#: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:26
 msgid "Control-H"
 msgstr "Ctrl-H"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:28
+#: ../src/profile-preferences.ui.h:22 ../src/extra-strings.c:28
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:22 ../src/extra-strings.c:30
+#: ../src/profile-preferences.ui.h:23 ../src/extra-strings.c:30
 msgid "Escape sequence"
 msgstr "Sekwencja sterująca"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:23 ../src/extra-strings.c:32
+#: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:32
 msgid "TTY Erase"
 msgstr "Wyczyszczenie TTY"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:42
+#: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:42
 msgid "Use system settings"
 msgstr "Użyj ustawień systemowych"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:44
+#: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:44
 msgid "Always blink"
 msgstr "Zawsze migaj"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:46
+#: ../src/profile-preferences.ui.h:27 ../src/extra-strings.c:46
 msgid "Never blink"
 msgstr "Nigdy nie migaj"
 
-#: ../src/profile-preferences.ui.h:27
+#: ../src/profile-preferences.ui.h:28
 msgid "Profile Editor"
 msgstr "Edytor profili"
 
-#: ../src/profile-preferences.ui.h:28
+#: ../src/profile-preferences.ui.h:29
 msgid "_Profile name:"
 msgstr "_Nazwa profilu:"
 
-#: ../src/profile-preferences.ui.h:29
+#: ../src/profile-preferences.ui.h:30
 msgid "_Use the system fixed width font"
 msgstr "Czci_onka systemowa o stałej szerokości"
 
-#: ../src/profile-preferences.ui.h:30
+#: ../src/profile-preferences.ui.h:31
 msgid "_Font:"
 msgstr "Czcionk_a:"
 
-#: ../src/profile-preferences.ui.h:31
+#: ../src/profile-preferences.ui.h:32
 msgid "Choose A Terminal Font"
 msgstr "Wybór czcionki w terminalu"
 
-#: ../src/profile-preferences.ui.h:32
+#: ../src/profile-preferences.ui.h:33
 msgid "_Allow bold text"
 msgstr "Zezwolenie na pogru_biony tekst"
 
-#: ../src/profile-preferences.ui.h:33
+#: ../src/profile-preferences.ui.h:34
 msgid "Show _menubar by default in new terminals"
 msgstr "_Domyślne wyświetlanie paska menu w nowych terminalach"
 
-#: ../src/profile-preferences.ui.h:34
+#: ../src/profile-preferences.ui.h:35
 msgid "Terminal _bell"
 msgstr "D_zwonek terminala"
 
-#: ../src/profile-preferences.ui.h:35
+#: ../src/profile-preferences.ui.h:36
 msgid "Copy selected text into _clipboard"
 msgstr "Skopiuj zaznaczony tekst do _schowka"
 
-#: ../src/profile-preferences.ui.h:36
+#: ../src/profile-preferences.ui.h:37
 msgid "Cursor blin_k:"
 msgstr "Mi_ganie kursora:"
 
-#: ../src/profile-preferences.ui.h:37
+#: ../src/profile-preferences.ui.h:38
 msgid "Cursor _shape:"
 msgstr "_Kształt kursora:"
 
-#: ../src/profile-preferences.ui.h:38
+#: ../src/profile-preferences.ui.h:39
 msgid "Select-by-_word characters:"
 msgstr "Znaki należące do _słowa przy zaznaczaniu:"
 
-#: ../src/profile-preferences.ui.h:39
+#: ../src/profile-preferences.ui.h:40
 msgid "Use custom default terminal si_ze"
 msgstr "Własny domyślny ro_zmiar terminala"
 
-#: ../src/profile-preferences.ui.h:40
+#: ../src/profile-preferences.ui.h:41
 msgid "Default size:"
 msgstr "Domyślny rozmiar:"
 
-#: ../src/profile-preferences.ui.h:41
+#: ../src/profile-preferences.ui.h:42
 msgid "columns"
 msgstr "kolumn"
 
-#: ../src/profile-preferences.ui.h:42
+#: ../src/profile-preferences.ui.h:43
 msgid "rows"
 msgstr "rzędów"
 
-#: ../src/profile-preferences.ui.h:43
+#: ../src/profile-preferences.ui.h:44
 msgid "General"
 msgstr "Ogólne"
 
-#: ../src/profile-preferences.ui.h:44
+#: ../src/profile-preferences.ui.h:45
 msgid "<b>Title</b>"
 msgstr "<b>Tytuł</b>"
 
-#: ../src/profile-preferences.ui.h:45
+#: ../src/profile-preferences.ui.h:46
 msgid "Initial _title:"
 msgstr "Poc_zątkowy tytuł:"
 
-#: ../src/profile-preferences.ui.h:46
+#: ../src/profile-preferences.ui.h:47
 msgid "When terminal commands set their o_wn titles:"
 msgstr "Kiedy polecenia terminala ustawiają _własne tytuły:"
 
-#: ../src/profile-preferences.ui.h:47
+#: ../src/profile-preferences.ui.h:48
 msgid "<b>Command</b>"
 msgstr "<b>Polecenie</b>"
 
-#: ../src/profile-preferences.ui.h:48
+#: ../src/profile-preferences.ui.h:49
 msgid "_Run command as a login shell"
 msgstr "_Uruchomienie w roli powłoki startowej"
 
-#: ../src/profile-preferences.ui.h:49
+#: ../src/profile-preferences.ui.h:50
 msgid "_Update login records when command is launched"
 msgstr "_Aktualizacja wpisów logowania podczas uruchamiania polecenia"
 
-#: ../src/profile-preferences.ui.h:50
+#: ../src/profile-preferences.ui.h:51
 msgid "Ru_n a custom command instead of my shell"
 msgstr "Uruchomienie wła_snego polecenia zamiast powłoki"
 
-#: ../src/profile-preferences.ui.h:51
+#: ../src/profile-preferences.ui.h:52
 msgid "Custom co_mmand:"
 msgstr "Własne polecenie:"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:53
 msgid "When command _exits:"
 msgstr "_Po zakończeniu polecenia:"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:54
 msgid "Title and Command"
 msgstr "Tytuł i polecenie"
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:55
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Tekst, tło, pogrubienie i podkreślenie</b>"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:56
 msgid "_Use colors from system theme"
 msgstr "_Kolory z motywu systemowego"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:57
 msgid "Built-in sche_mes:"
 msgstr "_Wbudowane schematy:"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:58
 msgid "_Text color:"
 msgstr "Kolor t_ekstu:"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Background Color"
 msgstr "Wybór koloru tła terminala"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:60
 msgid "Choose Terminal Text Color"
 msgstr "Wybór koloru tekstu w terminalu"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:61
 msgid "_Background color:"
 msgstr "Kolor tł_a:"
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:62
 msgid "Bol_d color:"
 msgstr "Kolor pogru_bienia:"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:63
 msgid "_Underline color:"
 msgstr "Kolor po_dkreślenia:"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:64
 msgid "_Same as text color"
 msgstr "Taki _sam jak kolor tekstu"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:65
 msgid "<b>Palette</b>"
 msgstr "<b>Paleta</b>"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:66
 msgid "Built-in _schemes:"
 msgstr "Wbudowane _schematy:"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:67
 msgid "Color p_alette:"
 msgstr "_Paleta kolorów:"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:68
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>Uwaga:</b> Poniższe kolory są dostępne dla programów działających wewnątrz terminala.</i></small>"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:69
 msgid "Colors"
 msgstr "Kolory"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:70
 msgid "_Solid color"
 msgstr "Jednolity _kolor"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:71
 msgid "_Background image"
 msgstr "_Obraz tła"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:72
 msgid "Image _file:"
 msgstr "Plik o_brazu:"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:73
 msgid "Select Background Image"
 msgstr "Obraz tła"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:74
 msgid "Background image _scrolls"
 msgstr "Prz_ewijanie obrazu tła"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:75
 msgid "_Transparent background"
 msgstr "_Przezroczyste tło"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:76
 msgid "S_hade transparent or image background:"
 msgstr "Przyciem_nianie przezroczystości i obrazu tła:"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:77
 msgid "S_hade transparent background:"
 msgstr "Przyciem_nianie przezroczystości tła:"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:78
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Brak</i></small>"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:79
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Maksymalne</i></small>"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:80
 msgid "Background"
 msgstr "Tło"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:81
 msgid "_Scrollbar is:"
 msgstr "_Położenie paska przewijania:"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _output"
 msgstr "Prz_ewijanie przy pojawieniu się nowych danych"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:83
 msgid "Scroll on _keystroke"
 msgstr "Przewijanie przy _naciśnięciu klawisza"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:84
 msgid "lines"
 msgstr "wierszy"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:85
 msgid "Scroll_back:"
 msgstr "_Bufor przewijania:"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:86
 msgid "_Unlimited"
 msgstr "Nie_ograniczone"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:87
 msgid "Scrolling"
 msgstr "Przewijanie"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:88
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1516,19 +1579,19 @@ msgid ""
 "behavior.</i></small>"
 msgstr "<small><i><b>Uwaga:</b> Zmiana poniższych opcji może spowodować niepoprawne zachowanie pewnych programów. Istnieją one tylko w celu obejścia problemów z pewnymi programami i systemami operacyjnymi, które oczekują innego zachowania się terminala.</i></small>"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:89
 msgid "_Delete key generates:"
 msgstr "Klawisz _Delete generuje:"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:90
 msgid "_Backspace key generates:"
 msgstr "Klawisz _Backspace generuje:"
 
-#: ../src/profile-preferences.ui.h:90
+#: ../src/profile-preferences.ui.h:91
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "_Przywróć domyślne wartości opcji zgodności"
 
-#: ../src/profile-preferences.ui.h:91
+#: ../src/profile-preferences.ui.h:92
 msgid "Compatibility"
 msgstr "Zgodność"
 
@@ -1548,180 +1611,196 @@ msgstr "Kliknięty tekst nie wygląda na prawidłowe wezwanie S/Key."
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "Kliknięty tekst nie wygląda na prawidłowe wezwanie OTP."
 
-#: ../src/terminal-accels.c:142
+#: ../src/terminal-accels.c:148
 msgid "New Tab"
 msgstr "Nowa karta"
 
-#: ../src/terminal-accels.c:146
+#: ../src/terminal-accels.c:152
 msgid "New Window"
 msgstr "Nowe okno"
 
-#: ../src/terminal-accels.c:155
+#: ../src/terminal-accels.c:161
 msgid "Save Contents"
 msgstr "Zapisanie zawartości"
 
-#: ../src/terminal-accels.c:160
+#: ../src/terminal-accels.c:166
 msgid "Close Tab"
 msgstr "Zamknięcie karty"
 
-#: ../src/terminal-accels.c:164
+#: ../src/terminal-accels.c:170
 msgid "Close Window"
 msgstr "Zamknięcie okna"
 
-#: ../src/terminal-accels.c:172
+#: ../src/terminal-accels.c:178
 msgid "Copy"
 msgstr "Skopiowanie"
 
-#: ../src/terminal-accels.c:176
+#: ../src/terminal-accels.c:182
 msgid "Paste"
 msgstr "Wklejenie"
 
-#: ../src/terminal-accels.c:180
+#: ../src/terminal-accels.c:186
 msgid "Select All"
 msgstr ""
 
-#: ../src/terminal-accels.c:188
+#: ../src/terminal-accels.c:194
 msgid "Hide and Show menubar"
 msgstr "Przełączenie wyświetlania paska menu"
 
-#: ../src/terminal-accels.c:192
+#: ../src/terminal-accels.c:198
 msgid "Full Screen"
 msgstr "Pełny ekran"
 
-#: ../src/terminal-accels.c:196
+#: ../src/terminal-accels.c:202
 msgid "Zoom In"
 msgstr "Powiększenie"
 
-#: ../src/terminal-accels.c:200
+#: ../src/terminal-accels.c:206
 msgid "Zoom Out"
 msgstr "Pomniejszenie"
 
-#: ../src/terminal-accels.c:204
+#: ../src/terminal-accels.c:210
 msgid "Normal Size"
 msgstr "Zwykły rozmiar"
 
-#: ../src/terminal-accels.c:212 ../src/terminal-window.c:4182
+#: ../src/terminal-accels.c:218
+msgid "Find..."
+msgstr ""
+
+#: ../src/terminal-accels.c:222
+msgid "Find Next"
+msgstr ""
+
+#: ../src/terminal-accels.c:226
+msgid "Find Previous"
+msgstr ""
+
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4227
 msgid "Set Title"
 msgstr "Ustawienie tytułu"
 
-#: ../src/terminal-accels.c:216
+#: ../src/terminal-accels.c:238
 msgid "Reset"
 msgstr "Zresetowanie"
 
-#: ../src/terminal-accels.c:220
+#: ../src/terminal-accels.c:242
 msgid "Reset and Clear"
 msgstr "Zresetowanie i wyczyszczenie"
 
-#: ../src/terminal-accels.c:224
+#: ../src/terminal-accels.c:246
 msgid "Switch to Previous Profile"
 msgstr "Zmień na poprzedni profil"
 
-#: ../src/terminal-accels.c:228
+#: ../src/terminal-accels.c:250
 msgid "Switch to Next Profile"
 msgstr "Zmień na następny profil"
 
-#: ../src/terminal-accels.c:236
+#: ../src/terminal-accels.c:258
 msgid "Switch to Previous Tab"
 msgstr "Przełącz na poprzednią kartę"
 
-#: ../src/terminal-accels.c:240
+#: ../src/terminal-accels.c:262
 msgid "Switch to Next Tab"
 msgstr "Przełącz na następną kartę"
 
-#: ../src/terminal-accels.c:244
+#: ../src/terminal-accels.c:266
 msgid "Move Tab to the Left"
 msgstr "Przesuń kartę w lewo"
 
-#: ../src/terminal-accels.c:248
+#: ../src/terminal-accels.c:270
 msgid "Move Tab to the Right"
 msgstr "Przesuń kartę w prawo"
 
-#: ../src/terminal-accels.c:252
+#: ../src/terminal-accels.c:274
 msgid "Detach Tab"
 msgstr "Odłączenie karty"
 
-#: ../src/terminal-accels.c:256
+#: ../src/terminal-accels.c:278
 msgid "Switch to Tab 1"
 msgstr "Przełączenie na kartę 1"
 
-#: ../src/terminal-accels.c:261
+#: ../src/terminal-accels.c:283
 msgid "Switch to Tab 2"
 msgstr "Przełączenie na kartę 2"
 
-#: ../src/terminal-accels.c:266
+#: ../src/terminal-accels.c:288
 msgid "Switch to Tab 3"
 msgstr "Przełączenie na kartę 3"
 
-#: ../src/terminal-accels.c:271
+#: ../src/terminal-accels.c:293
 msgid "Switch to Tab 4"
 msgstr "Przełączenie na kartę 4"
 
-#: ../src/terminal-accels.c:276
+#: ../src/terminal-accels.c:298
 msgid "Switch to Tab 5"
 msgstr "Przełączenie na kartę 5"
 
-#: ../src/terminal-accels.c:281
+#: ../src/terminal-accels.c:303
 msgid "Switch to Tab 6"
 msgstr "Przełączenie na kartę 6"
 
-#: ../src/terminal-accels.c:286
+#: ../src/terminal-accels.c:308
 msgid "Switch to Tab 7"
 msgstr "Przełączenie na kartę 7"
 
-#: ../src/terminal-accels.c:291
+#: ../src/terminal-accels.c:313
 msgid "Switch to Tab 8"
 msgstr "Przełączenie na kartę 8"
 
-#: ../src/terminal-accels.c:296
+#: ../src/terminal-accels.c:318
 msgid "Switch to Tab 9"
 msgstr "Przełączenie na kartę 9"
 
-#: ../src/terminal-accels.c:301
+#: ../src/terminal-accels.c:323
 msgid "Switch to Tab 10"
 msgstr "Przełączenie na kartę 10"
 
-#: ../src/terminal-accels.c:306
+#: ../src/terminal-accels.c:328
 msgid "Switch to Tab 11"
 msgstr "Przełączenie na kartę 11"
 
-#: ../src/terminal-accels.c:311
+#: ../src/terminal-accels.c:333
 msgid "Switch to Tab 12"
 msgstr "Przełączenie na kartę 12"
 
-#: ../src/terminal-accels.c:319
+#: ../src/terminal-accels.c:341
 msgid "Contents"
 msgstr "Zawartość"
 
-#: ../src/terminal-accels.c:324
+#: ../src/terminal-accels.c:346
 msgid "File"
 msgstr "Plik"
 
-#: ../src/terminal-accels.c:325
+#: ../src/terminal-accels.c:347
 msgid "Edit"
 msgstr "Edycja"
 
-#: ../src/terminal-accels.c:326
+#: ../src/terminal-accels.c:348
 msgid "View"
 msgstr "Widok"
 
-#: ../src/terminal-accels.c:328
+#: ../src/terminal-accels.c:349
+msgid "Search"
+msgstr ""
+
+#: ../src/terminal-accels.c:351
 msgid "Tabs"
 msgstr "Karty"
 
-#: ../src/terminal-accels.c:329
+#: ../src/terminal-accels.c:352
 msgid "Help"
 msgstr "Pomoc"
 
-#: ../src/terminal-accels.c:832
+#: ../src/terminal-accels.c:855
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Klawisz skrótu \"%s\" jest już przypisany do działania \"%s\""
 
-#: ../src/terminal-accels.c:988
+#: ../src/terminal-accels.c:1011
 msgid "_Action"
 msgstr "_Działanie"
 
-#: ../src/terminal-accels.c:1007
+#: ../src/terminal-accels.c:1030
 msgid "Shortcut _Key"
 msgstr "Klawisz _skrótu"
 
@@ -2113,29 +2192,29 @@ msgstr "Wyświetla opcje dla danego terminala"
 msgid "Unnamed"
 msgstr "Bez nazwy"
 
-#: ../src/terminal-screen.c:1458
+#: ../src/terminal-screen.c:1547
 msgid "_Profile Preferences"
 msgstr "_Preferencje profilu"
 
-#: ../src/terminal-screen.c:1459 ../src/terminal-screen.c:1837
+#: ../src/terminal-screen.c:1548 ../src/terminal-screen.c:1926
 msgid "_Relaunch"
 msgstr "Ponowne u_ruchomienie"
 
-#: ../src/terminal-screen.c:1462
+#: ../src/terminal-screen.c:1551
 msgid "There was an error creating the child process for this terminal"
 msgstr "Wystąpił błąd podczas tworzeniu procesu potomnego dla tego terminala"
 
-#: ../src/terminal-screen.c:1842
+#: ../src/terminal-screen.c:1931
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Proces potomny został normalnie zakończony ze stanem %d."
 
-#: ../src/terminal-screen.c:1847
+#: ../src/terminal-screen.c:1936
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Proces potomny został zakończony przez sygnał %d."
 
-#: ../src/terminal-screen.c:1852
+#: ../src/terminal-screen.c:1941
 msgid "The child process was terminated."
 msgstr "Proces potomny został zakończony."
 
@@ -2182,7 +2261,7 @@ msgstr "Z pewnością wraz z niniejszym programem dostarczono także egzemplarz 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:679
+#: ../src/terminal-window.c:682
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2190,259 +2269,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:685
+#: ../src/terminal-window.c:688
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1874
+#: ../src/terminal-window.c:1881
 msgid "_File"
 msgstr "_Plik"
 
-#: ../src/terminal-window.c:1875 ../src/terminal-window.c:1888
-#: ../src/terminal-window.c:2129
+#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
+#: ../src/terminal-window.c:2136
 msgid "Open _Terminal"
 msgstr "_Otwórz terminal"
 
-#: ../src/terminal-window.c:1876 ../src/terminal-window.c:1893
-#: ../src/terminal-window.c:2134
+#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
+#: ../src/terminal-window.c:2141
 msgid "Open Ta_b"
 msgstr "Otwórz _kartę"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:1884
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:1885
 msgid "_View"
 msgstr "_Widok"
 
-#: ../src/terminal-window.c:1879
+#: ../src/terminal-window.c:1886
 msgid "_Search"
 msgstr "Wy_szukiwanie"
 
-#: ../src/terminal-window.c:1880
+#: ../src/terminal-window.c:1887
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1888
 msgid "Ta_bs"
 msgstr "_Karty"
 
-#: ../src/terminal-window.c:1882
+#: ../src/terminal-window.c:1889
 msgid "_Help"
 msgstr "Pomo_c"
 
-#: ../src/terminal-window.c:1898
+#: ../src/terminal-window.c:1905
 msgid "New _Profile…"
 msgstr "_Nowy profil…"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1910
 msgid "_Save Contents"
 msgstr "Zapi_sz zawartość"
 
-#: ../src/terminal-window.c:1908 ../src/terminal-window.c:2144
+#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
 msgid "C_lose Tab"
 msgstr "Zamknij k_artę"
 
-#: ../src/terminal-window.c:1913
+#: ../src/terminal-window.c:1920
 msgid "_Close Window"
 msgstr "Za_mknij okno"
 
-#: ../src/terminal-window.c:1930 ../src/terminal-window.c:2124
+#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
 msgid "Paste _Filenames"
 msgstr "Wklej _nazwy plików"
 
-#: ../src/terminal-window.c:1940
+#: ../src/terminal-window.c:1947
 msgid "P_rofiles…"
 msgstr "_Profile…"
 
-#: ../src/terminal-window.c:1945
+#: ../src/terminal-window.c:1952
 msgid "_Keyboard Shortcuts…"
 msgstr "_Skróty klawiszowe…"
 
-#: ../src/terminal-window.c:1950
+#: ../src/terminal-window.c:1957
 msgid "Pr_ofile Preferences"
 msgstr "P_referencje profilu"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1981
 msgid "_Find..."
 msgstr "_Znajdź..."
 
-#: ../src/terminal-window.c:1979
+#: ../src/terminal-window.c:1986
 msgid "Find Ne_xt"
 msgstr "Znajdź _następne"
 
-#: ../src/terminal-window.c:1984
+#: ../src/terminal-window.c:1991
 msgid "Find Pre_vious"
 msgstr "Znajdź p_oprzednie"
 
-#: ../src/terminal-window.c:1989
+#: ../src/terminal-window.c:1996
 msgid "_Clear Highlight"
 msgstr "Wy_czyść wyróżnienie"
 
-#: ../src/terminal-window.c:1995
+#: ../src/terminal-window.c:2002
 msgid "Go to _Line..."
 msgstr "Przejdź do _wiersza..."
 
-#: ../src/terminal-window.c:2000
+#: ../src/terminal-window.c:2007
 msgid "_Incremental Search..."
 msgstr "Wy_szukiwanie przyrostowe..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:2014
 msgid "Change _Profile"
 msgstr "Z_mień profil"
 
-#: ../src/terminal-window.c:2009
+#: ../src/terminal-window.c:2016
 msgid "_Previous Profile"
 msgstr "_Poprzedni profil"
 
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:2021
 msgid "_Next Profile"
 msgstr "_Następny profil"
 
-#: ../src/terminal-window.c:2019
+#: ../src/terminal-window.c:2026
 msgid "_Set Title…"
 msgstr "_Ustaw tytuł…"
 
-#: ../src/terminal-window.c:2023
+#: ../src/terminal-window.c:2030
 msgid "Set _Character Encoding"
 msgstr "Ustaw _kodowanie znaków"
 
-#: ../src/terminal-window.c:2025
+#: ../src/terminal-window.c:2032
 msgid "_Reset"
 msgstr "_Zresetuj"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2037
 msgid "Reset and C_lear"
 msgstr "Zresetuj i _wyczyść"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2044
 msgid "_Add or Remove…"
 msgstr "_Dodaj lub usuń…"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2051
 msgid "_Previous Tab"
 msgstr "_Poprzednia karta"
 
-#: ../src/terminal-window.c:2049
+#: ../src/terminal-window.c:2056
 msgid "_Next Tab"
 msgstr "_Następna karta"
 
-#: ../src/terminal-window.c:2054
+#: ../src/terminal-window.c:2061
 msgid "Move Tab _Left"
 msgstr "Przesuń kartę w _lewo"
 
-#: ../src/terminal-window.c:2059
+#: ../src/terminal-window.c:2066
 msgid "Move Tab _Right"
 msgstr "Pr_zesuń kartę w prawo"
 
-#: ../src/terminal-window.c:2064
+#: ../src/terminal-window.c:2071
 msgid "_Detach tab"
 msgstr "O_dłącz kartę"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2078
 msgid "_Contents"
 msgstr "_Spis treści"
 
-#: ../src/terminal-window.c:2076
+#: ../src/terminal-window.c:2083
 msgid "_About"
 msgstr "_O programie"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2090
 msgid "_Send Mail To…"
 msgstr "_Wyślij wiadomość e-mail do…"
 
-#: ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:2095
 msgid "_Copy E-mail Address"
 msgstr "Skopiuj _adres e-mail"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2100
 msgid "C_all To…"
 msgstr "_Zadzwoń…"
 
-#: ../src/terminal-window.c:2098
+#: ../src/terminal-window.c:2105
 msgid "_Copy Call Address"
 msgstr "Skopiuj _adres dzwonienia"
 
-#: ../src/terminal-window.c:2103
+#: ../src/terminal-window.c:2110
 msgid "_Open Link"
 msgstr "_Otwórz odnośnik"
 
-#: ../src/terminal-window.c:2108
+#: ../src/terminal-window.c:2115
 msgid "_Copy Link Address"
 msgstr "Skopiuj _adres odnośnika"
 
-#: ../src/terminal-window.c:2112
+#: ../src/terminal-window.c:2119
 msgid "P_rofiles"
 msgstr "P_rofile"
 
-#: ../src/terminal-window.c:2139 ../src/terminal-window.c:3590
+#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3635
 msgid "C_lose Window"
 msgstr "_Zamknij okno"
 
-#: ../src/terminal-window.c:2149
+#: ../src/terminal-window.c:2156
 msgid "L_eave Full Screen"
 msgstr "_Opuść pełny ekran"
 
-#: ../src/terminal-window.c:2153
+#: ../src/terminal-window.c:2160
 msgid "_Input Methods"
 msgstr "_Metody wprowadzania"
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2167
 msgid "Show _Menubar"
 msgstr "_Pasek menu"
 
-#: ../src/terminal-window.c:2166
+#: ../src/terminal-window.c:2173
 msgid "_Full Screen"
 msgstr "P_ełny ekran"
 
-#: ../src/terminal-window.c:3577
+#: ../src/terminal-window.c:3622
 msgid "Close this window?"
 msgstr "Zamknąć to okno?"
 
-#: ../src/terminal-window.c:3577
+#: ../src/terminal-window.c:3622
 msgid "Close this terminal?"
 msgstr "Zamknąć ten terminal?"
 
-#: ../src/terminal-window.c:3581
+#: ../src/terminal-window.c:3626
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "W niektórych terminalach w tym oknie ciągle uruchomione są procesy. Zamknięcie okna spowoduje ich zakończenie."
 
-#: ../src/terminal-window.c:3585
+#: ../src/terminal-window.c:3630
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "W tym terminalu uruchomiony jest proces. Zamknięcie terminala spowoduje jego zakończenie."
 
-#: ../src/terminal-window.c:3590
+#: ../src/terminal-window.c:3635
 msgid "C_lose Terminal"
 msgstr "_Zamknij terminal"
 
-#: ../src/terminal-window.c:3656
+#: ../src/terminal-window.c:3701
 msgid "Could not save contents"
 msgstr "Nie można zapisać zawartości"
 
-#: ../src/terminal-window.c:3680
+#: ../src/terminal-window.c:3725
 msgid "Save as..."
 msgstr "Zapisanie jako..."
 
-#: ../src/terminal-window.c:4199
+#: ../src/terminal-window.c:4244
 msgid "_Title:"
 msgstr "_Tytuł:"
 
-#: ../src/terminal-window.c:4388
+#: ../src/terminal-window.c:4433
 msgid "Contributors:"
 msgstr "Współtwórcy:"
 
-#: ../src/terminal-window.c:4407
+#: ../src/terminal-window.c:4452
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Emulator terminala dla środowiska MATE"
 
-#: ../src/terminal-window.c:4414
+#: ../src/terminal-window.c:4459
 msgid "translator-credits"
 msgstr "Tłumacze środowiska MATE, 2014-2017\n\nZbigniew Chyla, 2002-2003\nArtur Flinta, 2003-2005\nWadim Dziedzic, 2007-2009\nTomasz Dominikowski, 2008-2009\nJoanna Mazgaj, 2009\nPiotr Drąg, 2010\nAviary.pl, 2007-2010"
