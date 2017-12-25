@@ -185,10 +185,10 @@ method_call_cb (GDBusConnection *connection,
 		                                  &error,
 		                                  NULL);
 
-        options->initial_workspace = initial_workspace;
-
 		if (options != NULL)
 		{
+			options->initial_workspace = initial_workspace;
+
 			terminal_app_handle_options (terminal_app_get (), options, FALSE /* no resume */, &error);
 			terminal_options_free (options);
 		}
