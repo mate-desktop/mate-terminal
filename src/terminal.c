@@ -147,13 +147,13 @@ method_call_cb (GDBusConnection *connection,
 		TerminalOptions *options = NULL;
 		GVariant *v_wd, *v_display, *v_sid, *v_envv, *v_argv;
 		char *working_directory = NULL, *display_name = NULL, *startup_id = NULL;
-        int initial_workspace = -1;
+		int initial_workspace = -1;
 		char **envv = NULL, **argv = NULL;
 		int argc;
 		GError *error = NULL;
 
-        g_variant_get (parameters, "(@ay@ay@ay@ayi@ay)",
-                       &v_wd, &v_display, &v_sid, &v_envv, &initial_workspace, &v_argv);
+		g_variant_get (parameters, "(@ay@ay@ay@ayi@ay)",
+		               &v_wd, &v_display, &v_sid, &v_envv, &initial_workspace, &v_argv);
 
 		working_directory = ay_to_string (v_wd, &error);
 		if (error)
@@ -168,12 +168,12 @@ method_call_cb (GDBusConnection *connection,
 		argv = ay_to_strv (v_argv, &argc);
 
 		_terminal_debug_print (TERMINAL_DEBUG_FACTORY,
-                               "Factory invoked with working-dir='%s' display='%s' startup-id='%s'"
-                               "workspace='%d'\n",
+		                       "Factory invoked with working-dir='%s' display='%s' startup-id='%s'"
+		                       "workspace='%d'\n",
 		                       working_directory ? working_directory : "(null)",
 		                       display_name ? display_name : "(null)",
 		                       startup_id ? startup_id : "(null)",
-                               initial_workspace);
+		                       initial_workspace);
 
 		options = terminal_options_parse (working_directory,
 		                                  display_name,
@@ -230,7 +230,7 @@ bus_acquired_cb (GDBusConnection *connection,
 	    "<arg type='ay' name='display_name' direction='in' />"
 	    "<arg type='ay' name='startup_id' direction='in' />"
 	    "<arg type='ay' name='environment' direction='in' />"
-        "<arg type='i' name='workspace' direction='in' />"        
+	    "<arg type='i' name='workspace' direction='in' />"
 	    "<arg type='ay' name='arguments' direction='in' />"
 	    "</method>"
 	    "</interface>"
@@ -338,7 +338,7 @@ name_lost_cb (GDBusConnection *connection,
 	_terminal_debug_print (TERMINAL_DEBUG_FACTORY,
 	                       "Forwarding arguments to existing instance\n");
 
-    g_variant_builder_init (&builder, G_VARIANT_TYPE ("(ayayayayiay)"));
+	g_variant_builder_init (&builder, G_VARIANT_TYPE ("(ayayayayiay)"));
     
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->default_working_dir));
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->display_name));
@@ -360,7 +360,7 @@ name_lost_cb (GDBusConnection *connection,
 	g_variant_builder_add (&builder, "@ay",
 	                       g_variant_new_from_data (G_VARIANT_TYPE ("ay"), s, len, TRUE, g_free, s));
 
-    g_variant_builder_add (&builder, "@i", g_variant_new_int32 (data->options->initial_workspace));
+	g_variant_builder_add (&builder, "@i", g_variant_new_int32 (data->options->initial_workspace));
 
 	string = g_string_new (NULL);
 
