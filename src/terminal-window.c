@@ -2941,8 +2941,12 @@ notebook_button_press_cb (GtkWidget *widget,
     int page_num;
     int before_pages;
     int later_pages;
+    GSettings *settings;
 
-    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+    settings = g_settings_new ("org.mate.terminal.global");
+
+    if ((event->type == GDK_BUTTON_PRESS && event->button == 2) &&
+            (g_settings_get_boolean (settings, "middle-click-closes-tabs")))
     {
         tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
         if (tab_clicked >= 0)
