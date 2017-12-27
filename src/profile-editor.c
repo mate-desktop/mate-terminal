@@ -451,18 +451,13 @@ profile_palette_notify_colorpickers_cb (TerminalProfile *profile,
 	for (i = 0; i < n_colors; i++)
 	{
 		char name[32];
-		GdkRGBA old_color;
 
 		g_snprintf (name, sizeof (name), "palette-colorpicker-%d", i + 1);
 		w = profile_editor_get_widget (editor, name);
 
-		gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (w), &old_color);
-		if (!gdk_rgba_equal (&old_color, &colors[i]))
-		{
-			g_signal_handlers_block_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
-			gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (w), &colors[i]);
-			g_signal_handlers_unblock_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
-		}
+		g_signal_handlers_block_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
+		gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (w), &colors[i]);
+		g_signal_handlers_unblock_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
 	}
 }
 
