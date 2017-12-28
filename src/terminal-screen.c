@@ -682,7 +682,6 @@ terminal_screen_image_draw_cb (GtkWidget *widget, cairo_t *cr, void *userdata)
 	TerminalScreen *screen = TERMINAL_SCREEN (widget);
 	TerminalScreenPrivate *priv = screen->priv;
 	GdkPixbuf *bg_image = priv->bg_image;
-	gint bgw, bgh;
 	GdkRectangle target_rect;
 	GtkAllocation alloc;
 	cairo_surface_t *child_surface;
@@ -704,9 +703,6 @@ terminal_screen_image_draw_cb (GtkWidget *widget, cairo_t *cr, void *userdata)
 	g_signal_handler_block (screen, priv->bg_image_callback_id);
 	gtk_widget_draw (widget, child_cr);
 	g_signal_handler_unblock (screen, priv->bg_image_callback_id);
-
-	bgw = gdk_pixbuf_get_width (bg_image);
-	bgh = gdk_pixbuf_get_height (bg_image);
 
 	gdk_cairo_set_source_pixbuf (cr, bg_image, 0, 0);
 	cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_REPEAT);
