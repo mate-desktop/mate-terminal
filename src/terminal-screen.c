@@ -230,7 +230,8 @@ cwd_of_pid (int pid)
 				if (chdir (cwd_file) == 0)
 				{
 					working_dir = g_get_current_dir ();
-					(void) chdir (cwd);
+					if (chdir (cwd) < 0)
+						g_warning ("Could not change working directory.");
 				}
 				g_free (cwd);
 			}

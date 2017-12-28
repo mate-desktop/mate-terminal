@@ -563,7 +563,8 @@ main (int argc, char **argv)
 	 */
 	home_dir = g_get_home_dir ();
 	if (home_dir == NULL || chdir (home_dir) < 0)
-		(void) chdir ("/");
+		if (chdir ("/") < 0)
+			g_warning ("Could not change working directory.");
 
 	options = terminal_options_parse (working_directory,
 	                                  NULL,
