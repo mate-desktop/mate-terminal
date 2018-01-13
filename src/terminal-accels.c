@@ -215,7 +215,7 @@ static KeyEntry view_entries[] =
 static KeyEntry search_entries[] =
 {
 	{
-		N_("Find..."),
+		N_("Find"),
 		KEY_SEARCH_FIND, ACCEL_PATH_SEARCH_FIND, GDK_SHIFT_MASK | GDK_CONTROL_MASK, GDK_KEY_f, NULL, FALSE, TRUE
 	},
 	{
