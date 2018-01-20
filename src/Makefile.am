@@ -64,7 +64,6 @@ nodist_mate_terminal_SOURCES= $(BUILT_SOURCES)
 
 mate_terminal_CPPFLAGS = \
 	-DTERMINAL_COMPILATION \
-	-DEXECUTABLE_NAME=\"mate-terminal\" \
 	-DTERM_DATADIR="\"$(datadir)\"" \
 	-DTERM_LOCALEDIR="\"$(datadir)/locale\"" \
 	-DTERM_PKGDATADIR="\"$(pkgdatadir)\"" \
