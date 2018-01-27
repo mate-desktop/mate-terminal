@@ -993,12 +993,9 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SILENT_BELL))
 		vte_terminal_set_audible_bell (vte_terminal, !terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_SILENT_BELL));
-
-#if VTE_CHECK_VERSION (0, 40, 0)
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_WORD_CHARS))
 		vte_terminal_set_word_char_exceptions (vte_terminal,
 		                                       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_WORD_CHARS));
-#endif
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SCROLL_ON_KEYSTROKE))
 		vte_terminal_set_scroll_on_keystroke (vte_terminal,
 		                                      terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_SCROLL_ON_KEYSTROKE));
