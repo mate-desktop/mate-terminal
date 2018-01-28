@@ -577,13 +577,8 @@ position_menu_under_widget (GtkMenu *menu,
     GtkRequisition req;
     GtkRequisition menu_req;
     GdkRectangle monitor;
-#if GTK_CHECK_VERSION (3, 22, 0)
     GdkMonitor *monitor_num;
     GdkDisplay *display;
-#else
-    int monitor_num;
-    GdkScreen *screen;
-#endif
     GtkAllocation widget_allocation;
 
     widget_window = gtk_widget_get_window (widget);
@@ -593,19 +588,11 @@ position_menu_under_widget (GtkMenu *menu,
     gtk_widget_get_preferred_size (widget, &req, NULL);
     gtk_widget_get_preferred_size (GTK_WIDGET (menu), &menu_req, NULL);
 
-#if GTK_CHECK_VERSION (3, 22, 0)
     display = gtk_widget_get_display (GTK_WIDGET (menu));
     monitor_num = gdk_display_get_monitor_at_window (display, widget_window);
     if (monitor_num == NULL)
         monitor_num = gdk_display_get_monitor (display, 0);
     gdk_monitor_get_geometry (monitor_num, &monitor);
-#else
-    screen = gtk_widget_get_screen (GTK_WIDGET (menu));
-    monitor_num = gdk_screen_get_monitor_at_window (screen, widget_window);
-    if (monitor_num < 0)
-        monitor_num = 0;
-    gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
-#endif
 
     gdk_window_get_origin (widget_window, x, y);
     if (!gtk_widget_get_has_window (widget))
@@ -2656,7 +2643,6 @@ terminal_window_remove_screen (TerminalWindow *window,
     update_tab_visibility (window, -1);
 
     screen_container = terminal_screen_container_get_from_screen (screen);
-#if GTK_CHECK_VERSION(3, 16, 0)
     if (detach_tab)
     {
         gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
@@ -2666,10 +2652,6 @@ terminal_window_remove_screen (TerminalWindow *window,
     else
         gtk_container_remove (GTK_CONTAINER (priv->notebook),
                               GTK_WIDGET (screen_container));
-#else
-    gtk_container_remove (GTK_CONTAINER (priv->notebook),
-                          GTK_WIDGET (screen_container));
-#endif
 }
 
 void
@@ -4242,12 +4224,8 @@ terminal_set_title_callback (GtkAction *action,
     gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
 
     label = gtk_label_new_with_mnemonic (_("_Title:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
     gtk_label_set_xalign (GTK_LABEL (label), 0.0);
     gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-#else
-    gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
     gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
 
     entry = gtk_entry_new ();
