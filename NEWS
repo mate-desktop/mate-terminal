@@ -1,15 +1,33 @@
+### mate-terminal 1.20.0
+
+  * Translations update
+  * require GTK+ 3.22 and GLib 2.50
+  * require VTE 0.46
+  * revert parts of previous commit
+  * screen: stop setting TERM and COLORTERM environment variables
+  * NEWS: fix typo
+  * schema: fix summary and description of some keys
+  * remove "..." from Find keyboard shortcut
+  * profile-editor: properly initialize the first palette color
+  * update copyright year to 2018
+  * terminal-screen.c: drop unused variables
+  * Fix build warnings: ignoring return value of ‘chdir’,
+  * middle click on a tab: add the gsettings key to enable the feature
+  * make indent more uniform in a few files
+  * fix possible crash when handling DBus method call
+
 ### mate-terminal 1.19.1
 
-    sync with transifex
-    Spelling: Whitespace removed, in the terminal, Ctrl
-    add Solarized themes from gnome-terminal
-    WidthOfScreen and HeightOfScreen implementation
-    add the ability to switch tabs using [ctrl+tab] and [ctrl+shift+tab]
-    allow remapping "search" keyboard shortcuts
-    Support background images with VTE3
-    find-dialog.ui: fix keyboard selection
-    avoid deprecated vte_terminal_search_get_gregex
-    add "select all" keyboard shortcut: [control] + [shift] + [A]
+  * sync with transifex
+  * Spelling: Whitespace removed, in the terminal, Ctrl
+  * add Solarized themes from gnome-terminal
+  * WidthOfScreen and HeightOfScreen implementation
+  * add the ability to switch tabs using [ctrl+tab] and [ctrl+shift+tab]
+  * allow remapping "search" keyboard shortcuts
+  * Support background images with VTE3
+  * find-dialog.ui: fix keyboard selection
+  * avoid deprecated vte_terminal_search_get_gregex
+  * add "select all" keyboard shortcut: [control] + [shift] + [A]
 
 ### mate-terminal 1.19.0
 
