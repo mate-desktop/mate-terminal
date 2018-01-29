@@ -1885,44 +1885,44 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (file_new_tab_callback)
         },
         {
-            "FileNewProfile", GTK_STOCK_OPEN, N_("New _Profile…"), "",
+            "FileNewProfile", "document-open", N_("New _Profile…"), "",
             NULL,
             G_CALLBACK (file_new_profile_callback)
         },
         {
-            "FileSaveContents", GTK_STOCK_SAVE, N_("_Save Contents"), "",
+            "FileSaveContents", "document-save", N_("_Save Contents"), "",
             NULL,
             G_CALLBACK (file_save_contents_callback)
         },
         {
-            "FileCloseTab", GTK_STOCK_CLOSE, N_("C_lose Tab"), "<shift><control>W",
+            "FileCloseTab", "window-close", N_("C_lose Tab"), "<shift><control>W",
             NULL,
             G_CALLBACK (file_close_tab_callback)
         },
         {
-            "FileCloseWindow", GTK_STOCK_CLOSE, N_("_Close Window"), "<shift><control>Q",
+            "FileCloseWindow", "window-close", N_("_Close Window"), "<shift><control>Q",
             NULL,
             G_CALLBACK (file_close_window_callback)
         },
 
         /* Edit menu */
         {
-            "EditCopy", GTK_STOCK_COPY, NULL, "<shift><control>C",
+            "EditCopy", "edit-copy", N_("_Copy"), "<shift><control>C",
             NULL,
             G_CALLBACK (edit_copy_callback)
         },
         {
-            "EditPaste", GTK_STOCK_PASTE, NULL, "<shift><control>V",
+            "EditPaste", "edit-paste", N_("_Paste"), "<shift><control>V",
             NULL,
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "EditPasteURIPaths", GTK_STOCK_PASTE, N_("Paste _Filenames"), "",
+            "EditPasteURIPaths", "edit-paste", N_("Paste _Filenames"), "",
             NULL,
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "EditSelectAll", GTK_STOCK_SELECT_ALL, NULL, "<shift><control>A",
+            "EditSelectAll", "edit-select-all", N_("Select _All"), "<shift><control>A",
             NULL,
             G_CALLBACK (edit_select_all_callback)
         },
@@ -1944,24 +1944,24 @@ terminal_window_init (TerminalWindow *window)
 
         /* View menu */
         {
-            "ViewZoomIn", GTK_STOCK_ZOOM_IN, NULL, "<control>plus",
+            "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<control>plus",
             NULL,
             G_CALLBACK (view_zoom_in_callback)
         },
         {
-            "ViewZoomOut", GTK_STOCK_ZOOM_OUT, NULL, "<control>minus",
+            "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
             NULL,
             G_CALLBACK (view_zoom_out_callback)
         },
         {
-            "ViewZoom100", GTK_STOCK_ZOOM_100, NULL, "<control>0",
+            "ViewZoom100", "zoom-original", N_("_Normal Size"), "<control>0",
             NULL,
             G_CALLBACK (view_zoom_normal_callback)
         },
 
         /* Search menu */
         {
-            "SearchFind", GTK_STOCK_FIND, N_("_Find..."), "<shift><control>F",
+            "SearchFind", "edit-find", N_("_Find..."), "<shift><control>F",
             NULL,
             G_CALLBACK (search_find_callback)
         },
@@ -1982,12 +1982,12 @@ terminal_window_init (TerminalWindow *window)
         },
 #if 0
         {
-            "SearchGoToLine", GTK_STOCK_JUMP_TO, N_("Go to _Line..."), "<shift><control>I",
+            "SearchGoToLine", "go-jump", N_("Go to _Line..."), "<shift><control>I",
             NULL,
             G_CALLBACK (search_goto_line_callback)
         },
         {
-            "SearchIncrementalSearch", GTK_STOCK_FIND, N_("_Incremental Search..."), "<shift><control>K",
+            "SearchIncrementalSearch", "edit-find", N_("_Incremental Search..."), "<shift><control>K",
             NULL,
             G_CALLBACK (search_incremental_search_callback)
         },
@@ -2058,12 +2058,12 @@ terminal_window_init (TerminalWindow *window)
 
         /* Help menu */
         {
-            "HelpContents", GTK_STOCK_HELP, N_("_Contents"), "F1",
+            "HelpContents", "help-browser", N_("_Contents"), "F1",
             NULL,
             G_CALLBACK (help_contents_callback)
         },
         {
-            "HelpAbout", GTK_STOCK_ABOUT, N_("_About"), NULL,
+            "HelpAbout", "help-about", N_("_About"), NULL,
             NULL,
             G_CALLBACK (help_about_callback)
         },
@@ -2101,17 +2101,17 @@ terminal_window_init (TerminalWindow *window)
         },
         { "PopupTerminalProfiles", NULL, N_("P_rofiles") },
         {
-            "PopupCopy", GTK_STOCK_COPY, NULL, "",
+            "PopupCopy", "edit-copy", N_("_Copy"), "",
             NULL,
             G_CALLBACK (edit_copy_callback)
         },
         {
-            "PopupPaste", GTK_STOCK_PASTE, NULL, "",
+            "PopupPaste", "edit-paste", N_("_Paste"), "",
             NULL,
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "PopupPasteURIPaths", GTK_STOCK_PASTE, N_("Paste _Filenames"), "",
+            "PopupPasteURIPaths", "edit-paste", N_("Paste _Filenames"), "",
             NULL,
             G_CALLBACK (edit_paste_callback)
         },
@@ -3707,8 +3707,8 @@ file_save_contents_callback (GtkAction *action,
     dialog = gtk_file_chooser_dialog_new (_("Save as..."),
                                           GTK_WINDOW(window),
                                           GTK_FILE_CHOOSER_ACTION_SAVE,
-                                          GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                          GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
+                                          "gtk-cancel", GTK_RESPONSE_CANCEL,
+                                          "gtk-save", GTK_RESPONSE_ACCEPT,
                                           NULL);
 
     gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (dialog), TRUE);

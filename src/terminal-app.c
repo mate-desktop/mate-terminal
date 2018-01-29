@@ -685,9 +685,9 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 	                                 terminal_profile_get_property_string (selected_profile, TERMINAL_PROFILE_VISIBLE_NAME));
 
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-	                        GTK_STOCK_CANCEL,
+	                        "gtk-cancel",
 	                        GTK_RESPONSE_REJECT,
-	                        GTK_STOCK_DELETE,
+	                        "gtk-delete",
 	                        GTK_RESPONSE_ACCEPT,
 	                        NULL);
 
