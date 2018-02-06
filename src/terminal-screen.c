@@ -1546,7 +1546,6 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
 	VteTerminal *terminal = VTE_TERMINAL (screen);
-	TerminalProfile *profile;
 	char **env, **argv;
 	char *shell = NULL;
 	GError *err = NULL;
@@ -1560,19 +1559,12 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 	                       "[screen %p] now launching the child process\n",
 	                       screen);
 
-	profile = priv->profile;
-
 	env = get_child_environment (screen, &shell);
 
 	if (priv->initial_working_directory)
 		working_dir = priv->initial_working_directory;
 	else
 		working_dir = g_get_home_dir ();
-
-	if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_LOGIN_SHELL))
-		pty_flags |= VTE_PTY_NO_LASTLOG;
-	if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_UPDATE_RECORDS))
-		pty_flags |= VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP;
 
 	if (!get_child_command (screen, shell, &spawn_flags, &argv, &err))
 	{

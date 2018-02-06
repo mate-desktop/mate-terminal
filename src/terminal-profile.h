@@ -98,7 +98,6 @@ typedef enum
 #define TERMINAL_PROFILE_COPY_SELECTION         "copy-selection"
 #define TERMINAL_PROFILE_TITLE_MODE             "title-mode"
 #define TERMINAL_PROFILE_TITLE                  "title"
-#define TERMINAL_PROFILE_UPDATE_RECORDS         "update-records"
 #define TERMINAL_PROFILE_USE_CUSTOM_COMMAND     "use-custom-command"
 #define TERMINAL_PROFILE_USE_CUSTOM_DEFAULT_SIZE "use-custom-default-size"
 #define TERMINAL_PROFILE_USE_SKEY               "use-skey"

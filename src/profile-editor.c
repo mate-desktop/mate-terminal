@@ -309,10 +309,6 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 		SET_SENSITIVE ("login-shell-checkbutton",
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_LOGIN_SHELL));
 
-	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_UPDATE_RECORDS))
-		SET_SENSITIVE ("update-records-checkbutton",
-		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_UPDATE_RECORDS));
-
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_PALETTE))
 	{
 		gboolean palette_locked = terminal_profile_property_locked (profile, TERMINAL_PROFILE_PALETTE);
@@ -824,7 +820,6 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT ("title-entry", TERMINAL_PROFILE_TITLE);
 	CONNECT ("title-mode-combobox", TERMINAL_PROFILE_TITLE_MODE);
 	CONNECT ("transparent-radiobutton", TERMINAL_PROFILE_BACKGROUND_TYPE);
-	CONNECT ("update-records-checkbutton", TERMINAL_PROFILE_UPDATE_RECORDS);
 	CONNECT ("use-custom-command-checkbutton", TERMINAL_PROFILE_USE_CUSTOM_COMMAND);
 	CONNECT ("use-custom-default-size-checkbutton", TERMINAL_PROFILE_USE_CUSTOM_DEFAULT_SIZE);
 	CONNECT ("use-theme-colors-checkbutton", TERMINAL_PROFILE_USE_THEME_COLORS);
