@@ -656,6 +656,24 @@ profile_list_delete_confirm_response_cb (GtkWidget *dialog,
 }
 
 static void
+mate_dialog_add_button (GtkDialog   *dialog,
+                        const gchar *button_text,
+                        const gchar *icon_name,
+                        gint         response_id)
+{
+	GtkWidget *button;
+
+	button = gtk_button_new_with_mnemonic (button_text);
+	gtk_button_set_image (GTK_BUTTON (button), gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON));
+
+	gtk_button_set_use_underline (GTK_BUTTON (button), TRUE);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "text-button");
+	gtk_widget_set_can_default (button, TRUE);
+	gtk_widget_show (button);
+	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, response_id);
+}
+
+static void
 profile_list_delete_button_clicked_cb (GtkWidget *button,
                                        GtkWidget *widget)
 {
@@ -684,12 +702,15 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 	                                 _("Delete profile “%s”?"),
 	                                 terminal_profile_get_property_string (selected_profile, TERMINAL_PROFILE_VISIBLE_NAME));
 
-	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-	                        "gtk-cancel",
-	                        GTK_RESPONSE_REJECT,
-	                        "gtk-delete",
-	                        GTK_RESPONSE_ACCEPT,
-	                        NULL);
+	mate_dialog_add_button (GTK_DIALOG (dialog),
+	                        _("_Cancel"),
+	                        "process-stop",
+	                        GTK_RESPONSE_REJECT);
+
+	mate_dialog_add_button (GTK_DIALOG (dialog),
+	                        _("_Delete"),
+	                        "edit-delete",
+	                        GTK_RESPONSE_ACCEPT);
 
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog),
 	                                 GTK_RESPONSE_ACCEPT);
