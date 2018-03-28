@@ -1074,6 +1074,8 @@ update_color_scheme (TerminalScreen *screen)
 	guint n_colors;
 	GtkStyleContext *context;
 	GError *error = NULL;
+	/* toplevel widget */
+	GtkWidget *toplevel;
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (screen));
 	gtk_style_context_save (context);
@@ -1138,6 +1140,23 @@ update_color_scheme (TerminalScreen *screen)
 	if (bold_rgba)
 		vte_terminal_set_color_bold (VTE_TERMINAL (screen),
 		                             bold_rgba);
+
+	/* In case of being used in GNOME3 desktop environment.
+	 * code references to gnome-terminal
+	 */
+	if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
+	{
+		toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
+		if (toplevel != NULL && gtk_widget_is_toplevel (toplevel) 
+			     && !gtk_widget_get_app_paintable (toplevel))
+		{
+			gtk_widget_set_app_paintable (toplevel, TRUE);
+			/* The opaque region of the toplevel isn't updated until the toplevel is allocated;
+			 * set_app_paintable() doesn't force an allocation, so do that manually.
+			 */
+			gtk_widget_queue_resize (toplevel);
+		}
+	}
 }
 
 void
