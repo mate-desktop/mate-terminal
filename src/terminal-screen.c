@@ -1074,8 +1074,6 @@ update_color_scheme (TerminalScreen *screen)
 	guint n_colors;
 	GtkStyleContext *context;
 	GError *error = NULL;
-	/* toplevel widget */
-	GtkWidget *toplevel;
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (screen));
 	gtk_style_context_save (context);
@@ -1146,6 +1144,8 @@ update_color_scheme (TerminalScreen *screen)
 	 */
 	if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
 	{
+		/* toplevel widget */
+		GtkWidget *toplevel;
 		toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
 		if (toplevel != NULL && gtk_widget_is_toplevel (toplevel) 
 			     && !gtk_widget_get_app_paintable (toplevel))
