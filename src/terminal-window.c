@@ -159,10 +159,10 @@ static gboolean terminal_window_focus_in_event (GtkWidget *widget,
 
 static gboolean notebook_button_press_cb     (GtkWidget *notebook,
         GdkEventButton *event,
-        TerminalWindow *window);
+        GSettings *settings);
 static gboolean window_key_press_cb     (GtkWidget *notebook,
         GdkEventKey *event,
-        TerminalWindow *window);
+        GSettings *settings);
 static gboolean notebook_popup_menu_cb       (GtkWidget *notebook,
         TerminalWindow *window);
 static void notebook_page_selected_callback  (GtkWidget       *notebook,
@@ -2187,6 +2187,8 @@ terminal_window_init (TerminalWindow *window)
 
     GtkStyleContext *context;
 
+    GSettings *settings = g_settings_new ("org.mate.terminal.global"); 
+
     context = gtk_widget_get_style_context (GTK_WIDGET (window));
     gtk_style_context_add_class (context, "mate-terminal");
 
@@ -2205,9 +2207,9 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
-                      G_CALLBACK (notebook_button_press_cb), window);
+                      G_CALLBACK (notebook_button_press_cb), settings);
     g_signal_connect (window, "key-press-event",
-                      G_CALLBACK (window_key_press_cb), window);
+                      G_CALLBACK (window_key_press_cb), settings);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2908,8 +2910,9 @@ terminal_window_get_active (TerminalWindow *window)
 static gboolean
 notebook_button_press_cb (GtkWidget *widget,
                           GdkEventButton *event,
-                          TerminalWindow *window)
+                          GSettings *settings)
 {
+    TerminalWindow *window = TERMINAL_WINDOW (gtk_widget_get_toplevel (widget));
     TerminalWindowPrivate *priv = window->priv;
     GtkNotebook *notebook = GTK_NOTEBOOK (widget);
     GtkWidget *tab;
@@ -2919,9 +2922,6 @@ notebook_button_press_cb (GtkWidget *widget,
     int page_num;
     int before_pages;
     int later_pages;
-    GSettings *settings;
-
-    settings = g_settings_new ("org.mate.terminal.global");
 
     if ((event->type == GDK_BUTTON_PRESS && event->button == 2) &&
             (g_settings_get_boolean (settings, "middle-click-closes-tabs")))
@@ -2984,15 +2984,12 @@ notebook_button_press_cb (GtkWidget *widget,
 static gboolean
 window_key_press_cb (GtkWidget *widget,
                      GdkEventKey *event,
-                     TerminalWindow *window)
+                     GSettings *settings)
 {
-    GSettings *settings; 
-
-    settings = g_settings_new ("org.mate.terminal.global"); 
-
     if (g_settings_get_boolean (settings, "ctrl-tab-switch-tabs") &&
         event->state & GDK_CONTROL_MASK)
     {
+        TerminalWindow *window = TERMINAL_WINDOW (widget);
         TerminalWindowPrivate *priv = window->priv;
         GtkNotebook *notebook = GTK_NOTEBOOK (priv->notebook);
 
