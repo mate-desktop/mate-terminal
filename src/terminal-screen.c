@@ -1071,6 +1071,7 @@ update_color_scheme (TerminalScreen *screen)
 	const gchar *bg_image_file;
 	double bg_alpha = 1.0;
 	GdkRGBA fg, bg;
+	GdkRGBA *c;
 	guint n_colors;
 	GtkStyleContext *context;
 	GError *error = NULL;
@@ -1079,7 +1080,13 @@ update_color_scheme (TerminalScreen *screen)
 	gtk_style_context_save (context);
 	gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
 	gtk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &fg);
-	gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
+
+	gtk_style_context_get (context, GTK_STATE_FLAG_NORMAL,
+			       GTK_STYLE_PROPERTY_BACKGROUND_COLOR,
+			       &c, NULL);
+	bg = *c;
+	gdk_rgba_free (c);
+
 	gtk_style_context_restore (context);
 
 	bold_rgba = NULL;
