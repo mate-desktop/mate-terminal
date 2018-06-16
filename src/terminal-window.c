@@ -1168,7 +1168,11 @@ terminal_window_update_copy_sensitivity (TerminalScreen *screen,
 
     /* 24/07/2014 madars.vitolins@gmail.com, sync to clibboard */
     if (priv->copy_selection)
+#if VTE_CHECK_VERSION (0, 50, 0)
+        vte_terminal_copy_clipboard_format (VTE_TERMINAL(screen), VTE_FORMAT_TEXT);
+#else
         vte_terminal_copy_clipboard(VTE_TERMINAL(screen));
+#endif
 }
 
 static void
@@ -3748,7 +3752,11 @@ edit_copy_callback (GtkAction *action,
     if (!priv->active_screen)
         return;
 
+#if VTE_CHECK_VERSION (0, 50, 0)
+    vte_terminal_copy_clipboard_format (VTE_TERMINAL (priv->active_screen), VTE_FORMAT_TEXT);
+#else
     vte_terminal_copy_clipboard (VTE_TERMINAL (priv->active_screen));
+#endif
 }
 
 typedef struct
