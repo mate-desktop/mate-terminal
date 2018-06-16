@@ -1506,6 +1506,49 @@ info_bar_response_cb (GtkWidget *info_bar,
 	}
 }
 
+static void handle_error_child (TerminalScreen *screen,
+				GError         *err)
+{
+	GtkWidget *info_bar;
+
+	info_bar = terminal_info_bar_new (GTK_MESSAGE_ERROR,
+	                                  _("_Profile Preferences"), RESPONSE_EDIT_PROFILE,
+	                                  _("_Relaunch"), RESPONSE_RELAUNCH,
+	                                  NULL);
+	terminal_info_bar_format_text (TERMINAL_INFO_BAR (info_bar),
+	                               _("There was an error creating the child process for this terminal"));
+	terminal_info_bar_format_text (TERMINAL_INFO_BAR (info_bar),
+	                               "%s", err->message);
+	g_signal_connect (info_bar, "response",
+	                  G_CALLBACK (info_bar_response_cb), screen);
+
+	gtk_box_pack_start (GTK_BOX (terminal_screen_container_get_from_screen (screen)),
+	                    info_bar, FALSE, FALSE, 0);
+	gtk_info_bar_set_default_response (GTK_INFO_BAR (info_bar), GTK_RESPONSE_CANCEL);
+	gtk_widget_show (info_bar);
+
+	g_error_free (err);
+}
+
+static void term_spawn_callback (GtkWidget *terminal,
+				 GPid       pid,
+				 GError    *error,
+				 gpointer   user_data)
+{
+	TerminalScreen *screen = TERMINAL_SCREEN (terminal);
+
+	if (error)
+	{
+		handle_error_child (screen, error);
+		g_error_free (error);
+	}
+	else
+	{
+		TerminalScreenPrivate *priv = screen->priv;
+		priv->child_pid = pid;
+	}
+}
+
 static gboolean
 terminal_screen_launch_child_cb (TerminalScreen *screen)
 {
@@ -1518,7 +1561,6 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 	const char *working_dir;
 	VtePtyFlags pty_flags = VTE_PTY_DEFAULT;
 	GSpawnFlags spawn_flags = 0;
-	GPid pid;
 
 	priv->launch_child_source_id = 0;
 
@@ -1540,36 +1582,9 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 	if (!terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_UPDATE_RECORDS))
 		pty_flags |= VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP;
 
-	if (!get_child_command (screen, shell, &spawn_flags, &argv, &err) ||
-	        !vte_terminal_spawn_sync (
-	                terminal,
-	                pty_flags,
-	                working_dir,
-	                argv,
-	                env,
-	                spawn_flags,
-	                NULL, NULL,
-	                &pid,
-	                NULL,
-	                &err))
+	if (!get_child_command (screen, shell, &spawn_flags, &argv, &err))
 	{
-		GtkWidget *info_bar;
-
-		info_bar = terminal_info_bar_new (GTK_MESSAGE_ERROR,
-		                                  _("_Profile Preferences"), RESPONSE_EDIT_PROFILE,
-		                                  _("_Relaunch"), RESPONSE_RELAUNCH,
-		                                  NULL);
-		terminal_info_bar_format_text (TERMINAL_INFO_BAR (info_bar),
-		                               _("There was an error creating the child process for this terminal"));
-		terminal_info_bar_format_text (TERMINAL_INFO_BAR (info_bar),
-		                               "%s", err->message);
-		g_signal_connect (info_bar, "response",
-		                  G_CALLBACK (info_bar_response_cb), screen);
-
-		gtk_box_pack_start (GTK_BOX (terminal_screen_container_get_from_screen (screen)),
-		                    info_bar, FALSE, FALSE, 0);
-		gtk_info_bar_set_default_response (GTK_INFO_BAR (info_bar), GTK_RESPONSE_CANCEL);
-		gtk_widget_show (info_bar);
+		handle_error_child (screen, err);
 
 		g_error_free (err);
 		g_strfreev (env);
@@ -1578,7 +1593,19 @@ terminal_screen_launch_child_cb (TerminalScreen *screen)
 		return FALSE;
 	}
 
-	priv->child_pid = pid;
+        vte_terminal_spawn_async (terminal,
+				  pty_flags,
+				  working_dir,
+				  argv,
+				  env,
+				  spawn_flags,
+				  NULL,
+				  NULL,
+				  NULL,
+				  -1,
+				  NULL,
+				  (VteTerminalSpawnAsyncCallback) term_spawn_callback,
+				  NULL);
 
 	g_free (shell);
 	g_strfreev (argv);
