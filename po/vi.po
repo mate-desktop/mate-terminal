@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 13:20+0300\n"
-"PO-Revision-Date: 2018-01-13 18:55+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/mate/MATE/language/vi/)\n"
+"POT-Creation-Date: 2018-03-17 19:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Brian P. Dung <brianp.dung@gmail.com>, 2018\n"
+"Language-Team: Vietnamese (https://www.transifex.com/mate/teams/13566/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,13 +34,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4454
+#: ../src/terminal-window.c:4428
 msgid "MATE Terminal"
 msgstr "Thiết bị cuối MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2210
+#: ../src/terminal-window.c:2193
 msgid "Terminal"
 msgstr "Thiết bị cuối"
 
@@ -49,7 +50,7 @@ msgstr "Dùng dòng lệnh"
 
 #: ../src/eggsmclient.c:229
 msgid "Disable connection to session manager"
-msgstr "Tắt kết nối đến trình quản lý buổi hợp"
+msgstr "Tắt kết nối với trình quản lý phiên chạy"
 
 #: ../src/eggsmclient.c:234
 msgid "Specify file containing saved configuration"
@@ -62,23 +63,23 @@ msgstr "TẬP TIN"
 
 #: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
-msgstr "Xác định mã số quản lý buổi hợp"
+msgstr "Xác định mã số quản lý phiên làm việc"
 
 #: ../src/eggsmclient.c:239
 msgid "ID"
-msgstr "Mã số"
+msgstr "ID"
 
 #: ../src/eggsmclient.c:265
 msgid "Session management options:"
-msgstr "Tuỳ chọn quản lý buổi hợp:"
+msgstr "Tùy chọn quản lý phiên làm việc:"
 
 #: ../src/eggsmclient.c:266
 msgid "Show session management options"
-msgstr "Hiển thị các tuỳ chọn quản lý buổi hợp"
+msgstr "Hiển thị các tùy chọn quản lý phiên làm việc"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:1
 msgid "List of profiles"
-msgstr ""
+msgstr "Danh sách hồ sơ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:2
 msgid ""
@@ -88,17 +89,19 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:3
 msgid "Profile to use for new terminals"
-msgstr ""
+msgstr "Hồ sơ được dùng với thiết bị cuối mới"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:4
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
 msgstr ""
+"Hồ sơ được dùng khi mở cửa sổ/thanh mới. Phải nằm trong « profile_list » "
+"(danh sách hồ sơ)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
-msgstr ""
+msgstr "Thanh trình đơn có phím truy cập không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:6
 msgid ""
@@ -106,6 +109,9 @@ msgid ""
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
 msgstr ""
+"Có nên đặt phím tắt Alt-<Ký tự> cho thanh trình đơn hay không. Việc này có "
+"thể gây trở ngạy cho vài ứng dụng chạy trong thiết bị cuối, vì thế có lẽ nên"
+" tắt."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
@@ -117,6 +123,10 @@ msgid ""
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
 msgstr ""
+"Bình thường bạn có thể truy cập thanh trình đơn bằng bấm phím chức năng F10."
+" Điều này có thể được điều chỉnh trong « gtkrc » (gtk-menu-bar-accel = « cái"
+" gì đó »). Tùy chọn này cho phép tắt phím tắt chuẩn để kích hoạt thanh trình"
+" đơn."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
@@ -125,7 +135,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:10
 msgid "List of available encodings"
-msgstr ""
+msgstr "Danh sách các bộ ký tự hiện có"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:11
 msgid ""
@@ -136,13 +146,15 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
-msgstr ""
+msgstr "Có nên hỏi xác định khi đóng cửa sổ thiết bị cuối hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:13
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab."
 msgstr ""
+"Có nên hỏi xác định khi đóng cửa sổ thiết bị cuối có nhiều thanh mở hay "
+"không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgid "Close tabs with middle click"
@@ -169,41 +181,47 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:19
 msgid "Human-readable name of the profile"
-msgstr ""
+msgstr "Tên hồ sơ mà người co đọc được."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:20
 msgid "Human-readable name of the profile."
-msgstr ""
+msgstr "Tên hồ sơ mà người co đọc được."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:21
 msgid "Whether to show menubar in new windows/tabs"
-msgstr ""
+msgstr "Có nên hiển thị thanh trình đơn trong cửa sổ/thanh mới hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:22
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr ""
+"Đúng nếu thanh trình đơn nên hiển thị trong cửa sổ mới, với cửa sổ/thanh "
+"dùng hồ sơ này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:23
 msgid "Default color of text in the terminal"
-msgstr ""
+msgstr "Màu chữ mặc định trong thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:24
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
 msgstr ""
+"Màu mặc định cho văn bản trong thiết bị cuối, có thể là dạng hệ thập lục "
+"phân của HTML, hoặc tên màu như «red» (đỏ)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Default color of terminal background"
-msgstr ""
+msgstr "Màu màu nền thiết bị cuối mặc định"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:26
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
+"Màu nền mặc định của thiết bị cuối, có thể là dạng hệ thập lục phân của "
+"HTML, hoặc tên màu như « red » (đỏ)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Default color of bold text in the terminal"
@@ -227,7 +245,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:31
 msgid "What to do with dynamic title"
-msgstr ""
+msgstr "Làm gì với tựa đề động"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:32
 msgid ""
@@ -236,6 +254,11 @@ msgid ""
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
+"Nếu ứng dụng trong thiết bị cuối đặt tựa đề (hầu hết người dùng thiết lập hệ"
+" vỏ của họ để làm như thế), tựa đề đã đặt động đó có thể xóa bỏ tựa đề được "
+"cấu hình, đặt trước tựa đề cấu hình, đặt sau, hoặc thay thế tựa đề cấu hình."
+" Giá trị có thể là  « replace » (thay thế), « before » (trước), « after » "
+"(sau), và « ignore » (bỏ qua)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgctxt "title"
@@ -244,7 +267,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:34
 msgid "Title for terminal"
-msgstr ""
+msgstr "Tựa đề thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:35
 msgid ""
@@ -252,24 +275,29 @@ msgid ""
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
 msgstr ""
+"Tựa đề cần hiển thị trong cửa sổ/thanh thiết bị cuối. Tựa đề này có thể bị "
+"thay thế hoặc kết hợp với tựa đề do ứng dụng bên trong thiết bị cuối tự đặt,"
+" tùy thuộc vào thiết lập « title_mode » (chế độ tựa đề)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:36
 msgid "Whether to allow bold text"
-msgstr ""
+msgstr "Có nên cho phép chữ đậm hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, allow applications in the terminal to make text boldface."
-msgstr ""
+msgstr "Nếu đúng, cho phép ứng dụng trong thiết bị cuối tạo chữ đậm."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Whether to silence terminal bell"
-msgstr ""
+msgstr "Co nên cấm chuông thiết bị cuối hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:39
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
 msgstr ""
+"Nếu đúng, đừng làm ồn khi ứng dụng gửi chuỗi thoát để thiết bị cuối rung "
+"chuông."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:40
 msgid "Copy selection to clipboard"
@@ -281,7 +309,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Characters that are considered \"part of a word\""
-msgstr ""
+msgstr "Ký tự được coi như là « phần của một từ »"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:43
 msgid ""
@@ -289,6 +317,9 @@ msgid ""
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
 msgstr ""
+"Khi chọn văn bản theo từ, chuỗi các ký tự sau được coi là từ đơn. Có thể đặt"
+" một phạm vi các ký từ như kiểu « A-Z ». Dấu trừ (không dùng để chỉ thị một "
+"phạm vi) nên đặt ở vị trí đầu tiên."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
@@ -322,7 +353,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
-msgstr ""
+msgstr "Vị trí thanh cuộn"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:51
 msgid ""
@@ -332,7 +363,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Number of lines to keep in scrollback"
-msgstr ""
+msgstr "Số dòng cuộn ngược"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:53
 msgid ""
@@ -354,100 +385,123 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr ""
+msgstr "Có nên cuộn đến đáy khi được nhấn phím hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:57
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr ""
+msgstr "Nếu đúng, thiết bị cuối sẽ cuộn đến đáy nhấn phím."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to scroll to the bottom when there's new output"
-msgstr ""
+msgstr "Có nên cuộn đến đáy khi có kết quả mới hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr ""
+"Nếu đúng, bất cứ khi nào có dữ liệu mới xuất ra thiết bị cuối, nó sẽ được "
+"cuộn xuống đáy."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "What to do with the terminal when the child command exits"
-msgstr ""
+msgstr "Làm gì với thiết bị cuối khi lệnh con kết thúc."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:61
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr ""
+"Giá trị có thể là « close » để _đóng_ thiết bị cuối, và « restart » để _khởi"
+" chạy lại_ lệnh."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr ""
+"Có nên thực hiện lệnh trong thiết bị cuối như là trình bao đăng nhập hay "
+"không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
 msgstr ""
+"Nếu đúng, lệnh trong thiết bị cuối sẽ được thực hiện như trình bao đăng "
+"nhập. « argv[0] » sẽ chứa dấu trừ ở đằng trước."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to update login records when launching terminal command"
 msgstr ""
+"Có nên cập nhật mục ghi đăng nhập khi chạy lệnh thiết bị cuối hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
 msgstr ""
+"Nếu đúng, mục ghi đăng nhập hệ thống « utmp/wtmp » sẽ được cập nhật mỗi khi "
+"thực hiện lệnh trong thiết bị cuối."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
-msgstr ""
+msgstr "Co nên chạy lệnh tự chọn thay vì trình bao hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:67
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr ""
+"Nếu đúng, giá trị của thiết lập « custom_command » (lệnh tự chọn) sẽ được "
+"dùng thay vì chạy trình bao."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Whether to blink the cursor"
-msgstr ""
+msgstr "Có nên nháy con trỏ hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr ""
+"Các giá trị có thể:\n"
+" • system\t\tđể sử dụng thiết lập nháy con trỏ của hệ thống\n"
+" • on\t\tbật chế độ một cách dứt khoát\n"
+" • off\t\ttắt chế độ một cách dứt khoát."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "The cursor appearance"
-msgstr ""
+msgstr "Hình thức con trỏ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:71
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
+"Giá trị có thể:\n"
+" • block\t\tdùng một con trỏ hình khối\n"
+" • ibeam\t\tdùng một con trỏ hình đường đứng\n"
+" • underline\tdùng một con trỏ hình gạch dưới."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Custom command to use instead of the shell"
-msgstr ""
+msgstr "Chạy lệnh tự chọn để dùng thay vì hệ vo"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr ""
+"Chạy lệnh này thay vì trình bao, nếu « use_custom_command » (dùng lệnh tự "
+"chọn) đúng."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Icon for terminal window"
-msgstr ""
+msgstr "Biểu tượng cho cửa sổ thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr ""
+msgstr "Biểu tượng dùng cho thanh/cửa sổ chứa hồ sơ này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Palette for terminal applications"
-msgstr ""
+msgstr "Bảng chọn cho ứng dụng thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:77
 msgid ""
@@ -455,18 +509,23 @@ msgid ""
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr ""
+"Thiết bị cuối có bảng chọn có 16 màu mà ứng dụng bên trong thiết bị cuối có "
+"thể dùng. Đây là bảng chọn đó, theo mẫu phân cách danh sách các màu bằng dấu"
+" hai chấm. Tên màu nên dùng dạng thức hệ thập lục phân, v.d. « #FF00FF »."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Font"
-msgstr ""
+msgstr "Phông"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
+"Tên phông chữ Pango. Ví dụ « Sans 12 » (phông chữ không chân có cỡ 12 điểm) "
+"hoặc « Monospace Bold 14 » (phông chữ đơn cách in đậm có cỡ 14 điểm)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background type"
-msgstr ""
+msgstr "Kiểu nền"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid ""
@@ -474,28 +533,34 @@ msgid ""
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
 msgstr ""
+"Loại nền thiết bị cuối. Giá trị có thể:\n"
+" • solid\t\thiển thị một màu đặc\n"
+" • image\t\thth một ảnh\n"
+" • transparent\thoặc trong suốt thật nếu chạy một trình quản lý cửa sổ có khả năng ghép lại, không thì trong suốt giả."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Background image"
-msgstr ""
+msgstr "Ảnh nền"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid "Filename of a background image."
-msgstr ""
+msgstr "Tên tập tin ảnh nền."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:84
 msgid "Whether to scroll background image"
-msgstr ""
+msgstr "Có nên cuộn ảnh nền hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:85
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr ""
+"Nếu đúng, sẽ cuộn ảnh nền với văn bản. Nếu sai, giữ nguyên vị trí ảnh nền "
+"khi cuộn văn bản ở trên nó."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "How much to darken the background image"
-msgstr ""
+msgstr "Ảnh nền tối cỡ nào"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:87
 msgid ""
@@ -504,10 +569,14 @@ msgid ""
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
 msgstr ""
+"Giá trị nằm giữa 0.0 và 1.0 chỉ thị độ tối của ảnh nền. 0.0 nghĩa là hoàn "
+"toàn không tối. 1.0 nghĩa là tối thui. Trong bản cài đặt này, chỉ có hai cấp"
+" đó có thể được dùng, vì thế thiết lập này giống như là boolean (đúng hay "
+"sai), 0.0 là tắt hiệu ứng tối."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Backspace key"
-msgstr ""
+msgstr "Tác động của phím Backspace"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:89
 msgid ""
@@ -517,10 +586,14 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
+"Đặt mã mà phím backspace sẽ phát sinh. Giá trị có thể là « ascii-del » cho "
+"mã ký tự ASCII DEL, « control-h » cho Control-H (cũng là ký tự ASCII BS), « "
+"escape-sequence » cho _dây thoát_ thường gắn với backspace hoặc delete. « "
+"ascii-del » thường được xem là thiết lập đúng cho phím Backspace."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Effect of the Delete key"
-msgstr ""
+msgstr "Tác động của phím Delete"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:91
 msgid ""
@@ -530,40 +603,51 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
+"Đặt mã mà phím delete sẽ phát sinh. Giá trị có thể là « ascii-del » cho mã "
+"ký tự ASCII DEL, « control-h » cho Control-H (cũng là ký tự ASCII BS), « "
+"escape-sequence » cho _dây thoát_ thường gắn với backspace hoặc delete. « "
+"escape-sequence » thường được xem là thiết lập đúng cho phím Delete."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the colors from the theme for the terminal widget"
-msgstr ""
+msgstr "Có nên dùng màu từ sắc thái của ô điều khiển thiết bị cuối hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:93
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
+"Nếu đúng, lược đồ màu sắc thái được dùng cho ô nhập văn bản sẽ được dùng cho"
+" thiết bị cuối, thay vì màu của người dùng."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Whether to use the system font"
-msgstr ""
+msgstr "Có nên dùng phông chữ hệ thống hay không."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:95
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"Nếu đúng, thiết bị cuối sẽ dùng phông chữ chuẩn của toàn màn hình nền nếu nó"
+" là phông chữ cách đơn (và phông chữ giống nhất nó có thể tìm được trong "
+"trường hợp ngược lại)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Highlight S/Key challenges"
-msgstr ""
+msgstr "Nổi bật các sự thách thức S/Key"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:97
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
+"Bật lên hộp thoại khi phát hiện và nhắp vào yêu cầu/đáp ứng S/Key. Gõ mật "
+"khẩu vào hộp thoại thì sẽ gởi nó cho thiết bị cuối."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
-msgstr ""
+msgstr "Phím tắt Mở thanh mới"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:99
 msgid ""
@@ -572,10 +656,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để mở tab mới. Dùng dạng chuỗi có cùng một khuôn dạng với tập tin "
+"tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã tắt), nghĩa "
+"là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to open a new window"
-msgstr ""
+msgstr "Phím tắt Mở cửa sổ mới"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:101
 msgid ""
@@ -584,10 +671,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để mở cửa sổ mới. Dùng dạng chuỗi có cùng một khuôn dạng với tập "
+"tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã tắt), "
+"nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to create a new profile"
-msgstr ""
+msgstr "Phím tắt Tạo hồ sơ mới"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:103
 msgid ""
@@ -596,6 +686,9 @@ msgid ""
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
 msgstr ""
+"Phím tắt để hiện hộp thoại tạo hồ sơ. Dùng dạng chuỗi có cùng một khuôn dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (bị"
+" tắt), nghĩa là sẽ không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -611,7 +704,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a tab"
-msgstr ""
+msgstr "Phím tắt Đóng thanh"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:107
 msgid ""
@@ -620,10 +713,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để đóng tab. Dùng dạng chuỗi có cùng một khuôn dạng với tập tin tài"
+" nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã tắt), nghĩa là "
+"không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to close a window"
-msgstr ""
+msgstr "Phím tắt Đóng cửa sổ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:109
 msgid ""
@@ -632,10 +728,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để đóng cửa sổ. Dùng dạng chuỗi có cùng một khuôn dạng với tập tin "
+"tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã tắt), nghĩa "
+"là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to copy text"
-msgstr ""
+msgstr "Phím tắt Chép văn bản"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:111
 msgid ""
@@ -644,10 +743,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Phím tắt để sao chép đoạn văn bản được chọn vào khay. Dùng dạng chuỗi có "
+"cùng một khuôn dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là "
+"chuỗi « disabled » (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to paste text"
-msgstr ""
+msgstr "Phím tắt Dán văn bản"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
@@ -707,7 +809,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr ""
+msgstr "Phím tắt Bật tắt Toàn màn hình"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
@@ -716,10 +818,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Phím tắt để bật tắt chế độ toàn màn hình. Dùng dạng chuỗi có cùng một khuôn "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled »"
+" (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr ""
+msgstr "Phím tắt Bật tắt hiển thị thanh trình đơn"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
@@ -728,10 +833,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Phím tắt để bật tắt hiển thị thanh trình đơn. Dùng dạng chuỗi có cùng một "
+"khuôn dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « "
+"disabled » (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to set the terminal title"
-msgstr ""
+msgstr "Phím tắt Đặt tiêu đề thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
@@ -740,10 +848,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để đặt tựa đề thiết bị cuối. Dùng dạng chuỗi có cùng một khuôn dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (bị"
+" tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset the terminal"
-msgstr ""
+msgstr "Phím tắt Đặt lại thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
@@ -752,10 +863,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để đặt lại thiết bị cuối. Dùng dạng chuỗi có cùng một khuôn dạng "
+"với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (bị "
+"tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr ""
+msgstr "Phím tắt Đặt lại và xoá thiết bị cuối"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
@@ -764,10 +878,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Phím tắt để đặt lại và xóa thiết bị cuối. Dùng dạng chuỗi có cùng một khuôn "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled »"
+" (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the previous tab"
-msgstr ""
+msgstr "Phím tắt Chuyển sang thanh trước"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
@@ -776,10 +893,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Phím tắt để chuyển sang thanh trước đó. Dùng dạng chuỗi có cùng một khuôn "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled »"
+" (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the next tab"
-msgstr ""
+msgstr "Phím tắt Chuyển sang thanh kế"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
@@ -788,6 +908,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để chuyển sang thanh kế tiếp. Dùng dạng chuỗi có cùng một khuôn "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled »"
+" (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the previous profile"
@@ -815,7 +938,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the left."
-msgstr ""
+msgstr "Phím tắt có chuyển thanh hiện thời sang bên trái."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
@@ -824,10 +947,14 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển thanh hiện thời sang bên trái. Dùng dạng chuỗi có cùng "
+"một khuôn dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi "
+"đặc biệt « disabled » (bị tắt), nghĩa là không có phím tổ hợp cho hành động "
+"này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to move the current tab to the right."
-msgstr ""
+msgstr "Phím tắt có chuyển thanh hiện thời sang bên phải."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
@@ -836,10 +963,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển thanh hiện thời sang phải. Dùng dạng chuỗi có cùng một "
+"khuôn dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc "
+"biệt « disabled » (bị tắt), nghĩa là không có phím tổ hợp cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Accelerator to detach current tab."
-msgstr ""
+msgstr "Phím tắt để gỡ ra thanh hiện có."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
@@ -847,10 +977,13 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Phím tắt để gỡ ra thanh hiện có. Dùng dạng chuỗi có cùng một khuôn dạng với "
+"tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã "
+"tắt), nghĩa là không có phím tổ hợp cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 1"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 1"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
@@ -859,10 +992,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 1. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 2"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 2"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
@@ -871,10 +1007,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 2. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 3"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 3"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
@@ -883,10 +1022,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 3. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 4"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 4"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
@@ -895,10 +1037,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 4. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 5"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 5"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
@@ -907,10 +1052,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 5. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 6"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 6"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
@@ -919,10 +1067,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 6. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 7"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 7"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
@@ -931,10 +1082,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 7. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 8"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 8"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
@@ -943,10 +1097,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 8. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 9"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 9"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
@@ -955,10 +1112,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 9. Đại diện là một chuỗi có cùng một định dạng"
+" với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 10"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 10"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
@@ -967,10 +1127,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 10. Đại diện là một chuỗi có cùng một định "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 11"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 11"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
@@ -979,10 +1142,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 11. Đại diện là một chuỗi có cùng một định "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to switch to tab 12"
-msgstr ""
+msgstr "Phím tắt để chuyển sang thanh 12"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:169
 msgid ""
@@ -991,10 +1157,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để chuyển sang thanh 12. Đại diện là một chuỗi có cùng một định "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi đặc biệt « "
+"disabled » (đã tắt) thì không có phím tắt cho hành vi này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to launch help"
-msgstr ""
+msgstr "Phím tắt Hiện trợ giúp"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:171
 msgid ""
@@ -1003,10 +1172,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Phím tắt để hiện trợ giúp. Dùng dạng chuỗi có cùng một khuôn dạng với tập "
+"tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (đã tắt), "
+"nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font larger"
-msgstr ""
+msgstr "Phím tắt Dùng phông to hơn"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:173
 msgid ""
@@ -1015,10 +1187,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để dùng phông lớn hơn. Dùng dạng chuỗi có cùng một khuôn dạng với "
+"tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (bị "
+"tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font smaller"
-msgstr ""
+msgstr "Phím tắt Dùng phông nhỏ hơn"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:175
 msgid ""
@@ -1027,10 +1202,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Phím tắt để dùng phông nhỏ hơn. Dùng dạng chuỗi có cùng một khuôn dạng với "
+"tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled » (bị "
+"tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:176
 msgid "Keyboard shortcut to make font normal-size"
-msgstr ""
+msgstr "Phím tắt Dùng phông cỡ thường"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:177
 msgid ""
@@ -1039,6 +1217,9 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Phím tắt để dùng phông cỡ bình thường. Dùng dạng chuỗi có cùng một khuôn "
+"dạng với tập tin tài nguyên GTK+. Nếu bạn đặt tùy chọn là chuỗi « disabled »"
+" (đã tắt), nghĩa là không có phím tắt cho hành động này."
 
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
@@ -1090,7 +1271,7 @@ msgstr "Tự chọn"
 
 #: ../src/profile-editor.c:590
 msgid "Images"
-msgstr "Ảnh"
+msgstr "Hình ảnh"
 
 #: ../src/profile-editor.c:734
 #, c-format
@@ -1172,7 +1353,7 @@ msgstr "Hồ sơ mới"
 
 #: ../src/profile-new-dialog.ui.h:2
 msgid "C_reate"
-msgstr "_Tạo"
+msgstr "Tạ_o"
 
 #: ../src/profile-new-dialog.ui.h:3
 msgid "Profile _name:"
@@ -1195,7 +1376,7 @@ msgstr ""
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
 msgid "Underline"
-msgstr ""
+msgstr "Gạch chân"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
@@ -1271,7 +1452,7 @@ msgstr ""
 #: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
 #: ../src/extra-strings.c:60
 msgid "Disabled"
-msgstr "Đã tắt"
+msgstr "Bị tắt"
 
 #. * Copyright © 2009 Christian Persch
 #. *
@@ -1293,7 +1474,7 @@ msgstr "Đã tắt"
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:24
 msgid "Automatic"
-msgstr ""
+msgstr "Tự động"
 
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:26
@@ -1336,7 +1517,7 @@ msgstr "Bộ sửa đổi Hồ sơ"
 
 #: ../src/profile-preferences.ui.h:29
 msgid "_Profile name:"
-msgstr "Tên Hồ _sơ :"
+msgstr "Tê_n hồ sơ:"
 
 #: ../src/profile-preferences.ui.h:30
 msgid "_Use the system fixed width font"
@@ -1388,11 +1569,11 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:42
 msgid "columns"
-msgstr ""
+msgstr "cột"
 
 #: ../src/profile-preferences.ui.h:43
 msgid "rows"
-msgstr ""
+msgstr "hàng"
 
 #: ../src/profile-preferences.ui.h:44
 msgid "General"
@@ -1494,7 +1675,9 @@ msgstr "_Bảng chọn màu:"
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
-msgstr "<small><i><b>Note:</b> Terminal applications have these colors available to them.</i></small>"
+msgstr ""
+"<small><i><b>Note:</b> Terminal applications have these colors available to "
+"them.</i></small>"
 
 #: ../src/profile-preferences.ui.h:69
 msgid "Colors"
@@ -1542,7 +1725,7 @@ msgstr "<small><i>Tối đa</i></small>"
 
 #: ../src/profile-preferences.ui.h:80
 msgid "Background"
-msgstr "Nền"
+msgstr "Màu nền"
 
 #: ../src/profile-preferences.ui.h:81
 msgid "_Scrollbar is:"
@@ -1578,7 +1761,10 @@ msgid ""
 "incorrectly.  They are only here to allow you to work around certain "
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
-msgstr "<small><i><b>Note:</b>Những tùy chọn này có thể làm cho một số ứng dụng hoạt động sai.\nChúng có mặt ở đây chỉ để cho phép bạn làm việc với một số ứng dụng\nnhất định và hệ điều hành mà mong muốn một hành vi thiết bị cuối khác.</i></small>"
+msgstr ""
+"<small><i><b>Note:</b>Những tùy chọn này có thể làm cho một số ứng dụng hoạt động sai.\n"
+"Chúng có mặt ở đây chỉ để cho phép bạn làm việc với một số ứng dụng\n"
+"nhất định và hệ điều hành mà mong muốn một hành vi thiết bị cuối khác.</i></small>"
 
 #: ../src/profile-preferences.ui.h:89
 msgid "_Delete key generates:"
@@ -1602,7 +1788,7 @@ msgstr "Yêu cầu/đáp ứng S/Key"
 
 #: ../src/skey-challenge.ui.h:2
 msgid "_Password:"
-msgstr "_Mật khẩu :"
+msgstr "_Mật khẩu:"
 
 #: ../src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -1642,7 +1828,7 @@ msgstr "Dán"
 
 #: ../src/terminal-accels.c:186
 msgid "Select All"
-msgstr ""
+msgstr "Chọn tất cả"
 
 #: ../src/terminal-accels.c:194
 msgid "Hide and Show menubar"
@@ -1666,13 +1852,13 @@ msgstr "Cỡ bình thường"
 
 #: ../src/terminal-accels.c:222
 msgid "Find Next"
-msgstr ""
+msgstr "Tìm tiếp"
 
 #: ../src/terminal-accels.c:226
 msgid "Find Previous"
-msgstr ""
+msgstr "Tìm trước"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4231
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
 msgid "Set Title"
 msgstr "Đặt tựa đề"
 
@@ -1762,7 +1948,7 @@ msgstr "Chuyển sang Thanh 12"
 
 #: ../src/terminal-accels.c:341
 msgid "Contents"
-msgstr "Mục lục"
+msgstr "Nội dung"
 
 #: ../src/terminal-accels.c:346
 msgid "File"
@@ -1778,7 +1964,7 @@ msgstr "Xem"
 
 #: ../src/terminal-accels.c:349
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: ../src/terminal-accels.c:351
 msgid "Tabs"
@@ -1786,7 +1972,7 @@ msgstr "Thanh"
 
 #: ../src/terminal-accels.c:352
 msgid "Help"
-msgstr "Trợ giúp"
+msgstr "Hỗ trợ "
 
 #: ../src/terminal-accels.c:855
 #, c-format
@@ -1823,7 +2009,8 @@ msgstr "Xoá hồ sơ"
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "Bạn đã có một hồ sơ tên « %s »: muốn tạo một hồ sơ khác tên này không?"
+msgstr ""
+"Bạn đã có một hồ sơ tên « %s »: muốn tạo một hồ sơ khác tên này không?"
 
 #: ../src/terminal-app.c:1239
 msgid "Choose base profile"
@@ -1877,7 +2064,7 @@ msgstr "Ki-rin"
 #: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
 #: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
 msgid "Arabic"
-msgstr "Ả Rập"
+msgstr "A Rập"
 
 #: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
 #: ../src/terminal-encoding.c:114
@@ -2006,7 +2193,10 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "Tùy chọn « %s » không còn được hỗ trợ lại trong phiên bản mate-terminal này;bạn cũng có thể tạo một hồ sơ với các thiết lập thích hợp, và dùng tùy chọn « --profile » (hồ sơ) mới.\n"
+msgstr ""
+"Tùy chọn « %s » không còn được hỗ trợ lại trong phiên bản mate-terminal "
+"này;bạn cũng có thể tạo một hồ sơ với các thiết lập thích hợp, và dùng tùy "
+"chọn « --profile » (hồ sơ) mới.\n"
 
 #: ../src/terminal-options.c:209
 #, c-format
@@ -2042,7 +2232,9 @@ msgstr "Hệ số thu phóng « %g » quá lớn nên đang dùng « %g ».\n"
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr "Tùy chọn « %s » yêu cầu xác định câu lệnh cần chạy trên phần còn lại của dòng lệnh"
+msgstr ""
+"Tùy chọn « %s » yêu cầu xác định câu lệnh cần chạy trên phần còn lại của "
+"dòng lệnh"
 
 #: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
@@ -2056,7 +2248,9 @@ msgstr "Phiên bản tập tin cấu hình thiết bị cuối không tương th
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "Không đăng ký với máý chủ tên hoạt hóa, không dùng lại thiết bị cuối đang hoạt động"
+msgstr ""
+"Không đăng ký với máý chủ tên hoạt hóa, không dùng lại thiết bị cuối đang "
+"hoạt động"
 
 #: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
@@ -2084,7 +2278,7 @@ msgstr "Ẩn thanh trình đơn"
 
 #: ../src/terminal-options.c:1028
 msgid "Maximize the window"
-msgstr ""
+msgstr "Phóng to cửa sổ"
 
 #: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
@@ -2159,7 +2353,9 @@ msgstr "Hiện tùy chọn về Thiết bị cuối MATE"
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "Các tuỳ chọn để mở cửa sổ hay thanh thiết bị cuối; cũng có thể bật đồng thời nhiều tuỳ chọn:"
+msgstr ""
+"Các tuỳ chọn để mở cửa sổ hay thanh thiết bị cuối; cũng có thể bật đồng thời"
+" nhiều tuỳ chọn:"
 
 #: ../src/terminal-options.c:1381
 msgid "Show terminal options"
@@ -2169,7 +2365,9 @@ msgstr "Hiện các tuỳ chọn về thiết bị cuối"
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "Các tuỳ chọn về cửa sổ ; nếu đặt đằng trước đối số « --window » (cửa sổ) hay « --tab » (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ :"
+msgstr ""
+"Các tuỳ chọn về cửa sổ ; nếu đặt đằng trước đối số « --window » (cửa sổ) hay"
+" « --tab » (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ :"
 
 #: ../src/terminal-options.c:1390
 msgid "Show per-window options"
@@ -2179,7 +2377,9 @@ msgstr "Hiện các tuỳ chọn cho mỗi cửa sổ"
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "Các tuỳ chọn về thiết bị cuối; nếu đặt đằng trước đối số « --window » (cửa sổ) hay « --tab » (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ :"
+msgstr ""
+"Các tuỳ chọn về thiết bị cuối; nếu đặt đằng trước đối số « --window » (cửa "
+"sổ) hay « --tab » (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ :"
 
 #: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
@@ -2189,33 +2389,33 @@ msgstr "Hiện các tuỳ chọn cho mỗi thiết bị cuối"
 msgid "Unnamed"
 msgstr "Không tên"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1545 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1548
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr "Gặp lỗi khi tạo tiến trình con cho thiết bị cuối này."
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr ""
 
-#: ../src/terminal-tab-label.c:137
+#: ../src/terminal-tab-label.c:132
 msgid "Close tab"
 msgstr "Đóng thanh"
 
@@ -2223,16 +2423,16 @@ msgstr "Đóng thanh"
 msgid "Switch to this tab"
 msgstr "Chuyển sang thanh này"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:145
 msgid "There was an error displaying help"
-msgstr ""
+msgstr "Gặp lỗi khi hiển thị trợ giúp"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr ""
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2240,25 +2440,32 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
-msgstr "Chương trình này được phát hành vì mong muốn nó có ích, nhưng KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT. Xem Giấy Phép Công Cộng GNU để biết thêm chi tiết."
+msgstr ""
+"Chương trình này được phát hành vì mong muốn nó có ích, nhưng KHÔNG CÓ BẢO "
+"HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý KHẢ NĂNG BÁN HAY KHẢ NĂNG "
+"LÀM ĐƯỢC VIỆC DỨT KHOÁT. Xem Giấy Phép Công Cộng GNU để biết thêm chi tiết."
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương trình này; nếu không, hãy viết thư cho Tổ Chức Phần Mềm Tự Do,\nFree Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor,\nBoston, MA  02110-1301, USA (Mỹ)."
+msgstr ""
+"Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương trình này; nếu không, hãy viết thư cho Tổ Chức Phần Mềm Tự Do,\n"
+"Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor,\n"
+"Boston, MA  02110-1301, USA (Mỹ)."
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:682
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2266,259 +2473,263 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:688
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr "_Tập tin"
 
-#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
-#: ../src/terminal-window.c:2136
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
-msgstr "Mở _Thiết bị cuối"
+msgstr "Mở thiết bị _cuối"
 
-#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
-#: ../src/terminal-window.c:2141
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr "Mở th_anh"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr "_Sửa"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1868
 msgid "_View"
 msgstr "_Xem"
 
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1869
 msgid "_Search"
-msgstr "_Tìm"
+msgstr "Tì_m"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr "_Thiết bị cuối"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr "Th_anh"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1872
 msgid "_Help"
-msgstr "Trợ g_iúp"
+msgstr "Trợ _giúp"
 
-#: ../src/terminal-window.c:1905
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr "_Hồ sơ mới..."
 
-#: ../src/terminal-window.c:1910
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr "Đó_ng thanh"
 
-#: ../src/terminal-window.c:1920
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
 msgstr "Đón_g cửa sổ"
 
-#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr "Dán _tên tập tin"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr "Hồ _sơ..."
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr "_Phím tắt..."
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr "Tùy thích Hồ _sơ"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
 msgstr "_Tìm..."
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
-msgstr "Tìm _kế"
+msgstr "Tìm _xuôi"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
-msgstr "Tìm _lùi"
+msgstr "Tìm _ngược"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
-msgstr ""
+msgstr "_Xoá tô sáng"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
-msgstr ""
+msgstr "Tới _dòng..."
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
-msgstr ""
+msgstr "Tìm k_iếm dần..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr "Đổi _hồ sơ"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr "Đặt tự_a đề"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr "Đặt _bảng mã"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
 msgstr "Đặt _lại"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr "Đặt lại và _dọn"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr "Thê_m hay Bỏ..."
 
-#: ../src/terminal-window.c:2051
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr "Thanh t_rước"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr "Thanh _sau"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
 msgstr "Chuyển thanh sang t_rái"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
 msgstr "Chuyển thanh sang _phải"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr "Gỡ _ra thanh"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr "Mụ_c lục"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr "_Gửi thư cho..."
 
-#: ../src/terminal-window.c:2095
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr "_Chép địa chỉ thư"
 
-#: ../src/terminal-window.c:2100
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr "Gọ_i cho..."
 
-#: ../src/terminal-window.c:2105
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr "_Chép địa chỉ gọi"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr "_Mở liên kết"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr "_Chép địa chỉ liên kết"
 
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr "Hồ _sơ"
 
-#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
 msgid "C_lose Window"
 msgstr "Đón_g cửa sổ"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr "K_iểu gõ"
 
-#: ../src/terminal-window.c:2167
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr "Hiện thanh t_rình đơn"
 
-#: ../src/terminal-window.c:2173
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr "T_oàn màn hình"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this window?"
 msgstr "Đóng cửa sổ này ?"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this terminal?"
 msgstr "Đóng thiết bị cuối này ?"
 
-#: ../src/terminal-window.c:3630
+#: ../src/terminal-window.c:3608
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
-msgstr "Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép buộc kết thúc tất cả."
+msgstr ""
+"Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép "
+"buộc kết thúc tất cả."
 
-#: ../src/terminal-window.c:3634
+#: ../src/terminal-window.c:3612
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
-msgstr "Vẫn còn có một tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép buộc kết thúc nó."
+msgstr ""
+"Vẫn còn có một tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép "
+"buộc kết thúc nó."
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3617
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3705
+#: ../src/terminal-window.c:3683
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3729
+#: ../src/terminal-window.c:3707
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:4248
+#: ../src/terminal-window.c:4226
 msgid "_Title:"
-msgstr "_Tựa đề:"
+msgstr "_Tước:"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4411
 msgid "Contributors:"
 msgstr "Người đóng góp:"
 
-#: ../src/terminal-window.c:4456
+#: ../src/terminal-window.c:4430
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Một bộ mô phỏng thiết bị cuối cho môi trường Mate"
 
-#: ../src/terminal-window.c:4463
+#: ../src/terminal-window.c:4437
 msgid "translator-credits"
-msgstr "Nhóm Việt hoá MATE (http://matevi.sourceforge.net)"
+msgstr "giới thiệu-nhóm dịch"

@@ -1,24 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Patrik Nilsson <asavartzeth@gmail.com>, 2014
-# Claes-Göran Nydahl <goldug@gmail.com>, 2016
-# Erik, 2016
-# Henrik Mattsson-Mårn <h@reglage.net>, 2016
-# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015
-# Luna Jernberg <bittin@cafe8bitar.se>, 2016
-# Marcus Larborg, 2017
-# Tobias Lekare <lekare@linux.com>, 2017-2018
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 13:20+0300\n"
-"PO-Revision-Date: 2018-01-13 18:55+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
+"POT-Creation-Date: 2018-03-17 19:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2018\n"
+"Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,16 +31,23 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> MATE Terminal är ett terminalemuleringsprogram som du kan använda för att få tillgång till ett UNIX-skal i MATE miljön. MATE Terminal emulerar xterm programmet som utvecklats av X Consortium. Det stöder genomskinliga bakgrunder, att öppna flera terminaler i ett enda fönster (flikar) och klickbara webbadresser. </p> <p> MATE Terminal är en avknoppning av GNOME Terminal och en del av MATE Skrivbordsmiljön. Om du vill veta mer om MATE och MATE Terminal, besök projektets hemsida. </p>"
+msgstr ""
+"<p> MATE Terminal är ett terminalemuleringsprogram som du kan använda för "
+"att få tillgång till ett UNIX-skal i MATE miljön. MATE Terminal emulerar "
+"xterm programmet som utvecklats av X Consortium. Det stöder genomskinliga "
+"bakgrunder, att öppna flera terminaler i ett enda fönster (flikar) och "
+"klickbara webbadresser. </p> <p> MATE Terminal är en avknoppning av GNOME "
+"Terminal och en del av MATE Skrivbordsmiljön. Om du vill veta mer om MATE "
+"och MATE Terminal, besök projektets hemsida. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4454
+#: ../src/terminal-window.c:4428
 msgid "MATE Terminal"
 msgstr "MATE-terminal"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2210
+#: ../src/terminal-window.c:2193
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -57,11 +57,11 @@ msgstr "Använd kommandoraden"
 
 #: ../src/eggsmclient.c:229
 msgid "Disable connection to session manager"
-msgstr "Inaktivera anslutning till sessionshanteraren"
+msgstr "Inaktivera anslutning till sessionshanterare"
 
 #: ../src/eggsmclient.c:234
 msgid "Specify file containing saved configuration"
-msgstr "Ange filen som innehåller sparad konfiguration"
+msgstr "Ange fil som innehåller sparad konfiguration"
 
 #: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
 #: ../src/terminal-options.c:973
@@ -70,7 +70,7 @@ msgstr "FIL"
 
 #: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
-msgstr "Ange id för sessionshanterare"
+msgstr "Ange id för sessionshantering"
 
 #: ../src/eggsmclient.c:239
 msgid "ID"
@@ -92,7 +92,9 @@ msgstr "Lista över profiler"
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
-msgstr "Lista med profiler som är kända av mate-terminal. Listan innehåller strängar med namn på underkataloger till /org/mate/terminal/profiles."
+msgstr ""
+"Lista med profiler som är kända av mate-terminal. Listan innehåller strängar"
+" med namn på underkataloger till /org/mate/terminal/profiles."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:3
 msgid "Profile to use for new terminals"
@@ -102,7 +104,9 @@ msgstr "Profil att använda för nya terminalfönster"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr "Profil som ska användas vid öppnande av ett nytt fönster eller flik. Måste finnas i profile_list."
+msgstr ""
+"Profil som ska användas vid öppnande av ett nytt fönster eller flik. Måste "
+"finnas i profile_list."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
@@ -113,7 +117,10 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr "Om det ska finnas åtkomsttangenter med Alt+bokstav för menyraden. De kan kollidera med en del program som körs inuti terminalfönstret, och det är därför möjligt att inaktivera dem."
+msgstr ""
+"Om det ska finnas åtkomsttangenter med Alt+bokstav för menyraden. De kan "
+"kollidera med en del program som körs inuti terminalfönstret, och det är "
+"därför möjligt att inaktivera dem."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
@@ -124,7 +131,10 @@ msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
-msgstr "Normalt kan du komma åt menyraden med F10. Detta kan också anpassas via gtkrc (gtk-menu-bar-accel = \"whatever\"). Detta alternativ möjliggör att standardmenyradsgenvägen inaktiveras."
+msgstr ""
+"Normalt kan du komma åt menyraden med F10. Detta kan också anpassas via "
+"gtkrc (gtk-menu-bar-accel = \"whatever\"). Detta alternativ möjliggör att "
+"standardmenyradsgenvägen inaktiveras."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
@@ -140,7 +150,10 @@ msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
-msgstr "En delmängd med möjliga kodningar visas i kodningsmenyn. Detta är en lista med kodningar som visas där. Det speciella kodningsnamnet \"current\" betyder att kodningen för den aktuella lokalen ska visas."
+msgstr ""
+"En delmängd med möjliga kodningar visas i kodningsmenyn. Detta är en lista "
+"med kodningar som visas där. Det speciella kodningsnamnet \"current\" "
+"betyder att kodningen för den aktuella lokalen ska visas."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -150,7 +163,9 @@ msgstr "Om bekräftelse ska efterfrågas innan terminalfönster stängs"
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab."
-msgstr "Om bekräftelse ska efterfrågas då ett terminalfönster som har mer än en öppen flik ska stängas."
+msgstr ""
+"Om bekräftelse ska efterfrågas då ett terminalfönster som har mer än en "
+"öppen flik ska stängas."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgid "Close tabs with middle click"
@@ -168,7 +183,8 @@ msgstr "Växla flikar med [Ctrl]+[Tab]"
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
-msgstr "Om sant möjliggör det att byta flikar med [Ctrl+Tab] och [Ctrl+Shift+Tab]"
+msgstr ""
+"Om sant möjliggör det att byta flikar med [Ctrl+Tab] och [Ctrl+Shift+Tab]"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:18
 msgctxt "visible-name"
@@ -191,7 +207,9 @@ msgstr "Om menyraden ska visas i nya fönster/flikar"
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
-msgstr "Sant om menyraden ska visas i nya fönster, för fönster/flikar med denna profil."
+msgstr ""
+"Sant om menyraden ska visas i nya fönster, för fönster/flikar med denna "
+"profil."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:23
 msgid "Default color of text in the terminal"
@@ -201,7 +219,9 @@ msgstr "Standardfärg för texten i terminalfönstret"
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
-msgstr "Standardfärg för texten i terminalfönstret som en färgspecifikation (kan vara hexadecimala siffror i HTML-stil, eller ett färgnamn som \"red\")."
+msgstr ""
+"Standardfärg för texten i terminalfönstret som en färgspecifikation (kan "
+"vara hexadecimala siffror i HTML-stil, eller ett färgnamn som \"red\")."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Default color of terminal background"
@@ -211,7 +231,9 @@ msgstr "Standardfärg för terminalbakgrund"
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
-msgstr "Standardfärg för terminalbakgrunden som en färgspecifikation (kan vara hexadecimala siffror i HTML-stil, eller ett färgnamn som \"red\")."
+msgstr ""
+"Standardfärg för terminalbakgrunden som en färgspecifikation (kan vara "
+"hexadecimala siffror i HTML-stil, eller ett färgnamn som \"red\")."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Default color of bold text in the terminal"
@@ -222,7 +244,10 @@ msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
-msgstr "Standardfärg för fet text i terminalfönstret som en färgspecifikation (kan vara hexadecimala siffror i HTML-stil eller ett färgnamn som \"red\"). Detta ignoreras om bold_color_same_as_fg är sant."
+msgstr ""
+"Standardfärg för fet text i terminalfönstret som en färgspecifikation (kan "
+"vara hexadecimala siffror i HTML-stil eller ett färgnamn som \"red\"). Detta"
+" ignoreras om bold_color_same_as_fg är sant."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgid "Whether bold text should use the same color as normal text"
@@ -243,7 +268,12 @@ msgid ""
 "have their shell set up to do this), the dynamically-set title can erase the"
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Om programmet i terminalfönstret ställer in titeln (vanligtvis är skalet konfigurerat att göra detta) kan den dynamiskt inställda titeln radera den konfigurerade titeln, hamna före den, hamna efter den eller ersätta den. De möjliga värdena är \"replace\" (ersätt), \"before\" (före), \"after\" (efter) och \"ignore\" (ignorera)."
+msgstr ""
+"Om programmet i terminalfönstret ställer in titeln (vanligtvis är skalet "
+"konfigurerat att göra detta) kan den dynamiskt inställda titeln radera den "
+"konfigurerade titeln, hamna före den, hamna efter den eller ersätta den. De "
+"möjliga värdena är \"replace\" (ersätt), \"before\" (före), \"after\" "
+"(efter) och \"ignore\" (ignorera)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgctxt "title"
@@ -259,7 +289,10 @@ msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
-msgstr "Titel att visa för terminalfönstret eller terminalfliken. Denna titel kan ersättas med eller kombineras med titeln som är satt av programmet inuti terminalfönstret, beroende på inställningen title_mode."
+msgstr ""
+"Titel att visa för terminalfönstret eller terminalfliken. Denna titel kan "
+"ersättas med eller kombineras med titeln som är satt av programmet inuti "
+"terminalfönstret, beroende på inställningen title_mode."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:36
 msgid "Whether to allow bold text"
@@ -277,7 +310,9 @@ msgstr "Om terminalljudet ska tystas"
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
-msgstr "Om sant, väsnas inte då program skickar kontrollsekvensen för terminalljudet."
+msgstr ""
+"Om sant, väsnas inte då program skickar kontrollsekvensen för "
+"terminalljudet."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:40
 msgid "Copy selection to clipboard"
@@ -296,7 +331,10 @@ msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
-msgstr "När text markeras ord för ord betraktas sekvenser av dessa tecken som fristående ord. Intervall kan anges som \"A-Z\". Ett bindestreck (som inte betecknar ett intervall) bör vara det första tecknet som anges."
+msgstr ""
+"När text markeras ord för ord betraktas sekvenser av dessa tecken som "
+"fristående ord. Intervall kan anges som \"A-Z\". Ett bindestreck (som inte "
+"betecknar ett intervall) bör vara det första tecknet som anges."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
@@ -306,7 +344,9 @@ msgstr "Om en anpassad storlek för nya terminalfönster ska användas"
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
-msgstr "Om sant kommer nyligen skapade terminalfönster att ha anpassad storlek angiven av default_size_columns och default_size_rows."
+msgstr ""
+"Om sant kommer nyligen skapade terminalfönster att ha anpassad storlek "
+"angiven av default_size_columns och default_size_rows."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:46
 msgid "Default number of columns"
@@ -316,7 +356,9 @@ msgstr "Standardinställning för antal kolumner"
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Antal kolumner i nyöppnade terminalfönster. Har ingen effekt om inte use_custom_default_size aktiverats."
+msgstr ""
+"Antal kolumner i nyöppnade terminalfönster. Har ingen effekt om inte "
+"use_custom_default_size aktiverats."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Default number of rows"
@@ -326,7 +368,9 @@ msgstr "Standardinställning för antal rader"
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Antal rader i nyöppnade terminalfönster. Har ingen effekt om inte use_custom_default_size aktiverats."
+msgstr ""
+"Antal rader i nyöppnade terminalfönster. Har ingen effekt om inte "
+"use_custom_default_size aktiverats."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
@@ -336,7 +380,9 @@ msgstr "Rullningslistens position"
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
-msgstr "Var terminalfönstrets rullningslist ska placeras. Möjliga val är \"left\" (vänster), \"right\" (höger) och \"hidden\" (dold)."
+msgstr ""
+"Var terminalfönstrets rullningslist ska placeras. Möjliga val är \"left\" "
+"(vänster), \"right\" (höger) och \"hidden\" (dold)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Number of lines to keep in scrollback"
@@ -347,7 +393,11 @@ msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
-msgstr "Antal rader i rullningshistoriken som ska behållas. Du kan rulla bakåt i terminalfönstret detta antal rader; rader som inte får plats i rullningshistoriken försvinner. Om scrollback_unlimited är sant så ignoreras detta värde."
+msgstr ""
+"Antal rader i rullningshistoriken som ska behållas. Du kan rulla bakåt i "
+"terminalfönstret detta antal rader; rader som inte får plats i "
+"rullningshistoriken försvinner. Om scrollback_unlimited är sant så ignoreras"
+" detta värde."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether an unlimited number of lines should be kept in scrollback"
@@ -358,7 +408,10 @@ msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
-msgstr "Om sant så kommer inga rader i rullningshistoriken att försvinna. Rullningshistoriken lagras temporärt på disk så detta kan orsaka att systemet får slut på diskutrymme om det är mycket utdata i terminalfönstret."
+msgstr ""
+"Om sant så kommer inga rader i rullningshistoriken att försvinna. "
+"Rullningshistoriken lagras temporärt på disk så detta kan orsaka att "
+"systemet får slut på diskutrymme om det är mycket utdata i terminalfönstret."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -366,7 +419,8 @@ msgstr "Om det ska rullas till nedersta läget då en tangent trycks ned"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:57
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr "Om sant hoppar rullningslisten till nedersta läget då en tangent trycks ned."
+msgstr ""
+"Om sant hoppar rullningslisten till nedersta läget då en tangent trycks ned."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to scroll to the bottom when there's new output"
@@ -375,7 +429,9 @@ msgstr "Om det ska rullas till nedersta läget då det finns ny utdata"
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
-msgstr "Om sant kommer terminalfönstret att rulla till nedersta läget när det finns ny utdata."
+msgstr ""
+"Om sant kommer terminalfönstret att rulla till nedersta läget när det finns "
+"ny utdata."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "What to do with the terminal when the child command exits"
@@ -385,27 +441,36 @@ msgstr "Vad som ska göras med terminalfönstret när barnkommandot avslutar"
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
-msgstr "Möjliga värden är \"close\" för att stänga terminalfönstret och \"restart\" för att starta om kommandot."
+msgstr ""
+"Möjliga värden är \"close\" för att stänga terminalfönstret och \"restart\" "
+"för att starta om kommandot."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Huruvida kommandot inuti terminalfönstret ska startas som inloggningsskal"
+msgstr ""
+"Huruvida kommandot inuti terminalfönstret ska startas som inloggningsskal"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "Om sant kommer kommandot inuti terminalfönstret att startas som ett inloggningsskal (argv[0] kommer att ha ett bindestreck före)."
+msgstr ""
+"Om sant kommer kommandot inuti terminalfönstret att startas som ett "
+"inloggningsskal (argv[0] kommer att ha ett bindestreck före)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to update login records when launching terminal command"
-msgstr "Huruvida inloggningsposter ska uppdateras då ett nytt terminalkommando startas"
+msgstr ""
+"Huruvida inloggningsposter ska uppdateras då ett nytt terminalkommando "
+"startas"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
-msgstr "Om sant kommer systemets inloggningsposter, utmp och wtmp, att uppdateras när kommandot inuti terminalfönstret startas."
+msgstr ""
+"Om sant kommer systemets inloggningsposter, utmp och wtmp, att uppdateras "
+"när kommandot inuti terminalfönstret startas."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
@@ -415,7 +480,9 @@ msgstr "Huruvida ett eget kommando ska köras istället för skalet"
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "Om sant kommer värdet för inställningen custom_command att användas istället för att ett skal körs."
+msgstr ""
+"Om sant kommer värdet för inställningen custom_command att användas istället"
+" för att ett skal körs."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Whether to blink the cursor"
@@ -425,7 +492,10 @@ msgstr "Om markören ska blinka"
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
-msgstr "Möjliga värden är \"system\" för att använda globala inställningar för markörblinkning, eller \"on\" eller \"off\" för att uttryckligen ställa in önskat läge."
+msgstr ""
+"Möjliga värden är \"system\" för att använda globala inställningar för "
+"markörblinkning, eller \"on\" eller \"off\" för att uttryckligen ställa in "
+"önskat läge."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "The cursor appearance"
@@ -435,7 +505,10 @@ msgstr "Markörens utseende"
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
-msgstr "Möjliga värden är \"block\" för att använda en blockmarkör, \"ibeam\" för att använda en vertikal linje eller \"underline\" för att använda ett understrykningstecken."
+msgstr ""
+"Möjliga värden är \"block\" för att använda en blockmarkör, \"ibeam\" för "
+"att använda en vertikal linje eller \"underline\" för att använda ett "
+"understrykningstecken."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Custom command to use instead of the shell"
@@ -443,7 +516,8 @@ msgstr "Eget kommando att använda istället för skalet"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Kör detta kommando istället för skalet, om use_custom_command är sant."
+msgstr ""
+"Kör detta kommando istället för skalet, om use_custom_command är sant."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Icon for terminal window"
@@ -462,7 +536,10 @@ msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr "Terminalen har en palett med 16 färger som program i terminalen kan använda. Detta är den paletten, i form av en kolonseparerad lista med färgnamn. Färgnamn ska skrivas i hexadecimalt format, till exempel \"#FF00FF\""
+msgstr ""
+"Terminalen har en palett med 16 färger som program i terminalen kan använda."
+" Detta är den paletten, i form av en kolonseparerad lista med färgnamn. "
+"Färgnamn ska skrivas i hexadecimalt format, till exempel \"#FF00FF\""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Font"
@@ -481,7 +558,11 @@ msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
-msgstr "Typ av terminalbakgrund. Kan vara \"solid\" för enfärgad, \"image\" för en bild eller \"transparent\" för antingen riktig genomskinlighet om en fönsterhanterare med \"compositing\" används eller annars pseudogenomskinlighet."
+msgstr ""
+"Typ av terminalbakgrund. Kan vara \"solid\" för enfärgad, \"image\" för en "
+"bild eller \"transparent\" för antingen riktig genomskinlighet om en "
+"fönsterhanterare med \"compositing\" används eller annars "
+"pseudogenomskinlighet."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Background image"
@@ -499,7 +580,9 @@ msgstr "Om bakgrundsbilden ska rullas"
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
-msgstr "Om sant så rullas bakgrundsbilden tillsammans med förgrundstexten; om falskt så fixeras bildens position medan texten rullas ovanför den."
+msgstr ""
+"Om sant så rullas bakgrundsbilden tillsammans med förgrundstexten; om falskt"
+" så fixeras bildens position medan texten rullas ovanför den."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "How much to darken the background image"
@@ -511,7 +594,12 @@ msgid ""
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
-msgstr "Ett värde mellan 0,0 och 1,0 som indikerar hur mycket bakgrundsbilden ska förmörkas. 0,0 betyder ingen mörkhet, 1,0 betyder helt mörk. I den nuvarande implementationen finns det bara två möjliga nivåer för mörkhet, så inställningen beter sig som ett booleskt värde, där 0,0 inaktiverar förmörkningseffekten."
+msgstr ""
+"Ett värde mellan 0,0 och 1,0 som indikerar hur mycket bakgrundsbilden ska "
+"förmörkas. 0,0 betyder ingen mörkhet, 1,0 betyder helt mörk. I den nuvarande"
+" implementationen finns det bara två möjliga nivåer för mörkhet, så "
+"inställningen beter sig som ett booleskt värde, där 0,0 inaktiverar "
+"förmörkningseffekten."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Backspace key"
@@ -524,7 +612,12 @@ msgid ""
 "ASCII BS character), \"escape-sequence\" for the escape sequence typically "
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
-msgstr "Ställer in vilken kod som backstegstangenten genererar. Möjliga värden är \"ascii-del\" för tecknet ASCII DEL, \"control-h\" för Control-H (även känt som tecknet ASCII BS), \"escape-sequence\" för kontrollsekvensen som normalt är bunden till backsteg eller delete. \"ascii-del\" betraktas normalt som den korrekta inställningen för backstegstangenten."
+msgstr ""
+"Ställer in vilken kod som backstegstangenten genererar. Möjliga värden är "
+"\"ascii-del\" för tecknet ASCII DEL, \"control-h\" för Control-H (även känt "
+"som tecknet ASCII BS), \"escape-sequence\" för kontrollsekvensen som normalt"
+" är bunden till backsteg eller delete. \"ascii-del\" betraktas normalt som "
+"den korrekta inställningen för backstegstangenten."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Effect of the Delete key"
@@ -537,7 +630,12 @@ msgid ""
 "character), \"escape-sequence\" for the escape sequence typically bound to "
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
-msgstr "Ställer in vilken kod som delete-tangenten genererar. Möjliga värden är \"ascii-del\" för tecknet ASCII DEL, \"control-h\" för Control-H (även känt som tecknet ASCII BS), \"escape-sequence\" för kontrollsekvensen som normalt är bunden till backsteg eller delete. \"escape-sequence\" betraktas normalt som den korrekta inställningen för delete-tangenten."
+msgstr ""
+"Ställer in vilken kod som delete-tangenten genererar. Möjliga värden är "
+"\"ascii-del\" för tecknet ASCII DEL, \"control-h\" för Control-H (även känt "
+"som tecknet ASCII BS), \"escape-sequence\" för kontrollsekvensen som normalt"
+" är bunden till backsteg eller delete. \"escape-sequence\" betraktas normalt"
+" som den korrekta inställningen för delete-tangenten."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -547,7 +645,10 @@ msgstr "Om färgerna från temat ska användas för terminalwidgeten"
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
-msgstr "Om sant kommer temafärgschemat som används för textinmatningsfält att användas för terminalfönstret istället för de färger som angetts av användaren."
+msgstr ""
+"Om sant kommer temafärgschemat som används för textinmatningsfält att "
+"användas för terminalfönstret istället för de färger som angetts av "
+"användaren."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Whether to use the system font"
@@ -557,7 +658,9 @@ msgstr "Om systemtypsnittet ska användas"
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
-msgstr "Om sant kommer terminalfönstret att använda det globala skrivbordstypsnittet om det har fast breddsteg (och annars det typsnitt som är mest likt)."
+msgstr ""
+"Om sant kommer terminalfönstret att använda det globala skrivbordstypsnittet"
+" om det har fast breddsteg (och annars det typsnitt som är mest likt)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Highlight S/Key challenges"
@@ -567,7 +670,10 @@ msgstr "Framhäv svar på S/key-utmaningar"
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "Visa ett dialogfönster då en svar på S/key-utmaning efterfrågas, detekteras och klickas på. Genom att ange ett lösenord i dialogfönstret kommer det att skickas till terminalfönstret."
+msgstr ""
+"Visa ett dialogfönster då en svar på S/key-utmaning efterfrågas, detekteras "
+"och klickas på. Genom att ange ett lösenord i dialogfönstret kommer det att "
+"skickas till terminalfönstret."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
@@ -579,7 +685,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
+"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to open a new window"
@@ -591,7 +701,11 @@ msgid ""
 " same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to create a new profile"
@@ -603,7 +717,11 @@ msgid ""
 "Expressed as a string in the same format used for GTK+ resource files. If "
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
-msgstr "Snabbtangent för att ta fram dialogen för ny profil. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att ta fram dialogen för ny profil. Uttryckt som en sträng "
+"i samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -615,7 +733,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
+"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a tab"
@@ -627,7 +749,11 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
+"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to close a window"
@@ -639,7 +765,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to copy text"
@@ -651,7 +781,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
+"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to paste text"
@@ -663,7 +797,11 @@ msgid ""
 "terminal. Expressed as a string in the same format used for GTK+ resource "
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
-msgstr "Snabbtangent för att klistra in markerad text från urklipp till terminalen. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
+msgstr ""
+"Snabbtangent för att klistra in markerad text från urklipp till terminalen. "
+"Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om "
+"du ställer in detta alternativ till specialsträngen \"disabled\" kommer det "
+"inte att finnas någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to select all text"
@@ -687,7 +825,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för visa sökdialogen. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
+msgstr ""
+"Snabbtangent för visa sökdialogen. Uttryckt som en sträng i samma format som"
+" används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon "
+"tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the next occurrence of the search term"
@@ -723,7 +865,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Snabbtangent för att växla till och från helskärmsläge. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att växla till och från helskärmsläge. Uttryckt som en "
+"sträng i samma format som används för GTK+-resursfiler. Om du ställer in "
+"detta alternativ till specialsträngen \"disabled\" kommer det inte att "
+"finnas någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
@@ -735,7 +881,11 @@ msgid ""
 "a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Snabbtangent för att växla synligheten för menyraden. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att växla synligheten för menyraden. Uttryckt som en sträng"
+" i samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to set the terminal title"
@@ -747,7 +897,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att ställa in terminaltiteln. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att ställa in terminaltiteln. Uttryckt som en sträng i "
+"samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset the terminal"
@@ -759,7 +913,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att återställa terminalfönstret. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att återställa terminalfönstret. Uttryckt som en sträng i "
+"samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to reset and clear the terminal"
@@ -771,7 +929,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Snabbtangent för att återställa och tömma terminalfönstret. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att återställa och tömma terminalfönstret. Uttryckt som en "
+"sträng i samma format som används för GTK+-resursfiler. Om du ställer in "
+"detta alternativ till specialsträngen \"disabled\" kommer det inte att "
+"finnas någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -783,7 +945,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Snabbtangent för att byta till föregående flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till föregående flik. Uttryckt som en sträng i "
+"samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the next tab"
@@ -795,7 +961,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att byta till nästa flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till nästa flik. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the previous profile"
@@ -807,7 +977,11 @@ msgid ""
 "string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Snabbtangent för att byta till föregående profil. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till föregående profil. Uttryckt som en sträng i "
+"samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to the next profile"
@@ -819,7 +993,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Snabbtangent för att byta till nästa profil. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till nästa profil. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the left."
@@ -831,7 +1009,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "Snabbtangent för att flytta aktuell flik till vänster. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
+msgstr ""
+"Snabbtangent för att flytta aktuell flik till vänster. Uttryckt som en "
+"sträng i samma format som används för GTK+-resursfiler. Om du ställer in "
+"detta alternativ till specialsträngen \"disabled\" kommer det inte att "
+"finnas någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to move the current tab to the right."
@@ -843,7 +1025,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "Snabbtangent för att flytta aktuell flik till höger. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
+msgstr ""
+"Snabbtangent för att flytta aktuell flik till höger. Uttryckt som en sträng "
+"i samma format som används för GTK+-resursfiler. Om du ställer in detta "
+"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
+"någon tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Accelerator to detach current tab."
@@ -854,7 +1040,11 @@ msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
-msgstr "Snabbtangent för att frigöra aktuell flik. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon tangentbindning för denna åtgärd."
+msgstr ""
+"Snabbtangent för att frigöra aktuell flik. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"tangentbindning för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 1"
@@ -866,7 +1056,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 1. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 1. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 2"
@@ -878,7 +1072,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 2. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till snabbtangent \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 2. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"snabbtangent \"disabled\" kommer det inte att finnas någon snabbtangent för "
+"denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 3"
@@ -890,7 +1088,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 3. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 3. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 4"
@@ -902,7 +1104,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 4. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 4. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 5"
@@ -914,7 +1120,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 5. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 5. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 6"
@@ -926,7 +1136,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 6. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 6. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 7"
@@ -938,7 +1152,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 7. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 7. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 8"
@@ -950,7 +1168,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 8. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 8. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 9"
@@ -962,7 +1184,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att byta till flik 9. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 9. Uttryckt som en sträng i samma format"
+" som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 10"
@@ -974,7 +1200,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att byta till flik 10. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 10. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 11"
@@ -986,7 +1216,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att byta till flik 11. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 11. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to switch to tab 12"
@@ -998,7 +1232,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att byta till flik 12. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att byta till flik 12. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to launch help"
@@ -1010,7 +1248,11 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Snabbtangent för att starta hjälpen. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att starta hjälpen. Uttryckt som en sträng i samma format "
+"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
+"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
+"för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font larger"
@@ -1022,7 +1264,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att göra typsnitt större. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att göra typsnitt större. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font smaller"
@@ -1034,7 +1280,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Snabbtangent för att göra typsnitt mindre. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att göra typsnitt mindre. Uttryckt som en sträng i samma "
+"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
+"till specialsträngen \"disabled\" kommer det inte att finnas någon "
+"snabbtangent för denna åtgärd."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:176
 msgid "Keyboard shortcut to make font normal-size"
@@ -1046,7 +1296,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Snabbtangent för att göra typsnitt till normal storlek. Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om du ställer in detta alternativ till specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent för denna åtgärd."
+msgstr ""
+"Snabbtangent för att göra typsnitt till normal storlek. Uttryckt som en "
+"sträng i samma format som används för GTK+-resursfiler. Om du ställer in "
+"detta alternativ till specialsträngen \"disabled\" kommer det inte att "
+"finnas någon snabbtangent för denna åtgärd."
 
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
@@ -1156,7 +1410,8 @@ msgstr "Tangentbordsgenvägar"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "_Aktivera menyåtkomsttangenter (exempelvis Alt+A för att öppna Arkiv-menyn)"
+msgstr ""
+"_Aktivera menyåtkomsttangenter (exempelvis Alt+A för att öppna Arkiv-menyn)"
 
 #: ../src/keybinding-editor.ui.h:3
 msgid "Enable the _menu shortcut key (F10 by default)"
@@ -1203,7 +1458,7 @@ msgstr "I-Beam"
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
 msgid "Underline"
-msgstr "Understreck"
+msgstr "Understruken"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
@@ -1301,7 +1556,7 @@ msgstr "Inaktiverad"
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:24
 msgid "Automatic"
-msgstr "Automatisk"
+msgstr "Automatiskt"
 
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:26
@@ -1352,7 +1607,7 @@ msgstr "_Använd systemets typsnitt med fast breddsteg"
 
 #: ../src/profile-preferences.ui.h:31
 msgid "_Font:"
-msgstr "_Typsnitt:"
+msgstr "T_ypsnitt:"
 
 #: ../src/profile-preferences.ui.h:32
 msgid "Choose A Terminal Font"
@@ -1502,7 +1757,9 @@ msgstr "Färgp_alett:"
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
-msgstr "<small><i><b>Notera:</b> Terminalprogram har dessa färger tillgängliga.</i></small>"
+msgstr ""
+"<small><i><b>Notera:</b> Terminalprogram har dessa färger "
+"tillgängliga.</i></small>"
 
 #: ../src/profile-preferences.ui.h:69
 msgid "Colors"
@@ -1586,7 +1843,11 @@ msgid ""
 "incorrectly.  They are only here to allow you to work around certain "
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
-msgstr "<small><i><b>Notera:</b> Dessa alternativ kan orsaka att en del program inte beter sig som de ska. De finns endast här för att låta dig kunna använda vissa program och operativsystem som förväntar sig ett annat terminalbeteende.</i></small>"
+msgstr ""
+"<small><i><b>Notera:</b> Dessa alternativ kan orsaka att en del program inte"
+" beter sig som de ska. De finns endast här för att låta dig kunna använda "
+"vissa program och operativsystem som förväntar sig ett annat "
+"terminalbeteende.</i></small>"
 
 #: ../src/profile-preferences.ui.h:89
 msgid "_Delete key generates:"
@@ -1680,7 +1941,7 @@ msgstr "Sök nästa"
 msgid "Find Previous"
 msgstr "Sök föregående"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4231
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
 msgid "Set Title"
 msgstr "Ställ in titel"
 
@@ -1831,7 +2092,9 @@ msgstr "Ta bort profil"
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "Du har redan en profil med namnet \"%s\". Vill du skapa en annan profil med samma namn?"
+msgstr ""
+"Du har redan en profil med namnet \"%s\". Vill du skapa en annan profil med "
+"samma namn?"
 
 #: ../src/terminal-app.c:1239
 msgid "Choose base profile"
@@ -1880,17 +2143,17 @@ msgstr "Baltisk"
 #: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
 #: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
 msgid "Cyrillic"
-msgstr "Kyrillisk"
+msgstr "Kyrilliska"
 
 #: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
 #: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
 msgid "Arabic"
-msgstr "Arabisk"
+msgstr "Arabiska"
 
 #: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
 #: ../src/terminal-encoding.c:114
 msgid "Greek"
-msgstr "Grekisk"
+msgstr "Grekiska"
 
 #: ../src/terminal-encoding.c:60
 msgid "Hebrew Visual"
@@ -1899,7 +2162,7 @@ msgstr "Synlig hebreisk"
 #: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
 #: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
 msgid "Hebrew"
-msgstr "Hebreisk"
+msgstr "Hebreiska"
 
 #: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
 #: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
@@ -1929,7 +2192,7 @@ msgstr "Unicode"
 
 #: ../src/terminal-encoding.c:69
 msgid "Armenian"
-msgstr "Armensk"
+msgstr "Armeniska"
 
 #: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
 #: ../src/terminal-encoding.c:75
@@ -1957,7 +2220,7 @@ msgstr "Förenklad kinesisk"
 
 #: ../src/terminal-encoding.c:79
 msgid "Georgian"
-msgstr "Georgisk"
+msgstr "Georgiska"
 
 #: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
@@ -1994,7 +2257,7 @@ msgstr "Vietnamesisk"
 
 #: ../src/terminal-encoding.c:108
 msgid "Thai"
-msgstr "Thai"
+msgstr "Thailändska"
 
 #: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
 msgid "_Description"
@@ -2014,7 +2277,10 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "Flaggan \"%s\" stöds inte längre i denna version av mate-terminal. Du vill kanske skapa en profil med den önskade inställningen och använda den nya flaggan \"--profile\"\n"
+msgstr ""
+"Flaggan \"%s\" stöds inte längre i denna version av mate-terminal. Du vill "
+"kanske skapa en profil med den önskade inställningen och använda den nya "
+"flaggan \"--profile\"\n"
 
 #: ../src/terminal-options.c:209
 #, c-format
@@ -2050,7 +2316,9 @@ msgstr "Zoomfaktorn \"%g\" är för stor, använder %g\n"
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr "Flaggan \"%s\" kräver att det kommando som ska köras anges på resten av kommandoraden"
+msgstr ""
+"Flaggan \"%s\" kräver att det kommando som ska köras anges på resten av "
+"kommandoraden"
 
 #: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
@@ -2064,7 +2332,8 @@ msgstr "Inkompatibel version för terminalkonfigurationsfil."
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "Registrera inte i aktiveringsnamnservern, återanvänd inte en aktiv terminal"
+msgstr ""
+"Registrera inte i aktiveringsnamnservern, återanvänd inte en aktiv terminal"
 
 #: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
@@ -2101,7 +2370,9 @@ msgstr "Helskärm för fönstret"
 #: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr "Ställ in fönsterstorleken; till exempel: 80x24 eller 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
+"Ställ in fönsterstorleken; till exempel: 80x24 eller 80x24+200+200 "
+"(COLSxROWS+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2167,7 +2438,9 @@ msgstr "Visa flaggor för MATE-terminal"
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "Flaggor för att öppna nya fönster eller terminalflikar; fler än en av dessa kan anges:"
+msgstr ""
+"Flaggor för att öppna nya fönster eller terminalflikar; fler än en av dessa "
+"kan anges:"
 
 #: ../src/terminal-options.c:1381
 msgid "Show terminal options"
@@ -2177,7 +2450,9 @@ msgstr "Visa terminalflaggor"
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "Fönsterflaggor; om används innan första argumentet --window eller --tab, ställer in standarden för alla fönster:"
+msgstr ""
+"Fönsterflaggor; om används innan första argumentet --window eller --tab, "
+"ställer in standarden för alla fönster:"
 
 #: ../src/terminal-options.c:1390
 msgid "Show per-window options"
@@ -2187,7 +2462,9 @@ msgstr "Visa flaggor för per-fönster"
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "Terminalflaggor; om används innan första argumentet --window eller --tab, ställer in standarden för alla terminaler:"
+msgstr ""
+"Terminalflaggor; om används innan första argumentet --window eller --tab, "
+"ställer in standarden för alla terminaler:"
 
 #: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
@@ -2197,33 +2474,33 @@ msgstr "Visa flaggor för per-terminal"
 msgid "Unnamed"
 msgstr "Namnlös"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr "Profil_inställningar"
 
-#: ../src/terminal-screen.c:1545 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr "Sta_rta igen"
 
-#: ../src/terminal-screen.c:1548
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr "Ett fel uppstod vid skapande av barnprocessen för denna terminal"
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Barnprocessen avslutades normalt med status %d."
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Barnprocessen terminerades av signal %d."
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr "Barnprocessen terminerades."
 
-#: ../src/terminal-tab-label.c:137
+#: ../src/terminal-tab-label.c:132
 msgid "Close tab"
 msgstr "Stäng flik"
 
@@ -2231,42 +2508,53 @@ msgstr "Stäng flik"
 msgid "Switch to this tab"
 msgstr "Växla till denna flik"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:145
 msgid "There was an error displaying help"
-msgstr "Ett fel uppstod vid visning av hjälpen"
+msgstr "Det uppstod ett fel vid visning av hjälp"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Kunde inte öppna adressen \"%s\""
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
-msgstr "MATE-terminal är fri programvara. Du kan distribuera det och/eller modifiera det under villkoren i GNU General Public License, publicerad av Free Software Foundation, antingen version 3 eller (om du så vill) någon senare version."
+msgstr ""
+"MATE-terminal är fri programvara. Du kan distribuera det och/eller modifiera"
+" det under villkoren i GNU General Public License, publicerad av Free "
+"Software Foundation, antingen version 3 eller (om du så vill) någon senare "
+"version."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
-msgstr "MATE-terminal distribueras i hopp om att det ska vara användbart, men UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för ytterligare information."
+msgstr ""
+"MATE-terminal distribueras i hopp om att det ska vara användbart, men UTAN "
+"NÅGON SOM HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller"
+" LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för "
+"ytterligare information."
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Du bör ha fått en kopia av GNU General Public License tillsammans med detta program. Om inte, skriv till Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"Du bör ha fått en kopia av GNU General Public License tillsammans med detta "
+"program. Om inte, skriv till Free Software Foundation, Inc., 51 Franklin St,"
+" Fifth Floor, Boston, MA  02110-1301 USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:682
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2274,259 +2562,263 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:688
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr "_Arkiv"
 
-#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
-#: ../src/terminal-window.c:2136
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
-msgstr "Öppna _terminalfönster"
+msgstr "Öppna _terminal"
 
-#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
-#: ../src/terminal-window.c:2141
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr "Öppna _flik"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr "_Redigera"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1868
 msgid "_View"
 msgstr "_Visa"
 
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1869
 msgid "_Search"
 msgstr "_Sök"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr "_Flikar"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1872
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/terminal-window.c:1905
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr "Ny _profil..."
 
-#: ../src/terminal-window.c:1910
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr "_Spara innehåll"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr "S_täng flik"
 
-#: ../src/terminal-window.c:1920
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
-msgstr "Stän_g fönster"
+msgstr "_Stäng fönster"
 
-#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr "Klistra in _filnamn"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr "P_rofiler..."
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr "Tan_gentbordsgenvägar..."
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr "Profil_inställningar"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
 msgstr "_Sök..."
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
-msgstr "Sök n_ästa"
+msgstr "Sök _nästa"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
-msgstr "Sök före_gående"
+msgstr "Sök _föregående"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
 msgstr "_Töm markering"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
 msgstr "Gå till _rad..."
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
 msgstr "_Inkrementell sökning..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr "Ändra _profil"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr "_Föregående profil"
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr "_Nästa profil"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr "A_nge titel..."
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr "Ställ in _teckenkodning"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
 msgstr "_Återställ"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr "Återställ och t_öm"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr "_Lägg till eller ta bort..."
 
-#: ../src/terminal-window.c:2051
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr "_Föregående flik"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr "_Nästa flik"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
 msgstr "Flytta flik till _vänster"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
 msgstr "Flytta flik till _höger"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr "Koppla _loss flik"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr "_Innehåll"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr "_Skicka e-post till..."
 
-#: ../src/terminal-window.c:2095
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr "_Kopiera e-postadress"
 
-#: ../src/terminal-window.c:2100
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr "Rin_g till…"
 
-#: ../src/terminal-window.c:2105
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr "_Kopiera samtalsadress"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr "_Öppna länk"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr "_Kopiera länkadress"
 
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr "P_rofiler"
 
-#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
 msgid "C_lose Window"
 msgstr "Stän_g fönster"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr "L_ämna helskärm"
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr "I_nmatningsmetoder"
 
-#: ../src/terminal-window.c:2167
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr "Visa _menyrad"
 
-#: ../src/terminal-window.c:2173
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr "_Helskärmsläge"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this window?"
 msgstr "Stäng detta fönster?"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this terminal?"
 msgstr "Stäng denna terminal?"
 
-#: ../src/terminal-window.c:3630
+#: ../src/terminal-window.c:3608
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
-msgstr "Det finns fortfarande processer igång i några terminaler i detta fönster. Stängning av fönstret kommer att döda dem alla."
+msgstr ""
+"Det finns fortfarande processer igång i några terminaler i detta fönster. "
+"Stängning av fönstret kommer att döda dem alla."
 
-#: ../src/terminal-window.c:3634
+#: ../src/terminal-window.c:3612
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
-msgstr "Det finns fortfarande en process igång i denna terminal. Stängning av terminalen kommer att döda den."
+msgstr ""
+"Det finns fortfarande en process igång i denna terminal. Stängning av "
+"terminalen kommer att döda den."
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3617
 msgid "C_lose Terminal"
 msgstr "S_täng terminal"
 
-#: ../src/terminal-window.c:3705
+#: ../src/terminal-window.c:3683
 msgid "Could not save contents"
 msgstr "Kunde inte spara innehåll"
 
-#: ../src/terminal-window.c:3729
+#: ../src/terminal-window.c:3707
 msgid "Save as..."
 msgstr "Spara som..."
 
-#: ../src/terminal-window.c:4248
+#: ../src/terminal-window.c:4226
 msgid "_Title:"
 msgstr "_Titel:"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4411
 msgid "Contributors:"
 msgstr "Bidragsgivare:"
 
-#: ../src/terminal-window.c:4456
+#: ../src/terminal-window.c:4430
 msgid "A terminal emulator for the MATE desktop"
 msgstr "En terminalemulator för skrivbordsmiljön MATE"
 
-#: ../src/terminal-window.c:4463
+#: ../src/terminal-window.c:4437
 msgid "translator-credits"
-msgstr "Christian Rose\nDaniel Nylander <po@danielnylander.se>\nPatrik Nilsson <asavar@tzeth.com>\nRichard Hult\n\nSkicka synpunkter på översättningen till\n<tp-sv@listor.tp-sv.se>."
+msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"

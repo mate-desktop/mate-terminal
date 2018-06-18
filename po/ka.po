@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 13:20+0300\n"
-"PO-Revision-Date: 2018-01-13 18:55+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Georgian (http://www.transifex.com/mate/MATE/language/ka/)\n"
+"POT-Creation-Date: 2018-03-17 19:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Georgian (https://www.transifex.com/mate/teams/13566/ka/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ka\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../mate-terminal.appdata.xml.in.h:1
 msgid "A terminal emulator for the MATE desktop environment"
@@ -33,13 +34,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4454
+#: ../src/terminal-window.c:4428
 msgid "MATE Terminal"
-msgstr "გნომ ტერმინალი"
+msgstr "გნომის ტერმინალი"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2210
+#: ../src/terminal-window.c:2193
 msgid "Terminal"
 msgstr "ტერმინალი"
 
@@ -49,24 +50,24 @@ msgstr "ბრზანების ხაზის გამოყენებ�
 
 #: ../src/eggsmclient.c:229
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "ვერ ვუკავშირდები სესიის მენეჯერს"
 
 #: ../src/eggsmclient.c:234
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "დამახსოვრებული კონფიგურაციის მქონე ფაილის მინიშნება"
 
 #: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
 #: ../src/terminal-options.c:973
 msgid "FILE"
-msgstr ""
+msgstr "ფაილი"
 
 #: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
-msgstr ""
+msgstr "აღნიშნეთ თუ რომელი სეანსი ჩაიტვირთოს"
 
 #: ../src/eggsmclient.c:239
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/eggsmclient.c:265
 msgid "Session management options:"
@@ -74,7 +75,7 @@ msgstr ""
 
 #: ../src/eggsmclient.c:266
 msgid "Show session management options"
-msgstr ""
+msgstr "აჩვენე სეანსის მართვის პარამეტრები"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:1
 msgid "List of profiles"
@@ -458,7 +459,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Font"
-msgstr ""
+msgstr "შრიფტი"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
@@ -466,7 +467,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background type"
-msgstr ""
+msgstr "ფონის ტიპი"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid ""
@@ -477,7 +478,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Background image"
-msgstr ""
+msgstr "საფონე ნახატი"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid "Filename of a background image."
@@ -1086,7 +1087,7 @@ msgstr ""
 #: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:82
 msgid "Custom"
-msgstr ""
+msgstr "სხვა"
 
 #: ../src/profile-editor.c:590
 msgid "Images"
@@ -1144,7 +1145,7 @@ msgstr ""
 
 #: ../src/keybinding-editor.ui.h:1
 msgid "Keyboard Shortcuts"
-msgstr "კლავიატურის ბმულები"
+msgstr "სხარტი კლავიშები"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
@@ -1168,11 +1169,11 @@ msgstr ""
 
 #: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:156
 msgid "New Profile"
-msgstr "ახალი პროფილი"
+msgstr "ახალი პროფაილი"
 
 #: ../src/profile-new-dialog.ui.h:2
 msgid "C_reate"
-msgstr "_შექმნა"
+msgstr "შექმნა"
 
 #: ../src/profile-new-dialog.ui.h:3
 msgid "Profile _name:"
@@ -1195,7 +1196,7 @@ msgstr ""
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
 msgid "Underline"
-msgstr ""
+msgstr "ხაზგასმული"
 
 #. Translators: When terminal commands set their own titles: ...
 #: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
@@ -1271,7 +1272,7 @@ msgstr ""
 #: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
 #: ../src/extra-strings.c:60
 msgid "Disabled"
-msgstr "გამორთულია"
+msgstr "გამორთული"
 
 #. * Copyright © 2009 Christian Persch
 #. *
@@ -1336,7 +1337,7 @@ msgstr "პროფილების რედაქტორი"
 
 #: ../src/profile-preferences.ui.h:29
 msgid "_Profile name:"
-msgstr "_პროფილის სახელი:"
+msgstr "_პროფაილის სახელი:"
 
 #: ../src/profile-preferences.ui.h:30
 msgid "_Use the system fixed width font"
@@ -1388,15 +1389,15 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:42
 msgid "columns"
-msgstr ""
+msgstr "სვეტი"
 
 #: ../src/profile-preferences.ui.h:43
 msgid "rows"
-msgstr ""
+msgstr "ხაზი"
 
 #: ../src/profile-preferences.ui.h:44
 msgid "General"
-msgstr "ძირითადი"
+msgstr "საერთო"
 
 #: ../src/profile-preferences.ui.h:45
 msgid "<b>Title</b>"
@@ -1498,7 +1499,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:69
 msgid "Colors"
-msgstr "ფერები"
+msgstr "ფერი"
 
 #: ../src/profile-preferences.ui.h:70
 msgid "_Solid color"
@@ -1542,7 +1543,7 @@ msgstr "<small><i>მაქსიმუმი</i></small>"
 
 #: ../src/profile-preferences.ui.h:80
 msgid "Background"
-msgstr ""
+msgstr "ფონი"
 
 #: ../src/profile-preferences.ui.h:81
 msgid "_Scrollbar is:"
@@ -1602,7 +1603,7 @@ msgstr ""
 
 #: ../src/skey-challenge.ui.h:2
 msgid "_Password:"
-msgstr ""
+msgstr "_პაროლი:"
 
 #: ../src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -1642,7 +1643,7 @@ msgstr "ჩასმა"
 
 #: ../src/terminal-accels.c:186
 msgid "Select All"
-msgstr ""
+msgstr "ყველას მონიშვნა"
 
 #: ../src/terminal-accels.c:194
 msgid "Hide and Show menubar"
@@ -1672,7 +1673,7 @@ msgstr ""
 msgid "Find Previous"
 msgstr ""
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4231
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
 msgid "Set Title"
 msgstr "სათაურის მითითება"
 
@@ -1778,7 +1779,7 @@ msgstr "ხედი"
 
 #: ../src/terminal-accels.c:349
 msgid "Search"
-msgstr ""
+msgstr "ძებნა"
 
 #: ../src/terminal-accels.c:351
 msgid "Tabs"
@@ -1969,11 +1970,11 @@ msgstr "სპარსული"
 
 #: ../src/terminal-encoding.c:98
 msgid "Gujarati"
-msgstr "გუჯარათული"
+msgstr "გუჯარათი"
 
 #: ../src/terminal-encoding.c:99
 msgid "Gurmukhi"
-msgstr "გურმუხული"
+msgstr "გურმუხი"
 
 #: ../src/terminal-encoding.c:101
 msgid "Icelandic"
@@ -2084,7 +2085,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1028
 msgid "Maximize the window"
-msgstr ""
+msgstr "მთელს ეკრანზე გაშლა"
 
 #: ../src/terminal-options.c:1037
 msgid "Full-screen the window"
@@ -2097,7 +2098,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
-msgstr ""
+msgstr "გეომეტრია"
 
 #: ../src/terminal-options.c:1055
 msgid "Set the window role"
@@ -2129,7 +2130,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1097
 msgid "TITLE"
-msgstr ""
+msgstr "სათაური"
 
 #: ../src/terminal-options.c:1105
 msgid "Set the working directory"
@@ -2189,50 +2190,50 @@ msgstr ""
 msgid "Unnamed"
 msgstr ""
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1545 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1548
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr ""
 
-#: ../src/terminal-tab-label.c:137
+#: ../src/terminal-tab-label.c:132
 msgid "Close tab"
-msgstr ""
+msgstr "დაფის დ_ახურვა"
 
 #: ../src/terminal-tabs-menu.c:198
 msgid "Switch to this tab"
 msgstr ""
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:145
 msgid "There was an error displaying help"
 msgstr ""
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr ""
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2240,7 +2241,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2248,7 +2249,7 @@ msgid ""
 "more details."
 msgstr ""
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2258,7 +2259,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:682
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d.·%s"
@@ -2266,259 +2267,259 @@ msgstr "_%d.·%s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:688
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c.·%s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr "_ფაილი"
 
-#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
-#: ../src/terminal-window.c:2136
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
-msgstr "გახსენი _ტერმინალი"
+msgstr "_ტერმინალის გაშვება"
 
-#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
-#: ../src/terminal-window.c:2141
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr "გახსენი ჩ_ანართი"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr "_დამუშავება"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1868
 msgid "_View"
-msgstr "ხ_ედი"
+msgstr "_ხედი"
 
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1869
 msgid "_Search"
 msgstr "_ძებნა"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr "_ტერმინალი"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr "ჩანა_რთები"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1872
 msgid "_Help"
 msgstr "_დახმარება"
 
-#: ../src/terminal-window.c:1905
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr ""
 
-#: ../src/terminal-window.c:1910
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr "ჩანართის და_ხურვა"
 
-#: ../src/terminal-window.c:1920
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
-msgstr "_დახურე ფანჯარა"
+msgstr "_ფანჯრის დახურვა"
 
-#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr ""
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr ""
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
 msgstr "_ძიება..."
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
 msgstr "შემდეგის ძ_იება"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
-msgstr ""
+msgstr "წ_ინას მოძებნა"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
-msgstr ""
+msgstr "_გაწმინდე მარკირება"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr "პროფილის _შეცვლა"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr ""
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr "სიმბოლოთა _კოდირების მითითება"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
 msgstr "_განულება"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr ""
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr ""
 
-#: ../src/terminal-window.c:2051
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr "_წინა ჩანართი"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr "_შემდეგი ჩანართი"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "დაფის _მარცხნივ გადატანა"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "დაფის მა_რჯვნივ გადატანა"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr ""
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr "_შინაარსი"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr "_შესახებ"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr ""
 
-#: ../src/terminal-window.c:2095
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr "_დააკოპირე ელ-ფოსტის მისამართი"
 
-#: ../src/terminal-window.c:2100
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr ""
 
-#: ../src/terminal-window.c:2105
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr ""
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr "_ბმულის გახსნა"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr "დაა_კოპირე ბმულის მისამართი"
 
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr ""
 
-#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
 msgid "C_lose Window"
 msgstr ""
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr ""
 
-#: ../src/terminal-window.c:2167
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr "მენ_უს ჩვენება"
 
-#: ../src/terminal-window.c:2173
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr "_სრული ეკრანი"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this window?"
 msgstr ""
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this terminal?"
 msgstr ""
 
-#: ../src/terminal-window.c:3630
+#: ../src/terminal-window.c:3608
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: ../src/terminal-window.c:3634
+#: ../src/terminal-window.c:3612
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr ""
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3617
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3705
+#: ../src/terminal-window.c:3683
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3729
+#: ../src/terminal-window.c:3707
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:4248
+#: ../src/terminal-window.c:4226
 msgid "_Title:"
 msgstr "_სათაური:"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4411
 msgid "Contributors:"
 msgstr ""
 
-#: ../src/terminal-window.c:4456
+#: ../src/terminal-window.c:4430
 msgid "A terminal emulator for the MATE desktop"
 msgstr ""
 
-#: ../src/terminal-window.c:4463
+#: ../src/terminal-window.c:4437
 msgid "translator-credits"
-msgstr "თარგმანი-შესრულებულია"
+msgstr "Vladimer Sichinava ვლადიმერ სიჭინავა <vsichi@gnome.org>"
