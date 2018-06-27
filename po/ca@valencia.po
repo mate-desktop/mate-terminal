@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Pilar Embid <embid.mar@gmail.com>, 2017
-# Pilar Embid Giner <embid_mar@gva.es>, 2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 13:20+0300\n"
-"PO-Revision-Date: 2018-01-13 18:55+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Catalan (Valencian) (http://www.transifex.com/mate/MATE/language/ca%40valencia/)\n"
+"POT-Creation-Date: 2018-03-17 19:52+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Pilar Embid <embid.mar@gmail.com>, 2018\n"
+"Language-Team: Catalan (Valencian) (https://www.transifex.com/mate/teams/13566/ca%40valencia/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,26 +31,34 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> El Terminal del MATE és una aplicació d'emulació de terminal que pot utilitzar-se per a accedir a un intèrpret d'ordres d'UNIX a l'entorn MATE. El Terminal del MATE emula el programa xterm desenvolupat per l'X Consortium. És compatible amb els fons transparents, l'obertura de múltiples terminals en una sola finestra (pestanyes) i es poden fer clic als URL. </p> <p> El Terminal del MATE és una derivació del terminal del GNOME, i part de l'entorn d'escriptori MATE. Si voleu saber més sobre el MATE i el terminal del MATE, visiteu la pàgina principal del projecte. </p>"
+msgstr ""
+"<p> El Terminal del MATE és una aplicació d'emulació de terminal que pot "
+"utilitzar-se per a accedir a un intèrpret d'ordres d'UNIX a l'entorn MATE. "
+"El Terminal del MATE emula el programa xterm desenvolupat per l'X "
+"Consortium. És compatible amb els fons transparents, l'obertura de múltiples"
+" terminals en una sola finestra (pestanyes) i es poden fer clic als URL. "
+"</p> <p> El Terminal del MATE és una derivació del terminal del GNOME, i "
+"part de l'entorn d'escriptori MATE. Si voleu saber més sobre el MATE i el "
+"terminal del MATE, visiteu la pàgina principal del projecte. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4454
+#: ../src/terminal-window.c:4428
 msgid "MATE Terminal"
 msgstr "Terminal del MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2210
+#: ../src/terminal-window.c:2193
 msgid "Terminal"
 msgstr "Terminal"
 
 #: ../mate-terminal.desktop.in.in.h:3
 msgid "Use the command line"
-msgstr "Obriu la línia d'ordres"
+msgstr "Utilitza la línia d'ordres"
 
 #: ../src/eggsmclient.c:229
 msgid "Disable connection to session manager"
-msgstr "Inhabilita la connexió al gestor de sessió"
+msgstr "Inhabilita la connexió al gestor de la sessió"
 
 #: ../src/eggsmclient.c:234
 msgid "Specify file containing saved configuration"
@@ -64,19 +71,19 @@ msgstr "FITXER"
 
 #: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
-msgstr "Especifiqueu l'identificador de gestió de sessió"
+msgstr "Especifiqueu l'identificador del gestor de la sessió"
 
 #: ../src/eggsmclient.c:239
 msgid "ID"
-msgstr "IDENTIFICADOR"
+msgstr "ID"
 
 #: ../src/eggsmclient.c:265
 msgid "Session management options:"
-msgstr "Opcions de la gestió de sessió:"
+msgstr "Opcions del gestor de la sessió:"
 
 #: ../src/eggsmclient.c:266
 msgid "Show session management options"
-msgstr "Mostra les opcions de la gestió de sessió"
+msgstr "Mostra les opcions del gestor de la sessió"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:1
 msgid "List of profiles"
@@ -86,7 +93,9 @@ msgstr "Llista de perfils"
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
-msgstr "La llista dels perfils coneguts per a mate-terminal. La llista conté cadenes que anomenen els subdirectoris relatius a  /org/mate/terminal/profiles."
+msgstr ""
+"La llista dels perfils coneguts per a mate-terminal. La llista conté cadenes"
+" que anomenen els subdirectoris relatius a  /org/mate/terminal/profiles."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:3
 msgid "Profile to use for new terminals"
@@ -96,7 +105,9 @@ msgstr "Perfil que s'utilitza per als terminals nous"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr "El perfil que s'utilitza quan s'obri una finestra nova o una pestanya. Ha d'estar a profile_list."
+msgstr ""
+"El perfil que s'utilitza quan s'obri una finestra nova o una pestanya. Ha "
+"d'estar a profile_list."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
@@ -107,18 +118,27 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr "Si s'han de tindre les dreceres Alt+lletra a la barra de menús. Aquestes dreceres poden interferir amb algunes de les aplicacions que s'executen dins del terminal, per aquest motiu és possible apagar-lo."
+msgstr ""
+"Si s'han de tindre les dreceres Alt+lletra a la barra de menús. Aquestes "
+"dreceres poden interferir amb algunes de les aplicacions que s'executen dins"
+" del terminal, per aquest motiu és possible apagar-lo."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
-msgstr "Si la drecera estàndard de GTK+ per a l'accés a la barra de menú està habilitada"
+msgstr ""
+"Si la drecera estàndard de GTK+ per a l'accés a la barra de menú està "
+"habilitada"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
-msgstr "Normalment podeu accedir a la barra de menús amb F10. Això també es pot personalitzar mitjançant gtkrc (gtk-menu-bar-accel = «whatever»). Aquesta opció permet que l'accelerador de barra de menú estàndard es puga inhabilitar."
+msgstr ""
+"Normalment podeu accedir a la barra de menús amb F10. Això també es pot "
+"personalitzar mitjançant gtkrc (gtk-menu-bar-accel = «whatever»). Aquesta "
+"opció permet que l'accelerador de barra de menú estàndard es puga "
+"inhabilitar."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
@@ -135,6 +155,10 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Es presenta un subconjunt de codificacions possibles al submenú "
+"«Codificacions». Aquesta és una llista de codificacions que apareixen allí. "
+"El nom de codificació especial «current» vol dir que s'ha de mostrar la "
+"codificació de la 'configuració local' (locale) actual."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -144,25 +168,31 @@ msgstr "Si s'ha de demanar confirmació en tancar les finestres del terminal"
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab."
-msgstr "Si es demana la confirmació quan es tanca una finestra del terminal que té més d'una pestanya oberta."
+msgstr ""
+"Si es demana la confirmació quan es tanca una finestra del terminal que té "
+"més d'una pestanya oberta."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgid "Close tabs with middle click"
-msgstr ""
+msgstr "Tanca les pestanyes amb un clic del botó del mig"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Si s'estableix a cert, s'habilita la funcionalitat del tancament de les "
+"pestanyes amb un clic del botó del mig."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgid "Switch tabs with [Ctrl]+[Tab]"
-msgstr ""
+msgstr "Canvia de pestanya amb [Ctrl]+[Tab]"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:17
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Si s'estableix a cert, s'habilita el canvi de pestanya amb [Ctrl+Tab] i "
+"[Ctrl+Maj+Tab]."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:18
 msgctxt "visible-name"
@@ -185,7 +215,9 @@ msgstr "Si es mostra la barra de menús a les finestres o pestanyes noves"
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
-msgstr "Cert si la barra de menús s'ha de mostrar a les finestres noves, per a finestres o pestanyes amb aquest perfil."
+msgstr ""
+"Cert si la barra de menús s'ha de mostrar a les finestres noves, per a "
+"finestres o pestanyes amb aquest perfil."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:23
 msgid "Default color of text in the terminal"
@@ -195,7 +227,10 @@ msgstr "Color predeterminat del text al terminal"
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
-msgstr "Color predeterminat del text al terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML o un nom de color com ara «red»)."
+msgstr ""
+"Color predeterminat del text al terminal, com una especificació de color "
+"(poden ser dígits hexadecimals en estil HTML o un nom de color com ara "
+"«red»)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Default color of terminal background"
@@ -205,7 +240,10 @@ msgstr "Color predeterminat del fons del terminal"
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
-msgstr "Color predeterminat del fons del terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML, o un nom de color com ara «red» (roig))."
+msgstr ""
+"Color predeterminat del fons del terminal, com una especificació de color "
+"(poden ser dígits hexadecimals en estil HTML, o un nom de color com ara "
+"«red» (roig))."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Default color of bold text in the terminal"
@@ -216,16 +254,22 @@ msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
-msgstr "Color predeterminat del text en negreta al terminal, com una especificació de color (poden ser dígits hexadecimals en estil HTML o un nom de color com ara «red»). S'ignorarà si «bold_color_same_as_fg» està habilitat."
+msgstr ""
+"Color predeterminat del text en negreta al terminal, com una especificació "
+"de color (poden ser dígits hexadecimals en estil HTML o un nom de color com "
+"ara «red»). S'ignorarà si «bold_color_same_as_fg» està habilitat."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgid "Whether bold text should use the same color as normal text"
-msgstr "Si el text en negreta ha d'utilitzar el mateix color que el text normal"
+msgstr ""
+"Si el text en negreta ha d'utilitzar el mateix color que el text normal"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:30
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
-msgstr "Si s'establex a cert, es renderitzarà el text en negreta amb el mateix color que el text normal."
+msgstr ""
+"Si s'establex a cert, es renderitzarà el text en negreta amb el mateix color"
+" que el text normal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:31
 msgid "What to do with dynamic title"
@@ -237,7 +281,12 @@ msgid ""
 "have their shell set up to do this), the dynamically-set title can erase the"
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Si l'aplicació dins del terminal estableix el títol (típicament, la majoria de la gent té el seu intèrpret d'ordres configurat per a fer això), el títol dinàmicament establit pot esborrar el títol configurat, anar davant, darrere o substituir-lo. Els valors possibles són «replace», «before», «after» i «ignore»."
+msgstr ""
+"Si l'aplicació dins del terminal estableix el títol (típicament, la majoria "
+"de la gent té el seu intèrpret d'ordres configurat per a fer això), el títol"
+" dinàmicament establit pot esborrar el títol configurat, anar davant, "
+"darrere o substituir-lo. Els valors possibles són «replace», «before», "
+"«after» i «ignore»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgctxt "title"
@@ -253,7 +302,10 @@ msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
-msgstr "Títol que s'ha de mostrar per a la finestra o la pestanya del terminal. Aquest títol es pot substituir o combinar amb el títol establit per l'aplicació dins del terminal, segons l'ajust de title_mode."
+msgstr ""
+"Títol que s'ha de mostrar per a la finestra o la pestanya del terminal. "
+"Aquest títol es pot substituir o combinar amb el títol establit per "
+"l'aplicació dins del terminal, segons l'ajust de title_mode."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:36
 msgid "Whether to allow bold text"
@@ -261,7 +313,9 @@ msgstr "Si es permet o no text en negreta"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:37
 msgid "If true, allow applications in the terminal to make text boldface."
-msgstr "Si s'estableix a cert, es permet que les aplicacions al terminal mostren el text en negreta."
+msgstr ""
+"Si s'estableix a cert, es permet que les aplicacions al terminal mostren el "
+"text en negreta."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:38
 msgid "Whether to silence terminal bell"
@@ -271,7 +325,9 @@ msgstr "Si se silencia l'avís sonor del terminal"
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
-msgstr "Si s'estableix a cert, no es fa cap soroll quan les aplicacions envien la seqüència d'escapada per a l'avís sonor del terminal."
+msgstr ""
+"Si s'estableix a cert, no es fa cap soroll quan les aplicacions envien la "
+"seqüència d'escapada per a l'avís sonor del terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:40
 msgid "Copy selection to clipboard"
@@ -279,7 +335,9 @@ msgstr "Copia el text seleccionat al porta-retalls"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:41
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr "Si s'estableix a cert, la selecció es copia automàticament a l'àrea d'emmagatzematge temporal del porta-retalls."
+msgstr ""
+"Si s'estableix a cert, la selecció es copia automàticament a l'àrea "
+"d'emmagatzematge temporal del porta-retalls."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Characters that are considered \"part of a word\""
@@ -290,17 +348,23 @@ msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
-msgstr "Una seqüència formada per aquests caràcters es considerarà una paraula quan se seleccione text per paraules. Es poden donar intervals com «A-Z». El guió literal (que no expresse un interval) ha de ser el primer caràcter donat."
+msgstr ""
+"Una seqüència formada per aquests caràcters es considerarà una paraula quan "
+"se seleccione text per paraules. Es poden donar intervals com «A-Z». El guió"
+" literal (que no expresse un interval) ha de ser el primer caràcter donat."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
-msgstr "Si s'utilitza una mida personalitzada del terminal per a les finestres noves"
+msgstr ""
+"Si s'utilitza una mida personalitzada del terminal per a les finestres noves"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:45
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
-msgstr "Si s'estableix a cert, les noves finestres del terminal tindran la mida especificada per «default_size_columns» i «default_size_rows»."
+msgstr ""
+"Si s'estableix a cert, les noves finestres del terminal tindran la mida "
+"especificada per «default_size_columns» i «default_size_rows»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:46
 msgid "Default number of columns"
@@ -310,7 +374,9 @@ msgstr "Nombre predeterminat de columnes"
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Nombre de columnes en les finestres de terminal acabades de crear. No té cap efecte si no està habilitat «use_custom_default_size»."
+msgstr ""
+"Nombre de columnes en les finestres de terminal acabades de crear. No té cap"
+" efecte si no està habilitat «use_custom_default_size»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Default number of rows"
@@ -320,7 +386,9 @@ msgstr "Nombre predeterminat de files"
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Nombre de files en les finestres de terminal acabades de crear. No té cap efecte si no està habilitat «use_custom_default_size»."
+msgstr ""
+"Nombre de files en les finestres de terminal acabades de crear. No té cap "
+"efecte si no està habilitat «use_custom_default_size»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
@@ -330,7 +398,9 @@ msgstr "Posició de la barra de desplaçament"
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
-msgstr "Lloc on es posa la barra de desplaçament del terminal. Els valors possibles són: «left» (esquerra), «right» (dreta) i «hidden» (oculta)."
+msgstr ""
+"Lloc on es posa la barra de desplaçament del terminal. Els valors possibles "
+"són: «left» (esquerra), «right» (dreta) i «hidden» (oculta)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Number of lines to keep in scrollback"
@@ -341,18 +411,27 @@ msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
-msgstr "El nombre de línies de desplaçament cap arrere per a mantindre a prop. Podeu desplaçar-vos cap arrere al terminal aquest nombre de línies; les línies que no encaixen amb el desplaçament es descarten. Si «scrollback_unlimited» està establit a «true» (cert), s'ignora aquest valor."
+msgstr ""
+"El nombre de línies de desplaçament cap arrere per a mantindre a prop. Podeu"
+" desplaçar-vos cap arrere al terminal aquest nombre de línies; les línies "
+"que no encaixen amb el desplaçament es descarten. Si «scrollback_unlimited» "
+"està establit a «true» (cert), s'ignora aquest valor."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether an unlimited number of lines should be kept in scrollback"
-msgstr "Si s'ha de mantindre un nombre de línies il·limitat en el desplaçament"
+msgstr ""
+"Si s'ha de mantindre un nombre de línies il·limitat en el desplaçament"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:55
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
-msgstr "Si s'estableix a cert, les línies de desplaçament no es descartaran mai. L'historial dels desplaçaments s'emmagatzema temporalment al disc, de manera que això pot provocar que el sistema es quede sense espai al disc, si hi ha molta eixida al terminal."
+msgstr ""
+"Si s'estableix a cert, les línies de desplaçament no es descartaran mai. "
+"L'historial dels desplaçaments s'emmagatzema temporalment al disc, de manera"
+" que això pot provocar que el sistema es quede sense espai al disc, si hi ha"
+" molta eixida al terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -369,7 +448,9 @@ msgstr "Si s'ha de desplaçar al final quan hi ha una eixida nova"
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
-msgstr "Si s'estableix a cert, quan hi haja una eixida nova, el terminal es desplaçarà al final."
+msgstr ""
+"Si s'estableix a cert, quan hi haja una eixida nova, el terminal es "
+"desplaçarà al final."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "What to do with the terminal when the child command exits"
@@ -379,37 +460,50 @@ msgstr "Què cal fer amb el terminal quan l'ordre filla ix"
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
-msgstr "Els valors possibles són «close» per a tancar el terminal i «restart» per a tornar a executar l'ordre."
+msgstr ""
+"Els valors possibles són «close» per a tancar el terminal i «restart» per a "
+"tornar a executar l'ordre."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Si s'ha d'executar l'ordre al terminal com en un intèrpret d'ordres d'inici de sessió"
+msgstr ""
+"Si s'ha d'executar l'ordre al terminal com en un intèrpret d'ordres d'inici "
+"de sessió"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "Si s'estableix a cert, l'ordre dins del terminal s'iniciarà com un intèrpret d'ordres d'inici de sessió. (argv[0] tindrà un guió davant seu)"
+msgstr ""
+"Si s'estableix a cert, l'ordre dins del terminal s'iniciarà com un intèrpret"
+" d'ordres d'inici de sessió. (argv[0] tindrà un guió davant seu)"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to update login records when launching terminal command"
-msgstr "Si s'ha d'actualitzar el registre d'inici de sessió quan s'executa l'ordre del terminal"
+msgstr ""
+"Si s'ha d'actualitzar el registre d'inici de sessió quan s'executa l'ordre "
+"del terminal"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
-msgstr "Si s'estableix a cert, s'actualitzaran els registres utmp i wtmp d'inici de sessió quan s'execute l'ordre dins del terminal."
+msgstr ""
+"Si s'estableix a cert, s'actualitzaran els registres utmp i wtmp d'inici de "
+"sessió quan s'execute l'ordre dins del terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
-msgstr "Si s'ha d'executar una ordre personalitzada en lloc de l'intèrpret d'ordres"
+msgstr ""
+"Si s'ha d'executar una ordre personalitzada en lloc de l'intèrpret d'ordres"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:67
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "Si s'estableix a cert, s'utilitzarà el valor de la configuració custom_command en comptes d'executar un intèrpret d'ordres."
+msgstr ""
+"Si s'estableix a cert, s'utilitzarà el valor de la configuració "
+"custom_command en comptes d'executar un intèrpret d'ordres."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Whether to blink the cursor"
@@ -419,7 +513,10 @@ msgstr "Si el cursor ha de parpellejar"
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
-msgstr "Els valors possibles són «system» (sistema) per a utilitzar el paràmetre de parpelleig del cursor global, «on» (activat) o «off» (apagat) per a establir explícitament el mode."
+msgstr ""
+"Els valors possibles són «system» (sistema) per a utilitzar el paràmetre de "
+"parpelleig del cursor global, «on» (activat) o «off» (apagat) per a establir"
+" explícitament el mode."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "The cursor appearance"
@@ -429,15 +526,20 @@ msgstr "L'aparença del cursor"
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
-msgstr "Els valors possibles són «block» per a utilitzar un bloc, «ibeam» per a utilitzar una línia vertical o «underline» per a utilitzar un subratllat."
+msgstr ""
+"Els valors possibles són «block» per a utilitzar un bloc, «ibeam» per a "
+"utilitzar una línia vertical o «underline» per a utilitzar un subratllat."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Custom command to use instead of the shell"
-msgstr "L'ordre personalitzada que s'ha d'utilitzar en lloc de l'intèrpret d'ordres"
+msgstr ""
+"L'ordre personalitzada que s'ha d'utilitzar en lloc de l'intèrpret d'ordres"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Executa aquesta ordre en lloc de l'intèrpret d'ordres, si use_custom_command és cert."
+msgstr ""
+"Executa aquesta ordre en lloc de l'intèrpret d'ordres, si use_custom_command"
+" és cert."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Icon for terminal window"
@@ -445,7 +547,9 @@ msgstr "Icona per a la finestra del terminal"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr "Icona que s'utilitza per a les pestanyes i finestres que continguen aquest perfil."
+msgstr ""
+"Icona que s'utilitza per a les pestanyes i finestres que continguen aquest "
+"perfil."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Palette for terminal applications"
@@ -456,7 +560,11 @@ msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr "Els terminals tenen una paleta de 16 colors que poden utilitzar les aplicacions dins del terminal. Per a això és aquesta paleta, en forma d'una llista de noms de colors separats per dos punts. Els colors han d'estar en format hexadecimal, p. ex. «#FF00FF»."
+msgstr ""
+"Els terminals tenen una paleta de 16 colors que poden utilitzar les "
+"aplicacions dins del terminal. Per a això és aquesta paleta, en forma d'una "
+"llista de noms de colors separats per dos punts. Els colors han d'estar en "
+"format hexadecimal, p. ex. «#FF00FF»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Font"
@@ -464,7 +572,9 @@ msgstr "Tipus de lletra"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr "Un nom de tipus de lletra Pango. Per exemple «Sans 12» o «Monospace Bold 14»."
+msgstr ""
+"Un nom de tipus de lletra Pango. Per exemple «Sans 12» o «Monospace Bold "
+"14»."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background type"
@@ -475,7 +585,11 @@ msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
-msgstr "Tipus de fons del terminal. Pot ser «solid» per a un color sòlid, «image» per a una imatge o «transparent» per a una transparència real si s'està executant un gestor de finestres de composició, en cas contrari serà una pseudotransparència."
+msgstr ""
+"Tipus de fons del terminal. Pot ser «solid» per a un color sòlid, «image» "
+"per a una imatge o «transparent» per a una transparència real si s'està "
+"executant un gestor de finestres de composició, en cas contrari serà una "
+"pseudotransparència."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Background image"
@@ -493,7 +607,10 @@ msgstr "Si s'ha de desplaçar la imatge de fons"
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
-msgstr "Si s'estableix a cert, es desplaça la imatge de fons amb el text del primer pla; si no, es manté la imatge en una posició fixa i el text es desplaça per damunt."
+msgstr ""
+"Si s'estableix a cert, es desplaça la imatge de fons amb el text del primer "
+"pla; si no, es manté la imatge en una posició fixa i el text es desplaça per"
+" damunt."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "How much to darken the background image"
@@ -505,7 +622,11 @@ msgid ""
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
-msgstr "Un valor entre 0.0 i 1.0 que indica quant s'ha d'enfosquir la imatge de fons. 0.0 vol dir sense foscor, 1.0 vol dir foscor total. A la implementació actual, només hi ha dos nivells de foscor possibles, així doncs la configuració actua com un booleà, on 0.0 inhabilita l'efecte de foscor."
+msgstr ""
+"Un valor entre 0.0 i 1.0 que indica quant s'ha d'enfosquir la imatge de "
+"fons. 0.0 vol dir sense foscor, 1.0 vol dir foscor total. A la implementació"
+" actual, només hi ha dos nivells de foscor possibles, així doncs la "
+"configuració actua com un booleà, on 0.0 inhabilita l'efecte de foscor."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Backspace key"
@@ -518,7 +639,13 @@ msgid ""
 "ASCII BS character), \"escape-sequence\" for the escape sequence typically "
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
-msgstr "Estableix quin codi genera la tecla de retrocés. Els valors possibles són: «ascii-del» per al caràcter DEL d'ASCII, «control-h» per a Control-H (també conegut com el caràcter BS d'ASCII), «escape-sequence» per a la seqüència d'escapament que normalment es vincula amb la tecla de supressió o la tecla de retrocés. «escape-sequence» es considera normalment l'ajust correcte per a la tecla de retrocés."
+msgstr ""
+"Estableix quin codi genera la tecla de retrocés. Els valors possibles són: "
+"«ascii-del» per al caràcter DEL d'ASCII, «control-h» per a Control-H (també "
+"conegut com el caràcter BS d'ASCII), «escape-sequence» per a la seqüència "
+"d'escapament que normalment es vincula amb la tecla de supressió o la tecla "
+"de retrocés. «escape-sequence» es considera normalment l'ajust correcte per "
+"a la tecla de retrocés."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Effect of the Delete key"
@@ -531,7 +658,13 @@ msgid ""
 "character), \"escape-sequence\" for the escape sequence typically bound to "
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
-msgstr "Estableix quin codi genera la tecla de supressió. Els valors possibles són: «ascii-del» per al caràcter DEL d'ASCII, «control-h» per a Control-H (també conegut com el caràcter BS d'ASCII), «escape-sequence» per a la seqüència d'escapament que normalment es vincula amb la tecla de supressió o la tecla de retrocés. «escape-sequence» es considera normalment l'ajust correcte per a la tecla de supressió."
+msgstr ""
+"Estableix quin codi genera la tecla de supressió. Els valors possibles són: "
+"«ascii-del» per al caràcter DEL d'ASCII, «control-h» per a Control-H (també "
+"conegut com el caràcter BS d'ASCII), «escape-sequence» per a la seqüència "
+"d'escapament que normalment es vincula amb la tecla de supressió o la tecla "
+"de retrocés. «escape-sequence» es considera normalment l'ajust correcte per "
+"a la tecla de supressió."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -541,7 +674,10 @@ msgstr "Si s'han d'utilitzar els colors del tema per al giny del terminal"
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
-msgstr "Si s'estableix a cert, l'esquema de colors del tema que s'utilitza per als quadres d'entrada de text s'utilitzarà per al terminal, en lloc dels colors indicats per l'usuari."
+msgstr ""
+"Si s'estableix a cert, l'esquema de colors del tema que s'utilitza per als "
+"quadres d'entrada de text s'utilitzarà per al terminal, en lloc dels colors "
+"indicats per l'usuari."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Whether to use the system font"
@@ -551,7 +687,10 @@ msgstr "Si s'ha d'utilitzar el tipus de lletra del sistema"
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
-msgstr "Si s'estableix a cert, el terminal utilitzarà el tipus de lletra estàndard global de l'escriptori si és monoespaiada (i si no és així, la lletra més similar que es puga trobar)."
+msgstr ""
+"Si s'estableix a cert, el terminal utilitzarà el tipus de lletra estàndard "
+"global de l'escriptori si és monoespaiada (i si no és així, la lletra més "
+"similar que es puga trobar)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Highlight S/Key challenges"
@@ -561,7 +700,10 @@ msgstr "Ressalta els desafiaments S/Key"
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "Mostra un diàleg quan es detecta i es fa clic en una consulta de resposta d'un desafiament S/Key. Si es tecleja una contrasenya al diàleg, s'enviarà al terminal."
+msgstr ""
+"Mostra un diàleg quan es detecta i es fa clic en una consulta de resposta "
+"d'un desafiament S/Key. Si es tecleja una contrasenya al diàleg, s'enviarà "
+"al terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
@@ -573,7 +715,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a obrir una pestanya nova. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a obrir una pestanya nova. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to open a new window"
@@ -585,7 +731,11 @@ msgid ""
 " same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a obrir una finestra nova. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a obrir una finestra nova. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to create a new profile"
@@ -597,11 +747,17 @@ msgid ""
 "Expressed as a string in the same format used for GTK+ resource files. If "
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
-msgstr "La tecla de la drecera de teclat per a mostrar el diàleg de creació de perfils. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a mostrar el diàleg de creació de "
+"perfils. S'expressa com una cadena en el mateix format que l'utilitzat als "
+"fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to save the current tab contents to file"
-msgstr "Tecla de drecera de teclat per a guardar el contingut de la pestanya actual en un fitxer"
+msgstr ""
+"Tecla de drecera de teclat per a guardar el contingut de la pestanya actual "
+"en un fitxer"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:105
 msgid ""
@@ -609,7 +765,12 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "La tecla de la drecera de teclat per a guardar el contingut de la pestanya actual en un fitxer. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a guardar el contingut de la pestanya "
+"actual en un fitxer. S'expressa com una cadena en el mateix format que "
+"l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena"
+" especial «disabled», no hi haurà cap tecla de drecera de teclat per a "
+"aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a tab"
@@ -621,7 +782,11 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a tancar una pestanya. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a tancar una pestanya. S'expressa com "
+"una cadena en el mateix format que l'utilitzat als fitxers de recursos de "
+"GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap "
+"tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to close a window"
@@ -633,7 +798,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a tancar una finestra. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a tancar una finestra. S'expressa com "
+"una cadena en el mateix format que l'utilitzat als fitxers de recursos de "
+"GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap "
+"tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to copy text"
@@ -645,7 +814,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "La tecla de la drecera de teclat per a copiar el text seleccionat al porta-retalls. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a copiar el text seleccionat al porta-"
+"retalls. S'expressa com una cadena en el mateix format que l'utilitzat als "
+"fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to paste text"
@@ -658,6 +831,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de drecera per a apegar al terminal el contingut del porta-retalls. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap assignació de tecla de drecera per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to select all text"
@@ -670,6 +847,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"La tecla de drecera per a seleccionar tot el text al terminal. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to show the find dialog"
@@ -681,11 +862,17 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a mostrar el diàleg de cerca. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a mostrar el diàleg de cerca. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
+"Tecla de drecera de teclat per a trobar la següent ocurrència del terme de "
+"cerca"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
@@ -694,10 +881,15 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"La tecla de drecera per a trobar la següent ocurrència del terme de cerca al"
+" terminal. S'expressa com una cadena en el mateix format que l'utilitzat als"
+" fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
+"Tecla de drecera per a trobar l'anterior ocurrència del terme de cerca"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
@@ -706,10 +898,15 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"La tecla de drecera per a trobar l'anterior ocurrència del terme de cerca al"
+" terminal. S'expressa com una cadena en el mateix format que l'utilitzat als"
+" fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "Tecla de drecera de teclat per a commutar el mode de pantalla completa"
+msgstr ""
+"Tecla de drecera de teclat per a commutar el mode de pantalla completa"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
@@ -717,11 +914,16 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "La tecla de la drecera de teclat per a commutar el mode de pantalla completa. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a commutar el mode de pantalla "
+"completa. S'expressa com una cadena en el mateix format que l'utilitzat als "
+"fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "Tecla de drecera de teclat per a canviar la visibilitat de la barra de menús"
+msgstr ""
+"Tecla de drecera de teclat per a canviar la visibilitat de la barra de menús"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
@@ -729,7 +931,11 @@ msgid ""
 "a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "La tecla de la drecera de teclat per a commutar la visibilitat de la barra de menú. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a commutar la visibilitat de la barra "
+"de menú. S'expressa com una cadena en el mateix format que l'utilitzat als "
+"fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial "
+"«disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to set the terminal title"
@@ -741,7 +947,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a establir el títol del terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a establir el títol del terminal. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset the terminal"
@@ -753,7 +963,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a restablir el terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a restablir el terminal. S'expressa com"
+" una cadena en el mateix format que l'utilitzat als fitxers de recursos de "
+"GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap "
+"tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to reset and clear the terminal"
@@ -765,7 +979,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "La tecla de la drecera de teclat per a restablir i netejar el terminal. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a restablir i netejar el terminal. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -777,7 +995,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya anterior. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya anterior. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the next tab"
@@ -789,7 +1011,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya següent. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya següent. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the previous profile"
@@ -801,7 +1027,11 @@ msgid ""
 "string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "La tecla de la drecera de teclat per a canviar al perfil anterior. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar al perfil anterior. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to the next profile"
@@ -813,7 +1043,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "La tecla de la drecera de teclat per a canviar al perfil següent. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar al perfil següent. S'expressa"
+" com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the left."
@@ -825,7 +1059,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "La tecla acceleradora per a moure la pestanya actual a l'esquerra. S'expressa com a una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap vinculació de tecles per a aquesta acció."
+msgstr ""
+"La tecla acceleradora per a moure la pestanya actual a l'esquerra. "
+"S'expressa com a una cadena en el mateix format que l'utilitzat als fitxers "
+"de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no"
+" hi haurà cap vinculació de tecles per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to move the current tab to the right."
@@ -837,7 +1075,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "La tecla acceleradora per a moure la pestanya actual a la dreta. S'expressa com a una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap vinculació de tecles per a aquesta acció."
+msgstr ""
+"La tecla acceleradora per a moure la pestanya actual a la dreta. S'expressa "
+"com a una cadena en el mateix format que l'utilitzat als fitxers de recursos"
+" de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap vinculació de tecles per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Accelerator to detach current tab."
@@ -848,7 +1090,11 @@ msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
-msgstr "La tecla acceleradora per a desadherir la pestanya actual. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap vinculació de tecles per a aquesta acció."
+msgstr ""
+"La tecla acceleradora per a desadherir la pestanya actual. S'expressa com "
+"una cadena en el mateix format que l'utilitzat als fitxers de recursos de "
+"GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap "
+"vinculació de tecles per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 1"
@@ -860,7 +1106,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 1. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 1. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 2"
@@ -872,7 +1122,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 2. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 2. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 3"
@@ -884,7 +1138,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 3. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 3. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 4"
@@ -896,7 +1154,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 4. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 4. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 5"
@@ -908,7 +1170,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 5. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 5. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 6"
@@ -920,7 +1186,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 6. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 6. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 7"
@@ -932,7 +1202,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 7. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 7. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 8"
@@ -944,7 +1218,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 8. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 8. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 9"
@@ -956,7 +1234,11 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 9. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 9. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 10"
@@ -968,7 +1250,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 10. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 10. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 11"
@@ -980,7 +1266,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 11. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 11. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to switch to tab 12"
@@ -992,7 +1282,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a canviar a la pestanya 12. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a canviar a la pestanya 12. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to launch help"
@@ -1004,7 +1298,11 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "La tecla de la drecera de teclat per a executar l'ajuda. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a executar l'ajuda. S'expressa com una "
+"cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. "
+"Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla "
+"de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font larger"
@@ -1016,7 +1314,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a fer la lletra més gran. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a fer la lletra més gran. S'expressa "
+"com una cadena en el mateix format que l'utilitzat als fitxers de recursos "
+"de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà "
+"cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font smaller"
@@ -1028,7 +1330,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "La tecla de la drecera de teclat per a fer la lletra més xicoteta. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a fer la lletra més xicoteta. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:176
 msgid "Keyboard shortcut to make font normal-size"
@@ -1040,7 +1346,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "La tecla de la drecera de teclat per a fer normal la mida de la lletra. S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no hi haurà cap tecla de drecera de teclat per a aquesta acció."
+msgstr ""
+"La tecla de la drecera de teclat per a fer normal la mida de la lletra. "
+"S'expressa com una cadena en el mateix format que l'utilitzat als fitxers de"
+" recursos de GTK+. Si establiu l'opció a la cadena especial «disabled», no "
+"hi haurà cap tecla de drecera de teclat per a aquesta acció."
 
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
@@ -1066,13 +1376,13 @@ msgstr "Blanc sobre negre"
 #. translated
 #: ../src/profile-editor.c:69
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarització clara"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: ../src/profile-editor.c:74
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarització fosca"
 
 #: ../src/profile-editor.c:492
 #, c-format
@@ -1088,7 +1398,7 @@ msgstr "Edició del perfil «%s»"
 #: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:82
 msgid "Custom"
-msgstr "Personalitzat"
+msgstr "Personalitzada"
 
 #: ../src/profile-editor.c:590
 msgid "Images"
@@ -1130,7 +1440,7 @@ msgstr "Coi_ncidència de majúscules i minúscules"
 
 #: ../src/find-dialog.ui.h:4
 msgid "Match _entire word only"
-msgstr "Només coincid_eix la paraula sencera"
+msgstr "Fes coincidir només la paraula s_encera"
 
 #: ../src/find-dialog.ui.h:5
 msgid "Match as _regular expression"
@@ -1150,7 +1460,9 @@ msgstr "Tecles de dreceres de teclat"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "Habilita _totes les tecles d'accés dels menús (com ara Alt+F per a obrir el menú Fitxer)"
+msgstr ""
+"Habilita _totes les tecles d'accés dels menús (com ara Alt+F per a obrir el "
+"menú Fitxer)"
 
 #: ../src/keybinding-editor.ui.h:3
 msgid "Enable the _menu shortcut key (F10 by default)"
@@ -1170,7 +1482,7 @@ msgstr "Perfil _utilitzat quan s'execute un terminal nou:"
 
 #: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:156
 msgid "New Profile"
-msgstr "Perfil nou"
+msgstr "Nou perfil"
 
 #: ../src/profile-new-dialog.ui.h:2
 msgid "C_reate"
@@ -1257,7 +1569,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:80
 msgid "Solarized"
-msgstr ""
+msgstr "Solarització"
 
 #. Translators: Scrollbar is: ...
 #: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:56
@@ -1273,7 +1585,7 @@ msgstr "A la dreta"
 #: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
 #: ../src/extra-strings.c:60
 msgid "Disabled"
-msgstr "Inhabilitada"
+msgstr "Inhabilitat"
 
 #. * Copyright © 2009 Christian Persch
 #. *
@@ -1346,7 +1658,7 @@ msgstr "_Utilitza el tipus de lletra d'amplària fixa del sistema"
 
 #: ../src/profile-preferences.ui.h:31
 msgid "_Font:"
-msgstr "Tipus de _lletra:"
+msgstr "_Tipus de lletra:"
 
 #: ../src/profile-preferences.ui.h:32
 msgid "Choose A Terminal Font"
@@ -1496,7 +1808,9 @@ msgstr "_Paleta de colors:"
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
-msgstr "<small><i><b>Nota:</b> Aquests colors estan disponibles a les aplicacions del terminal.</i></small>"
+msgstr ""
+"<small><i><b>Nota:</b> Aquests colors estan disponibles a les aplicacions "
+"del terminal.</i></small>"
 
 #: ../src/profile-preferences.ui.h:69
 msgid "Colors"
@@ -1580,7 +1894,11 @@ msgid ""
 "incorrectly.  They are only here to allow you to work around certain "
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
-msgstr "<small><i><b>Nota:</b> Aquestes opcions poden fer que algunes aplicacions no funcionen correctament. Només hi són per a permetre-us solucionar aspectes de certes aplicacions i sistemes operatius que esperen un comportament diferent del terminal.</i></small>"
+msgstr ""
+"<small><i><b>Nota:</b> Aquestes opcions poden fer que algunes aplicacions no"
+" funcionen correctament. Només hi són per a permetre-us solucionar aspectes "
+"de certes aplicacions i sistemes operatius que esperen un comportament "
+"diferent del terminal.</i></small>"
 
 #: ../src/profile-preferences.ui.h:89
 msgid "_Delete key generates:"
@@ -1608,11 +1926,15 @@ msgstr "_Contrasenya:"
 
 #: ../src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr "El text sobre el qual heu fet clic sembla que no és un desafiament S/Key vàlid."
+msgstr ""
+"El text sobre el qual heu fet clic sembla que no és un desafiament S/Key "
+"vàlid."
 
 #: ../src/skey-popup.c:176
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
-msgstr "El text sobre el qual heu fet clic sembla que no és un desafiament OTP vàlid."
+msgstr ""
+"El text sobre el qual heu fet clic sembla que no és un desafiament OTP "
+"vàlid."
 
 #: ../src/terminal-accels.c:148
 msgid "New Tab"
@@ -1668,13 +1990,13 @@ msgstr "Mida normal"
 
 #: ../src/terminal-accels.c:222
 msgid "Find Next"
-msgstr "Cerca el següent..."
+msgstr "Cerca la següent"
 
 #: ../src/terminal-accels.c:226
 msgid "Find Previous"
-msgstr "Cerca l'anterior..."
+msgstr "Cerca l'anterior"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4231
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
 msgid "Set Title"
 msgstr "Estableix el títol"
 
@@ -1811,37 +2133,46 @@ msgstr "Feu clic al botó per a triar el perfil"
 msgid "Profile list"
 msgstr "Llista de perfils"
 
-#: ../src/terminal-app.c:684
+#: ../src/terminal-app.c:702
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Voleu suprimir el perfil «%s»?"
 
-#: ../src/terminal-app.c:697
+#: ../src/terminal-app.c:706
+msgid "_Cancel"
+msgstr "_Cancel·la"
+
+#: ../src/terminal-app.c:711
+msgid "_Delete"
+msgstr "_Suprimeix"
+
+#: ../src/terminal-app.c:718
 msgid "Delete Profile"
 msgstr "Suprimeix el perfil"
 
-#: ../src/terminal-app.c:1144
+#: ../src/terminal-app.c:1165
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "Ja teniu un perfil anomenat «%s». Voleu crear-ne un altre amb el mateix nom?"
+msgstr ""
+"Ja teniu un perfil anomenat «%s». Voleu crear-ne un altre amb el mateix nom?"
 
-#: ../src/terminal-app.c:1239
+#: ../src/terminal-app.c:1260
 msgid "Choose base profile"
 msgstr "Seleccioneu el perfil base"
 
-#: ../src/terminal-app.c:1827
+#: ../src/terminal-app.c:1848
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "No existeix el perfil «%s», s'utilitzarà el perfil predeterminat\n"
 
-#: ../src/terminal-app.c:1854
+#: ../src/terminal-app.c:1875
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Cadena geomètrica no vàlida «%s»\n"
 
-#: ../src/terminal-app.c:2060
+#: ../src/terminal-app.c:2081
 msgid "User Defined"
 msgstr "Definit per l'usuari"
 
@@ -2008,7 +2339,10 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "L'opció «%s» ja no està implementada en aquesta versió del mate-terminal. Podeu crear un perfil amb la configuració desitjada i utilitzar l'opció nova «--profile»\n"
+msgstr ""
+"L'opció «%s» ja no està implementada en aquesta versió del mate-terminal. "
+"Podeu crear un perfil amb la configuració desitjada i utilitzar l'opció nova"
+" «--profile»\n"
 
 #: ../src/terminal-options.c:209
 #, c-format
@@ -2044,7 +2378,9 @@ msgstr "El factor d'ampliació «%g» és massa gran, s'utilitzarà %g\n"
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr "L'opció «%s» requereix especificar l'ordre que s'ha d'executar en la resta de la línia d'ordres"
+msgstr ""
+"L'opció «%s» requereix especificar l'ordre que s'ha d'executar en la resta "
+"de la línia d'ordres"
 
 #: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
@@ -2058,7 +2394,9 @@ msgstr "La versió del fitxer de configuració del terminal no és vàlida."
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "No registres al servidor de noms d'activació, no reutilitzes un terminal actiu"
+msgstr ""
+"No registres al servidor de noms d'activació, no reutilitzes un terminal "
+"actiu"
 
 #: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
@@ -2074,7 +2412,9 @@ msgstr "Obri una finestra nova amb una pestanya amb el perfil predeterminat"
 
 #: ../src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
-msgstr "Obri una pestanya nova a l'última finestra oberta amb el perfil predeterminat"
+msgstr ""
+"Obri una pestanya nova a l'última finestra oberta amb el perfil "
+"predeterminat"
 
 #: ../src/terminal-options.c:1010
 msgid "Turn on the menubar"
@@ -2095,7 +2435,9 @@ msgstr "Mostra la finestra a pantalla completa"
 #: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr "Establiu la mida de la finestra; per exemple 80x24 o 80x24+200+200 (COLUMNESxFILES+X+Y)"
+msgstr ""
+"Establiu la mida de la finestra; per exemple 80x24 o 80x24+200+200 "
+"(COLUMNESxFILES+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2111,7 +2453,8 @@ msgstr "ROL"
 
 #: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
-msgstr "Estableix l'última pestanya especificada com a l'activa en la seua finestra"
+msgstr ""
+"Estableix l'última pestanya especificada com a l'activa en la seua finestra"
 
 #: ../src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
@@ -2161,7 +2504,9 @@ msgstr "Mostra les opcions del terminal del MATE"
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "Opcions per a obrir finestres o pestanyes de terminal noves. Se'n pot especificar més d'una:"
+msgstr ""
+"Opcions per a obrir finestres o pestanyes de terminal noves. Se'n pot "
+"especificar més d'una:"
 
 #: ../src/terminal-options.c:1381
 msgid "Show terminal options"
@@ -2171,7 +2516,9 @@ msgstr "Mostra les opcions del terminal"
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "Opcions de la finestra. Si s'utilitzen abans del primer argument --window o --tab, s'establiran de forma predeterminada a totes les finestres:"
+msgstr ""
+"Opcions de la finestra. Si s'utilitzen abans del primer argument --window o "
+"--tab, s'establiran de forma predeterminada a totes les finestres:"
 
 #: ../src/terminal-options.c:1390
 msgid "Show per-window options"
@@ -2181,7 +2528,9 @@ msgstr "Mostra les opcions individuals per finestra"
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "Opcions del terminal. Si s'utilitzen abans del primer argument --window o --tab, s'establiran de forma predeterminada a tots els terminals:"
+msgstr ""
+"Opcions del terminal. Si s'utilitzen abans del primer argument --window o "
+"--tab, s'establiran de forma predeterminada a tots els terminals:"
 
 #: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
@@ -2191,33 +2540,33 @@ msgstr "Mostra les opcions individuals per terminal"
 msgid "Unnamed"
 msgstr "Sense nom"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr "_Preferències del perfil"
 
-#: ../src/terminal-screen.c:1545 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr "_Torna't a executar"
 
-#: ../src/terminal-screen.c:1548
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr "S'ha produït un error en crear el subprocés per a aquest terminal"
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El subprocés ha eixit correctament amb l'estat %d."
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "S'ha finalitzat el subprocés amb el senyal %d."
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr "S'ha finalitzat el procés fill."
 
-#: ../src/terminal-tab-label.c:137
+#: ../src/terminal-tab-label.c:132
 msgid "Close tab"
 msgstr "Tanca la pestanya"
 
@@ -2225,42 +2574,54 @@ msgstr "Tanca la pestanya"
 msgid "Switch to this tab"
 msgstr "Canvia a aquesta pestanya"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:145
 msgid "There was an error displaying help"
 msgstr "S'ha produït un error en mostrar l'ajuda"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "No s'ha pogut obrir l'adreça «%s»"
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
-msgstr "El terminal del MATE és programari lliure; podeu distribuir-lo i/o modificar-lo sota els termes de la Llicència Pública General GNU tal com ha estat publicada per la Free Software Foundation; ja siga la versió 3 de la llicència, o bé (si ho preferiu) qualsevol versió posterior."
+msgstr ""
+"El terminal del MATE és programari lliure; podeu distribuir-lo i/o "
+"modificar-lo sota els termes de la Llicència Pública General GNU tal com ha "
+"estat publicada per la Free Software Foundation; ja siga la versió 3 de la "
+"llicència, o bé (si ho preferiu) qualsevol versió posterior."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
-msgstr "El terminal del MATE es distribueix amb l'expectativa que serà útil, però SENSE CAP GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o ADEQUACIÓ PER A UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública General GNU per obtindre'n més detalls."
+msgstr ""
+"El terminal del MATE es distribueix amb l'expectativa que serà útil, però "
+"SENSE CAP GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o "
+"ADEQUACIÓ PER A UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública General "
+"GNU per obtindre'n més detalls."
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU juntament amb el terminal del MATE; en cas contrari, escriviu a la Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+msgstr ""
+"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
+"juntament amb el terminal del MATE; en cas contrari, escriviu a la Free "
+"Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307"
+" USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:682
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2268,259 +2629,293 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:688
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
-#: ../src/terminal-window.c:2136
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
 msgstr "Obri un _terminal"
 
-#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
-#: ../src/terminal-window.c:2141
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr "Obri una _pestanya"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1868
 msgid "_View"
-msgstr "_Visualitza"
+msgstr "_Vista"
 
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1869
 msgid "_Search"
 msgstr "_Cerca"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr "_Pestanyes"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1872
 msgid "_Help"
-msgstr "A_juda"
+msgstr "_Ajuda"
 
-#: ../src/terminal-window.c:1905
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr "_Perfil nou…"
 
-#: ../src/terminal-window.c:1910
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr "Gu_arda el contingut"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr "Tanca la p_estanya"
 
-#: ../src/terminal-window.c:1920
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
-msgstr "Tanca la _finestra"
+msgstr "_Tanca la finestra"
 
-#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:1910 ../src/terminal-window.c:2104
+msgid "_Copy"
+msgstr "_Copia"
+
+#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2109
+msgid "_Paste"
+msgstr "_Enganxa"
+
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr "Apega els _noms de fitxers"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1925
+msgid "Select _All"
+msgstr "Selecciona-ho _tot"
+
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr "P_erfils…"
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr "_Tecles de dreceres de teclat…"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr "_Preferències del perfil"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1947
+msgid "Zoom _In"
+msgstr "_Augmenta l'ampliació"
+
+#: ../src/terminal-window.c:1952
+msgid "Zoom _Out"
+msgstr "Re_dueix"
+
+#: ../src/terminal-window.c:1957
+msgid "_Normal Size"
+msgstr "Mida _normal"
+
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
 msgstr "_Cerca..."
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
 msgstr "Cerca el _següent"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
 msgstr "Cerca l'_anterior"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
 msgstr "_Neteja el ressaltat"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
 msgstr "Vés a la _línia..."
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
 msgstr "_Cerca incremental..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr "Canvia de _perfil"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr "_Perfil anterior"
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr "Perfil següe_nt"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr "_Estableix el títol…"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr "Estableix la _codificació dels caràcters"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
 msgstr "_Reinicialitza"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr "Reinicialitza i _neteja"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr "_Afig o suprimeix…"
 
-#: ../src/terminal-window.c:2051
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr "Pestanya _anterior"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr "Pestanya _següent"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
 msgstr "Mou la pestanya a l'_esquerra"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
 msgstr "Mou la pestanya a la _dreta"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr "_Separa la pestanya"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr "En_via un correu a…"
 
-#: ../src/terminal-window.c:2095
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr "_Copia l'adreça de correu"
 
-#: ../src/terminal-window.c:2100
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr "Telefon_a a…"
 
-#: ../src/terminal-window.c:2105
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr "_Copia l'adreça de telefonada"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr "_Obri l'enllaç"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr "_Copia l'adreça de l'enllaç"
 
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr "Pe_rfils"
 
-#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
 msgid "C_lose Window"
 msgstr "Tanca la _finestra"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr "I_x de la pantalla completa"
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr "Mètodes d'_entrada"
 
-#: ../src/terminal-window.c:2167
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr "Mostra la _barra del menú"
 
-#: ../src/terminal-window.c:2173
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr "_Pantalla completa"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this window?"
 msgstr "Voleu tancar aquesta finestra?"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this terminal?"
 msgstr "Voleu tancar aquest terminal?"
 
-#: ../src/terminal-window.c:3630
+#: ../src/terminal-window.c:3608
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
-msgstr "Encara s'estan executant processos en alguns terminals d'aquesta finestra. Si la tanqueu es mataran tots."
+msgstr ""
+"Encara s'estan executant processos en alguns terminals d'aquesta finestra. "
+"Si la tanqueu es mataran tots."
 
-#: ../src/terminal-window.c:3634
+#: ../src/terminal-window.c:3612
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
-msgstr "Encara s'està executant un procés en aquest terminal. Si el tanqueu es matarà aquest procés."
+msgstr ""
+"Encara s'està executant un procés en aquest terminal. Si el tanqueu es "
+"matarà aquest procés."
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3617
 msgid "C_lose Terminal"
 msgstr "_Tanca el terminal"
 
-#: ../src/terminal-window.c:3705
+#: ../src/terminal-window.c:3683
 msgid "Could not save contents"
 msgstr "No s'ha pogut guardar el contingut"
 
-#: ../src/terminal-window.c:3729
+#: ../src/terminal-window.c:3707
 msgid "Save as..."
 msgstr "Anomena i guarda..."
 
-#: ../src/terminal-window.c:4248
+#: ../src/terminal-window.c:4226
 msgid "_Title:"
-msgstr "Tít_ol:"
+msgstr "_Títol:"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4411
 msgid "Contributors:"
 msgstr "Col·laboradors:"
 
-#: ../src/terminal-window.c:4456
+#: ../src/terminal-window.c:4430
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Un emulador de terminal per a l'escriptori MATE"
 
-#: ../src/terminal-window.c:4463
+#: ../src/terminal-window.c:4437
 msgid "translator-credits"
-msgstr "Nada Nada <qk269@hotmail.com>\nJordi Mallach <jordi@sindominio.net>\nJosep Puigdemont <josep.puigdemont@gmail.com>\nJoan Duran <jodufi@gmail.com>\nEquip LliureX: Pilar Embid <embid_mar@gva.es>"
+msgstr ""
+"Quico Llach <quico@softcatala.org>\n"
+"Jordi Mallach <jordi@sindominio.net>\n"
+"Jordi Mas <jmas@softcatala.org>\n"
+"Aleix Badia i Bosch <abadia@ica.es>\n"
+"Josep Puigdemont <josep.puigdemont@gmail.com>\n"
+"Equip LliureX: Pilar Embid <embid_mar@gva.es>"

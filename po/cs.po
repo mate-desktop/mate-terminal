@@ -1,38 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# garretraziel <boloomka@gmail.com>, 2012
-# garretraziel <boloomka@gmail.com>, 2012
-# huskyviking <husky.viking@seznam.cz>, 2014
-# huskyviking <husky.viking@seznam.cz>, 2014
-# Jaroslav Lichtblau <dragonlord@seznam.cz>, 2016
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Lucas Lommer <drom@kdyne.net>, 2017
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013
-# LiberteCzech <liberte.czech@gmail.com>, 2015-2016
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Michal Procházka <mich.procha@seznam.cz>, 2012
-# Michal Procházka <mich.procha@seznam.cz>, 2012
-# Michal <sinope@seznam.cz>, 2014
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2012
-# phebix <dev@phebix.cz>, 2016
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 13:20+0300\n"
-"PO-Revision-Date: 2018-01-14 13:47+0000\n"
-"Last-Translator: ToMáš Marný\n"
-"Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
+"POT-Creation-Date: 2018-03-17 19:52+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Honza K. <honza889@gmail.com>, 2018\n"
+"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../mate-terminal.appdata.xml.in.h:1
 msgid "A terminal emulator for the MATE desktop environment"
@@ -47,16 +31,23 @@ msgid ""
 "clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
-msgstr "<p> MATE Terminal je emulovaná aplikace terminálu, kterou můžete použít pro přístup k shellu UNIXu v prostředí MATE. MATE Terminal emuluje xterm program vyvinutý společností X Consortium. Podporuje průsvitné pozadí, otevření více terminálů v jednom okně (karty) a zobrazování adres URL kliknutím. </ p> <p> MATE Terminal je odnož Terminalu GNOME a část prostředí plochy MATE . Chcete-li se dozvědět více o MATE a MATE Terminal, navštivte domovskou stránku projektu. </ p>"
+msgstr ""
+"<p> MATE Terminal je emulovaná aplikace terminálu, kterou můžete použít pro "
+"přístup k shellu UNIXu v prostředí MATE. MATE Terminal emuluje xterm program"
+" vyvinutý společností X Consortium. Podporuje průsvitné pozadí, otevření "
+"více terminálů v jednom okně (karty) a zobrazování adres URL kliknutím. </ "
+"p> <p> MATE Terminal je odnož Terminalu GNOME a část prostředí plochy MATE ."
+" Chcete-li se dozvědět více o MATE a MATE Terminal, navštivte domovskou "
+"stránku projektu. </ p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4454
+#: ../src/terminal-window.c:4428
 msgid "MATE Terminal"
 msgstr "Terminál MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2210
+#: ../src/terminal-window.c:2193
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -101,7 +92,9 @@ msgstr "Seznam profilů"
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
-msgstr "Seznam profilů známých v mate-terminal. Seznam obsahuje řetězce pojmenovávající podadresáře relativně k /org/mate/terminal/profiles."
+msgstr ""
+"Seznam profilů známých v mate-terminal. Seznam obsahuje řetězce "
+"pojmenovávající podadresáře relativně k /org/mate/terminal/profiles."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:3
 msgid "Profile to use for new terminals"
@@ -111,7 +104,9 @@ msgstr "Profil, který používat pro nové terminály"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr "Profil, který použít při otevírání nového okna nebo karty. Musí být v profile_list."
+msgstr ""
+"Profil, který použít při otevírání nového okna nebo karty. Musí být v "
+"profile_list."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
@@ -122,18 +117,26 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr "Jestli poskytovat klávesové zkratky Alt+písmeno pro panel nabídky. Mohou kolidovat s některými aplikacemi uvnitř terminálu, takže je možné je vypnout."
+msgstr ""
+"Jestli poskytovat klávesové zkratky Alt+písmeno pro panel nabídky. Mohou "
+"kolidovat s některými aplikacemi uvnitř terminálu, takže je možné je "
+"vypnout."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
-msgstr "Jestli je povolena standardní klávesová zkratka GTK+ pro přístup k panelu nabídky"
+msgstr ""
+"Jestli je povolena standardní klávesová zkratka GTK+ pro přístup k panelu "
+"nabídky"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
-msgstr "Běžně můžete k panelu nabídky přistupovat klávesou F10. To může být také upraveno pomocí gtkrc (gtk-menu-bar-accel = „whatever“). Tato volba umožňuje vypnout standardní klávesovou zkratku nabídky."
+msgstr ""
+"Běžně můžete k panelu nabídky přistupovat klávesou F10. To může být také "
+"upraveno pomocí gtkrc (gtk-menu-bar-accel = „whatever“). Tato volba umožňuje"
+" vypnout standardní klávesovou zkratku nabídky."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
@@ -149,7 +152,10 @@ msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
-msgstr "V nabídce \"Kódování\" je nabídnuta podmnožina možných kódování. Toto je seznam kódování, které se tam mají objevit. Speciální název kódování „current“ znamená zobrazit kódování aktuální lokalizace libc."
+msgstr ""
+"V nabídce \"Kódování\" je nabídnuta podmnožina možných kódování. Toto je "
+"seznam kódování, které se tam mají objevit. Speciální název kódování "
+"„current“ znamená zobrazit kódování aktuální lokalizace libc."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -159,7 +165,9 @@ msgstr "Jestli žádat o potvrzení při zavírání oken terminálu"
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab."
-msgstr "Jestli žádat o potvrzení při zavírání okna terminálu, které má otevřenou více než jednu kartu."
+msgstr ""
+"Jestli žádat o potvrzení při zavírání okna terminálu, které má otevřenou "
+"více než jednu kartu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgid "Close tabs with middle click"
@@ -167,7 +175,9 @@ msgstr "Zavřít karty kliknutím prostředním tlačítkem"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "If true, it enables the ability to close tabs using middle click."
-msgstr "Pokud je zapnuto, povoluje možnost zavírání karet pomocí kliknutí prostředním tlačítkem."
+msgstr ""
+"Pokud je zapnuto, povoluje možnost zavírání karet pomocí kliknutí "
+"prostředním tlačítkem."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -177,7 +187,9 @@ msgstr "Přepínat karty pomocí [Ctrl]+[Tab]"
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
-msgstr "Pokud je povoleno, zapíná možnost přepínat karty pomocí kláves [Ctrl+Tab] a [Ctrl+Shift+Tab]."
+msgstr ""
+"Pokud je povoleno, zapíná možnost přepínat karty pomocí kláves [Ctrl+Tab] a "
+"[Ctrl+Shift+Tab]."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:18
 msgctxt "visible-name"
@@ -200,7 +212,9 @@ msgstr "Jestli zobrazovat panel nabídky v nových oknech/kartách"
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
-msgstr "Nastavte na povoleno, má-li být nabídka zobrazována v nových oknech, pro okna/karty s tímto profilem."
+msgstr ""
+"Nastavte na povoleno, má-li být nabídka zobrazována v nových oknech, pro "
+"okna/karty s tímto profilem."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:23
 msgid "Default color of text in the terminal"
@@ -210,7 +224,9 @@ msgstr "Výchozí barva textu v terminálu"
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
-msgstr "Výchozí barva textu v terminálu, jako určení barvy (mohou to být šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“)."
+msgstr ""
+"Výchozí barva textu v terminálu, jako určení barvy (mohou to být "
+"šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:25
 msgid "Default color of terminal background"
@@ -220,7 +236,9 @@ msgstr "Výchozí barva pozadí terminálu"
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
-msgstr "Výchozí barva pozadí terminálu jako určení barvy (může se jednat o šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“)."
+msgstr ""
+"Výchozí barva pozadí terminálu jako určení barvy (může se jednat o "
+"šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Default color of bold text in the terminal"
@@ -231,7 +249,11 @@ msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
-msgstr "Výchozí barva tučného textu v terminálu, jako určení barvy (mohou to být šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“). Toto nastavení bude ignorováno, pokud je klíč bold_color_same_as_fg nastaven na „true“."
+msgstr ""
+"Výchozí barva tučného textu v terminálu, jako určení barvy (mohou to být "
+"šestnáctkové číslice ve stylu HTML nebo název barvy, např. „red“). Toto "
+"nastavení bude ignorováno, pokud je klíč bold_color_same_as_fg nastaven na "
+"„true“."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgid "Whether bold text should use the same color as normal text"
@@ -240,7 +262,9 @@ msgstr "Jestli má mít tučný text stejnou barvu jako text normální"
 #: ../src/org.mate.terminal.gschema.xml.in.h:30
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
-msgstr "Je-li povoleno, tučný text bude vykreslen pomocí stejné barvy jako text normální."
+msgstr ""
+"Je-li povoleno, tučný text bude vykreslen pomocí stejné barvy jako text "
+"normální."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:31
 msgid "What to do with dynamic title"
@@ -252,7 +276,11 @@ msgid ""
 "have their shell set up to do this), the dynamically-set title can erase the"
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Pokud aplikace v terminálu nastavuje titulek (nejčastěji mají uživatelé svůj shell nastaven tak, aby to dělal), může dynamicky nastavený titulek vymazat nastavený titulek, přejít před něj, přejít za něj, nebo jej nahradit. Možné hodnoty jsou „replace“, „before“, „after“ a „ignore“."
+msgstr ""
+"Pokud aplikace v terminálu nastavuje titulek (nejčastěji mají uživatelé svůj"
+" shell nastaven tak, aby to dělal), může dynamicky nastavený titulek vymazat"
+" nastavený titulek, přejít před něj, přejít za něj, nebo jej nahradit. Možné"
+" hodnoty jsou „replace“, „before“, „after“ a „ignore“."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgctxt "title"
@@ -268,7 +296,10 @@ msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
-msgstr "Titulek, který zobrazovat pro okno nebo kartu terminálu. Tento titulek může být nahrazen nebo zkombinován s titulkem nastaveným aplikací uvnitř terminálu, v závislosti na nastavení title_mode."
+msgstr ""
+"Titulek, který zobrazovat pro okno nebo kartu terminálu. Tento titulek může "
+"být nahrazen nebo zkombinován s titulkem nastaveným aplikací uvnitř "
+"terminálu, v závislosti na nastavení title_mode."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:36
 msgid "Whether to allow bold text"
@@ -286,7 +317,9 @@ msgstr "Jestli umlčet zvonek terminálu"
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
-msgstr "Je-li povoleno, tak zvukově nesignalizovat, když aplikace posílají kód pro zvonek terminálu."
+msgstr ""
+"Je-li povoleno, tak zvukově nesignalizovat, když aplikace posílají kód pro "
+"zvonek terminálu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:40
 msgid "Copy selection to clipboard"
@@ -294,7 +327,9 @@ msgstr "Zkopírovat výběr do schránky"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:41
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr "Pokud je nastaveno na „povoleno“, výběr je automaticky zkopírován do vyrovnávací paměti schránky."
+msgstr ""
+"Pokud je nastaveno na „povoleno“, výběr je automaticky zkopírován do "
+"vyrovnávací paměti schránky."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Characters that are considered \"part of a word\""
@@ -305,7 +340,10 @@ msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
-msgstr "Při vybírání textu po slovech jsou posloupnosti těchto znaků považovány za jednotlivá slova. Rozsahy mohou být zadány jako „A-Z“. Spojovník (bez významu rozsahu) by měl být prvním zadaným znakem."
+msgstr ""
+"Při vybírání textu po slovech jsou posloupnosti těchto znaků považovány za "
+"jednotlivá slova. Rozsahy mohou být zadány jako „A-Z“. Spojovník (bez "
+"významu rozsahu) by měl být prvním zadaným znakem."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
@@ -315,7 +353,9 @@ msgstr "Používat vlastní velikost terminálu pro nová okna"
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
-msgstr "Pokud je povoleno, nově vytvořené okno terminálu bude mít vlastní velikost určenou implicitním nastavením default_size_columns a default_size_rows."
+msgstr ""
+"Pokud je povoleno, nově vytvořené okno terminálu bude mít vlastní velikost "
+"určenou implicitním nastavením default_size_columns a default_size_rows."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:46
 msgid "Default number of columns"
@@ -325,7 +365,9 @@ msgstr "Výchozí počet sloupců"
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Počet sloupců v nově vytvořeném okně terminálu. Nemá účinek, pokud use_custom_default_size není aktivován."
+msgstr ""
+"Počet sloupců v nově vytvořeném okně terminálu. Nemá účinek, pokud "
+"use_custom_default_size není aktivován."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Default number of rows"
@@ -335,7 +377,9 @@ msgstr "Vývhozí počet řádek"
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "Počet řádek v nově vytvořeném okně terminálu. Nemá efekt, pokud use_custom_default_size není aktivován."
+msgstr ""
+"Počet řádek v nově vytvořeném okně terminálu. Nemá efekt, pokud "
+"use_custom_default_size není aktivován."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
@@ -345,7 +389,9 @@ msgstr "Pozice posuvníku"
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
-msgstr "Kam zobrazit posuvnou lištu terminálu. Možnosti jsou \"vlevo\", \"vpravo\" a \"skrýt\"."
+msgstr ""
+"Kam zobrazit posuvnou lištu terminálu. Možnosti jsou \"vlevo\", \"vpravo\" a"
+" \"skrýt\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Number of lines to keep in scrollback"
@@ -356,7 +402,10 @@ msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
-msgstr "Počet řádků které udržovat pro posunování. Můžete se v terminálu posunovat o tento počet řádků; řádky, které se nevejdou, jsou zahozeny. Pokud je klíč scrollback_unlimited nastaven na „true“, tato hodnota je ignorována."
+msgstr ""
+"Počet řádků které udržovat pro posunování. Můžete se v terminálu posunovat o"
+" tento počet řádků; řádky, které se nevejdou, jsou zahozeny. Pokud je klíč "
+"scrollback_unlimited nastaven na „true“, tato hodnota je ignorována."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:54
 msgid "Whether an unlimited number of lines should be kept in scrollback"
@@ -367,7 +416,10 @@ msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
-msgstr "Je-li povoleno, nebudou řádky historie posunování zahazovány. Historie je dočasně ukládána na disk, proto může tato volba způsobit zaplnění volného místa, pokud bude terminál produkovat hodně výstupu."
+msgstr ""
+"Je-li povoleno, nebudou řádky historie posunování zahazovány. Historie je "
+"dočasně ukládána na disk, proto může tato volba způsobit zaplnění volného "
+"místa, pokud bude terminál produkovat hodně výstupu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:56
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -384,7 +436,8 @@ msgstr "Jestli se posouvat dolů, když je nový výstup"
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
-msgstr "Je-li povoleno, posune se terminál dolů, kdykoli je na něm nový výstup."
+msgstr ""
+"Je-li povoleno, posune se terminál dolů, kdykoli je na něm nový výstup."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "What to do with the terminal when the child command exits"
@@ -394,7 +447,9 @@ msgstr "Co udělat s terminálem, když příkaz potomka skončí"
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
-msgstr "Možné hodnoty jsou „close“ pro zavření terminálu a „restart“ pro restartování příkazu."
+msgstr ""
+"Možné hodnoty jsou „close“ pro zavření terminálu a „restart“ pro "
+"restartování příkazu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -404,17 +459,22 @@ msgstr "Jestli spouštět příkaz v terminálu jako přihlašovací shell"
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "Je-li povoleno, příkaz uvnitř terminálu bude spuštěn jako přihlašovací shell . (argv[0] bude mít před sebou spojovník.)"
+msgstr ""
+"Je-li povoleno, příkaz uvnitř terminálu bude spuštěn jako přihlašovací shell"
+" . (argv[0] bude mít před sebou spojovník.)"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to update login records when launching terminal command"
-msgstr "Jestli aktualizovat přihlašovací záznamy při spouštění příkazu terminálu"
+msgstr ""
+"Jestli aktualizovat přihlašovací záznamy při spouštění příkazu terminálu"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the system login records utmp and wtmp will be updated when the "
 "command inside the terminal is launched."
-msgstr "Je-li povoleno, budou systémové záznamy o přihlášení utmp a wtmp aktualizovány, když je spuštěn příkaz uvnitř terminálu."
+msgstr ""
+"Je-li povoleno, budou systémové záznamy o přihlášení utmp a wtmp "
+"aktualizovány, když je spuštěn příkaz uvnitř terminálu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
@@ -424,7 +484,9 @@ msgstr "Jestli spustit vlastní příkaz místo shellu"
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "Je-li povoleno, hodnota nastavení custom_command se bude používat místo spouštění shellu."
+msgstr ""
+"Je-li povoleno, hodnota nastavení custom_command se bude používat místo "
+"spouštění shellu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Whether to blink the cursor"
@@ -434,7 +496,9 @@ msgstr "Zda-li má kurzor blikat"
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
-msgstr "Možné hodnoty jsou „system“ pro použití globálního nastavení blikání kurzoru, nebo „on“ a „off“ pro zapnutí, respektive vypnutí."
+msgstr ""
+"Možné hodnoty jsou „system“ pro použití globálního nastavení blikání "
+"kurzoru, nebo „on“ a „off“ pro zapnutí, respektive vypnutí."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "The cursor appearance"
@@ -444,7 +508,9 @@ msgstr "Vzhled kurzoru"
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
-msgstr "Možné hodnoty jsou „block“ pro blokový kurzor, „ibeam“ pro vertikální čáru kurzoru nebo „underline“ pro podtržení jako kurzor."
+msgstr ""
+"Možné hodnoty jsou „block“ pro blokový kurzor, „ibeam“ pro vertikální čáru "
+"kurzoru nebo „underline“ pro podtržení jako kurzor."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Custom command to use instead of the shell"
@@ -452,7 +518,9 @@ msgstr "Vlastní příkazy, které používat místo shellu"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Spustit tento příkaz místo shellu, je-li use_custom_command  nastaveno na povoleno."
+msgstr ""
+"Spustit tento příkaz místo shellu, je-li use_custom_command  nastaveno na "
+"povoleno."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Icon for terminal window"
@@ -471,7 +539,11 @@ msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr "Terminály mají šestnáctibarevnou paletu, kterou mohou používat aplikace uvnitř terminálu. Toto je ta paleta, ve tvaru dvojtečkami odděleného seznamu názvů barev. Názvy barev by měly být v šestnáctkovém formátu, např „#FF00FF“"
+msgstr ""
+"Terminály mají šestnáctibarevnou paletu, kterou mohou používat aplikace "
+"uvnitř terminálu. Toto je ta paleta, ve tvaru dvojtečkami odděleného seznamu"
+" názvů barev. Názvy barev by měly být v šestnáctkovém formátu, např "
+"„#FF00FF“"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Font"
@@ -490,7 +562,10 @@ msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
-msgstr "Typ pozadí terminálu. Může být „solid“ pro jednolitou barvu, „image“ pro obrázek nebo „transparent“ pro reálnou průhlednost pokud beží správce oken s funkcemi skládání nebo quasi průhlednost v ostatních případech."
+msgstr ""
+"Typ pozadí terminálu. Může být „solid“ pro jednolitou barvu, „image“ pro "
+"obrázek nebo „transparent“ pro reálnou průhlednost pokud beží správce oken s"
+" funkcemi skládání nebo quasi průhlednost v ostatních případech."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Background image"
@@ -508,7 +583,9 @@ msgstr "Jestli posouvat obrázek na pozadí"
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
-msgstr "Je-li „povoleno“, posunovat obrázek na pozadí s textem v popředí; je-li „zakázáno“, nechat obrázek v pevné pozici a posunovat text nad ním."
+msgstr ""
+"Je-li „povoleno“, posunovat obrázek na pozadí s textem v popředí; je-li "
+"„zakázáno“, nechat obrázek v pevné pozici a posunovat text nad ním."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "How much to darken the background image"
@@ -520,7 +597,11 @@ msgid ""
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
-msgstr "Hodnota mezi 0.0 a 1.0 indikující, jak moc ztmavit obrázek na pozadí. 0.0 znamená žádné ztmavování, 1.0 znamená úplně černý. V aktuální implementaci jsou možné jen dvě úrovně ztmavování, takže toto nastavení se chová jako boolean, kde 0.0 zakazuje efekt ztmavování."
+msgstr ""
+"Hodnota mezi 0.0 a 1.0 indikující, jak moc ztmavit obrázek na pozadí. 0.0 "
+"znamená žádné ztmavování, 1.0 znamená úplně černý. V aktuální implementaci "
+"jsou možné jen dvě úrovně ztmavování, takže toto nastavení se chová jako "
+"boolean, kde 0.0 zakazuje efekt ztmavování."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Backspace key"
@@ -533,7 +614,12 @@ msgid ""
 "ASCII BS character), \"escape-sequence\" for the escape sequence typically "
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
-msgstr "Nastavuje, jaký kód generuje klávesa backspace. Možné hodnoty jsou „ascii-del“ pro znak ASCII DEL, „control-h“ pro Control-H (alias znak ASCII BS), „escape-sequence“ pro posloupnost pro změnu typicky přiřazenou k Backspace nebo Delete. „ascii-del“ je běžně považováno za správné nastavení pro klávesu Backspace."
+msgstr ""
+"Nastavuje, jaký kód generuje klávesa backspace. Možné hodnoty jsou „ascii-"
+"del“ pro znak ASCII DEL, „control-h“ pro Control-H (alias znak ASCII BS), "
+"„escape-sequence“ pro posloupnost pro změnu typicky přiřazenou k Backspace "
+"nebo Delete. „ascii-del“ je běžně považováno za správné nastavení pro "
+"klávesu Backspace."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Effect of the Delete key"
@@ -546,7 +632,12 @@ msgid ""
 "character), \"escape-sequence\" for the escape sequence typically bound to "
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
-msgstr "Nastavuje, jaký kód generuje klávesa delete. Možné hodnoty jsou „ascii-del“ pro znak ASCII DEL, „control-h“ pro Control-H (alias znak ASCII BS), „escape-sequence“ pro posloupnost pro změnu typicky přiřazenou k Backspace nebo Delete. „escape-sequence“ je běžně považováno za správné nastavení pro klávesu Backspace."
+msgstr ""
+"Nastavuje, jaký kód generuje klávesa delete. Možné hodnoty jsou „ascii-del“ "
+"pro znak ASCII DEL, „control-h“ pro Control-H (alias znak ASCII BS), "
+"„escape-sequence“ pro posloupnost pro změnu typicky přiřazenou k Backspace "
+"nebo Delete. „escape-sequence“ je běžně považováno za správné nastavení pro "
+"klávesu Backspace."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -556,7 +647,9 @@ msgstr "Jestli používat barvy z motivu widgetu terminálu"
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
-msgstr "Je-li povoleno, bude použito barevné schéma motivu používané pro pole pro vkládání textu místo barev poskytnutým uživatelem."
+msgstr ""
+"Je-li povoleno, bude použito barevné schéma motivu používané pro pole pro "
+"vkládání textu místo barev poskytnutým uživatelem."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Whether to use the system font"
@@ -566,7 +659,9 @@ msgstr "Jestli používat systémové písmo"
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
-msgstr "Je-li povoleno, bude terminál používat standardní písmo pro celé pracovní prostředí, pokud je monospace (a jinak nejpodobnější font, který najde)"
+msgstr ""
+"Je-li povoleno, bude terminál používat standardní písmo pro celé pracovní "
+"prostředí, pokud je monospace (a jinak nejpodobnější font, který najde)"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Highlight S/Key challenges"
@@ -576,7 +671,9 @@ msgstr "Zvýrazňovat výzvy S/Key"
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "Otevřít dialog, když je detekován dotaz na odpověď na výzvu S/Key a je na něj kliknuto. Napsání hesla do dialogového okna je pošle terminálu."
+msgstr ""
+"Otevřít dialog, když je detekován dotaz na odpověď na výzvu S/Key a je na "
+"něj kliknuto. Napsání hesla do dialogového okna je pošle terminálu."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
@@ -588,7 +685,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro otevření nové karty. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro otevření nové karty. Vyjádřena jako řetězec ve formátu"
+" používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to open a new window"
@@ -600,7 +700,10 @@ msgid ""
 " same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro otevření nového okna. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro otevření nového okna. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to create a new profile"
@@ -612,7 +715,11 @@ msgid ""
 "Expressed as a string in the same format used for GTK+ resource files. If "
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
-msgstr "Klávesová zkratka pro otevření dialogu pro vytváření profilu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro otevření dialogu pro vytváření profilu. Vyjádřena jako"
+" řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -624,7 +731,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klávesová zkratka pro uložení obsahu aktuální karty do souboru. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro uložení obsahu aktuální karty do souboru. Vyjádřena "
+"jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a tab"
@@ -636,7 +747,10 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro zavření karty. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro zavření karty. Vyjádřena jako řetězec ve formátu "
+"používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to close a window"
@@ -648,7 +762,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro zavření okna. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro zavření okna. Vyjádřena jako řetězec ve formátu "
+"používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to copy text"
@@ -660,7 +777,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klávesová zkratka pro kopírování vybraného textu do schránky. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro kopírování vybraného textu do schránky. Vyjádřena jako"
+" řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to paste text"
@@ -672,7 +793,11 @@ msgid ""
 "terminal. Expressed as a string in the same format used for GTK+ resource "
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
-msgstr "Klávesová zkratka pro vložení obsahu schránky do terminálu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro vložení obsahu schránky do terminálu. Vyjádřena jako "
+"řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to select all text"
@@ -684,7 +809,11 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klávesová zkratka pro výběr veškerého textu v  terminálu. Vyjádřeno jako řetězec ve stejném formátu použitém pro soubory resource GTK+. Pokud nastavíte volbu na speciální řetězec \"disabled\", nebude pro tuto akci k dispozici žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro výběr veškerého textu v  terminálu. Vyjádřeno jako "
+"řetězec ve stejném formátu použitém pro soubory resource GTK+. Pokud "
+"nastavíte volbu na speciální řetězec \"disabled\", nebude pro tuto akci k "
+"dispozici žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to show the find dialog"
@@ -696,11 +825,15 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka k zobrazení dialogového okna hledání. Vyjádřeno jako řetězec ve stejném formátu jako používají zdrojové soubory GTK₊. Pokud volbu nastavíte na „disabled”, nebude pro akci nastavena klávesová zkratka žádná."
+msgstr ""
+"Klávesová zkratka k zobrazení dialogového okna hledání. Vyjádřeno jako "
+"řetězec ve stejném formátu jako používají zdrojové soubory GTK₊. Pokud volbu"
+" nastavíte na „disabled”, nebude pro akci nastavena klávesová zkratka žádná."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr "Klávesová zkratka pro vyhledání následujícího výskytu hledaného výrazu"
+msgstr ""
+"Klávesová zkratka pro vyhledání následujícího výskytu hledaného výrazu"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
@@ -708,7 +841,11 @@ msgid ""
 "the terminal. Expressed as a string in the same format used for GTK+ "
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
-msgstr "Klávesová zkratka pro nalezení dalšího výskytu hledaného výrazu v terminálu. Vyjádřeno jako řetězec ve stejném formátu použitém pro soubory resource GTK+. Pokud nastavíte volbu na speciální řetězec \"zakázáno\", nebude pro tuto akci k dispozici žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro nalezení dalšího výskytu hledaného výrazu v terminálu."
+" Vyjádřeno jako řetězec ve stejném formátu použitém pro soubory resource "
+"GTK+. Pokud nastavíte volbu na speciální řetězec \"zakázáno\", nebude pro "
+"tuto akci k dispozici žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
@@ -720,7 +857,11 @@ msgid ""
 " in the terminal. Expressed as a string in the same format used for GTK+ "
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
-msgstr "Klávesová zkratka pro nalezení předchozího výskytu hledaného výrazu v terminálu. Vyjádřeno jako řetězec ve stejném formátu použitém pro soubory resource GTK+. Pokud nastavíte volbu na speciální řetězec \"zakázáno\", nebude pro tuto akci k dispozici žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro nalezení předchozího výskytu hledaného výrazu v "
+"terminálu. Vyjádřeno jako řetězec ve stejném formátu použitém pro soubory "
+"resource GTK+. Pokud nastavíte volbu na speciální řetězec \"zakázáno\", "
+"nebude pro tuto akci k dispozici žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -732,7 +873,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Klávesová zkratka pro přepnutí režimu přes celou obrazovku. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí režimu přes celou obrazovku. Vyjádřena jako "
+"řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
@@ -744,7 +889,11 @@ msgid ""
 "a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klávesová zkratka pro přepnutí viditelnosti panelu nabídky. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí viditelnosti panelu nabídky. Vyjádřena jako "
+"řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to set the terminal title"
@@ -756,7 +905,10 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro nastavení titulku terminálu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro nastavení titulku terminálu. Vyjádřena jako řetězec ve"
+" formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset the terminal"
@@ -768,7 +920,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro inicializaci terminálu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro inicializaci terminálu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to reset and clear the terminal"
@@ -780,7 +935,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Klávesová zkratka pro inicializaci a vymazání terminálu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro inicializaci a vymazání terminálu. Vyjádřena jako "
+"řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -792,7 +951,10 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Klávesová zkratka pro přepnutí na předchozí kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na předchozí kartu. Vyjádřena jako řetězec ve"
+" formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the next tab"
@@ -804,7 +966,10 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro přepnutí na následující kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na následující kartu. Vyjádřena jako řetězec "
+"ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the previous profile"
@@ -816,7 +981,10 @@ msgid ""
 "string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klávesová zkratka pro přepnutí na předchozí profil. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na předchozí profil. Vyjádřena jako řetězec "
+"ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Keyboard shortcut to switch to the next profile"
@@ -828,7 +996,10 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Klávesová zkratka pro přepnutí na následující profil. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na následující profil. Vyjádřena jako řetězec"
+" ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the left."
@@ -840,7 +1011,10 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "Klávesová zkratka posun aktuální karty doleva. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka posun aktuální karty doleva. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to move the current tab to the right."
@@ -852,7 +1026,10 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "Klávesová zkratka posun aktuální karty doprava. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka posun aktuální karty doprava. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Accelerator to detach current tab."
@@ -863,7 +1040,10 @@ msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
-msgstr "Klávesová zkratka odpojení aktuální karty. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka odpojení aktuální karty. Vyjádřena jako řetězec ve formátu"
+" používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 1"
@@ -875,7 +1055,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 1. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 1. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 2"
@@ -887,7 +1070,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 2. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 2. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 3"
@@ -899,7 +1085,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 3. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 3. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 4"
@@ -911,7 +1100,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 4. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 4. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 5"
@@ -923,7 +1115,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 5. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 5. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 6"
@@ -935,7 +1130,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 6. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 6. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 7"
@@ -947,7 +1145,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 7. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 7. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 8"
@@ -959,7 +1160,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 8. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 8. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 9"
@@ -971,7 +1175,10 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro přepnutí na 9. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 9. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 10"
@@ -983,7 +1190,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro přepnutí na 10. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 10. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 11"
@@ -995,7 +1205,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro přepnutí na 11. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 11. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to switch to tab 12"
@@ -1007,7 +1220,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro přepnutí na 12. kartu. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro přepnutí na 12. kartu. Vyjádřena jako řetězec ve "
+"formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na "
+"speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to launch help"
@@ -1019,7 +1235,10 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klávesová zkratka pro spuštění nápovědy. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro spuštění nápovědy. Vyjádřena jako řetězec ve formátu "
+"používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font larger"
@@ -1031,7 +1250,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro zvětšení písma. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro zvětšení písma. Vyjádřena jako řetězec ve formátu "
+"používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font smaller"
@@ -1043,7 +1265,10 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klávesová zkratka pro zmenšení písma. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro zmenšení písma. Vyjádřena jako řetězec ve formátu "
+"používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální "
+"řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:176
 msgid "Keyboard shortcut to make font normal-size"
@@ -1055,7 +1280,11 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "Klávesová zkratka pro nastavení normální velikosti písma. Vyjádřena jako řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná klávesová zkratka."
+msgstr ""
+"Klávesová zkratka pro nastavení normální velikosti písma. Vyjádřena jako "
+"řetězec ve formátu používaném pro soubory resource GTK+. Pokud volbu "
+"nastavíte na speciální řetězec „disabled“, nebude pro tuto akci žádná "
+"klávesová zkratka."
 
 #: ../src/profile-editor.c:44
 msgid "Black on light yellow"
@@ -1165,7 +1394,9 @@ msgstr "Klávesové zkratky"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "Povolit kláv_esové zkratky v hlavní nabídce (např. Alt-S pro otevření nabídky Soubor)"
+msgstr ""
+"Povolit kláv_esové zkratky v hlavní nabídce (např. Alt-S pro otevření "
+"nabídky Soubor)"
 
 #: ../src/keybinding-editor.ui.h:3
 msgid "Enable the _menu shortcut key (F10 by default)"
@@ -1511,7 +1742,9 @@ msgstr "P_aleta barev:"
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
-msgstr "<small><i><b>Poznámka:</b> Tyto barvy jsou dostupné aplikacím v terminálu.</i></small>"
+msgstr ""
+"<small><i><b>Poznámka:</b> Tyto barvy jsou dostupné aplikacím v "
+"terminálu.</i></small>"
 
 #: ../src/profile-preferences.ui.h:69
 msgid "Colors"
@@ -1587,7 +1820,7 @@ msgstr "_Neomezeno"
 
 #: ../src/profile-preferences.ui.h:87
 msgid "Scrolling"
-msgstr "Rolování"
+msgstr "Posunování"
 
 #: ../src/profile-preferences.ui.h:88
 msgid ""
@@ -1595,7 +1828,11 @@ msgid ""
 "incorrectly.  They are only here to allow you to work around certain "
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
-msgstr "<small><i><b>Poznámka:</b> Tyto volby mohou způsobit, že některé aplikace nebudou fungovat správně. Jsou tu pouze proto, abyste mohli obejít skutečnost, že některé aplikace a operační systémy očekávají jiné chování terminálu.</i></small>"
+msgstr ""
+"<small><i><b>Poznámka:</b> Tyto volby mohou způsobit, že některé aplikace "
+"nebudou fungovat správně. Jsou tu pouze proto, abyste mohli obejít "
+"skutečnost, že některé aplikace a operační systémy očekávají jiné chování "
+"terminálu.</i></small>"
 
 #: ../src/profile-preferences.ui.h:89
 msgid "_Delete key generates:"
@@ -1689,13 +1926,13 @@ msgstr "Najít další"
 msgid "Find Previous"
 msgstr "Najít předchozí"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4231
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
 msgid "Set Title"
 msgstr "Nastavit titulek"
 
 #: ../src/terminal-accels.c:238
 msgid "Reset"
-msgstr "Inicializovat"
+msgstr "Resetovat"
 
 #: ../src/terminal-accels.c:242
 msgid "Reset and Clear"
@@ -1826,37 +2063,47 @@ msgstr "Kliknutím vyberete profil"
 msgid "Profile list"
 msgstr "Seznam profilů"
 
-#: ../src/terminal-app.c:684
+#: ../src/terminal-app.c:702
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Odstranit profil „%s“?"
 
-#: ../src/terminal-app.c:697
+#: ../src/terminal-app.c:706
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: ../src/terminal-app.c:711
+msgid "_Delete"
+msgstr "_Smazat"
+
+#: ../src/terminal-app.c:718
 msgid "Delete Profile"
 msgstr "Odstranění profilu"
 
-#: ../src/terminal-app.c:1144
+#: ../src/terminal-app.c:1165
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "Profil nazvaný „%s“ již existuje. Chcete vytvořit další profil se stejným názvem?"
+msgstr ""
+"Profil nazvaný „%s“ již existuje. Chcete vytvořit další profil se stejným "
+"názvem?"
 
-#: ../src/terminal-app.c:1239
+#: ../src/terminal-app.c:1260
 msgid "Choose base profile"
 msgstr "Vyberte základní profil"
 
-#: ../src/terminal-app.c:1827
+#: ../src/terminal-app.c:1848
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Profil „%s“ neexistuje, použije se výchozí profil\n"
 
-#: ../src/terminal-app.c:1854
+#: ../src/terminal-app.c:1875
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Neplatný řetězec geometrie „%s“\n"
 
-#: ../src/terminal-app.c:2060
+#: ../src/terminal-app.c:2081
 msgid "User Defined"
 msgstr "Uživatelem definované"
 
@@ -2023,7 +2270,10 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "Volba „%s“ již není touto verzí mate-terminal podporována; možná budete chtít vytvořit profil s požadovaným nastavením a použít novou volbu '--profile'\n"
+msgstr ""
+"Volba „%s“ již není touto verzí mate-terminal podporována; možná budete "
+"chtít vytvořit profil s požadovaným nastavením a použít novou volbu '--"
+"profile'\n"
 
 #: ../src/terminal-options.c:209
 #, c-format
@@ -2059,7 +2309,9 @@ msgstr "Poměr zvětšení „%g“ je příliš vysoký, použije se %g\n"
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr "Volba „%s“ vyžaduje zadání příkazu, který bude spuštěn na zbytku příkazového řádku"
+msgstr ""
+"Volba „%s“ vyžaduje zadání příkazu, který bude spuštěn na zbytku příkazového"
+" řádku"
 
 #: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
@@ -2073,7 +2325,9 @@ msgstr "Nekompatibilní verze souboru s konfigurací terminálu."
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "Neregistrovat u aktivačního serveru, nesnažit se znovu použít aktivní terminál"
+msgstr ""
+"Neregistrovat u aktivačního serveru, nesnažit se znovu použít aktivní "
+"terminál"
 
 #: ../src/terminal-options.c:963
 msgid "Load a terminal configuration file"
@@ -2110,7 +2364,9 @@ msgstr "Okno na celou obrazovku"
 #: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr "Nastavení velikosti okna; například: 80x24, nebo 80x24+200+200 (SLOUPCExŘÁDKY+X+Y)"
+msgstr ""
+"Nastavení velikosti okna; například: 80x24, nebo 80x24+200+200 "
+"(SLOUPCExŘÁDKY+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2176,7 +2432,9 @@ msgstr "Zobrazit nastavení Terminálu MATE"
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "Volby otevírání nových oken a karet; můžete specifikovat více než jednu vlastnost:"
+msgstr ""
+"Volby otevírání nových oken a karet; můžete specifikovat více než jednu "
+"vlastnost:"
 
 #: ../src/terminal-options.c:1381
 msgid "Show terminal options"
@@ -2186,7 +2444,9 @@ msgstr "Zobrazit nastavení Terminálu MATE"
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "Volby okna; pokud je použito před prvním argumentem --window nebo --tab, nastavuje výchozí vlastnosti pro všechna okna:"
+msgstr ""
+"Volby okna; pokud je použito před prvním argumentem --window nebo --tab, "
+"nastavuje výchozí vlastnosti pro všechna okna:"
 
 #: ../src/terminal-options.c:1390
 msgid "Show per-window options"
@@ -2196,7 +2456,9 @@ msgstr "Zobrazit nastavení po oknech"
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "Volby terminálu; pokud je použito před prvním argumentem --window nebo --tab, nastavuje výchozí vlastnosti pro všechny terminály:"
+msgstr ""
+"Volby terminálu; pokud je použito před prvním argumentem --window nebo "
+"--tab, nastavuje výchozí vlastnosti pro všechny terminály:"
 
 #: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
@@ -2206,33 +2468,33 @@ msgstr "Zobrazit nastavení po terminálech"
 msgid "Unnamed"
 msgstr "Nepojmenováno"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr "_Předvolby profilu"
 
-#: ../src/terminal-screen.c:1545 ../src/terminal-screen.c:1923
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr "_Spustit znovu"
 
-#: ../src/terminal-screen.c:1548
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr "Při vytváření procesu potomka pro tento terminál došlo k chybě"
 
-#: ../src/terminal-screen.c:1928
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Dětský proces byl standartně ukončen stavem %d."
 
-#: ../src/terminal-screen.c:1933
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Dětský proces byl ukončen signálem %d."
 
-#: ../src/terminal-screen.c:1938
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr "Dětský proces byl ukončen."
 
-#: ../src/terminal-tab-label.c:137
+#: ../src/terminal-tab-label.c:132
 msgid "Close tab"
 msgstr "Zavřít kartu"
 
@@ -2240,42 +2502,52 @@ msgstr "Zavřít kartu"
 msgid "Switch to this tab"
 msgstr "Přepnout na tuto kartu"
 
-#: ../src/terminal-util.c:165
+#: ../src/terminal-util.c:145
 msgid "There was an error displaying help"
-msgstr "Došlo k chybě při zobrazování nápovědy"
+msgstr "Při zobrazování nápovědy se vyskytla chyba"
 
-#: ../src/terminal-util.c:237
+#: ../src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Nelze otevřít adresu “%s”"
 
-#: ../src/terminal-util.c:345
+#: ../src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
-msgstr "MATE Terminal je svobodný software; můžete jej šířit a/nebo modifikovat podle ustanovení GNU General Public License, vydávané Free Software Foundation; a to buď verze 3. této licence anebo (podle vlastního uvážení) kterékoliv pozdější verze."
+msgstr ""
+"MATE Terminal je svobodný software; můžete jej šířit a/nebo modifikovat "
+"podle ustanovení GNU General Public License, vydávané Free Software "
+"Foundation; a to buď verze 3. této licence anebo (podle vlastního uvážení) "
+"kterékoliv pozdější verze."
 
-#: ../src/terminal-util.c:349
+#: ../src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
-msgstr "Tento program je rozšiřován v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ ÚČEL. Další podrobnosti hledejte v GNU General Public License."
+msgstr ""
+"Tento program je rozšiřován v naději, že bude užitečný, avšak BEZ JAKÉKOLIV "
+"ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO "
+"URČITÝ ÚČEL. Další podrobnosti hledejte v GNU General Public License."
 
-#: ../src/terminal-util.c:353
+#: ../src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Kopii GNU General Public License jste měl(a) obdržet spolu s tímto programem; pokud se tak nestalo, napište o ni Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"Kopii GNU General Public License jste měl(a) obdržet spolu s tímto "
+"programem; pokud se tak nestalo, napište o ni Free Software Foundation, "
+"Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:682
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2283,259 +2555,294 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:688
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1881
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr "_Soubor"
 
-#: ../src/terminal-window.c:1882 ../src/terminal-window.c:1895
-#: ../src/terminal-window.c:2136
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
 msgstr "Otevřít _terminál"
 
-#: ../src/terminal-window.c:1883 ../src/terminal-window.c:1900
-#: ../src/terminal-window.c:2141
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr "Nová _karta"
 
-#: ../src/terminal-window.c:1884
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../src/terminal-window.c:1885
+#: ../src/terminal-window.c:1868
 msgid "_View"
 msgstr "_Zobrazit"
 
-#: ../src/terminal-window.c:1886
+#: ../src/terminal-window.c:1869
 msgid "_Search"
 msgstr "_Hledat"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr "_Terminál"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr "K_arty"
 
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1872
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/terminal-window.c:1905
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr "Nový _profil…"
 
-#: ../src/terminal-window.c:1910
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr "_Uložit obsah"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2151
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr "_Zavřít kartu"
 
-#: ../src/terminal-window.c:1920
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
 msgstr "_Zavřít okno"
 
-#: ../src/terminal-window.c:1937 ../src/terminal-window.c:2131
+#: ../src/terminal-window.c:1910 ../src/terminal-window.c:2104
+msgid "_Copy"
+msgstr "_Kopírovat"
+
+#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2109
+msgid "_Paste"
+msgstr "V_ložit"
+
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr "Vložit _jména souborů"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1925
+msgid "Select _All"
+msgstr "Vy_brat vše"
+
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr "P_rofily…"
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr "_Klávesové zkratky…"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr "Předvolby pr_ofilu"
 
-#: ../src/terminal-window.c:1981
+#: ../src/terminal-window.c:1947
+msgid "Zoom _In"
+msgstr "Z_většit"
+
+#: ../src/terminal-window.c:1952
+msgid "Zoom _Out"
+msgstr "_Oddálit"
+
+#: ../src/terminal-window.c:1957
+msgid "_Normal Size"
+msgstr "_Normální velikost"
+
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
-msgstr "_Hledat..."
+msgstr "_Hledat…"
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
-msgstr "Hledat _následující"
+msgstr "Najít _následující"
 
-#: ../src/terminal-window.c:1991
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
-msgstr "Hledat _předchozí"
+msgstr "Najít _předchozí"
 
-#: ../src/terminal-window.c:1996
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
 msgstr "_Zrušit zvýrazňování"
 
-#: ../src/terminal-window.c:2002
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
 msgstr "Přejdi k řádku..."
 
-#: ../src/terminal-window.c:2007
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
 msgstr "_Inkrementální hledání…"
 
 #. Terminal menu
-#: ../src/terminal-window.c:2014
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr "Změnit _profil"
 
-#: ../src/terminal-window.c:2016
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr "_Předchozí profil"
 
-#: ../src/terminal-window.c:2021
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr "_Následující profil"
 
-#: ../src/terminal-window.c:2026
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr "Na_stavit titulek…"
 
-#: ../src/terminal-window.c:2030
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr "Nastavit _kódování znaků"
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
-msgstr "_Inicializovat"
+msgstr "Reset"
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr "Inicializovat a _vymazat"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr "_Přidat nebo odebrat…"
 
-#: ../src/terminal-window.c:2051
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr "_Předchozí karta"
 
-#: ../src/terminal-window.c:2056
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr "_Následující karta"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
 msgstr "Posunout kartu do_leva"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
 msgstr "Posunout kartu dop_rava"
 
-#: ../src/terminal-window.c:2071
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr "O_dpojit kartu"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr "_Obsah"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../src/terminal-window.c:2090
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr "Ode_slat zprávu…"
 
-#: ../src/terminal-window.c:2095
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr "_Kopírovat e-mailovou adresu"
 
-#: ../src/terminal-window.c:2100
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr "Vol_at…"
 
-#: ../src/terminal-window.c:2105
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr "_Kopírovat adresu pro volání"
 
-#: ../src/terminal-window.c:2110
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr "_Otevřít odkaz"
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr "_Kopírovat adresu odkazu"
 
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr "P_rofily"
 
-#: ../src/terminal-window.c:2146 ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
 msgid "C_lose Window"
 msgstr "_Zavřít okno"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr "Opustit r_ežim celé obrazovky"
 
-#: ../src/terminal-window.c:2160
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr "Vstupní metod_y"
 
-#: ../src/terminal-window.c:2167
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr "Zobrazit _panel nabídky"
 
-#: ../src/terminal-window.c:2173
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr "_Celá obrazovka"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this window?"
 msgstr "Zavřít toto okno?"
 
-#: ../src/terminal-window.c:3626
+#: ../src/terminal-window.c:3604
 msgid "Close this terminal?"
 msgstr "Zavřít tento terminál?"
 
-#: ../src/terminal-window.c:3630
+#: ../src/terminal-window.c:3608
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
-msgstr "V tomto okně stále běží v některých terminálech procesy. Zavřením okna je všechny ukončíte."
+msgstr ""
+"V tomto okně stále běží v některých terminálech procesy. Zavřením okna je "
+"všechny ukončíte."
 
-#: ../src/terminal-window.c:3634
+#: ../src/terminal-window.c:3612
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
-msgstr "V tomto terminálu stále běží nějaký proces. Zavřením terminálu jej ukončí."
+msgstr ""
+"V tomto terminálu stále běží nějaký proces. Zavřením terminálu jej ukončí."
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3617
 msgid "C_lose Terminal"
 msgstr "_Zavřít terminál"
 
-#: ../src/terminal-window.c:3705
+#: ../src/terminal-window.c:3683
 msgid "Could not save contents"
 msgstr "Obsah nelze uložit"
 
-#: ../src/terminal-window.c:3729
+#: ../src/terminal-window.c:3707
 msgid "Save as..."
 msgstr "Uložit jako…"
 
-#: ../src/terminal-window.c:4248
+#: ../src/terminal-window.c:4226
 msgid "_Title:"
 msgstr "_Titulek:"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4411
 msgid "Contributors:"
 msgstr "Přispěvatelé:"
 
-#: ../src/terminal-window.c:4456
+#: ../src/terminal-window.c:4430
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Emulátor terminálu pracovního prostředí MATE"
 
-#: ../src/terminal-window.c:4463
+#: ../src/terminal-window.c:4437
 msgid "translator-credits"
-msgstr "Stanislav Brabec <utx@penguin.cz>\nMichal Bukovjan <bukm@centrum.cz>\nMiloslav Trmač <mitr@volny.cz>\nPetr Tomeš <ptomes@gmail.com>\nJakub Friedl <jfriedl@suse.cz>\nLucas Lommer <llommer@svn.gnome.org>\nPetr Kovář <pknbe@volny.cz>"
+msgstr ""
+"Stanislav Brabec <utx@penguin.cz>\n"
+"Michal Bukovjan <bukm@centrum.cz>\n"
+"Miloslav Trmač <mitr@volny.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Lucas Lommer <llommer@svn.gnome.org>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>"
