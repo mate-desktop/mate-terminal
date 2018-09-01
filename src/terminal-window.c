@@ -564,60 +564,6 @@ find_tab_num_at_pos (GtkNotebook *notebook,
 }
 
 static void
-position_menu_under_widget (GtkMenu *menu,
-                            int *x,
-                            int *y,
-                            gboolean *push_in,
-                            gpointer user_data)
-{
-    /* Adapted from gtktoolbar.c */
-    GtkWidget *widget = GTK_WIDGET (user_data);
-    GdkWindow *widget_window;
-    GtkWidget *container;
-    GtkRequisition req;
-    GtkRequisition menu_req;
-    GdkRectangle monitor;
-    GdkMonitor *monitor_num;
-    GdkDisplay *display;
-    GtkAllocation widget_allocation;
-
-    widget_window = gtk_widget_get_window (widget);
-    gtk_widget_get_allocation (widget, &widget_allocation);
-    container = gtk_widget_get_ancestor (widget, GTK_TYPE_CONTAINER);
-
-    gtk_widget_get_preferred_size (widget, &req, NULL);
-    gtk_widget_get_preferred_size (GTK_WIDGET (menu), &menu_req, NULL);
-
-    display = gtk_widget_get_display (GTK_WIDGET (menu));
-    monitor_num = gdk_display_get_monitor_at_window (display, widget_window);
-    if (monitor_num == NULL)
-        monitor_num = gdk_display_get_monitor (display, 0);
-    gdk_monitor_get_geometry (monitor_num, &monitor);
-
-    gdk_window_get_origin (widget_window, x, y);
-    if (!gtk_widget_get_has_window (widget))
-    {
-        *x += widget_allocation.x;
-        *y += widget_allocation.y;
-    }
-    if (gtk_widget_get_direction (container) == GTK_TEXT_DIR_LTR)
-        *x += widget_allocation.width - req.width;
-    else
-        *x += req.width - menu_req.width;
-
-    if ((*y + widget_allocation.height + menu_req.height) <= monitor.y + monitor.height)
-        *y += widget_allocation.height;
-    else if ((*y - menu_req.height) >= monitor.y)
-        *y -= menu_req.height;
-    else if (monitor.y + monitor.height - (*y + widget_allocation.height) > *y)
-        *y += widget_allocation.height;
-    else
-        *y -= menu_req.height;
-
-    *push_in = FALSE;
-}
-
-static void
 terminal_set_profile_toggled_callback (GtkToggleAction *action,
                                        TerminalWindow *window)
 {
@@ -1545,11 +1491,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     if (!gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
         gtk_menu_attach_to_widget (GTK_MENU (popup_menu),GTK_WIDGET (screen),NULL);
 
-    gtk_menu_popup (GTK_MENU (popup_menu),
-                    NULL, NULL,
-                    NULL, NULL,
-                    info->button,
-                    info->timestamp);
+    gtk_menu_popup_at_pointer (GTK_MENU (popup_menu), NULL);
 }
 
 static void
@@ -2978,9 +2920,7 @@ notebook_button_press_cb (GtkWidget *widget,
       gtk_menu_detach (GTK_MENU (menu));
     tab = gtk_notebook_get_nth_page (notebook, tab_clicked);
     gtk_menu_attach_to_widget (GTK_MENU (menu), tab, NULL);
-    gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
-                    NULL, NULL,
-                    event->button, event->time);
+    gtk_menu_popup_at_pointer (GTK_MENU (menu), NULL);
 
     return TRUE;
 }
@@ -3047,9 +2987,11 @@ notebook_popup_menu_cb (GtkWidget *widget,
     if (gtk_menu_get_attach_widget (GTK_MENU (menu)))
       gtk_menu_detach (GTK_MENU (menu));
     gtk_menu_attach_to_widget (GTK_MENU (menu), tab_label, NULL);
-    gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
-                    position_menu_under_widget, tab_label,
-                    0, gtk_get_current_event_time ());
+    gtk_menu_popup_at_widget (GTK_MENU (menu),
+                              tab_label,
+                              GDK_GRAVITY_SOUTH_WEST,
+                              GDK_GRAVITY_NORTH_WEST,
+                              NULL);
     gtk_menu_shell_select_first (GTK_MENU_SHELL (menu), FALSE);
 
     return TRUE;
