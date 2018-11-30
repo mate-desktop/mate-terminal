@@ -849,10 +849,12 @@ terminal_profile_save (TerminalProfile *profile)
 	TerminalProfilePrivate *priv = profile->priv;
 	GSettings *changeset;
 	GSList *l;
+	gchar *concat;
 
 	priv->save_idle_id = 0;
-	changeset = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
-					      g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir,"/", NULL));
+	concat = g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir,"/", NULL);
+	changeset = g_settings_new_with_path (CONF_PROFILE_SCHEMA, concat);
+	g_free (concat);
 	g_settings_delay (changeset);
 
 	for (l = priv->dirty_pspecs; l != NULL; l = l->next)
@@ -955,6 +957,7 @@ terminal_profile_constructor (GType type,
 	const char *name;
 	GParamSpec **pspecs;
 	guint n_pspecs, i;
+	gchar *concat;
 
 	object = G_OBJECT_CLASS (terminal_profile_parent_class)->constructor
 	         (type, n_construct_properties, construct_params);
@@ -965,13 +968,17 @@ terminal_profile_constructor (GType type,
 	name = g_value_get_string (g_value_array_get_nth (priv->properties, PROP_NAME));
 	g_assert (name != NULL);
 
-	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
-		g_strconcat (CONF_PROFILE_PREFIX, name, "/", NULL));
+	concat = g_strconcat (CONF_PROFILE_PREFIX, name, "/", NULL);
+	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA, concat);
 	g_assert (priv->settings != NULL);
+	g_free (concat);
+	concat = g_strconcat("changed::", priv->profile_dir, "/", NULL);
 	g_signal_connect (priv->settings,
-			  g_strconcat("changed::", priv->profile_dir, "/", NULL),
+			  concat,
 			  G_CALLBACK(terminal_profile_gsettings_notify_cb),
 			  profile);
+
+	g_free (concat);
 
 	/* Now load those properties from GSettings that were not set as construction params */
 	pspecs = g_object_class_list_properties (G_OBJECT_CLASS (TERMINAL_PROFILE_GET_CLASS (profile)), &n_pspecs);
@@ -1123,16 +1130,20 @@ terminal_profile_set_property (GObject *object,
 		g_assert (name != NULL);
 		priv->profile_dir = g_strdup (name);
 		if (priv->settings != NULL) {
+			gchar *concat;
 			g_signal_handlers_disconnect_by_func (priv->settings,
 							      G_CALLBACK(terminal_profile_gsettings_notify_cb),
 							      profile);
 			g_object_unref (priv->settings);
-			priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA,
-						g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir, "/", NULL));
+			concat=  g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir, "/", NULL);
+			priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA, concat);
+			g_free (concat);
+			concat = g_strconcat("changed::", priv->profile_dir, "/", NULL);
 			g_signal_connect (priv->settings,
-					  g_strconcat("changed::", priv->profile_dir, "/", NULL),
-						      G_CALLBACK(terminal_profile_gsettings_notify_cb),
+					  concat,
+					  G_CALLBACK(terminal_profile_gsettings_notify_cb),
 					  profile);
+			g_free (concat);
 		}
 		break;
 	}
