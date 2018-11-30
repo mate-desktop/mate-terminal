@@ -1394,7 +1394,7 @@ get_child_environment (TerminalScreen *screen,
 	GHashTableIter iter;
 	GPtrArray *retval;
 	guint i;
-	const char * const *list_schemas;
+	gchar **list_schemas = NULL;
 	gboolean schema_exists;
 
 	window = gtk_widget_get_toplevel (term);
@@ -1434,7 +1434,8 @@ get_child_environment (TerminalScreen *screen,
 	g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XID (gtk_widget_get_window (window))));
 	g_hash_table_replace (env_table, g_strdup ("DISPLAY"), g_strdup (gdk_display_get_name (display)));
 
-	list_schemas = g_settings_list_schemas();
+	g_settings_schema_source_list_schemas (g_settings_schema_source_get_default (), TRUE, &list_schemas, NULL);
+
 	schema_exists = FALSE;
 	for (i = 0; list_schemas[i] != NULL; i++) {
 		if (g_strcmp0 (list_schemas[i], CONF_PROXY_SCHEMA) == 0)
@@ -1443,6 +1444,9 @@ get_child_environment (TerminalScreen *screen,
 			break;
 		}
 	}
+
+	g_strfreev (list_schemas);
+
 	if (schema_exists == TRUE) {
 		terminal_util_add_proxy_env (env_table);
 	}
