@@ -3,14 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# alfalb_mansil, 2018
+# Diogo Oliveira <diogodesigns@gmail.com>, 2018
+# Mateus Pinho <mateusleitepinho@gmail.com>, 2018
+# Sérgio Marques <smarquespt@gmail.com>, 2018
+# Carlos Moreira, 2018
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018
+# Manuela Silva <inactive+h_manuela_rodsilva@transifex.com>, 2018
+# MS <manuelarodsilva@gmail.com>, 2018
+# José Vieira <jvieira33@sapo.pt>, 2018
+# Rui <xymarior@yandex.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 19:57+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-05 21:13+0200\n"
+"PO-Revision-Date: 2018-03-12 08:41+0000\n"
+"Last-Translator: Rui <xymarior@yandex.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,13 +55,13 @@ msgstr ""
 " a Consola MATE, visite por favor a página do projeto. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4428
+#: ../src/terminal-window.c:4425
 msgid "MATE Terminal"
 msgstr "Consola MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2193
+#: ../src/terminal-window.c:2195
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -151,6 +165,10 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Um subconjunto de codificações possíveis é apresentado no sub-menu "
+"\"Codificações\". Esta é a lista de codificações que ali serão apresentadas."
+" O nome especial \"current\" exibe a codificação do local definido pelas "
+"configurações de idioma atuais."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -171,6 +189,8 @@ msgstr "fechar separadores com clique do meio"
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Se verdadeiro, ativa a possibilidade de fechar os separadores com o botão "
+"central do rato"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -343,7 +363,7 @@ msgstr ""
 "Ao selecionar texto por palavra, sequências destes caracteres serão "
 "consideradas palavras individuais. Podem ser definidos  Intervalos como "
 "\"A-Z\". Um hífen literal (que não expresse um intervalo) tem de ser o "
-"primeiro caracter a apresentar."
+"primeiro caractere a apresentar."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
@@ -627,7 +647,7 @@ msgid ""
 "correct setting for the Backspace key."
 msgstr ""
 "Estabelece o código que será gerado pela tecla retrocesso (backspace). Os "
-"valores possíveis são \"ascii-del\", para o caracter ASCII DEL, "
+"valores possíveis são \"ascii-del\", para o caractere ASCII DEL, "
 "\"control-h\", para Control-H (o caractere ASCII BS), e \"escape-sequence\","
 " para a sequência de saída tipicamente ligada à tecla retrocesso ou delete. "
 "\"ascii-del\" normalmente é considerada a configuração correta para a tecla "
@@ -646,8 +666,8 @@ msgid ""
 "setting for the Delete key."
 msgstr ""
 "Estabelece o código que será gerado pela tecla Delete. Os valores possíveis "
-"são \"ascii-del\", para o caracter ASCII DEL, \"control-h\", para Control-H "
-"(o caracter ASCII BS), \"escape-sequence\", para a sequência de saída "
+"são \"ascii-del\", para o caractere ASCII DEL, \"control-h\", para Control-H"
+" (o caractere ASCII BS), \"escape-sequence\", para a sequência de saída "
 "tipicamente ligada à tecla retrocesso ou delete. \"escape-sequence\" "
 "normalmente é considerada a configuração correta para a tecla Delete."
 
@@ -687,8 +707,8 @@ msgid ""
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
 "Mostrar uma caixa de diálogo quando uma solicitação de resposta a um desafio"
-" de S/Key for detectada e clicada. Digitar uma senha na caixa de diálogo "
-"envia-la-á para o terminal."
+" de S/Key for detetada e clicada. Digitar uma senha na caixa de diálogo "
+"enviá-la-á para o terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
@@ -814,10 +834,14 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para colar o conteúdo da área de transferência no terminal. "
+"Expressa como uma linha de texto no formato usado pelos ficheiros de "
+"recursos do GTK+. Se esta opção for definida com a palavra \"disabled\", não"
+" haverá tecla de atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to select all text"
-msgstr "Atalho de teclado para seleccionar todo o texto"
+msgstr "Atalho de teclado para selecionar todo o texto"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
@@ -826,6 +850,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Tecla de atalho para selecionar todo o texto no terminal. Expressa como uma "
+"linha de texto no formato usado pelos ficheiros de recursos do GTK+. Se esta"
+" opção for definida com a palavra \"disabled\", não haverá tecla de atalho "
+"para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to show the find dialog"
@@ -841,11 +869,12 @@ msgstr ""
 "Atalho de teclado para mostrar a janela de pesquisas. Expressa-se como linha"
 " de texto no formato usado nos ficheiros de funcionalidades do GTK+. Se a "
 "opção para a linha de texto for \"desativado\", não haverá nenhum atalho de "
-"teclado para esta acção. "
+"teclado para esta ação. "
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
+"Atalho de teclado para encontrar a ocorrência seguinte do termo de procura"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
@@ -854,10 +883,15 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para encontrar a ocorrência seguinte do termo de procura no "
+"terminal. Expressa como uma expressão no mesmo formato que a utilizada nos "
+"ficheiros de recurso do GTK+. Se definir a opção para a expressão especial "
+"\"disabled\", não existirá um atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
+"Atalho de teclado para encontrar a ocorrência anterior do termo de procura"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
@@ -866,6 +900,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para encontrar a ocorrência anterior do termo de procura no "
+"terminal. Expressa como uma expressão no mesmo formato que a utilizada nos "
+"ficheiros de recurso do GTK+. Se definir a opção para a expressão especial "
+"\"disabled\", não existirá um atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -878,10 +916,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tecla de atalho para alternar o modo de écrã completo. Expressa como uma "
-"linha de texto no formato usado pelos ficheiros de recursos do GTK+. Se esta"
-" opção for definida com a palavra \"disabled\", não haverá tecla de atalho "
-"para esta ação."
+"Tecla de atalho para alternar o modo de completo. Expressa como uma linha de"
+" texto no formato usado pelos ficheiros de recursos do GTK+. Se esta opção "
+"for definida com a palavra \"disabled\", não haverá tecla de atalho para "
+"esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
@@ -1466,7 +1504,7 @@ msgstr "Bloco"
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
 msgid "I-Beam"
-msgstr "I-Beam"
+msgstr "Barra em I"
 
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
@@ -1924,7 +1962,7 @@ msgstr "Colar"
 
 #: ../src/terminal-accels.c:186
 msgid "Select All"
-msgstr "Seleccionar tudo"
+msgstr "Selecionar tudo"
 
 #: ../src/terminal-accels.c:194
 msgid "Hide and Show menubar"
@@ -1954,7 +1992,7 @@ msgstr "Procurar o seguinte"
 msgid "Find Previous"
 msgstr "Procurar o anterior"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4206
 msgid "Set Title"
 msgstr "Definir título"
 
@@ -2766,7 +2804,7 @@ msgstr "_Copiar o Endereço do Link"
 msgid "P_rofiles"
 msgstr "Pe_rfis"
 
-#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3614
 msgid "C_lose Window"
 msgstr "Fechar jane_la"
 
@@ -2786,15 +2824,15 @@ msgstr "Mostrar barra de _menu"
 msgid "_Full Screen"
 msgstr "_Ecrã completo"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3601
 msgid "Close this window?"
 msgstr "Fechar esta janela?"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3601
 msgid "Close this terminal?"
 msgstr "Fechar esta consola?"
 
-#: ../src/terminal-window.c:3608
+#: ../src/terminal-window.c:3605
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2802,7 +2840,7 @@ msgstr ""
 "Ainda existem processos em execução em algumas consolas desta janela. Se "
 "fechar a consola, perde os processos."
 
-#: ../src/terminal-window.c:3612
+#: ../src/terminal-window.c:3609
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
@@ -2810,30 +2848,30 @@ msgstr ""
 "Ainda existe um processo em execução nesta consola. Se fechar a consola, "
 "perde o processo."
 
-#: ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:3614
 msgid "C_lose Terminal"
 msgstr "Fechar conso_la"
 
-#: ../src/terminal-window.c:3683
+#: ../src/terminal-window.c:3680
 msgid "Could not save contents"
 msgstr "Não foi possível guardar o conteúdo"
 
-#: ../src/terminal-window.c:3707
+#: ../src/terminal-window.c:3704
 msgid "Save as..."
 msgstr "Guardar como..."
 
-#: ../src/terminal-window.c:4226
+#: ../src/terminal-window.c:4223
 msgid "_Title:"
 msgstr "_Título:"
 
-#: ../src/terminal-window.c:4411
+#: ../src/terminal-window.c:4408
 msgid "Contributors:"
 msgstr "Contribuições:"
 
-#: ../src/terminal-window.c:4430
+#: ../src/terminal-window.c:4427
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Um emulador de consola para o ambiente de trabalho MATE"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4434
 msgid "translator-credits"
 msgstr "créditos de tradução"
