@@ -3,14 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2018
+# alfalb_mansil, 2018
+# Sérgio Marques <smarquespt@gmail.com>, 2018
+# Carlos Moreira, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Diogo Oliveira <diogodesigns@gmail.com>, 2018
+# Manuela Silva <inactive+h_manuela_rodsilva@transifex.com>, 2018
+# Mateus Pinho <mateusleitepinho@gmail.com>, 2018
+# MS <manuelarodsilva@gmail.com>, 2018
+# José Vieira <jvieira33@sapo.pt>, 2018
+# Rui <xymarior@yandex.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 19:52+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2018\n"
+"POT-Creation-Date: 2018-10-05 21:03+0200\n"
+"PO-Revision-Date: 2018-03-12 08:42+0000\n"
+"Last-Translator: Rui <xymarior@yandex.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,13 +55,13 @@ msgstr ""
 " a Consola MATE, visite por favor a página do projeto. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4428
+#: ../src/terminal-window.c:4388
 msgid "MATE Terminal"
 msgstr "Consola MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2193
+#: ../src/terminal-window.c:2154
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -151,6 +165,10 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Um subconjunto de codificações possíveis é apresentado no sub-menu "
+"\"Codificações\". Esta é a lista de codificações que ali serão apresentadas."
+" O nome especial \"current\" exibe a codificação do local definido pelas "
+"configurações de idioma atuais."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -171,6 +189,8 @@ msgstr "fechar separadores com clique do meio"
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Se verdadeiro, ativa a possibilidade de fechar os separadores com o botão "
+"central do rato"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -343,7 +363,7 @@ msgstr ""
 "Ao selecionar texto por palavra, sequências destes caracteres serão "
 "consideradas palavras individuais. Podem ser definidos  Intervalos como "
 "\"A-Z\". Um hífen literal (que não expresse um intervalo) tem de ser o "
-"primeiro caracter a apresentar."
+"primeiro caractere a apresentar."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
@@ -627,7 +647,7 @@ msgid ""
 "correct setting for the Backspace key."
 msgstr ""
 "Estabelece o código que será gerado pela tecla retrocesso (backspace). Os "
-"valores possíveis são \"ascii-del\", para o caracter ASCII DEL, "
+"valores possíveis são \"ascii-del\", para o caractere ASCII DEL, "
 "\"control-h\", para Control-H (o caractere ASCII BS), e \"escape-sequence\","
 " para a sequência de saída tipicamente ligada à tecla retrocesso ou delete. "
 "\"ascii-del\" normalmente é considerada a configuração correta para a tecla "
@@ -646,8 +666,8 @@ msgid ""
 "setting for the Delete key."
 msgstr ""
 "Estabelece o código que será gerado pela tecla Delete. Os valores possíveis "
-"são \"ascii-del\", para o caracter ASCII DEL, \"control-h\", para Control-H "
-"(o caracter ASCII BS), \"escape-sequence\", para a sequência de saída "
+"são \"ascii-del\", para o caractere ASCII DEL, \"control-h\", para Control-H"
+" (o caractere ASCII BS), \"escape-sequence\", para a sequência de saída "
 "tipicamente ligada à tecla retrocesso ou delete. \"escape-sequence\" "
 "normalmente é considerada a configuração correta para a tecla Delete."
 
@@ -687,8 +707,8 @@ msgid ""
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
 "Mostrar uma caixa de diálogo quando uma solicitação de resposta a um desafio"
-" de S/Key for detectada e clicada. Digitar uma senha na caixa de diálogo "
-"envia-la-á para o terminal."
+" de S/Key for detetada e clicada. Digitar uma senha na caixa de diálogo "
+"enviá-la-á para o terminal."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new tab"
@@ -814,10 +834,14 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para colar o conteúdo da área de transferência no terminal. "
+"Expressa como uma linha de texto no formato usado pelos ficheiros de "
+"recursos do GTK+. Se esta opção for definida com a palavra \"disabled\", não"
+" haverá tecla de atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to select all text"
-msgstr "Atalho de teclado para seleccionar todo o texto"
+msgstr "Atalho de teclado para selecionar todo o texto"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
@@ -826,6 +850,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Tecla de atalho para selecionar todo o texto no terminal. Expressa como uma "
+"linha de texto no formato usado pelos ficheiros de recursos do GTK+. Se esta"
+" opção for definida com a palavra \"disabled\", não haverá tecla de atalho "
+"para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to show the find dialog"
@@ -841,11 +869,12 @@ msgstr ""
 "Atalho de teclado para mostrar a janela de pesquisas. Expressa-se como linha"
 " de texto no formato usado nos ficheiros de funcionalidades do GTK+. Se a "
 "opção para a linha de texto for \"desativado\", não haverá nenhum atalho de "
-"teclado para esta acção. "
+"teclado para esta ação. "
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
+"Atalho de teclado para encontrar a ocorrência seguinte do termo de procura"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
@@ -854,10 +883,15 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para encontrar a ocorrência seguinte do termo de procura no "
+"terminal. Expressa como uma expressão no mesmo formato que a utilizada nos "
+"ficheiros de recurso do GTK+. Se definir a opção para a expressão especial "
+"\"disabled\", não existirá um atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
+"Atalho de teclado para encontrar a ocorrência anterior do termo de procura"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
@@ -866,6 +900,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Tecla de atalho para encontrar a ocorrência anterior do termo de procura no "
+"terminal. Expressa como uma expressão no mesmo formato que a utilizada nos "
+"ficheiros de recurso do GTK+. Se definir a opção para a expressão especial "
+"\"disabled\", não existirá um atalho para esta ação."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -878,7 +916,7 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tecla de atalho para alternar o modo de écrã completo. Expressa como uma "
+"Tecla de atalho para alternar o modo de ecrã completo. Expressa como uma "
 "linha de texto no formato usado pelos ficheiros de recursos do GTK+. Se esta"
 " opção for definida com a palavra \"disabled\", não haverá tecla de atalho "
 "para esta ação."
@@ -1466,7 +1504,7 @@ msgstr "Bloco"
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
 msgid "I-Beam"
-msgstr "I-Beam"
+msgstr "Barra em I"
 
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
@@ -1924,7 +1962,7 @@ msgstr "Colar"
 
 #: ../src/terminal-accels.c:186
 msgid "Select All"
-msgstr "Seleccionar tudo"
+msgstr "Selecionar tudo"
 
 #: ../src/terminal-accels.c:194
 msgid "Hide and Show menubar"
@@ -1954,7 +1992,7 @@ msgstr "Procurar o seguinte"
 msgid "Find Previous"
 msgstr "Procurar o anterior"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
 msgid "Set Title"
 msgstr "Definir título"
 
@@ -2497,29 +2535,29 @@ msgstr "Mostrar as opções por consola"
 msgid "Unnamed"
 msgstr "Sem nome"
 
-#: ../src/terminal-screen.c:1540
+#: ../src/terminal-screen.c:1503
 msgid "_Profile Preferences"
 msgstr "_Preferências de perfil"
 
-#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1504 ../src/terminal-screen.c:1953
 msgid "_Relaunch"
 msgstr "_Reiniciar"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1507
 msgid "There was an error creating the child process for this terminal"
 msgstr "Ocorreu um erro ao criar o processo dependente desta consola"
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1958
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "O processo dependente terminou normalmente com o estado %d."
 
-#: ../src/terminal-screen.c:1929
+#: ../src/terminal-screen.c:1963
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "O processo dependente foi terminado pelo sinal %d."
 
-#: ../src/terminal-screen.c:1934
+#: ../src/terminal-screen.c:1968
 msgid "The child process was terminated."
 msgstr "O processo dependente foi terminado."
 
@@ -2577,7 +2615,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:669
+#: ../src/terminal-window.c:615
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2585,248 +2623,248 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:675
+#: ../src/terminal-window.c:621
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1823
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
+#: ../src/terminal-window.c:2078
 msgid "Open _Terminal"
 msgstr "Abrir _Consola"
 
-#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
-#: ../src/terminal-window.c:2124
+#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:2083
 msgid "Open Ta_b"
 msgstr "Abrir _separador"
 
-#: ../src/terminal-window.c:1867
+#: ../src/terminal-window.c:1826
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1827
 msgid "_View"
 msgstr "_Ver"
 
-#: ../src/terminal-window.c:1869
+#: ../src/terminal-window.c:1828
 msgid "_Search"
 msgstr "_Procurar"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1829
 msgid "_Terminal"
 msgstr "_Consola"
 
-#: ../src/terminal-window.c:1871
+#: ../src/terminal-window.c:1830
 msgid "Ta_bs"
 msgstr "Separa_dores"
 
-#: ../src/terminal-window.c:1872
+#: ../src/terminal-window.c:1831
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1847
 msgid "New _Profile…"
 msgstr "Novo _perfil…"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1852
 msgid "_Save Contents"
 msgstr "_Gravar conteúdo"
 
-#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
 msgid "C_lose Tab"
 msgstr "Fec_har separador"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1862
 msgid "_Close Window"
 msgstr "_Fechar a Janela"
 
-#: ../src/terminal-window.c:1910 ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2109
+#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
 msgid "_Paste"
 msgstr "Co_lar"
 
-#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
+#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
 msgid "Paste _Filenames"
 msgstr "Colar nomes de _ficheiros"
 
-#: ../src/terminal-window.c:1925
+#: ../src/terminal-window.c:1884
 msgid "Select _All"
 msgstr "Selecion_ar Tudo"
 
-#: ../src/terminal-window.c:1930
+#: ../src/terminal-window.c:1889
 msgid "P_rofiles…"
 msgstr "Pe_rfis…"
 
-#: ../src/terminal-window.c:1935
+#: ../src/terminal-window.c:1894
 msgid "_Keyboard Shortcuts…"
 msgstr "_Teclas de atalho..."
 
-#: ../src/terminal-window.c:1940
+#: ../src/terminal-window.c:1899
 msgid "Pr_ofile Preferences"
 msgstr "Preferências d_o perfil"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1906
 msgid "Zoom _In"
 msgstr "_Ampliar"
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1911
 msgid "Zoom _Out"
 msgstr "_Reduzir"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1916
 msgid "_Normal Size"
 msgstr "Tamanho _normal"
 
-#: ../src/terminal-window.c:1964
+#: ../src/terminal-window.c:1923
 msgid "_Find..."
 msgstr "_Localizar..."
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1928
 msgid "Find Ne_xt"
 msgstr "Encontrar _Seguinte"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1933
 msgid "Find Pre_vious"
 msgstr "Encontrar _anterior"
 
-#: ../src/terminal-window.c:1979
+#: ../src/terminal-window.c:1938
 msgid "_Clear Highlight"
 msgstr "_Limpar o realce de texto"
 
-#: ../src/terminal-window.c:1985
+#: ../src/terminal-window.c:1944
 msgid "Go to _Line..."
 msgstr "Ir para a _linha..."
 
-#: ../src/terminal-window.c:1990
+#: ../src/terminal-window.c:1949
 msgid "_Incremental Search..."
 msgstr "Procura _incremental..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1997
+#: ../src/terminal-window.c:1956
 msgid "Change _Profile"
 msgstr "Alterar _perfil"
 
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1958
 msgid "_Previous Profile"
 msgstr "Perfil _Anterior"
 
-#: ../src/terminal-window.c:2004
+#: ../src/terminal-window.c:1963
 msgid "_Next Profile"
 msgstr "Perfil _Seguinte"
 
-#: ../src/terminal-window.c:2009
+#: ../src/terminal-window.c:1968
 msgid "_Set Title…"
 msgstr "_Definir título…"
 
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1972
 msgid "Set _Character Encoding"
 msgstr "Definir codificação de _caracteres"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:1974
 msgid "_Reset"
 msgstr "_Repor"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:1979
 msgid "Reset and C_lear"
 msgstr "Reiniciar e _limpar"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:1986
 msgid "_Add or Remove…"
 msgstr "_Adicionar ou remover…"
 
-#: ../src/terminal-window.c:2034
+#: ../src/terminal-window.c:1993
 msgid "_Previous Tab"
 msgstr "Separador _anterior"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:1998
 msgid "_Next Tab"
 msgstr "Separador _seguinte"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2003
 msgid "Move Tab _Left"
 msgstr "Mover separador para a _esquerda"
 
-#: ../src/terminal-window.c:2049
+#: ../src/terminal-window.c:2008
 msgid "Move Tab _Right"
 msgstr "Mover separador para a _direita"
 
-#: ../src/terminal-window.c:2054
+#: ../src/terminal-window.c:2013
 msgid "_Detach tab"
 msgstr "_Destacar separador"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2020
 msgid "_Contents"
 msgstr "_Conteúdo"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2025
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:2032
 msgid "_Send Mail To…"
 msgstr "_Enviar mensagem para…"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2037
 msgid "_Copy E-mail Address"
 msgstr "_Copiar endereço eletrónico"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2042
 msgid "C_all To…"
 msgstr "Telefon_ar para…"
 
-#: ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:2047
 msgid "_Copy Call Address"
 msgstr "_Copiar endereço de chamada"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2052
 msgid "_Open Link"
 msgstr "_Abrir o Link"
 
-#: ../src/terminal-window.c:2098
+#: ../src/terminal-window.c:2057
 msgid "_Copy Link Address"
 msgstr "_Copiar o Endereço do Link"
 
-#: ../src/terminal-window.c:2102
+#: ../src/terminal-window.c:2061
 msgid "P_rofiles"
 msgstr "Pe_rfis"
 
-#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
 msgid "C_lose Window"
 msgstr "Fechar jane_la"
 
-#: ../src/terminal-window.c:2139
+#: ../src/terminal-window.c:2098
 msgid "L_eave Full Screen"
 msgstr "Sair de _ecrã completo"
 
-#: ../src/terminal-window.c:2143
+#: ../src/terminal-window.c:2102
 msgid "_Input Methods"
 msgstr "Métodos de _introdução"
 
-#: ../src/terminal-window.c:2150
+#: ../src/terminal-window.c:2109
 msgid "Show _Menubar"
 msgstr "Mostrar barra de _menu"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2115
 msgid "_Full Screen"
 msgstr "_Ecrã completo"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this window?"
 msgstr "Fechar esta janela?"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this terminal?"
 msgstr "Fechar esta consola?"
 
-#: ../src/terminal-window.c:3608
+#: ../src/terminal-window.c:3564
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2834,7 +2872,7 @@ msgstr ""
 "Ainda existem processos em execução em algumas consolas desta janela. Se "
 "fechar a consola, perde os processos."
 
-#: ../src/terminal-window.c:3612
+#: ../src/terminal-window.c:3568
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
@@ -2842,30 +2880,30 @@ msgstr ""
 "Ainda existe um processo em execução nesta consola. Se fechar a consola, "
 "perde o processo."
 
-#: ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:3573
 msgid "C_lose Terminal"
 msgstr "Fechar conso_la"
 
-#: ../src/terminal-window.c:3683
+#: ../src/terminal-window.c:3639
 msgid "Could not save contents"
 msgstr "Não foi possível guardar o conteúdo"
 
-#: ../src/terminal-window.c:3707
+#: ../src/terminal-window.c:3663
 msgid "Save as..."
 msgstr "Guardar como..."
 
-#: ../src/terminal-window.c:4226
+#: ../src/terminal-window.c:4186
 msgid "_Title:"
 msgstr "_Título:"
 
-#: ../src/terminal-window.c:4411
+#: ../src/terminal-window.c:4371
 msgid "Contributors:"
 msgstr "Contribuições:"
 
-#: ../src/terminal-window.c:4430
+#: ../src/terminal-window.c:4390
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Um emulador de consola para o ambiente de trabalho MATE"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4397
 msgid "translator-credits"
 msgstr "créditos de tradução"

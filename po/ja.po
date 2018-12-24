@@ -3,13 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
+# ふうせん Fu-sen. | BALLOON a.k.a. Fu-sen., 2018
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2018
+# Mika Kobayashi, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ABE Tsunehiko, 2018
+# あわしろいくや <ikunya@gmail.com>, 2018
+# Rockers <sumorock@hotmail.com>, 2018
+# Ikuru K <kanumaiku@gmail.com>, 2018
+# semicolon <mail@semicln.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 19:52+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-10-05 21:03+0200\n"
+"PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: semicolon <mail@semicln.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -39,13 +51,13 @@ msgstr ""
 "端末についてさらによく知りたい場合は、プロジェクトのホームページをご覧ください。 </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4428
+#: ../src/terminal-window.c:4388
 msgid "MATE Terminal"
 msgstr "MATE 端末"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2193
+#: ../src/terminal-window.c:2154
 msgid "Terminal"
 msgstr "端末"
 
@@ -1805,7 +1817,7 @@ msgstr "次を検索"
 msgid "Find Previous"
 msgstr "前を検索"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
 msgid "Set Title"
 msgstr "タイトルを設定する"
 
@@ -2332,29 +2344,29 @@ msgstr "端末毎のオプションを表示する"
 msgid "Unnamed"
 msgstr "名前なし"
 
-#: ../src/terminal-screen.c:1540
+#: ../src/terminal-screen.c:1503
 msgid "_Profile Preferences"
 msgstr "プロファイルの設定(_P)"
 
-#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1504 ../src/terminal-screen.c:1953
 msgid "_Relaunch"
 msgstr "再起動(_R)"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1507
 msgid "There was an error creating the child process for this terminal"
 msgstr "この端末の子プロセスを作成中にエラーが発生しました"
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1958
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子プロセスが終了コード %d で正常終了しました。"
 
-#: ../src/terminal-screen.c:1929
+#: ../src/terminal-screen.c:1963
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子プロセスがシグナル %d で終了しました。"
 
-#: ../src/terminal-screen.c:1934
+#: ../src/terminal-screen.c:1968
 msgid "The child process was terminated."
 msgstr "子プロセスが終了しました。"
 
@@ -2409,7 +2421,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:669
+#: ../src/terminal-window.c:615
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2417,284 +2429,284 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:675
+#: ../src/terminal-window.c:621
 #, c-format
 msgid "_%c. %s"
 msgstr " _%c. %s "
 
 #. Toplevel
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1823
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
+#: ../src/terminal-window.c:2078
 msgid "Open _Terminal"
 msgstr "端末を開く(_T)"
 
-#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
-#: ../src/terminal-window.c:2124
+#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:2083
 msgid "Open Ta_b"
 msgstr "新しいタブを開く(_B)"
 
-#: ../src/terminal-window.c:1867
+#: ../src/terminal-window.c:1826
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1827
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../src/terminal-window.c:1869
+#: ../src/terminal-window.c:1828
 msgid "_Search"
 msgstr "検索(_S)"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1829
 msgid "_Terminal"
 msgstr "端末(_T)"
 
-#: ../src/terminal-window.c:1871
+#: ../src/terminal-window.c:1830
 msgid "Ta_bs"
 msgstr "タブ(_B)"
 
-#: ../src/terminal-window.c:1872
+#: ../src/terminal-window.c:1831
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1847
 msgid "New _Profile…"
 msgstr "新しいプロファイル(_P)…"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1852
 msgid "_Save Contents"
 msgstr "内容を保存する(_S)"
 
-#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
 msgid "C_lose Tab"
 msgstr "タブを閉じる(_L)"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1862
 msgid "_Close Window"
 msgstr "ウィンドウを閉じる(_C)"
 
-#: ../src/terminal-window.c:1910 ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
 msgid "_Copy"
 msgstr "コピー(_C)"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2109
+#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
+#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
 msgid "Paste _Filenames"
 msgstr "ファイル名の貼り付け(_F)"
 
-#: ../src/terminal-window.c:1925
+#: ../src/terminal-window.c:1884
 msgid "Select _All"
 msgstr "すべて選択(_A)"
 
-#: ../src/terminal-window.c:1930
+#: ../src/terminal-window.c:1889
 msgid "P_rofiles…"
 msgstr "プロファイル(_R)…"
 
-#: ../src/terminal-window.c:1935
+#: ../src/terminal-window.c:1894
 msgid "_Keyboard Shortcuts…"
 msgstr "キーボードショートカット(_K)…"
 
-#: ../src/terminal-window.c:1940
+#: ../src/terminal-window.c:1899
 msgid "Pr_ofile Preferences"
 msgstr "プロファイルの設定(_O)"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1906
 msgid "Zoom _In"
 msgstr "拡大(_I)"
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1911
 msgid "Zoom _Out"
 msgstr "縮小(_O)"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1916
 msgid "_Normal Size"
 msgstr "元のサイズ(_N)"
 
-#: ../src/terminal-window.c:1964
+#: ../src/terminal-window.c:1923
 msgid "_Find..."
 msgstr "検索(_F)..."
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1928
 msgid "Find Ne_xt"
 msgstr "次を検索(_X)"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1933
 msgid "Find Pre_vious"
 msgstr "前を検索(_V)"
 
-#: ../src/terminal-window.c:1979
+#: ../src/terminal-window.c:1938
 msgid "_Clear Highlight"
 msgstr "ハイライトを消去(_C)"
 
-#: ../src/terminal-window.c:1985
+#: ../src/terminal-window.c:1944
 msgid "Go to _Line..."
 msgstr "指定行へ移動(_L)..."
 
-#: ../src/terminal-window.c:1990
+#: ../src/terminal-window.c:1949
 msgid "_Incremental Search..."
 msgstr "インクリメンタル検索(_I)..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1997
+#: ../src/terminal-window.c:1956
 msgid "Change _Profile"
 msgstr "プロファイルの変更(_P)"
 
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1958
 msgid "_Previous Profile"
 msgstr "前のプロファイル(_P)"
 
-#: ../src/terminal-window.c:2004
+#: ../src/terminal-window.c:1963
 msgid "_Next Profile"
 msgstr "次のプロファイル(_N)"
 
-#: ../src/terminal-window.c:2009
+#: ../src/terminal-window.c:1968
 msgid "_Set Title…"
 msgstr "タイトルを指定する(_S)…"
 
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1972
 msgid "Set _Character Encoding"
 msgstr "文字コードの設定(_C)"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:1974
 msgid "_Reset"
 msgstr "リセット(_R)"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:1979
 msgid "Reset and C_lear"
 msgstr "リセットとクリア(_L)"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:1986
 msgid "_Add or Remove…"
 msgstr "追加/削除(_A)…"
 
-#: ../src/terminal-window.c:2034
+#: ../src/terminal-window.c:1993
 msgid "_Previous Tab"
 msgstr "前のタブへ(_P)"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:1998
 msgid "_Next Tab"
 msgstr "次のタブへ(_N)"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2003
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
-#: ../src/terminal-window.c:2049
+#: ../src/terminal-window.c:2008
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
-#: ../src/terminal-window.c:2054
+#: ../src/terminal-window.c:2013
 msgid "_Detach tab"
 msgstr "タブを取り外す(_D)"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2020
 msgid "_Contents"
 msgstr "目次(_C)"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2025
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:2032
 msgid "_Send Mail To…"
 msgstr "メールを送信する(_S)…"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2037
 msgid "_Copy E-mail Address"
 msgstr "メールアドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2042
 msgid "C_all To…"
 msgstr "呼び出す(_A)…"
 
-#: ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:2047
 msgid "_Copy Call Address"
 msgstr "アドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2052
 msgid "_Open Link"
 msgstr "リンクを開く(_O)"
 
-#: ../src/terminal-window.c:2098
+#: ../src/terminal-window.c:2057
 msgid "_Copy Link Address"
 msgstr "リンクアドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2102
+#: ../src/terminal-window.c:2061
 msgid "P_rofiles"
 msgstr "プロファイル(_R)"
 
-#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
 msgid "C_lose Window"
 msgstr "ウィンドウを閉じる(_L)"
 
-#: ../src/terminal-window.c:2139
+#: ../src/terminal-window.c:2098
 msgid "L_eave Full Screen"
 msgstr "フルスクリーンを終了(_E)"
 
-#: ../src/terminal-window.c:2143
+#: ../src/terminal-window.c:2102
 msgid "_Input Methods"
 msgstr "入力メソッド(_I)"
 
-#: ../src/terminal-window.c:2150
+#: ../src/terminal-window.c:2109
 msgid "Show _Menubar"
 msgstr "メニューバーの表示(_M)"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2115
 msgid "_Full Screen"
 msgstr "フルスクリーン(_F)"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this window?"
 msgstr "このウィンドウを閉じますか?"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this terminal?"
 msgstr "この端末を閉じますか?"
 
-#: ../src/terminal-window.c:3608
+#: ../src/terminal-window.c:3564
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "このウィンドウには未だ実行中のプロセスが存在しているタブがあります。ここでウィンドウを閉じるとそれらのプロセスをすべて強制終了します。"
 
-#: ../src/terminal-window.c:3612
+#: ../src/terminal-window.c:3568
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "この端末には未だ実行中のプロセスが存在しています。ここで端末を閉じるとそのプロセスを強制終了します。"
 
-#: ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:3573
 msgid "C_lose Terminal"
 msgstr "端末を閉じる(_L)"
 
-#: ../src/terminal-window.c:3683
+#: ../src/terminal-window.c:3639
 msgid "Could not save contents"
 msgstr "内容を保存できませんでした"
 
-#: ../src/terminal-window.c:3707
+#: ../src/terminal-window.c:3663
 msgid "Save as..."
 msgstr "別名で保存する..."
 
-#: ../src/terminal-window.c:4226
+#: ../src/terminal-window.c:4186
 msgid "_Title:"
 msgstr "役職(_T):"
 
-#: ../src/terminal-window.c:4411
+#: ../src/terminal-window.c:4371
 msgid "Contributors:"
 msgstr "貢献者:"
 
-#: ../src/terminal-window.c:4430
+#: ../src/terminal-window.c:4390
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE デスクトップ向けの端末エミュレーターです。"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4397
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"

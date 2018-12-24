@@ -3,14 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Дмитрий Михирев, 2018
+# Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2018
+# Ivan, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
+# Aleksey Kabanov <ak099@mail.ru>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2018
+# Cyber Tailor <cybertailor@gmail.com>, 2018
+# monsta <monsta@inbox.ru>, 2018
+# Andreï Victorovitch Kostyrka, 2018
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
+# Alex Putz, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 19:52+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Alexey Puts <joeybane.version1.62b@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-05 21:03+0200\n"
+"PO-Revision-Date: 2018-03-12 08:42+0000\n"
+"Last-Translator: Alex Putz, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,13 +55,13 @@ msgstr ""
 "страницу проекта. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4428
+#: ../src/terminal-window.c:4388
 msgid "MATE Terminal"
 msgstr "Терминал MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2193
+#: ../src/terminal-window.c:2154
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -1922,7 +1936,7 @@ msgstr "Найти следующее"
 msgid "Find Previous"
 msgstr "Найти предыдущее"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4209
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
 msgid "Set Title"
 msgstr "Установить заголовок"
 
@@ -2464,29 +2478,29 @@ msgstr "Показать параметры, применяемые к терм�
 msgid "Unnamed"
 msgstr "Безымянный"
 
-#: ../src/terminal-screen.c:1540
+#: ../src/terminal-screen.c:1503
 msgid "_Profile Preferences"
 msgstr "Параметры п_рофиля"
 
-#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
+#: ../src/terminal-screen.c:1504 ../src/terminal-screen.c:1953
 msgid "_Relaunch"
 msgstr "Перезапуск"
 
-#: ../src/terminal-screen.c:1544
+#: ../src/terminal-screen.c:1507
 msgid "There was an error creating the child process for this terminal"
 msgstr "Произошла ошибка при создании дочернего процесса для этого терминала"
 
-#: ../src/terminal-screen.c:1924
+#: ../src/terminal-screen.c:1958
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Дочерний процесс корректно завершился с кодом %d."
 
-#: ../src/terminal-screen.c:1929
+#: ../src/terminal-screen.c:1963
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Работа дочернего процесса прервана по сигналу %d."
 
-#: ../src/terminal-screen.c:1934
+#: ../src/terminal-screen.c:1968
 msgid "The child process was terminated."
 msgstr "Работа дочернего процесса прервана."
 
@@ -2546,7 +2560,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:669
+#: ../src/terminal-window.c:615
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2554,248 +2568,248 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:675
+#: ../src/terminal-window.c:621
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1864
+#: ../src/terminal-window.c:1823
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
-#: ../src/terminal-window.c:2119
+#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
+#: ../src/terminal-window.c:2078
 msgid "Open _Terminal"
 msgstr "Открыть _терминал"
 
-#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
-#: ../src/terminal-window.c:2124
+#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
+#: ../src/terminal-window.c:2083
 msgid "Open Ta_b"
 msgstr "Открыть _вкладку"
 
-#: ../src/terminal-window.c:1867
+#: ../src/terminal-window.c:1826
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../src/terminal-window.c:1868
+#: ../src/terminal-window.c:1827
 msgid "_View"
 msgstr "_Вид"
 
-#: ../src/terminal-window.c:1869
+#: ../src/terminal-window.c:1828
 msgid "_Search"
 msgstr "П_оиск"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:1829
 msgid "_Terminal"
 msgstr "_Терминал"
 
-#: ../src/terminal-window.c:1871
+#: ../src/terminal-window.c:1830
 msgid "Ta_bs"
 msgstr "В_кладки"
 
-#: ../src/terminal-window.c:1872
+#: ../src/terminal-window.c:1831
 msgid "_Help"
 msgstr "_Помощь"
 
-#: ../src/terminal-window.c:1888
+#: ../src/terminal-window.c:1847
 msgid "New _Profile…"
 msgstr "Создать _профиль…"
 
-#: ../src/terminal-window.c:1893
+#: ../src/terminal-window.c:1852
 msgid "_Save Contents"
 msgstr "Со_хранить содержимое"
 
-#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
 msgid "C_lose Tab"
 msgstr "Закрыть в_кладку"
 
-#: ../src/terminal-window.c:1903
+#: ../src/terminal-window.c:1862
 msgid "_Close Window"
 msgstr "_Закрыть окно"
 
-#: ../src/terminal-window.c:1910 ../src/terminal-window.c:2104
+#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
 msgid "_Copy"
 msgstr "_Копировать"
 
-#: ../src/terminal-window.c:1915 ../src/terminal-window.c:2109
+#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
 msgid "_Paste"
 msgstr "Вст_авить"
 
-#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
+#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
 msgid "Paste _Filenames"
 msgstr "Вставить _имена файлов"
 
-#: ../src/terminal-window.c:1925
+#: ../src/terminal-window.c:1884
 msgid "Select _All"
 msgstr "Выделить _всё"
 
-#: ../src/terminal-window.c:1930
+#: ../src/terminal-window.c:1889
 msgid "P_rofiles…"
 msgstr "П_рофили…"
 
-#: ../src/terminal-window.c:1935
+#: ../src/terminal-window.c:1894
 msgid "_Keyboard Shortcuts…"
 msgstr "_Комбинации клавиш…"
 
-#: ../src/terminal-window.c:1940
+#: ../src/terminal-window.c:1899
 msgid "Pr_ofile Preferences"
 msgstr "Параметры п_рофиля"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:1906
 msgid "Zoom _In"
 msgstr "У_величить"
 
-#: ../src/terminal-window.c:1952
+#: ../src/terminal-window.c:1911
 msgid "Zoom _Out"
 msgstr "У_меньшить"
 
-#: ../src/terminal-window.c:1957
+#: ../src/terminal-window.c:1916
 msgid "_Normal Size"
 msgstr "_Нормальный размер"
 
-#: ../src/terminal-window.c:1964
+#: ../src/terminal-window.c:1923
 msgid "_Find..."
 msgstr "_Поиск..."
 
-#: ../src/terminal-window.c:1969
+#: ../src/terminal-window.c:1928
 msgid "Find Ne_xt"
 msgstr "Найти _следующее"
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:1933
 msgid "Find Pre_vious"
 msgstr "Найти пр_едыдущее"
 
-#: ../src/terminal-window.c:1979
+#: ../src/terminal-window.c:1938
 msgid "_Clear Highlight"
 msgstr "Очистить выделение"
 
-#: ../src/terminal-window.c:1985
+#: ../src/terminal-window.c:1944
 msgid "Go to _Line..."
 msgstr "Перейти к _строке…"
 
-#: ../src/terminal-window.c:1990
+#: ../src/terminal-window.c:1949
 msgid "_Incremental Search..."
 msgstr "По_шаговый поиск…"
 
 #. Terminal menu
-#: ../src/terminal-window.c:1997
+#: ../src/terminal-window.c:1956
 msgid "Change _Profile"
 msgstr "Изменить _профиль"
 
-#: ../src/terminal-window.c:1999
+#: ../src/terminal-window.c:1958
 msgid "_Previous Profile"
 msgstr "_Предыдущий профиль"
 
-#: ../src/terminal-window.c:2004
+#: ../src/terminal-window.c:1963
 msgid "_Next Profile"
 msgstr "_Следующий профиль"
 
-#: ../src/terminal-window.c:2009
+#: ../src/terminal-window.c:1968
 msgid "_Set Title…"
 msgstr "_Установить заголовок…"
 
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:1972
 msgid "Set _Character Encoding"
 msgstr "Установить _кодировку символов"
 
-#: ../src/terminal-window.c:2015
+#: ../src/terminal-window.c:1974
 msgid "_Reset"
 msgstr "_Сброс"
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:1979
 msgid "Reset and C_lear"
 msgstr "Сброс и о_чистка"
 
-#: ../src/terminal-window.c:2027
+#: ../src/terminal-window.c:1986
 msgid "_Add or Remove…"
 msgstr "_Добавить или удалить…"
 
-#: ../src/terminal-window.c:2034
+#: ../src/terminal-window.c:1993
 msgid "_Previous Tab"
 msgstr "На п_редыдущую вкладку"
 
-#: ../src/terminal-window.c:2039
+#: ../src/terminal-window.c:1998
 msgid "_Next Tab"
 msgstr "На _следующую вкладку"
 
-#: ../src/terminal-window.c:2044
+#: ../src/terminal-window.c:2003
 msgid "Move Tab _Left"
 msgstr "Переместить вкладку в_лево"
 
-#: ../src/terminal-window.c:2049
+#: ../src/terminal-window.c:2008
 msgid "Move Tab _Right"
 msgstr "Переместить вкладку в_право"
 
-#: ../src/terminal-window.c:2054
+#: ../src/terminal-window.c:2013
 msgid "_Detach tab"
 msgstr "От_цепить вк_ладку"
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2020
 msgid "_Contents"
 msgstr "_Содержание"
 
-#: ../src/terminal-window.c:2066
+#: ../src/terminal-window.c:2025
 msgid "_About"
 msgstr "_Об апплете"
 
-#: ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:2032
 msgid "_Send Mail To…"
 msgstr "_Послать E-mail…"
 
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:2037
 msgid "_Copy E-mail Address"
 msgstr "Скопировать адрес E-mail"
 
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:2042
 msgid "C_all To…"
 msgstr "_Позвонить…"
 
-#: ../src/terminal-window.c:2088
+#: ../src/terminal-window.c:2047
 msgid "_Copy Call Address"
 msgstr "_Скопировать адрес E-mail"
 
-#: ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:2052
 msgid "_Open Link"
 msgstr "_Открыть ссылку"
 
-#: ../src/terminal-window.c:2098
+#: ../src/terminal-window.c:2057
 msgid "_Copy Link Address"
 msgstr "_Копировать адрес ссылки"
 
-#: ../src/terminal-window.c:2102
+#: ../src/terminal-window.c:2061
 msgid "P_rofiles"
 msgstr "П_рофили"
 
-#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
 msgid "C_lose Window"
 msgstr "_Закрыть окно"
 
-#: ../src/terminal-window.c:2139
+#: ../src/terminal-window.c:2098
 msgid "L_eave Full Screen"
 msgstr "Покинуть полны_й экран"
 
-#: ../src/terminal-window.c:2143
+#: ../src/terminal-window.c:2102
 msgid "_Input Methods"
 msgstr "Использовать метод вв_ода"
 
-#: ../src/terminal-window.c:2150
+#: ../src/terminal-window.c:2109
 msgid "Show _Menubar"
 msgstr "Показывать _меню"
 
-#: ../src/terminal-window.c:2156
+#: ../src/terminal-window.c:2115
 msgid "_Full Screen"
 msgstr "Развернуть на полный _экран"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this window?"
 msgstr "Закрыть это окно?"
 
-#: ../src/terminal-window.c:3604
+#: ../src/terminal-window.c:3560
 msgid "Close this terminal?"
 msgstr "Закрыть этот терминал?"
 
-#: ../src/terminal-window.c:3608
+#: ../src/terminal-window.c:3564
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2803,7 +2817,7 @@ msgstr ""
 "В некоторых терминалах этого окна запущены процессы. Закрытие окна прервёт "
 "выполнение всех этих процессов."
 
-#: ../src/terminal-window.c:3612
+#: ../src/terminal-window.c:3568
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
@@ -2811,31 +2825,31 @@ msgstr ""
 "В терминале запущен процесс.  Закрытие терминала прервёт выполнение "
 "процесса."
 
-#: ../src/terminal-window.c:3617
+#: ../src/terminal-window.c:3573
 msgid "C_lose Terminal"
 msgstr "_Закрыть терминал"
 
-#: ../src/terminal-window.c:3683
+#: ../src/terminal-window.c:3639
 msgid "Could not save contents"
 msgstr "Не удалось сохранить содержимое"
 
-#: ../src/terminal-window.c:3707
+#: ../src/terminal-window.c:3663
 msgid "Save as..."
 msgstr "Сохранить как…"
 
-#: ../src/terminal-window.c:4226
+#: ../src/terminal-window.c:4186
 msgid "_Title:"
 msgstr "_Заголовок:"
 
-#: ../src/terminal-window.c:4411
+#: ../src/terminal-window.c:4371
 msgid "Contributors:"
 msgstr "Помощники:"
 
-#: ../src/terminal-window.c:4430
+#: ../src/terminal-window.c:4390
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Эмулятор терминала для рабочего стола MATE"
 
-#: ../src/terminal-window.c:4437
+#: ../src/terminal-window.c:4397
 msgid "translator-credits"
 msgstr ""
 "Александр Сапрыкин <xelfium@gmail.com>\n"
