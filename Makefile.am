@@ -7,7 +7,7 @@ NULL =
 DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-schemas-install \
 	--disable-silent-rules \
-	--with-gtk=2.0
+	CFLAGS='-Wno-deprecated-declarations'
 
 @INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/appdata
