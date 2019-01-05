@@ -10,7 +10,7 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	CFLAGS='-Wno-deprecated-declarations'
 
 @INTLTOOL_XML_RULE@
-appdatadir = $(datadir)/appdata
+appdatadir = $(datadir)/metainfo
 appdata_in_files = mate-terminal.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
