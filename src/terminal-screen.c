@@ -1421,7 +1421,7 @@ get_child_environment (TerminalScreen *screen,
 	g_hash_table_remove (env_table, "LINES");
 	g_hash_table_remove (env_table, "MATE_DESKTOP_ICON");
 
-	g_hash_table_replace (env_table, g_strdup ("TERM"), g_strdup ("xterm")); /* FIXME configurable later? */
+	g_hash_table_replace (env_table, g_strdup ("TERM"), g_strdup ("xterm-256color")); /* FIXME configurable later? */
 
 	/* FIXME: moving the tab between windows, or the window between displays will make the next two invalid... */
 	g_hash_table_replace (env_table, g_strdup ("WINDOWID"), g_strdup_printf ("%ld", GDK_WINDOW_XID (gtk_widget_get_window (window))));
