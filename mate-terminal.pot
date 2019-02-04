@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 17:29+0100\n"
+"POT-Creation-Date: 2019-02-04 11:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4388
+#: ../src/terminal-window.c:4425
 msgid "MATE Terminal"
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
 #: ../src/terminal.c:590 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:2154
+#: ../src/terminal-window.c:2195
 msgid "Terminal"
 msgstr ""
 
@@ -1661,7 +1661,7 @@ msgstr ""
 msgid "Find Previous"
 msgstr ""
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4206
 msgid "Set Title"
 msgstr ""
 
@@ -1798,45 +1798,37 @@ msgstr ""
 msgid "Profile list"
 msgstr ""
 
-#: ../src/terminal-app.c:702
+#: ../src/terminal-app.c:684
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr ""
 
-#: ../src/terminal-app.c:706
-msgid "_Cancel"
-msgstr ""
-
-#: ../src/terminal-app.c:711
-msgid "_Delete"
-msgstr ""
-
-#: ../src/terminal-app.c:718
+#: ../src/terminal-app.c:697
 msgid "Delete Profile"
 msgstr ""
 
-#: ../src/terminal-app.c:1165
+#: ../src/terminal-app.c:1144
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr ""
 
-#: ../src/terminal-app.c:1260
+#: ../src/terminal-app.c:1239
 msgid "Choose base profile"
 msgstr ""
 
-#: ../src/terminal-app.c:1848
+#: ../src/terminal-app.c:1827
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr ""
 
-#: ../src/terminal-app.c:1875
+#: ../src/terminal-app.c:1854
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr ""
 
-#: ../src/terminal-app.c:2081
+#: ../src/terminal-app.c:2060
 msgid "User Defined"
 msgstr ""
 
@@ -2187,29 +2179,29 @@ msgstr ""
 msgid "Unnamed"
 msgstr ""
 
-#: ../src/terminal-screen.c:1507
+#: ../src/terminal-screen.c:1540
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1957
+#: ../src/terminal-screen.c:1541 ../src/terminal-screen.c:1919
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1511
+#: ../src/terminal-screen.c:1544
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: ../src/terminal-screen.c:1962
+#: ../src/terminal-screen.c:1924
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1967
+#: ../src/terminal-screen.c:1929
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1972
+#: ../src/terminal-screen.c:1934
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2257,7 +2249,7 @@ msgstr ""
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
 #.
-#: ../src/terminal-window.c:615
+#: ../src/terminal-window.c:669
 #, c-format
 msgid "_%d. %s"
 msgstr ""
@@ -2266,283 +2258,259 @@ msgstr ""
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
 #.
-#: ../src/terminal-window.c:621
+#: ../src/terminal-window.c:675
 #, c-format
 msgid "_%c. %s"
 msgstr ""
 
 #. Toplevel
-#: ../src/terminal-window.c:1823
+#: ../src/terminal-window.c:1864
 msgid "_File"
 msgstr ""
 
-#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: ../src/terminal-window.c:1865 ../src/terminal-window.c:1878
+#: ../src/terminal-window.c:2119
 msgid "Open _Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
-#: ../src/terminal-window.c:2083
+#: ../src/terminal-window.c:1866 ../src/terminal-window.c:1883
+#: ../src/terminal-window.c:2124
 msgid "Open Ta_b"
 msgstr ""
 
-#: ../src/terminal-window.c:1826
+#: ../src/terminal-window.c:1867
 msgid "_Edit"
 msgstr ""
 
-#: ../src/terminal-window.c:1827
+#: ../src/terminal-window.c:1868
 msgid "_View"
 msgstr ""
 
-#: ../src/terminal-window.c:1828
+#: ../src/terminal-window.c:1869
 msgid "_Search"
 msgstr ""
 
-#: ../src/terminal-window.c:1829
+#: ../src/terminal-window.c:1870
 msgid "_Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:1830
+#: ../src/terminal-window.c:1871
 msgid "Ta_bs"
 msgstr ""
 
-#: ../src/terminal-window.c:1831
+#: ../src/terminal-window.c:1872
 msgid "_Help"
 msgstr ""
 
-#: ../src/terminal-window.c:1847
+#: ../src/terminal-window.c:1888
 msgid "New _Profile…"
 msgstr ""
 
-#: ../src/terminal-window.c:1852
+#: ../src/terminal-window.c:1893
 msgid "_Save Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
+#: ../src/terminal-window.c:1898 ../src/terminal-window.c:2134
 msgid "C_lose Tab"
 msgstr ""
 
-#: ../src/terminal-window.c:1862
+#: ../src/terminal-window.c:1903
 msgid "_Close Window"
 msgstr ""
 
-#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
-msgid "_Copy"
-msgstr ""
-
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
-msgid "_Paste"
-msgstr ""
-
-#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
+#: ../src/terminal-window.c:1920 ../src/terminal-window.c:2114
 msgid "Paste _Filenames"
 msgstr ""
 
-#: ../src/terminal-window.c:1884
-msgid "Select _All"
-msgstr ""
-
-#: ../src/terminal-window.c:1889
+#: ../src/terminal-window.c:1930
 msgid "P_rofiles…"
 msgstr ""
 
-#: ../src/terminal-window.c:1894
+#: ../src/terminal-window.c:1935
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: ../src/terminal-window.c:1899
+#: ../src/terminal-window.c:1940
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#: ../src/terminal-window.c:1906
-msgid "Zoom _In"
-msgstr ""
-
-#: ../src/terminal-window.c:1911
-msgid "Zoom _Out"
-msgstr ""
-
-#: ../src/terminal-window.c:1916
-msgid "_Normal Size"
-msgstr ""
-
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1964
 msgid "_Find..."
 msgstr ""
 
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1969
 msgid "Find Ne_xt"
 msgstr ""
 
-#: ../src/terminal-window.c:1933
+#: ../src/terminal-window.c:1974
 msgid "Find Pre_vious"
 msgstr ""
 
-#: ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1979
 msgid "_Clear Highlight"
 msgstr ""
 
-#: ../src/terminal-window.c:1944
+#: ../src/terminal-window.c:1985
 msgid "Go to _Line..."
 msgstr ""
 
-#: ../src/terminal-window.c:1949
+#: ../src/terminal-window.c:1990
 msgid "_Incremental Search..."
 msgstr ""
 
 #. Terminal menu
-#: ../src/terminal-window.c:1956
+#: ../src/terminal-window.c:1997
 msgid "Change _Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1958
+#: ../src/terminal-window.c:1999
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1963
+#: ../src/terminal-window.c:2004
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1968
+#: ../src/terminal-window.c:2009
 msgid "_Set Title…"
 msgstr ""
 
-#: ../src/terminal-window.c:1972
+#: ../src/terminal-window.c:2013
 msgid "Set _Character Encoding"
 msgstr ""
 
-#: ../src/terminal-window.c:1974
+#: ../src/terminal-window.c:2015
 msgid "_Reset"
 msgstr ""
 
-#: ../src/terminal-window.c:1979
+#: ../src/terminal-window.c:2020
 msgid "Reset and C_lear"
 msgstr ""
 
-#: ../src/terminal-window.c:1986
+#: ../src/terminal-window.c:2027
 msgid "_Add or Remove…"
 msgstr ""
 
-#: ../src/terminal-window.c:1993
+#: ../src/terminal-window.c:2034
 msgid "_Previous Tab"
 msgstr ""
 
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2039
 msgid "_Next Tab"
 msgstr ""
 
-#: ../src/terminal-window.c:2003
+#: ../src/terminal-window.c:2044
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/terminal-window.c:2008
+#: ../src/terminal-window.c:2049
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/terminal-window.c:2013
+#: ../src/terminal-window.c:2054
 msgid "_Detach tab"
 msgstr ""
 
-#: ../src/terminal-window.c:2020
+#: ../src/terminal-window.c:2061
 msgid "_Contents"
 msgstr ""
 
-#: ../src/terminal-window.c:2025
+#: ../src/terminal-window.c:2066
 msgid "_About"
 msgstr ""
 
-#: ../src/terminal-window.c:2032
+#: ../src/terminal-window.c:2073
 msgid "_Send Mail To…"
 msgstr ""
 
-#: ../src/terminal-window.c:2037
+#: ../src/terminal-window.c:2078
 msgid "_Copy E-mail Address"
 msgstr ""
 
-#: ../src/terminal-window.c:2042
+#: ../src/terminal-window.c:2083
 msgid "C_all To…"
 msgstr ""
 
-#: ../src/terminal-window.c:2047
+#: ../src/terminal-window.c:2088
 msgid "_Copy Call Address"
 msgstr ""
 
-#: ../src/terminal-window.c:2052
+#: ../src/terminal-window.c:2093
 msgid "_Open Link"
 msgstr ""
 
-#: ../src/terminal-window.c:2057
+#: ../src/terminal-window.c:2098
 msgid "_Copy Link Address"
 msgstr ""
 
-#: ../src/terminal-window.c:2061
+#: ../src/terminal-window.c:2102
 msgid "P_rofiles"
 msgstr ""
 
-#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
+#: ../src/terminal-window.c:2129 ../src/terminal-window.c:3614
 msgid "C_lose Window"
 msgstr ""
 
-#: ../src/terminal-window.c:2098
+#: ../src/terminal-window.c:2139
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:2102
+#: ../src/terminal-window.c:2143
 msgid "_Input Methods"
 msgstr ""
 
-#: ../src/terminal-window.c:2109
+#: ../src/terminal-window.c:2150
 msgid "Show _Menubar"
 msgstr ""
 
-#: ../src/terminal-window.c:2115
+#: ../src/terminal-window.c:2156
 msgid "_Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:3560
+#: ../src/terminal-window.c:3601
 msgid "Close this window?"
 msgstr ""
 
-#: ../src/terminal-window.c:3560
+#: ../src/terminal-window.c:3601
 msgid "Close this terminal?"
 msgstr ""
 
-#: ../src/terminal-window.c:3564
+#: ../src/terminal-window.c:3605
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: ../src/terminal-window.c:3568
+#: ../src/terminal-window.c:3609
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
 msgstr ""
 
-#: ../src/terminal-window.c:3573
+#: ../src/terminal-window.c:3614
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3680
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3663
+#: ../src/terminal-window.c:3704
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:4186
+#: ../src/terminal-window.c:4223
 msgid "_Title:"
 msgstr ""
 
-#: ../src/terminal-window.c:4371
+#: ../src/terminal-window.c:4408
 msgid "Contributors:"
 msgstr ""
 
-#: ../src/terminal-window.c:4390
+#: ../src/terminal-window.c:4427
 msgid "A terminal emulator for the MATE desktop"
 msgstr ""
 
-#: ../src/terminal-window.c:4397
+#: ../src/terminal-window.c:4434
 msgid "translator-credits"
 msgstr ""
