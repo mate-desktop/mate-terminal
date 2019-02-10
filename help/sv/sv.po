@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2018-10-05 21:51+0200\n"
+"POT-Creation-Date: 2019-02-04 11:36+0100\n"
 "PO-Revision-Date: 2018-10-05 19:26+0000\n"
 "Last-Translator: Daniel Gullbransen <daniel@llama.nu>, 2018\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
@@ -470,9 +470,7 @@ msgstr ""
 msgid ""
 "When you start <application>MATE Terminal</application> for the first time, "
 "the application opens a terminal window with a group of default settings. "
-"The group of default settings is called the Default profile. The profile "
-"name appears in the titlebar of the <application>MATE Terminal</application>"
-" window."
+"The group of default settings is called the Default profile."
 msgstr ""
 
 #. (itstool) path: figure/title
@@ -481,7 +479,7 @@ msgid "Example of a Default MATE Terminal Window"
 msgstr ""
 
 #. (itstool) path: screenshot/screeninfo
-#: C/index.docbook:301 C/index.docbook:371
+#: C/index.docbook:301 C/index.docbook:362
 msgid "MATE Terminal default window"
 msgstr ""
 
@@ -530,36 +528,26 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Set to <literal>xterm</literal> by default."
+msgid "Set to <literal>xterm-256color</literal> by default."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:329
-msgid "<varname>COLORTERM</varname>"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:332
-msgid "Set to <literal>mate-terminal</literal> by default."
-msgstr ""
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:338
 msgid "<varname>WINDOWID</varname>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:341
+#: C/index.docbook:332
 msgid "Set to the X11 window identifier by default."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:350
+#: C/index.docbook:341
 msgid "Terminal Profiles"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:351
+#: C/index.docbook:342
 msgid ""
 "You can create a new profile, and apply the new profile to the terminal to "
 "modify characteristics such as font, color and effects, scroll behavior, "
@@ -569,7 +557,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:353
+#: C/index.docbook:344
 msgid ""
 "You define each terminal profile in the <guilabel>Profiles</guilabel> "
 "dialog, which you access from the <guimenu>Edit</guimenu> menu. You can "
@@ -581,14 +569,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:354
+#: C/index.docbook:345
 msgid ""
 "<command>mate-terminal --window-with-"
 "profile=<replaceable>profilename</replaceable></command>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:357
+#: C/index.docbook:348
 msgid ""
 "The name of the current profile appears in the titlebar of the "
 "<application>MATE Terminal</application>, unless you specify a different "
@@ -596,19 +584,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:359
+#: C/index.docbook:350
 msgid ""
 "See <xref linkend=\"mate-terminal-manage-profiles\"/> for information about "
 "how to define and use a new terminal profile."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:363
+#: C/index.docbook:354
 msgid "Working With Multiple Terminals"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:364
+#: C/index.docbook:355
 msgid ""
 "<application>MATE Terminal</application> provides a tab feature that enables"
 " you to open several terminals in a single window. Each terminal opens in a "
@@ -619,7 +607,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:366
+#: C/index.docbook:357
 msgid ""
 "The titlebar of the terminal window shows either the name of the current "
 "profile, or the name specified by the current profile. <xref linkend=\"mate-"
@@ -630,7 +618,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:369
+#: C/index.docbook:360
 msgid "Example of a Terminal Window With Tabs"
 msgstr ""
 
@@ -639,7 +627,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:374
+#: C/index.docbook:365
 msgctxt "_"
 msgid ""
 "external ref='figures/mate-terminal-tabbed.png' "
@@ -647,63 +635,63 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:372
+#: C/index.docbook:363
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mate-terminal-tabbed.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal default "
-"window</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal window "
+"with four tabs</phrase> </textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:382
+#: C/index.docbook:373
 msgid ""
 "See <xref linkend=\"mate-terminal-windows\"/> for information about how to "
 "open a new tabbed terminal."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:392
+#: C/index.docbook:383
 msgid "Usage"
 msgstr "Användning"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:395
+#: C/index.docbook:386
 msgid "Opening and Closing Terminals"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:398
+#: C/index.docbook:389
 msgid "To open a new terminal window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:400
+#: C/index.docbook:391
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open "
 "Terminal</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:402
+#: C/index.docbook:393
 msgid ""
 "The new terminal inherits the application settings and default shell from "
 "the parent terminal."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:407
+#: C/index.docbook:398
 msgid "To close a terminal window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:409
+#: C/index.docbook:400
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Window</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:411
+#: C/index.docbook:402
 msgid ""
 "This action closes the terminal and any subprocesses that you opened from "
 "the terminal. If you close the last terminal window, the <application>MATE "
@@ -711,12 +699,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:416
+#: C/index.docbook:407
 msgid "To add a new tabbed terminal to a window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:418
+#: C/index.docbook:409
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guisubmenu>Open "
 "Tab</guisubmenu><guimenuitem>Default</guimenuitem></menuchoice> or just "
@@ -725,19 +713,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:423
+#: C/index.docbook:414
 msgid "To display a tabbed terminal:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:425
+#: C/index.docbook:416
 msgid ""
 "Click on the tab of the tabbed terminal that you want to display, or select "
 "a tab title from the <guimenu>Tabs</guimenu> menu."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:428
+#: C/index.docbook:419
 msgid ""
 "Alternatively, choose <menuchoice><guimenu>Tabs</guimenu><guimenuitem>Next "
 "Tab</guimenuitem></menuchoice> or "
@@ -746,34 +734,34 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:434
+#: C/index.docbook:425
 msgid "To close a tabbed terminal:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:439
+#: C/index.docbook:430
 msgid "Display the tabbed terminal that you want to close."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:444
+#: C/index.docbook:435
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Tab</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:454
+#: C/index.docbook:445
 msgid "Managing Profiles"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:457
+#: C/index.docbook:448
 msgid "To add a new profile:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:462
+#: C/index.docbook:453
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>New "
 "Profile</guimenuitem></menuchoice> to display the <guilabel>New "
@@ -781,27 +769,27 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:466
+#: C/index.docbook:457
 msgid ""
 "Type the new profile name in the <guilabel>Profile name</guilabel> text box."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:470
+#: C/index.docbook:461
 msgid ""
 "Use the <guilabel>Base on</guilabel> drop-down list to select the profile on"
 " which you want to base the new profile."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:474
+#: C/index.docbook:465
 msgid ""
 "Click <guibutton>Create</guibutton> to display the <guilabel>Editing "
 "Profile</guilabel> dialog."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:478
+#: C/index.docbook:469
 msgid ""
 "Click <guibutton>Close</guibutton>. <application>MATE Terminal</application>"
 " adds the profile to the "
@@ -810,31 +798,31 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:486
+#: C/index.docbook:477
 msgid "To change the profile of a tabbed terminal:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:491
+#: C/index.docbook:482
 msgid ""
 "Click on the tab of the tabbed terminal for which you want to change the "
 "profile."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:495
+#: C/index.docbook:486
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu><guimenuitem><replaceable>profilename</replaceable></guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:503
+#: C/index.docbook:494
 msgid "To edit a profile:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:505
+#: C/index.docbook:496
 msgid ""
 "You edit profiles in the <guilabel>Editing Profile</guilabel> dialog. You "
 "can access the <guilabel>Editing Profile</guilabel> dialog in the following "
@@ -842,14 +830,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:509
+#: C/index.docbook:500
 msgid ""
 "Choose <menuchoice><guimenu>Edit</guimenu><guisubmenu>Current "
 "Profile</guisubmenu></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:513
+#: C/index.docbook:504
 msgid ""
 "Right-click in the terminal window, then choose "
 "<menuchoice><guimenuitem>Profiles</guimenuitem> <guimenuitem>Profile "
@@ -857,7 +845,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:517
+#: C/index.docbook:508
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Edit</guimenu><guisubmenu>Profiles</guisubmenu></menuchoice>,"
@@ -867,19 +855,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:524
+#: C/index.docbook:515
 msgid "To delete a profile:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:529
+#: C/index.docbook:520
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:533
+#: C/index.docbook:524
 msgid ""
 "Select the name of the profile that you want to delete in the "
 "<guilabel>Profiles</guilabel> list, then click "
@@ -888,55 +876,55 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:537
+#: C/index.docbook:528
 msgid "Click <guibutton>Delete</guibutton> to confirm the deletion."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:541
+#: C/index.docbook:532
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Edit "
 "Profiles</guilabel> dialog."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:551
+#: C/index.docbook:542
 msgid "Modifying a Terminal Window"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:554
+#: C/index.docbook:545
 msgid "To hide the menubar:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:556
+#: C/index.docbook:547
 msgid ""
 "Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Show "
 "Menubar</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:561
+#: C/index.docbook:552
 msgid "To show a hidden menubar:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:563
+#: C/index.docbook:554
 msgid ""
 "Right-click on the terminal window, then choose <guimenuitem>Show "
 "Menubar</guimenuitem> from the popup menu."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:567
+#: C/index.docbook:558
 msgid ""
 "To display the <application>MATE Terminal</application> window in full-"
 "screen mode:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:569
+#: C/index.docbook:560
 msgid ""
 "Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Full "
 "Screen</guimenuitem></menuchoice>. Full-screen mode displays the text in a "
@@ -947,12 +935,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:573
+#: C/index.docbook:564
 msgid "To change the appearance of the terminal window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:575
+#: C/index.docbook:566
 msgid ""
 "See <xref linkend=\"mate-terminal-prefs\"/> for information about the "
 "options that you can choose in the <guilabel>Editing Profile</guilabel> "
@@ -961,29 +949,29 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:582
+#: C/index.docbook:573
 msgid "Working with the Contents of Terminal Windows"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:585
+#: C/index.docbook:576
 msgid "To scroll through previous commands and output:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:587
+#: C/index.docbook:578
 msgid "Perform one of the following actions:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:592
+#: C/index.docbook:583
 msgid ""
 "Use the scrollbar, which is usually displayed on the right of the terminal "
 "window."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:596
+#: C/index.docbook:587
 msgid ""
 "Press the <keycombo><keycap>Shift</keycap><keycap>Page "
 "Up</keycap></keycombo>, <keycombo><keycap>Shift</keycap><keycap>Page "
@@ -993,7 +981,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:600
+#: C/index.docbook:591
 msgid ""
 "The number of lines that you can scroll back to in the terminal window is "
 "determined by the <guilabel>Scrollback</guilabel> setting in the "
@@ -1006,24 +994,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:605
+#: C/index.docbook:596
 msgid "To select and copy text:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:607
+#: C/index.docbook:598
 msgid "You can select text in any of the following ways:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:612
+#: C/index.docbook:603
 msgid ""
 "To select a character at a time, click on the first character that you want "
 "to select and drag the mouse to the last character that you want to select."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:616
+#: C/index.docbook:607
 msgid ""
 "To select a word at a time, double-click on the first word that you want to "
 "select and drag the mouse to the last word that you want to select. Symbols "
@@ -1031,14 +1019,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:620
+#: C/index.docbook:611
 msgid ""
 "To select a line at a time, triple-click on the first line that you want to "
 "select and drag the mouse to the last line that you want to select."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:624
+#: C/index.docbook:615
 msgid ""
 "These actions select all text between the first and last items. For all text"
 " selections, <application>MATE Terminal</application> copies the selected "
@@ -1048,19 +1036,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:629
+#: C/index.docbook:620
 msgid "To paste text into a terminal:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:631
+#: C/index.docbook:622
 msgid ""
 "If you previously copied text to the clipboard, you can paste the text into "
 "a terminal by performing one of the following actions:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:635
+#: C/index.docbook:626
 msgid ""
 "To paste text that you copied by selection only, middle-click at the command"
 " prompt. If you do not have a middle mouse button, refer to the X Server "
@@ -1068,60 +1056,60 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:639
+#: C/index.docbook:630
 msgid ""
 "To paste text that you explicitly copied, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:646
+#: C/index.docbook:637
 msgid "To drag a file name into a terminal window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:648
+#: C/index.docbook:639
 msgid ""
 "You can drag a file name to a terminal from another application such as a "
 "file manager. The terminal displays the path and the full name of the file."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:653
+#: C/index.docbook:644
 msgid "To access a link:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:655
+#: C/index.docbook:646
 msgid ""
 "To access a Uniform Resource Locator (URL) that is displayed in a terminal, "
 "perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:659
+#: C/index.docbook:650
 msgid "Move the mouse over the URL until the URL is underlined."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:663
+#: C/index.docbook:654
 msgid "Right-click on the URL to open a popup menu."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:667
+#: C/index.docbook:658
 msgid ""
 "Choose <guimenuitem>Open Link</guimenuitem> to start a link application and "
 "display the file located at the URL."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:677
+#: C/index.docbook:668
 msgid "Viewing the Keyboard Shortcut Settings"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:678
+#: C/index.docbook:669
 msgid ""
 "To view the keyboard shortcut settings that are defined for "
 "<application>MATE Terminal</application>, choose "
@@ -1131,14 +1119,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:682
+#: C/index.docbook:673
 msgid ""
 "<guilabel>Disable all menu access keys (such as Alt+f to open File "
 "menu)</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:684
+#: C/index.docbook:675
 msgid ""
 "Deselect this option to disable the access keys that are defined to enable "
 "you to use the keyboard instead of the mouse to select a menu item. Each "
@@ -1148,12 +1136,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:689
+#: C/index.docbook:680
 msgid "<guilabel>Disable menu shortcut key (F10 by default)</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:691
+#: C/index.docbook:682
 msgid ""
 "Deselect this option to disable the shortcut key that is defined to enable "
 "you to access the <application>MATE Terminal</application> menus. The "
@@ -1161,37 +1149,37 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:696
+#: C/index.docbook:687
 msgid "<guilabel>Shortcut Keys</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:698
+#: C/index.docbook:689
 msgid ""
 "The <guilabel>Shortcut Keys</guilabel> section of the dialog lists the "
 "shortcut keys that are defined for each menu item."
 msgstr ""
 
 #. (itstool) path: note/para
-#: C/index.docbook:700
+#: C/index.docbook:691
 msgid ""
 "Not all keys can be used as shortcut keys, such as <keycap>Tab</keycap>."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:707
+#: C/index.docbook:698
 msgid "Text Size"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:708
+#: C/index.docbook:699
 msgid ""
 "You can use the following methods to resize the text in the MATE Terminal "
 "window:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:710
+#: C/index.docbook:701
 msgid ""
 "To increase the size of the text, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
@@ -1199,7 +1187,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:712
+#: C/index.docbook:703
 msgid ""
 "To decrease the size of the text, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
@@ -1207,7 +1195,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:714
+#: C/index.docbook:705
 msgid ""
 "To view the text at actual size, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Normal "
@@ -1215,45 +1203,45 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:721
+#: C/index.docbook:712
 msgid "To Change the Terminal Title"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:722
+#: C/index.docbook:713
 msgid ""
 "To change the title of the currently displayed terminal, perform the "
 "following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:726
+#: C/index.docbook:717
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Set "
 "Title</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:729
+#: C/index.docbook:720
 msgid ""
 "Type the new title in the <guilabel>Title</guilabel> text box. "
 "<application>MATE Terminal</application> applies the change immediately."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:732
+#: C/index.docbook:723
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Set "
 "Title</guilabel> dialog."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:738
+#: C/index.docbook:729
 msgid "To Change the Character Encoding"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:739
+#: C/index.docbook:730
 msgid ""
 "To change the character encoding, choose "
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
@@ -1261,26 +1249,26 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect3/title
-#: C/index.docbook:744
+#: C/index.docbook:735
 msgid "To Change the List of Character Encodings"
 msgstr ""
 
 #. (itstool) path: sect3/para
-#: C/index.docbook:745
+#: C/index.docbook:736
 msgid ""
 "To change the list of character encodings displayed in the <guisubmenu>Set "
 "Character Encoding</guisubmenu> menu, perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:750
+#: C/index.docbook:741
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
 "Encoding</guisubmenu><guimenuitem>Add or Remove</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:754
+#: C/index.docbook:745
 msgid ""
 "To add an encoding to the <guisubmenu>Set Character Encoding</guisubmenu> "
 "menu, select the encoding in the <guilabel>Available encodings</guilabel> "
@@ -1288,7 +1276,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:758
+#: C/index.docbook:749
 msgid ""
 "To remove an encoding from the <guisubmenu>Set Character "
 "Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings "
@@ -1296,53 +1284,53 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:762
+#: C/index.docbook:753
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove "
 "Terminal Encodings</guilabel> dialog."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:770
+#: C/index.docbook:761
 msgid "To Recover Your Terminal"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:771
+#: C/index.docbook:762
 msgid "This section provides some advice if you have problems with terminals."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:776
+#: C/index.docbook:767
 msgid "To reset the state of the terminal:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:778
+#: C/index.docbook:769
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:786
+#: C/index.docbook:777
 msgid "To reset the terminal and clear the screen:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:788
+#: C/index.docbook:779
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset and "
 "Clear</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:800
+#: C/index.docbook:791
 msgid "Preferences"
 msgstr "Inställningar"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:801
+#: C/index.docbook:792
 msgid ""
 "To configure <application>MATE Terminal</application>, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Current "
@@ -1354,7 +1342,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:803
+#: C/index.docbook:794
 msgid ""
 "The <guilabel>Editing Profile</guilabel> dialog contains the following "
 "tabbed sections that you can use to configure <application>MATE "
@@ -1362,27 +1350,27 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:822
+#: C/index.docbook:813
 msgid "General"
 msgstr "Allmänt"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:825
+#: C/index.docbook:816
 msgid "<guilabel>Profile name</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:828
+#: C/index.docbook:819
 msgid "Use this text box to specify the name of the current profile."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:834
+#: C/index.docbook:825
 msgid "<guilabel>Use the system fixed width font</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:837
+#: C/index.docbook:828
 msgid ""
 "Select this option to use the standard fixed width font that is specified in"
 " the <guilabel>Font</guilabel> tab of the "
@@ -1390,12 +1378,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:843
+#: C/index.docbook:834
 msgid "<guilabel>Font</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:846
+#: C/index.docbook:837
 msgid ""
 "Click on this button to select a font type and font size for the terminal. "
 "This button is only enabled if the <guilabel>Use the system terminal "
@@ -1403,42 +1391,42 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:851
+#: C/index.docbook:842
 msgid "<guilabel>Allow bold text</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:854
+#: C/index.docbook:845
 msgid "Select this option to enable the terminal to display bold text."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:860
+#: C/index.docbook:851
 msgid "<guilabel>Show menubar by default in new terminals</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:864
+#: C/index.docbook:855
 msgid "Select this option to show the menubar on new terminal windows."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:870
+#: C/index.docbook:861
 msgid "<guilabel>Terminal bell</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:873
+#: C/index.docbook:864
 msgid "Select this option to enable the terminal bell."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:879
+#: C/index.docbook:870
 msgid "<guilabel>Select-by-word characters</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:882
+#: C/index.docbook:873
 msgid ""
 "Use this text box to specify characters or groups of characters that "
 "<application>MATE Terminal</application> considers to be words when you "
@@ -1447,17 +1435,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:891
+#: C/index.docbook:882
 msgid "Title and Command"
 msgstr "Titel och kommando"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:894
+#: C/index.docbook:885
 msgid "<guilabel>Initial title</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:897
+#: C/index.docbook:888
 msgid ""
 "Use this text box to specify the initial title of terminals that use the "
 "profile. New terminals that are started from the current terminal have the "
@@ -1465,24 +1453,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:903
+#: C/index.docbook:894
 msgid "<guilabel>When terminal commands set their own titles</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:906
+#: C/index.docbook:897
 msgid ""
 "Use this drop-down list to specify how to handle dynamically-set titles, "
 "that is, terminal titles set by commands that run in the terminal."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:912
+#: C/index.docbook:903
 msgid "<guilabel>Run command as a login shell</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:915
+#: C/index.docbook:906
 msgid ""
 "Select this option to force the command that currently runs inside the "
 "terminal to run as a login shell. If the command is not a shell, the setting"
@@ -1490,24 +1478,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:921
+#: C/index.docbook:912
 msgid "<guilabel>Update login records when command is launched</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:924
+#: C/index.docbook:915
 msgid ""
 "Select this option to insert a new entry in the login records when a new "
 "shell is opened."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:930
+#: C/index.docbook:921
 msgid "<guilabel>Run a custom command instead of my shell</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:934
+#: C/index.docbook:925
 msgid ""
 "Select this option to run a specified command, other than the normal shell, "
 "in the terminal. Specify the custom command in the <guilabel>Custom "
@@ -1515,29 +1503,29 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:940
+#: C/index.docbook:931
 msgid "<guilabel>When command exits</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:943
+#: C/index.docbook:934
 msgid ""
 "Use this drop-down list to specify what action to perform when the command "
 "exits."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:951
+#: C/index.docbook:942
 msgid "Colours"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:954
+#: C/index.docbook:945
 msgid "<guilabel>Foreground and Background</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:958
+#: C/index.docbook:949
 msgid ""
 "Select the <guilabel>Use colours from system theme</guilabel> option to use "
 "the colors that are specified in the MATE Desktop theme that is selected in "
@@ -1547,7 +1535,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:961
+#: C/index.docbook:952
 msgid ""
 "Use the <guilabel>Built-in schemes</guilabel> drop-down list to specify the "
 "foreground and background colors for the terminal. <application>MATE "
@@ -1556,44 +1544,44 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:966
+#: C/index.docbook:957
 msgid "<guilabel>Black on light yellow</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:971
+#: C/index.docbook:962
 msgid "<guilabel>Black on white</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:976
+#: C/index.docbook:967
 msgid "<guilabel>Gray on black</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:981
+#: C/index.docbook:972
 msgid "<guilabel>Green on black</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:986
+#: C/index.docbook:977
 msgid "<guilabel>White on black</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:991
+#: C/index.docbook:982
 msgid "<guilabel>Custom</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:994
+#: C/index.docbook:985
 msgid ""
 "This option enables you to select colors that are not in the selected color "
 "scheme."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:999
+#: C/index.docbook:990
 msgid ""
 "The actual display of the foreground and background colors can vary "
 "depending on the color scheme that you choose. For example, if you choose "
@@ -1605,7 +1593,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1002
+#: C/index.docbook:993
 msgid ""
 "Click on the <guibutton>Text colour</guibutton> button to display the "
 "<guilabel>Choose terminal text colour</guilabel> dialog. Use the color wheel"
@@ -1616,7 +1604,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1005
+#: C/index.docbook:996
 msgid ""
 "Click on the <guibutton>Background colour</guibutton> button to display the "
 "<guilabel>Choose terminal background colour</guilabel> dialog. Use the color"
@@ -1627,12 +1615,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1011
+#: C/index.docbook:1002
 msgid "<guilabel>Palette</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1014
+#: C/index.docbook:1005
 msgid ""
 "The terminal emulation can only use 16 colors at a time to draw text. The "
 "color palette specifies these 16 colors. Applications that run in the "
@@ -1640,7 +1628,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1016
+#: C/index.docbook:1007
 msgid ""
 "Use the <guilabel>Built-in schemes</guilabel> drop-down list to choose a "
 "preset color schemes. The color palette below and the contents of the "
@@ -1648,7 +1636,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1017
+#: C/index.docbook:1008
 msgid ""
 "Use the <guilabel>Colour palette</guilabel> to customize the 16 default "
 "colors in the custom color palette. To customize a color, click on the color"
@@ -1658,28 +1646,28 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1024
+#: C/index.docbook:1015
 msgid "Effects"
 msgstr "Effekter"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1027
+#: C/index.docbook:1018
 msgid "<guilabel>Background</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1030
+#: C/index.docbook:1021
 msgid ""
 "Select a background for the terminal window. The options are as follows:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1035
+#: C/index.docbook:1026
 msgid "<guilabel>Solid color</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1038
+#: C/index.docbook:1029
 msgid ""
 "Select this option to use the background color that is specified in the "
 "<guilabel>Colors</guilabel> tabbed section as the background color for the "
@@ -1687,12 +1675,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1043
+#: C/index.docbook:1034
 msgid "<guilabel>Background image</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1046
+#: C/index.docbook:1037
 msgid ""
 "Select this option to use an image file as the background for the terminal. "
 "Use the <guilabel>Image file</guilabel> drop-down combination box to specify"
@@ -1701,7 +1689,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1049
+#: C/index.docbook:1040
 msgid ""
 "Select the <guilabel>Background image scrolls</guilabel> option to enable "
 "the background image to scroll with the text when you scroll through the "
@@ -1711,22 +1699,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1052
+#: C/index.docbook:1043
 msgid "<guilabel>Transparent background</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1055
+#: C/index.docbook:1046
 msgid "Select this option to use a transparent background for the terminal."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1063
+#: C/index.docbook:1054
 msgid "<guilabel>Shade transparent or image background</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1067
+#: C/index.docbook:1058
 msgid ""
 "Use this slider to shade or dim the background of the terminal. This option "
 "is only enabled if you select the <guilabel>Background image</guilabel> or "
@@ -1734,29 +1722,29 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1076
+#: C/index.docbook:1067
 msgid "Scrolling"
 msgstr "Rullning"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1079
+#: C/index.docbook:1070
 msgid "<guilabel>Scrollbar is</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1082
+#: C/index.docbook:1073
 msgid ""
 "Use this drop-down list to specify the position of the scrollbar on the "
 "terminal window."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1088
+#: C/index.docbook:1079
 msgid "<guilabel>Scrollback ... lines</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1091
+#: C/index.docbook:1082
 msgid ""
 "Use this spin box to specify the number of lines that you can scroll back "
 "using the scrollbar. For example, if you specify 100 you can scroll back the"
@@ -1764,24 +1752,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1097
+#: C/index.docbook:1088
 msgid "<guilabel>Scroll on output</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1100
+#: C/index.docbook:1091
 msgid ""
 "Select this option to enable you to scroll the output on the terminal while "
 "the terminal continues to display more output from a command."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1106
+#: C/index.docbook:1097
 msgid "<guilabel>Scroll on keystroke</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1109
+#: C/index.docbook:1100
 msgid ""
 "Select this option to enable you to press any key on the keyboard to scroll "
 "down the terminal window to the command prompt. This action only applies if "
@@ -1790,41 +1778,41 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1118
+#: C/index.docbook:1109
 msgid "Compatibility"
 msgstr "Kompatibilitet"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1121
+#: C/index.docbook:1112
 msgid "<guilabel>Backspace key generates</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1124
+#: C/index.docbook:1115
 msgid ""
 "Use the drop-down list to select the function that you want the "
 "<keycap>Backspace</keycap> key to perform."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1130
+#: C/index.docbook:1121
 msgid "<guilabel>Delete key generates</guilabel>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1133
+#: C/index.docbook:1124
 msgid ""
 "Use the drop-down list to select the function that you want the "
 "<keycap>Delete</keycap> key to perform."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1139
+#: C/index.docbook:1130
 msgid "<guibutton>Reset compatibility options to defaults</guibutton>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1142
+#: C/index.docbook:1133
 msgid ""
 "Click on this button to reset the options on the "
 "<guilabel>Compatibility</guilabel> tabbed section to the default settings."

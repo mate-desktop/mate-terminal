@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-05 21:03+0200\n"
+"POT-Creation-Date: 2019-02-04 11:36+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Mingye Wang <arthur200126@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../mate-terminal.appdata.xml.in.h:1
 msgid "A terminal emulator for the MATE desktop environment"
-msgstr "MATE 桌面的终端模拟器"
+msgstr "用于 MATE 桌面的终端模拟器"
 
 #: ../mate-terminal.appdata.xml.in.h:2
 msgid ""
@@ -61,32 +61,32 @@ msgstr "终端"
 msgid "Use the command line"
 msgstr "使用命令行"
 
-#: ../src/eggsmclient.c:229
+#: ../src/eggsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr "禁止连接到会话管理器"
 
-#: ../src/eggsmclient.c:234
+#: ../src/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "指定包含有已保存配置的文件"
 
-#: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
+#: ../src/eggsmclient.c:230 ../src/terminal-options.c:964
 #: ../src/terminal-options.c:973
 msgid "FILE"
 msgstr "文件"
 
-#: ../src/eggsmclient.c:239
+#: ../src/eggsmclient.c:235
 msgid "Specify session management ID"
 msgstr "指定会话管理 ID"
 
-#: ../src/eggsmclient.c:239
+#: ../src/eggsmclient.c:235
 msgid "ID"
 msgstr "ID"
 
-#: ../src/eggsmclient.c:265
+#: ../src/eggsmclient.c:261
 msgid "Session management options:"
 msgstr "会话管理选项："
 
-#: ../src/eggsmclient.c:266
+#: ../src/eggsmclient.c:262
 msgid "Show session management options"
 msgstr "显示会话管理选项"
 
@@ -109,7 +109,7 @@ msgstr "新终端要使用的配置文件"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr "打开新窗口或标签页时要使用的配置文件。必须位于配置文件列表（profile_list）中。"
+msgstr "打开新窗口或标签页时要使用的配置文件。必须位于配置文件列表 (profile_list) 中。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:5
 msgid "Whether the menubar has access keys"
@@ -133,7 +133,7 @@ msgid ""
 "standard menubar accelerator to be disabled."
 msgstr ""
 "通常您可以用 F10 访问菜单栏。这也可以通过 gtkrc 自定义（gtk-menu-bar-accel = "
-"\"随意填\"）。此选项允许禁用标准的菜单栏加速键。"
+"\"任意值\"）。此选项允许禁用标准的菜单栏加速键。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:9
 msgctxt "active-encodings"
@@ -142,14 +142,14 @@ msgstr "[ 'UTF-8', 'GB18030', 'GBK', 'GB2312', 'current']"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:10
 msgid "List of available encodings"
-msgstr "可用编码的列表"
+msgstr "可用编码列表"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:11
 msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
-msgstr "可选编码的一部分会出现在“编码”菜单中。特殊的编码名称“当前（current）”指显示当前语系的编码。"
+msgstr "可选编码的一部分会出现在“编码”菜单中。特殊的编码名称“当前 (current)”指显示当前语系的编码。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -220,7 +220,7 @@ msgstr "终端背景的默认颜色"
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
-msgstr "终端背景的默认颜色，遵照颜色指定的格式(可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称)。"
+msgstr "终端背景的默认颜色，遵照颜色指定的格式（可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称）。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:27
 msgid "Default color of bold text in the terminal"
@@ -232,8 +232,8 @@ msgid ""
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
 msgstr ""
-"终端加粗文字的默认颜色，遵照颜色指定的格式(可以是 HTML "
-"风格的十六进制数码，也可以是像“red”这样的颜色名称)。如果bold_color_same+as_fg是真，这个选项将被忽略。"
+"终端加粗文字的默认颜色，遵照颜色指定的格式（可以是 HTML "
+"风格的十六进制数码，也可以是像“red”这样的颜色名称）。如果bold_color_same_as_fg 为真，这个选项将被忽略。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgid "Whether bold text should use the same color as normal text"
@@ -255,8 +255,8 @@ msgid ""
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
-"如果终端中的程序设置了标题(最典型的就是用户自己的 shell "
-"可能执行这一操作)，动态设置的标题可以删除配置好的标题，或者在原有标题前/后插入。可供选择的值有“替换”、“之前”、“之后”和“忽略”。"
+"如果终端中的程序设置了标题（最典型的就是用户自定义的 Shell "
+"可能执行这一操作），动态设置的标题可以删除配置好的标题，或者在原有标题前/后插入。可供选择的值有“替换”、“之前”、“之后”和“忽略”。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:33
 msgctxt "title"
@@ -298,7 +298,7 @@ msgstr "把选中的文本复制到剪贴板"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:41
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr "如果为 true，选区将自动复制到剪贴板缓存中。"
+msgstr "如果为 True，选区将自动复制到剪贴板缓存中。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Characters that are considered \"part of a word\""
@@ -329,7 +329,7 @@ msgstr "默认列数"
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "新建窗口的列数。如果use_custom_default_size选项没有被启用，这个选项没有效果。"
+msgstr "新建窗口的列数。如未启用 use_custom_default_size，该选项将不生效。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Default number of rows"
@@ -339,7 +339,7 @@ msgstr "默认行数"
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
-msgstr "新建窗口的行数。如果use_custom_default_size没有被启用，这个选项没有效果。"
+msgstr "新建窗口的行数。如未启用 use_custom_default_size，该选项将不生效。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
@@ -403,13 +403,13 @@ msgstr "可供选择的值中，“关闭 close”关闭终端，“重新启动
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "是否以登录 shell 在终端调用命令"
+msgstr "是否以登录 Shell 在终端调用命令"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "如果为真，终端中的命令将会以登录 shell 被调用。(argv[0] 将在前面有一个连字符。)"
+msgstr "如果为 True，终端将把指定命令作为登录 Shell 运行（argv[0] 前将插入连字符）。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to update login records when launching terminal command"
@@ -429,11 +429,11 @@ msgstr "是否运行自定义命令而不是 Shell"
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "如果为真，将会使用用户自定义的设置来取代 shell。"
+msgstr "如果为真，将会使用用户自定义的设置来取代 Shell。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Whether to blink the cursor"
-msgstr "是否闪烁光标"
+msgstr "光标是否闪烁"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid ""
@@ -453,11 +453,11 @@ msgstr "可能值为 \"block\" 以使用块状鼠标，\"ibeam\" 以使用垂直
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Custom command to use instead of the shell"
-msgstr "取代 shell 的自定义命令"
+msgstr "取代 Shell 的自定义命令"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "运行此命令而非 shell，如果 use_custom_command 为 true。"
+msgstr "如果 use_custom_command 为 True，运行此命令而非 Shell。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Icon for terminal window"
@@ -541,8 +541,8 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
-"设置退格键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H(即 ASCII "
-"BS 字符)，“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-"
+"设置退格键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H（即 ASCII "
+"BS 字符），“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-"
 "del”通常是退格键正确的设置。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:90
@@ -557,8 +557,8 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
-"设置 Delete 键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H(即 "
-"ASCII BS 字符)，“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-del”通常是 "
+"设置 Delete 键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H（即 "
+"ASCII BS 字符），“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-del”通常是 "
 "Delete 键正确的设置。"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:92
@@ -1189,11 +1189,11 @@ msgstr "键盘快捷键"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "启用所有菜单访问键(如使用 Alt+F 来打开文件菜单)(_E)"
+msgstr "启用所有菜单访问键（如使用 Alt+F 来打开文件菜单）(_E)"
 
 #: ../src/keybinding-editor.ui.h:3
 msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "启用菜单快捷键(默认是 F10)(_M)"
+msgstr "启用菜单快捷键（默认是 F10）(_M)"
 
 #: ../src/keybinding-editor.ui.h:4
 msgid "_Shortcut keys:"
@@ -2144,7 +2144,7 @@ msgstr "全屏幕窗口"
 #: ../src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr "设置窗口大小；例如：80x24，或者80x24+200+200 (列x行+X坐标+Y坐标)"
+msgstr "设置窗口大小；例如：80x24，或 80x24+200+200（列 x 行 + X 坐标 + Y 坐标）"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2192,7 +2192,7 @@ msgstr "目录名"
 
 #: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr "设置终端的缩放系数(1.0 = 正常大小)"
+msgstr "设置终端的缩放系数（1.0 = 正常大小）"
 
 #: ../src/terminal-options.c:1115
 msgid "ZOOM"
@@ -2240,29 +2240,29 @@ msgstr "显示每个终端的选项"
 msgid "Unnamed"
 msgstr "未命名"
 
-#: ../src/terminal-screen.c:1503
+#: ../src/terminal-screen.c:1507
 msgid "_Profile Preferences"
 msgstr "配置文件首选项(_P)"
 
-#: ../src/terminal-screen.c:1504 ../src/terminal-screen.c:1953
+#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1957
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: ../src/terminal-screen.c:1507
+#: ../src/terminal-screen.c:1511
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: ../src/terminal-screen.c:1958
+#: ../src/terminal-screen.c:1962
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子进程以状态%d正常的退出。"
 
-#: ../src/terminal-screen.c:1963
+#: ../src/terminal-screen.c:1967
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子进程被信号%d中断。"
 
-#: ../src/terminal-screen.c:1968
+#: ../src/terminal-screen.c:1972
 msgid "The child process was terminated."
 msgstr "子进程被中断。"
 
@@ -2400,7 +2400,7 @@ msgstr "全选(_A)"
 
 #: ../src/terminal-window.c:1889
 msgid "P_rofiles…"
-msgstr "配置文件(_R)..."
+msgstr "配置文件(_R)…"
 
 #: ../src/terminal-window.c:1894
 msgid "_Keyboard Shortcuts…"
@@ -2424,7 +2424,7 @@ msgstr "正常大小(_N)"
 
 #: ../src/terminal-window.c:1923
 msgid "_Find..."
-msgstr "查找(_F)..."
+msgstr "查找(_F)…"
 
 #: ../src/terminal-window.c:1928
 msgid "Find Ne_xt"
@@ -2440,11 +2440,11 @@ msgstr "清除高亮(_C)"
 
 #: ../src/terminal-window.c:1944
 msgid "Go to _Line..."
-msgstr "跳转到指定行(_L)..."
+msgstr "跳转到指定行(_L)…"
 
 #: ../src/terminal-window.c:1949
 msgid "_Incremental Search..."
-msgstr "增量搜索(_I)..."
+msgstr "增量搜索(_I)…"
 
 #. Terminal menu
 #: ../src/terminal-window.c:1956
@@ -2585,7 +2585,7 @@ msgstr "无法保存内容"
 
 #: ../src/terminal-window.c:3663
 msgid "Save as..."
-msgstr "另存为..."
+msgstr "另存为…"
 
 #: ../src/terminal-window.c:4186
 msgid "_Title:"

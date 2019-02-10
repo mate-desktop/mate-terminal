@@ -1,14 +1,14 @@
 # Translators:
 # Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2018
+# Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2018-10-05 21:51+0200\n"
+"POT-Creation-Date: 2019-02-04 11:36+0100\n"
 "PO-Revision-Date: 2018-10-05 19:26+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2018\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -539,15 +539,12 @@ msgstr "Når du for første gang starter MATE-terminalen"
 msgid ""
 "When you start <application>MATE Terminal</application> for the first time, "
 "the application opens a terminal window with a group of default settings. "
-"The group of default settings is called the Default profile. The profile "
-"name appears in the titlebar of the <application>MATE Terminal</application>"
-" window."
+"The group of default settings is called the Default profile."
 msgstr ""
 "Når du starter <application>MATE-terminalen</application> for første gang, "
 "så åbner programmet et terminalvindue med en gruppe af "
 "standardindstillinger. Gruppen med standardindstillinger kaldes for "
-"standardprofilen. Profilnavnet fremgår i titellinjen i <application>MATE-"
-"terminalens</application> vindue."
+"standardprofilen."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:299
@@ -555,7 +552,7 @@ msgid "Example of a Default MATE Terminal Window"
 msgstr "Eksempel på MATE-terminalens vindue"
 
 #. (itstool) path: screenshot/screeninfo
-#: C/index.docbook:301 C/index.docbook:371
+#: C/index.docbook:301 C/index.docbook:362
 msgid "MATE Terminal default window"
 msgstr "MATE-terminalens standardvindue"
 
@@ -617,36 +614,26 @@ msgstr "<varname>TERM</varname>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Set to <literal>xterm</literal> by default."
-msgstr "Angiv som <literal>xterm</literal> som standard."
+msgid "Set to <literal>xterm-256color</literal> by default."
+msgstr "Angiv som <literal>xterm-256color</literal> som standard."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:329
-msgid "<varname>COLORTERM</varname>"
-msgstr "<varname>COLORTERM</varname>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:332
-msgid "Set to <literal>mate-terminal</literal> by default."
-msgstr "Angiv som <literal>mate-terminal</literal> som standard."
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:338
 msgid "<varname>WINDOWID</varname>"
 msgstr "<varname>WINDOWID</varname>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:341
+#: C/index.docbook:332
 msgid "Set to the X11 window identifier by default."
 msgstr "Angiv som X11-vinduesidentifikatoren som standard."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:350
+#: C/index.docbook:341
 msgid "Terminal Profiles"
 msgstr "Terminalprofiler"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:351
+#: C/index.docbook:342
 msgid ""
 "You can create a new profile, and apply the new profile to the terminal to "
 "modify characteristics such as font, color and effects, scroll behavior, "
@@ -661,7 +648,7 @@ msgstr ""
 "profilen."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:353
+#: C/index.docbook:344
 msgid ""
 "You define each terminal profile in the <guilabel>Profiles</guilabel> "
 "dialog, which you access from the <guimenu>Edit</guimenu> menu. You can "
@@ -680,7 +667,7 @@ msgstr ""
 "kommandolinje, brug den følgende kommando:"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:354
+#: C/index.docbook:345
 msgid ""
 "<command>mate-terminal --window-with-"
 "profile=<replaceable>profilename</replaceable></command>"
@@ -689,7 +676,7 @@ msgstr ""
 "profile=<replaceable>profilnavn</replaceable></command>"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:357
+#: C/index.docbook:348
 msgid ""
 "The name of the current profile appears in the titlebar of the "
 "<application>MATE Terminal</application>, unless you specify a different "
@@ -700,7 +687,7 @@ msgstr ""
 "<guilabel>Rediger profil</guilabel>. "
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:359
+#: C/index.docbook:350
 msgid ""
 "See <xref linkend=\"mate-terminal-manage-profiles\"/> for information about "
 "how to define and use a new terminal profile."
@@ -709,12 +696,12 @@ msgstr ""
 "hvordan en ny terminalprofil defineres og bruges."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:363
+#: C/index.docbook:354
 msgid "Working With Multiple Terminals"
 msgstr "Arbejde med flere terminaler"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:364
+#: C/index.docbook:355
 msgid ""
 "<application>MATE Terminal</application> provides a tab feature that enables"
 " you to open several terminals in a single window. Each terminal opens in a "
@@ -731,7 +718,7 @@ msgstr ""
 "anden profil for hver faneopdelt terminal i vinduet."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:366
+#: C/index.docbook:357
 msgid ""
 "The titlebar of the terminal window shows either the name of the current "
 "profile, or the name specified by the current profile. <xref linkend=\"mate-"
@@ -740,9 +727,15 @@ msgid ""
 " The name of the profile in the active tab, Profile 1, appears in the "
 "titlebar."
 msgstr ""
+"Titellinjen på terminalvinduet viser enten navnet på den nuværende profil, "
+"eller navnet angivet af den nuværende profil. <xref linkend=\"mate-terminal-"
+"tabbed\"/> viser et vindue for <application>MATE-terminalen</application> "
+"med fire faneblade. I dette tilfælde, har hver af de fire faneblade en "
+"forskellig profil. Navnet på profilen i det aktive faneblad, Profil 1, "
+"fremgår af titellinjen."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:369
+#: C/index.docbook:360
 msgid "Example of a Terminal Window With Tabs"
 msgstr "Eksempel på et terminalvindue med faneblade"
 
@@ -751,7 +744,7 @@ msgstr "Eksempel på et terminalvindue med faneblade"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:374
+#: C/index.docbook:365
 msgctxt "_"
 msgid ""
 "external ref='figures/mate-terminal-tabbed.png' "
@@ -761,18 +754,18 @@ msgstr ""
 "md5='fd1c1b81fec91087349f1500b82501fe'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:372
+#: C/index.docbook:363
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/mate-terminal-tabbed.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal default "
-"window</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal window "
+"with four tabs</phrase> </textobject>"
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/mate-terminal-tabbed.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE-terminalens "
-"standardvindue</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE-terminalvindue med"
+" fire faneblade</phrase> </textobject>"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:382
+#: C/index.docbook:373
 msgid ""
 "See <xref linkend=\"mate-terminal-windows\"/> for information about how to "
 "open a new tabbed terminal."
@@ -781,22 +774,22 @@ msgstr ""
 "ny faneopdelt terminal åbnes."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:392
+#: C/index.docbook:383
 msgid "Usage"
 msgstr "Forbrug"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:395
+#: C/index.docbook:386
 msgid "Opening and Closing Terminals"
 msgstr "Åbne og lukke terminaler"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:398
+#: C/index.docbook:389
 msgid "To open a new terminal window:"
 msgstr "For at åbne et nyt terminalvindue:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:400
+#: C/index.docbook:391
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open "
 "Terminal</guimenuitem></menuchoice>."
@@ -805,7 +798,7 @@ msgstr ""
 "terminal</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:402
+#: C/index.docbook:393
 msgid ""
 "The new terminal inherits the application settings and default shell from "
 "the parent terminal."
@@ -814,12 +807,12 @@ msgstr ""
 "overterminalen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:407
+#: C/index.docbook:398
 msgid "To close a terminal window:"
 msgstr "For at lukke et terminalvindue:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:409
+#: C/index.docbook:400
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Window</guimenuitem></menuchoice>."
@@ -828,7 +821,7 @@ msgstr ""
 "vindue</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:411
+#: C/index.docbook:402
 msgid ""
 "This action closes the terminal and any subprocesses that you opened from "
 "the terminal. If you close the last terminal window, the <application>MATE "
@@ -839,12 +832,12 @@ msgstr ""
 "programmet <application>MATE-terminalen</application>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:416
+#: C/index.docbook:407
 msgid "To add a new tabbed terminal to a window:"
 msgstr "For at tilføje en ny faneopdelt terminal til et vindue:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:418
+#: C/index.docbook:409
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guisubmenu>Open "
 "Tab</guisubmenu><guimenuitem>Default</guimenuitem></menuchoice> or just "
@@ -857,12 +850,12 @@ msgstr ""
 "faneblad</guimenuitem></menuchoice> hvis der ikke er en undermenu."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:423
+#: C/index.docbook:414
 msgid "To display a tabbed terminal:"
 msgstr "At vise en faneopdelt terminal:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:425
+#: C/index.docbook:416
 msgid ""
 "Click on the tab of the tabbed terminal that you want to display, or select "
 "a tab title from the <guimenu>Tabs</guimenu> menu."
@@ -871,7 +864,7 @@ msgstr ""
 "eller vælg en fanebladstitel fra menuen <guimenu>Taneblade</guimenu>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:428
+#: C/index.docbook:419
 msgid ""
 "Alternatively, choose <menuchoice><guimenu>Tabs</guimenu><guimenuitem>Next "
 "Tab</guimenuitem></menuchoice> or "
@@ -884,17 +877,17 @@ msgstr ""
 "faneblad</guimenuitem></menuchoice> for at navigere mellem faneblade."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:434
+#: C/index.docbook:425
 msgid "To close a tabbed terminal:"
 msgstr "At lukke en faneopdelt terminal:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:439
+#: C/index.docbook:430
 msgid "Display the tabbed terminal that you want to close."
 msgstr "Vis den faneopdelte terminal du ønsker at lukke."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:444
+#: C/index.docbook:435
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Tab</guimenuitem></menuchoice>."
@@ -903,17 +896,17 @@ msgstr ""
 "faneblad</guimenuitem></menuchoice>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:454
+#: C/index.docbook:445
 msgid "Managing Profiles"
 msgstr "Håndtering af profiler"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:457
+#: C/index.docbook:448
 msgid "To add a new profile:"
 msgstr "For at tilføje en ny profil:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:462
+#: C/index.docbook:453
 msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>New "
 "Profile</guimenuitem></menuchoice> to display the <guilabel>New "
@@ -924,21 +917,23 @@ msgstr ""
 "profil</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:466
+#: C/index.docbook:457
 msgid ""
 "Type the new profile name in the <guilabel>Profile name</guilabel> text box."
 msgstr ""
 "Skriv det nye profilnavn i tekstboksen <guilabel>Profilnavn</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:470
+#: C/index.docbook:461
 msgid ""
 "Use the <guilabel>Base on</guilabel> drop-down list to select the profile on"
 " which you want to base the new profile."
 msgstr ""
+"Brug rullegardinet <guilabel>Baser på</guilabel> til at vælge profilen "
+"hvormed du ønsker at basere den nye profil."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:474
+#: C/index.docbook:465
 msgid ""
 "Click <guibutton>Create</guibutton> to display the <guilabel>Editing "
 "Profile</guilabel> dialog."
@@ -947,7 +942,7 @@ msgstr ""
 "af profil</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:478
+#: C/index.docbook:469
 msgid ""
 "Click <guibutton>Close</guibutton>. <application>MATE Terminal</application>"
 " adds the profile to the "
@@ -960,12 +955,12 @@ msgstr ""
 "profil</guisubmenu></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:486
+#: C/index.docbook:477
 msgid "To change the profile of a tabbed terminal:"
 msgstr "For at ændre profilen for en faneopdelt terminal:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:491
+#: C/index.docbook:482
 msgid ""
 "Click on the tab of the tabbed terminal for which you want to change the "
 "profile."
@@ -974,7 +969,7 @@ msgstr ""
 "profilen for."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:495
+#: C/index.docbook:486
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu><guimenuitem><replaceable>profilename</replaceable></guimenuitem></menuchoice>."
@@ -983,12 +978,12 @@ msgstr ""
 "profil</guisubmenu><guimenuitem><replaceable>profilnavn</replaceable></guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:503
+#: C/index.docbook:494
 msgid "To edit a profile:"
 msgstr "For at redigere en profil:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:505
+#: C/index.docbook:496
 msgid ""
 "You edit profiles in the <guilabel>Editing Profile</guilabel> dialog. You "
 "can access the <guilabel>Editing Profile</guilabel> dialog in the following "
@@ -999,7 +994,7 @@ msgstr ""
 "måder:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:509
+#: C/index.docbook:500
 msgid ""
 "Choose <menuchoice><guimenu>Edit</guimenu><guisubmenu>Current "
 "Profile</guisubmenu></menuchoice>."
@@ -1008,7 +1003,7 @@ msgstr ""
 "profil</guisubmenu></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:513
+#: C/index.docbook:504
 msgid ""
 "Right-click in the terminal window, then choose "
 "<menuchoice><guimenuitem>Profiles</guimenuitem> <guimenuitem>Profile "
@@ -1019,7 +1014,7 @@ msgstr ""
 "<guimenuitem>Profilpræferencer</guimenuitem></menuchoice> fra pop op-menuen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:517
+#: C/index.docbook:508
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Edit</guimenu><guisubmenu>Profiles</guisubmenu></menuchoice>,"
@@ -1034,12 +1029,12 @@ msgstr ""
 "angive for profiler, se <xref linkend=\"mate-terminal-prefs\"/>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:524
+#: C/index.docbook:515
 msgid "To delete a profile:"
 msgstr "For at slette en profil:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:529
+#: C/index.docbook:520
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>."
@@ -1048,7 +1043,7 @@ msgstr ""
 "<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Profiler</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:533
+#: C/index.docbook:524
 msgid ""
 "Select the name of the profile that you want to delete in the "
 "<guilabel>Profiles</guilabel> list, then click "
@@ -1060,12 +1055,12 @@ msgstr ""
 "<guilabel>Slet profil</guilabel> vises."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:537
+#: C/index.docbook:528
 msgid "Click <guibutton>Delete</guibutton> to confirm the deletion."
 msgstr "Klik <guibutton>Slet</guibutton> for at bekræfte sletningen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:541
+#: C/index.docbook:532
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Edit "
 "Profiles</guilabel> dialog."
@@ -1074,17 +1069,17 @@ msgstr ""
 "profiler</guilabel>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:551
+#: C/index.docbook:542
 msgid "Modifying a Terminal Window"
 msgstr "Ændring af et terminalvindue"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:554
+#: C/index.docbook:545
 msgid "To hide the menubar:"
 msgstr "For at skjule menulinjen:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:556
+#: C/index.docbook:547
 msgid ""
 "Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Show "
 "Menubar</guimenuitem></menuchoice>."
@@ -1093,12 +1088,12 @@ msgstr ""
 "menulinje</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:561
+#: C/index.docbook:552
 msgid "To show a hidden menubar:"
 msgstr "For at vise en skjult menulinje:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:563
+#: C/index.docbook:554
 msgid ""
 "Right-click on the terminal window, then choose <guimenuitem>Show "
 "Menubar</guimenuitem> from the popup menu."
@@ -1107,7 +1102,7 @@ msgstr ""
 "menulinje</guimenuitem> fra pop op-menuen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:567
+#: C/index.docbook:558
 msgid ""
 "To display the <application>MATE Terminal</application> window in full-"
 "screen mode:"
@@ -1116,7 +1111,7 @@ msgstr ""
 "fuldskærm."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:569
+#: C/index.docbook:560
 msgid ""
 "Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Full "
 "Screen</guimenuitem></menuchoice>. Full-screen mode displays the text in a "
@@ -1133,12 +1128,12 @@ msgstr ""
 "skærm</guimenuitem></menuchoice> igen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:573
+#: C/index.docbook:564
 msgid "To change the appearance of the terminal window:"
 msgstr "For at ændre udseendet på terminalvinduet:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:575
+#: C/index.docbook:566
 msgid ""
 "See <xref linkend=\"mate-terminal-prefs\"/> for information about the "
 "options that you can choose in the <guilabel>Editing Profile</guilabel> "
@@ -1151,29 +1146,29 @@ msgstr ""
 "kan du ændre baggrundsfarven eller placeringen af rullebjælken."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:582
+#: C/index.docbook:573
 msgid "Working with the Contents of Terminal Windows"
 msgstr "Arbejde med indholdet af terminalvinduer"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:585
+#: C/index.docbook:576
 msgid "To scroll through previous commands and output:"
 msgstr "For at rulle igennem tidligere kommandoer og resultater:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:587
+#: C/index.docbook:578
 msgid "Perform one of the following actions:"
 msgstr "Udfør en af de følgende handlinger:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:592
+#: C/index.docbook:583
 msgid ""
 "Use the scrollbar, which is usually displayed on the right of the terminal "
 "window."
 msgstr "Brug rullebjælken, som normalt vises til højre i terminalvinduet."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:596
+#: C/index.docbook:587
 msgid ""
 "Press the <keycombo><keycap>Shift</keycap><keycap>Page "
 "Up</keycap></keycombo>, <keycombo><keycap>Shift</keycap><keycap>Page "
@@ -1188,7 +1183,7 @@ msgstr ""
 "<keycombo><keycap>Skift</keycap><keycap>End</keycap></keycombo>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:600
+#: C/index.docbook:591
 msgid ""
 "The number of lines that you can scroll back to in the terminal window is "
 "determined by the <guilabel>Scrollback</guilabel> setting in the "
@@ -1209,17 +1204,17 @@ msgstr ""
 "<keycombo><keycap>Control</keycap><keycap>Skift</keycap><keycap>Ned</keycap></keycombo>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:605
+#: C/index.docbook:596
 msgid "To select and copy text:"
 msgstr "For at vælge og kopiere tekst"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:607
+#: C/index.docbook:598
 msgid "You can select text in any of the following ways:"
 msgstr "Du kan vælge tekst i enhver af de følgende måder:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:612
+#: C/index.docbook:603
 msgid ""
 "To select a character at a time, click on the first character that you want "
 "to select and drag the mouse to the last character that you want to select."
@@ -1228,7 +1223,7 @@ msgstr ""
 "og træk musen til det sidste tegn, du ønsker at vælge."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:616
+#: C/index.docbook:607
 msgid ""
 "To select a word at a time, double-click on the first word that you want to "
 "select and drag the mouse to the last word that you want to select. Symbols "
@@ -1239,7 +1234,7 @@ msgstr ""
 "individuelt."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:620
+#: C/index.docbook:611
 msgid ""
 "To select a line at a time, triple-click on the first line that you want to "
 "select and drag the mouse to the last line that you want to select."
@@ -1248,7 +1243,7 @@ msgstr ""
 "ønsker at vælge og træk musen til den sidste linje, du ønsker at vælge."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:624
+#: C/index.docbook:615
 msgid ""
 "These actions select all text between the first and last items. For all text"
 " selections, <application>MATE Terminal</application> copies the selected "
@@ -1256,82 +1251,100 @@ msgid ""
 "copy the selected text, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
 msgstr ""
+"Disse handlinger vælger al tekst mellem det første og sidste element. For "
+"alle tekstmarkeringer kopierer <application>MATE-terminalen</application> "
+"den markerede tekst ind i udklipsholderen når du frigiver musetasten. For "
+"eksplicit at kopiere den valgte tekst, vælg "
+"<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Kopier</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:629
+#: C/index.docbook:620
 msgid "To paste text into a terminal:"
 msgstr "For at indsætte tekst i en terminal:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:631
+#: C/index.docbook:622
 msgid ""
 "If you previously copied text to the clipboard, you can paste the text into "
 "a terminal by performing one of the following actions:"
 msgstr ""
+"Hvis du tidligere kopierede tekst ind i udklipsholderen, så kan du indsætte "
+"teksten i en terminal ved at udføre en af de følgende handlinger:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:635
+#: C/index.docbook:626
 msgid ""
 "To paste text that you copied by selection only, middle-click at the command"
 " prompt. If you do not have a middle mouse button, refer to the X Server "
 "documentation for information about how to emulate the middle mouse button."
 msgstr ""
+"For at indsætte tekst som du kun kopierede med markering, brug et midterklik"
+" på kommandoprompten. Hvis du ikke har den midterste knap på din mus, så se "
+"X-serverdokumentationen for information om hvordan du emulerer denne knap."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:639
+#: C/index.docbook:630
 msgid ""
 "To paste text that you explicitly copied, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice>."
 msgstr ""
+"For at indsætte tekst som du eksplicit har kopieret, vælg "
+"<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Indsæt</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:646
+#: C/index.docbook:637
 msgid "To drag a file name into a terminal window:"
-msgstr ""
+msgstr "For at trække et filnavn ind i et terminalvindue:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:648
+#: C/index.docbook:639
 msgid ""
 "You can drag a file name to a terminal from another application such as a "
 "file manager. The terminal displays the path and the full name of the file."
 msgstr ""
+"Du kan trække et filnavn til en terminal fra et andet program såsom en "
+"filhåndtering. Terminalen viser stien og det fulde navn på filen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:653
+#: C/index.docbook:644
 msgid "To access a link:"
-msgstr ""
+msgstr "For at tilgå en henvisning:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:655
+#: C/index.docbook:646
 msgid ""
 "To access a Uniform Resource Locator (URL) that is displayed in a terminal, "
 "perform the following steps:"
 msgstr ""
+"For at tilgå en Uniform Resource Locator (URL) som vises i en terminal, "
+"udfør de følgende trin:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:659
+#: C/index.docbook:650
 msgid "Move the mouse over the URL until the URL is underlined."
-msgstr ""
+msgstr "Flyt musen over adressen (URL) indtil adressen er understreget."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:663
+#: C/index.docbook:654
 msgid "Right-click on the URL to open a popup menu."
-msgstr ""
+msgstr "Højreklik på adressen for at åben en pop op-menu."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:667
+#: C/index.docbook:658
 msgid ""
 "Choose <guimenuitem>Open Link</guimenuitem> to start a link application and "
 "display the file located at the URL."
 msgstr ""
+"Vælg <guimenuitem>Åbn henvisning</guimenuitem> for at starte et "
+"henvisningsprogram og vis filen placeret på adressen."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:677
+#: C/index.docbook:668
 msgid "Viewing the Keyboard Shortcut Settings"
-msgstr ""
+msgstr "Vis indstillingerne for tastaturgenveje"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:678
+#: C/index.docbook:669
 msgid ""
 "To view the keyboard shortcut settings that are defined for "
 "<application>MATE Terminal</application>, choose "
@@ -1339,16 +1352,23 @@ msgid ""
 "Shortcuts</guimenuitem></menuchoice>. The <guilabel>Keyboard "
 "Shortcuts</guilabel> dialog contains the following items:"
 msgstr ""
+"For at vise indstillinger for tastaturgenveje, der er defineret for "
+"<application>MATE-terminalen</application>, vælg "
+"<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Genvejstaster</guimenuitem></menuchoice>."
+" Dialogen <guilabel>Genvejstater</guilabel> indeholder de følgende "
+"elementer:"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:682
+#: C/index.docbook:673
 msgid ""
 "<guilabel>Disable all menu access keys (such as Alt+f to open File "
 "menu)</guilabel>"
 msgstr ""
+"<guilabel>Deaktiver alle menuadgangstaster (såsom Alt+f til at åbne "
+"filmenuen)</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:684
+#: C/index.docbook:675
 msgid ""
 "Deselect this option to disable the access keys that are defined to enable "
 "you to use the keyboard instead of the mouse to select a menu item. Each "
@@ -1356,45 +1376,58 @@ msgid ""
 " In some cases, you must press the <keycap>Alt</keycap> key in combination "
 "with the access key to perform the action."
 msgstr ""
+"Fravælg denne indstilling for at deaktivere adgangstasterne, som er "
+"defineret for at du kan bruge tastaturet i stedet for musen til at vælge et "
+"menuelement. Hver adgangstast er identificeret af et understreget bogstav på"
+" menuen eller dialogmuligheden. I nogle tilfælde skal du trykke på tasten "
+"<keycap>Alt</keycap> i kombination med adgangstasten for at udføre "
+"handlingen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:689
+#: C/index.docbook:680
 msgid "<guilabel>Disable menu shortcut key (F10 by default)</guilabel>"
-msgstr ""
+msgstr "<guilabel>Deaktiver menus genvejstast (F10 som standard)</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:691
+#: C/index.docbook:682
 msgid ""
 "Deselect this option to disable the shortcut key that is defined to enable "
 "you to access the <application>MATE Terminal</application> menus. The "
 "default shortcut key to access the menus is <keycap>F10</keycap>."
 msgstr ""
+"Fravælg denne indstilling for at deaktivere genvejstasten, der er defineret "
+"for at give dig adgang til <application>MATE-terminalens</application> "
+"menuer. Standardgenvejen for adgang til menuerne er <keycap>F10</keycap>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:696
+#: C/index.docbook:687
 msgid "<guilabel>Shortcut Keys</guilabel>"
-msgstr ""
+msgstr "<guilabel>Genvejstaster</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:698
+#: C/index.docbook:689
 msgid ""
 "The <guilabel>Shortcut Keys</guilabel> section of the dialog lists the "
 "shortcut keys that are defined for each menu item."
 msgstr ""
+"Afsnittet <guilabel>Genvejstaster</guilabel> i dialogen viser "
+"genvejstasterne, der er defineret for hvert menuelement."
 
 #. (itstool) path: note/para
-#: C/index.docbook:700
+#: C/index.docbook:691
 msgid ""
 "Not all keys can be used as shortcut keys, such as <keycap>Tab</keycap>."
 msgstr ""
+"Ikke alle taster kan bruges som genvejstast, såsom <keycap>Indryk</keycap> "
+"(Tab)."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:707
+#: C/index.docbook:698
 msgid "Text Size"
 msgstr "Tekststørrelse"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:708
+#: C/index.docbook:699
 msgid ""
 "You can use the following methods to resize the text in the MATE Terminal "
 "window:"
@@ -1403,7 +1436,7 @@ msgstr ""
 "terminalvinduet:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:710
+#: C/index.docbook:701
 msgid ""
 "To increase the size of the text, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
@@ -1414,7 +1447,7 @@ msgstr ""
 "ind</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:712
+#: C/index.docbook:703
 msgid ""
 "To decrease the size of the text, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
@@ -1425,7 +1458,7 @@ msgstr ""
 "ud</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:714
+#: C/index.docbook:705
 msgid ""
 "To view the text at actual size, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Normal "
@@ -1436,12 +1469,12 @@ msgstr ""
 "størrelse</guimenuitem></menuchoice>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:721
+#: C/index.docbook:712
 msgid "To Change the Terminal Title"
 msgstr "For at ændre terminaltitlen"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:722
+#: C/index.docbook:713
 msgid ""
 "To change the title of the currently displayed terminal, perform the "
 "following steps:"
@@ -1450,7 +1483,7 @@ msgstr ""
 "trin:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:726
+#: C/index.docbook:717
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Set "
 "Title</guimenuitem></menuchoice>."
@@ -1459,46 +1492,55 @@ msgstr ""
 "titel</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:729
+#: C/index.docbook:720
 msgid ""
 "Type the new title in the <guilabel>Title</guilabel> text box. "
 "<application>MATE Terminal</application> applies the change immediately."
 msgstr ""
+"Tast den nye titel i tekstboksen <guilabel>Titel</guilabel>. <application"
+">MATE-terminalen</application> anvender ændringerne umiddelbart."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:732
+#: C/index.docbook:723
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Set "
 "Title</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Luk</guibutton> for at lukke dialogen <guilabel>Angiv "
+"titel</guilabel>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:738
+#: C/index.docbook:729
 msgid "To Change the Character Encoding"
-msgstr ""
+msgstr "For at ændre tegnkodningen"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:739
+#: C/index.docbook:730
 msgid ""
 "To change the character encoding, choose "
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
 "Encoding</guisubmenu></menuchoice>, then select the appropriate encoding."
 msgstr ""
+"For at ændre tegnkodningen, vælg "
+"<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Angiv "
+"tegnkodning</guisubmenu></menuchoice>, vælg så den passende kodning."
 
 #. (itstool) path: sect3/title
-#: C/index.docbook:744
+#: C/index.docbook:735
 msgid "To Change the List of Character Encodings"
-msgstr ""
+msgstr "For at ændre listen over tegnkodninger"
 
 #. (itstool) path: sect3/para
-#: C/index.docbook:745
+#: C/index.docbook:736
 msgid ""
 "To change the list of character encodings displayed in the <guisubmenu>Set "
 "Character Encoding</guisubmenu> menu, perform the following steps:"
 msgstr ""
+"For at ændre listen over tegnkodninger vist i menuen <guisubmenu>Angiv "
+"tegnkodning</guisubmenu>, udfør de følgende trin:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:750
+#: C/index.docbook:741
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
 "Encoding</guisubmenu><guimenuitem>Add or Remove</guimenuitem></menuchoice>."
@@ -1508,46 +1550,54 @@ msgstr ""
 "fjern</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:754
+#: C/index.docbook:745
 msgid ""
 "To add an encoding to the <guisubmenu>Set Character Encoding</guisubmenu> "
 "menu, select the encoding in the <guilabel>Available encodings</guilabel> "
 "list box, then click the right arrow button."
 msgstr ""
+"For at tilføje en kodning til menuen <guisubmenu>Angiv "
+"tegnkodning</guisubmenu>, vælg kodningen i boksen med <guilabel>Tilgængelige"
+" kodninger</guilabel>, klik så på den højre piletast."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:758
+#: C/index.docbook:749
 msgid ""
 "To remove an encoding from the <guisubmenu>Set Character "
 "Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings "
 "shown in menu</guilabel> list box, then click the left arrow button."
 msgstr ""
+"For at fjerne en kodning til menuen <guisubmenu>Angiv "
+"tegnkodning</guisubmenu>, vælg kodningen i boksen med <guilabel>Kodninger "
+"vist i menuen</guilabel>, klik så på den venstre piletast."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:762
+#: C/index.docbook:753
 msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove "
 "Terminal Encodings</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Luk</guibutton> for at lukke dialogen <guilabel>Tilføj eller"
+" fjern terminalkodninger</guilabel>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:770
+#: C/index.docbook:761
 msgid "To Recover Your Terminal"
-msgstr ""
+msgstr "For at gendanne din terminal"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:771
+#: C/index.docbook:762
 msgid "This section provides some advice if you have problems with terminals."
 msgstr ""
 "Dette afsnit tilbyder nogle råd, hvis du har problemer med terminaler."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:776
+#: C/index.docbook:767
 msgid "To reset the state of the terminal:"
 msgstr "For at nulstille tilstanden for terminalen:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:778
+#: C/index.docbook:769
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset</guimenuitem></menuchoice>."
@@ -1556,12 +1606,12 @@ msgstr ""
 "<menuchoice><guimenu>Terminal</guimenu><guimenuitem>Nulstil</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:786
+#: C/index.docbook:777
 msgid "To reset the terminal and clear the screen:"
 msgstr "For at nulstille terminalen og rydde skærmen:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:788
+#: C/index.docbook:779
 msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset and "
 "Clear</guimenuitem></menuchoice>."
@@ -1570,12 +1620,12 @@ msgstr ""
 "ryd</guimenuitem></menuchoice>."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:800
+#: C/index.docbook:791
 msgid "Preferences"
 msgstr "Præferencer"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:801
+#: C/index.docbook:792
 msgid ""
 "To configure <application>MATE Terminal</application>, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Current "
@@ -1585,9 +1635,16 @@ msgid ""
 " select the profile you want to edit, then click "
 "<guibutton>Edit</guibutton>."
 msgstr ""
+"For at konfigurere  <application>MATE-terminalen</application>, vælg "
+"<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Nuværende "
+"profil</guimenuitem></menuchoice>. For at konfigurere en anden profil, du er"
+" ved at sætte op, vælg "
+"<menuchoice><guimenu>Rediger</guimenu><guimenuitem>Profiler</guimenuitem></menuchoice>,"
+" vælg profilen du ønsker at redigere, klik så "
+"<guibutton>Rediger</guibutton>."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:803
+#: C/index.docbook:794
 msgid ""
 "The <guilabel>Editing Profile</guilabel> dialog contains the following "
 "tabbed sections that you can use to configure <application>MATE "
@@ -1598,166 +1655,191 @@ msgstr ""
 "terminalen</application>:"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:822
+#: C/index.docbook:813
 msgid "General"
 msgstr "Generelt"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:825
+#: C/index.docbook:816
 msgid "<guilabel>Profile name</guilabel>"
 msgstr "<guilabel>Profilnavn</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:828
+#: C/index.docbook:819
 msgid "Use this text box to specify the name of the current profile."
 msgstr "Brug denne tekstboks til at angive navnet på den aktuelle profil."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:834
+#: C/index.docbook:825
 msgid "<guilabel>Use the system fixed width font</guilabel>"
 msgstr "<guilabel>Brug systemets skrifttype med fast bredde</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:837
+#: C/index.docbook:828
 msgid ""
 "Select this option to use the standard fixed width font that is specified in"
 " the <guilabel>Font</guilabel> tab of the "
 "<application>Appearance</application> preference tool."
 msgstr ""
+"Vælg denne indstilling for at bruge skrifttypen med fast bredde angivet i "
+"fanebladet <guilabel>Skrifttype</guilabel> i præferenceværktøjet "
+"<application>Udseende</application>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:843
+#: C/index.docbook:834
 msgid "<guilabel>Font</guilabel>"
 msgstr "<guilabel>Skrifttype</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:846
+#: C/index.docbook:837
 msgid ""
 "Click on this button to select a font type and font size for the terminal. "
 "This button is only enabled if the <guilabel>Use the system terminal "
 "font</guilabel> option is unselected."
 msgstr ""
+"Klik på denne knap for at vælge en skrifttype og skriftstørrelse for "
+"terminalen. Denne knap er kun aktiveret hvis indstillingen <guilabel>Brug "
+"systemets terminalskrifttype</guilabel> er fravalgt."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:851
+#: C/index.docbook:842
 msgid "<guilabel>Allow bold text</guilabel>"
 msgstr "<guilabel>Tillad fed tekst</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:854
+#: C/index.docbook:845
 msgid "Select this option to enable the terminal to display bold text."
 msgstr ""
 "Vælg denne indstilling for at aktivere at terminalen kan vise fed tekst."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:860
+#: C/index.docbook:851
 msgid "<guilabel>Show menubar by default in new terminals</guilabel>"
-msgstr ""
+msgstr "<guilabel>Vis menulinjen som standard i nye terminaler</guilabel>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:855
+msgid "Select this option to show the menubar on new terminal windows."
+msgstr "Vælg denne indstilling for at vise menulinjen på nye terminalvinduer."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:861
+msgid "<guilabel>Terminal bell</guilabel>"
+msgstr "<guilabel>Terminalklokke</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:864
-msgid "Select this option to show the menubar on new terminal windows."
-msgstr ""
+msgid "Select this option to enable the terminal bell."
+msgstr "Vælg denne indstilling for at aktivere terminalklokken."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:870
-msgid "<guilabel>Terminal bell</guilabel>"
-msgstr ""
+msgid "<guilabel>Select-by-word characters</guilabel>"
+msgstr "<guilabel>Vælg efter ord-tegn</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:873
-msgid "Select this option to enable the terminal bell."
-msgstr ""
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:879
-msgid "<guilabel>Select-by-word characters</guilabel>"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:882
 msgid ""
 "Use this text box to specify characters or groups of characters that "
 "<application>MATE Terminal</application> considers to be words when you "
 "select text by word. See <xref linkend=\"mate-terminal-contents\"/> for more"
 " information about how to select text by word."
 msgstr ""
+"Brug denne tekstboks til at angive tegn eller tegngrupper, som <application"
+">MATE-terminalen</application> anser for at være ord, når du vælger tekst "
+"efter ord. Se <xref linkend=\"mate-terminal-contents\"/> for yderligere "
+"information om hvordan tekst efter ord vælges."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:891
+#: C/index.docbook:882
 msgid "Title and Command"
 msgstr "Titel og kommando"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:894
+#: C/index.docbook:885
 msgid "<guilabel>Initial title</guilabel>"
-msgstr ""
+msgstr "<guilabel>Opstartstitel</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:897
+#: C/index.docbook:888
 msgid ""
 "Use this text box to specify the initial title of terminals that use the "
 "profile. New terminals that are started from the current terminal have the "
 "new initial title."
 msgstr ""
+"Brug denne tekstboks til at angive opstartstitlen for terminaler, der bruger"
+" profilen. Nye terminale  der startes fra den nuværende terminal har den nye"
+" opstartstitel."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:903
+#: C/index.docbook:894
 msgid "<guilabel>When terminal commands set their own titles</guilabel>"
-msgstr ""
+msgstr "<guilabel>Når terminalkommandoer angiver deres egne titler</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:906
+#: C/index.docbook:897
 msgid ""
 "Use this drop-down list to specify how to handle dynamically-set titles, "
 "that is, terminal titles set by commands that run in the terminal."
 msgstr ""
+"Brug dette rullegardin til at angive hvordan dynamisk angivne titler skal "
+"håndteres, det vil sige, terminaltitler angivet af kommander, der afvikles i"
+" terminalen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:912
+#: C/index.docbook:903
 msgid "<guilabel>Run command as a login shell</guilabel>"
 msgstr "<guilabel>Afvikl kommando som en logindskal</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:915
+#: C/index.docbook:906
 msgid ""
 "Select this option to force the command that currently runs inside the "
 "terminal to run as a login shell. If the command is not a shell, the setting"
 " has no effect."
 msgstr ""
+"Vælg denne indstilling for at tvinge kommandoen, der lige nu afvikles inden "
+"i terminalen, til at blive afviklet som en logindskal. Hvis kommnadoen ikke "
+"er en skal, har indstillingen ingen effekt."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:921
+#: C/index.docbook:912
 msgid "<guilabel>Update login records when command is launched</guilabel>"
-msgstr ""
+msgstr "<guilabel>Opdater log ind-opførsler når kommandoen køres</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:924
+#: C/index.docbook:915
 msgid ""
 "Select this option to insert a new entry in the login records when a new "
 "shell is opened."
 msgstr ""
+"Vælg denne indstilling for at indsætte et nyt element i log ind-opførslerne "
+",når en ny skal åbnes."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:930
+#: C/index.docbook:921
 msgid "<guilabel>Run a custom command instead of my shell</guilabel>"
 msgstr ""
+"<guilabel>Kør en brugerdefineret kommando i stedet for min skal</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:934
+#: C/index.docbook:925
 msgid ""
 "Select this option to run a specified command, other than the normal shell, "
 "in the terminal. Specify the custom command in the <guilabel>Custom "
 "command</guilabel> text box."
 msgstr ""
+"Vælg denne indstilling for at afvikle en angivet kommando, udover den "
+"normale skal, i terminalen. Angiv brugerkommandoen i tekstboksen "
+"<guilabel>Brugerkommando</guilabel>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:940
+#: C/index.docbook:931
 msgid "<guilabel>When command exits</guilabel>"
 msgstr "<guilabel>Når kommandoer afsluttes</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:943
+#: C/index.docbook:934
 msgid ""
 "Use this drop-down list to specify what action to perform when the command "
 "exits."
@@ -1766,17 +1848,17 @@ msgstr ""
 " kommandoen afsluttes."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:951
+#: C/index.docbook:942
 msgid "Colours"
 msgstr "Farver"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:954
+#: C/index.docbook:945
 msgid "<guilabel>Foreground and Background</guilabel>"
 msgstr "<guilabel>Forgrund og baggrund</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:958
+#: C/index.docbook:949
 msgid ""
 "Select the <guilabel>Use colours from system theme</guilabel> option to use "
 "the colors that are specified in the MATE Desktop theme that is selected in "
@@ -1784,55 +1866,66 @@ msgid ""
 ":mate-user-guide/prefs-theme\"><application>Appearance</application> "
 "preference tool</ulink>."
 msgstr ""
+"Brug indstillingen <guilabel>Brug farver fra systemtema</guilabel> til at "
+"bruge farverne, der er angivet i MATE-skrivebordstemaet, der er valgt i "
+"fanebladet <guilabel>Tema</guilabel> for <ulink type=\"help\" url=\"help"
+":mate-user-guide/prefs-"
+"theme\"><application>Udseende</application>-præferenceværktøjet</ulink>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:961
+#: C/index.docbook:952
 msgid ""
 "Use the <guilabel>Built-in schemes</guilabel> drop-down list to specify the "
 "foreground and background colors for the terminal. <application>MATE "
 "Terminal</application> supports the following foreground and background "
 "color combinations:"
 msgstr ""
+"Brug rullegardinlisten <guilabel>Indbyggede skemaer</guilabel> til at "
+"specificere forgrunds- og baggrundsfarver for terminalen. <application>MATE "
+"Terminal</application> understøtter de følgende forgrunds- og "
+"baggrundsfarvekombinationer:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:966
+#: C/index.docbook:957
 msgid "<guilabel>Black on light yellow</guilabel>"
 msgstr "<guilabel>Sort på lys gul</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:971
+#: C/index.docbook:962
 msgid "<guilabel>Black on white</guilabel>"
 msgstr "<guilabel>Sort på hvid</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:976
+#: C/index.docbook:967
 msgid "<guilabel>Gray on black</guilabel>"
 msgstr "<guilabel>Grå på sort</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:981
+#: C/index.docbook:972
 msgid "<guilabel>Green on black</guilabel>"
 msgstr "<guilabel>Grøn på sort</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:986
+#: C/index.docbook:977
 msgid "<guilabel>White on black</guilabel>"
 msgstr "<guilabel>Hvid på sort</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:991
+#: C/index.docbook:982
 msgid "<guilabel>Custom</guilabel>"
 msgstr "<guilabel>Tilpasset</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:994
+#: C/index.docbook:985
 msgid ""
 "This option enables you to select colors that are not in the selected color "
 "scheme."
 msgstr ""
+"Denne indstilling gør det muligt at vælge farver, der ikke er i det valgte "
+"farveskema."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:999
+#: C/index.docbook:990
 msgid ""
 "The actual display of the foreground and background colors can vary "
 "depending on the color scheme that you choose. For example, if you choose "
@@ -1842,9 +1935,15 @@ msgid ""
 "schemes</guilabel> drop-down list is only enabled if the <guilabel>Use "
 "colours from system theme</guilabel> option is unselected."
 msgstr ""
+"Den faktiske visning af forgrunds- og baggrundsfarver kan variere afhængig "
+"af valgt farveskema. For eksempel, hvis du vælger farveskemaet "
+"<guilabel>Hvid på sort</guilabel> og <guilabel>Linuxkonsollen</guilabel> "
+"viser programmet forgrunds- og baggrundsfarverne som lysegrå på sort. "
+"Rullegardinet <guilabel>Indbyggede skemaer</guilabel> er kun aktiveret hvis "
+"indstillingen <guilabel>Brug farver fra systemtema</guilabel> er fravalgt."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1002
+#: C/index.docbook:993
 msgid ""
 "Click on the <guibutton>Text colour</guibutton> button to display the "
 "<guilabel>Choose terminal text colour</guilabel> dialog. Use the color wheel"
@@ -1853,9 +1952,15 @@ msgid ""
 "colour</guibutton> button is only enabled if the <guilabel>Use colours from "
 "system theme</guilabel> option is unselected."
 msgstr ""
+"Klik på <guibutton>Tekstfarve</guibutton> for at vise dialogen "
+"<guilabel>Vælg tekstfarve for terminalen</guilabel>. Brug farvehjulet eller "
+"rulleboksene til at tilpasse farven, du ønsker at bruge som tekstfarve, klik"
+" så <guibutton>O.k.</guibutton>. Knappen <guibutton>Tekstfarve</guibutton> "
+"er kun aktiveret hvis indstillingen <guilabel>Brug farver fra "
+"systemtema</guilabel> er fravalgt."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1005
+#: C/index.docbook:996
 msgid ""
 "Click on the <guibutton>Background colour</guibutton> button to display the "
 "<guilabel>Choose terminal background colour</guilabel> dialog. Use the color"
@@ -1864,30 +1969,42 @@ msgid ""
 "<guibutton>Background colour</guibutton> button is only enabled if the "
 "<guilabel>Use colours from system theme</guilabel> option is unselected."
 msgstr ""
+"Klik på knappen <guibutton>Baggrundsfarve</guibutton> for at vise dialogen "
+"<guilabel>Vælg terminalens baggrundsfarve</guilabel>. Brug farvehjulet eller"
+" rulleboksene til at tilpasse farven du ønsker at bruge som baggrundsfarve, "
+"klik så <guibutton>O.k.</guibutton>. Knappen "
+"<guibutton>Baggrundsfarve</guibutton> er kun aktiveret hvis indstillingen "
+"<guilabel>Brug farver fra systemtema</guilabel> er fravalgt."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1011
+#: C/index.docbook:1002
 msgid "<guilabel>Palette</guilabel>"
 msgstr "<guilabel>Palet</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1014
+#: C/index.docbook:1005
 msgid ""
 "The terminal emulation can only use 16 colors at a time to draw text. The "
 "color palette specifies these 16 colors. Applications that run in the "
 "terminal use an index number to specify a color from this palette."
 msgstr ""
+"Terminalemuleringen kan kun bruge 16 farver på engang til at tegne tekst. "
+"Farvepaletten angiver disse 16 farver. Programmer, der afvikles i "
+"terminalen, bruger et indeksnummer til at angive en farve fra denne palet."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1016
+#: C/index.docbook:1007
 msgid ""
 "Use the <guilabel>Built-in schemes</guilabel> drop-down list to choose a "
 "preset color schemes. The color palette below and the contents of the "
 "terminal window both update to show the scheme."
 msgstr ""
+"Brug rullegardinlisten <guilabel>Indbyggede skemaer</guilabel> til at vælge "
+"et forudfyldt farveskema. Farvepaletten nedenfor og indholdet af "
+"terminalvinduet opdateres for at vise skemaet."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1017
+#: C/index.docbook:1008
 msgid ""
 "Use the <guilabel>Colour palette</guilabel> to customize the 16 default "
 "colors in the custom color palette. To customize a color, click on the color"
@@ -1895,52 +2012,63 @@ msgid ""
 "wheel or the spin boxes to customize the color, then click "
 "<guibutton>OK</guibutton>."
 msgstr ""
+"Brug <guilabel>Farvepaletten</guilabel> til at tilpasse de 16 standardfarver"
+" i brugerfarvepaletten. For at tilpasse en farve, klik på farven for at vise"
+" dialogen <guilabel>Palet-element</guilabel>. Brug farvehjulet eller "
+"rulleboksene til at tilpasse farven, klik så <guibutton>O.k.</guibutton>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1024
+#: C/index.docbook:1015
 msgid "Effects"
 msgstr "Effekter"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1027
+#: C/index.docbook:1018
 msgid "<guilabel>Background</guilabel>"
 msgstr "<guilabel>Baggrund</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1030
+#: C/index.docbook:1021
 msgid ""
 "Select a background for the terminal window. The options are as follows:"
 msgstr ""
+"Vælg en baggrund for terminalvinduet. Indstillingerne er som følgende:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1035
+#: C/index.docbook:1026
 msgid "<guilabel>Solid color</guilabel>"
 msgstr "<guilabel>Fast farve</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1038
+#: C/index.docbook:1029
 msgid ""
 "Select this option to use the background color that is specified in the "
 "<guilabel>Colors</guilabel> tabbed section as the background color for the "
 "terminal."
 msgstr ""
+"Vælg denne indstilling for at bruge baggrundsfarven, der er angivet i "
+"fanebladet <guilabel>Farver</guilabel> som baggrundsfarven for terminalen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1043
+#: C/index.docbook:1034
 msgid "<guilabel>Background image</guilabel>"
 msgstr "<guilabel>Baggrundsbillede</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1046
+#: C/index.docbook:1037
 msgid ""
 "Select this option to use an image file as the background for the terminal. "
 "Use the <guilabel>Image file</guilabel> drop-down combination box to specify"
 " the location and name of the image file. Alternatively, click "
 "<guibutton>Browse</guibutton> to search for and select the image file."
 msgstr ""
+"Vælg denne indstilling for at bruge en billedfil som baggrund for "
+"terminalen. Brug rullegardinboksen <guilabel>Billedfil</guilabel> til at "
+"angive placeringen og navnet på billedfilen. Alternativt klikkes på "
+"<guibutton>Gennemse</guibutton> for at søge efter og vælge billedfilen."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1049
+#: C/index.docbook:1040
 msgid ""
 "Select the <guilabel>Background image scrolls</guilabel> option to enable "
 "the background image to scroll with the text when you scroll through the "
@@ -1948,54 +2076,67 @@ msgid ""
 "fixed on the terminal background and only the text scrolls. This option is "
 "only enabled if you select the <guilabel>Background image</guilabel> option."
 msgstr ""
+"Vælg indstillingen <guilabel>Baggrundsbillede ruller</guilabel> for at "
+"aktivere at baggrundsbilledet ruller med tekst, når du ruller igennem "
+"terminalen. Hvis du ikke vælger denne indstilling, er baggrundsbilledet fast"
+" på terminalbaggrunden og kun tekst ruller. Denne indstilling er kun "
+"aktiveret hvis du vælger indstillingen "
+"<guilabel>Baggrundsbillede</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1052
+#: C/index.docbook:1043
 msgid "<guilabel>Transparent background</guilabel>"
-msgstr ""
+msgstr "<guilabel>Gennemsigtig baggrund</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1055
+#: C/index.docbook:1046
 msgid "Select this option to use a transparent background for the terminal."
 msgstr ""
+"Vælg denne indstilling for at bruge en gennemsigtig baggrund for terminalen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1063
+#: C/index.docbook:1054
 msgid "<guilabel>Shade transparent or image background</guilabel>"
-msgstr ""
+msgstr "<guilabel>Skyg gennemsigtig baggrund eller billedbaggrund</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1067
+#: C/index.docbook:1058
 msgid ""
 "Use this slider to shade or dim the background of the terminal. This option "
 "is only enabled if you select the <guilabel>Background image</guilabel> or "
 "<guilabel>Transparent background</guilabel> options."
 msgstr ""
+"Brug denne skyder til at dæmpe eller skygge baggrunden i terminalen. Denne "
+"indstilling er kun aktiveret, hvis du vælger indstillingerne "
+"<guilabel>Baggrundsbillede</guilabel> eller <guilabel>Gennemsigtig "
+"baggrund</guilabel>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1076
+#: C/index.docbook:1067
 msgid "Scrolling"
 msgstr "Rulning"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1079
+#: C/index.docbook:1070
 msgid "<guilabel>Scrollbar is</guilabel>"
-msgstr ""
+msgstr "<guilabel>Rullebjælke er</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1082
+#: C/index.docbook:1073
 msgid ""
 "Use this drop-down list to specify the position of the scrollbar on the "
 "terminal window."
 msgstr ""
+"Brug dette rullegardin til at angive positionen på rullebjælken på "
+"terminalvinduet."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1088
+#: C/index.docbook:1079
 msgid "<guilabel>Scrollback ... lines</guilabel>"
-msgstr ""
+msgstr "<guilabel>Rul tilbage ... linjer</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1091
+#: C/index.docbook:1082
 msgid ""
 "Use this spin box to specify the number of lines that you can scroll back "
 "using the scrollbar. For example, if you specify 100 you can scroll back the"
@@ -2006,67 +2147,80 @@ msgstr ""
 "tilbage igennem de sidste 100 linjer vist i terminalen."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1097
+#: C/index.docbook:1088
 msgid "<guilabel>Scroll on output</guilabel>"
-msgstr ""
+msgstr "<guilabel>Rul ved flere data</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1100
+#: C/index.docbook:1091
 msgid ""
 "Select this option to enable you to scroll the output on the terminal while "
 "the terminal continues to display more output from a command."
 msgstr ""
+"Vælg denne indstilling for at aktivere at du kan rulle igennem informationen"
+" på terminalen mens terminalen fortsætter med at vise mere information fra "
+"en kommando."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1106
+#: C/index.docbook:1097
 msgid "<guilabel>Scroll on keystroke</guilabel>"
-msgstr ""
+msgstr "<guilabel>Rul ved tastetryk</guilabel>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:1109
+#: C/index.docbook:1100
 msgid ""
 "Select this option to enable you to press any key on the keyboard to scroll "
 "down the terminal window to the command prompt. This action only applies if "
 "you scrolled up the terminal window and you want to return to the command "
 "prompt."
 msgstr ""
+"Vælg denne indstilling for at aktivere at et ryk på en tast på tastaturet "
+"medføre at man rulle ned igennem terminalvinduet til kommandoprompten. Denne"
+" handling er kun gældende hvis du rullede op igennem vinduet og du ønsker at"
+" returnere til kommandoprompten."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:1118
+#: C/index.docbook:1109
 msgid "Compatibility"
 msgstr "Kompatibilitet"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:1121
+#: C/index.docbook:1112
 msgid "<guilabel>Backspace key generates</guilabel>"
+msgstr "<guilabel>Slet tilbage-tast opretter</guilabel>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:1115
+msgid ""
+"Use the drop-down list to select the function that you want the "
+"<keycap>Backspace</keycap> key to perform."
 msgstr ""
+"Brug rullegardinet til at vælge funktionen du ønsker, at tasten <keycap>Slet"
+" tilbage</keycap>skal udføre."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:1121
+msgid "<guilabel>Delete key generates</guilabel>"
+msgstr "<guilabel>Slet-tast opretter</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1124
 msgid ""
 "Use the drop-down list to select the function that you want the "
-"<keycap>Backspace</keycap> key to perform."
+"<keycap>Delete</keycap> key to perform."
 msgstr ""
+"Brug rullegardinet til at vælge funktioner du ønsker, at tasten "
+"<keycap>Slet</keycap> skal udføre."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1130
-msgid "<guilabel>Delete key generates</guilabel>"
+msgid "<guibutton>Reset compatibility options to defaults</guibutton>"
 msgstr ""
+"<guibutton>Nulstil kompatibilitetsindstillingerne til deres "
+"standard</guibutton>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1133
-msgid ""
-"Use the drop-down list to select the function that you want the "
-"<keycap>Delete</keycap> key to perform."
-msgstr ""
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:1139
-msgid "<guibutton>Reset compatibility options to defaults</guibutton>"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:1142
 msgid ""
 "Click on this button to reset the options on the "
 "<guilabel>Compatibility</guilabel> tabbed section to the default settings."
