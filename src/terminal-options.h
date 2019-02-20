@@ -32,7 +32,6 @@ typedef struct
 	char   **env;
 	char    *startup_id;
 	char    *display_name;
-	int      screen_number;
 	GList   *initial_windows;
 	gboolean default_window_menubar_forced;
 	gboolean default_window_menubar_state;

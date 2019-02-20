@@ -221,13 +221,10 @@ gsettings_remove_all_from_strv (GSettings   *settings,
 /* Helper functions */
 
 static GdkScreen*
-terminal_app_get_screen_by_display_name (const char *display_name,
-        int screen_number)
+terminal_app_get_screen_by_display_name (const char *display_name)
 {
 	GdkDisplay *display = NULL;
 	GdkScreen *screen = NULL;
-
-	/* --screen=screen_number overrides --display */
 
 	if (display_name == NULL)
 		display = gdk_display_get_default ();
@@ -237,18 +234,6 @@ terminal_app_get_screen_by_display_name (const char *display_name,
 		const char *period;
 
 		period = strrchr (display_name, '.');
-		if (period)
-		{
-			gulong n;
-			char *end;
-
-			errno = 0;
-			end = NULL;
-			n = g_ascii_strtoull (period + 1, &end, 0);
-			if (errno == 0 && (period + 1) != end)
-				screen_number = n;
-		}
-
 		displays = gdk_display_manager_list_displays (gdk_display_manager_get ());
 		for (l = displays; l != NULL; l = l->next)
 		{
@@ -1730,8 +1715,7 @@ terminal_app_handle_options (TerminalApp *app,
 	GList *lw;
 	GdkScreen *gdk_screen;
 
-	gdk_screen = terminal_app_get_screen_by_display_name (options->display_name,
-	             options->screen_number);
+	gdk_screen = terminal_app_get_screen_by_display_name (options->display_name);
 
 	if (options->save_config)
 	{
