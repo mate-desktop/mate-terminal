@@ -723,7 +723,6 @@ terminal_options_parse (const char *working_directory,
 	options->default_title = NULL;
 	options->zoom = 1.0;
 
-	options->screen_number = -1;
 	options->default_working_dir = g_strdup (working_directory);
 
 	/* The old -x/--execute option is broken, so we need to pre-scan for it. */
