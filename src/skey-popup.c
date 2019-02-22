@@ -180,7 +180,7 @@ terminal_skey_do_popup (GtkWindow *window,
 		}
 	}
 
-	if (!terminal_util_load_builder_file ("skey-challenge.ui",
+	if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/skey-challenge.ui",
 	                                      "skey-dialog", &dialog,
 	                                      "skey-entry", &entry,
 	                                      "text-label", &label,

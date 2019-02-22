@@ -9,6 +9,8 @@ bin_PROGRAMS = mate-terminal
 BUILT_SOURCES = \
 	terminal-marshal.c \
 	terminal-marshal.h \
+	terminal-resources.c \
+	terminal-resources.h \
 	terminal-type-builtins.c \
 	terminal-type-builtins.h \
 	$(NULL)
@@ -64,6 +66,7 @@ nodist_mate_terminal_SOURCES= $(BUILT_SOURCES)
 
 mate_terminal_CPPFLAGS = \
 	-DTERMINAL_COMPILATION \
+	-DTERMINAL_RESOURCES_PATH_PREFIX="\"/org/mate/terminal\"" \
 	-DTERM_DATADIR="\"$(datadir)\"" \
 	-DTERM_LOCALEDIR="\"$(datadir)/locale\"" \
 	-DTERM_PKGDATADIR="\"$(pkgdatadir)\"" \
@@ -136,31 +139,13 @@ terminal-marshal.c: $(srcdir)/terminal-marshal.list
 		&& mv terminal-marshal.c.tmp terminal-marshal.c ) \
 	|| ( rm -f terminal-marshal.c.tmp && exit 1 )
 
+terminal-resources.h terminal-resources.c: terminal.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/terminal.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name terminal $<
+
 gsettingsschema_in_files = org.mate.terminal.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 .PRECIOUS: $(gsettings_SCHEMAS)
 @INTLTOOL_XML_NOMERGE_RULE@
-
-aboutdir = $(pkgdatadir)
-about_DATA = \
-	terminal.about \
-	$(NULL)
-
-uimanagerdir = $(pkgdatadir)
-uimanager_DATA = \
-	terminal.xml \
-	$(NULL)
-
-builderdir = $(pkgdatadir)
-builder_DATA = \
-	encodings-dialog.ui \
-	find-dialog.ui \
-	keybinding-editor.ui \
-	profile-manager.ui \
-	profile-new-dialog.ui \
-	profile-preferences.ui \
-	skey-challenge.ui \
-	$(NULL)
 
 CLEANFILES = \
 	stamp-terminal-type-builtins.h \
@@ -170,6 +155,16 @@ CLEANFILES = \
 	$(BUILT_SOURCES)
 
 EXTRA_DIST = \
+	encodings-dialog.ui \
+	find-dialog.ui \
+	keybinding-editor.ui \
+	profile-manager.ui \
+	profile-new-dialog.ui \
+	profile-preferences.ui \
+	skey-challenge.ui \
+	terminal.about \
+	terminal.xml \
+	terminal.gresource.xml \
 	terminal-marshal.list \
 	terminal-type-builtins.c.template \
 	terminal-type-builtins.h.template \

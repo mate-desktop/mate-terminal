@@ -474,7 +474,7 @@ terminal_encoding_dialog_show (GtkWindow *transient_parent)
 
 	data = g_new (EncodingDialogData, 1);
 
-	if (!terminal_util_load_builder_file ("encodings-dialog.ui",
+	if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/encodings-dialog.ui",
 	                                      "encodings-dialog", &data->dialog,
 	                                      "add-button", &data->add_button,
 	                                      "remove-button", &data->remove_button,

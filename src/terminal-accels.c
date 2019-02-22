@@ -992,7 +992,7 @@ terminal_edit_keys_dialog_show (GtkWindow *transient_parent)
 	if (edit_keys_dialog != NULL)
 		goto done;
 
-	if (!terminal_util_load_builder_file ("keybinding-editor.ui",
+	if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/keybinding-editor.ui",
 	                                      "keybindings-dialog", &dialog,
 	                                      "disable-mnemonics-checkbutton", &disable_mnemonics_button,
 	                                      "disable-menu-accel-checkbutton", &disable_menu_accel_button,

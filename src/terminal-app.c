@@ -1229,7 +1229,7 @@ terminal_app_new_profile (TerminalApp     *app,
 	{
 		GtkWidget *create_button, *grid, *name_label, *name_entry, *base_label, *combo;
 
-		if (!terminal_util_load_builder_file ("profile-new-dialog.ui",
+		if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/profile-new-dialog.ui",
 		                                      "new-profile-dialog", &app->new_profile_dialog,
 		                                      "new-profile-create-button", &create_button,
 		                                      "new-profile-grid", &grid,
@@ -1332,7 +1332,7 @@ terminal_app_manage_profiles (TerminalApp     *app,
 		return;
 	}
 
-	if (!terminal_util_load_builder_file ("profile-manager.ui",
+	if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/profile-manager.ui",
 	                                      "profile-manager", &dialog,
 	                                      "profiles-treeview-container", &tree_view_container,
 	                                      "new-profile-button", &new_button,
