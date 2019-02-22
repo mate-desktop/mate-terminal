@@ -83,7 +83,7 @@ terminal_search_dialog_new (GtkWindow   *parent)
 
 	priv = g_new0 (TerminalSearchDialogPrivate, 1);
 
-	if (!terminal_util_load_builder_file ("find-dialog.ui",
+	if (!terminal_util_load_builder_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/find-dialog.ui",
 	                                      "find-dialog", &dialog,
 	                                      "search-label", &priv->search_label,
 	                                      "search-entry", &priv->search_entry,
