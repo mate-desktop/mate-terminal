@@ -2238,14 +2238,10 @@ terminal_window_init (TerminalWindow *window)
 
     /* Load the UI */
     error = NULL;
-    priv->ui_id = gtk_ui_manager_add_ui_from_file (manager,
-                  TERM_PKGDATADIR G_DIR_SEPARATOR_S "terminal.xml",
+    priv->ui_id = gtk_ui_manager_add_ui_from_resource (manager,
+                  TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/terminal.xml",
                   &error);
-    if (error)
-    {
-        g_printerr ("Failed to load UI: %s\n", error->message);
-        g_error_free (error);
-    }
+    g_assert_no_error (error);
 
     priv->menubar = gtk_ui_manager_get_widget (manager, "/menubar");
     gtk_box_pack_start (GTK_BOX (priv->main_vbox),
@@ -4338,26 +4334,31 @@ help_about_callback (GtkAction *action,
         "Copyright © 2011 Perberos\n"
         "Copyright © 2012-2018 MATE developers";
     char *licence_text;
+    GBytes *bytes;
+    const guint8 *data;
     GKeyFile *key_file;
     GError *error = NULL;
     char **authors, **contributors, **artists, **documenters, **array_strv;
-    gsize n_authors = 0, n_contributors = 0, n_artists = 0, n_documenters = 0 , i;
+    gsize data_len, n_authors = 0, n_contributors = 0, n_artists = 0, n_documenters = 0 , i;
     GPtrArray *array;
 
+
+    bytes = g_resources_lookup_data (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/terminal.about",
+                                     G_RESOURCE_LOOKUP_FLAGS_NONE,
+                                     &error);
+    g_assert_no_error (error);
+
+    data = g_bytes_get_data (bytes, &data_len);
     key_file = g_key_file_new ();
-    if (!g_key_file_load_from_file (key_file, TERM_PKGDATADIR G_DIR_SEPARATOR_S "terminal.about", 0, &error))
-    {
-        g_warning ("Couldn't load about data: %s\n", error->message);
-        g_error_free (error);
-        g_key_file_free (key_file);
-        return;
-    }
+    g_key_file_load_from_data (key_file, (const char *) data, data_len, 0, &error);
+    g_assert_no_error (error);
 
     authors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Authors", &n_authors, NULL);
     contributors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Contributors", &n_contributors, NULL);
     artists = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Artists", &n_artists, NULL);
     documenters = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Documenters", &n_documenters, NULL);
     g_key_file_free (key_file);
+    g_bytes_unref (bytes);
 
     array = g_ptr_array_new ();
 
