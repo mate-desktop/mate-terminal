@@ -1098,7 +1098,7 @@ terminal_window_update_size_to_menu (TerminalWindow *window)
 
 static void
 terminal_window_update_copy_sensitivity (TerminalScreen *screen,
-        TerminalWindow *window)
+                                         TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkAction *action;
@@ -1112,8 +1112,7 @@ terminal_window_update_copy_sensitivity (TerminalScreen *screen,
     action = gtk_action_group_get_action (priv->action_group, "EditCopy");
     gtk_action_set_sensitive (action, can_copy);
 
-    /* 24/07/2014 madars.vitolins@gmail.com, sync to clibboard */
-    if (priv->copy_selection)
+    if (can_copy && priv->copy_selection)
 #if VTE_CHECK_VERSION (0, 50, 0)
         vte_terminal_copy_clipboard_format (VTE_TERMINAL(screen), VTE_FORMAT_TEXT);
 #else
