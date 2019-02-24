@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-04 11:36+0100\n"
+"POT-Creation-Date: 2019-02-10 18:23+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
@@ -49,7 +49,7 @@ msgid "MATE Terminal"
 msgstr "마테 터미널"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
-#: ../src/terminal.c:590 ../src/terminal-profile.c:161
+#: ../src/terminal.c:590 ../src/terminal-profile.c:159
 #: ../src/terminal-window.c:2154
 msgid "Terminal"
 msgstr "터미널"
@@ -430,40 +430,30 @@ msgid ""
 msgstr "참이면, 터미널의 명령을 로그인 쉘에서처럼 실행합니다(argv[0] 앞에 하이픈이 붙습니다)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
-msgid "Whether to update login records when launching terminal command"
-msgstr "터미널 명령을 실행할 때 로그인 기록 업데이트 여부"
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:65
-msgid ""
-"If true, the system login records utmp and wtmp will be updated when the "
-"command inside the terminal is launched."
-msgstr "참이면, 터미널에서 명령을 실행할 때, 시스템에서 utmp와 wtmp의 로그인 기록을 업데이트합니다."
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
 msgstr "쉘 대신에 사용자 지정 명령을 실행할 지 여부"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:67
+#: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr "참이면, 쉘을 실행하지 않고 custom_command 설정값을 사용합니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:68
+#: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to blink the cursor"
 msgstr "커서 깜빡임 여부"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:69
+#: ../src/org.mate.terminal.gschema.xml.in.h:67
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr "커서 깜빡임 전역 설정을 사용하려면 \"system\"을, 모드를 따로 설정하려면 \"on\" 또는 \"off\"를 설정하십시오."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:70
+#: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "The cursor appearance"
 msgstr "커서 모양새"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:71
+#: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
@@ -471,27 +461,27 @@ msgstr ""
 "네모 모양 커서를 사용하려면 \"block\"을, 수직선 모양 커서를 사용하려면 \"ibeam\"을, 밑줄 모양 커서를 사용하려면 "
 "\"underline\" 커서를 사용하십시오."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:72
+#: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Custom command to use instead of the shell"
 msgstr "쉘 대신에 사용할 사용자 지정 명령어"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:73
+#: ../src/org.mate.terminal.gschema.xml.in.h:71
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr "use_custom_command가 참일 경우 쉘 대긴 이 명령을 실행합니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:74
+#: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Icon for terminal window"
 msgstr "터미널 창 아이콘"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:75
+#: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Icon to use for tabs/windows containing this profile."
 msgstr "이 프로파일이 있는 탭/창에서 사용할 아이콘입니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:76
+#: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Palette for terminal applications"
 msgstr "터미널 프로그램 팔레트"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:77
+#: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
@@ -500,19 +490,19 @@ msgstr ""
 "터미널 프로그램에서는 터미널의 16색 팔레트를 쓸 수 있습니다. 이 설정은 그 팔레트로, 색 이름을 콜론으로 구분한 리스트입니다. 색 "
 "이름은 16진수 형식이어야 합니다. 예를 들어 \"#FF00FF\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:78
+#: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Font"
 msgstr "글꼴"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:79
+#: ../src/org.mate.terminal.gschema.xml.in.h:77
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr "Pango 글꼴 이름. 예를 들어 \"Sans 12\" 또는 \"Monospace Bold 14\" 입니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:80
+#: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Background type"
 msgstr "배경 형식"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:81
+#: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
@@ -521,29 +511,29 @@ msgstr ""
 "터미널 배경의 종류. 한 가지 색으로 채울 때는 \"solid\", 이미지는 \"image\", 투명하게 하려면 컴포짓 창 관리자를 "
 "사용하는 경우 진짜로 투명하게, 그렇지 않으면 가짜로 투명하게 나타내는 \"transparent\" 입니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:82
+#: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background image"
 msgstr "배경 그림"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:83
+#: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid "Filename of a background image."
 msgstr "배경 그림의 파일 이름."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:84
+#: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Whether to scroll background image"
 msgstr "배경 그림을 스크롤할 지 여부"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:85
+#: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr "참이면, 배경 이미지를 텍스트와 함께 스크롤합니다. 거짓이면 이미지는 고정된 위치에 있고 그 위의 텍스트만 스크롤합니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:86
+#: ../src/org.mate.terminal.gschema.xml.in.h:84
 msgid "How much to darken the background image"
 msgstr "배경 그림 암도"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:87
+#: ../src/org.mate.terminal.gschema.xml.in.h:85
 msgid ""
 "A value between 0.0 and 1.0 indicating how much to darken the background "
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
@@ -553,11 +543,11 @@ msgstr ""
 "0.0에서 1.0 사이의 값. 배경 이미지를 얼마나 어둡게 만들지를 나타냅니다. 0.0은 어둡게 하지 않고, 1.0은 완전히 어둡게 "
 "합니다. 현재 구현하기로는 두 가지 단계만 쓸 수 있으므로 불리언처럼 동작합니다. 0.0으로 하면 어둡게 하지 않습니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:88
+#: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "Effect of the Backspace key"
 msgstr "백스페이스 키의 효과"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:89
+#: ../src/org.mate.terminal.gschema.xml.in.h:87
 msgid ""
 "Sets what code the backspace key generates. Possible values are \"ascii-"
 "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
@@ -569,11 +559,11 @@ msgstr ""
 "(Control-H, 즉 ASCII BS 문자), \"escape-sequence\" (백스페이스 아니면 DEL에 해당되는 이스케이프 "
 "시퀀스). 보통의 경우 \"ascii-del\"이 백스페이스 키의 설정으로 올바른 설정입니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:90
+#: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Delete key"
 msgstr "Delete 키 효과"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:91
+#: ../src/org.mate.terminal.gschema.xml.in.h:89
 msgid ""
 "Sets what code the delete key generates. Possible values are \"ascii-del\" "
 "for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
@@ -585,42 +575,42 @@ msgstr ""
 "(Control-H, 즉 ASCII BS 문자), \"escape-sequence\" (백스페이스 아니면 DEL에 해당되는 이스케이프 "
 "시퀀스). 보통의 경우 \"escape-sequence\"가 <Delete> 키의 설정으로 올바른 설정입니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:92
+#: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "터미널 위젯에서 테마 색상 사용 여부"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:93
+#: ../src/org.mate.terminal.gschema.xml.in.h:91
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr "참이면 텍스트 입력 상자에 사용된 색 테마를 터미널에서 사용합니다. 사용자가 지정한 색은 무시됩니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:94
+#: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the system font"
 msgstr "시스템 글꼴 사용 여부"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:95
+#: ../src/org.mate.terminal.gschema.xml.in.h:93
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr "참이면, 터미널에서 데스크톱에서 지정한 글꼴을 사용합니다. (고정 폭인 경우에만, 그렇지 않으면 가장 비슷한 글꼴)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:96
+#: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Highlight S/Key challenges"
 msgstr "S/Key challenge 강조"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:97
+#: ../src/org.mate.terminal.gschema.xml.in.h:95
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
 "S/Key challenge 응답 요청이 들어왔을 때 클릭하면 대화 상자를 실행합니다. 대화 상자로 암호를 입력하면 터미널로 보냅니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:98
+#: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Keyboard shortcut to open a new tab"
 msgstr "새 탭을 여는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:99
+#: ../src/org.mate.terminal.gschema.xml.in.h:97
 msgid ""
 "Keyboard shortcut key for opening a new tab. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -630,11 +620,11 @@ msgstr ""
 "새 탭을 여는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이 "
 "액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:100
+#: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new window"
 msgstr "새 창을 여는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:101
+#: ../src/org.mate.terminal.gschema.xml.in.h:99
 msgid ""
 "Keyboard shortcut key for opening a new window. Expressed as a string in the"
 " same format used for GTK+ resource files. If you set the option to the "
@@ -644,11 +634,11 @@ msgstr ""
 "새 창을 여는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이 "
 "액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:102
+#: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to create a new profile"
 msgstr "새 프로파일을 만드는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:103
+#: ../src/org.mate.terminal.gschema.xml.in.h:101
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -658,11 +648,11 @@ msgstr ""
 "프로파일 만들기 대화 상자를 여는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 "
 "\"disabled\"라고 설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:104
+#: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to save the current tab contents to file"
 msgstr "현재 탭 내용을 파일로 저장하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:105
+#: ../src/org.mate.terminal.gschema.xml.in.h:103
 msgid ""
 "Keyboard shortcut key to save the current tab contents to a file. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -672,11 +662,11 @@ msgstr ""
 "현태 탭 내용을 파일로 저장하는. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:106
+#: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to close a tab"
 msgstr "탭을 닫는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:107
+#: ../src/org.mate.terminal.gschema.xml.in.h:105
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -686,11 +676,11 @@ msgstr ""
 "탭을 닫는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이 "
 "액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:108
+#: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a window"
 msgstr "창을 닫는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:109
+#: ../src/org.mate.terminal.gschema.xml.in.h:107
 msgid ""
 "Keyboard shortcut key for closing a window. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -700,11 +690,11 @@ msgstr ""
 "창을 닫는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이 "
 "액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:110
+#: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to copy text"
 msgstr "글자를 복사하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: ../src/org.mate.terminal.gschema.xml.in.h:109
 msgid ""
 "Keyboard shortcut key for copying selected text to the clipboard. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -714,11 +704,11 @@ msgstr ""
 "선택한 텍스트를 클립보드로 복사하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 "
 "\"disabled\"라고 설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to paste text"
 msgstr "글자를 붙여 넣는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
 msgid ""
 "Keyboard shortcut key for pasting the contents of the clipboard in the "
 "terminal. Expressed as a string in the same format used for GTK+ resource "
@@ -728,11 +718,11 @@ msgstr ""
 "선택한 텍스트를 클립보드에서 터미널로 붙여 넣는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 "
 "\"disabled\"라고 설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to select all text"
 msgstr "모든 텍스트를 선택하는 키보드 단축키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for selecting all the text in the terminal. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -742,11 +732,11 @@ msgstr ""
 "터미널의 모든 텍스트를 선택하기 위한 키보드 단축키. GTK + 리소스 파일에 사용된 것과 동일한 형식의 문자열로 표현됩니다. 이 옵션을"
 " 특수 문자열 \"disabled\"로 설정하면, 이 작업에 대한 키보드 단축키는 없게 됩니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to show the find dialog"
 msgstr "찾기 대화 상자를 표시하는 키보드 단축키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key for showing the find dialog. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -756,11 +746,11 @@ msgstr ""
 "찾기 대화 상자를 표시하는 키보드 단축키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr "다음 검색어 검색을 위한 키보드 단축키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key for finding the next occurrence of the search term in "
 "the terminal. Expressed as a string in the same format used for GTK+ "
@@ -770,11 +760,11 @@ msgstr ""
 "다음 검색어 검색을 위한 키보드 단축키. GTK + 리소스 파일에 사용된 것과 동일한 형식의 문자열로 표현됩니다. 이 옵션을 특수 문자열"
 " \"disabled\"로 설정하면, 이 작업에 대한 키보드 단축키는 없게 됩니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr "이전 검색어 검색을 위한 키보드 단축키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
 "Keyboard shortcut key for finding the previous occurrence of the search term"
 " in the terminal. Expressed as a string in the same format used for GTK+ "
@@ -784,11 +774,11 @@ msgstr ""
 "터미널에서 이전 검색어 검색을 하기 위한 키보드 단축키. GTK + 리소스 파일에 사용된 것과 동일한 형식의 문자열로 표현됩니다. 이 "
 "옵션을 특수 문자열 \"disabled\"로 설정하면, 이 작업에 대한 키보드 단축키는 없게 됩니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "전체 화면 모드를 토글하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -798,11 +788,11 @@ msgstr ""
 "전체 화면 모드를 토글하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "메뉴 표시줄 표시 여부를 전환하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -812,11 +802,11 @@ msgstr ""
 "메뉴 표시줄 표시 여부를 전환하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 "
 "\"disabled\"라고 설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "터미널의 제목을 설정하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -826,11 +816,11 @@ msgstr ""
 "터미널 제목을 설정하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "터미널을 리셋하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -840,11 +830,11 @@ msgstr ""
 "터미널을 리셋하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "터미널을 리셋하고 지우는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -854,11 +844,11 @@ msgstr ""
 "터미널을 리셋하고 지우는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "이전 탭으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -868,11 +858,11 @@ msgstr ""
 "이전 탭으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면,"
 " 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "다음 탭으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -882,11 +872,11 @@ msgstr ""
 "다음 탭으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면,"
 " 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "이전 탭으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -896,11 +886,11 @@ msgstr ""
 "이전 탭으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면,"
 " 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "이전 탭으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -910,11 +900,11 @@ msgstr ""
 "이전 탭으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면,"
 " 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Accelerator to move the current tab to the left."
 msgstr "현재 탭을 왼쪽으로 옮기는 바로 가기 키."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -924,11 +914,11 @@ msgstr ""
 "현재 탭을 왼쪽으로 옮기는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the right."
 msgstr "현재 탭을 오른쪽으로 옮기는 바로 가기 키."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -938,11 +928,11 @@ msgstr ""
 "현재 탭을 오른쪽으로 옮기는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to detach current tab."
 msgstr "현재 탭 떼기 바로 가기 키."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -951,11 +941,11 @@ msgstr ""
 "현재 탭을 떼는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "탭 1로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -965,11 +955,11 @@ msgstr ""
 "탭 1로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "탭 2로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -979,11 +969,11 @@ msgstr ""
 "탭 2로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "탭 3으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -993,11 +983,11 @@ msgstr ""
 "탭 3으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "탭 4로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1007,11 +997,11 @@ msgstr ""
 "탭 4로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "탭 5로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1021,11 +1011,11 @@ msgstr ""
 "탭 5로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "탭 6으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1035,11 +1025,11 @@ msgstr ""
 "탭 6으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "탭 7로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1049,11 +1039,11 @@ msgstr ""
 "탭 7로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "탭 8로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1063,11 +1053,11 @@ msgstr ""
 "탭 8로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "탭 9로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1077,11 +1067,11 @@ msgstr ""
 "탭 9로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, 이"
 " 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "탭 10으로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1091,11 +1081,11 @@ msgstr ""
 "탭 10으로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면,"
 " 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:166
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "탭 11로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:167
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1105,11 +1095,11 @@ msgstr ""
 "탭 11로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:168
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "탭 12로 바꾸는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:169
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1119,11 +1109,11 @@ msgstr ""
 "탭 12로 바꾸는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:170
+#: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to launch help"
 msgstr "도움말을 실행하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:171
+#: ../src/org.mate.terminal.gschema.xml.in.h:169
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1133,11 +1123,11 @@ msgstr ""
 "도움말을 실행하는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 설정하면, "
 "이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:172
+#: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to make font larger"
 msgstr "글꼴을 더 크게 하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:173
+#: ../src/org.mate.terminal.gschema.xml.in.h:171
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1147,11 +1137,11 @@ msgstr ""
 "글꼴을 더 크게 만드는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:174
+#: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font smaller"
 msgstr "글꼴을 더 작게 하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:175
+#: ../src/org.mate.terminal.gschema.xml.in.h:173
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1161,11 +1151,11 @@ msgstr ""
 "글꼴을 더 작게 만드는 바로 가기 키. GTK+ 리소스 파일과 같은 형식의 문자열로 표현합니다. 특별히 \"disabled\"라고 "
 "설정하면, 이 액션에 대한 바로 가기 키는 없어집니다."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:176
+#: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "글꼴을 보통 크기로 하는 바로 가기 키"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:177
+#: ../src/org.mate.terminal.gschema.xml.in.h:175
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1207,32 +1197,32 @@ msgstr "쏠라 라이트"
 msgid "Solarized dark"
 msgstr "쏠라 다크"
 
-#: ../src/profile-editor.c:492
+#: ../src/profile-editor.c:488
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "명령행을 해석하는 데 오류가 발생했습니다: %s"
 
-#: ../src/profile-editor.c:509
+#: ../src/profile-editor.c:505
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "프로파일 “%s” 편집"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:536 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:82
 msgid "Custom"
 msgstr "개별 설정"
 
-#: ../src/profile-editor.c:590
+#: ../src/profile-editor.c:586
 msgid "Images"
 msgstr "이미지"
 
-#: ../src/profile-editor.c:734
+#: ../src/profile-editor.c:730
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "팔레트 색 %d 선택"
 
-#: ../src/profile-editor.c:738
+#: ../src/profile-editor.c:734
 #, c-format
 msgid "Palette entry %d"
 msgstr "팔레트 항목 %d"
@@ -1554,160 +1544,156 @@ msgid "_Run command as a login shell"
 msgstr "로그인 쉘로 명령 실행(_R)"
 
 #: ../src/profile-preferences.ui.h:50
-msgid "_Update login records when command is launched"
-msgstr "명령을 실행하면 로그인 기록을 업데이트(_U)"
-
-#: ../src/profile-preferences.ui.h:51
 msgid "Ru_n a custom command instead of my shell"
 msgstr "쉘 대신에 사용자 지정 명령 실행(_N)"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
 msgstr "사용자 지정 명령(_M):"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:52
 msgid "When command _exits:"
 msgstr "명령이 끝날 때(_E):"
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr "제목 및 명령"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>글자색, 배경색, 굵기 및 밑줄</b>"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
 msgstr "시스템 테마 색 사용(_U)"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:56
 msgid "Built-in sche_mes:"
 msgstr "내장 팔레트(_M):"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "글자색(_T):"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:58
 msgid "Choose Terminal Background Color"
 msgstr "터미널 배경색 선택"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Text Color"
 msgstr "터미널 글자색 선택"
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:60
 msgid "_Background color:"
 msgstr "배경색(_B):"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:61
 msgid "Bol_d color:"
 msgstr "굵은 글자색(_D):"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:62
 msgid "_Underline color:"
 msgstr "밑줄 색(_U):"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:63
 msgid "_Same as text color"
 msgstr "글자색과 동일(_S):"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>팔레트</b>"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
 msgstr "내장 팔레트(_S):"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:66
 msgid "Color p_alette:"
 msgstr "색 팔레트(_A):"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:67
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>알림:</b> 터미널 프로그램에서 다음 색을 사용할 수 있습니다.</i></small>"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "색상"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr "없음(단색 사용)(_S)"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "배경 그림(_B)"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "그림 파일(_F):"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "배경 그림 선택"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr "배경 그림 스크롤(_S)"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "투명한 배경(_T)"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr "투명 배경이나 그림 배경 진하기(_H):"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:76
 msgid "S_hade transparent background:"
 msgstr "투명한 배경에 그림자 두기(_H):"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>없음</i></small>"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:78
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>최대값</i></small>"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:79
 msgid "Background"
 msgstr "배경"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:80
 msgid "_Scrollbar is:"
 msgstr "스크롤 막대 위치(_S):"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _output"
 msgstr "출력이 있으면 스크롤(_O)"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _keystroke"
 msgstr "키를 누르면 스크롤(_K)"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:83
 msgid "lines"
 msgstr "줄"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:84
 msgid "Scroll_back:"
 msgstr "스크롤 범위(_B):"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:85
 msgid "_Unlimited"
 msgstr "무제한(_U)"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:86
 msgid "Scrolling"
 msgstr "스크롤"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:87
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1717,19 +1703,19 @@ msgstr ""
 "<small><i><b>알림:</b> 다음 옵션을 켜면 일부 프로그램이 제대로 작동하지 않을 수도 있습니다. 다음 옵션은 다른 방식의 "
 "터미널 동작을 가정하는 일부 프로그램과 일부 운영체제의 문제를 피해가는 기능일 뿐입니다.</i></small>"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:88
 msgid "_Delete key generates:"
 msgstr "Delete 키를 누르면(_D):"
 
-#: ../src/profile-preferences.ui.h:90
+#: ../src/profile-preferences.ui.h:89
 msgid "_Backspace key generates:"
 msgstr "백스페이스 키를 누르면(_B):"
 
-#: ../src/profile-preferences.ui.h:91
+#: ../src/profile-preferences.ui.h:90
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "호환성 옵션을 기본값으로 리셋(_R)"
 
-#: ../src/profile-preferences.ui.h:92
+#: ../src/profile-preferences.ui.h:91
 msgid "Compatibility"
 msgstr "호환성"
 
@@ -2332,7 +2318,7 @@ msgstr "터미널 옵션. 처음 나오는 --window 혹은 --tag 옵션보다 �
 msgid "Show per-terminal options"
 msgstr "터미널별 옵션을 봅니다"
 
-#: ../src/terminal-profile.c:168
+#: ../src/terminal-profile.c:165
 msgid "Unnamed"
 msgstr "이름 없음"
 
@@ -2340,7 +2326,7 @@ msgstr "이름 없음"
 msgid "_Profile Preferences"
 msgstr "프로파일 기본 설정(_P)"
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1957
+#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
 msgid "_Relaunch"
 msgstr "다시 실행(_R)"
 
@@ -2348,17 +2334,17 @@ msgstr "다시 실행(_R)"
 msgid "There was an error creating the child process for this terminal"
 msgstr "터미널의 자식 프로세스를 만들던 중 오류가 발생했습니다"
 
-#: ../src/terminal-screen.c:1962
+#: ../src/terminal-screen.c:1954
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "하위 프로세스가 상태 %d번으로 정상적으로 끝났습니다."
 
-#: ../src/terminal-screen.c:1967
+#: ../src/terminal-screen.c:1959
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "하위 프로세스가 시그널 %d번으로 중단되었습니다."
 
-#: ../src/terminal-screen.c:1972
+#: ../src/terminal-screen.c:1964
 msgid "The child process was terminated."
 msgstr "하위 프로세스가 중단되었습니다."
 

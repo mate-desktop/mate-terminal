@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-04 11:36+0100\n"
+"POT-Creation-Date: 2019-02-10 18:23+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Iñigo Varela <ivarela@softastur.org>, 2018\n"
 "Language-Team: Asturian (https://www.transifex.com/mate/teams/13566/ast/)\n"
@@ -53,7 +53,7 @@ msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
-#: ../src/terminal.c:590 ../src/terminal-profile.c:161
+#: ../src/terminal.c:590 ../src/terminal-profile.c:159
 #: ../src/terminal-window.c:2154
 msgid "Terminal"
 msgstr "Terminal"
@@ -490,25 +490,11 @@ msgstr ""
 "d'élli)"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
-msgid "Whether to update login records when launching terminal command"
-msgstr ""
-"Conseña si tien d'actualizase los rexistros d'entamu de sesión al llanzar el"
-" comandu de terminal"
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:65
-msgid ""
-"If true, the system login records utmp and wtmp will be updated when the "
-"command inside the terminal is launched."
-msgstr ""
-"Si ye «true» (braero), los rexistros d'entrada del sistema utmp y wtmp "
-"actualizaránse cuando se llance'l comandu de dientro del terminal."
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to run a custom command instead of the shell"
 msgstr ""
 "Define si hai d'executar un comandu personalizáu n'arróu del intérprete"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:67
+#: ../src/org.mate.terminal.gschema.xml.in.h:65
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
@@ -516,11 +502,11 @@ msgstr ""
 "Si ye «true» (braero), el valor de la configuración de «custom_command» "
 "usarase n'arróu d'executar un intérprete."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:68
+#: ../src/org.mate.terminal.gschema.xml.in.h:66
 msgid "Whether to blink the cursor"
 msgstr "Conseña si'l cursor tien de parpaguiar"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:69
+#: ../src/org.mate.terminal.gschema.xml.in.h:67
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
@@ -528,11 +514,11 @@ msgstr ""
 "Los valores dables son \"system\" pa usar los axustes de parpaguéu globales,"
 " u \"on\" u \"off\" p'afitar el mou explícitu."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:70
+#: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "The cursor appearance"
 msgstr "L'aspeutu del cursor"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:71
+#: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
@@ -541,29 +527,29 @@ msgstr ""
 "usar una llinia de cursor vertical o «sorrayar» pa usar un cursor de "
 "sorrayáu."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:72
+#: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Custom command to use instead of the shell"
 msgstr "Comandu personalizáu a usar n'arróu del intérprete"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:73
+#: ../src/org.mate.terminal.gschema.xml.in.h:71
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr ""
 "Executa esti comandu n'arróu del intérprete si «use_custom_command» ye "
 "«true» (braero)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:74
+#: ../src/org.mate.terminal.gschema.xml.in.h:72
 msgid "Icon for terminal window"
 msgstr "Iconu de la ventana de la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:75
+#: ../src/org.mate.terminal.gschema.xml.in.h:73
 msgid "Icon to use for tabs/windows containing this profile."
 msgstr "Iconu qu'usar pa les llingüetes/ventanes que contienen esti perfil."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:76
+#: ../src/org.mate.terminal.gschema.xml.in.h:74
 msgid "Palette for terminal applications"
 msgstr "Paleta pa les aplicaciones de la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:77
+#: ../src/org.mate.terminal.gschema.xml.in.h:75
 msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
@@ -574,21 +560,21 @@ msgstr ""
 "colores separtada por comes. Los colores tienen de tar en formatu "
 "hexadecimal, por exemplu: «#FF00FF»"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:78
+#: ../src/org.mate.terminal.gschema.xml.in.h:76
 msgid "Font"
 msgstr "Fonte"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:79
+#: ../src/org.mate.terminal.gschema.xml.in.h:77
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "Un nome de tipografía de Pangu. Dalgunos exemplos son «Sans 12» o «Monospace"
 " Bold 14»."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:80
+#: ../src/org.mate.terminal.gschema.xml.in.h:78
 msgid "Background type"
 msgstr "Tipu de fondu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:81
+#: ../src/org.mate.terminal.gschema.xml.in.h:79
 msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
@@ -598,19 +584,19 @@ msgstr ""
 "pa una imaxe o «transparent» pa una tresparencia real o, si se ta executando"
 " un xestor de ventanes de composición, una pseudo-tresparencia."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:82
+#: ../src/org.mate.terminal.gschema.xml.in.h:80
 msgid "Background image"
 msgstr "Imaxe de Fondu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:83
+#: ../src/org.mate.terminal.gschema.xml.in.h:81
 msgid "Filename of a background image."
 msgstr "Nome de ficheru d'una imaxe de fondu."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:84
+#: ../src/org.mate.terminal.gschema.xml.in.h:82
 msgid "Whether to scroll background image"
 msgstr "Conseña si tien de desplazase la imaxe de fondu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:85
+#: ../src/org.mate.terminal.gschema.xml.in.h:83
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
@@ -619,11 +605,11 @@ msgstr ""
 "frente, si ye «false» (falsu) caltiénse la imaxe nuna posición fixa y "
 "desplázase'l testu per enriba d'ésta."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:86
+#: ../src/org.mate.terminal.gschema.xml.in.h:84
 msgid "How much to darken the background image"
 msgstr "Cuánto escurecer la imaxe de fondu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:87
+#: ../src/org.mate.terminal.gschema.xml.in.h:85
 msgid ""
 "A value between 0.0 and 1.0 indicating how much to darken the background "
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
@@ -636,11 +622,11 @@ msgstr ""
 "configuración compórtase como un valor booleanu, au 0.0 desactiva l'efeutu "
 "d'escuridá."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:88
+#: ../src/org.mate.terminal.gschema.xml.in.h:86
 msgid "Effect of the Backspace key"
 msgstr "Efeutu de la tecla Retrocesu (Backspace)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:89
+#: ../src/org.mate.terminal.gschema.xml.in.h:87
 msgid ""
 "Sets what code the backspace key generates. Possible values are \"ascii-"
 "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
@@ -655,11 +641,11 @@ msgstr ""
 " (delete). «ascii-del» considérase davezu como la configuración correuta pa "
 "la tecla Retrocesu (Backspace)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:90
+#: ../src/org.mate.terminal.gschema.xml.in.h:88
 msgid "Effect of the Delete key"
 msgstr "Efeutu de la tecla Esaniciar (Delete)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:91
+#: ../src/org.mate.terminal.gschema.xml.in.h:89
 msgid ""
 "Sets what code the delete key generates. Possible values are \"ascii-del\" "
 "for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
@@ -674,12 +660,12 @@ msgstr ""
 "(delete). «escape-sequence» considérase davezu como la configuración "
 "correuta pa la tecla Esaniciar (Delete)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:92
+#: ../src/org.mate.terminal.gschema.xml.in.h:90
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr ""
 "Conseña si hai d'usar los colores del tema pa los controles de la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:93
+#: ../src/org.mate.terminal.gschema.xml.in.h:91
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
@@ -688,11 +674,11 @@ msgstr ""
 "d'entrada de testu usarase pa la terminal, n'arróu de los colores conseñaos "
 "pol usuariu."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:94
+#: ../src/org.mate.terminal.gschema.xml.in.h:92
 msgid "Whether to use the system font"
 msgstr "Conseña si tien d'usase la tipografía del sistema."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:95
+#: ../src/org.mate.terminal.gschema.xml.in.h:93
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -701,11 +687,11 @@ msgstr ""
 "si ésta ye d'anchu fixu (d'otra miente sedrá la tipografía más asemeyada "
 "dable a ésta)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:96
+#: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Highlight S/Key challenges"
 msgstr "Resaltar desafíos S/Key"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:97
+#: ../src/org.mate.terminal.gschema.xml.in.h:95
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
@@ -714,11 +700,11 @@ msgstr ""
 " de rempuesta a desafíu S/Key. Al escribir una contraseña nel diálogu ésta "
 "unviaráse a la terminal."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:98
+#: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Keyboard shortcut to open a new tab"
 msgstr "Combinación de tecles p'abrir una llingüeta nueva"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:99
+#: ../src/org.mate.terminal.gschema.xml.in.h:97
 msgid ""
 "Keyboard shortcut key for opening a new tab. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -730,11 +716,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:100
+#: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to open a new window"
 msgstr "Combinación de tecles p'abrir una ventana nueva"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:101
+#: ../src/org.mate.terminal.gschema.xml.in.h:99
 msgid ""
 "Keyboard shortcut key for opening a new window. Expressed as a string in the"
 " same format used for GTK+ resource files. If you set the option to the "
@@ -746,11 +732,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:102
+#: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to create a new profile"
 msgstr "Combinación de tecles pa crear un perfil nuevu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:103
+#: ../src/org.mate.terminal.gschema.xml.in.h:101
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -762,13 +748,13 @@ msgstr ""
 "de GTK+. Si define esta opción cola cadena especial «disabled», entós nun "
 "habrá una combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:104
+#: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to save the current tab contents to file"
 msgstr ""
 "Combinación de tecles pa guardar el conteníu actual de les llingüetes a un "
 "ficheru"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:105
+#: ../src/org.mate.terminal.gschema.xml.in.h:103
 msgid ""
 "Keyboard shortcut key to save the current tab contents to a file. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -780,11 +766,11 @@ msgstr ""
 "recursos de GTK+. Si define esta opción cola cadena especial «disabled», "
 "entós nun habrá una combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:106
+#: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to close a tab"
 msgstr "Combinación de tecles pa pesllar una llingüeta"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:107
+#: ../src/org.mate.terminal.gschema.xml.in.h:105
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -796,11 +782,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:108
+#: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to close a window"
 msgstr "Combinación de tecles pa pesllar una ventana"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:109
+#: ../src/org.mate.terminal.gschema.xml.in.h:107
 msgid ""
 "Keyboard shortcut key for closing a window. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -812,11 +798,11 @@ msgstr ""
 " cola cadena especial «disabled», entós nun habrá una combinación pa esta "
 "aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:110
+#: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to copy text"
 msgstr "Combinación de tecles pa copiar testu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: ../src/org.mate.terminal.gschema.xml.in.h:109
 msgid ""
 "Keyboard shortcut key for copying selected text to the clipboard. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -828,11 +814,11 @@ msgstr ""
 "de GTK+. Si define esta opción cola cadena especial «disabled», entós nun "
 "habrá una combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to paste text"
 msgstr "Combinación de tecles pa pegar testu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: ../src/org.mate.terminal.gschema.xml.in.h:111
 msgid ""
 "Keyboard shortcut key for pasting the contents of the clipboard in the "
 "terminal. Expressed as a string in the same format used for GTK+ resource "
@@ -844,11 +830,11 @@ msgstr ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to select all text"
 msgstr "Atayu de tecláu pa seleicionar tol testu"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: ../src/org.mate.terminal.gschema.xml.in.h:113
 msgid ""
 "Keyboard shortcut key for selecting all the text in the terminal. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -860,11 +846,11 @@ msgstr ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to show the find dialog"
 msgstr "Atayu de tecláu p'amosar el diálogu de gueta"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
 "Keyboard shortcut key for showing the find dialog. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -876,12 +862,12 @@ msgstr ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
 "Atayu de tecláu pa guetar la siguiente ocurrencia d'un términu de gueta"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
 "Keyboard shortcut key for finding the next occurrence of the search term in "
 "the terminal. Expressed as a string in the same format used for GTK+ "
@@ -890,30 +876,30 @@ msgid ""
 msgstr ""
 "Keyboard shortcut key for finding the next occurrence of the search term in "
 "the terminal. Expressed as a string in the same format used for GTK+ "
+"resource files. If you set the option to the special string \"disabled\", "
+"then there will be no keyboard shortcut for this action."
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:118
+msgid "Keyboard shortcut to find the previous occurrence of the search term"
+msgstr "Atayu de tecláu pa guetar la ocurrencia previa d'un términu de gueta"
+
+#: ../src/org.mate.terminal.gschema.xml.in.h:119
+msgid ""
+"Keyboard shortcut key for finding the previous occurrence of the search term"
+" in the terminal. Expressed as a string in the same format used for GTK+ "
+"resource files. If you set the option to the special string \"disabled\", "
+"then there will be no keyboard shortcut for this action."
+msgstr ""
+"Keyboard shortcut key for finding the previous occurrence of the search term"
+" in the terminal. Expressed as a string in the same format used for GTK+ "
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
-msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr "Atayu de tecláu pa guetar la ocurrencia previa d'un términu de gueta"
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
-msgid ""
-"Keyboard shortcut key for finding the previous occurrence of the search term"
-" in the terminal. Expressed as a string in the same format used for GTK+ "
-"resource files. If you set the option to the special string \"disabled\", "
-"then there will be no keyboard shortcut for this action."
-msgstr ""
-"Keyboard shortcut key for finding the previous occurrence of the search term"
-" in the terminal. Expressed as a string in the same format used for GTK+ "
-"resource files. If you set the option to the special string \"disabled\", "
-"then there will be no keyboard shortcut for this action."
-
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Combinación de tecles pa camudar al mou pantalla completa"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: ../src/org.mate.terminal.gschema.xml.in.h:121
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -925,11 +911,11 @@ msgstr ""
 " esta opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: ../src/org.mate.terminal.gschema.xml.in.h:122
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "Combinación de tecles pa camudar la visibilidá de la barra de menús"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: ../src/org.mate.terminal.gschema.xml.in.h:123
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -941,11 +927,11 @@ msgstr ""
 "de GTK+. Si define esta opción cola cadena especial «disabled», entós nun "
 "habrá una combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: ../src/org.mate.terminal.gschema.xml.in.h:124
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "Combinación de tecles p'afitar el títulu de la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: ../src/org.mate.terminal.gschema.xml.in.h:125
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -957,11 +943,11 @@ msgstr ""
 " esta opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: ../src/org.mate.terminal.gschema.xml.in.h:126
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Combinación de tecles pa reaniciar la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: ../src/org.mate.terminal.gschema.xml.in.h:127
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -973,11 +959,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: ../src/org.mate.terminal.gschema.xml.in.h:128
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Combinación de tecles pa reaniciar y llimpiar la terminal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: ../src/org.mate.terminal.gschema.xml.in.h:129
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -989,11 +975,11 @@ msgstr ""
 " esta opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: ../src/org.mate.terminal.gschema.xml.in.h:130
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Combinación de tecles pa camudar a la llingüeta anterior"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: ../src/org.mate.terminal.gschema.xml.in.h:131
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1005,11 +991,11 @@ msgstr ""
 "esta opción cola cadena especial «disabled», entós nun habrá una combinación"
 " pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: ../src/org.mate.terminal.gschema.xml.in.h:132
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Combinación de tecles pa camudar a la llingüeta viniente"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: ../src/org.mate.terminal.gschema.xml.in.h:133
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -1021,11 +1007,11 @@ msgstr ""
 " esta opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "Combinación de tecles pa camudar al perfil anterior"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -1037,11 +1023,11 @@ msgstr ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "Combinación de tecles pa camudar al perfil siguiente"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1053,11 +1039,11 @@ msgstr ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Accelerator to move the current tab to the left."
 msgstr "Acelerador pa mover la llingüeta actual a la esquierda."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: ../src/org.mate.terminal.gschema.xml.in.h:139
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1069,11 +1055,11 @@ msgstr ""
 "Si define la opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: ../src/org.mate.terminal.gschema.xml.in.h:140
 msgid "Accelerator to move the current tab to the right."
 msgstr "Acelerador pa mover la llingüeta actual a la drecha."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: ../src/org.mate.terminal.gschema.xml.in.h:141
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1085,11 +1071,11 @@ msgstr ""
 "define la opción cola cadena especial «disabled», entós nun habrá una "
 "combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: ../src/org.mate.terminal.gschema.xml.in.h:142
 msgid "Accelerator to detach current tab."
 msgstr "Acelerador pa desacoplar la llingüeta actual."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: ../src/org.mate.terminal.gschema.xml.in.h:143
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1100,11 +1086,11 @@ msgstr ""
 " la opción cola cadena especial «disabled», entós nun habrá una combinación "
 "pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: ../src/org.mate.terminal.gschema.xml.in.h:144
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "Combinación de tecles pa camudar a la llingüeta 1"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: ../src/org.mate.terminal.gschema.xml.in.h:145
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1116,11 +1102,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: ../src/org.mate.terminal.gschema.xml.in.h:146
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "Combinación de tecles pa camudar a la llingüeta 2"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: ../src/org.mate.terminal.gschema.xml.in.h:147
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1132,11 +1118,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: ../src/org.mate.terminal.gschema.xml.in.h:148
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "Combinación de tecles pa camudar a la llingüeta 3"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: ../src/org.mate.terminal.gschema.xml.in.h:149
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1148,11 +1134,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: ../src/org.mate.terminal.gschema.xml.in.h:150
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "Combinación de tecles pa camudar a la llingüeta 4"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: ../src/org.mate.terminal.gschema.xml.in.h:151
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1164,11 +1150,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: ../src/org.mate.terminal.gschema.xml.in.h:152
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "Combinación de tecles pa camudar a la llingüeta 5"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: ../src/org.mate.terminal.gschema.xml.in.h:153
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1180,11 +1166,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: ../src/org.mate.terminal.gschema.xml.in.h:154
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "Combinación de tecles pa camudar a la llingüeta 6"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: ../src/org.mate.terminal.gschema.xml.in.h:155
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1196,11 +1182,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: ../src/org.mate.terminal.gschema.xml.in.h:156
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "Combinación de tecles pa camudar a la llingüeta 7"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: ../src/org.mate.terminal.gschema.xml.in.h:157
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1212,11 +1198,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "Combinación de tecles pa camudar a la llingüeta 8"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1228,11 +1214,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: ../src/org.mate.terminal.gschema.xml.in.h:160
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "Combinación de tecles pa camudar a la llingüeta 9"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: ../src/org.mate.terminal.gschema.xml.in.h:161
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1244,11 +1230,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: ../src/org.mate.terminal.gschema.xml.in.h:162
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "Combinación de tecles pa camudar a la llingüeta 10"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: ../src/org.mate.terminal.gschema.xml.in.h:163
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1260,11 +1246,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:166
+#: ../src/org.mate.terminal.gschema.xml.in.h:164
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "Combinación de tecles pa camudar a la llingüeta 11"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:167
+#: ../src/org.mate.terminal.gschema.xml.in.h:165
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1276,11 +1262,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:168
+#: ../src/org.mate.terminal.gschema.xml.in.h:166
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "Combinación de tecles pa camudar a la llingüeta 12"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:169
+#: ../src/org.mate.terminal.gschema.xml.in.h:167
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1292,11 +1278,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:170
+#: ../src/org.mate.terminal.gschema.xml.in.h:168
 msgid "Keyboard shortcut to launch help"
 msgstr "Combinación de tecles pa llanzar l'ayuda"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:171
+#: ../src/org.mate.terminal.gschema.xml.in.h:169
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1307,11 +1293,11 @@ msgstr ""
 " formatu usáu polos archivos de recursos de GTK+. Si define esta opción cola"
 " cadena especial «disabled», entós nun habrá una combinación pa esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:172
+#: ../src/org.mate.terminal.gschema.xml.in.h:170
 msgid "Keyboard shortcut to make font larger"
 msgstr "Combinación de tecles p'agrandar la tipografía"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:173
+#: ../src/org.mate.terminal.gschema.xml.in.h:171
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1323,11 +1309,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:174
+#: ../src/org.mate.terminal.gschema.xml.in.h:172
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Combinación de tecles p'amenorgar la tipografía"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:175
+#: ../src/org.mate.terminal.gschema.xml.in.h:173
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1339,11 +1325,11 @@ msgstr ""
 "opción cola cadena especial «disabled», entós nun habrá una combinación pa "
 "esta aición."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:176
+#: ../src/org.mate.terminal.gschema.xml.in.h:174
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Combinación de tecles p'afitar la tipografía al so tamañu normal"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:177
+#: ../src/org.mate.terminal.gschema.xml.in.h:175
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1387,32 +1373,32 @@ msgstr "Solarizáu claru"
 msgid "Solarized dark"
 msgstr "Solarizáu escuru"
 
-#: ../src/profile-editor.c:492
+#: ../src/profile-editor.c:488
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Fallu al analizar el comandu: %s"
 
-#: ../src/profile-editor.c:509
+#: ../src/profile-editor.c:505
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Editando'l perfil «%s»"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:540 ../src/profile-preferences.ui.h:11
+#: ../src/profile-editor.c:536 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:82
 msgid "Custom"
 msgstr "Personalizar"
 
-#: ../src/profile-editor.c:590
+#: ../src/profile-editor.c:586
 msgid "Images"
 msgstr "Imaxes"
 
-#: ../src/profile-editor.c:734
+#: ../src/profile-editor.c:730
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Escueya la paleta de colores %d"
 
-#: ../src/profile-editor.c:738
+#: ../src/profile-editor.c:734
 #, c-format
 msgid "Palette entry %d"
 msgstr "Entrada de paleta %d"
@@ -1735,78 +1721,74 @@ msgid "_Run command as a login shell"
 msgstr "_Executar el comandu como un intérprete de conexón"
 
 #: ../src/profile-preferences.ui.h:50
-msgid "_Update login records when command is launched"
-msgstr "_Actualizar rexistros d'entamu de sesión cuando s'executa un comandu"
-
-#: ../src/profile-preferences.ui.h:51
 msgid "Ru_n a custom command instead of my shell"
 msgstr "_Executar un comandu personalizáu n'arróu del mio intérprete"
 
-#: ../src/profile-preferences.ui.h:52
+#: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
 msgstr "Co_mandu personalizáu:"
 
-#: ../src/profile-preferences.ui.h:53
+#: ../src/profile-preferences.ui.h:52
 msgid "When command _exits:"
 msgstr "Cuando'l comandu _termina:"
 
-#: ../src/profile-preferences.ui.h:54
+#: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
 msgstr "Títulu y comandu"
 
-#: ../src/profile-preferences.ui.h:55
+#: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Primer planu, fondu, negrina y solliñáu</b>"
 
-#: ../src/profile-preferences.ui.h:56
+#: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
 msgstr "_Usar colores del tema del sistema"
 
-#: ../src/profile-preferences.ui.h:57
+#: ../src/profile-preferences.ui.h:56
 msgid "Built-in sche_mes:"
 msgstr "Esque_mes incluyíos:"
 
-#: ../src/profile-preferences.ui.h:58
+#: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
 msgstr "Color del _testu:"
 
-#: ../src/profile-preferences.ui.h:59
+#: ../src/profile-preferences.ui.h:58
 msgid "Choose Terminal Background Color"
 msgstr "Escueya'l color de fondu del terminal"
 
-#: ../src/profile-preferences.ui.h:60
+#: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Text Color"
 msgstr "Escueya'l color del testu del terminal"
 
-#: ../src/profile-preferences.ui.h:61
+#: ../src/profile-preferences.ui.h:60
 msgid "_Background color:"
 msgstr "Color de _fondu:"
 
-#: ../src/profile-preferences.ui.h:62
+#: ../src/profile-preferences.ui.h:61
 msgid "Bol_d color:"
 msgstr "Color de _negrina:"
 
-#: ../src/profile-preferences.ui.h:63
+#: ../src/profile-preferences.ui.h:62
 msgid "_Underline color:"
 msgstr "Color del _solliñáu:"
 
-#: ../src/profile-preferences.ui.h:64
+#: ../src/profile-preferences.ui.h:63
 msgid "_Same as text color"
 msgstr "El _mesmu que'l color del testu"
 
-#: ../src/profile-preferences.ui.h:65
+#: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
 msgstr "<b>Paleta</b>"
 
-#: ../src/profile-preferences.ui.h:66
+#: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
 msgstr "E_squemes incluyíos:"
 
-#: ../src/profile-preferences.ui.h:67
+#: ../src/profile-preferences.ui.h:66
 msgid "Color p_alette:"
 msgstr "P_aleta de colores:"
 
-#: ../src/profile-preferences.ui.h:68
+#: ../src/profile-preferences.ui.h:67
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
@@ -1814,83 +1796,83 @@ msgstr ""
 "<small><i><b>Nota:</b> Les aplicaciones del terminal tienen a la so "
 "disposición estos colores.</i></small>"
 
-#: ../src/profile-preferences.ui.h:69
+#: ../src/profile-preferences.ui.h:68
 msgid "Colors"
 msgstr "Colores"
 
-#: ../src/profile-preferences.ui.h:70
+#: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
 msgstr "Color _sólidu"
 
-#: ../src/profile-preferences.ui.h:71
+#: ../src/profile-preferences.ui.h:70
 msgid "_Background image"
 msgstr "Imaxe de _fondu"
 
-#: ../src/profile-preferences.ui.h:72
+#: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
 msgstr "Archivu de imaxe:"
 
-#: ../src/profile-preferences.ui.h:73
+#: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
 msgstr "Seleicionar Imaxe de Fondu"
 
-#: ../src/profile-preferences.ui.h:74
+#: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
 msgstr "De_splazar la imaxe de fondu"
 
-#: ../src/profile-preferences.ui.h:75
+#: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
 msgstr "Fondu _tresparente"
 
-#: ../src/profile-preferences.ui.h:76
+#: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
 msgstr "_Solombra tresparente o imaxe de fondu:"
 
-#: ../src/profile-preferences.ui.h:77
+#: ../src/profile-preferences.ui.h:76
 msgid "S_hade transparent background:"
 msgstr "So_lombra de fondu tresparente"
 
-#: ../src/profile-preferences.ui.h:78
+#: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Nengún</i></small>"
 
-#: ../src/profile-preferences.ui.h:79
+#: ../src/profile-preferences.ui.h:78
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Máximu</i></small>"
 
-#: ../src/profile-preferences.ui.h:80
+#: ../src/profile-preferences.ui.h:79
 msgid "Background"
 msgstr "Fondu de pantalla"
 
-#: ../src/profile-preferences.ui.h:81
+#: ../src/profile-preferences.ui.h:80
 msgid "_Scrollbar is:"
 msgstr "La _barra de desplazamientu ta:"
 
-#: ../src/profile-preferences.ui.h:82
+#: ../src/profile-preferences.ui.h:81
 msgid "Scroll on _output"
 msgstr "Desplazar na _salida"
 
-#: ../src/profile-preferences.ui.h:83
+#: ../src/profile-preferences.ui.h:82
 msgid "Scroll on _keystroke"
 msgstr "Desplazar al calcar _tecles"
 
-#: ../src/profile-preferences.ui.h:84
+#: ../src/profile-preferences.ui.h:83
 msgid "lines"
 msgstr "llinies"
 
-#: ../src/profile-preferences.ui.h:85
+#: ../src/profile-preferences.ui.h:84
 msgid "Scroll_back:"
 msgstr "_Desplazar haza atrás:"
 
-#: ../src/profile-preferences.ui.h:86
+#: ../src/profile-preferences.ui.h:85
 msgid "_Unlimited"
 msgstr "_Illimitáu"
 
-#: ../src/profile-preferences.ui.h:87
+#: ../src/profile-preferences.ui.h:86
 msgid "Scrolling"
 msgstr "Desplazamientu"
 
-#: ../src/profile-preferences.ui.h:88
+#: ../src/profile-preferences.ui.h:87
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1902,19 +1884,19 @@ msgstr ""
 "aplicaciones y sistemes operativos qu'esperen un comportamiento diferente "
 "del terminal.</i></small>"
 
-#: ../src/profile-preferences.ui.h:89
+#: ../src/profile-preferences.ui.h:88
 msgid "_Delete key generates:"
 msgstr "La tecla «_Esaniciar» xenera:"
 
-#: ../src/profile-preferences.ui.h:90
+#: ../src/profile-preferences.ui.h:89
 msgid "_Backspace key generates:"
 msgstr "La tecla «_Retrocesu» xenera:"
 
-#: ../src/profile-preferences.ui.h:91
+#: ../src/profile-preferences.ui.h:90
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "R_eaniciar les opciones de compatibilidá colos valores predeterminaos"
 
-#: ../src/profile-preferences.ui.h:92
+#: ../src/profile-preferences.ui.h:91
 msgid "Compatibility"
 msgstr "Compatibilidá"
 
@@ -2533,7 +2515,7 @@ msgstr ""
 msgid "Show per-terminal options"
 msgstr "Amuesa les opciones por terminal"
 
-#: ../src/terminal-profile.c:168
+#: ../src/terminal-profile.c:165
 msgid "Unnamed"
 msgstr "Ensin nome"
 
@@ -2541,7 +2523,7 @@ msgstr "Ensin nome"
 msgid "_Profile Preferences"
 msgstr "_Preferencies del perfil"
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1957
+#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
 msgid "_Relaunch"
 msgstr "_Rellanzar"
 
@@ -2549,17 +2531,17 @@ msgstr "_Rellanzar"
 msgid "There was an error creating the child process for this terminal"
 msgstr "Hebo un fallu al crear el procesu fíu pa esta terminal"
 
-#: ../src/terminal-screen.c:1962
+#: ../src/terminal-screen.c:1954
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El procesu fíu coló normalmente col estatus %d."
 
-#: ../src/terminal-screen.c:1967
+#: ../src/terminal-screen.c:1959
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "La señal %d finó'l procesu fíu."
 
-#: ../src/terminal-screen.c:1972
+#: ../src/terminal-screen.c:1964
 msgid "The child process was terminated."
 msgstr "El procesu fíu foi termináu"
 
