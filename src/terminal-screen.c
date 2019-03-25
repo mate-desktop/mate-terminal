@@ -343,6 +343,9 @@ terminal_screen_init (TerminalScreen *screen)
 	priv = screen->priv = G_TYPE_INSTANCE_GET_PRIVATE (screen, TERMINAL_TYPE_SCREEN, TerminalScreenPrivate);
 
 	vte_terminal_set_mouse_autohide (VTE_TERMINAL (screen), TRUE);
+#if VTE_CHECK_VERSION (0, 52, 0)
+	vte_terminal_set_bold_is_bright (VTE_TERMINAL (screen), TRUE);
+#endif
 
 	priv->child_pid = -1;
 
