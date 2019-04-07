@@ -1,28 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
-"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-  <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY app "MATE Terminal">  
-  <!ENTITY appversion "1.10">
-  <!ENTITY manrevision "1.10">
-  <!ENTITY date "July 2015">
-]>
-<!-- =============Document Header ============================= -->
-<!-- (Do not remove this comment block.)
-  Maintained by the MATE Documentation Project
-  Template version: 2.0 beta
-  Template last modified Jan 2, 2002 
-    
-  -->
-<article id="index" lang="en"> 
-  <articleinfo> 
-     <title>&app; Manual</title> 
-     <abstract role="description">
-       <para>
-	 The Terminal gives users the power to communicate with their system using
-text-based commands through a shell such as Bash.
-       </para>
-     </abstract>
+<?xml version="1.0" encoding="utf-8"?>
+<?db.chunk.max_depth 2?>
+<article xmlns="http://docbook.org/ns/docbook"
+         xmlns:db="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0" xml:id="index" xml:lang="en">
+  <info>
+     <title>MATE Terminal Manual</title>
+
      <copyright> 
         <year>2019</year> 
         <holder>MATE Documentation Project</holder>
@@ -56,51 +41,35 @@ text-based commands through a shell such as Bash.
      </copyright>
      <publisher> 
         <publishername>MATE Documentation Project</publishername> 
-     </publisher> &legal; 
+     </publisher>
+
+     <xi:include href="legal.xml"/>
+  
      <authorgroup> 
-        <author> 
-          <surname>MATE Documentation Team</surname> 
-          <affiliation> 
+        <author><personname><surname>MATE Documentation Team</surname></personname><affiliation> 
              <orgname>MATE DESKTOP</orgname> 
-          </affiliation> 
-        </author> 
-        <author> 
-          <firstname>Sun</firstname> 
-          <surname>GNOME Documentation Team</surname> 
-          <affiliation> 
+          </affiliation></author> 
+        <author><personname><firstname>Sun</firstname><surname>GNOME Documentation Team</surname></personname><affiliation> 
              <orgname>Sun Microsystems</orgname> 
-          </affiliation> 
-        </author> 
-        <author> 
-          <firstname>Miguel</firstname> 
-          <surname>de Icaza</surname> 
-          <affiliation> 
+          </affiliation></author> 
+        <author><personname><firstname>Miguel</firstname><surname>de Icaza</surname></personname><affiliation> 
              <orgname>GNOME Documentation Project</orgname> 
-          </affiliation> 
-        </author> 
-        <author> 
-          <firstname>Michael</firstname> 
-          <surname>Zucchi</surname> 
-          <affiliation> 
+          </affiliation></author> 
+        <author><personname><firstname>Michael</firstname><surname>Zucchi</surname></personname><affiliation> 
              <orgname>GNOME Documentation Project</orgname> 
-          </affiliation> 
-        </author> 
-        <author> 
-          <firstname>Alexander</firstname> 
-          <surname>Kirillov</surname> 
-          <affiliation> 
+          </affiliation></author> 
+        <author><personname><firstname>Alexander</firstname><surname>Kirillov</surname></personname><affiliation> 
              <orgname>GNOME Documentation Project</orgname> 
-          </affiliation> 
-        </author> 
+          </affiliation></author> 
      </authorgroup> 
+
      <publisher role="maintainer">
        <publishername>GNOME Documentation Project</publishername>
      </publisher>
-	<releaseinfo revision="2.30" role="review">
-    </releaseinfo>
+
      <revhistory>
 	<revision> 
-          <revnumber>GNOME Terminal Manual V2.9</revnumber> 
+          <revnumber>2.9</revnumber>
           <date>January 2010</date> 
           <revdescription> 
              <para role="author">Paul Cutler
@@ -109,7 +78,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision> 
 	<revision> 
-          <revnumber>GNOME Terminal Manual V2.8</revnumber> 
+          <revnumber>2.8</revnumber>
           <date>March 2009</date> 
           <revdescription> 
              <para role="author">Paul Cutler</para>
@@ -117,7 +86,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
 	<revision> 
-          <revnumber>GNOME Terminal Manual V2.7</revnumber> 
+          <revnumber>2.7</revnumber>
           <date>November 2003</date> 
           <revdescription> 
              <para role="author">Sun GNOME Documentation Team</para>
@@ -125,7 +94,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
 	<revision> 
-          <revnumber>GNOME Terminal Manual V2.6</revnumber> 
+          <revnumber>2.6</revnumber>
           <date>September 2003</date> 
           <revdescription> 
              <para role="author">Sun GNOME Documentation Team</para>
@@ -133,7 +102,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
 	<revision> 
-          <revnumber>GNOME Terminal Manual V2.5</revnumber> 
+          <revnumber>2.5</revnumber>
           <date>May 2003</date> 
           <revdescription> 
              <para role="author">
@@ -144,8 +113,8 @@ text-based commands through a shell such as Bash.
              </para>
           </revdescription> 
         </revision>
-			<revision> 
-          <revnumber>GNOME Terminal Manual V2.4</revnumber> 
+        <revision> 
+          <revnumber>2.4</revnumber>
           <date>January 2003</date> 
           <revdescription> 
              <para role="author">
@@ -157,7 +126,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
         <revision> 
-          <revnumber>GNOME Terminal Manual V2.3</revnumber> 
+          <revnumber>2.3</revnumber>
           <date>August 2002</date> 
           <revdescription> 
              <para role="author">
@@ -169,7 +138,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
         <revision> 
-          <revnumber>GNOME Terminal Manual V2.2</revnumber> 
+          <revnumber>2.2</revnumber>
           <date>August 2002</date> 
           <revdescription> 
              <para role="author">
@@ -181,7 +150,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
         <revision> 
-          <revnumber>GNOME Terminal Manual V2.1</revnumber> 
+          <revnumber>2.1</revnumber>
           <date>August 2002</date> 
           <revdescription> 
              <para role="author">
@@ -193,7 +162,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision>
         <revision> 
-          <revnumber>GNOME Terminal Manual V2.0</revnumber> 
+          <revnumber>2.0</revnumber>
           <date>April 2002</date> 
           <revdescription> 
              <para role="author">
@@ -205,7 +174,7 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision> 
         <revision> 
-          <revnumber>GNOME Terminal User's Guide</revnumber> 
+          <revnumber>1.0</revnumber> 
           <date>May 2000</date> 
           <revdescription> 
              <para role="author">
@@ -218,32 +187,29 @@ text-based commands through a shell such as Bash.
           </revdescription> 
         </revision> 
      </revhistory> 
-     <releaseinfo> This manual describes version &appversion; of &app;.
-        </releaseinfo> 
-     <legalnotice> 
-        <title>Feedback</title> 
-        <para> To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>. </para>
-     </legalnotice> 
-  </articleinfo> 
+
+     <releaseinfo>This manual describes version 1.22 of MATE Terminal.</releaseinfo>
+
+  </info> 
+
   <indexterm> 
-     <primary>&app;</primary> 
+     <primary>MATE Terminal</primary> 
   </indexterm> 
   <indexterm> 
      <primary>terminal application</primary> 
   </indexterm> 
   
   <!-- ============= Introduction ============================== -->
-  <sect1 id="mate-terminal-introduction"> 
-     <title>Introduction</title> 
+  <section xml:id="mate-terminal-introduction"><info><title>Introduction</title></info> 
      <para>
-        <application>&app;</application> is a terminal emulation application that you can use to perform the following tasks: 
+        <application>MATE Terminal</application> is a terminal emulation application that you can use to perform the following tasks: 
      </para>
      <variablelist> 
         <varlistentry> 
           <term>Access a UNIX shell in the MATE environment</term> 
           <listitem> 
              <para>
-                A shell is a program that interprets and executes the commands that you type at a command line prompt. When you start <application>&app;</application>, the application starts the default shell that is specified in your system account. You can switch to a different shell at any time. 
+                A shell is a program that interprets and executes the commands that you type at a command line prompt. When you start <application>MATE Terminal</application>, the application starts the default shell that is specified in your system account. You can switch to a different shell at any time. 
              </para>
           </listitem> 
         </varlistentry> 
@@ -251,24 +217,23 @@ text-based commands through a shell such as Bash.
           <term>Run any application that is designed to run on VT102, VT220, and <application>xterm</application> terminals</term> 
           <listitem> 
              <para>
-                <application>&app;</application> emulates the <application>xterm</application> application developed by the X Consortium. In turn, the <application>xterm</application> application emulates the DEC VT102 terminal and also supports the DEC VT220 escape sequences. An escape sequence is a series of characters that starts with the <keycap>Esc</keycap> character. <application>&app;</application> accepts all of the escape sequences that the VT102 and VT220 terminals use for functions such as to position the cursor and to clear the screen. 
+                <application>MATE Terminal</application> emulates the <application>xterm</application> application developed by the X Consortium. In turn, the <application>xterm</application> application emulates the DEC VT102 terminal and also supports the DEC VT220 escape sequences. An escape sequence is a series of characters that starts with the <keycap>Esc</keycap> character. <application>MATE Terminal</application> accepts all of the escape sequences that the VT102 and VT220 terminals use for functions such as to position the cursor and to clear the screen. 
              </para>
           </listitem> 
         </varlistentry> 
      </variablelist> 
-  </sect1> 
+  </section> 
 
   <!--=========== Getting Started ============================== -->
   
-  <sect1 id="mate-terminal-get-started"> 
-     <title>Getting Started</title> 
+  <section xml:id="mate-terminal-get-started"><info><title>Getting Started</title></info> 
      <para>
-        The following sections describe how to start <application>&app;</application>. 
+        The following sections describe how to start <application>MATE Terminal</application>. 
      </para>
-     <sect2 id="mate-terminal-to-start"> 
-        <title>Starting &app;</title> 
+
+     <section xml:id="mate-terminal-to-start"><info><title>Starting MATE Terminal</title></info> 
         <para>
-          You can start <application>&app;</application> in the following ways: 
+          You can start <application>MATE Terminal</application> in the following ways: 
         </para>
         <variablelist> 
           <varlistentry> 
@@ -285,35 +250,34 @@ text-based commands through a shell such as Bash.
                   Execute the following command: <command>mate-terminal</command>
                 </para>
                 <para>
-                  You can use command line options to modify the way in which you run <application>&app;</application>. To view the command line options, execute the following command: <command>mate-terminal --help</command>
+                  You can use command line options to modify the way in which you run <application>MATE Terminal</application>. To view the command line options, execute the following command: <command>mate-terminal --help</command>
                 </para>
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-first-start"> 
-        <title>When You First Start &app;</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-first-start"><info><title>When You First Start MATE Terminal</title></info> 
         <para>
-          When you start <application>&app;</application> for the first time, the application opens a terminal window with a group of default settings. The group of default settings is called the Default profile.  </para>
-        <figure id="mate-terminal_default"> 
-          <title>Example of a Default &app; Window</title> 
-          <screenshot> 
-             <screeninfo>&app; default window</screeninfo> 
-             <mediaobject> 
+          When you start <application>MATE Terminal</application> for the first time, the application opens a terminal window with a group of default settings. The group of default settings is called the Default profile.  </para>
+        <figure xml:id="mate-terminal_default"><info><title>Example of a Default MATE Terminal Window</title></info> 
+          <screenshot>
+             <info><abstract><para>MATE Terminal default window</para></abstract></info>
+             <mediaobject>
                 <imageobject>
                   <imagedata fileref="figures/mate-terminal-default.png" format="PNG"/> 
                 </imageobject> 
                 <textobject> 
-                  <phrase>&app; default window</phrase> 
+                  <phrase>MATE Terminal default window</phrase> 
                 </textobject> 
              </mediaobject> 
           </screenshot> 
         </figure> 
         <para>
-          The terminal window displays a command prompt where you can type UNIX commands. The command prompt can be a %, #, >, $, or any other special character. The cursor is positioned at the command prompt. When you type a UNIX command and press <keycap>Return</keycap>, the computer executes the command. By default, <application>&app;</application> uses the default shell specified for the user who starts the application. 
+          The terminal window displays a command prompt where you can type UNIX commands. The command prompt can be a %, #, &gt;, $, or any other special character. The cursor is positioned at the command prompt. When you type a UNIX command and press <keycap>Return</keycap>, the computer executes the command. By default, <application>MATE Terminal</application> uses the default shell specified for the user who starts the application. 
         </para>
         <para>
-          <application>&app;</application> also sets the following environment variables: 
+          <application>MATE Terminal</application> also sets the following environment variables: 
         </para>
         <variablelist> 
           <varlistentry> 
@@ -335,37 +299,35 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
+     </section> 
 
-     <sect2 id="mate-terminal-profiles"> 
-        <title>Terminal Profiles</title> 
+     <section xml:id="mate-terminal-profiles"><info><title>Terminal Profiles</title></info> 
         <para>
-          You can create a new profile, and apply the new profile to the terminal to modify characteristics such as font, color and effects, scroll behavior, window title, and compatibility. You can also specify a command that runs automatically when you start <application>&app;</application> in the profile. </para>
+          You can create a new profile, and apply the new profile to the terminal to modify characteristics such as font, color and effects, scroll behavior, window title, and compatibility. You can also specify a command that runs automatically when you start <application>MATE Terminal</application> in the profile. </para>
           <para>You define each terminal profile in the <guilabel>Profiles</guilabel> dialog, which you access from the <guimenu>Edit</guimenu> menu. You can define as many different profiles as you require. When you start a terminal, you can choose the profile that you want to use for the terminal. Alternatively, you can change the terminal profile while you use the terminal. To specify an initial profile for a terminal when you start the application from a command line, use the following command: </para>
         <para>
           <command>mate-terminal --window-with-profile=<replaceable>profilename</replaceable></command> 
         </para>
         <para>
-          The name of the current profile appears in the titlebar of the <application>&app;</application>, unless you specify a different titlebar name in the <guilabel>Editing Profile</guilabel> dialog.  </para>
+          The name of the current profile appears in the titlebar of the <application>MATE Terminal</application>, unless you specify a different titlebar name in the <guilabel>Editing Profile</guilabel> dialog.  </para>
         <para>
           See <xref linkend="mate-terminal-manage-profiles"/> for information about how to define and use a new terminal profile.  </para>
-     </sect2> 
-     <sect2 id="mate-terminal-more-windows"> 
-        <title>Working With Multiple Terminals</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-more-windows"><info><title>Working With Multiple Terminals</title></info> 
         <para>
-          <application>&app;</application> provides a tab feature that enables you to open several terminals in a single window. Each terminal opens in a separate tab. Click on the appropriate tab to display the terminal in the window. Each tabbed terminal in a window is a separate subprocess, so you can use each terminal for different tasks. You can apply a different profile to each tabbed terminal in the window.  </para>
+          <application>MATE Terminal</application> provides a tab feature that enables you to open several terminals in a single window. Each terminal opens in a separate tab. Click on the appropriate tab to display the terminal in the window. Each tabbed terminal in a window is a separate subprocess, so you can use each terminal for different tasks. You can apply a different profile to each tabbed terminal in the window.  </para>
        <para>
-          The titlebar of the terminal window shows either the name of the current profile, or the name specified by the current profile. <xref linkend="mate-terminal-tabbed"/> shows a <application>&app;</application> window with four tabs. In this case, each of the four tabs has a different profile. The name of the profile in the active tab, Profile 1, appears in the titlebar.  </para>
-        <figure id="mate-terminal-tabbed"> 
-          <title>Example of a Terminal Window With Tabs</title> 
+          The titlebar of the terminal window shows either the name of the current profile, or the name specified by the current profile. <xref linkend="mate-terminal-tabbed"/> shows a <application>MATE Terminal</application> window with four tabs. In this case, each of the four tabs has a different profile. The name of the profile in the active tab, Profile 1, appears in the titlebar.  </para>
+        <figure xml:id="mate-terminal-tabbed"><info><title>Example of a Terminal Window With Tabs</title></info> 
           <screenshot> 
-             <screeninfo>&app; default window</screeninfo> 
+             <info><abstract><para>MATE Terminal default window</para></abstract></info> 
              <mediaobject> 
                 <imageobject>
                   <imagedata fileref="figures/mate-terminal-tabbed.png" format="PNG"/> 
                 </imageobject> 
                 <textobject> 
-                  <phrase>&app; window with four tabs</phrase>
+                  <phrase>MATE Terminal window with four tabs</phrase>
                 </textobject> 
              </mediaobject> 
           </screenshot> 
@@ -373,17 +335,15 @@ text-based commands through a shell such as Bash.
         <para>
           See <xref linkend="mate-terminal-windows"/> for information about how to open a new tabbed terminal. 
         </para>
-     </sect2> 
+     </section> 
 
-  </sect1> 
+  </section> 
   
   <!--=========== Usage ============================== -->  
 
-  <sect1 id="mate-terminal-usage"> 
-     <title>Usage</title> 
+  <section xml:id="mate-terminal-usage"><info><title>Usage</title></info> 
 
-     <sect2 id="mate-terminal-windows"> 
-        <title>Opening and Closing Terminals</title> 
+     <section xml:id="mate-terminal-windows"><info><title>Opening and Closing Terminals</title></info> 
         <variablelist> 
           <varlistentry> 
              <term>To open a new terminal window:</term> 
@@ -400,7 +360,7 @@ text-based commands through a shell such as Bash.
                 <para>
                   Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Window</guimenuitem></menuchoice>.  </para>
                 <para>
-                  This action closes the terminal and any subprocesses that you opened from the terminal. If you close the last terminal window, the <application>&app;</application> application exits.  </para>
+                  This action closes the terminal and any subprocesses that you opened from the terminal. If you close the last terminal window, the <application>MATE Terminal</application> application exits.  </para>
              </listitem> 
           </varlistentry> 
           <varlistentry> 
@@ -425,7 +385,7 @@ text-based commands through a shell such as Bash.
              <term>To close a tabbed terminal:</term> 
              <listitem> 
                 <para>
-                  <orderedlist> 
+                  <orderedlist inheritnum="ignore" continuation="restarts"> 
                      <listitem> 
                         <para>
                           Display the tabbed terminal that you want to close. 
@@ -440,15 +400,15 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-manage-profiles"> 
-        <title>Managing Profiles</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-manage-profiles"><info><title>Managing Profiles</title></info> 
         <variablelist> 
           <varlistentry> 
              <term>To add a new profile:</term> 
              <listitem> 
                 <para>
-                  <orderedlist> 
+                  <orderedlist inheritnum="ignore" continuation="restarts"> 
                      <listitem> 
                         <para>
                           Choose <menuchoice><guimenu>File</guimenu><guimenuitem>New Profile</guimenuitem></menuchoice> to display the <guilabel>New Profile</guilabel> dialog.  </para>
@@ -467,7 +427,7 @@ text-based commands through a shell such as Bash.
                      </listitem> 
                      <listitem> 
                         <para>
-                          Click <guibutton>Close</guibutton>. <application>&app;</application> adds the profile to the <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change Profile</guisubmenu></menuchoice> submenu.  </para>
+                          Click <guibutton>Close</guibutton>. <application>MATE Terminal</application> adds the profile to the <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change Profile</guisubmenu></menuchoice> submenu.  </para>
                      </listitem> 
                   </orderedlist> 
                 </para>
@@ -477,7 +437,7 @@ text-based commands through a shell such as Bash.
              <term>To change the profile of a tabbed terminal:</term> 
              <listitem> 
                 <para>
-                  <orderedlist> 
+                  <orderedlist inheritnum="ignore" continuation="restarts"> 
                      <listitem> 
                         <para>
                           Click on the tab of the tabbed terminal for which you want to change the profile.  </para>
@@ -515,7 +475,7 @@ text-based commands through a shell such as Bash.
              <term>To delete a profile:</term> 
              <listitem> 
                 <para>
-                  <orderedlist> 
+                  <orderedlist inheritnum="ignore" continuation="restarts"> 
                      <listitem> 
                         <para>
                           Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>.  </para>
@@ -537,9 +497,9 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-tabs"> 
-        <title>Modifying a Terminal Window</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-tabs"><info><title>Modifying a Terminal Window</title></info> 
         <variablelist> 
           <varlistentry> 
              <term>To hide the menubar:</term> 
@@ -555,7 +515,7 @@ text-based commands through a shell such as Bash.
                   Right-click on the terminal window, then choose <guimenuitem>Show Menubar</guimenuitem> from the popup menu.  </para>
              </listitem> 
           </varlistentry> 
-          <varlistentry><term>To display the <application>&app;</application> window in full-screen mode:</term>
+          <varlistentry><term>To display the <application>MATE Terminal</application> window in full-screen mode:</term>
             <listitem>
               <para>Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></menuchoice>. Full-screen mode displays the text in a window that fills the full screen. The window does not contain a window frame or titlebar. To exit from this mode, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></menuchoice> again.</para>
             </listitem>     
@@ -568,9 +528,9 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-contents"> 
-        <title>Working with the Contents of Terminal Windows</title> 
+     </section>
+
+     <section xml:id="mate-terminal-contents"><info><title>Working with the Contents of Terminal Windows</title></info> 
         <variablelist> 
           <varlistentry> 
              <term>To scroll through previous commands and output:</term> 
@@ -613,7 +573,7 @@ text-based commands through a shell such as Bash.
                   </listitem> 
                 </itemizedlist> 
                 <para>
-                  These actions select all text between the first and last items. For all text selections, <application>&app;</application> copies the selected text into the clipboard when you release the mouse button. To explicitly copy the selected text, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>.</para>
+                  These actions select all text between the first and last items. For all text selections, <application>MATE Terminal</application> copies the selected text into the clipboard when you release the mouse button. To explicitly copy the selected text, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>.</para>
              </listitem> 
           </varlistentry> 
           <varlistentry> 
@@ -645,7 +605,7 @@ text-based commands through a shell such as Bash.
              <listitem> 
                 <para>
                   To access a Uniform Resource Locator (URL) that is displayed in a terminal, perform the following steps: </para>
-                  <orderedlist> 
+                  <orderedlist inheritnum="ignore" continuation="restarts"> 
                      <listitem> 
                         <para>
                           Move the mouse over the URL until the URL is underlined.  </para>
@@ -662,12 +622,11 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
+     </section> 
      
-     <sect2 id="mate-terminal-shortcuts"> 
-        <title>Viewing the Keyboard Shortcut Settings</title> 
+     <section xml:id="mate-terminal-shortcuts"><info><title>Viewing the Keyboard Shortcut Settings</title></info> 
         <para>
-          To view the keyboard shortcut settings that are defined for <application>&app;</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Keyboard Shortcuts</guimenuitem></menuchoice>. The <guilabel>Keyboard Shortcuts</guilabel> dialog contains the following items: </para>
+          To view the keyboard shortcut settings that are defined for <application>MATE Terminal</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Keyboard Shortcuts</guimenuitem></menuchoice>. The <guilabel>Keyboard Shortcuts</guilabel> dialog contains the following items: </para>
         <variablelist> 
           <varlistentry> 
              <term><guilabel>Disable all menu access keys (such as Alt+f to open File menu)</guilabel></term> 
@@ -680,7 +639,7 @@ text-based commands through a shell such as Bash.
              <term><guilabel>Disable menu shortcut key (F10 by default)</guilabel></term> 
              <listitem> 
                 <para>
-                  Deselect this option to disable the shortcut key that is defined to enable you to access the <application>&app;</application> menus. The default shortcut key to access the menus is <keycap>F10</keycap>.  </para>
+                  Deselect this option to disable the shortcut key that is defined to enable you to access the <application>MATE Terminal</application> menus. The default shortcut key to access the menus is <keycap>F10</keycap>.  </para>
              </listitem> 
           </varlistentry> 
           <varlistentry> 
@@ -692,11 +651,10 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry>
         </variablelist> 
-     </sect2>
+     </section>
      
-	<sect2 id="mate-terminal-resize">
-	<title>Text Size</title>
-	<para>You can use the following methods to resize the text in the &app; window:</para>
+	<section xml:id="mate-terminal-resize"><info><title>Text Size</title></info>
+		<para>You can use the following methods to resize the text in the MATE Terminal window:</para>
 		<itemizedlist>
 			<listitem><para>To increase the size of the text, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>.</para>
 			</listitem>
@@ -705,60 +663,55 @@ text-based commands through a shell such as Bash.
 			<listitem><para>To view the text at actual size, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Normal Size</guimenuitem></menuchoice>. </para>
 			</listitem>
 		</itemizedlist>
+	</section>	
 
-	</sect2>	
-
-     <sect2 id="mate-terminal-title"> 
-        <title>To Change the Terminal Title</title> 
+     <section xml:id="mate-terminal-title"><info><title>To Change the Terminal Title</title></info> 
         <para>
           To change the title of the currently displayed terminal, perform the following steps:</para>
-        <orderedlist>
+        <orderedlist inheritnum="ignore" continuation="restarts">
           <listitem>
             <para>Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Set Title</guimenuitem></menuchoice>. </para>
           </listitem>
           <listitem>
-            <para>Type the new title in the <guilabel>Title</guilabel> text box. <application>&app;</application> applies the change immediately. </para>
+            <para>Type the new title in the <guilabel>Title</guilabel> text box. <application>MATE Terminal</application> applies the change immediately. </para>
           </listitem>
           <listitem>
             <para>Click <guibutton>Close</guibutton> to close the <guilabel>Set Title</guilabel> dialog.  </para>
           </listitem>
         </orderedlist>
-	</sect2>	
+	</section>	
 
-     <sect2 id="mate-terminal-encoding"> 
-        <title>To Change the Character Encoding</title> 
+     <section xml:id="mate-terminal-encoding"><info><title>To Change the Character Encoding</title></info> 
         <para>
           To change the character encoding, choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character Encoding</guisubmenu></menuchoice>, then select the appropriate encoding. 
         </para>
 
-     <sect3 id="mate-terminal-encoding-add"> 
-        <title>To Change the List of Character Encodings</title> 
-        <para>
-          To change the list of character encodings displayed in the <guisubmenu>Set Character Encoding</guisubmenu> menu, perform the following steps:
-        </para>
-        <orderedlist>
-          <listitem>
-            <para>Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character Encoding</guisubmenu><guimenuitem>Add or Remove</guimenuitem></menuchoice>.
-            </para>
-          </listitem>
-          <listitem>
-            <para>To add an encoding to the <guisubmenu>Set Character Encoding</guisubmenu> menu, select the encoding in the <guilabel>Available encodings</guilabel> list box, then click the right arrow button.
-            </para>
-          </listitem>
-          <listitem>
-            <para>To remove an encoding from the <guisubmenu>Set Character Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings shown in menu</guilabel> list box, then click the left arrow button.
-            </para>
-          </listitem>
-          <listitem>
-            <para>Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove Terminal Encodings</guilabel> dialog.  </para>
-          </listitem>
-        </orderedlist>
-	</sect3>	
+        <section xml:id="mate-terminal-encoding-add"><info><title>To Change the List of Character Encodings</title></info> 
+           <para>
+             To change the list of character encodings displayed in the <guisubmenu>Set Character Encoding</guisubmenu> menu, perform the following steps:
+           </para>
+           <orderedlist inheritnum="ignore" continuation="restarts">
+             <listitem>
+               <para>Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character Encoding</guisubmenu><guimenuitem>Add or Remove</guimenuitem></menuchoice>.
+               </para>
+             </listitem>
+             <listitem>
+               <para>To add an encoding to the <guisubmenu>Set Character Encoding</guisubmenu> menu, select the encoding in the <guilabel>Available encodings</guilabel> list box, then click the right arrow button.
+               </para>
+             </listitem>
+             <listitem>
+               <para>To remove an encoding from the <guisubmenu>Set Character Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings shown in menu</guilabel> list box, then click the left arrow button.
+               </para>
+             </listitem>
+             <listitem>
+               <para>Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove Terminal Encodings</guilabel> dialog.  </para>
+             </listitem>
+           </orderedlist>
+	</section>	
 
-	</sect2>	
+     </section>	
 
-     <sect2 id="mate-terminal-reset"> 
-        <title>To Recover Your Terminal</title> 
+     <section xml:id="mate-terminal-reset"><info><title>To Recover Your Terminal</title></info> 
         <para>
           This section provides some advice if you have problems with terminals. 
         </para>
@@ -781,18 +734,17 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2>   
+     </section>   
 
-  </sect1> 
+  </section> 
   
   <!--=========== Preferences ============================== -->  
 
-  <sect1 id="mate-terminal-prefs"> 
-     <title>Preferences</title> 
+  <section xml:id="mate-terminal-prefs"><info><title>Preferences</title></info> 
      <para>
-        To configure <application>&app;</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Current Profile</guimenuitem></menuchoice>. To configure another profile that you set up choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>, select the profile you want to edit, then click <guibutton>Edit</guibutton>.  </para>
+        To configure <application>MATE Terminal</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Current Profile</guimenuitem></menuchoice>. To configure another profile that you set up choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>, select the profile you want to edit, then click <guibutton>Edit</guibutton>.  </para>
      <para>  
-        The <guilabel>Editing Profile</guilabel> dialog contains the following tabbed sections that you can use to configure <application>&app;</application>: </para>
+        The <guilabel>Editing Profile</guilabel> dialog contains the following tabbed sections that you can use to configure <application>MATE Terminal</application>: </para>
      <itemizedlist> 
 		<listitem><para><xref linkend="mate-terminal-prefs-general"/></para>
 		</listitem>
@@ -808,9 +760,7 @@ text-based commands through a shell such as Bash.
 		</listitem>
 	 </itemizedlist>
 
-     
-     <sect2 id="mate-terminal-prefs-general"> 
-        <title>General</title> 
+     <section xml:id="mate-terminal-prefs-general"><info><title>General</title></info> 
         <variablelist> 
           <varlistentry> 
              <term> 
@@ -871,15 +821,14 @@ text-based commands through a shell such as Bash.
                 <guilabel>Select-by-word characters</guilabel> </term> 
              <listitem> 
                 <para>
-                  Use this text box to specify characters or groups of characters that <application>&app;</application> considers to be words when you select text by word. See <xref linkend="mate-terminal-contents"/> for more information about how to select text by word. 
+                  Use this text box to specify characters or groups of characters that <application>MATE Terminal</application> considers to be words when you select text by word. See <xref linkend="mate-terminal-contents"/> for more information about how to select text by word. 
                 </para>
              </listitem> 
           </varlistentry> 
-          
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-prefs-title"> 
-        <title>Title and Command</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-prefs-title"><info><title>Title and Command</title></info> 
         <variablelist> 
           <varlistentry> 
              <term> 
@@ -937,20 +886,20 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-prefs-colors"> 
-        <title>Colours</title> 
+     </section> 
+
+     <section xml:id="mate-terminal-prefs-colors"><info><title>Colours</title></info> 
         <variablelist> 
-        <varlistentry> 
+          <varlistentry> 
              <term> 
                 <guilabel>Foreground and Background</guilabel>
                 </term> 
              <listitem> 
                 <para>
-                  Select the <guilabel>Use colours from system theme</guilabel> option to use the colors that are specified in the MATE Desktop theme that is selected in the <guilabel>Theme</guilabel> tab of the <ulink type="help" url="help:mate-user-guide/prefs-theme"><application>Appearance</application> preference tool</ulink>.
+                  Select the <guilabel>Use colours from system theme</guilabel> option to use the colors that are specified in the MATE Desktop theme that is selected in the <guilabel>Theme</guilabel> tab of the <link xlink:href="help:mate-user-guide/prefs-theme"><application>Appearance</application> preference tool</link>.
                 </para>
                 <para>
-                  Use the <guilabel>Built-in schemes</guilabel> drop-down list to specify the foreground and background colors for the terminal. <application>&app;</application> supports the following foreground and background color combinations: 
+                  Use the <guilabel>Built-in schemes</guilabel> drop-down list to specify the foreground and background colors for the terminal. <application>MATE Terminal</application> supports the following foreground and background color combinations: 
                 </para>
                 <itemizedlist> 
                   <listitem> 
@@ -1010,9 +959,9 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-     <sect2 id="mate-terminal-prefs-effects"> 
-        <title>Effects</title> 
+     </section>
+
+     <section xml:id="mate-terminal-prefs-effects"><info><title>Effects</title></info> 
         <variablelist> 
           <varlistentry> 
              <term> 
@@ -1061,12 +1010,11 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
+     </section> 
      
-     <sect2 id="mate-terminal-prefs-scrolling">
-    <title>Scrolling</title>
-     <variablelist>
-     <varlistentry> 
+     <section xml:id="mate-terminal-prefs-scrolling"><info><title>Scrolling</title></info>
+        <variablelist>
+          <varlistentry> 
              <term> 
                 <guilabel>Scrollbar is</guilabel> </term> 
              <listitem> 
@@ -1102,11 +1050,10 @@ text-based commands through a shell such as Bash.
                 </para>
              </listitem> 
           </varlistentry> 
-          </variablelist>
-     </sect2>
+        </variablelist>
+     </section>
      
-     <sect2 id="mate-terminal-prefs-compatibility"> 
-        <title>Compatibility</title> 
+     <section xml:id="mate-terminal-prefs-compatibility"><info><title>Compatibility</title></info>
         <variablelist> 
           <varlistentry> 
              <term> 
@@ -1136,6 +1083,6 @@ text-based commands through a shell such as Bash.
              </listitem> 
           </varlistentry> 
         </variablelist> 
-     </sect2> 
-  </sect1> 
-</article> 
+     </section> 
+  </section> 
+</article>
