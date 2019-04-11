@@ -4330,13 +4330,6 @@ static void
 help_about_callback (GtkAction *action,
                      TerminalWindow *window)
 {
-    static const char copyright[] =
-        "Copyright © 2002–2004 Havoc Pennington\n"
-        "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
-        "Copyright © 2006 Guilherme de S. Pastore\n"
-        "Copyright © 2007–2010 Christian Persch\n"
-        "Copyright © 2011 Perberos\n"
-        "Copyright © 2012-2019 MATE developers";
     char *licence_text;
     GBytes *bytes;
     const guint8 *data;
@@ -4391,7 +4384,12 @@ help_about_callback (GtkAction *action,
 
     gtk_show_about_dialog (GTK_WINDOW (window),
                            "program-name", _("MATE Terminal"),
-                           "copyright", copyright,
+                           "copyright", _("Copyright \xc2\xa9 2002–2004 Havoc Pennington\n"
+                                          "Copyright \xc2\xa9 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+                                          "Copyright \xc2\xa9 2006 Guilherme de S. Pastore\n"
+                                          "Copyright \xc2\xa9 2007–2010 Christian Persch\n"
+                                          "Copyright \xc2\xa9 2011 Perberos\n"
+                                          "Copyright \xc2\xa9 2012-2019 MATE developers"),
                            "comments", _("A terminal emulator for the MATE desktop"),
                            "version", VERSION,
                            "authors", array_strv,
