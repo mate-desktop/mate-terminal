@@ -4331,7 +4331,7 @@ help_about_callback (GtkAction *action,
         "Copyright © 2006 Guilherme de S. Pastore\n"
         "Copyright © 2007–2010 Christian Persch\n"
         "Copyright © 2011 Perberos\n"
-        "Copyright © 2012-2018 MATE developers";
+        "Copyright © 2012-2019 MATE developers";
     char *licence_text;
     GBytes *bytes;
     const guint8 *data;
