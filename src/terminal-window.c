@@ -4379,6 +4379,8 @@ help_about_callback (GtkAction *action,
 
     gtk_show_about_dialog (GTK_WINDOW (window),
                            "program-name", _("MATE Terminal"),
+                           "version", VERSION,
+                           "title", _("About MATE Terminal"),
                            "copyright", _("Copyright \xc2\xa9 2002–2004 Havoc Pennington\n"
                                           "Copyright \xc2\xa9 2003–2004, 2007 Mariano Suárez-Alvarez\n"
                                           "Copyright \xc2\xa9 2006 Guilherme de S. Pastore\n"
@@ -4386,7 +4388,6 @@ help_about_callback (GtkAction *action,
                                           "Copyright \xc2\xa9 2011 Perberos\n"
                                           "Copyright \xc2\xa9 2012-2019 MATE developers"),
                            "comments", _("A terminal emulator for the MATE desktop"),
-                           "version", VERSION,
                            "authors", array_strv,
                            "artists", artists,
                            "documenters", documenters,
