@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 18:23+0100\n"
+"POT-Creation-Date: 2019-04-23 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4388
+#: ../src/terminal-window.c:4393
 msgid "MATE Terminal"
 msgstr ""
 
@@ -140,7 +140,7 @@ msgstr ""
 #: ../src/org.mate.terminal.gschema.xml.in.h:13
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
-"more than one open tab."
+"more than one open tab or any foreground subprocesses."
 msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
@@ -1647,7 +1647,7 @@ msgstr ""
 msgid "Find Previous"
 msgstr ""
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
+#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4174
 msgid "Set Title"
 msgstr ""
 
@@ -2173,29 +2173,29 @@ msgstr ""
 msgid "Unnamed"
 msgstr ""
 
-#: ../src/terminal-screen.c:1507
+#: ../src/terminal-screen.c:1510
 msgid "_Profile Preferences"
 msgstr ""
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
+#: ../src/terminal-screen.c:1511 ../src/terminal-screen.c:1952
 msgid "_Relaunch"
 msgstr ""
 
-#: ../src/terminal-screen.c:1511
+#: ../src/terminal-screen.c:1514
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: ../src/terminal-screen.c:1954
+#: ../src/terminal-screen.c:1957
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1959
+#: ../src/terminal-screen.c:1962
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: ../src/terminal-screen.c:1964
+#: ../src/terminal-screen.c:1967
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2465,7 +2465,7 @@ msgstr ""
 msgid "P_rofiles"
 msgstr ""
 
-#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
+#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3578
 msgid "C_lose Window"
 msgstr ""
 
@@ -2485,50 +2485,54 @@ msgstr ""
 msgid "_Full Screen"
 msgstr ""
 
-#: ../src/terminal-window.c:3560
-msgid "Close this window?"
-msgstr ""
-
-#: ../src/terminal-window.c:3560
-msgid "Close this terminal?"
-msgstr ""
-
-#: ../src/terminal-window.c:3564
+#: ../src/terminal-window.c:3556
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: ../src/terminal-window.c:3568
+#: ../src/terminal-window.c:3559
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
 msgstr ""
 
-#: ../src/terminal-window.c:3573
+#: ../src/terminal-window.c:3562
+msgid "There are multiple tabs open in this window."
+msgstr ""
+
+#: ../src/terminal-window.c:3571
+msgid "Close this window?"
+msgstr ""
+
+#: ../src/terminal-window.c:3571
+msgid "Close this terminal?"
+msgstr ""
+
+#: ../src/terminal-window.c:3578
 msgid "C_lose Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:3639
+#: ../src/terminal-window.c:3644
 msgid "Could not save contents"
 msgstr ""
 
-#: ../src/terminal-window.c:3663
+#: ../src/terminal-window.c:3668
 msgid "Save as..."
 msgstr ""
 
-#: ../src/terminal-window.c:4186
+#: ../src/terminal-window.c:4191
 msgid "_Title:"
 msgstr ""
 
-#: ../src/terminal-window.c:4371
+#: ../src/terminal-window.c:4376
 msgid "Contributors:"
 msgstr ""
 
-#: ../src/terminal-window.c:4390
+#: ../src/terminal-window.c:4395
 msgid "A terminal emulator for the MATE desktop"
 msgstr ""
 
-#: ../src/terminal-window.c:4397
+#: ../src/terminal-window.c:4402
 msgid "translator-credits"
 msgstr ""
