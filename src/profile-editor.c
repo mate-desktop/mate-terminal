@@ -253,6 +253,15 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 		SET_SENSITIVE ("copy-checkbutton",
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_COPY_SELECTION));
 
+#ifdef ENABLE_SKEY
+	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_USE_SKEY))
+		SET_SENSITIVE ("use-skey-checkbutton",
+		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_USE_SKEY));
+#endif
+	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_USE_URLS))
+		SET_SENSITIVE ("use-urls-checkbutton",
+		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_USE_URLS));
+
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_WORD_CHARS))
 		SET_SENSITIVE ("word-chars-entry",
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_WORD_CHARS));
@@ -683,7 +692,9 @@ terminal_profile_edit (TerminalProfile *profile,
 	editor = (GtkWidget *) gtk_builder_get_object  (builder, "profile-editor-dialog");
 	g_object_set_data_full (G_OBJECT (editor), "builder",
 	                        builder, (GDestroyNotify) g_object_unref);
-
+#ifndef ENABLE_SKEY
+	gtk_widget_hide (profile_editor_get_widget (editor, "use-skey-checkbutton"));
+#endif
 	/* Store the dialogue on the profile, so we can acccess it above to check if
 	 * there's already a profile editor for this profile.
 	 */
@@ -818,6 +829,10 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT_WITH_FLAGS ("bell-checkbutton", TERMINAL_PROFILE_SILENT_BELL, FLAG_INVERT_BOOL);
 	/* CONNECT_WITH_FLAGS ("copy-checkbutton", TERMINAL_PROFILE_COPY_SELECTION, FLAG_INVERT_BOOL); */
 	CONNECT ("copy-checkbutton", TERMINAL_PROFILE_COPY_SELECTION);
+#ifdef ENABLE_SKEY
+	CONNECT ("use-skey-checkbutton", TERMINAL_PROFILE_USE_SKEY);
+#endif
+	CONNECT ("use-urls-checkbutton", TERMINAL_PROFILE_USE_URLS);
 
 #undef CONNECT
 #undef CONNECT_WITH_FLAGS

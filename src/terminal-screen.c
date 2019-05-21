@@ -174,6 +174,9 @@ static GRegex **url_regexes;
 static TerminalURLFlavour *url_regex_flavors;
 static guint n_url_regexes;
 
+static void terminal_screen_url_match_remove (TerminalScreen *screen);
+
+
 #ifdef ENABLE_SKEY
 static const TerminalRegexPattern skey_regex_patterns[] =
 {
@@ -333,12 +336,10 @@ terminal_screen_init (TerminalScreen *screen)
 		{ "text/x-moz-url",  0, TARGET_MOZ_URL },
 		{ "_NETSCAPE_URL", 0, TARGET_NETSCAPE_URL }
 	};
-	VteTerminal *terminal = VTE_TERMINAL (screen);
 	TerminalScreenPrivate *priv;
 	GtkTargetList *target_list;
 	GtkTargetEntry *targets;
 	int n_targets;
-	guint i;
 
 	priv = screen->priv = G_TYPE_INSTANCE_GET_PRIVATE (screen, TERMINAL_TYPE_SCREEN, TerminalScreenPrivate);
 
@@ -350,18 +351,6 @@ terminal_screen_init (TerminalScreen *screen)
 	priv->child_pid = -1;
 
 	priv->font_scale = PANGO_SCALE_MEDIUM;
-
-	for (i = 0; i < n_url_regexes; ++i)
-	{
-		TagData *tag_data;
-
-		tag_data = g_slice_new (TagData);
-		tag_data->flavor = url_regex_flavors[i];
-		tag_data->tag = vte_terminal_match_add_gregex (terminal, url_regexes[i], 0);
-		vte_terminal_match_set_cursor_type (terminal, tag_data->tag, URL_MATCH_CURSOR);
-
-		priv->match_tags = g_slist_prepend (priv->match_tags, tag_data);
-	}
 
 	/* Setup DND */
 	target_list = gtk_target_list_new (NULL, 0);
@@ -1060,6 +1049,29 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 		vte_terminal_set_cursor_shape (vte_terminal,
 		                               terminal_profile_get_property_enum (priv->profile, TERMINAL_PROFILE_CURSOR_SHAPE));
 
+	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_USE_URLS))
+	{
+		if (terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_URLS))
+		{
+			guint i;
+
+			for (i = 0; i < n_url_regexes; ++i)
+			{
+				TagData *tag_data;
+		
+				tag_data = g_slice_new (TagData);
+				tag_data->flavor = url_regex_flavors[i];
+				tag_data->tag = vte_terminal_match_add_gregex (vte_terminal, url_regexes[i], 0);
+				vte_terminal_match_set_cursor_type (vte_terminal, tag_data->tag, URL_MATCH_CURSOR);
+		
+				priv->match_tags = g_slist_prepend (priv->match_tags, tag_data);
+			}
+		}
+		else
+		{
+			terminal_screen_url_match_remove (screen);
+		}
+	}
 	g_object_thaw_notify (object);
 }
 
@@ -2311,6 +2323,30 @@ terminal_screen_skey_match_remove (TerminalScreen *screen)
 	}
 }
 #endif /* ENABLE_SKEY */
+
+static void
+terminal_screen_url_match_remove (TerminalScreen *screen)
+{
+	TerminalScreenPrivate *priv = screen->priv;
+	GSList *l, *next;
+
+	l = priv->match_tags;
+	while (l != NULL)
+	{
+		TagData *tag_data = (TagData *) l->data;
+
+		next = l->next;
+#ifdef ENABLE_SKEY
+		if (tag_data->flavor != FLAVOR_SKEY)
+#endif
+		{
+			vte_terminal_match_remove (VTE_TERMINAL (screen), tag_data->tag);
+			priv->match_tags = g_slist_delete_link (priv->match_tags, l);
+		}
+
+		l = next;
+	}
+}
 
 static char*
 terminal_screen_check_match (TerminalScreen *screen,
