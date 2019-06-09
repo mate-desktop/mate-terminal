@@ -4400,7 +4400,7 @@ help_about_callback (GtkAction *action,
                            "wrap-license", TRUE,
                            "translator-credits", _("translator-credits"),
                            "logo-icon-name", MATE_TERMINAL_ICON_NAME,
-                           "website", "http://www.mate-desktop.org",
+                           "website", "https://mate-desktop.org",
                            NULL);
 
     g_strfreev (array_strv);
