@@ -6,7 +6,7 @@ m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()
 
 m4_define([gt_api_version],[0])
 
-AC_INIT([MATE Terminal],[gt_version],[http://www.mate-desktop.org],[mate-terminal])
+AC_INIT([MATE Terminal],[gt_version],[https://mate-desktop.org],[mate-terminal])
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
