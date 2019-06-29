@@ -1058,12 +1058,12 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 			for (i = 0; i < n_url_regexes; ++i)
 			{
 				TagData *tag_data;
-		
+
 				tag_data = g_slice_new (TagData);
 				tag_data->flavor = url_regex_flavors[i];
 				tag_data->tag = vte_terminal_match_add_gregex (vte_terminal, url_regexes[i], 0);
 				vte_terminal_match_set_cursor_type (vte_terminal, tag_data->tag, URL_MATCH_CURSOR);
-		
+
 				priv->match_tags = g_slist_prepend (priv->match_tags, tag_data);
 			}
 		}
