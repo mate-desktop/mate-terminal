@@ -339,7 +339,7 @@ name_lost_cb (GDBusConnection *connection,
 	                       "Forwarding arguments to existing instance\n");
 
 	g_variant_builder_init (&builder, G_VARIANT_TYPE ("(ayayayayiay)"));
-    
+
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->default_working_dir));
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->display_name));
 	g_variant_builder_add (&builder, "@ay", string_to_ay (data->options->startup_id));

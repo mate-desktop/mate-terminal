@@ -2145,7 +2145,7 @@ terminal_window_init (TerminalWindow *window)
 
     GtkStyleContext *context;
 
-    GSettings *settings = g_settings_new ("org.mate.terminal.global"); 
+    GSettings *settings = g_settings_new ("org.mate.terminal.global");
 
     context = gtk_widget_get_style_context (GTK_WIDGET (window));
     gtk_style_context_add_class (context, "mate-terminal");
@@ -2179,11 +2179,11 @@ terminal_window_init (TerminalWindow *window)
     g_signal_connect_data (priv->notebook, "page-reordered",
                            G_CALLBACK (terminal_window_update_tabs_menu_sensitivity),
                            window, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
-                           
+
     gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
     g_signal_connect (priv->notebook, "scroll-event",
                             G_CALLBACK (notebook_scroll_event_cb), window);
-                            
+
     g_signal_connect (priv->notebook, "create-window",
                     G_CALLBACK (handle_tab_droped_on_desktop), window);
 
