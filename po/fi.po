@@ -11,6 +11,7 @@
 # Riku Viitanen <riisseli4@gmail.com>, 2018
 # Ammuu5, 2018
 # nomen omen, 2018
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-10 18:23+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: nomen omen, 2018\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019\n"
 "Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +42,12 @@ msgid ""
 "of the MATE Desktop Environment. If you would like to know more about MATE "
 "and MATE Terminal, please visit the project's home page. </p>"
 msgstr ""
+"<p>MATE Terminal on pääte-emulointisovellus, jolla voit käyttää UNIX-"
+"komentoja MATE-ympäristössä. MATE Terminal emuloi X Consortiumin kehittämää "
+"xterm-ohjelmaa. Se tukee läpikuultavia taustoja, avaa useita pääteitä yhteen"
+" ikkunaan (välilehdet) ja napsautettaville URL-osoitteille. </p><p>MATE "
+"Terminal on GNOME-terminaalin haara MATE-työpöytäympäristössä. Jos haluat "
+"tietää lisää MATE- ja MATE-terminaalista, käy projektin kotisivulla.</p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
 #: ../src/terminal-window.c:4388
@@ -126,7 +133,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
-msgstr ""
+msgstr "Onko vakio GTK+ pikakuvake valikkoriville käytössä"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -153,6 +160,9 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Mahdollisten koodausten alaryhmä esitetään \"Koodaus\" -alivalikossa. Tämä "
+"on luettelo koodauksista, jotka siellä näkyvät. Erityinen koodauksen nimi "
+"\"nykyinen\" tarkoittaa nykyisen paikannuksen koodauksen näyttämistä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:12
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -168,21 +178,25 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgid "Close tabs with middle click"
-msgstr ""
+msgstr "Sulje välilehdet keskimmäisellä napsautuksella"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Jos tosi, se mahdollistaa välilehtien sulkemisen käyttämällä keskimmäistä "
+"napsautusta."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:16
 msgid "Switch tabs with [Ctrl]+[Tab]"
-msgstr ""
+msgstr "Vaihda välilehtiä käyttäen [Ctrl]+[Tab]"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:17
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Jos tosi, se mahdollistaa välilehtien vaihtamisen käyttämällä [Ctrl+Tab] ja "
+"[Ctrl+Shift+Tab]."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:18
 msgctxt "visible-name"
@@ -319,7 +333,7 @@ msgstr "Kopioi valinta leikepöydälle"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:41
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr ""
+msgstr "Jos tosi, valinta kopioidaan automaattisesti leikepöydän puskuriin."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:42
 msgid "Characters that are considered \"part of a word\""
@@ -337,13 +351,15 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:44
 msgid "Whether to use custom terminal size for new windows"
-msgstr ""
+msgstr "Käytetäänkö mukautettua terminaalin kokoa uusille ikkunoille"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:45
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
 msgstr ""
+"Jos tosi, äskettäin luotu pääteikkuna on mukautettua kokoa, joka on "
+"määritetty oletuskoon sarakkeiden ja oletusarvojen, sekä rivien mukaan."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:46
 msgid "Default number of columns"
@@ -354,6 +370,8 @@ msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr ""
+"Sarakkeiden lukumäärä äskettäin luotu terminaali-ikkunoissa. Sillä ei ole "
+"vaikutusta, jos mukautettua oletuskokoa ei ole otettu käyttöön."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:48
 msgid "Default number of rows"
@@ -364,6 +382,8 @@ msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr ""
+"Uusien terminaali-ikkunoiden rivien lukumäärä. Sillä ei ole vaikutusta, jos "
+"mukautettua oletuskokoa ei käytetä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:50
 msgid "Position of the scrollbar"
@@ -374,6 +394,8 @@ msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr ""
+"Mihin terminaalin vierityspalkki asetetaan. Mahdollisuudet ovat \"vasen\", "
+"\"oikea\" ja \"piilotettu\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:52
 msgid "Number of lines to keep in scrollback"
@@ -766,6 +788,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Näppäimistön pikanäppäin, jolla leikepöydän sisältö liitetään päätteeseen. "
+"Ilmaistaan merkki jonona samassa muodossa, jota käytetään GTK+ -resurssi "
+"tiedostoissa. Jos asetat vaihtoehdon merkkijonolle \"pois päältä\", ei "
+"näihin toimintoihin tule pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:112
 msgid "Keyboard shortcut to select all text"
@@ -778,10 +804,14 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Näppäimistön pikanäppäin kaikkien tekstin valitsemiseksi pääteessä. "
+"Ilmaistaan merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostossa. "
+"Jos asetat vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin"
+" tule pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:114
 msgid "Keyboard shortcut to show the find dialog"
-msgstr ""
+msgstr "Näppäimistön pikanäppäin, joka näyttää etsi-valinta ikkunan"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:115
 msgid ""
@@ -790,10 +820,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Näppäimistön pikanäppäin etsinnän valintaikkunan näyttämiseksi. Ilmaistaan "
+"merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostoissa. Jos asetat "
+"vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin tule "
+"pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:116
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Pikanäppäin, jolla voit etsiä hakutermin seuraavan esiintymisen"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:117
 msgid ""
@@ -802,10 +836,14 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Näppäimistön pikanäppäin etsi seuraavan esiintymän löytämiseksi pääteessä. "
+"Ilmaistaan merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostoissa. "
+"Jos asetat vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin"
+" tule pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:118
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Pikanäppäin, jolla voit etsiä hakutermin edellisen osuman"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:119
 msgid ""
@@ -814,6 +852,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Näppäimistön pikanäppäin etsi edellisen esiintymän löytämiseksi pääteessä. "
+"Ilmaistaan merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostoissa. "
+"Jos asetat vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin"
+" tule pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:120
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -929,7 +971,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:134
 msgid "Keyboard shortcut to switch to the previous profile"
-msgstr ""
+msgstr "Siirtyminen edelliseen profiiliin pikanäppäimen avulla"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:135
 msgid ""
@@ -938,10 +980,14 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Näppäimistön pikanäppäin edelliseen profiiliin siirtymiseksi. Ilmaistaan "
+"merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostoissa. Jos asetat "
+"vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin tule "
+"pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:136
 msgid "Keyboard shortcut to switch to the next profile"
-msgstr ""
+msgstr "Siirtyminen seuraavaan profiiliin pikanäppäimen avulla"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:137
 msgid ""
@@ -950,6 +996,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Näppäimistön pikanäppäin siirtymiseksi seuraavaan profiiliin. Ilmaistaan "
+"merkkijonoina samassa muodossa kuin GTK+ -resurssitiedostoissa. Jos asetat "
+"vaihtoehdon merkkijonolle \"pois päältä\", ei näihin toimintoihin tule "
+"pikanäppäintä."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:138
 msgid "Accelerator to move the current tab to the left."
@@ -1278,13 +1328,13 @@ msgstr "Valkoinen mustalla"
 #. translated
 #: ../src/profile-editor.c:69
 msgid "Solarized light"
-msgstr ""
+msgstr "Aurinkoinen valo"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: ../src/profile-editor.c:74
 msgid "Solarized dark"
-msgstr ""
+msgstr "Aurinkoinen yö"
 
 #: ../src/profile-editor.c:488
 #, c-format
@@ -1346,7 +1396,7 @@ msgstr "Etsi _kokonaista sanaa"
 
 #: ../src/find-dialog.ui.h:5
 msgid "Match as _regular expression"
-msgstr ""
+msgstr "Vastaa _tavallista ilmaisua"
 
 #: ../src/find-dialog.ui.h:6
 msgid "Search _backwards"
@@ -1469,7 +1519,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:80
 msgid "Solarized"
-msgstr ""
+msgstr "Aurinkoinen"
 
 #. Translators: Scrollbar is: ...
 #: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:56
@@ -1527,22 +1577,22 @@ msgstr "Escape-sarja"
 #. Translators: This refers to the Delete keybinding option
 #: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:32
 msgid "TTY Erase"
-msgstr ""
+msgstr "TTY pyyhin"
 
 #. Translators: Cursor blink: ...
 #: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:42
 msgid "Use system settings"
-msgstr ""
+msgstr "Käytä järjestelmän asetuksia"
 
 #. Translators: Cursor blink: ...
 #: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:44
 msgid "Always blink"
-msgstr ""
+msgstr "Vilkkuu aina"
 
 #. Translators: Cursor blink: ...
 #: ../src/profile-preferences.ui.h:27 ../src/extra-strings.c:46
 msgid "Never blink"
-msgstr ""
+msgstr "Ei vilku"
 
 #: ../src/profile-preferences.ui.h:28
 msgid "Profile Editor"
@@ -1578,7 +1628,7 @@ msgstr "Päätteen _äänimerkki"
 
 #: ../src/profile-preferences.ui.h:36
 msgid "Copy selected text into _clipboard"
-msgstr ""
+msgstr "Kopioi valittu teksti _leikepöydälle"
 
 #: ../src/profile-preferences.ui.h:37
 msgid "Cursor blin_k:"
@@ -1594,7 +1644,7 @@ msgstr "_Sanoihin kuuluvat merkit:"
 
 #: ../src/profile-preferences.ui.h:40
 msgid "Use custom default terminal si_ze"
-msgstr ""
+msgstr "Käytä mukautettua oletuspäätteen kokoa"
 
 #: ../src/profile-preferences.ui.h:41
 msgid "Default size:"
@@ -1650,7 +1700,7 @@ msgstr "Otsikko ja komento"
 
 #: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
-msgstr ""
+msgstr "<b>Etualalla, taustalla, lihavoitu ja alleviiva</b>"
 
 #: ../src/profile-preferences.ui.h:55
 msgid "_Use colors from system theme"
@@ -1682,7 +1732,7 @@ msgstr "_Lihavoitu väri:"
 
 #: ../src/profile-preferences.ui.h:62
 msgid "_Underline color:"
-msgstr ""
+msgstr "_Alleviivaa väri:"
 
 #: ../src/profile-preferences.ui.h:63
 msgid "_Same as text color"
@@ -1742,7 +1792,7 @@ msgstr "Taustavärin ja taustakuvan _sekoitus:"
 
 #: ../src/profile-preferences.ui.h:76
 msgid "S_hade transparent background:"
-msgstr ""
+msgstr "V_arjostava läpinäkyvä tausta:"
 
 #: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
@@ -2325,6 +2375,8 @@ msgstr "Ikkuna kokoruututilassa"
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
+"Aseta ikkunan koko; esimerkiksi: 80x24 tai 80x24+200+200 "
+"(SARAKKEETxRIVIT+X+Y)"
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2432,7 +2484,7 @@ msgstr "_Profiilin asetukset"
 
 #: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
 msgid "_Relaunch"
-msgstr ""
+msgstr "_Käynnistä"
 
 #: ../src/terminal-screen.c:1511
 msgid "There was an error creating the child process for this terminal"
@@ -2441,16 +2493,16 @@ msgstr "Virhe luodessa lapsiprosessia tätä päätettä varten"
 #: ../src/terminal-screen.c:1954
 #, c-format
 msgid "The child process exited normally with status %d."
-msgstr ""
+msgstr "Aliprosessi poistui normaalisti tila %d"
 
 #: ../src/terminal-screen.c:1959
 #, c-format
 msgid "The child process was terminated by signal %d."
-msgstr ""
+msgstr "Aliprosessi lopetettiin signaaliin %d"
 
 #: ../src/terminal-screen.c:1964
 msgid "The child process was terminated."
-msgstr ""
+msgstr "Aliprosessi lopetettiin."
 
 #: ../src/terminal-tab-label.c:132
 msgid "Close tab"
@@ -2476,6 +2528,10 @@ msgid ""
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Mate Terminal on vapaa ohjelma; voit levittää sitä edelleen ja/tai muokata "
+"sitä GNU:n GPL-lisenssin sallimilla tavoilla siten kuin Free Software "
+"Foundation on sen määritellyt; voit halutessasi käyttää lisenssin versiota 3"
+" taikka mitä tahansa tämän jälkeen ilmestynyttä versiota."
 
 #: ../src/terminal-util.c:329
 msgid ""
