@@ -126,7 +126,6 @@ struct _TerminalWindowPrivate
 #define SIZE_TO_UI_PATH            "/menubar/Terminal/TerminalSizeToPH"
 #define SIZE_TO_ACTION_NAME_PREFIX "TerminalSizeTo"
 
-#define STOCK_NEW_WINDOW  "window-new"
 #define STOCK_NEW_TAB     "tab-new"
 
 #define ENCODING_DATA_KEY "encoding"
@@ -1820,7 +1819,7 @@ terminal_window_init (TerminalWindow *window)
     {
         /* Toplevel */
         { "File", NULL, N_("_File") },
-        { "FileNewWindowProfiles", STOCK_NEW_WINDOW, N_("Open _Terminal")},
+        { "FileNewWindowProfiles", "utilities-terminal", N_("Open _Terminal")},
         { "FileNewTabProfiles", STOCK_NEW_TAB, N_("Open Ta_b") },
         { "Edit", NULL, N_("_Edit") },
         { "View", NULL, N_("_View") },
@@ -1833,7 +1832,7 @@ terminal_window_init (TerminalWindow *window)
 
         /* File menu */
         {
-            "FileNewWindow", STOCK_NEW_WINDOW, N_("Open _Terminal"), "<shift><control>N",
+            "FileNewWindow", "utilities-terminal", N_("Open _Terminal"), "<shift><control>N",
             NULL,
             G_CALLBACK (file_new_window_callback)
         },
@@ -2074,7 +2073,7 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "PopupNewTerminal", NULL, N_("Open _Terminal"), NULL,
+            "PopupNewTerminal", "utilities-terminal", N_("Open _Terminal"), NULL,
             NULL,
             G_CALLBACK (file_new_window_callback)
         },
