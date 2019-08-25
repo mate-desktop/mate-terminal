@@ -22,14 +22,12 @@
 
 #include <gtk/gtk.h>
 
-#define TERMINAL_INFO_BAR_GET_PRIVATE(info_bar)(G_TYPE_INSTANCE_GET_PRIVATE ((info_bar), TERMINAL_TYPE_INFO_BAR, TerminalInfoBarPrivate))
-
 struct _TerminalInfoBarPrivate
 {
 	GtkWidget *content_box;
 };
 
-G_DEFINE_TYPE (TerminalInfoBar, terminal_info_bar, GTK_TYPE_INFO_BAR)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalInfoBar, terminal_info_bar, GTK_TYPE_INFO_BAR)
 
 /* helper functions */
 
@@ -39,7 +37,7 @@ terminal_info_bar_init (TerminalInfoBar *bar)
 	GtkInfoBar *info_bar = GTK_INFO_BAR (bar);
 	TerminalInfoBarPrivate *priv;
 
-	priv = bar->priv = TERMINAL_INFO_BAR_GET_PRIVATE (bar);
+	priv = bar->priv = terminal_info_bar_get_instance_private (bar);
 
 	priv->content_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (info_bar)),
@@ -49,9 +47,6 @@ terminal_info_bar_init (TerminalInfoBar *bar)
 static void
 terminal_info_bar_class_init (TerminalInfoBarClass *klass)
 {
-	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-
-	g_type_class_add_private (gobject_class, sizeof (TerminalInfoBarPrivate));
 }
 
 /* public API */
