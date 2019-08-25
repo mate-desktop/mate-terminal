@@ -25,8 +25,6 @@
 #include "terminal-tab-label.h"
 #include "terminal-close-button.h"
 
-#define TERMINAL_TAB_LABEL_GET_PRIVATE(tab_label)(G_TYPE_INSTANCE_GET_PRIVATE ((tab_label), TERMINAL_TYPE_TAB_LABEL, TerminalTabLabelPrivate))
-
 #define SPACING (4)
 
 struct _TerminalTabLabelPrivate
@@ -51,7 +49,7 @@ enum
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (TerminalTabLabel, terminal_tab_label, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalTabLabel, terminal_tab_label, GTK_TYPE_BOX);
 
 /* helper functions */
 
@@ -95,7 +93,7 @@ terminal_tab_label_parent_set (GtkWidget *widget,
 static void
 terminal_tab_label_init (TerminalTabLabel *tab_label)
 {
-	tab_label->priv = TERMINAL_TAB_LABEL_GET_PRIVATE (tab_label);
+	tab_label->priv = terminal_tab_label_get_instance_private (tab_label);
 }
 
 static GObject *
@@ -220,8 +218,6 @@ terminal_tab_label_class_init (TerminalTabLabelClass *klass)
 	                      TERMINAL_TYPE_SCREEN,
 	                      G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
 	                      G_PARAM_CONSTRUCT_ONLY));
-
-	g_type_class_add_private (gobject_class, sizeof (TerminalTabLabelPrivate));
 }
 
 /* public API */
