@@ -190,7 +190,7 @@ static guint n_skey_regexes;
 static void  terminal_screen_skey_match_remove (TerminalScreen            *screen);
 #endif /* ENABLE_SKEY */
 
-G_DEFINE_TYPE (TerminalScreen, terminal_screen, VTE_TYPE_TERMINAL)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalScreen, terminal_screen, VTE_TYPE_TERMINAL)
 
 static char *
 cwd_of_pid (int pid)
@@ -341,7 +341,7 @@ terminal_screen_init (TerminalScreen *screen)
 	GtkTargetEntry *targets;
 	int n_targets;
 
-	priv = screen->priv = G_TYPE_INSTANCE_GET_PRIVATE (screen, TERMINAL_TYPE_SCREEN, TerminalScreenPrivate);
+	priv = screen->priv = terminal_screen_get_instance_private (screen);
 
 	vte_terminal_set_mouse_autohide (VTE_TERMINAL (screen), TRUE);
 #if VTE_CHECK_VERSION (0, 52, 0)
@@ -567,8 +567,6 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 	 g_param_spec_boxed ("initial-environment", NULL, NULL,
 	                     G_TYPE_STRV,
 	                     G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
-
-	g_type_class_add_private (object_class, sizeof (TerminalScreenPrivate));
 
 	/* Precompile the regexes */
 	n_url_regexes = G_N_ELEMENTS (url_regex_patterns);
