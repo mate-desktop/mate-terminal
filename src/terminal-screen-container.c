@@ -25,8 +25,6 @@
 
 #include <gtk/gtk.h>
 
-#define TERMINAL_SCREEN_CONTAINER_GET_PRIVATE(screen_container)(G_TYPE_INSTANCE_GET_PRIVATE ((screen_container), TERMINAL_TYPE_SCREEN_CONTAINER, TerminalScreenContainerPrivate))
-
 struct _TerminalScreenContainerPrivate
 {
 	TerminalScreen *screen;
@@ -52,7 +50,7 @@ enum
     PROP_WINDOW_PLACEMENT_SET
 };
 
-G_DEFINE_TYPE (TerminalScreenContainer, terminal_screen_container, GTK_TYPE_BOX)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalScreenContainer, terminal_screen_container, GTK_TYPE_BOX)
 
 /* helper functions */
 
@@ -117,7 +115,7 @@ terminal_screen_container_init (TerminalScreenContainer *container)
 {
 	TerminalScreenContainerPrivate *priv;
 
-	priv = container->priv = TERMINAL_SCREEN_CONTAINER_GET_PRIVATE (container);
+	priv = container->priv = terminal_screen_container_get_instance_private (container);
 
 	priv->hscrollbar_policy = GTK_POLICY_AUTOMATIC;
 	priv->vscrollbar_policy = GTK_POLICY_AUTOMATIC;
@@ -250,8 +248,6 @@ static void
 terminal_screen_container_class_init (TerminalScreenContainerClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-
-	g_type_class_add_private (gobject_class, sizeof (TerminalScreenContainerPrivate));
 
 	gobject_class->constructor = terminal_screen_container_constructor;
 	gobject_class->get_property = terminal_screen_container_get_property;
