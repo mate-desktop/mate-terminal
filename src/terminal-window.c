@@ -265,7 +265,7 @@ sync_screen_icon_title (TerminalScreen *screen,
                         GParamSpec *psepc,
                         TerminalWindow *window);
 
-G_DEFINE_TYPE (TerminalWindow, terminal_window, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalWindow, terminal_window, GTK_TYPE_WINDOW)
 
 /* Menubar mnemonics & accel settings handling */
 
@@ -2126,7 +2126,7 @@ terminal_window_init (TerminalWindow *window)
     GtkAccelGroup *accel_group;
     GtkClipboard *clipboard;
 
-    priv = window->priv = G_TYPE_INSTANCE_GET_PRIVATE (window, TERMINAL_TYPE_WINDOW, TerminalWindowPrivate);
+    priv = window->priv = terminal_window_get_instance_private (window);
 
     g_signal_connect (G_OBJECT (window), "delete_event",
                       G_CALLBACK(terminal_window_delete_event),
@@ -2289,8 +2289,6 @@ terminal_window_class_init (TerminalWindowClass *klass)
     widget_class->map_event = terminal_window_map_event;
     widget_class->window_state_event = terminal_window_state_event;
     widget_class->screen_changed = terminal_window_screen_changed;
-
-    g_type_class_add_private (object_class, sizeof (TerminalWindowPrivate));
 }
 
 static void
