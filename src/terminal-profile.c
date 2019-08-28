@@ -308,7 +308,7 @@ static void ensure_pixbuf_property (TerminalProfile *profile,
 static guint signals[LAST_SIGNAL] = { 0 };
 static GQuark gsettings_key_quark;
 
-G_DEFINE_TYPE (TerminalProfile, terminal_profile, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalProfile, terminal_profile, G_TYPE_OBJECT);
 
 /* gdk_rgba_equal is too strict! */
 static gboolean
@@ -911,7 +911,7 @@ terminal_profile_init (TerminalProfile *profile)
 	GParamSpec **pspecs;
 	guint n_pspecs, i;
 
-	priv = profile->priv = G_TYPE_INSTANCE_GET_PRIVATE (profile, TERMINAL_TYPE_PROFILE, TerminalProfilePrivate);
+	priv = profile->priv = terminal_profile_get_instance_private (profile);
 
 	priv->gsettings_notification_pspec = NULL;
 	priv->locked = g_new0 (gboolean, LAST_PROP);
@@ -1187,8 +1187,6 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	gsettings_key_quark = g_quark_from_static_string ("GT::GSettingsKey");
-
-	g_type_class_add_private (object_class, sizeof (TerminalProfilePrivate));
 
 	object_class->constructor = terminal_profile_constructor;
 	object_class->finalize = terminal_profile_finalize;
