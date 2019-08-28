@@ -44,8 +44,6 @@
 
 #define UI_PATH                         "/menubar/Tabs"
 
-#define TERMINAL_TABS_MENU_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), TERMINAL_TYPE_TABS_MENU, TerminalTabsMenuPrivate))
-
 struct _TerminalTabsMenuPrivate
 {
 	TerminalWindow *window;
@@ -66,7 +64,7 @@ static void	terminal_tabs_menu_update		(TerminalTabsMenu *menu);
 static GByteArray *tabs_id_array = NULL;
 static guint n_tabs = 0;
 
-G_DEFINE_TYPE (TerminalTabsMenu, terminal_tabs_menu, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalTabsMenu, terminal_tabs_menu, G_TYPE_OBJECT)
 
 /* We need to assign unique IDs to tabs, otherwise accels get confused in the
  * tabs menu (bug #339548). We could use a serial #, but the ID is used in the
@@ -379,8 +377,6 @@ terminal_tabs_menu_class_init (TerminalTabsMenuClass *klass)
 	                                         G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
 	                                         G_PARAM_CONSTRUCT_ONLY));
 
-	g_type_class_add_private (object_class, sizeof (TerminalTabsMenuPrivate));
-
 	/* We don't want to save accels, so skip them */
 	gtk_accel_map_add_filter ("<Actions>/Main/TabsSwitch*");
 }
@@ -388,7 +384,7 @@ terminal_tabs_menu_class_init (TerminalTabsMenuClass *klass)
 static void
 terminal_tabs_menu_init (TerminalTabsMenu *menu)
 {
-	menu->priv = TERMINAL_TABS_MENU_GET_PRIVATE (menu);
+	menu->priv = terminal_tabs_menu_get_instance_private (menu);
 }
 
 static void
