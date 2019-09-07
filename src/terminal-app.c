@@ -795,8 +795,8 @@ find_profile_link (GList      *profiles,
 }
 
 static void
-terminal_app_profile_list_notify_cb (GSettings *settings,
-                                     gchar *key,
+terminal_app_profile_list_notify_cb (GSettings   *settings,
+                                     const gchar *key,
                                      gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
@@ -922,8 +922,8 @@ ensure_one_profile:
 }
 
 static void
-terminal_app_default_profile_notify_cb (GSettings *settings,
-                                        gchar *key,
+terminal_app_default_profile_notify_cb (GSettings   *settings,
+                                        const gchar *key,
                                         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
@@ -968,8 +968,8 @@ encoding_mark_active (gpointer key,
 }
 
 static void
-terminal_app_encoding_list_notify_cb (GSettings *settings,
-                                      gchar *key,
+terminal_app_encoding_list_notify_cb (GSettings   *settings,
+                                      const gchar *key,
                                       gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
@@ -1028,8 +1028,8 @@ terminal_app_encoding_list_notify_cb (GSettings *settings,
 }
 
 static void
-terminal_app_system_font_notify_cb (GSettings *settings,
-                                    gchar *key,
+terminal_app_system_font_notify_cb (GSettings   *settings,
+                                    const gchar *key,
                                     gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
@@ -1069,9 +1069,9 @@ terminal_app_system_font_notify_cb (GSettings *settings,
 }
 
 static void
-terminal_app_enable_mnemonics_notify_cb (GSettings *settings,
-	gchar *key,
-	gpointer user_data)
+terminal_app_enable_mnemonics_notify_cb (GSettings   *settings,
+                                         const gchar *key,
+                                         gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	gboolean enable;
@@ -1085,9 +1085,9 @@ terminal_app_enable_mnemonics_notify_cb (GSettings *settings,
 }
 
 static void
-terminal_app_enable_menu_accels_notify_cb (GSettings *settings,
-        gchar *key,
-        gpointer     user_data)
+terminal_app_enable_menu_accels_notify_cb (GSettings   *settings,
+                                           const gchar *key,
+                                           gpointer     user_data)
 {
 	TerminalApp *app = TERMINAL_APP (user_data);
 	gboolean enable;
