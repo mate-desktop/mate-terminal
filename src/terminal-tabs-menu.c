@@ -123,7 +123,9 @@ free_tab_id (GtkAction *action)
 	guint8 *data;
 	guint b, bit;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	name = gtk_action_get_name (action);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	id = g_ascii_strtoull (name + ACTION_VERB_FORMAT_PREFIX_LEN, NULL,
 	                       ACTION_VERB_FORMAT_BASE);
 	g_assert (id < tabs_id_array->len * 8);
@@ -149,10 +151,12 @@ tab_action_activate_cb (GtkToggleAction *action,
 	TerminalTabsMenuPrivate *priv = menu->priv;
 	TerminalScreen *screen;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	if (gtk_toggle_action_get_active (action) == FALSE)
 	{
 		return;
 	}
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	screen = g_object_get_data (G_OBJECT (action), DATA_KEY);
 	g_return_if_fail (screen != NULL);
@@ -191,25 +195,31 @@ notebook_page_added_cb (GtkNotebook *notebook,
 
 	g_snprintf (verb, sizeof (verb), ACTION_VERB_FORMAT, allocate_tab_id ());
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = g_object_new (GTK_TYPE_RADIO_ACTION,
 	                       "name", verb,
 	                       "tooltip", _("Switch to this tab"),
 	                       NULL);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	sync_tab_title (screen, NULL, action);
 	/* make sure the action is alive when handling the signal, see bug #169833 */
 	g_signal_connect_object (screen, "notify::title",
 	                         G_CALLBACK (sync_tab_title), action, 0);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_action_group_add_action_with_accel (priv->action_group, action, NULL);
 
 	group = gtk_radio_action_get_group (GTK_RADIO_ACTION (priv->anchor_action));
 	gtk_radio_action_set_group (GTK_RADIO_ACTION (action), group);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	/* set this here too, since tab-added comes after notify::active-child */
 	if (terminal_window_get_active (priv->window) == screen)
 	{
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 	}
 
 	g_object_set_data (G_OBJECT (screen), DATA_KEY, action);
@@ -247,7 +257,9 @@ notebook_page_removed_cb (GtkNotebook *notebook,
 	(action, G_CALLBACK (tab_action_activate_cb), menu);
 
 	g_object_set_data (G_OBJECT (screen), DATA_KEY, NULL);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_action_group_remove_action (priv->action_group, action);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	terminal_tabs_menu_update (menu);
 }
@@ -276,7 +288,9 @@ notebook_page_switch_cb (GtkNotebook *notebook,
 
 	action = g_object_get_data (G_OBJECT (screen), DATA_KEY);
 	g_signal_handlers_block_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func (action, G_CALLBACK (tab_action_activate_cb), menu);
 }
 
@@ -309,14 +323,18 @@ terminal_tabs_menu_set_window (TerminalTabsMenu *menu,
 	priv->window = window;
 
 	manager = GTK_UI_MANAGER (terminal_window_get_ui_manager (window));
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->action_group = gtk_action_group_new ("TabsActions");
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	gtk_ui_manager_insert_action_group (manager, priv->action_group, -1);
 	g_object_unref (priv->action_group);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->anchor_action = g_object_new (GTK_TYPE_RADIO_ACTION,
 	                                    "name", "TabsMenuAnchorAction",
 	                                    NULL);
 	gtk_action_group_add_action (priv->action_group, priv->anchor_action);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_object_unref (priv->anchor_action);
 
 	g_signal_connect (priv->action_group, "connect-proxy",
@@ -421,12 +439,14 @@ tab_set_action_accelerator (GtkActionGroup *action_group,
 		char accel_path[ACCEL_PATH_FORMAT_LENGTH];
 
 		g_snprintf (accel_path, sizeof (accel_path), ACCEL_PATH_FORMAT, tab_number + 1);
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_action_set_accel_path (action, accel_path);
 	}
 	else
 	{
 		gtk_action_set_accel_path (action, NULL);
 		return;
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 	}
 }
 
@@ -461,7 +481,9 @@ terminal_tabs_menu_update (TerminalTabsMenu *menu)
 		action = g_object_get_data (screen, DATA_KEY);
 		g_return_if_fail (action != NULL);
 
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		verb = gtk_action_get_name (action);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		tab_set_action_accelerator (p->action_group, action, i++, is_single_tab);
 
