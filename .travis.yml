@@ -64,6 +64,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-terminal
+    - autoconf-archive
     - clang
     - gcc
     - git
@@ -72,6 +73,7 @@ requires:
     - make
     - mate-common
     - mate-desktop
+    - unzip
     - vte3
     - which
     - yelp-tools
@@ -79,6 +81,7 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-terminal
+    - autoconf-archive
     - clang
     - clang-tools
     - cppcheck
@@ -94,10 +97,12 @@ requires:
     - libx11-dev
     - make
     - mate-common
+    - unzip
     - yelp-tools
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-terminal.git
+    - autoconf-archive
     - clang
     - clang-analyzer
     - cppcheck-htmlreport
@@ -110,9 +115,11 @@ requires:
     - make
     - mate-common
     - redhat-rpm-config
+    - unzip
     - vte291-devel
 
   ubuntu:
+    - autoconf-archive
     - clang
     - clang-tools
     - git
@@ -126,6 +133,7 @@ requires:
     - libx11-dev
     - make
     - mate-common
+    - unzip
     - yelp-tools
 
 variables:
@@ -154,6 +162,18 @@ before_scripts:
   -     egrep -lRZ 'G_GNUC_BEGIN_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_BEGIN_IGNORE_DEPRECATIONS/ /g'
   -     egrep -lRZ 'G_GNUC_END_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_END_IGNORE_DEPRECATIONS/ /g'
   - fi
+  - cd ${START_DIR}
+  - curl -Ls -o mate-common-master.zip https://github.com/mate-desktop/mate-common/archive/master.zip
+  - unzip mate-common-master.zip
+  - cd mate-common-master
+  - ./autogen.sh
+  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
+  -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
+  - else
+  -     ./configure --prefix=/usr
+  - fi
+  - make
+  - make install
 
 build_scripts:
   - ./autogen.sh
