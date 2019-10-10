@@ -127,10 +127,13 @@ mate-terminal.desktop.in
 src/Makefile
 src/org.mate.terminal.gschema.xml
 src/terminal-version.h
-src/skey/Makefile
 help/Makefile
 po/Makefile.in
 ])
+
+AM_COND_IF([ENABLE_SKEY],
+           [AC_CONFIG_FILES([src/skey/Makefile])])
+
 AC_OUTPUT
 
 # ****************************
