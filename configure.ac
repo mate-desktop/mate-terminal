@@ -14,27 +14,27 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
+if test -z "$enable_maintainer_mode"; then
+  enable_maintainer_mode=yes
+fi
+AM_MAINTAINER_MODE([enable])
+
+MATE_COMMON_INIT
+MATE_DEBUG_CHECK([no])
+MATE_COMPILE_WARNINGS([yes])
+#MATE_MAINTAINER_MODE_DEFINES
+
 GETTEXT_PACKAGE=mate-terminal
 AC_SUBST([GETTEXT_PACKAGE])
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 
 AC_C_BIGENDIAN
 
-if test -z "$enable_maintainer_mode"; then
-  enable_maintainer_mode=yes
-fi
-AM_MAINTAINER_MODE([enable])
-
 PKG_PROG_PKG_CONFIG
 AC_PROG_CC
 AC_HEADER_STDC
 AM_PROG_LIBTOOL
 IT_PROG_INTLTOOL([0.50.1])
-
-MATE_COMMON_INIT
-MATE_DEBUG_CHECK
-MATE_COMPILE_WARNINGS([maximum])
-#MATE_MAINTAINER_MODE_DEFINES
 
 AM_GLIB_GNU_GETTEXT
 
@@ -144,6 +144,9 @@ echo "
 	prefix:                 ${prefix}
 	source code location:   ${srcdir}
 	compiler:               ${CC}
+	cflags:                 ${CFLAGS}
+	warning flags:          ${WARN_CFLAGS}
+	linker flags:           ${LDFLAGS}
 
 	s/key support:          ${enable_skey}
 "
