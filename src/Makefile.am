@@ -90,8 +90,12 @@ mate_terminal_CFLAGS = \
 mate_terminal_LDFLAGS = -lICE
 
 mate_terminal_LDADD = \
-	skey/libskey.la \
 	$(TERM_LIBS)
+
+if ENABLE_SKEY
+mate_terminal_LDADD += \
+	skey/libskey.la
+endif
 
 mate_terminal_SOURCES += \
 	eggdesktopfile.c \
