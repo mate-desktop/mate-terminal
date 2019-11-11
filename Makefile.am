@@ -1,4 +1,4 @@
-SUBDIRS = src po help
+SUBDIRS = po src help
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
@@ -9,15 +9,17 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-silent-rules \
 	CFLAGS='-Wno-deprecated-declarations'
 
-@INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/metainfo
 appdata_in_files = mate-terminal.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+$(appdata_DATA): $(appdata_in_files)
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = @PACKAGE@.desktop.in.in
+desktop_in_files = mate-terminal.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
-@INTLTOOL_DESKTOP_RULE@
+$(desktop_DATA): $(desktop_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 man_MANS = mate-terminal.1
 
