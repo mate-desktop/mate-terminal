@@ -149,7 +149,6 @@ terminal-resources.h terminal-resources.c: terminal.gresource.xml Makefile $(she
 gsettingsschema_in_files = org.mate.terminal.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 .PRECIOUS: $(gsettings_SCHEMAS)
-@INTLTOOL_XML_NOMERGE_RULE@
 
 CLEANFILES = \
 	stamp-terminal-type-builtins.h \
@@ -181,7 +180,5 @@ EXTRA_DIST = \
 	$(NULL)
 
 @GSETTINGS_RULES@
-
-@INTLTOOL_SCHEMAS_RULE@
 
 -include $(top_srcdir)/git.mk

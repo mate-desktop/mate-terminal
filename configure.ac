@@ -1,17 +1,24 @@
-m4_define([gt_version_major],[1])
-m4_define([gt_version_minor],[23])
-m4_define([gt_version_micro],[0])
-m4_define([gt_version_extra],[])
-m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
+m4_define(mt_major_version, 1)
+m4_define(mt_minor_version, 23)
+m4_define(mt_micro_version, 0)
+m4_define(mt_version, mt_major_version.mt_minor_version).mt_micro_version)
 
-m4_define([gt_api_version],[0])
+m4_define(mt_api_version, 0)
 
-AC_INIT([MATE Terminal],[gt_version],[https://mate-desktop.org],[mate-terminal])
+AC_INIT([mate-terminal],[mt_version],
+        [https://github.com/mate-desktop/mate-terminal/issues],
+        [mate-terminal], [https://mate-desktop.org])
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
+
+AC_SUBST(TERMINAL_MAJOR_VERSION, mt_major_version)
+AC_SUBST(TERMINAL_MINOR_VERSION, mt_minor_version)
+AC_SUBST(TERMINAL_MICRO_VERSION, mt_micro_version)
+AC_SUBST(TERMINAL_API_VERSION, mt_api_version)
+
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 if test -z "$enable_maintainer_mode"; then
@@ -24,19 +31,12 @@ MATE_DEBUG_CHECK([no])
 MATE_COMPILE_WARNINGS([yes])
 #MATE_MAINTAINER_MODE_DEFINES
 
-GETTEXT_PACKAGE=mate-terminal
-AC_SUBST([GETTEXT_PACKAGE])
-AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
-
 AC_C_BIGENDIAN
 
 PKG_PROG_PKG_CONFIG
 AC_PROG_CC
 AC_HEADER_STDC
 AM_PROG_LIBTOOL
-IT_PROG_INTLTOOL([0.50.1])
-
-AM_GLIB_GNU_GETTEXT
 
 GLIB_REQUIRED=2.50.0
 GIO_REQUIRED=2.50.0
@@ -114,12 +114,14 @@ YELP_HELP_INIT
 
 # ****************************
 
-AC_SUBST([TERMINAL_MAJOR_VERSION],[gt_version_major])
-AC_SUBST([TERMINAL_MINOR_VERSION],[gt_version_minor])
-AC_SUBST([TERMINAL_MICRO_VERSION],[gt_version_micro])
-AC_SUBST([TERMINAL_API_VERSION],[gt_api_version])
-
 # ****************************
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
+
+GETTEXT_PACKAGE=mate-terminal
+AC_SUBST([GETTEXT_PACKAGE])
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 
 AC_CONFIG_FILES([
 Makefile
