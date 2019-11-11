@@ -68,7 +68,6 @@ requires:
     - clang
     - gcc
     - git
-    - intltool
     - libsm
     - make
     - mate-common
@@ -81,13 +80,12 @@ requires:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-terminal
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - gcc
     - git
-    - intltool
-    - intltool
     - libdconf-dev
     - libglib2.0-dev
     - libgtk-3-dev
@@ -117,11 +115,10 @@ requires:
 
   ubuntu:
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - git
-    - intltool
-    - intltool
     - libdconf-dev
     - libglib2.0-dev
     - libgtk-3-dev
@@ -153,8 +150,6 @@ variables:
 
 before_scripts:
   - if [ ${DISTRO_NAME} == "debian" ];then
-  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
-  -     bash ./debian.sh
   -     egrep -lRZ 'G_GNUC_BEGIN_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_BEGIN_IGNORE_DEPRECATIONS/ /g'
   -     egrep -lRZ 'G_GNUC_END_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_END_IGNORE_DEPRECATIONS/ /g'
   - fi
