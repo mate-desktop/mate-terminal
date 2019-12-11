@@ -1956,6 +1956,9 @@ terminal_screen_child_exited (VteTerminal *terminal, int status)
 		break;
 	case TERMINAL_EXIT_HOLD:
 	{
+		if ((status == 9) && (priv->override_command == NULL))
+			break;
+
 		GtkWidget *info_bar;
 
 		info_bar = terminal_info_bar_new (GTK_MESSAGE_INFO,
