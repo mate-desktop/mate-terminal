@@ -1949,7 +1949,8 @@ terminal_screen_child_exited (VteTerminal *terminal, int status)
 	switch (action)
 	{
 	case TERMINAL_EXIT_CLOSE:
-		g_signal_emit (screen, signals[CLOSE_SCREEN], 0);
+		if ((status != 9) || (priv->override_command != NULL))
+			g_signal_emit (screen, signals[CLOSE_SCREEN], 0);
 		break;
 	case TERMINAL_EXIT_RESTART:
 		terminal_screen_launch_child_on_idle (screen);
