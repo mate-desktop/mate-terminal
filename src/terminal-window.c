@@ -52,6 +52,8 @@ struct _TerminalWindowPrivate
     GtkUIManager *ui_manager;
     guint ui_id;
 
+    GSettings *global_settings;
+
     GtkActionGroup *profiles_action_group;
     guint profiles_ui_id;
 
@@ -2208,7 +2210,7 @@ terminal_window_init (TerminalWindow *window)
 
     GtkStyleContext *context;
 
-    GSettings *settings = g_settings_new ("org.mate.terminal.global");
+    priv->global_settings = g_settings_new (CONF_GLOBAL_SCHEMA);
 
     context = gtk_widget_get_style_context (GTK_WIDGET (window));
     gtk_style_context_add_class (context, "mate-terminal");
@@ -2228,9 +2230,9 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
-                      G_CALLBACK (notebook_button_press_cb), settings);
+                      G_CALLBACK (notebook_button_press_cb), priv->global_settings);
     g_signal_connect (window, "key-press-event",
-                      G_CALLBACK (window_key_press_cb), settings);
+                      G_CALLBACK (window_key_press_cb), priv->global_settings);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2415,6 +2417,7 @@ terminal_window_finalize (GObject *object)
     TerminalWindowPrivate *priv = window->priv;
 
     g_object_unref (priv->ui_manager);
+    g_object_unref (priv->global_settings);
 
     if (priv->confirm_close_dialog)
         gtk_dialog_response (GTK_DIALOG (priv->confirm_close_dialog),
@@ -3570,7 +3573,6 @@ confirm_close_window_or_tab (TerminalWindow *window,
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *dialog;
-    GSettings *settings;
     gboolean do_confirm;
     gboolean has_processes;
     int n_tabs;
@@ -3583,9 +3585,8 @@ confirm_close_window_or_tab (TerminalWindow *window,
                              GTK_RESPONSE_DELETE_EVENT);
     }
 
-    settings = g_settings_new (CONF_GLOBAL_SCHEMA);
-    do_confirm = g_settings_get_boolean (settings, "confirm-window-close");
-    g_object_unref (settings);
+    do_confirm = g_settings_get_boolean (priv->global_settings, "confirm-window-close");
+
     if (!do_confirm)
         return FALSE;
 
