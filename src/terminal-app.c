@@ -90,7 +90,6 @@ struct _TerminalApp
 	GtkWidget *manage_profiles_delete_button;
 	GtkWidget *manage_profiles_default_menu;
 
-	GSettings *settings_global;
 	GSettings *settings_font;
 
 	GHashTable *profiles;
@@ -360,8 +359,7 @@ terminal_app_create_profile (TerminalApp *app,
 }
 
 static void
-terminal_app_delete_profile (TerminalApp *app,
-                             TerminalProfile *profile)
+terminal_app_delete_profile (TerminalProfile *profile)
 {
 	const char *profile_name;
 	char *profile_dir;
@@ -370,7 +368,7 @@ terminal_app_delete_profile (TerminalApp *app,
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
 	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
+	gsettings_remove_all_from_strv (settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
 	DConfClient *client = dconf_client_new ();
@@ -548,7 +546,7 @@ profile_combo_box_changed_cb (GtkWidget *widget,
 	if (!profile)
 		return;
 
-	g_settings_set_string (app->settings_global, DEFAULT_PROFILE_KEY,
+	g_settings_set_string (settings_global, DEFAULT_PROFILE_KEY,
 			       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME));
 
 	/* Even though the GSettings change notification does this, it happens too late.
@@ -626,8 +624,7 @@ profile_list_treeview_create (TerminalApp *app)
 
 static void
 profile_list_delete_confirm_response_cb (GtkWidget *dialog,
-        int response,
-        TerminalApp *app)
+                                         int        response)
 {
 	TerminalProfile *profile;
 
@@ -635,7 +632,7 @@ profile_list_delete_confirm_response_cb (GtkWidget *dialog,
 	g_assert (profile != NULL);
 
 	if (response == GTK_RESPONSE_ACCEPT)
-		terminal_app_delete_profile (app, profile);
+		terminal_app_delete_profile (profile);
 
 	gtk_widget_destroy (dialog);
 }
@@ -663,7 +660,6 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
                                        GtkWidget *widget)
 {
 	GtkTreeView *tree_view = GTK_TREE_VIEW (widget);
-	TerminalApp *app = terminal_app_get ();
 	GtkTreeSelection *selection;
 	GtkWidget *dialog;
 	GtkTreeIter iter;
@@ -708,7 +704,7 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 
 	g_signal_connect (dialog, "response",
 	                  G_CALLBACK (profile_list_delete_confirm_response_cb),
-	                  app);
+	                  NULL);
 
 	gtk_window_present (GTK_WINDOW (dialog));
 }
@@ -1165,7 +1161,7 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     new_profile /* adopts the refcount */);
 
 		/* And now save the new profile name to GSettings */
-		gsettings_append_strv (app->settings_global,
+		gsettings_append_strv (settings_global,
 						PROFILE_LIST_KEY,
 						new_profile_name);
 
@@ -1412,20 +1408,20 @@ terminal_app_init (TerminalApp *app)
 
 	app->encodings = terminal_encodings_get_builtins ();
 
-	app->settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
+	settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
 	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
-	g_signal_connect (app->settings_global,
+	g_signal_connect (settings_global,
 			  "changed::" PROFILE_LIST_KEY,
 			  G_CALLBACK(terminal_app_profile_list_notify_cb),
 			  app);
 
-	g_signal_connect (app->settings_global,
+	g_signal_connect (settings_global,
 			  "changed::" DEFAULT_PROFILE_KEY,
 			  G_CALLBACK(terminal_app_default_profile_notify_cb),
 			  app);
 
-	g_signal_connect (app->settings_global,
+	g_signal_connect (settings_global,
 			  "changed::" ENCODING_LIST_KEY,
 			  G_CALLBACK(terminal_app_encoding_list_notify_cb),
 			  app);
@@ -1436,33 +1432,33 @@ terminal_app_init (TerminalApp *app)
 			  app);
 
 
-	g_signal_connect (app->settings_global,
+	g_signal_connect (settings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
 	                  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                  app);
 
-	g_signal_connect (app->settings_global,
+	g_signal_connect (settings_global,
 	                  "changed::" ENABLE_MENU_BAR_ACCEL_KEY,
 	                  G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                  app);
 
 	/* Load the settings */
-        terminal_app_profile_list_notify_cb (app->settings_global,
+        terminal_app_profile_list_notify_cb (settings_global,
 					     PROFILE_LIST_KEY,
 					     app);
-	terminal_app_default_profile_notify_cb (app->settings_global,
+	terminal_app_default_profile_notify_cb (settings_global,
 					        DEFAULT_PROFILE_KEY,
 						app);
-	terminal_app_encoding_list_notify_cb (app->settings_global,
+	terminal_app_encoding_list_notify_cb (settings_global,
 					      ENCODING_LIST_KEY,
 					      app);
 	terminal_app_system_font_notify_cb (app->settings_font,
 					    MONOSPACE_FONT_KEY,
 					    app);
-	terminal_app_enable_menu_accels_notify_cb (app->settings_global,
+	terminal_app_enable_menu_accels_notify_cb (settings_global,
 	                                           ENABLE_MENU_BAR_ACCEL_KEY,
 	                                           app);
-	terminal_app_enable_mnemonics_notify_cb (app->settings_global,
+	terminal_app_enable_mnemonics_notify_cb (settings_global,
 	                                         ENABLE_MNEMONICS_KEY,
 	                                         app);
 
@@ -1500,26 +1496,26 @@ terminal_app_finalize (GObject *object)
 	g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
 	                                      0, 0, NULL, NULL, app);
 
-	g_signal_handlers_disconnect_by_func (app->settings_global,
+	g_signal_handlers_disconnect_by_func (settings_global,
 					      G_CALLBACK(terminal_app_profile_list_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (app->settings_global,
+	g_signal_handlers_disconnect_by_func (settings_global,
 					      G_CALLBACK(terminal_app_default_profile_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (app->settings_global,
+	g_signal_handlers_disconnect_by_func (settings_global,
 					      G_CALLBACK(terminal_app_encoding_list_notify_cb),
 					      app);
 	g_signal_handlers_disconnect_by_func (app->settings_font,
 					      G_CALLBACK(terminal_app_system_font_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (app->settings_global,
+	g_signal_handlers_disconnect_by_func (settings_global,
 	                                      G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                                      app);
-	g_signal_handlers_disconnect_by_func (app->settings_global,
+	g_signal_handlers_disconnect_by_func (settings_global,
 	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                                      app);
 
-	g_object_unref (app->settings_global);
+	g_object_unref (settings_global);
 	g_object_unref (app->settings_font);
 
 	g_free (app->default_profile_id);
@@ -1580,11 +1576,11 @@ terminal_app_set_property (GObject *object,
 	{
 	case PROP_ENABLE_MENU_BAR_ACCEL:
 		app->enable_menu_accels = g_value_get_boolean (value);
-		g_settings_set_boolean (app->settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
+		g_settings_set_boolean (settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
 		break;
 	case PROP_ENABLE_MNEMONICS:
 		app->enable_mnemonics = g_value_get_boolean (value);
-		g_settings_set_boolean (app->settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
+		g_settings_set_boolean (settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
 		break;
 	case PROP_DEFAULT_PROFILE:
 	case PROP_SYSTEM_FONT:
