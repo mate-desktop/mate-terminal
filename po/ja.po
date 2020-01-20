@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-terminal package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -15,12 +15,11 @@
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # semicolon <mail@semicln.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 18:23+0100\n"
+"Project-Id-Version: mate-terminal 1.23\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
+"POT-Creation-Date: 2020-01-13 14:52+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: semicolon <mail@semicln.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
@@ -30,75 +29,78 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../mate-terminal.appdata.xml.in.h:1
-msgid "A terminal emulator for the MATE desktop environment"
-msgstr "MATE デスクトップ環境向けの端末エミュレーター"
-
-#: ../mate-terminal.appdata.xml.in.h:2
-msgid ""
-"<p> MATE Terminal is a terminal emulation application that you can use to "
-"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
-"xterm program developed by the X Consortium. It supports translucent "
-"backgrounds, opening multiple terminals in a single window (tabs) and "
-"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
-"of the MATE Desktop Environment. If you would like to know more about MATE "
-"and MATE Terminal, please visit the project's home page. </p>"
-msgstr ""
-"<p> MATE 端末は MATE 環境で使用する、 UNIX シェルにアクセスする際に使用する端末をエミュレートするアプリケーションです。MATE "
-"端末はXコンソーシアムによって開発された xterm "
-"プログラムをエミュレートしています。背景の透明化と、ひとつのウィンドウでたくさんの端末を開くこと(タブ)とクリックできるURLをサポートしています。 "
-"</p> <p> MATE 端末は GNOME 端末からのフォークで、MATE デスクトップ環境の一部です。MATE と MATE "
-"端末についてさらによく知りたい場合は、プロジェクトのホームページをご覧ください。 </p>"
-
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4388
+#: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
+#: src/terminal-options.c:189 src/terminal-window.c:4466
 msgid "MATE Terminal"
 msgstr "MATE 端末"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
-#: ../src/terminal.c:590 ../src/terminal-profile.c:159
-#: ../src/terminal-window.c:2154
+#: mate-terminal.appdata.xml.in:8
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr "MATE デスクトップ環境向けの端末エミュレーター"
+
+#: mate-terminal.appdata.xml.in:10
+msgid ""
+"MATE Terminal is a terminal emulation application that you can use to access"
+" a UNIX shell in the MATE environment. MATE Terminal emulates the xterm "
+"program developed by the X Consortium. It supports translucent backgrounds, "
+"opening multiple terminals in a single window (tabs) and clickable URLs."
+msgstr ""
+
+#: mate-terminal.appdata.xml.in:17
+msgid ""
+"MATE Terminal is a fork of GNOME Terminal and part of the MATE Desktop "
+"Environment. If you would like to know more about MATE and MATE Terminal, "
+"please visit the project's home page."
+msgstr ""
+
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
+#: src/terminal-profile.c:161 src/terminal-window.c:2214
 msgid "Terminal"
 msgstr "端末"
 
-#: ../mate-terminal.desktop.in.in.h:3
+#: mate-terminal.desktop.in.in:5
 msgid "Use the command line"
 msgstr "コマンドラインを使用"
 
-#: ../src/eggsmclient.c:225
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-terminal.desktop.in.in:9
+msgid "utilities-terminal"
+msgstr ""
+
+#: src/eggsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr "セッションマネージャーに接続しない"
 
-#: ../src/eggsmclient.c:230
+#: src/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "設定を保存したファイルを指定する"
 
-#: ../src/eggsmclient.c:230 ../src/terminal-options.c:964
-#: ../src/terminal-options.c:973
+#: src/eggsmclient.c:230 src/terminal-options.c:963 src/terminal-options.c:972
 msgid "FILE"
 msgstr "FILE"
 
-#: ../src/eggsmclient.c:235
+#: src/eggsmclient.c:235
 msgid "Specify session management ID"
 msgstr "セッション管理 ID を指定する"
 
-#: ../src/eggsmclient.c:235
+#: src/eggsmclient.c:235
 msgid "ID"
 msgstr "ID"
 
-#: ../src/eggsmclient.c:261
+#: src/eggsmclient.c:261
 msgid "Session management options:"
 msgstr "セッション管理のオプション:"
 
-#: ../src/eggsmclient.c:262
+#: src/eggsmclient.c:262
 msgid "Show session management options"
 msgstr "セッション管理のオプションを表示する"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:1
+#: src/org.mate.terminal.gschema.xml.in:49
 msgid "List of profiles"
 msgstr "プロファイルの一覧"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:2
+#: src/org.mate.terminal.gschema.xml.in:50
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
@@ -106,21 +108,21 @@ msgstr ""
 "mate-terminal の既知のプロファイルの一覧です。この一覧には /org/mate/terminal/profiles "
 "に対するサブディレクトリの名前が含まれています。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:3
+#: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
 msgstr "新しい端末に使用するプロファイル"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:4
+#: src/org.mate.terminal.gschema.xml.in:55
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
 msgstr "新しいウィンドウやタブを開いた時に使用するプロファイルを指定します。profile_list に存在するものでなければなりません。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:5
+#: src/org.mate.terminal.gschema.xml.in:59
 msgid "Whether the menubar has access keys"
 msgstr "メニューバーにアクセスキーを設定する"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:6
+#: src/org.mate.terminal.gschema.xml.in:60
 msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
@@ -129,11 +131,11 @@ msgstr ""
 "メニューバーにアクセスキー \"ALT + 文字\" "
 "を設定するかを設定します。これらは端末内で実行するアプリケーションに影響することがあるので、無効にすることができます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:7
+#: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
 msgstr "メニューバーへのアクセスのために GTK+ 標準のショートカットを有効にするか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:8
+#: src/org.mate.terminal.gschema.xml.in:65
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -142,98 +144,98 @@ msgstr ""
 "通常は、F10 キーでメニューバーにアクセスできます。この設定を gtkrc (gtk-menu-bar-accel = \"whatever\") "
 "経由でカスタマイズすることも可能です。このオプションにより標準的なメニューバーアクセラレーターを無効にすることが可能です。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:9
+#: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
 msgstr "[ 'UTF-8', 'current' ]"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:10
+#: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
 msgstr "利用可能なエンコーディングの一覧"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:11
+#: src/org.mate.terminal.gschema.xml.in:70
 msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:12
+#: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
 msgstr "端末ウィンドウを閉じる際に確認するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:13
+#: src/org.mate.terminal.gschema.xml.in:75
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
-"more than one open tab."
-msgstr "複数のタブを開いている端末ウィンドウを閉じる際に確認ダイアログを表示するかを設定します。"
+"more than one open tab or any foreground subprocesses."
+msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:14
+#: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:15
+#: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:16
+#: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:17
+#: src/org.mate.terminal.gschema.xml.in:85
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:18
+#: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'デフォルト'"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:19
+#: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
 msgstr "プロファイルの可読な名前"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:20
+#: src/org.mate.terminal.gschema.xml.in:94
 msgid "Human-readable name of the profile."
 msgstr "プロファイルに読みやすい名前をつけます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:21
+#: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
 msgstr "新しいウィンドウ/タブにメニューバーを表示するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:22
+#: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr "TRUE にすると、このプロファイルを使用しているウィンドウやタブで、ウィンドウ内にメニューバーが表示されます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:23
+#: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
 msgstr "端末のテキストのデフォルト色"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:24
+#: src/org.mate.terminal.gschema.xml.in:104
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
 msgstr "端末のテキストのデフォルト色を、色指定子 (HTML スタイルの 16 進数もしくは \"red\" のような色の名前) で設定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:25
+#: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
 msgstr "端末の背景のデフォルト色"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:26
+#: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr "端末の背景のデフォルト色を、色指定子 (HTML スタイルの 16 進数もしくは \"red\" のような色の名前) で設定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:27
+#: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
 msgstr "端末の太字テキストのデフォルト色"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:28
+#: src/org.mate.terminal.gschema.xml.in:114
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
@@ -242,20 +244,20 @@ msgstr ""
 "端末の太字テキストのデフォルト色を、色指定子 (HTML スタイルの 16 進数もしくは \"red\" のような色の名前) で設定します。これは "
 "bold_color_same_as_fg が有効になっている場合に無視されます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:29
+#: src/org.mate.terminal.gschema.xml.in:118
 msgid "Whether bold text should use the same color as normal text"
 msgstr "太字テキストが通常のテキストと同じ文字色を使うかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:30
+#: src/org.mate.terminal.gschema.xml.in:119
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr "有効にすると、太字のテキストは通常のテキストと同じ色で表示されます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:31
+#: src/org.mate.terminal.gschema.xml.in:123
 msgid "What to do with dynamic title"
 msgstr "動的なタイトルをどう扱うか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:32
+#: src/org.mate.terminal.gschema.xml.in:124
 msgid ""
 "If the application in the terminal sets the title (most typically people "
 "have their shell set up to do this), the dynamically-set title can erase the"
@@ -266,16 +268,16 @@ msgstr ""
 "で設定するのが典型的です)、動的に設定されたタイトルは既に設定されているタイトルを消したり、前に来たり、後に来たり、置き換えたりすることができます。指定可能な値:"
 " \"replace\"、\"before\"、\"after\"、\"ignore\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:33
+#: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
 msgid "'Terminal'"
 msgstr "端末"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:34
+#: src/org.mate.terminal.gschema.xml.in:128
 msgid "Title for terminal"
 msgstr "端末のタイトル"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:35
+#: src/org.mate.terminal.gschema.xml.in:129
 msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
@@ -284,37 +286,37 @@ msgstr ""
 "端末ウィンドウやタブに表示するタイトルを指定します。このタイトルは、端末で実行中のアプリケーションによって置き換えられたり、追加されたりすることが可能で、title_mode"
 " の設定に依存します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:36
+#: src/org.mate.terminal.gschema.xml.in:133
 msgid "Whether to allow bold text"
 msgstr "太字のフォントを許可するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:37
+#: src/org.mate.terminal.gschema.xml.in:134
 msgid "If true, allow applications in the terminal to make text boldface."
 msgstr "TRUE にすると、端末で実行しているアプリケーションが太字のテキストを利用できるようにします。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:38
+#: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
 msgstr "端末ベルを消すかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:39
+#: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
 msgstr "TRUE にすると、アプリケーションが端末ベルのエスケープシーケンスを送出しても音を出しません。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:40
+#: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
 msgstr "選択したテキストをクリップボードへコピー"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:41
+#: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr "TRUEなら、選択範囲を自動的にクリップボードへコピー"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:42
+#: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
 msgstr "\"単語の一部\" とみなす文字の指定"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:43
+#: src/org.mate.terminal.gschema.xml.in:149
 msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
@@ -323,52 +325,52 @@ msgstr ""
 "単語単位でテキストを選択する際に、この文字の並びを一つの単語と見なします。範囲は \"A-Z\" で与えられます。リテラルのハイフン "
 "(範囲を示すハイフンではない) を指定する場合は先頭においてください。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:44
+#: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
 msgstr "新しいウインドウに指定した大きさを使用するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:45
+#: src/org.mate.terminal.gschema.xml.in:154
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
 msgstr ""
 "TRUE にすると、新しいウィンドウを default_size_columns と default_size_rows で指定されたサイズで作ります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:46
+#: src/org.mate.terminal.gschema.xml.in:158
 msgid "Default number of columns"
 msgstr "デフォルトの列数"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:47
+#: src/org.mate.terminal.gschema.xml.in:159
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr "新しく作成されるウインドウの列の数です。use_custom_size が有効でない場合は意味がありません。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:48
+#: src/org.mate.terminal.gschema.xml.in:163
 msgid "Default number of rows"
 msgstr "デフォルトの行数"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:49
+#: src/org.mate.terminal.gschema.xml.in:164
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
 msgstr "新しく作成されるウインドウの行の数です。use_custom_size が有効でない場合は意味がありません。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:50
+#: src/org.mate.terminal.gschema.xml.in:168
 msgid "Position of the scrollbar"
 msgstr "スクロールバーの位置"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:51
+#: src/org.mate.terminal.gschema.xml.in:169
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr "端末のスクロールバーを配置する場所を設定します。指定可能な値:\"left\"、\"right\"、\"hidden\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:52
+#: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
 msgstr "スクロール時に維持する行数"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:53
+#: src/org.mate.terminal.gschema.xml.in:174
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
@@ -377,11 +379,11 @@ msgstr ""
 "スクロール時に維持する行数を指定します。この行数だけ端末をスクロールして戻ることが可能になり、古い行は破棄されます。crollback_unlimited"
 " が有効になっている場合、この値は無視されます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:54
+#: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "スクロール時に維持する行数を無制限にするかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:55
+#: src/org.mate.terminal.gschema.xml.in:179
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
@@ -390,94 +392,94 @@ msgstr ""
 "TRUE "
 "にすると、古い行が破棄されなくなります。スクロールバックの履歴は一時的にディスクに保存されるので、端末に大量の出力があった場合にシステムのディスクが不足するかもしれません。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:56
+#: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "キーが押されたら下までスクロールするかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:57
+#: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr "TRUE にすると、キー入力のたびにスクロールバーが下に移動します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:58
+#: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
 msgstr "新しい出力があるたびに下までスクロールするかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:59
+#: src/org.mate.terminal.gschema.xml.in:189
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr "TRUE にすると、新しい出力が表示されるたびに下までスクロールします。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:60
+#: src/org.mate.terminal.gschema.xml.in:193
 msgid "What to do with the terminal when the child command exits"
 msgstr "子プロセスのコマンドが終了した後の処理"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:61
+#: src/org.mate.terminal.gschema.xml.in:194
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr "指定可能な値: \"close\" (端末を閉じる)、\"restart\" (コマンドを再実行する)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:62
+#: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr "端末で実行するコマンドをログインシェルとして実行するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:63
+#: src/org.mate.terminal.gschema.xml.in:199
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
 msgstr "TRUE にすると、端末内のコマンドをログインシェルとして起動します (argv[0] はその前にハイフンがつきます)。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:64
+#: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
 msgstr "シェルの代わりに特定のコマンドを実行するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:65
+#: src/org.mate.terminal.gschema.xml.in:204
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr "TRUE にすると、custom_command に設定された値が実行中のシェルの代わりに使用されます。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:66
+#: src/org.mate.terminal.gschema.xml.in:208
 msgid "Whether to blink the cursor"
 msgstr "カーソルを点滅させるかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:67
+#: src/org.mate.terminal.gschema.xml.in:209
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr "指定可能な値: \"system\" (システム全体の設定を使う)、\"on\" (点滅させる)、\"off\" (点滅させない)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:68
+#: src/org.mate.terminal.gschema.xml.in:213
 msgid "The cursor appearance"
 msgstr "端末に表示するカーソルの形状"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:69
+#: src/org.mate.terminal.gschema.xml.in:214
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr "指定可能な値: \"block\" (矩形)、\"ibeam\" (縦棒)、\"underline\" (下線)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:70
+#: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
 msgstr "シェルの代わりに使用するカスタムコマンド"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:71
+#: src/org.mate.terminal.gschema.xml.in:219
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr "use_custom_command が TRUE の場合、シェルの代わりにこのコマンドを実行します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:72
+#: src/org.mate.terminal.gschema.xml.in:223
 msgid "Icon for terminal window"
 msgstr "端末ウィンドウのアイコン"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:73
+#: src/org.mate.terminal.gschema.xml.in:224
 msgid "Icon to use for tabs/windows containing this profile."
 msgstr "このプロファイルを適用するタブ/ウィンドウに使うアイコンを指定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:74
+#: src/org.mate.terminal.gschema.xml.in:228
 msgid "Palette for terminal applications"
 msgstr "端末で実行するアプリケーションのパレット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:75
+#: src/org.mate.terminal.gschema.xml.in:229
 msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
@@ -486,19 +488,19 @@ msgstr ""
 "端末は実行するアプリケーションで使用可能な 16 色のパレットを持っています。これは色の名前をコロンで区切った形式のパレットになっています。色の名前は "
 "\"#FF00FF\" のような 16 進フォーマットにしてください。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:76
+#: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
 msgstr "フォント"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:77
+#: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr "Pango フォント名を指定します。例えば \"Sans 12\" や \"Monospace Bold 14\" です。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:78
+#: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
 msgstr "背景の種類"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:79
+#: src/org.mate.terminal.gschema.xml.in:239
 msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
@@ -507,29 +509,29 @@ msgstr ""
 "端末の背景の種類を設定します。指定可能な値: \"solid\" (単色)、\"image\" (画像)、\"transparent\" "
 "(合成機能を持ったウィンドウマネージャーを利用している場合は実際に透過させ、それ以外は擬似的に透過する)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:80
+#: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
 msgstr "背景の画像"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:81
+#: src/org.mate.terminal.gschema.xml.in:244
 msgid "Filename of a background image."
 msgstr "背景の画像ファイル名を指定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:82
+#: src/org.mate.terminal.gschema.xml.in:248
 msgid "Whether to scroll background image"
 msgstr "背景の画像をスクロールさせるかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:83
+#: src/org.mate.terminal.gschema.xml.in:249
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr "TRUE にすると、背景の画像がテキストと一緒にスクロールします。FALSE にすると、画像はそのままでテキストだけがスクロールします。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:84
+#: src/org.mate.terminal.gschema.xml.in:253
 msgid "How much to darken the background image"
 msgstr "背景の画像をどの程度暗くするか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:85
+#: src/org.mate.terminal.gschema.xml.in:254
 msgid ""
 "A value between 0.0 and 1.0 indicating how much to darken the background "
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
@@ -540,11 +542,11 @@ msgstr ""
 "は完全に暗くすることを意味します。現在の実装では二つのレベルの暗さしか使用できないので、0.0 "
 "で暗くする効果を無効にするという真偽値として動作しています。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:86
+#: src/org.mate.terminal.gschema.xml.in:258
 msgid "Effect of the Backspace key"
 msgstr "Backspace キーの効果"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:87
+#: src/org.mate.terminal.gschema.xml.in:259
 msgid ""
 "Sets what code the backspace key generates. Possible values are \"ascii-"
 "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
@@ -557,11 +559,11 @@ msgstr ""
 "sequence\" (Backspace もしくは Delete に典型的に割り付けられているエスケープシーケンスを生成する)。通常は "
 "\"ascii-dell\" を設定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:88
+#: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
 msgstr "Delete キーの効果"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:89
+#: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
 "Sets what code the delete key generates. Possible values are \"ascii-del\" "
 "for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
@@ -574,21 +576,21 @@ msgstr ""
 "(Backspace もしくは Delete に典型的に割り付けられているエスケープシーケンスを生成する)。通常は \"escape-"
 "sequence\" を設定します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:90
+#: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "端末ウィジェットに対してテーマ色を使用するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:91
+#: src/org.mate.terminal.gschema.xml.in:269
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr "TRUE にすると、ユーザが指定した色の代わりに、テキスト入力ボックスに使われるテーマ色スキーマを使用します。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:92
+#: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
 msgstr "システムフォントを使用するかどうか"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:93
+#: src/org.mate.terminal.gschema.xml.in:274
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -596,11 +598,11 @@ msgstr ""
 "TRUE にすると、デスクトップ全体で使用している標準フォントが等幅フォントなら、端末はそのフォントを使用します "
 "(そうでない場合は、最もよく似たフォントを使用します)。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:94
+#: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
 msgstr "S/Key のチャレンジレスポンスを強調表示する"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:95
+#: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
@@ -608,11 +610,21 @@ msgstr ""
 "S/Key "
 "チャレンジレスポンスのクエリーを検出して、クリックした際にダイアログをポップアップします。ダイアログにパスワードを入力すると、その値を端末に送ります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:96
+#: src/org.mate.terminal.gschema.xml.in:283
+msgid "Highlight URLs under mouse pointer"
+msgstr ""
+
+#: src/org.mate.terminal.gschema.xml.in:284
+msgid ""
+"If true, URLs under mouse pointer are highlighted and can be opened by mouse"
+" click together with control key or used in context menu."
+msgstr ""
+
+#: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
 msgstr "新しいタブを開くショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:97
+#: src/org.mate.terminal.gschema.xml.in:291
 msgid ""
 "Keyboard shortcut key for opening a new tab. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -622,11 +634,11 @@ msgstr ""
 "新しいタブを開くキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:98
+#: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
 msgstr "新しいウィンドウを開くショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:99
+#: src/org.mate.terminal.gschema.xml.in:296
 msgid ""
 "Keyboard shortcut key for opening a new window. Expressed as a string in the"
 " same format used for GTK+ resource files. If you set the option to the "
@@ -636,11 +648,11 @@ msgstr ""
 "新しいウィンドウを開くキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:100
+#: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
 msgstr "新しいプロファイルを生成するショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:101
+#: src/org.mate.terminal.gschema.xml.in:301
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -651,11 +663,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:102
+#: src/org.mate.terminal.gschema.xml.in:305
 msgid "Keyboard shortcut to save the current tab contents to file"
 msgstr "現在のタブの内容をファイルに保存するショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:103
+#: src/org.mate.terminal.gschema.xml.in:306
 msgid ""
 "Keyboard shortcut key to save the current tab contents to a file. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -666,11 +678,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:104
+#: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
 msgstr "タブを閉じるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:105
+#: src/org.mate.terminal.gschema.xml.in:311
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -680,11 +692,11 @@ msgstr ""
 "タブを閉じるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:106
+#: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
 msgstr "ウィンドウを閉じるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:107
+#: src/org.mate.terminal.gschema.xml.in:316
 msgid ""
 "Keyboard shortcut key for closing a window. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -694,11 +706,11 @@ msgstr ""
 "ウィンドウを閉じるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:108
+#: src/org.mate.terminal.gschema.xml.in:320
 msgid "Keyboard shortcut to copy text"
 msgstr "テキストをコピーするショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:109
+#: src/org.mate.terminal.gschema.xml.in:321
 msgid ""
 "Keyboard shortcut key for copying selected text to the clipboard. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -709,11 +721,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:110
+#: src/org.mate.terminal.gschema.xml.in:325
 msgid "Keyboard shortcut to paste text"
 msgstr "テキストを貼り付けるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: src/org.mate.terminal.gschema.xml.in:326
 msgid ""
 "Keyboard shortcut key for pasting the contents of the clipboard in the "
 "terminal. Expressed as a string in the same format used for GTK+ resource "
@@ -721,11 +733,11 @@ msgid ""
 "will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: src/org.mate.terminal.gschema.xml.in:331
 msgid ""
 "Keyboard shortcut key for selecting all the text in the terminal. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -733,11 +745,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: src/org.mate.terminal.gschema.xml.in:336
 msgid ""
 "Keyboard shortcut key for showing the find dialog. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -745,11 +757,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
 "Keyboard shortcut key for finding the next occurrence of the search term in "
 "the terminal. Expressed as a string in the same format used for GTK+ "
@@ -757,11 +769,11 @@ msgid ""
 "then there will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
 "Keyboard shortcut key for finding the previous occurrence of the search term"
 " in the terminal. Expressed as a string in the same format used for GTK+ "
@@ -769,11 +781,11 @@ msgid ""
 "then there will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "フルスクリーンモードに切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: src/org.mate.terminal.gschema.xml.in:351
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -784,11 +796,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: src/org.mate.terminal.gschema.xml.in:355
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr "メニューバーの表示を切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: src/org.mate.terminal.gschema.xml.in:356
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -799,11 +811,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "端末のタイトルを設定するショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: src/org.mate.terminal.gschema.xml.in:361
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -814,11 +826,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "端末をリセットするショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: src/org.mate.terminal.gschema.xml.in:366
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -828,11 +840,11 @@ msgstr ""
 "端末をリセットするキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: src/org.mate.terminal.gschema.xml.in:370
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "端末をリセットしクリアするショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: src/org.mate.terminal.gschema.xml.in:371
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -843,11 +855,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "前のタブに切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: src/org.mate.terminal.gschema.xml.in:376
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -857,11 +869,11 @@ msgstr ""
 "前のタブに切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: src/org.mate.terminal.gschema.xml.in:380
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "次のタブに切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: src/org.mate.terminal.gschema.xml.in:381
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -871,11 +883,11 @@ msgstr ""
 "次のタブに切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: src/org.mate.terminal.gschema.xml.in:385
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr "前のプロファイルに切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: src/org.mate.terminal.gschema.xml.in:386
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -886,11 +898,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: src/org.mate.terminal.gschema.xml.in:390
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr "次のプロファイルに切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: src/org.mate.terminal.gschema.xml.in:391
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -901,11 +913,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: src/org.mate.terminal.gschema.xml.in:395
 msgid "Accelerator to move the current tab to the left."
 msgstr "現在のタブを左へ移動するアクセラレーター"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: src/org.mate.terminal.gschema.xml.in:396
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -916,11 +928,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: src/org.mate.terminal.gschema.xml.in:400
 msgid "Accelerator to move the current tab to the right."
 msgstr "現在のタブを右へ移動するアクセラレーター"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: src/org.mate.terminal.gschema.xml.in:401
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -931,11 +943,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: src/org.mate.terminal.gschema.xml.in:405
 msgid "Accelerator to detach current tab."
 msgstr "現在のタブを閉じるアクセラレーター"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: src/org.mate.terminal.gschema.xml.in:406
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -944,11 +956,11 @@ msgstr ""
 "現在開いているタブを閉じるアクセラレーターを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: src/org.mate.terminal.gschema.xml.in:410
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "タブ 1 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: src/org.mate.terminal.gschema.xml.in:411
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -958,11 +970,11 @@ msgstr ""
 "タブ 1 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: src/org.mate.terminal.gschema.xml.in:415
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "タブ 2 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: src/org.mate.terminal.gschema.xml.in:416
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -972,11 +984,11 @@ msgstr ""
 "タブ 2 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: src/org.mate.terminal.gschema.xml.in:420
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "タブ 3 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: src/org.mate.terminal.gschema.xml.in:421
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -986,11 +998,11 @@ msgstr ""
 "タブ 3 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: src/org.mate.terminal.gschema.xml.in:425
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "タブ 4 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: src/org.mate.terminal.gschema.xml.in:426
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1000,11 +1012,11 @@ msgstr ""
 "タブ 4 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: src/org.mate.terminal.gschema.xml.in:430
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "タブ 5 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: src/org.mate.terminal.gschema.xml.in:431
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1014,11 +1026,11 @@ msgstr ""
 "タブ 5 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: src/org.mate.terminal.gschema.xml.in:435
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "タブ 6 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: src/org.mate.terminal.gschema.xml.in:436
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1028,11 +1040,11 @@ msgstr ""
 "タブ 6 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: src/org.mate.terminal.gschema.xml.in:440
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "タブ 7 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: src/org.mate.terminal.gschema.xml.in:441
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1042,11 +1054,11 @@ msgstr ""
 "タブ 7 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: src/org.mate.terminal.gschema.xml.in:445
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "タブ 8 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: src/org.mate.terminal.gschema.xml.in:446
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1056,11 +1068,11 @@ msgstr ""
 "タブ 8 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: src/org.mate.terminal.gschema.xml.in:450
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "タブ 9 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: src/org.mate.terminal.gschema.xml.in:451
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1070,11 +1082,11 @@ msgstr ""
 "タブ 9 に切り替えるキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\""
 " という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: src/org.mate.terminal.gschema.xml.in:455
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "タブ 10 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: src/org.mate.terminal.gschema.xml.in:456
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1085,11 +1097,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: src/org.mate.terminal.gschema.xml.in:460
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "タブ 11 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: src/org.mate.terminal.gschema.xml.in:461
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1100,11 +1112,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:166
+#: src/org.mate.terminal.gschema.xml.in:465
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "タブ 12 に切り替えるショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:167
+#: src/org.mate.terminal.gschema.xml.in:466
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1115,11 +1127,11 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:168
+#: src/org.mate.terminal.gschema.xml.in:470
 msgid "Keyboard shortcut to launch help"
 msgstr "ヘルプを起動するショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:169
+#: src/org.mate.terminal.gschema.xml.in:471
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1129,11 +1141,11 @@ msgstr ""
 "ヘルプを起動するキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:170
+#: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
 msgstr "フォントを大きくするショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:171
+#: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1143,11 +1155,11 @@ msgstr ""
 "フォントを大きくするキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:172
+#: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
 msgstr "フォントを小さくするショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:173
+#: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1157,11 +1169,11 @@ msgstr ""
 "フォントを小さくするキーボードショートカットを指定します。GTK+ のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:174
+#: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "フォントを標準サイズに戻すショートカット"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:175
+#: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1172,535 +1184,531 @@ msgstr ""
 "のリソースファイルと同じフォーマットの文字列を指定します。\"disabled\" "
 "という特殊な文字列をオプションに指定した場合は、この操作に対するキーバインドは無効になります。"
 
-#: ../src/profile-editor.c:44
+#: src/profile-editor.c:44
 msgid "Black on light yellow"
 msgstr "明るい黄色地に黒文字"
 
-#: ../src/profile-editor.c:49
+#: src/profile-editor.c:49
 msgid "Black on white"
 msgstr "白地に黒文字"
 
-#: ../src/profile-editor.c:54
+#: src/profile-editor.c:54
 msgid "Gray on black"
 msgstr "黒地に灰色文字"
 
-#: ../src/profile-editor.c:59
+#: src/profile-editor.c:59
 msgid "Green on black"
 msgstr "黒地に緑色文字"
 
-#: ../src/profile-editor.c:64
+#: src/profile-editor.c:64
 msgid "White on black"
 msgstr "黒地に白文字"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be
 #. translated
-#: ../src/profile-editor.c:69
+#: src/profile-editor.c:69
 msgid "Solarized light"
 msgstr ""
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
-#: ../src/profile-editor.c:74
+#: src/profile-editor.c:74
 msgid "Solarized dark"
 msgstr ""
 
-#: ../src/profile-editor.c:488
+#: src/profile-editor.c:497
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "次のコマンドを解析する際にエラー: %s"
 
-#: ../src/profile-editor.c:505
+#: src/profile-editor.c:514
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "\"%s\" というプロファイルの編集"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:536 ../src/profile-preferences.ui.h:11
-#: ../src/extra-strings.c:82
+#: src/profile-editor.c:545 src/profile-preferences.ui:120
+#: src/profile-preferences.ui:146 src/extra-strings.c:82
 msgid "Custom"
 msgstr "カスタム"
 
-#: ../src/profile-editor.c:586
+#: src/profile-editor.c:595
 msgid "Images"
 msgstr "画像"
 
-#: ../src/profile-editor.c:730
+#: src/profile-editor.c:732
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "パレット %d 色の選択"
 
-#: ../src/profile-editor.c:734
+#: src/profile-editor.c:736
 #, c-format
 msgid "Palette entry %d"
 msgstr "パレットのエントリ (その %d)"
 
-#: ../src/encodings-dialog.ui.h:1
+#: src/encodings-dialog.ui:14
 msgid "Add or Remove Terminal Encodings"
 msgstr "端末のエンコーディングの追加/削除"
 
-#: ../src/encodings-dialog.ui.h:2
+#: src/encodings-dialog.ui:169
 msgid "A_vailable encodings:"
 msgstr "利用可能なエンコーディング(_V):"
 
-#: ../src/encodings-dialog.ui.h:3
+#: src/encodings-dialog.ui:187
 msgid "E_ncodings shown in menu:"
 msgstr "メニューに表示するエンコーディング(_N):"
 
-#: ../src/find-dialog.ui.h:1 ../src/terminal-accels.c:218
+#: src/find-dialog.ui:14 src/terminal-accels.c:218
 msgid "Find"
 msgstr "検索"
 
-#: ../src/find-dialog.ui.h:2
+#: src/find-dialog.ui:87
 msgid "_Search for:"
 msgstr "検索文字列(_S):"
 
-#: ../src/find-dialog.ui.h:3
+#: src/find-dialog.ui:124
 msgid "_Match case"
 msgstr "大文字小文字を区別してマッチ(_M)"
 
-#: ../src/find-dialog.ui.h:4
+#: src/find-dialog.ui:141
 msgid "Match _entire word only"
 msgstr "単語全体にのみマッチ(_E)"
 
-#: ../src/find-dialog.ui.h:5
+#: src/find-dialog.ui:158
 msgid "Match as _regular expression"
 msgstr "正規表現としてマッチ(_R)"
 
-#: ../src/find-dialog.ui.h:6
+#: src/find-dialog.ui:175
 msgid "Search _backwards"
 msgstr "後方検索(_B)"
 
-#: ../src/find-dialog.ui.h:7
+#: src/find-dialog.ui:193
 msgid "_Wrap around"
 msgstr "折り返す(_W)"
 
-#: ../src/keybinding-editor.ui.h:1
+#: src/keybinding-editor.ui:14
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
-#: ../src/keybinding-editor.ui.h:2
+#: src/keybinding-editor.ui:78
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
 msgstr "メニューのアクセスキーを有効にする (例: Alt+F でファイルメニューを開く等)(_E)"
 
-#: ../src/keybinding-editor.ui.h:3
+#: src/keybinding-editor.ui:117
 msgid "Enable the _menu shortcut key (F10 by default)"
 msgstr "メニューのショートカットキーを有効にする (デフォルト: F10)(_M)"
 
-#: ../src/keybinding-editor.ui.h:4
+#: src/keybinding-editor.ui:136
 msgid "_Shortcut keys:"
 msgstr "ショートカットキー(_S):"
 
-#: ../src/profile-manager.ui.h:1
+#: src/profile-manager.ui:14
 msgid "Profiles"
 msgstr "プロファイル"
 
-#: ../src/profile-manager.ui.h:2
+#: src/profile-manager.ui:175
 msgid "_Profile used when launching a new terminal:"
 msgstr "新しい端末を起動する際に使用するプロファイル(_P):"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
 msgid "New Profile"
 msgstr "新しいプロファイル"
 
-#: ../src/profile-new-dialog.ui.h:2
+#: src/profile-new-dialog.ui:74
 msgid "C_reate"
 msgstr "作成(_R)"
 
-#: ../src/profile-new-dialog.ui.h:3
+#: src/profile-new-dialog.ui:132
 msgid "Profile _name:"
 msgstr "プロファイルの名前(_N):"
 
-#: ../src/profile-new-dialog.ui.h:4
+#: src/profile-new-dialog.ui:145
 msgid "_Base on:"
 msgstr "ベースにするプロファイル(_B):"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:1 ../src/extra-strings.c:35
+#: src/profile-preferences.ui:66 src/extra-strings.c:35
 msgid "Block"
 msgstr "ブロック"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
+#: src/profile-preferences.ui:69 src/extra-strings.c:37
 msgid "I-Beam"
 msgstr "Iビーム"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
+#: src/profile-preferences.ui:72 src/extra-strings.c:39
 msgid "Underline"
 msgstr "下線"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
+#: src/profile-preferences.ui:83 src/extra-strings.c:63
 msgid "Replace initial title"
 msgstr "初期のタイトルを置き換える"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:5 ../src/extra-strings.c:65
+#: src/profile-preferences.ui:86 src/extra-strings.c:65
 msgid "Append initial title"
 msgstr "初期のタイトルの後に追加する"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:6 ../src/extra-strings.c:67
+#: src/profile-preferences.ui:89 src/extra-strings.c:67
 msgid "Prepend initial title"
 msgstr "初期のタイトルの前に追加する"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:7 ../src/extra-strings.c:69
+#: src/profile-preferences.ui:92 src/extra-strings.c:69
 msgid "Keep initial title"
 msgstr "初期のタイトルを保持する"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:8 ../src/extra-strings.c:49
+#: src/profile-preferences.ui:103 src/extra-strings.c:49
 msgid "Exit the terminal"
 msgstr "端末を終了"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:9 ../src/extra-strings.c:51
+#: src/profile-preferences.ui:106 src/extra-strings.c:51
 msgid "Restart the command"
 msgstr "コマンドを再起動"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:10 ../src/extra-strings.c:53
+#: src/profile-preferences.ui:109 src/extra-strings.c:53
 msgid "Hold the terminal open"
 msgstr "端末を開いたままにする"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:12 ../src/extra-strings.c:72
+#: src/profile-preferences.ui:131 src/extra-strings.c:72
 msgid "Tango"
 msgstr "Tango"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
+#: src/profile-preferences.ui:134 src/extra-strings.c:74
 msgid "Linux console"
 msgstr "Linux コンソール"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
+#: src/profile-preferences.ui:137 src/extra-strings.c:76
 msgid "XTerm"
 msgstr "XTerm"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:15 ../src/extra-strings.c:78
+#: src/profile-preferences.ui:140 src/extra-strings.c:78
 msgid "Rxvt"
 msgstr "Rxvt"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:80
+#: src/profile-preferences.ui:143 src/extra-strings.c:80
 msgid "Solarized"
 msgstr ""
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:56
+#: src/profile-preferences.ui:157 src/extra-strings.c:56
 msgid "On the left side"
 msgstr "左側"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/extra-strings.c:58
+#: src/profile-preferences.ui:160 src/extra-strings.c:58
 msgid "On the right side"
 msgstr "右側"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
-#: ../src/extra-strings.c:60
+#: src/profile-preferences.ui:163 src/terminal-accels.c:408
+#: src/extra-strings.c:60
 msgid "Disabled"
 msgstr "無効"
 
-#. * Copyright © 2009 Christian Persch
-#. *
-#. * Mate-terminal is free software; you can redistribute it and/or modify
-#. * it under the terms of the GNU General Public License as published by
-#. * the Free Software Foundation; either version 3 of the License, or
-#. * (at your option) any later version.
-#. *
-#. * Mate-terminal is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. * GNU General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License
-#. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#. This file contains extra strings that need to be translated, but
-#. * can't be extracted by intltool since the ui files aren't in git, and
-#. * the glade files don't contain them in the right form. See bug #553357.
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:24
+#: src/profile-preferences.ui:174 src/profile-preferences.ui:197
+#: src/extra-strings.c:24
 msgid "Automatic"
 msgstr "自動"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:26
+#: src/profile-preferences.ui:177 src/profile-preferences.ui:200
+#: src/extra-strings.c:26
 msgid "Control-H"
 msgstr "Control-H"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:22 ../src/extra-strings.c:28
+#: src/profile-preferences.ui:180 src/profile-preferences.ui:203
+#: src/extra-strings.c:28
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:23 ../src/extra-strings.c:30
+#: src/profile-preferences.ui:183 src/profile-preferences.ui:206
+#: src/extra-strings.c:30
 msgid "Escape sequence"
 msgstr "エスケープシーケンス"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:32
+#: src/profile-preferences.ui:186 src/profile-preferences.ui:209
+#: src/extra-strings.c:32
 msgid "TTY Erase"
 msgstr "TTY Erase"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:42
+#: src/profile-preferences.ui:220 src/extra-strings.c:42
 msgid "Use system settings"
 msgstr "システム設定を使用する"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:44
+#: src/profile-preferences.ui:223 src/extra-strings.c:44
 msgid "Always blink"
 msgstr "常に点滅する"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:27 ../src/extra-strings.c:46
+#: src/profile-preferences.ui:226 src/extra-strings.c:46
 msgid "Never blink"
 msgstr "点滅しない"
 
-#: ../src/profile-preferences.ui.h:28
+#: src/profile-preferences.ui:233
 msgid "Profile Editor"
 msgstr "プロファイルエディター"
 
-#: ../src/profile-preferences.ui.h:29
+#: src/profile-preferences.ui:311
 msgid "_Profile name:"
 msgstr "プロファイルの名前(_P):"
 
-#: ../src/profile-preferences.ui.h:30
+#: src/profile-preferences.ui:342
 msgid "_Use the system fixed width font"
 msgstr "\"固定幅のフォント\" を使用する(_U)"
 
-#: ../src/profile-preferences.ui.h:31
+#: src/profile-preferences.ui:372
 msgid "_Font:"
 msgstr "フォント(_F):"
 
-#: ../src/profile-preferences.ui.h:32
+#: src/profile-preferences.ui:389
 msgid "Choose A Terminal Font"
 msgstr "端末フォントの選択"
 
-#: ../src/profile-preferences.ui.h:33
+#: src/profile-preferences.ui:410
 msgid "_Allow bold text"
 msgstr "太字フォントを有効にする(_A)"
 
-#: ../src/profile-preferences.ui.h:34
+#: src/profile-preferences.ui:426
 msgid "Show _menubar by default in new terminals"
 msgstr "常にメニューバーをデフォルトで表示する(_M)"
 
-#: ../src/profile-preferences.ui.h:35
+#: src/profile-preferences.ui:442
 msgid "Terminal _bell"
 msgstr "端末ベルを鳴らす(_B)"
 
-#: ../src/profile-preferences.ui.h:36
+#: src/profile-preferences.ui:458
 msgid "Copy selected text into _clipboard"
 msgstr "選択したテキストをクリップボードへコピー(_C)"
 
-#: ../src/profile-preferences.ui.h:37
+#: src/profile-preferences.ui:474
+msgid "Highlight _S/Key challenges under mouse pointer"
+msgstr ""
+
+#: src/profile-preferences.ui:490
+msgid "Highlight _URLs under mouse pointer"
+msgstr ""
+
+#: src/profile-preferences.ui:515
 msgid "Cursor blin_k:"
 msgstr "カーソルの点滅(_K)"
 
-#: ../src/profile-preferences.ui.h:38
+#: src/profile-preferences.ui:562
 msgid "Cursor _shape:"
 msgstr "カーソルの形状(_S):"
 
-#: ../src/profile-preferences.ui.h:39
+#: src/profile-preferences.ui:609
 msgid "Select-by-_word characters:"
 msgstr "単語単位で選択する文字(_W):"
 
-#: ../src/profile-preferences.ui.h:40
+#: src/profile-preferences.ui:640
 msgid "Use custom default terminal si_ze"
 msgstr "カスタマイズしたデフォルトの端末サイズを使用(_Z)"
 
-#: ../src/profile-preferences.ui.h:41
+#: src/profile-preferences.ui:670
 msgid "Default size:"
 msgstr "デフォルトサイズ:"
 
-#: ../src/profile-preferences.ui.h:42
+#: src/profile-preferences.ui:702
 msgid "columns"
 msgstr "列"
 
-#: ../src/profile-preferences.ui.h:43
+#: src/profile-preferences.ui:741
 msgid "rows"
 msgstr "行"
 
-#: ../src/profile-preferences.ui.h:44
+#: src/profile-preferences.ui:776
 msgid "General"
 msgstr "全般"
 
-#: ../src/profile-preferences.ui.h:45
+#: src/profile-preferences.ui:803
 msgid "<b>Title</b>"
 msgstr "<b>タイトル</b>"
 
-#: ../src/profile-preferences.ui.h:46
+#: src/profile-preferences.ui:834
 msgid "Initial _title:"
 msgstr "初期のタイトル(_T):"
 
-#: ../src/profile-preferences.ui.h:47
+#: src/profile-preferences.ui:874
 msgid "When terminal commands set their o_wn titles:"
 msgstr "端末からコマンドで指定しようとした場合(_W):"
 
-#: ../src/profile-preferences.ui.h:48
+#: src/profile-preferences.ui:938
 msgid "<b>Command</b>"
 msgstr "<b>コマンド</b>"
 
-#: ../src/profile-preferences.ui.h:49
+#: src/profile-preferences.ui:965
 msgid "_Run command as a login shell"
 msgstr "ログインシェルとしてコマンドを実行する(_R)"
 
-#: ../src/profile-preferences.ui.h:50
+#: src/profile-preferences.ui:981
 msgid "Ru_n a custom command instead of my shell"
 msgstr "SHELL の代わりにコマンドを実行する(_N)"
 
-#: ../src/profile-preferences.ui.h:51
+#: src/profile-preferences.ui:1011
 msgid "Custom co_mmand:"
 msgstr "コマンド(_M):"
 
-#: ../src/profile-preferences.ui.h:52
+#: src/profile-preferences.ui:1053
 msgid "When command _exits:"
 msgstr "コマンドの実行が完了した後(_E):"
 
-#: ../src/profile-preferences.ui.h:53
+#: src/profile-preferences.ui:1123
 msgid "Title and Command"
 msgstr "タイトルとコマンド"
 
-#: ../src/profile-preferences.ui.h:54
+#: src/profile-preferences.ui:1151
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>前景、背景、太字および下線</b>"
 
-#: ../src/profile-preferences.ui.h:55
+#: src/profile-preferences.ui:1173
 msgid "_Use colors from system theme"
 msgstr "システムのテーマ色を使用する(_U)"
 
-#: ../src/profile-preferences.ui.h:56
+#: src/profile-preferences.ui:1197
 msgid "Built-in sche_mes:"
 msgstr "組み込みのスキーム(_M):"
 
-#: ../src/profile-preferences.ui.h:57
+#: src/profile-preferences.ui:1246
 msgid "_Text color:"
 msgstr "文字の色(_T):"
 
-#: ../src/profile-preferences.ui.h:58
+#: src/profile-preferences.ui:1261
 msgid "Choose Terminal Background Color"
 msgstr "端末の背景色の選択"
 
-#: ../src/profile-preferences.ui.h:59
+#: src/profile-preferences.ui:1273
 msgid "Choose Terminal Text Color"
 msgstr "端末の文字色の選択"
 
-#: ../src/profile-preferences.ui.h:60
+#: src/profile-preferences.ui:1286
 msgid "_Background color:"
 msgstr "背景色(_B):"
 
-#: ../src/profile-preferences.ui.h:61
+#: src/profile-preferences.ui:1336
 msgid "Bol_d color:"
 msgstr "太字の色(_D):"
 
-#: ../src/profile-preferences.ui.h:62
+#: src/profile-preferences.ui:1350
 msgid "_Underline color:"
 msgstr "下線の色(_U):"
 
-#: ../src/profile-preferences.ui.h:63
+#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
 msgid "_Same as text color"
 msgstr "文字色と同じにする(_S):"
 
-#: ../src/profile-preferences.ui.h:64
+#: src/profile-preferences.ui:1430
 msgid "<b>Palette</b>"
 msgstr "<b>パレット</b>"
 
-#: ../src/profile-preferences.ui.h:65
+#: src/profile-preferences.ui:1456
 msgid "Built-in _schemes:"
 msgstr "組み込みのスキーム(_S):"
 
-#: ../src/profile-preferences.ui.h:66
+#: src/profile-preferences.ui:1708
 msgid "Color p_alette:"
 msgstr "カラーパレット(_A):"
 
-#: ../src/profile-preferences.ui.h:67
+#: src/profile-preferences.ui:1724
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr "<small><i><b>注意:</b> 端末から実行するアプリでこれらの色を利用できます。</i></small>"
 
-#: ../src/profile-preferences.ui.h:68
+#: src/profile-preferences.ui:1761
 msgid "Colors"
 msgstr "色"
 
-#: ../src/profile-preferences.ui.h:69
+#: src/profile-preferences.ui:1779
 msgid "_Solid color"
 msgstr "単色にする(_S)"
 
-#: ../src/profile-preferences.ui.h:70
+#: src/profile-preferences.ui:1801
 msgid "_Background image"
 msgstr "画像にする(_B)"
 
-#: ../src/profile-preferences.ui.h:71
+#: src/profile-preferences.ui:1837
 msgid "Image _file:"
 msgstr "画像ファイル(_F):"
 
-#: ../src/profile-preferences.ui.h:72
+#: src/profile-preferences.ui:1852
 msgid "Select Background Image"
 msgstr "背景画像の選択"
 
-#: ../src/profile-preferences.ui.h:73
+#: src/profile-preferences.ui:1869
 msgid "Background image _scrolls"
 msgstr "背景の画像をスクロールさせる(_S)"
 
-#: ../src/profile-preferences.ui.h:74
+#: src/profile-preferences.ui:1900
 msgid "_Transparent background"
 msgstr "透過な画像にする(_T)"
 
-#: ../src/profile-preferences.ui.h:75
+#: src/profile-preferences.ui:1926
 msgid "S_hade transparent or image background:"
 msgstr "透過画像や背景の画像に濃淡をつける(_H):"
 
-#: ../src/profile-preferences.ui.h:76
+#: src/profile-preferences.ui:1942
 msgid "S_hade transparent background:"
 msgstr "背景を透明化する(_H):"
 
-#: ../src/profile-preferences.ui.h:77
+#: src/profile-preferences.ui:1963
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>なし</i></small>"
 
-#: ../src/profile-preferences.ui.h:78
+#: src/profile-preferences.ui:1993
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>最大</i></small>"
 
-#: ../src/profile-preferences.ui.h:79
+#: src/profile-preferences.ui:2028
 msgid "Background"
 msgstr "背景"
 
-#: ../src/profile-preferences.ui.h:80
+#: src/profile-preferences.ui:2049
 msgid "_Scrollbar is:"
 msgstr "スクロールバーの位置(_S):"
 
-#: ../src/profile-preferences.ui.h:81
+#: src/profile-preferences.ui:2060
 msgid "Scroll on _output"
 msgstr "出力するたびにスクロールする(_O)"
 
-#: ../src/profile-preferences.ui.h:82
+#: src/profile-preferences.ui:2077
 msgid "Scroll on _keystroke"
 msgstr "キー入力するたびにスクロールする(_K)"
 
-#: ../src/profile-preferences.ui.h:83
+#: src/profile-preferences.ui:2117
 msgid "lines"
 msgstr "行"
 
-#: ../src/profile-preferences.ui.h:84
+#: src/profile-preferences.ui:2139
 msgid "Scroll_back:"
 msgstr "スクロールバックのサイズ(_B):"
 
-#: ../src/profile-preferences.ui.h:85
+#: src/profile-preferences.ui:2150
 msgid "_Unlimited"
 msgstr "無制限にする(_U)"
 
-#: ../src/profile-preferences.ui.h:86
+#: src/profile-preferences.ui:2207
 msgid "Scrolling"
 msgstr "スクロール"
 
-#: ../src/profile-preferences.ui.h:87
+#: src/profile-preferences.ui:2228
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1711,435 +1719,432 @@ msgstr ""
 "これらのオプションが影響して、いくつかのアプリケーションが正常に動作しなくなるかもしれません。これらのオプションは特定のアプリや OS "
 "上で異なった動作になってしまう問題を解決するために提供されています。</i></small>"
 
-#: ../src/profile-preferences.ui.h:88
+#: src/profile-preferences.ui:2250
 msgid "_Delete key generates:"
 msgstr "[DEL] キーが生成するコード(_D):"
 
-#: ../src/profile-preferences.ui.h:89
+#: src/profile-preferences.ui:2302
 msgid "_Backspace key generates:"
 msgstr "[BS] キーが生成するコード(_B):"
 
-#: ../src/profile-preferences.ui.h:90
+#: src/profile-preferences.ui:2326
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "互換性のオプションをデフォルトに戻す(_R)"
 
-#: ../src/profile-preferences.ui.h:91
+#: src/profile-preferences.ui:2356
 msgid "Compatibility"
 msgstr "互換性"
 
-#: ../src/skey-challenge.ui.h:1
+#: src/skey-challenge.ui:100
 msgid "S/Key Challenge Response"
 msgstr "S/Key チャレンジレスポンス"
 
-#: ../src/skey-challenge.ui.h:2
+#: src/skey-challenge.ui:120
 msgid "_Password:"
 msgstr "パスワード(_P):"
 
-#: ../src/skey-popup.c:165
+#: src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
 msgstr "クリックした文字列は適切な S/Key チャレンジではないようです。"
 
-#: ../src/skey-popup.c:176
+#: src/skey-popup.c:176
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "クリックした文字列は適切な OTP チャレンジではないようです。"
 
-#: ../src/terminal-accels.c:148
+#: src/terminal-accels.c:148
 msgid "New Tab"
 msgstr "新しいタブを開く"
 
-#: ../src/terminal-accels.c:152
+#: src/terminal-accels.c:152
 msgid "New Window"
 msgstr "新しいウィンドウを開く"
 
-#: ../src/terminal-accels.c:161
+#: src/terminal-accels.c:161
 msgid "Save Contents"
 msgstr "内容を保存する"
 
-#: ../src/terminal-accels.c:166
+#: src/terminal-accels.c:166
 msgid "Close Tab"
 msgstr "タブを閉じる"
 
-#: ../src/terminal-accels.c:170
+#: src/terminal-accels.c:170
 msgid "Close Window"
 msgstr "ウィンドウを閉じる"
 
-#: ../src/terminal-accels.c:178
+#: src/terminal-accels.c:178
 msgid "Copy"
 msgstr "コピーする"
 
-#: ../src/terminal-accels.c:182
+#: src/terminal-accels.c:182
 msgid "Paste"
 msgstr "貼り付ける"
 
-#: ../src/terminal-accels.c:186
+#: src/terminal-accels.c:186
 msgid "Select All"
 msgstr "すべて選択"
 
-#: ../src/terminal-accels.c:194
+#: src/terminal-accels.c:194
 msgid "Hide and Show menubar"
 msgstr "メニューバーの表示/非表示"
 
-#: ../src/terminal-accels.c:198
+#: src/terminal-accels.c:198
 msgid "Full Screen"
 msgstr "フルスクリーンにする"
 
-#: ../src/terminal-accels.c:202
+#: src/terminal-accels.c:202
 msgid "Zoom In"
 msgstr "拡大"
 
-#: ../src/terminal-accels.c:206
+#: src/terminal-accels.c:206
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: ../src/terminal-accels.c:210
+#: src/terminal-accels.c:210
 msgid "Normal Size"
 msgstr "通常のサイズに戻す"
 
-#: ../src/terminal-accels.c:222
+#: src/terminal-accels.c:222
 msgid "Find Next"
 msgstr "次を検索"
 
-#: ../src/terminal-accels.c:226
+#: src/terminal-accels.c:226
 msgid "Find Previous"
 msgstr "前を検索"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
+#: src/terminal-accels.c:234 src/terminal-window.c:4247
 msgid "Set Title"
 msgstr "タイトルを設定する"
 
-#: ../src/terminal-accels.c:238
+#: src/terminal-accels.c:238
 msgid "Reset"
 msgstr "リセット"
 
-#: ../src/terminal-accels.c:242
+#: src/terminal-accels.c:242
 msgid "Reset and Clear"
 msgstr "リセットしてクリアする"
 
-#: ../src/terminal-accels.c:246
+#: src/terminal-accels.c:246
 msgid "Switch to Previous Profile"
 msgstr "前のプロファイルに切り替える"
 
-#: ../src/terminal-accels.c:250
+#: src/terminal-accels.c:250
 msgid "Switch to Next Profile"
 msgstr "次のプロファイルに切り替える"
 
-#: ../src/terminal-accels.c:258
+#: src/terminal-accels.c:258
 msgid "Switch to Previous Tab"
 msgstr "前のタブに切り替える"
 
-#: ../src/terminal-accels.c:262
+#: src/terminal-accels.c:262
 msgid "Switch to Next Tab"
 msgstr "次のタブに切り替える"
 
-#: ../src/terminal-accels.c:266
+#: src/terminal-accels.c:266
 msgid "Move Tab to the Left"
 msgstr "タブを左へ移動する"
 
-#: ../src/terminal-accels.c:270
+#: src/terminal-accels.c:270
 msgid "Move Tab to the Right"
 msgstr "タブを右へ移動する"
 
-#: ../src/terminal-accels.c:274
+#: src/terminal-accels.c:274
 msgid "Detach Tab"
 msgstr "タブを閉じる"
 
-#: ../src/terminal-accels.c:278
+#: src/terminal-accels.c:278
 msgid "Switch to Tab 1"
 msgstr "タブ 1 に切り替える"
 
-#: ../src/terminal-accels.c:283
+#: src/terminal-accels.c:283
 msgid "Switch to Tab 2"
 msgstr "タブ 2 に切り替える"
 
-#: ../src/terminal-accels.c:288
+#: src/terminal-accels.c:288
 msgid "Switch to Tab 3"
 msgstr "タブ 3 に切り替える"
 
-#: ../src/terminal-accels.c:293
+#: src/terminal-accels.c:293
 msgid "Switch to Tab 4"
 msgstr "タブ 4 に切り替える"
 
-#: ../src/terminal-accels.c:298
+#: src/terminal-accels.c:298
 msgid "Switch to Tab 5"
 msgstr "タブ 5 に切り替える"
 
-#: ../src/terminal-accels.c:303
+#: src/terminal-accels.c:303
 msgid "Switch to Tab 6"
 msgstr "タブ 6 に切り替える"
 
-#: ../src/terminal-accels.c:308
+#: src/terminal-accels.c:308
 msgid "Switch to Tab 7"
 msgstr "タブ 7 に切り替える"
 
-#: ../src/terminal-accels.c:313
+#: src/terminal-accels.c:313
 msgid "Switch to Tab 8"
 msgstr "タブ 8 に切り替える"
 
-#: ../src/terminal-accels.c:318
+#: src/terminal-accels.c:318
 msgid "Switch to Tab 9"
 msgstr "タブ 9 に切り替える"
 
-#: ../src/terminal-accels.c:323
+#: src/terminal-accels.c:323
 msgid "Switch to Tab 10"
 msgstr "タブ 10 に切り替える"
 
-#: ../src/terminal-accels.c:328
+#: src/terminal-accels.c:328
 msgid "Switch to Tab 11"
 msgstr "タブ 11 に切り替える"
 
-#: ../src/terminal-accels.c:333
+#: src/terminal-accels.c:333
 msgid "Switch to Tab 12"
 msgstr "タブ 12 に切り替える"
 
-#: ../src/terminal-accels.c:341
+#: src/terminal-accels.c:341
 msgid "Contents"
 msgstr "目次"
 
-#: ../src/terminal-accels.c:346
+#: src/terminal-accels.c:346
 msgid "File"
 msgstr "ファイル"
 
-#: ../src/terminal-accels.c:347
+#: src/terminal-accels.c:347
 msgid "Edit"
 msgstr "編集"
 
-#: ../src/terminal-accels.c:348
+#: src/terminal-accels.c:348
 msgid "View"
 msgstr "表示"
 
-#: ../src/terminal-accels.c:349
+#: src/terminal-accels.c:349
 msgid "Search"
 msgstr "検索"
 
-#: ../src/terminal-accels.c:351
+#: src/terminal-accels.c:351
 msgid "Tabs"
 msgstr "タブ"
 
-#: ../src/terminal-accels.c:352
+#: src/terminal-accels.c:352
 msgid "Help"
 msgstr "ヘルプ"
 
-#: ../src/terminal-accels.c:855
+#: src/terminal-accels.c:855
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "\"%s\" は既に \"%s\" というアクションに関連づけられています"
 
-#: ../src/terminal-accels.c:1011
+#: src/terminal-accels.c:1011
 msgid "_Action"
 msgstr "操作(_A)"
 
-#: ../src/terminal-accels.c:1030
+#: src/terminal-accels.c:1030
 msgid "Shortcut _Key"
 msgstr "ショートカットキー(_K)"
 
-#: ../src/terminal-app.c:540
+#: src/terminal-app.c:523
 msgid "Click button to choose profile"
 msgstr "ボタンをクリックしてプロファイルを選択してください"
 
-#: ../src/terminal-app.c:623
+#: src/terminal-app.c:606
 msgid "Profile list"
 msgstr "プロファイルの一覧"
 
-#: ../src/terminal-app.c:702
+#: src/terminal-app.c:683
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "\"%s\" というプロファイルを削除しますか?"
 
-#: ../src/terminal-app.c:706
+#: src/terminal-app.c:687
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: ../src/terminal-app.c:711
+#: src/terminal-app.c:692
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: ../src/terminal-app.c:718
+#: src/terminal-app.c:699
 msgid "Delete Profile"
 msgstr "プロファイルの削除"
 
-#: ../src/terminal-app.c:1165
+#: src/terminal-app.c:1146
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "既に \"%s\" と同名のプロファイルが存在します。この名前で別のプロファイルを作成しますか?"
 
-#: ../src/terminal-app.c:1260
+#: src/terminal-app.c:1241
 msgid "Choose base profile"
 msgstr "ベースとなるプロファイルの選択"
 
-#: ../src/terminal-app.c:1848
+#: src/terminal-app.c:1828
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\" というプロファイルはありません (デフォルトのプロファイルを使用します)\n"
 
-#: ../src/terminal-app.c:1875
+#: src/terminal-app.c:1855
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "無効なジオメトリ文字列 \"%s\"\n"
 
-#: ../src/terminal-app.c:2081
+#: src/terminal-app.c:2061
 msgid "User Defined"
 msgstr "ユーザー定義"
 
-#: ../src/terminal.c:585
+#: src/terminal.c:585
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "引数を解析できませんでした: %s\n"
 
-#: ../src/terminal-encoding.c:53 ../src/terminal-encoding.c:66
-#: ../src/terminal-encoding.c:80 ../src/terminal-encoding.c:102
-#: ../src/terminal-encoding.c:113
+#: src/terminal-encoding.c:53 src/terminal-encoding.c:66
+#: src/terminal-encoding.c:80 src/terminal-encoding.c:102
+#: src/terminal-encoding.c:113
 msgid "Western"
 msgstr "西欧"
 
-#: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:81
-#: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:111
+#: src/terminal-encoding.c:54 src/terminal-encoding.c:81
+#: src/terminal-encoding.c:92 src/terminal-encoding.c:111
 msgid "Central European"
 msgstr "中央ヨーロッパ"
 
-#: ../src/terminal-encoding.c:55
+#: src/terminal-encoding.c:55
 msgid "South European"
 msgstr "南欧"
 
-#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:64
-#: ../src/terminal-encoding.c:118
+#: src/terminal-encoding.c:56 src/terminal-encoding.c:64
+#: src/terminal-encoding.c:118
 msgid "Baltic"
 msgstr "バルト語"
 
-#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:82
-#: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
-#: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
+#: src/terminal-encoding.c:57 src/terminal-encoding.c:82
+#: src/terminal-encoding.c:88 src/terminal-encoding.c:89
+#: src/terminal-encoding.c:94 src/terminal-encoding.c:112
 msgid "Cyrillic"
 msgstr "キリル文字"
 
-#: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
-#: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
+#: src/terminal-encoding.c:58 src/terminal-encoding.c:85
+#: src/terminal-encoding.c:91 src/terminal-encoding.c:117
 msgid "Arabic"
 msgstr "アラビア文字"
 
-#: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
-#: ../src/terminal-encoding.c:114
+#: src/terminal-encoding.c:59 src/terminal-encoding.c:97
+#: src/terminal-encoding.c:114
 msgid "Greek"
 msgstr "ギリシア文字"
 
-#: ../src/terminal-encoding.c:60
+#: src/terminal-encoding.c:60
 msgid "Hebrew Visual"
 msgstr "ヘブライ語 (論理表記)"
 
-#: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
-#: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
+#: src/terminal-encoding.c:61 src/terminal-encoding.c:84
+#: src/terminal-encoding.c:100 src/terminal-encoding.c:116
 msgid "Hebrew"
 msgstr "ヘブライ文字"
 
-#: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
-#: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
+#: src/terminal-encoding.c:62 src/terminal-encoding.c:83
+#: src/terminal-encoding.c:104 src/terminal-encoding.c:115
 msgid "Turkish"
 msgstr "トルコ語"
 
-#: ../src/terminal-encoding.c:63
+#: src/terminal-encoding.c:63
 msgid "Nordic"
 msgstr "北欧"
 
-#: ../src/terminal-encoding.c:65
+#: src/terminal-encoding.c:65
 msgid "Celtic"
 msgstr "ケルト文字"
 
-#: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:103
+#: src/terminal-encoding.c:67 src/terminal-encoding.c:103
 msgid "Romanian"
 msgstr "ルーマニア語"
 
-#. These encodings do NOT pass-through ASCII, so are always rejected.
-#. * FIXME: why are they in this table; or rather why do we need
-#. * the ASCII pass-through requirement?
-#: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:125
-#: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
-#: ../src/terminal-encoding.c:128
+#: src/terminal-encoding.c:68 src/terminal-encoding.c:125
+#: src/terminal-encoding.c:126 src/terminal-encoding.c:127
+#: src/terminal-encoding.c:128
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/terminal-encoding.c:69
+#: src/terminal-encoding.c:69
 msgid "Armenian"
 msgstr "アルメニア文字"
 
-#: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
-#: ../src/terminal-encoding.c:75
+#: src/terminal-encoding.c:70 src/terminal-encoding.c:71
+#: src/terminal-encoding.c:75
 msgid "Chinese Traditional"
 msgstr "中国語 (繁体字)"
 
-#: ../src/terminal-encoding.c:72
+#: src/terminal-encoding.c:72
 msgid "Cyrillic/Russian"
 msgstr "キリル文字/ロシア語"
 
-#: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
-#: ../src/terminal-encoding.c:106
+#: src/terminal-encoding.c:73 src/terminal-encoding.c:86
+#: src/terminal-encoding.c:106
 msgid "Japanese"
 msgstr "日本語"
 
-#: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:87
-#: ../src/terminal-encoding.c:109 ../src/terminal-encoding.c:129
+#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
+#: src/terminal-encoding.c:109 src/terminal-encoding.c:129
 msgid "Korean"
 msgstr "韓国語"
 
-#: ../src/terminal-encoding.c:76 ../src/terminal-encoding.c:77
-#: ../src/terminal-encoding.c:78
+#: src/terminal-encoding.c:76 src/terminal-encoding.c:77
+#: src/terminal-encoding.c:78
 msgid "Chinese Simplified"
 msgstr "中国語 (簡体字)"
 
-#: ../src/terminal-encoding.c:79
+#: src/terminal-encoding.c:79
 msgid "Georgian"
 msgstr "グルジア文字"
 
-#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
+#: src/terminal-encoding.c:90 src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
 msgstr "キリル文字/ウクライナ語"
 
-#: ../src/terminal-encoding.c:93
+#: src/terminal-encoding.c:93
 msgid "Croatian"
 msgstr "クロアチア語"
 
-#: ../src/terminal-encoding.c:95
+#: src/terminal-encoding.c:95
 msgid "Hindi"
 msgstr "ヒンディ語"
 
-#: ../src/terminal-encoding.c:96
+#: src/terminal-encoding.c:96
 msgid "Persian"
 msgstr "ペルシア語"
 
-#: ../src/terminal-encoding.c:98
+#: src/terminal-encoding.c:98
 msgid "Gujarati"
 msgstr "グジャラト文字"
 
-#: ../src/terminal-encoding.c:99
+#: src/terminal-encoding.c:99
 msgid "Gurmukhi"
 msgstr "グルムキー文字"
 
-#: ../src/terminal-encoding.c:101
+#: src/terminal-encoding.c:101
 msgid "Icelandic"
 msgstr "アイスランド語"
 
-#: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:110
-#: ../src/terminal-encoding.c:119
+#: src/terminal-encoding.c:107 src/terminal-encoding.c:110
+#: src/terminal-encoding.c:119
 msgid "Vietnamese"
 msgstr "ベトナム語"
 
-#: ../src/terminal-encoding.c:108
+#: src/terminal-encoding.c:108
 msgid "Thai"
 msgstr "タイ文字"
 
-#: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
+#: src/terminal-encoding.c:506 src/terminal-encoding.c:531
 msgid "_Description"
 msgstr "説明(_D)"
 
-#: ../src/terminal-encoding.c:515 ../src/terminal-encoding.c:540
+#: src/terminal-encoding.c:515 src/terminal-encoding.c:540
 msgid "_Encoding"
 msgstr "エンコーディング(_E)"
 
-#: ../src/terminal-encoding.c:598
+#: src/terminal-encoding.c:598
 msgid "Current Locale"
 msgstr "現在利用しているロケール"
 
-#: ../src/terminal-options.c:176
+#: src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2149,231 +2154,231 @@ msgstr ""
 "このバージョンの mate-terminal では \"%s\" というオプションはもうサポートしていません "
 "(ご希望の設定でプロファイルを作成したい場合は \"--profile\" という新しいオプションを指定してみてください)\n"
 
-#: ../src/terminal-options.c:209
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\" への引数が正しいコマンドではありません: %s"
 
-#: ../src/terminal-options.c:348
+#: src/terminal-options.c:348
 msgid "Two roles given for one window"
 msgstr "一つのウィンドウに対して二つのロールを指定しました"
 
-#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
+#: src/terminal-options.c:369 src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "同じウィンドウに対して \"%s\" というオプションが2回指定されました\n"
 
-#: ../src/terminal-options.c:601
+#: src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" は拡大率として正しくありません"
 
-#: ../src/terminal-options.c:608
+#: src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "\"%g\" という拡大率は小さすぎるので %g を使います\n"
 
-#: ../src/terminal-options.c:616
+#: src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "\"%g\" という拡大率は大きすぎるので %g を使います\n"
 
-#: ../src/terminal-options.c:651
+#: src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "\"%s\" というオプションには実行するコマンドが必要です"
 
-#: ../src/terminal-options.c:813
+#: src/terminal-options.c:812
 msgid "Not a valid terminal config file."
 msgstr "端末の設定ファイルではありません"
 
-#: ../src/terminal-options.c:826
+#: src/terminal-options.c:825
 msgid "Incompatible terminal config file version."
 msgstr "端末の設定ファイルのバージョンに互換性がありません"
 
-#: ../src/terminal-options.c:954
+#: src/terminal-options.c:953
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "活性化したネームサーバーで登録しない (起動中の端末を再使用しない)"
 
-#: ../src/terminal-options.c:963
+#: src/terminal-options.c:962
 msgid "Load a terminal configuration file"
 msgstr "端末の設定ファイルを読み込む"
 
-#: ../src/terminal-options.c:972
+#: src/terminal-options.c:971
 msgid "Save the terminal configuration to a file"
 msgstr "端末の設定をファイルに保存する"
 
-#: ../src/terminal-options.c:987
+#: src/terminal-options.c:986
 msgid "Open a new window containing a tab with the default profile"
 msgstr "デフォルトのプロファイルでタブ付きのウィンドウを開く"
 
-#: ../src/terminal-options.c:996
+#: src/terminal-options.c:995
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "デフォルトのプロファイルで最後に開いたウィンドウの中にタブ開く"
 
-#: ../src/terminal-options.c:1010
+#: src/terminal-options.c:1009
 msgid "Turn on the menubar"
 msgstr "メニューバーを表示する"
 
-#: ../src/terminal-options.c:1019
+#: src/terminal-options.c:1018
 msgid "Turn off the menubar"
 msgstr "メニューバーを隠す"
 
-#: ../src/terminal-options.c:1028
+#: src/terminal-options.c:1027
 msgid "Maximize the window"
 msgstr "ウインドウを最大化"
 
-#: ../src/terminal-options.c:1037
+#: src/terminal-options.c:1036
 msgid "Full-screen the window"
 msgstr "フルスクリーン表示にする"
 
-#: ../src/terminal-options.c:1046
+#: src/terminal-options.c:1045
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "ウィンドウサイズを設定する 例: 80x24、80x24+200+200 (列x行+X+Y)"
 
-#: ../src/terminal-options.c:1047
+#: src/terminal-options.c:1046
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: ../src/terminal-options.c:1055
+#: src/terminal-options.c:1054
 msgid "Set the window role"
 msgstr "端末の役割を指定する"
 
-#: ../src/terminal-options.c:1056
+#: src/terminal-options.c:1055
 msgid "ROLE"
 msgstr "ROLE"
 
-#: ../src/terminal-options.c:1064
+#: src/terminal-options.c:1063
 msgid "Set the last specified tab as the active one in its window"
 msgstr "最後に指定したタブをそのウィンドの中で有効にする"
 
-#: ../src/terminal-options.c:1078
+#: src/terminal-options.c:1077
 msgid "Execute the argument to this option inside the terminal"
 msgstr "端末内でこのオプションに対する引数を実行する"
 
-#: ../src/terminal-options.c:1087
+#: src/terminal-options.c:1086
 msgid "Use the given profile instead of the default profile"
 msgstr "指定したプロファイルを使用する"
 
-#: ../src/terminal-options.c:1088
+#: src/terminal-options.c:1087
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: ../src/terminal-options.c:1096
+#: src/terminal-options.c:1095
 msgid "Set the terminal title"
 msgstr "端末のタイトルを指定する"
 
-#: ../src/terminal-options.c:1097
+#: src/terminal-options.c:1096
 msgid "TITLE"
 msgstr "TITLE"
 
-#: ../src/terminal-options.c:1105
+#: src/terminal-options.c:1104
 msgid "Set the working directory"
 msgstr "作業用ディレクトリを指定する"
 
-#: ../src/terminal-options.c:1106
+#: src/terminal-options.c:1105
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: ../src/terminal-options.c:1114
+#: src/terminal-options.c:1113
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "端末の拡大率を指定する (1.0 = 標準サイズ)"
 
-#: ../src/terminal-options.c:1115
+#: src/terminal-options.c:1114
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
+#: src/terminal-options.c:1365 src/terminal-options.c:1368
 msgid "MATE Terminal Emulator"
 msgstr "MATE 端末エミュレーター"
 
-#: ../src/terminal-options.c:1370
+#: src/terminal-options.c:1369
 msgid "Show MATE Terminal options"
 msgstr "MATE 端末エミュレーターのオプション"
 
-#: ../src/terminal-options.c:1380
+#: src/terminal-options.c:1379
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "新しいウィンドウやタブを開くオプション (これらのオプションを1つ以上指定できる):"
 
-#: ../src/terminal-options.c:1381
+#: src/terminal-options.c:1380
 msgid "Show terminal options"
 msgstr "端末のオプションを表示する"
 
-#: ../src/terminal-options.c:1389
+#: src/terminal-options.c:1388
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr "ウィンドウのオプション (引数の先頭で --window や --tab を指定すると、すべてのタブやウィンドウに適用される):"
 
-#: ../src/terminal-options.c:1390
+#: src/terminal-options.c:1389
 msgid "Show per-window options"
 msgstr "ウィンドウ毎のオプションを表示する"
 
-#: ../src/terminal-options.c:1398
+#: src/terminal-options.c:1397
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr "端末のオプション (引数の先頭で --window や --tab を指定すると、すべてのタブやウィンドウに適用される):"
 
-#: ../src/terminal-options.c:1399
+#: src/terminal-options.c:1398
 msgid "Show per-terminal options"
 msgstr "端末毎のオプションを表示する"
 
-#: ../src/terminal-profile.c:165
+#: src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "名前なし"
 
-#: ../src/terminal-screen.c:1507
+#: src/terminal-screen.c:1520
 msgid "_Profile Preferences"
 msgstr "プロファイルの設定(_P)"
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
+#: src/terminal-screen.c:1521 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "再起動(_R)"
 
-#: ../src/terminal-screen.c:1511
+#: src/terminal-screen.c:1524
 msgid "There was an error creating the child process for this terminal"
 msgstr "この端末の子プロセスを作成中にエラーが発生しました"
 
-#: ../src/terminal-screen.c:1954
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子プロセスが終了コード %d で正常終了しました。"
 
-#: ../src/terminal-screen.c:1959
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子プロセスがシグナル %d で終了しました。"
 
-#: ../src/terminal-screen.c:1964
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "子プロセスが終了しました。"
 
-#: ../src/terminal-tab-label.c:132
+#: src/terminal-tab-label.c:130
 msgid "Close tab"
 msgstr "タブを閉じます"
 
-#: ../src/terminal-tabs-menu.c:198
+#: src/terminal-tabs-menu.c:201
 msgid "Switch to this tab"
 msgstr "このタブへ切り替える"
 
-#: ../src/terminal-util.c:145
+#: src/terminal-util.c:145
 msgid "There was an error displaying help"
 msgstr "ヘルプを表示する際にエラーが発生しました"
 
-#: ../src/terminal-util.c:217
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "\"%s\" というアドレスを開けませんでした"
 
-#: ../src/terminal-util.c:325
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2383,7 +2388,7 @@ msgstr ""
 "この MATE 端末はフリーソフトウェアです;フリーソフトウェア財団が提供する GNU "
 "一般公衆利用許諾契約書の第三版、あるいはそれ以降の版が定める条項の下で本プログラムを再頒布または変更することができます。"
 
-#: ../src/terminal-util.c:329
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2394,7 +2399,7 @@ msgstr ""
 "端末は有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細については "
 "GNU 一般公衆利用許諾契約書をご覧ください。"
 
-#: ../src/terminal-util.c:333
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2407,7 +2412,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:615
+#: src/terminal-window.c:618
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2415,284 +2420,300 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:621
+#: src/terminal-window.c:624
 #, c-format
 msgid "_%c. %s"
 msgstr " _%c. %s "
 
-#. Toplevel
-#: ../src/terminal-window.c:1823
+#: src/terminal-window.c:1885
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: src/terminal-window.c:1886 src/terminal-window.c:1899
+#: src/terminal-window.c:2140
 msgid "Open _Terminal"
 msgstr "端末を開く(_T)"
 
-#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
-#: ../src/terminal-window.c:2083
+#: src/terminal-window.c:1887 src/terminal-window.c:1904
+#: src/terminal-window.c:2145
 msgid "Open Ta_b"
 msgstr "新しいタブを開く(_B)"
 
-#: ../src/terminal-window.c:1826
+#: src/terminal-window.c:1888
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/terminal-window.c:1827
+#: src/terminal-window.c:1889
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../src/terminal-window.c:1828
+#: src/terminal-window.c:1890
 msgid "_Search"
 msgstr "検索(_S)"
 
-#: ../src/terminal-window.c:1829
+#: src/terminal-window.c:1891
 msgid "_Terminal"
 msgstr "端末(_T)"
 
-#: ../src/terminal-window.c:1830
+#: src/terminal-window.c:1892
 msgid "Ta_bs"
 msgstr "タブ(_B)"
 
-#: ../src/terminal-window.c:1831
+#: src/terminal-window.c:1893
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/terminal-window.c:1847
+#: src/terminal-window.c:1909
 msgid "New _Profile…"
 msgstr "新しいプロファイル(_P)…"
 
-#: ../src/terminal-window.c:1852
+#: src/terminal-window.c:1914
 msgid "_Save Contents"
 msgstr "内容を保存する(_S)"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
+#: src/terminal-window.c:1919 src/terminal-window.c:2155
 msgid "C_lose Tab"
 msgstr "タブを閉じる(_L)"
 
-#: ../src/terminal-window.c:1862
+#: src/terminal-window.c:1924
 msgid "_Close Window"
 msgstr "ウィンドウを閉じる(_C)"
 
-#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
+#: src/terminal-window.c:1931 src/terminal-window.c:2125
 msgid "_Copy"
 msgstr "コピー(_C)"
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: src/terminal-window.c:1936 src/terminal-window.c:2130
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
+#: src/terminal-window.c:1941 src/terminal-window.c:2135
 msgid "Paste _Filenames"
 msgstr "ファイル名の貼り付け(_F)"
 
-#: ../src/terminal-window.c:1884
+#: src/terminal-window.c:1946
 msgid "Select _All"
 msgstr "すべて選択(_A)"
 
-#: ../src/terminal-window.c:1889
+#: src/terminal-window.c:1951
 msgid "P_rofiles…"
 msgstr "プロファイル(_R)…"
 
-#: ../src/terminal-window.c:1894
+#: src/terminal-window.c:1956
 msgid "_Keyboard Shortcuts…"
 msgstr "キーボードショートカット(_K)…"
 
-#: ../src/terminal-window.c:1899
+#: src/terminal-window.c:1961
 msgid "Pr_ofile Preferences"
 msgstr "プロファイルの設定(_O)"
 
-#: ../src/terminal-window.c:1906
+#: src/terminal-window.c:1968
 msgid "Zoom _In"
 msgstr "拡大(_I)"
 
-#: ../src/terminal-window.c:1911
+#: src/terminal-window.c:1973
 msgid "Zoom _Out"
 msgstr "縮小(_O)"
 
-#: ../src/terminal-window.c:1916
+#: src/terminal-window.c:1978
 msgid "_Normal Size"
 msgstr "元のサイズ(_N)"
 
-#: ../src/terminal-window.c:1923
+#: src/terminal-window.c:1985
 msgid "_Find..."
 msgstr "検索(_F)..."
 
-#: ../src/terminal-window.c:1928
+#: src/terminal-window.c:1990
 msgid "Find Ne_xt"
 msgstr "次を検索(_X)"
 
-#: ../src/terminal-window.c:1933
+#: src/terminal-window.c:1995
 msgid "Find Pre_vious"
 msgstr "前を検索(_V)"
 
-#: ../src/terminal-window.c:1938
+#: src/terminal-window.c:2000
 msgid "_Clear Highlight"
 msgstr "ハイライトを消去(_C)"
 
-#: ../src/terminal-window.c:1944
+#: src/terminal-window.c:2006
 msgid "Go to _Line..."
 msgstr "指定行へ移動(_L)..."
 
-#: ../src/terminal-window.c:1949
+#: src/terminal-window.c:2011
 msgid "_Incremental Search..."
 msgstr "インクリメンタル検索(_I)..."
 
-#. Terminal menu
-#: ../src/terminal-window.c:1956
+#: src/terminal-window.c:2018
 msgid "Change _Profile"
 msgstr "プロファイルの変更(_P)"
 
-#: ../src/terminal-window.c:1958
+#: src/terminal-window.c:2020
 msgid "_Previous Profile"
 msgstr "前のプロファイル(_P)"
 
-#: ../src/terminal-window.c:1963
+#: src/terminal-window.c:2025
 msgid "_Next Profile"
 msgstr "次のプロファイル(_N)"
 
-#: ../src/terminal-window.c:1968
+#: src/terminal-window.c:2030
 msgid "_Set Title…"
 msgstr "タイトルを指定する(_S)…"
 
-#: ../src/terminal-window.c:1972
+#: src/terminal-window.c:2034
 msgid "Set _Character Encoding"
 msgstr "文字コードの設定(_C)"
 
-#: ../src/terminal-window.c:1974
+#: src/terminal-window.c:2036
 msgid "_Reset"
 msgstr "リセット(_R)"
 
-#: ../src/terminal-window.c:1979
+#: src/terminal-window.c:2041
 msgid "Reset and C_lear"
 msgstr "リセットとクリア(_L)"
 
-#: ../src/terminal-window.c:1986
+#: src/terminal-window.c:2048
 msgid "_Add or Remove…"
 msgstr "追加/削除(_A)…"
 
-#: ../src/terminal-window.c:1993
+#: src/terminal-window.c:2055
 msgid "_Previous Tab"
 msgstr "前のタブへ(_P)"
 
-#: ../src/terminal-window.c:1998
+#: src/terminal-window.c:2060
 msgid "_Next Tab"
 msgstr "次のタブへ(_N)"
 
-#: ../src/terminal-window.c:2003
+#: src/terminal-window.c:2065
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
-#: ../src/terminal-window.c:2008
+#: src/terminal-window.c:2070
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
-#: ../src/terminal-window.c:2013
+#: src/terminal-window.c:2075
 msgid "_Detach tab"
 msgstr "タブを取り外す(_D)"
 
-#: ../src/terminal-window.c:2020
+#: src/terminal-window.c:2082
 msgid "_Contents"
 msgstr "目次(_C)"
 
-#: ../src/terminal-window.c:2025
+#: src/terminal-window.c:2087
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/terminal-window.c:2032
+#: src/terminal-window.c:2094
 msgid "_Send Mail To…"
 msgstr "メールを送信する(_S)…"
 
-#: ../src/terminal-window.c:2037
+#: src/terminal-window.c:2099
 msgid "_Copy E-mail Address"
 msgstr "メールアドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2042
+#: src/terminal-window.c:2104
 msgid "C_all To…"
 msgstr "呼び出す(_A)…"
 
-#: ../src/terminal-window.c:2047
+#: src/terminal-window.c:2109
 msgid "_Copy Call Address"
 msgstr "アドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2052
+#: src/terminal-window.c:2114
 msgid "_Open Link"
 msgstr "リンクを開く(_O)"
 
-#: ../src/terminal-window.c:2057
+#: src/terminal-window.c:2119
 msgid "_Copy Link Address"
 msgstr "リンクアドレスのコピー(_C)"
 
-#: ../src/terminal-window.c:2061
+#: src/terminal-window.c:2123
 msgid "P_rofiles"
 msgstr "プロファイル(_R)"
 
-#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
+#: src/terminal-window.c:2150 src/terminal-window.c:3640
 msgid "C_lose Window"
 msgstr "ウィンドウを閉じる(_L)"
 
-#: ../src/terminal-window.c:2098
+#: src/terminal-window.c:2160
 msgid "L_eave Full Screen"
 msgstr "フルスクリーンを終了(_E)"
 
-#: ../src/terminal-window.c:2102
+#: src/terminal-window.c:2164
 msgid "_Input Methods"
 msgstr "入力メソッド(_I)"
 
-#: ../src/terminal-window.c:2109
+#: src/terminal-window.c:2171
 msgid "Show _Menubar"
 msgstr "メニューバーの表示(_M)"
 
-#: ../src/terminal-window.c:2115
+#: src/terminal-window.c:2177
 msgid "_Full Screen"
 msgstr "フルスクリーン(_F)"
 
-#: ../src/terminal-window.c:3560
-msgid "Close this window?"
-msgstr "このウィンドウを閉じますか?"
-
-#: ../src/terminal-window.c:3560
-msgid "Close this terminal?"
-msgstr "この端末を閉じますか?"
-
-#: ../src/terminal-window.c:3564
+#: src/terminal-window.c:3618
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "このウィンドウには未だ実行中のプロセスが存在しているタブがあります。ここでウィンドウを閉じるとそれらのプロセスをすべて強制終了します。"
 
-#: ../src/terminal-window.c:3568
+#: src/terminal-window.c:3621
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "この端末には未だ実行中のプロセスが存在しています。ここで端末を閉じるとそのプロセスを強制終了します。"
 
-#: ../src/terminal-window.c:3573
+#: src/terminal-window.c:3624
+msgid "There are multiple tabs open in this window."
+msgstr ""
+
+#: src/terminal-window.c:3633
+msgid "Close this window?"
+msgstr "このウィンドウを閉じますか?"
+
+#: src/terminal-window.c:3633
+msgid "Close this terminal?"
+msgstr "この端末を閉じますか?"
+
+#: src/terminal-window.c:3640
 msgid "C_lose Terminal"
 msgstr "端末を閉じる(_L)"
 
-#: ../src/terminal-window.c:3639
+#: src/terminal-window.c:3706
 msgid "Could not save contents"
 msgstr "内容を保存できませんでした"
 
-#: ../src/terminal-window.c:3663
+#: src/terminal-window.c:3730
 msgid "Save as..."
 msgstr "別名で保存する..."
 
-#: ../src/terminal-window.c:4186
+#: src/terminal-window.c:4264
 msgid "_Title:"
 msgstr "役職(_T):"
 
-#: ../src/terminal-window.c:4371
+#: src/terminal-window.c:4449
 msgid "Contributors:"
 msgstr "貢献者:"
 
-#: ../src/terminal-window.c:4390
+#: src/terminal-window.c:4468
+msgid "About MATE Terminal"
+msgstr ""
+
+#: src/terminal-window.c:4469
+msgid ""
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE developers"
+msgstr ""
+
+#: src/terminal-window.c:4475
 msgid "A terminal emulator for the MATE desktop"
 msgstr "MATE デスクトップ向けの端末エミュレーターです。"
 
-#: ../src/terminal-window.c:4397
+#: src/terminal-window.c:4481
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"

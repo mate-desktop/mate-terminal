@@ -1,17 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-terminal package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 18:23+0100\n"
+"Project-Id-Version: mate-terminal 1.23\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
+"POT-Creation-Date: 2020-01-13 14:52+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -21,80 +20,88 @@ msgstr ""
 "Language: ml\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mate-terminal.appdata.xml.in.h:1
-msgid "A terminal emulator for the MATE desktop environment"
-msgstr ""
-
-#: ../mate-terminal.appdata.xml.in.h:2
-msgid ""
-"<p> MATE Terminal is a terminal emulation application that you can use to "
-"access a UNIX shell in the MATE environment. MATE Terminal emulates the "
-"xterm program developed by the X Consortium. It supports translucent "
-"backgrounds, opening multiple terminals in a single window (tabs) and "
-"clickable URLs. </p> <p> MATE Terminal is a fork of GNOME Terminal and part "
-"of the MATE Desktop Environment. If you would like to know more about MATE "
-"and MATE Terminal, please visit the project's home page. </p>"
-msgstr ""
-
-#: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:4388
+#: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
+#: src/terminal-options.c:189 src/terminal-window.c:4466
 msgid "MATE Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍"
 
-#: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:350
-#: ../src/terminal.c:590 ../src/terminal-profile.c:159
-#: ../src/terminal-window.c:2154
+#: mate-terminal.appdata.xml.in:8
+msgid "A terminal emulator for the MATE desktop environment"
+msgstr ""
+
+#: mate-terminal.appdata.xml.in:10
+msgid ""
+"MATE Terminal is a terminal emulation application that you can use to access"
+" a UNIX shell in the MATE environment. MATE Terminal emulates the xterm "
+"program developed by the X Consortium. It supports translucent backgrounds, "
+"opening multiple terminals in a single window (tabs) and clickable URLs."
+msgstr ""
+
+#: mate-terminal.appdata.xml.in:17
+msgid ""
+"MATE Terminal is a fork of GNOME Terminal and part of the MATE Desktop "
+"Environment. If you would like to know more about MATE and MATE Terminal, "
+"please visit the project's home page."
+msgstr ""
+
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
+#: src/terminal-profile.c:161 src/terminal-window.c:2214
 msgid "Terminal"
 msgstr "ടെര്‍മിനല്‍"
 
-#: ../mate-terminal.desktop.in.in.h:3
+#: mate-terminal.desktop.in.in:5
 msgid "Use the command line"
 msgstr "കമാന്‍ഡ് ലൈന്‍ ഉപയോഗിക്കുക"
 
-#: ../src/eggsmclient.c:225
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-terminal.desktop.in.in:9
+msgid "utilities-terminal"
+msgstr ""
+
+#: src/eggsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള കണക്ഷന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: ../src/eggsmclient.c:230
+#: src/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "സൂക്ഷിച്ചിട്ടുള്ള ക്രമീകരണം അടങ്ങുന്ന ഫയല്‍ നല്‍കുക"
 
-#: ../src/eggsmclient.c:230 ../src/terminal-options.c:964
-#: ../src/terminal-options.c:973
+#: src/eggsmclient.c:230 src/terminal-options.c:963 src/terminal-options.c:972
 msgid "FILE"
 msgstr "FILE"
 
-#: ../src/eggsmclient.c:235
+#: src/eggsmclient.c:235
 msgid "Specify session management ID"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ID വ്യക്തമാക്കുക"
 
-#: ../src/eggsmclient.c:235
+#: src/eggsmclient.c:235
 msgid "ID"
 msgstr "ID"
 
-#: ../src/eggsmclient.c:261
+#: src/eggsmclient.c:261
 msgid "Session management options:"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍:"
 
-#: ../src/eggsmclient.c:262
+#: src/eggsmclient.c:262
 msgid "Show session management options"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍ കാണിക്കുക"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:1
+#: src/org.mate.terminal.gschema.xml.in:49
 msgid "List of profiles"
 msgstr "പ്റൊഫൈലുകളുടെ പട്ടിക"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:2
+#: src/org.mate.terminal.gschema.xml.in:50
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:3
+#: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
 msgstr "പുതിയ ടെര്‍മിനലുകള്‍ക്കായുളള പ്രൊഫൈല്‍"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:4
+#: src/org.mate.terminal.gschema.xml.in:55
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
@@ -102,11 +109,11 @@ msgstr ""
 "ഒരു പുതിയ കിളിവാതില്‍ അല്ലേല്‍ ജാലകം തുറക്കുന്നതിനായി ഉപയോഗിക്കേണ്ട "
 "പ്രൊഫൈല്‍. profile_list-ല്‍ ഉണ്ടാവണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:5
+#: src/org.mate.terminal.gschema.xml.in:59
 msgid "Whether the menubar has access keys"
 msgstr "മെനുബാറില്‍ ആക്സെസ്സ് കീകള്‍ ഉണ്ടോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:6
+#: src/org.mate.terminal.gschema.xml.in:60
 msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
@@ -116,11 +123,11 @@ msgstr ""
 "പ്രവര്‍ത്തിക്കുന്ന ചില പ്രയോഗങ്ങളില്‍ ഇവ ഇടപെടുന്നു, അതിനാല്‍ അവ ഓഫ് "
 "ചെയ്യേണ്ടതുണ്ടു്."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:7
+#: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:8
+#: src/org.mate.terminal.gschema.xml.in:65
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -131,70 +138,68 @@ msgstr ""
 "ഇഷ്ടമുള്ളരീതിയിലാക്കാം. ഈ ഉപാധി സാധാരണയുള്ള മെനുബാര്‍ ആക്സിലറേറ്റര്‍ "
 "പ്രവര്‍ത്തന രഹിതമാക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:9
+#: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:10
+#: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
 msgstr "ലഭ്യമായ എന്‍കോഡിങുകളുടെ പട്ടിക"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:11
+#: src/org.mate.terminal.gschema.xml.in:70
 msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:12
+#: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
 msgstr "ടെര്‍മിനല്‍ ജാലകങ്ങള്‍ അടയ്ക്കുമ്പോള്‍ ഉറപ്പ് വരുത്തണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:13
+#: src/org.mate.terminal.gschema.xml.in:75
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
-"more than one open tab."
+"more than one open tab or any foreground subprocesses."
 msgstr ""
-"ഒരു കിളിവാതിലില്‍ കൂടുതലുള്ള ഒരു ടെര്‍മിനല്‍ ജാലകം അടയ്ക്കുമ്പോള്‍ ഉറപ്പ് "
-"വരുത്തണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:14
+#: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:15
+#: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:16
+#: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:17
+#: src/org.mate.terminal.gschema.xml.in:85
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:18
+#: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:19
+#: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
 msgstr "മനുഷ്യര്‍ക്ക് വായിക്കാന്‍ പറ്റുന്ന രീതിയില്‍ പ്രൊഫൈലിന്റെ പേര്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:20
+#: src/org.mate.terminal.gschema.xml.in:94
 msgid "Human-readable name of the profile."
 msgstr "മനുഷ്യര്‍ക്ക് വായിക്കാന്‍ പറ്റുന്ന രീതിയില്‍ പ്രൊഫൈലിന്റെ പേര്."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:21
+#: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
 msgstr "പുതിയ ജാലകങ്ങള്‍/റ്റാബുകളില്‍ മെനുബാര്‍ കാണിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:22
+#: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
@@ -202,11 +207,11 @@ msgstr ""
 "ഈ പ്രൊഫൈലുള്ള ജാലകങ്ങള്‍/റ്റാബുകളുള്ള പുതിയ ജാലകങ്ങളില്‍ മെനുബാര്‍ "
 "കാണിക്കണമെങ്കില്‍ True"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:23
+#: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
 msgstr "ടെര്‍മിനലില്‍ വാചകങ്ങളുടെ സഹജമായ നിറം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:24
+#: src/org.mate.terminal.gschema.xml.in:104
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
@@ -214,11 +219,11 @@ msgstr ""
 "ടെര്‍മിനലില്‍ വാചകങ്ങളുടെ സഹജമായ നിറം.(HTML-രീതിയിലുളള ഹെക്സാ ഡിജിറ്റുകള്‍, "
 "അല്ലെങ്കില്‍ \"ചുവപ്പ്\" പോലെയുളള നിറങ്ങള്‍)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:25
+#: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
 msgstr "ടെര്‍മിനലില്‍ പശ്ചാത്തലത്തിലുളള സഹജമായ നിറം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:26
+#: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
@@ -226,11 +231,11 @@ msgstr ""
 "ടെര്‍മിനലില്‍ പശ്ചാത്തലത്തിലുളള സഹജമായ നിറം (HTML-രീതിയിലുളള ഹെക്സാ "
 "ഡിജിറ്റുകള്‍, അല്ലെങ്കില്‍ \"ചുവപ്പ്\" പോലെയുളള നിറങ്ങള്‍)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:27
+#: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
 msgstr "ടെര്‍മിനലില്‍ കട്ടിയുള്ള വാചകങ്ങളുടെ സഹജമായ നിറം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:28
+#: src/org.mate.terminal.gschema.xml.in:114
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be"
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
@@ -240,21 +245,21 @@ msgstr ""
 "ഡിജിറ്റുകള്‍, അല്ലെങ്കില്‍ \"ചുവപ്പ്\" പോലെയുളള നിറങ്ങള്‍). "
 "bold_color_same_as_fg true എങ്കില്‍ ഇതു് പരിഗണിക്കുകയില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:29
+#: src/org.mate.terminal.gschema.xml.in:118
 msgid "Whether bold text should use the same color as normal text"
 msgstr "സാധാരണയുള്ള വാചകത്തിന്റെ അതേ നിറം തന്നെ കട്ടിയുള്ള വാചകം ഉപയോഗിക്കണമോ"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:30
+#: src/org.mate.terminal.gschema.xml.in:119
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr ""
 "true എങ്കില്‍, കട്ടിയുള്ള വാചകത്തിനും സാധാരണ വാചകത്തിന്റെ അതേ നിറമാകുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:31
+#: src/org.mate.terminal.gschema.xml.in:123
 msgid "What to do with dynamic title"
 msgstr "ചലനാത്മക തലക്കെട്ടു് എന്തു് ചെയ്യണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:32
+#: src/org.mate.terminal.gschema.xml.in:124
 msgid ""
 "If the application in the terminal sets the title (most typically people "
 "have their shell set up to do this), the dynamically-set title can erase the"
@@ -266,16 +271,16 @@ msgstr ""
 "ചെയ്യാം, ഇതിനു് മുമ്പ് അല്ലെങ്കില്‍ ശേഷം സ്ഥാപിക്കാം, അല്ലെങ്കില്‍ മാറ്റാം. "
 "ശരിയായ മൂല്ല്യങ്ങള്‍: \"replace\", \"before\", \"after\", \"ignore\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:33
+#: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
 msgid "'Terminal'"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:34
+#: src/org.mate.terminal.gschema.xml.in:128
 msgid "Title for terminal"
 msgstr "ടെര്‍മിനലിനുള്ള തലക്കെട്ടു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:35
+#: src/org.mate.terminal.gschema.xml.in:129
 msgid ""
 "Title to display for the terminal window or tab. This title may be replaced "
 "by or combined with the title set by the application inside the terminal, "
@@ -285,21 +290,21 @@ msgstr ""
 " അനുസരിച്ചു്, ടെര്‍മിനലിലുള്ള പ്രയോഗം സജ്ജമാക്കിയ ശീര്‍ഷകവുമായി ഇതു് ചേരുകയോ"
 " മാറ്റി സ്ഥാപിക്കുകയോ ചെയ്യുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:36
+#: src/org.mate.terminal.gschema.xml.in:133
 msgid "Whether to allow bold text"
 msgstr "കട്ടി കൂടി പദാവലി അനുവദിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:37
+#: src/org.mate.terminal.gschema.xml.in:134
 msgid "If true, allow applications in the terminal to make text boldface."
 msgstr ""
 "ശരി എന്നാണെങ്കില്‍, ടെര്‍മിനലിലുളള പ്രയോഗങ്ങളെ വാക്യങ്ങള്‍ ബോള്‍ഡ്ഫെയ്സ് "
 "ആക്കാന്‍ അനുവദിക്കുക."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:38
+#: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
 msgstr "ടെര്‍മിനല്‍ ബെല്ല് നിശബ്ദമാക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:39
+#: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
@@ -307,19 +312,19 @@ msgstr ""
 "ശരി എന്നാണെങ്കില്‍, ടെര്‍മിനല്‍ മണിയ്കായി പ്രയോഗങ്ങള്‍ escape sequence "
 "അയയ്ക്കുമ്പോള്‍, ശബ്ദം ഉണ്ടാക്കാതിരിക്കുക."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:40
+#: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:41
+#: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:42
+#: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
 msgstr "\"ഒരു വാക്കിന്റെ ഭാഗം\" എന്നു് കരുതുന്ന അക്ഷരങ്ങള്‍"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:43
+#: src/org.mate.terminal.gschema.xml.in:149
 msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
@@ -329,12 +334,12 @@ msgstr ""
 " വാക്കനുസരിച്ചു് കണക്കാക്കുന്നു. പരിധി: \"A-Z\". - (പരിധി ആവശ്യമില്ല) "
 "ആയിരിക്കണം ആദ്യം കൊടുക്കേണ്ട അക്ഷരം."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:44
+#: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
 msgstr ""
 "പുതിയ ജാലകങ്ങള്‍ക്കു് യഥേഷ്ടം സജ്ജമാക്കിയ വ്യാപ്തി ഉപയോഗിക്കണമോ എന്നു്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:45
+#: src/org.mate.terminal.gschema.xml.in:154
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
@@ -342,11 +347,11 @@ msgstr ""
 "true എങ്കില്‍, പുതുതായി സജ്ജമാക്കിയ ജാലകങ്ങള്‍ക്കു് default_size_columns, "
 "default_size_rows എന്നിവ നല്‍കുന്ന വ്യാപ്തിയാകുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:46
+#: src/org.mate.terminal.gschema.xml.in:158
 msgid "Default number of columns"
 msgstr "നിരകളുടെ സഹജമായ എണ്ണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:47
+#: src/org.mate.terminal.gschema.xml.in:159
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -354,11 +359,11 @@ msgstr ""
 "പുതിയ ടെര്‍മിനലുകളിലുള്ള നിരകളുടെ എണ്ണം. use_custom_default_size പ്രവര്‍ത്തന"
 " സജ്ജമെങ്കില്‍ കാര്യമില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:48
+#: src/org.mate.terminal.gschema.xml.in:163
 msgid "Default number of rows"
 msgstr "വരികളുടെ സഹജമായ എണ്ണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:49
+#: src/org.mate.terminal.gschema.xml.in:164
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -366,11 +371,11 @@ msgstr ""
 "പുതിയ ടെര്‍മിനലുകളിലുള്ള വരികളുടെ എണ്ണം. use_custom_default_size പ്രവര്‍ത്തന"
 " സജ്ജമെങ്കില്‍ കാര്യമില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:50
+#: src/org.mate.terminal.gschema.xml.in:168
 msgid "Position of the scrollbar"
 msgstr "സ്ക്രോള്‍ ബാറിന്റെ സ്ഥാനം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:51
+#: src/org.mate.terminal.gschema.xml.in:169
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
@@ -378,11 +383,11 @@ msgstr ""
 "ടെര്‍മിനല്‍ സ്ക്രോള്‍ബാര്‍ എവിടെ സ്ഥാപിക്കണം. സാധ്യതയുള്ളവ: \"ഇടത്തു്\", "
 "\"വലത്തു്\", \"അദൃശ്യം\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:52
+#: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
 msgstr "സ്ക്രോള്‍ബാക്കിനുള്ള വരികളുടെ എണ്ണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:53
+#: src/org.mate.terminal.gschema.xml.in:174
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don't fit in the scrollback are"
@@ -393,11 +398,11 @@ msgstr ""
 " വരികള്‍ വേണ്ടെന്നു് വയ്ക്കുന്നു. scrollback_unlimited true ആണെങ്കില്‍, ഈ "
 "മൂല്ല്യം വേണ്ടെന്നു് വയ്ക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:54
+#: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "സ്ക്രോള്‍ബാക്കിനുള്ള വരികളുടെ എണ്ണത്തിനു് പരിധിയില്ലാതെ സൂക്ഷിക്കണമോ"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:55
+#: src/org.mate.terminal.gschema.xml.in:179
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
@@ -408,34 +413,34 @@ msgstr ""
 "ഇതിനാല്‍, ടെര്‍മനിലേക്കു് അനവധി ഔട്ട്പുട്ട് ഉണ്ടെങ്കില്‍, സിസ്റ്റത്തില്‍ "
 "സ്ഥലം ലഭ്യമല്ലാതെ വരാം."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:56
+#: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "കീ അമര്‍ത്തുമ്പോള്‍ താഴേക്ക് സ്ക്രോള്‍ ചെയ്യണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:57
+#: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr ""
 "true എങ്കില്‍, ഒരു കീ അമര്‍ത്തിയാല്‍ സ്ക്രോള്‍ബാര്‍ ഏറ്റവും അവസാനത്തിലേക്കു്"
 " നീങ്ങുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:58
+#: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
 msgstr "പുതിയ ഔട്ട്പുട്ടുള്ളപ്പോള്‍ താഴേക്ക് സ്ക്രോള്‍ ചെയ്യണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:59
+#: src/org.mate.terminal.gschema.xml.in:189
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr ""
 "true എങ്കില്‍, എപ്പോഴെല്ലാം പുതിയ ഔട്ട്പുട്ട് ഉണ്ടോ അപ്പോള്‍ ടെര്‍മിനല്‍ "
 "താഴേക്കു് സ്ക്രോള്‍ ചെയ്യുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:60
+#: src/org.mate.terminal.gschema.xml.in:193
 msgid "What to do with the terminal when the child command exits"
 msgstr ""
 "ചൈള്‍ഡ് കമാന്‍ഡില്‍ നിന്നും പുറത്തു് കടക്കുമ്പോള്‍ ടെര്‍മിനല്‍ എന്തു് "
 "ചെയ്യണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:61
+#: src/org.mate.terminal.gschema.xml.in:194
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
@@ -443,13 +448,13 @@ msgstr ""
 "ടെര്‍മിനല്‍ അടയ്കുന്നതിന് \"അടയ്ക്കുക\" എന്നതും,നിര്‍ദ്ദേശം വീണ്ടും "
 "ആരംഭിക്കുന്നതിന് \"റീസ്റ്റാര്‍ട്ട് ചെയ്യുക\"-ഉം ആണ് സാധ്യമുളള മൂല്ല്യങ്ങള്‍."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:62
+#: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr ""
 "ലോഗിന്‍ ഷെല്ലായി ടെര്‍മിനലില്‍ കമാന്‍ഡ് ലഭ്യമാക്കണമോ എന്നു്Whether to launch"
 " the command in the terminal as a login shell"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:63
+#: src/org.mate.terminal.gschema.xml.in:199
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
@@ -457,11 +462,11 @@ msgstr ""
 "true എങ്കില്‍, ടെര്‍മിനലില്‍ ഉള്ള കമാന്‍ഡ് ഒരു ലോഗിന്‍ ഷെല്‍ ആയി "
 "ലഭ്യമാക്കുന്നു.(argv[0]-നു് അതിനു് മുമ്പില്‍ ഒരു - ഉണ്ടാവും.)"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:64
+#: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
 msgstr "ഷെല്ലിനു് പകരം ഇഷ്ടാനുസൃതം ഒരു കമാന്‍ഡ് പ്രവര്‍ത്തിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:65
+#: src/org.mate.terminal.gschema.xml.in:204
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
@@ -469,11 +474,11 @@ msgstr ""
 "true എങ്കില്‍, ഒരു ഷെല്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനു് പകരം  custom_command  "
 "സജ്ജീകരണത്തിനുള്ള മൂല്ല്യം ഉപയോഗിക്കുന്നു"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:66
+#: src/org.mate.terminal.gschema.xml.in:208
 msgid "Whether to blink the cursor"
 msgstr "കര്‍സര്‍ മിന്നിപ്പിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:67
+#: src/org.mate.terminal.gschema.xml.in:209
 msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
@@ -482,11 +487,11 @@ msgstr ""
 "സജ്ജീകരണങ്ങള്‍ക്കായി \"system\", അല്ലെങ്കില്‍ പ്രത്യേകം സജ്ജമാക്കുന്നതിനായി "
 "\"ഓണ്‍\" അല്ലെങ്കില്‍ \"ഓഫ്\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:68
+#: src/org.mate.terminal.gschema.xml.in:213
 msgid "The cursor appearance"
 msgstr "കര്‍സറിന്റെ കാഴ്ച"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:69
+#: src/org.mate.terminal.gschema.xml.in:214
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
@@ -495,29 +500,29 @@ msgstr ""
 "കുറുകെയുള്ള വരി കര്‍സറിനായി \"ഐബീം\", അല്ലെങ്കില്‍ അടിവരെയുള്ള കര്‍സറിനായി "
 "\"അടിവര\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:70
+#: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
 msgstr "ഷെല്ലിന് പകരം ഇഷ്ടമുളള നിര്‍ദ്ദേശം ഉപയോഗിക്കുക"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:71
+#: src/org.mate.terminal.gschema.xml.in:219
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr ""
 "use_custom_command ശരിയാണ് എങ്കില്‍, ഷെല്ലിന് പകരം ഈ നിര്‍ദ്ദേശം "
 "പ്രവര്‍ത്തിപ്പിക്കുക."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:72
+#: src/org.mate.terminal.gschema.xml.in:223
 msgid "Icon for terminal window"
 msgstr "ടെര്‍മിനല്‍ ജാലകത്തിനുളള ചിഹ്നം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:73
+#: src/org.mate.terminal.gschema.xml.in:224
 msgid "Icon to use for tabs/windows containing this profile."
 msgstr "ഈ പ്രൊഫൈല്‍ അടങ്ങുന്ന കിളിവാതില്‍/ജാലകത്തിന് ഉപയോഗിക്കുന്ന ചിഹ്നം."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:74
+#: src/org.mate.terminal.gschema.xml.in:228
 msgid "Palette for terminal applications"
 msgstr "ടെര്‍മിനല്‍ പ്രയോഗങ്ങള്‍ക്കുള്ള നിറക്കൂട്ടു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:75
+#: src/org.mate.terminal.gschema.xml.in:229
 msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
@@ -527,21 +532,21 @@ msgstr ""
 "താലത്തില്‍, നിറങ്ങള്‍ കോളണ്‍ ഉപയോഗിച്ചു് വേര്‍തിരിച്ചിരിക്കുന്നു. നിറങ്ങള്‍ "
 "ഹെക്സ് രീതിയിലായിരിക്കണം ഉദാ. \"#FF00FF\""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:76
+#: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
 msgstr "അക്ഷരരൂപം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:77
+#: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "ഒരു Pango അക്ഷരസഞ്ചയംയുടെ പേര്. \"Sans 12\" അല്ലെങ്കില്‍ \"Monospace Bold "
 "14\"ആണ് ഉദാഹരണങ്ങള്‍."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:78
+#: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
 msgstr "ഏത് തരം പശ്ചാത്തലം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:79
+#: src/org.mate.terminal.gschema.xml.in:239
 msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
@@ -550,19 +555,19 @@ msgstr ""
 "ഏതു് തരത്തിലുള്ള ടെര്‍മിനല്‍ പശ്ചാത്തലം. സോളിഡ് നിറത്തിനു് \"സോളിഡ്\", ഒരു "
 "ചിത്രത്തിനായി \"ചിത്രം\"അല്ലെങ്കില്‍ \"transparent\"."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:80
+#: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
 msgstr "പശ്ചാത്തലത്തിലുളള ചിത്രം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:81
+#: src/org.mate.terminal.gschema.xml.in:244
 msgid "Filename of a background image."
 msgstr "ഒരു പശ്ചാത്തല ചിത്രത്തിനുള്ള ഫയലിന്റെ പേര്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:82
+#: src/org.mate.terminal.gschema.xml.in:248
 msgid "Whether to scroll background image"
 msgstr "പശ്ചാത്തല ചിത്രം സ്ക്രോള്‍ ചെയ്യണമോ"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:83
+#: src/org.mate.terminal.gschema.xml.in:249
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
@@ -571,11 +576,11 @@ msgstr ""
 "ചെയ്യുക; false എങ്കില്‍, ചിത്രം സ്ഥിരമായ ഒരു സ്ഥാനത്തു് വച്ചു്, പദാവലി "
 "അതിനു് മുകളിലൂടെ സ്ക്രോള്‍ ചെയ്യുക."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:84
+#: src/org.mate.terminal.gschema.xml.in:253
 msgid "How much to darken the background image"
 msgstr "പശ്ചാത്തല ചിത്രം എത്രമാത്രം കട്ടിയാക്കണം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:85
+#: src/org.mate.terminal.gschema.xml.in:254
 msgid ""
 "A value between 0.0 and 1.0 indicating how much to darken the background "
 "image. 0.0 means no darkness, 1.0 means fully dark. In the current "
@@ -588,11 +593,11 @@ msgstr ""
 "സജ്ജമാക്കിയവ ബൂളിയന്‍ ആയി പ്രവര്‍ത്തിക്കുന്നു. ഇവിടെ 0.0 - ഇരുളിമ "
 "നിര്‍ജ്ജീവമാക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:86
+#: src/org.mate.terminal.gschema.xml.in:258
 msgid "Effect of the Backspace key"
 msgstr "Backspace കീയുടെ പ്രഭാവം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:87
+#: src/org.mate.terminal.gschema.xml.in:259
 msgid ""
 "Sets what code the backspace key generates. Possible values are \"ascii-"
 "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
@@ -606,11 +611,11 @@ msgstr ""
 "സീക്വന്‍സുകള്‍ക്കു് \"escape-sequence\". \"escape-sequence\" സാധാരണ "
 "backspace കീയ്ക്കുള്ള ശരിയായ ക്രമീകരണമായി കണക്കാക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:88
+#: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
 msgstr "Delete കീയുടെ പ്രഭാവം"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:89
+#: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
 "Sets what code the delete key generates. Possible values are \"ascii-del\" "
 "for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
@@ -624,12 +629,12 @@ msgstr ""
 "\"escape-sequence\". \"escape-sequence\" സാധാരണ Delete കീയ്ക്കുള്ള ശരിയായ "
 "ക്രമീകരണമായി കണക്കാക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:90
+#: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr ""
 "ടെര്‍മില്‍ വിഡ്ജറ്റിനു് പ്രമേയത്തില്‍ നിന്നും നിറങ്ങള്‍ ഉപയോഗിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:91
+#: src/org.mate.terminal.gschema.xml.in:269
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
@@ -637,11 +642,11 @@ msgstr ""
 "true എങ്കില്‍, ഉപയോക്താവു് ലഭ്യമാക്കുന്ന നിറങ്ങള്‍ക്കു് പകരം, ടെക്സ്റ്റ് "
 "എന്‍ട്രി ബോക്സുകളില്‍ പ്രമേയമനുസരിച്ചുള്ള നിറം ഉപയോഗിക്കുന്നു"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:92
+#: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
 msgstr "സിസ്റ്റമിലുള്ള അക്ഷരസഞ്ചയങ്ങള്‍ ഉപയോഗിക്കണമോ എന്നു്"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:93
+#: src/org.mate.terminal.gschema.xml.in:274
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -650,11 +655,11 @@ msgstr ""
 "നിലവാരമുള്ള അക്ഷരസഞ്ചയം ഉപയോഗിക്കുന്നു (കൂടാതെ ഇതിനൊപ്പമുള്ള സാമ്യമുള്ള "
 "മറ്റു് അക്ഷരസഞ്ചയവും)."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:94
+#: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
 msgstr "S/Key ചാലഞ്ചുകള്‍ എടുത്തുകാണിക്കുക"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:95
+#: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
@@ -663,11 +668,21 @@ msgstr ""
 "ചെയ്യുമ്പോള്‍, ഒരു ഡയലോഗ് പോപ്പപ്പ് ചെയ്യുക. ഡയലോഗില്‍ ഒരു അടയാളവാക്കു് "
 "ടൈപ്പ് ചെയ്യുന്നതു് അതിനെ ടെര്‍മിനലിലേക്കു് അയയ്ക്കുന്നു."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:96
+#: src/org.mate.terminal.gschema.xml.in:283
+msgid "Highlight URLs under mouse pointer"
+msgstr ""
+
+#: src/org.mate.terminal.gschema.xml.in:284
+msgid ""
+"If true, URLs under mouse pointer are highlighted and can be opened by mouse"
+" click together with control key or used in context menu."
+msgstr ""
+
+#: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
 msgstr "പുതിയ കിളിവാതില്‍ തുറക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:97
+#: src/org.mate.terminal.gschema.xml.in:291
 msgid ""
 "Keyboard shortcut key for opening a new tab. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -680,11 +695,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:98
+#: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
 msgstr "പുതിയ ജാലകം തുറക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:99
+#: src/org.mate.terminal.gschema.xml.in:296
 msgid ""
 "Keyboard shortcut key for opening a new window. Expressed as a string in the"
 " same format used for GTK+ resource files. If you set the option to the "
@@ -697,11 +712,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:100
+#: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
 msgstr "പുതിയ പ്രൊഫൈല്‍ ഉണ്ടാക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:101
+#: src/org.mate.terminal.gschema.xml.in:301
 msgid ""
 "Keyboard shortcut key for bringing up the dialog for profile creation. "
 "Expressed as a string in the same format used for GTK+ resource files. If "
@@ -714,13 +729,13 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:102
+#: src/org.mate.terminal.gschema.xml.in:305
 msgid "Keyboard shortcut to save the current tab contents to file"
 msgstr ""
 "നിലവിലുള്ള കിളിവാതിലിലുള്ളവ ഒരു ഫയലിലേക്കു് സൂക്ഷിക്കുന്നതിനുള്ള കീബോര്‍ഡ് "
 "എളുപ്പ് വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:103
+#: src/org.mate.terminal.gschema.xml.in:306
 msgid ""
 "Keyboard shortcut key to save the current tab contents to a file. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -733,11 +748,11 @@ msgstr ""
 "രഹിതമാക്കുക\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ "
 "വഴി ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:104
+#: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
 msgstr "കിളിവാതില്‍ അടയ്ക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:105
+#: src/org.mate.terminal.gschema.xml.in:311
 msgid ""
 "Keyboard shortcut key for closing a tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -750,11 +765,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:106
+#: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
 msgstr "ജാലകം അടയ്ക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:107
+#: src/org.mate.terminal.gschema.xml.in:316
 msgid ""
 "Keyboard shortcut key for closing a window. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -766,11 +781,11 @@ msgstr ""
 "പ്രത്യേക സ്ട്രിങ് \"പ്രവര്‍ത്തന രഹിതമാക്കുക\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ "
 "പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:108
+#: src/org.mate.terminal.gschema.xml.in:320
 msgid "Keyboard shortcut to copy text"
 msgstr "വാക്യം പകര്‍ത്തുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:109
+#: src/org.mate.terminal.gschema.xml.in:321
 msgid ""
 "Keyboard shortcut key for copying selected text to the clipboard. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -783,11 +798,11 @@ msgstr ""
 "രഹിതമാക്കുക\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ "
 "വഴി ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:110
+#: src/org.mate.terminal.gschema.xml.in:325
 msgid "Keyboard shortcut to paste text"
 msgstr "പദാവലി ഒട്ടിയ്ക്കുന്നതിനുള്ള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:111
+#: src/org.mate.terminal.gschema.xml.in:326
 msgid ""
 "Keyboard shortcut key for pasting the contents of the clipboard in the "
 "terminal. Expressed as a string in the same format used for GTK+ resource "
@@ -795,11 +810,11 @@ msgid ""
 "will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:112
+#: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:113
+#: src/org.mate.terminal.gschema.xml.in:331
 msgid ""
 "Keyboard shortcut key for selecting all the text in the terminal. Expressed "
 "as a string in the same format used for GTK+ resource files. If you set the "
@@ -807,11 +822,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:114
+#: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:115
+#: src/org.mate.terminal.gschema.xml.in:336
 msgid ""
 "Keyboard shortcut key for showing the find dialog. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -819,11 +834,11 @@ msgid ""
 "this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:116
+#: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:117
+#: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
 "Keyboard shortcut key for finding the next occurrence of the search term in "
 "the terminal. Expressed as a string in the same format used for GTK+ "
@@ -831,11 +846,11 @@ msgid ""
 "then there will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:118
+#: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:119
+#: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
 "Keyboard shortcut key for finding the previous occurrence of the search term"
 " in the terminal. Expressed as a string in the same format used for GTK+ "
@@ -843,13 +858,13 @@ msgid ""
 "then there will be no keyboard shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:120
+#: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr ""
 "സ്ക്രീന്‍ മുഴുവന്‍ വലിപ്പത്തിലാക്കുകയും തിരിച്ച് പഴയ രീതിയില്‍ ആക്കുകയും "
 "ചെയ്യുവാന്‍ സഹായിക്കുന്ന കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:121
+#: src/org.mate.terminal.gschema.xml.in:351
 msgid ""
 "Keyboard shortcut key for toggling full screen mode. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -862,12 +877,12 @@ msgstr ""
 "പ്രത്യേക സ്ട്രിങ് \"പ്രവര്‍ത്തന രഹിതമാക്കുക\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ "
 "പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:122
+#: src/org.mate.terminal.gschema.xml.in:355
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgstr ""
 "മെനുബാറിന്റെ കാണുന്ന അവസ്ഥ മാറ്റുന്നതിന് സഹായിക്കുന്ന കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:123
+#: src/org.mate.terminal.gschema.xml.in:356
 msgid ""
 "Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
 "a string in the same format used for GTK+ resource files. If you set the "
@@ -880,11 +895,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:124
+#: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
 msgstr "ടെര്‍മിനല്‍ തലക്കെട്ട് ക്രമീകരിക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:125
+#: src/org.mate.terminal.gschema.xml.in:361
 msgid ""
 "Keyboard shortcut key to set the terminal title. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -897,11 +912,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:126
+#: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "ടെര്‍മിനല്‍ റീസറ്റ് ചെയ്യുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:127
+#: src/org.mate.terminal.gschema.xml.in:366
 msgid ""
 "Keyboard shortcut key to reset the terminal. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -914,11 +929,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:128
+#: src/org.mate.terminal.gschema.xml.in:370
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "ടെര്‍മിനല്‍ റീസറ്റ് ചെയ്ത് വെടിപ്പാക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:129
+#: src/org.mate.terminal.gschema.xml.in:371
 msgid ""
 "Keyboard shortcut key to reset and clear the terminal. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -931,11 +946,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:130
+#: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "മുമ്പുളള കിളിവാതിലിലേയ്ക്കു് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:131
+#: src/org.mate.terminal.gschema.xml.in:376
 msgid ""
 "Keyboard shortcut key to switch to the previous tab. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -948,11 +963,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:132
+#: src/org.mate.terminal.gschema.xml.in:380
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "അടുത്ത കിളിവാതിലിലേയ്ക്കു് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:133
+#: src/org.mate.terminal.gschema.xml.in:381
 msgid ""
 "Keyboard shortcut key to switch to the next tab. Expressed as a string in "
 "the same format used for GTK+ resource files. If you set the option to the "
@@ -965,11 +980,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:134
+#: src/org.mate.terminal.gschema.xml.in:385
 msgid "Keyboard shortcut to switch to the previous profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:135
+#: src/org.mate.terminal.gschema.xml.in:386
 msgid ""
 "Keyboard shortcut key to switch to the previous profile. Expressed as a "
 "string in the same format used for GTK+ resource files. If you set the "
@@ -977,11 +992,11 @@ msgid ""
 "shortcut for this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:136
+#: src/org.mate.terminal.gschema.xml.in:390
 msgid "Keyboard shortcut to switch to the next profile"
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:137
+#: src/org.mate.terminal.gschema.xml.in:391
 msgid ""
 "Keyboard shortcut key to switch to the next profile. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -989,11 +1004,11 @@ msgid ""
 " this action."
 msgstr ""
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:138
+#: src/org.mate.terminal.gschema.xml.in:395
 msgid "Accelerator to move the current tab to the left."
 msgstr "നിലവിലുളള കിളിവാതില്‍ ഇടത്തേക്ക് നീക്കുന്നതിനുളള ആക്സലറേറ്റര്‍."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:139
+#: src/org.mate.terminal.gschema.xml.in:396
 msgid ""
 "Accelerator key to move the current tab to the left. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1005,11 +1020,11 @@ msgstr ""
 "ഉപയോഗിക്കുന്നു. ഇവ \"disabled\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തിയ്ക്കു്"
 " കീബൈന്‍ഡിങ് ഉണ്ടാവില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:140
+#: src/org.mate.terminal.gschema.xml.in:400
 msgid "Accelerator to move the current tab to the right."
 msgstr "നിലവിലുളള കിളിവാതില്‍ വലത്തേക്ക് നീക്കുന്നതിനുളള ആക്സലറേറ്റര്‍."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:141
+#: src/org.mate.terminal.gschema.xml.in:401
 msgid ""
 "Accelerator key to move the current tab to the right. Expressed as a string "
 "in the same format used for GTK+ resource files. If you set the option to "
@@ -1021,11 +1036,11 @@ msgstr ""
 "ഉപയോഗിക്കുന്നു. ഇവ \"disabled\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തിയ്ക്കു്"
 " കീബൈന്‍ഡിങ് ഉണ്ടാവില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:142
+#: src/org.mate.terminal.gschema.xml.in:405
 msgid "Accelerator to detach current tab."
 msgstr "നിലവിലുളള കിളിവാതില്‍ വേര്‍പ്പെടുത്തുന്നതിനുളള ആക്സലറേറ്റര്‍"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:143
+#: src/org.mate.terminal.gschema.xml.in:406
 msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1036,11 +1051,11 @@ msgstr ""
 "ഉപയോഗിക്കുന്നു. ഇവ \"disabled\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തിയ്ക്കു്"
 " കീബൈന്‍ഡിങ് ഉണ്ടാവില്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:144
+#: src/org.mate.terminal.gschema.xml.in:410
 msgid "Keyboard shortcut to switch to tab 1"
 msgstr "കിളിവാതില്‍ 1-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:145
+#: src/org.mate.terminal.gschema.xml.in:411
 msgid ""
 "Keyboard shortcut key for switch to tab 1. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1053,11 +1068,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:146
+#: src/org.mate.terminal.gschema.xml.in:415
 msgid "Keyboard shortcut to switch to tab 2"
 msgstr "കിളിവാതില്‍ 2-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:147
+#: src/org.mate.terminal.gschema.xml.in:416
 msgid ""
 "Keyboard shortcut key for switch to tab 2. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1070,11 +1085,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:148
+#: src/org.mate.terminal.gschema.xml.in:420
 msgid "Keyboard shortcut to switch to tab 3"
 msgstr "കിളിവാതില്‍ 3-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:149
+#: src/org.mate.terminal.gschema.xml.in:421
 msgid ""
 "Keyboard shortcut key for switch to tab 3. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1087,11 +1102,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:150
+#: src/org.mate.terminal.gschema.xml.in:425
 msgid "Keyboard shortcut to switch to tab 4"
 msgstr "കിളിവാതില്‍ 4-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:151
+#: src/org.mate.terminal.gschema.xml.in:426
 msgid ""
 "Keyboard shortcut key for switch to tab 4. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1104,11 +1119,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:152
+#: src/org.mate.terminal.gschema.xml.in:430
 msgid "Keyboard shortcut to switch to tab 5"
 msgstr "കിളിവാതില്‍ 5-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:153
+#: src/org.mate.terminal.gschema.xml.in:431
 msgid ""
 "Keyboard shortcut key for switch to tab 5. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1121,11 +1136,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:154
+#: src/org.mate.terminal.gschema.xml.in:435
 msgid "Keyboard shortcut to switch to tab 6"
 msgstr "കിളിവാതില്‍ 6-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:155
+#: src/org.mate.terminal.gschema.xml.in:436
 msgid ""
 "Keyboard shortcut key for switch to tab 6. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1138,11 +1153,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:156
+#: src/org.mate.terminal.gschema.xml.in:440
 msgid "Keyboard shortcut to switch to tab 7"
 msgstr "കിളിവാതില്‍ 7-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:157
+#: src/org.mate.terminal.gschema.xml.in:441
 msgid ""
 "Keyboard shortcut key for switch to tab 7. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1155,11 +1170,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:158
+#: src/org.mate.terminal.gschema.xml.in:445
 msgid "Keyboard shortcut to switch to tab 8"
 msgstr "കിളിവാതില്‍ 8-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:159
+#: src/org.mate.terminal.gschema.xml.in:446
 msgid ""
 "Keyboard shortcut key for switch to tab 8. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1172,11 +1187,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:160
+#: src/org.mate.terminal.gschema.xml.in:450
 msgid "Keyboard shortcut to switch to tab 9"
 msgstr "കിളിവാതില്‍ 9-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:161
+#: src/org.mate.terminal.gschema.xml.in:451
 msgid ""
 "Keyboard shortcut key for switch to tab 9. Expressed as a string in the same"
 " format used for GTK+ resource files. If you set the option to the special "
@@ -1189,11 +1204,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:162
+#: src/org.mate.terminal.gschema.xml.in:455
 msgid "Keyboard shortcut to switch to tab 10"
 msgstr "കിളിവാതില്‍ 10-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:163
+#: src/org.mate.terminal.gschema.xml.in:456
 msgid ""
 "Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1206,11 +1221,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:164
+#: src/org.mate.terminal.gschema.xml.in:460
 msgid "Keyboard shortcut to switch to tab 11"
 msgstr "കിളിവാതില്‍ 11-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:165
+#: src/org.mate.terminal.gschema.xml.in:461
 msgid ""
 "Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1223,11 +1238,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:166
+#: src/org.mate.terminal.gschema.xml.in:465
 msgid "Keyboard shortcut to switch to tab 12"
 msgstr "കിളിവാതില്‍ 12-ലേക്ക് പോകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:167
+#: src/org.mate.terminal.gschema.xml.in:466
 msgid ""
 "Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1240,11 +1255,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:168
+#: src/org.mate.terminal.gschema.xml.in:470
 msgid "Keyboard shortcut to launch help"
 msgstr "സഹായം ലഭ്യമാകുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:169
+#: src/org.mate.terminal.gschema.xml.in:471
 msgid ""
 "Keyboard shortcut key for launching help. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
@@ -1256,11 +1271,11 @@ msgstr ""
 "പ്രത്യേക സ്ട്രിങ് \"പ്രവര്‍ത്തന രഹിതമാക്കുക\" എന്നു് സജ്ജമാക്കിയാല്‍, ഈ "
 "പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:170
+#: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
 msgstr "അക്ഷരസഞ്ചയം വലുതാക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:171
+#: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
 "Keyboard shortcut key for making font larger. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1273,11 +1288,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:172
+#: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
 msgstr "അക്ഷരം ചെറുതാക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:173
+#: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
 "Keyboard shortcut key for making font smaller. Expressed as a string in the "
 "same format used for GTK+ resource files. If you set the option to the "
@@ -1290,11 +1305,11 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:174
+#: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "അക്ഷരസഞ്ചയം സാധാരണ വലിപ്പം ആക്കുന്നതിനുളള കീബോര്‍ഡ് എളുപ്പ വഴി"
 
-#: ../src/org.mate.terminal.gschema.xml.in.h:175
+#: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
 "Keyboard shortcut key for making font the normal size. Expressed as a string"
 " in the same format used for GTK+ resource files. If you set the option to "
@@ -1307,455 +1322,451 @@ msgstr ""
 " സജ്ജമാക്കിയാല്‍, ഈ പ്രവര്‍ത്തനത്തിന് പിന്നീട് എളുപ്പ വഴി "
 "ഉണ്ടായിരിക്കുന്നതല്ല."
 
-#: ../src/profile-editor.c:44
+#: src/profile-editor.c:44
 msgid "Black on light yellow"
 msgstr "ഇളം മഞ്ഞയില്‍ കറുപ്പ്"
 
-#: ../src/profile-editor.c:49
+#: src/profile-editor.c:49
 msgid "Black on white"
 msgstr "വെളുപ്പില്‍ കറുപ്പ്"
 
-#: ../src/profile-editor.c:54
+#: src/profile-editor.c:54
 msgid "Gray on black"
 msgstr "കറുപ്പില്‍ ചാരനിറം"
 
-#: ../src/profile-editor.c:59
+#: src/profile-editor.c:59
 msgid "Green on black"
 msgstr "കറുപ്പില്‍ പച്ച"
 
-#: ../src/profile-editor.c:64
+#: src/profile-editor.c:64
 msgid "White on black"
 msgstr "കറുപ്പില്‍ വെള്ള"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be
 #. translated
-#: ../src/profile-editor.c:69
+#: src/profile-editor.c:69
 msgid "Solarized light"
 msgstr ""
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
-#: ../src/profile-editor.c:74
+#: src/profile-editor.c:74
 msgid "Solarized dark"
 msgstr ""
 
-#: ../src/profile-editor.c:488
+#: src/profile-editor.c:497
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "ആജ്ഞ മനസിലാക്കുന്നതില്‍ പിശക്: %s"
 
-#: ../src/profile-editor.c:505
+#: src/profile-editor.c:514
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "പ്രൊഫൈല്‍ “%s” ചിട്ടപ്പെടുത്തുന്നു"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-editor.c:536 ../src/profile-preferences.ui.h:11
-#: ../src/extra-strings.c:82
+#: src/profile-editor.c:545 src/profile-preferences.ui:120
+#: src/profile-preferences.ui:146 src/extra-strings.c:82
 msgid "Custom"
 msgstr "ഇച്ഛാനുസൃതം"
 
-#: ../src/profile-editor.c:586
+#: src/profile-editor.c:595
 msgid "Images"
 msgstr "ചിത്രങ്ങള്‍"
 
-#: ../src/profile-editor.c:730
+#: src/profile-editor.c:732
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "താലത്തിലുളള നിറം %d തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-editor.c:734
+#: src/profile-editor.c:736
 #, c-format
 msgid "Palette entry %d"
 msgstr "നിറക്കൂട്ടു് എന്‍ട്രി %d"
 
-#: ../src/encodings-dialog.ui.h:1
+#: src/encodings-dialog.ui:14
 msgid "Add or Remove Terminal Encodings"
 msgstr "ടെര്‍മിനല്‍ എന്‍കോഡിങുകള്‍ ചേര്‍ക്കുക അല്ലെങ്കില്‍ നീക്കം ചെയ്യുക"
 
-#: ../src/encodings-dialog.ui.h:2
+#: src/encodings-dialog.ui:169
 msgid "A_vailable encodings:"
 msgstr "_ലഭ്യമായ എന്‍കോഡിങ്ങുകള്‍:"
 
-#: ../src/encodings-dialog.ui.h:3
+#: src/encodings-dialog.ui:187
 msgid "E_ncodings shown in menu:"
 msgstr "മെനുവില്‍ കാണിച്ചിരിക്കുന്ന _എന്‍കോഡിങ്ങുകള്‍:"
 
-#: ../src/find-dialog.ui.h:1 ../src/terminal-accels.c:218
+#: src/find-dialog.ui:14 src/terminal-accels.c:218
 msgid "Find"
 msgstr "കണ്ടെത്തുക"
 
-#: ../src/find-dialog.ui.h:2
+#: src/find-dialog.ui:87
 msgid "_Search for:"
 msgstr "ഇതു് _തെരയുക:"
 
-#: ../src/find-dialog.ui.h:3
+#: src/find-dialog.ui:124
 msgid "_Match case"
 msgstr "വലിയചെറിയക്ഷരവ്യത്യാസം _കണക്കിലെടുക്കുക (ഇംഗ്ലീഷിന് മാത്രം)"
 
-#: ../src/find-dialog.ui.h:4
+#: src/find-dialog.ui:141
 msgid "Match _entire word only"
 msgstr "വാക്ക് _പൂര്‍ണ്ണമായുണ്ടെങ്കില്‍ മാത്രം"
 
-#: ../src/find-dialog.ui.h:5
+#: src/find-dialog.ui:158
 msgid "Match as _regular expression"
 msgstr ""
 
-#: ../src/find-dialog.ui.h:6
+#: src/find-dialog.ui:175
 msgid "Search _backwards"
 msgstr "_പുറകോട്ട് തെരയുക"
 
-#: ../src/find-dialog.ui.h:7
+#: src/find-dialog.ui:193
 msgid "_Wrap around"
 msgstr "ചുറ്റും _ഒതുക്കുക"
 
-#: ../src/keybinding-editor.ui.h:1
+#: src/keybinding-editor.ui:14
 msgid "Keyboard Shortcuts"
 msgstr "കീബോര്‍ഡ് എളുപ്പവഴിികള്‍ "
 
-#: ../src/keybinding-editor.ui.h:2
+#: src/keybinding-editor.ui:78
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
 msgstr ""
 "എല്ലാ മെനു ആക്സസ്സ് കീയും പ്രവര്‍ത്തന _സജ്ജാക്കുക (ഫയല്‍ മെനുവിനായി Alt+F "
 "എന്നതു് പോലെ)"
 
-#: ../src/keybinding-editor.ui.h:3
+#: src/keybinding-editor.ui:117
 msgid "Enable the _menu shortcut key (F10 by default)"
 msgstr "മെനുവിനുള്ള എളുപ്പവഴി പ്രവര്‍ത്തന _സജ്ജമാക്കുക (സ്വതവേയുള്ളതു് F10)"
 
-#: ../src/keybinding-editor.ui.h:4
+#: src/keybinding-editor.ui:136
 msgid "_Shortcut keys:"
 msgstr "_കുറുക്ക് വഴികള്‍:"
 
-#: ../src/profile-manager.ui.h:1
+#: src/profile-manager.ui:14
 msgid "Profiles"
 msgstr "പ്രൊഫൈലുകള്‍"
 
-#: ../src/profile-manager.ui.h:2
+#: src/profile-manager.ui:175
 msgid "_Profile used when launching a new terminal:"
 msgstr "പുതിയ ടെര്‍മിനലുകള്‍ക്കായുളള _പ്രൊഫൈല്‍:"
 
-#: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
 msgid "New Profile"
 msgstr "പുതിയ പ്രൊഫൈല്‍"
 
-#: ../src/profile-new-dialog.ui.h:2
+#: src/profile-new-dialog.ui:74
 msgid "C_reate"
 msgstr "_നിര്‍മ്മിക്കുക"
 
-#: ../src/profile-new-dialog.ui.h:3
+#: src/profile-new-dialog.ui:132
 msgid "Profile _name:"
 msgstr "പ്രൊഫൈല്‍ പേര്: (_n)"
 
-#: ../src/profile-new-dialog.ui.h:4
+#: src/profile-new-dialog.ui:145
 msgid "_Base on:"
 msgstr "_അടിസ്ഥാനം:"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:1 ../src/extra-strings.c:35
+#: src/profile-preferences.ui:66 src/extra-strings.c:35
 msgid "Block"
 msgstr "ബ്ലോക്ക്"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:2 ../src/extra-strings.c:37
+#: src/profile-preferences.ui:69 src/extra-strings.c:37
 msgid "I-Beam"
 msgstr "ഐ-ബീം"
 
 #. Translators: Cursor shape: ...
-#: ../src/profile-preferences.ui.h:3 ../src/extra-strings.c:39
+#: src/profile-preferences.ui:72 src/extra-strings.c:39
 msgid "Underline"
 msgstr "അടിവര"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:4 ../src/extra-strings.c:63
+#: src/profile-preferences.ui:83 src/extra-strings.c:63
 msgid "Replace initial title"
 msgstr "പ്രാരംഭ തലക്കെട്ട് മാറ്റുക"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:5 ../src/extra-strings.c:65
+#: src/profile-preferences.ui:86 src/extra-strings.c:65
 msgid "Append initial title"
 msgstr "പ്രാരംഭ തലക്കെട്ടിന്റെ ഒടുവില്‍ കൂട്ടിചേര്‍ക്കുക"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:6 ../src/extra-strings.c:67
+#: src/profile-preferences.ui:89 src/extra-strings.c:67
 msgid "Prepend initial title"
 msgstr "പ്രാരംഭ തലക്കെട്ടിന്റെ തുടക്കത്തില്‍ ചേര്‍ക്കുക"
 
 #. Translators: When terminal commands set their own titles: ...
-#: ../src/profile-preferences.ui.h:7 ../src/extra-strings.c:69
+#: src/profile-preferences.ui:92 src/extra-strings.c:69
 msgid "Keep initial title"
 msgstr "പ്രാരംഭ തലക്കെട്ട് സൂക്ഷിക്കുക"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:8 ../src/extra-strings.c:49
+#: src/profile-preferences.ui:103 src/extra-strings.c:49
 msgid "Exit the terminal"
 msgstr "ടെര്‍മിനലില്‍ നിന്നും പുറത്ത് പോവുക"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:9 ../src/extra-strings.c:51
+#: src/profile-preferences.ui:106 src/extra-strings.c:51
 msgid "Restart the command"
 msgstr "നിര്‍ദ്ദേശം വീണ്ടും ആരംഭിക്കുക"
 
 #. Translators: When command exits: ...
-#: ../src/profile-preferences.ui.h:10 ../src/extra-strings.c:53
+#: src/profile-preferences.ui:109 src/extra-strings.c:53
 msgid "Hold the terminal open"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കാതിരിക്കുക"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:12 ../src/extra-strings.c:72
+#: src/profile-preferences.ui:131 src/extra-strings.c:72
 msgid "Tango"
 msgstr "റ്റാങ്കോ"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
+#: src/profile-preferences.ui:134 src/extra-strings.c:74
 msgid "Linux console"
 msgstr "ലിനക്സ് കണ്‍സോള്‍"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
+#: src/profile-preferences.ui:137 src/extra-strings.c:76
 msgid "XTerm"
 msgstr "XTerm"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:15 ../src/extra-strings.c:78
+#: src/profile-preferences.ui:140 src/extra-strings.c:78
 msgid "Rxvt"
 msgstr "Rxvt"
 
 #. Translators: This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:80
+#: src/profile-preferences.ui:143 src/extra-strings.c:80
 msgid "Solarized"
 msgstr ""
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:17 ../src/extra-strings.c:56
+#: src/profile-preferences.ui:157 src/extra-strings.c:56
 msgid "On the left side"
 msgstr "ഇടത്ത് വശത്ത്"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:18 ../src/extra-strings.c:58
+#: src/profile-preferences.ui:160 src/extra-strings.c:58
 msgid "On the right side"
 msgstr "വലത്ത് വശത്ത്"
 
 #. Translators: Scrollbar is: ...
-#: ../src/profile-preferences.ui.h:19 ../src/terminal-accels.c:408
-#: ../src/extra-strings.c:60
+#: src/profile-preferences.ui:163 src/terminal-accels.c:408
+#: src/extra-strings.c:60
 msgid "Disabled"
 msgstr "പ്രവര്‍ത്തനരഹിതം"
 
-#. * Copyright © 2009 Christian Persch
-#. *
-#. * Mate-terminal is free software; you can redistribute it and/or modify
-#. * it under the terms of the GNU General Public License as published by
-#. * the Free Software Foundation; either version 3 of the License, or
-#. * (at your option) any later version.
-#. *
-#. * Mate-terminal is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. * GNU General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License
-#. * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#. This file contains extra strings that need to be translated, but
-#. * can't be extracted by intltool since the ui files aren't in git, and
-#. * the glade files don't contain them in the right form. See bug #553357.
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:20 ../src/extra-strings.c:24
+#: src/profile-preferences.ui:174 src/profile-preferences.ui:197
+#: src/extra-strings.c:24
 msgid "Automatic"
 msgstr "ഓട്ടോമാറ്റിക്"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:21 ../src/extra-strings.c:26
+#: src/profile-preferences.ui:177 src/profile-preferences.ui:200
+#: src/extra-strings.c:26
 msgid "Control-H"
 msgstr "Control-H"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:22 ../src/extra-strings.c:28
+#: src/profile-preferences.ui:180 src/profile-preferences.ui:203
+#: src/extra-strings.c:28
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:23 ../src/extra-strings.c:30
+#: src/profile-preferences.ui:183 src/profile-preferences.ui:206
+#: src/extra-strings.c:30
 msgid "Escape sequence"
 msgstr "എസ്കേപ്പ് സീക്വന്‍സ്"
 
 #. Translators: This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:24 ../src/extra-strings.c:32
+#: src/profile-preferences.ui:186 src/profile-preferences.ui:209
+#: src/extra-strings.c:32
 msgid "TTY Erase"
 msgstr "TTY മായ്ക്കുക"
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:25 ../src/extra-strings.c:42
+#: src/profile-preferences.ui:220 src/extra-strings.c:42
 msgid "Use system settings"
 msgstr ""
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:26 ../src/extra-strings.c:44
+#: src/profile-preferences.ui:223 src/extra-strings.c:44
 msgid "Always blink"
 msgstr ""
 
 #. Translators: Cursor blink: ...
-#: ../src/profile-preferences.ui.h:27 ../src/extra-strings.c:46
+#: src/profile-preferences.ui:226 src/extra-strings.c:46
 msgid "Never blink"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:28
+#: src/profile-preferences.ui:233
 msgid "Profile Editor"
 msgstr "പ്രൊഫൈല്‍ എഡിറ്റര്‍"
 
-#: ../src/profile-preferences.ui.h:29
+#: src/profile-preferences.ui:311
 msgid "_Profile name:"
 msgstr "പ്രൊഫൈലിന്‍റെ പേര്: (_P)"
 
-#: ../src/profile-preferences.ui.h:30
+#: src/profile-preferences.ui:342
 msgid "_Use the system fixed width font"
 msgstr "സിസ്റ്റമിലുള്ള സ്ഥിരമായ വീതിയുള്ള അക്ഷരസഞ്ചയം _തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:31
+#: src/profile-preferences.ui:372
 msgid "_Font:"
 msgstr "_അക്ഷരസഞ്ചയം:"
 
-#: ../src/profile-preferences.ui.h:32
+#: src/profile-preferences.ui:389
 msgid "Choose A Terminal Font"
 msgstr "ടെര്‍മിനലിന് ഒരു അക്ഷരസഞ്ചയം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:33
+#: src/profile-preferences.ui:410
 msgid "_Allow bold text"
 msgstr "കട്ടി കൂടിയ പദാവലി _അനുവദിക്കുക"
 
-#: ../src/profile-preferences.ui.h:34
+#: src/profile-preferences.ui:426
 msgid "Show _menubar by default in new terminals"
 msgstr "പുതിയ ടെര്‍മിനലുകളില്‍ ‍സഹജമായി _മെനുബാര്‍ കാണിക്കുക"
 
-#: ../src/profile-preferences.ui.h:35
+#: src/profile-preferences.ui:442
 msgid "Terminal _bell"
 msgstr "ടെര്‍മിനല്‍ _ബെല്ല്"
 
-#: ../src/profile-preferences.ui.h:36
+#: src/profile-preferences.ui:458
 msgid "Copy selected text into _clipboard"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:37
+#: src/profile-preferences.ui:474
+msgid "Highlight _S/Key challenges under mouse pointer"
+msgstr ""
+
+#: src/profile-preferences.ui:490
+msgid "Highlight _URLs under mouse pointer"
+msgstr ""
+
+#: src/profile-preferences.ui:515
 msgid "Cursor blin_k:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:38
+#: src/profile-preferences.ui:562
 msgid "Cursor _shape:"
 msgstr "കര്‍സറിന്റെ _ആകൃതികള്‍:"
 
-#: ../src/profile-preferences.ui.h:39
+#: src/profile-preferences.ui:609
 msgid "Select-by-_word characters:"
 msgstr "_വാക്കിലുള്ള അക്ഷരങ്ങളനുസരിച്ചു് തെരഞ്ഞെടുക്കുക:"
 
-#: ../src/profile-preferences.ui.h:40
+#: src/profile-preferences.ui:640
 msgid "Use custom default terminal si_ze"
 msgstr "ടെര്‍മിനലിനു് യഥേഷ്ടം സജ്ജമാക്കിയ സ്വതവേയുള്ള _വ്യാപ്തി ഉപയോഗിക്കുക"
 
-#: ../src/profile-preferences.ui.h:41
+#: src/profile-preferences.ui:670
 msgid "Default size:"
 msgstr "സ്വതവേയുള്ള വലിപ്പം: "
 
-#: ../src/profile-preferences.ui.h:42
+#: src/profile-preferences.ui:702
 msgid "columns"
 msgstr "നിരകള്‍"
 
-#: ../src/profile-preferences.ui.h:43
+#: src/profile-preferences.ui:741
 msgid "rows"
 msgstr "വരികള്‍"
 
-#: ../src/profile-preferences.ui.h:44
+#: src/profile-preferences.ui:776
 msgid "General"
 msgstr "സാധാരണ"
 
-#: ../src/profile-preferences.ui.h:45
+#: src/profile-preferences.ui:803
 msgid "<b>Title</b>"
 msgstr "<b>തലക്കെട്ട്</b>"
 
-#: ../src/profile-preferences.ui.h:46
+#: src/profile-preferences.ui:834
 msgid "Initial _title:"
 msgstr "പ്രാരംഭ _തലക്കെട്ടു്:"
 
-#: ../src/profile-preferences.ui.h:47
+#: src/profile-preferences.ui:874
 msgid "When terminal commands set their o_wn titles:"
 msgstr "ടെര്‍മിനല്‍ ആജ്ഞകള്‍ അവയുടെ _സ്വന്തം ശീര്‍ഷകങ്ങള്‍ സജ്ജമാക്കുമ്പോള്‍:"
 
-#: ../src/profile-preferences.ui.h:48
+#: src/profile-preferences.ui:938
 msgid "<b>Command</b>"
 msgstr "<b>നിര്‍ദ്ദേശം</b>"
 
-#: ../src/profile-preferences.ui.h:49
+#: src/profile-preferences.ui:965
 msgid "_Run command as a login shell"
 msgstr "ലോഗിന്‍ ഷെല്ലായി ആജ്ഞ _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/profile-preferences.ui.h:50
+#: src/profile-preferences.ui:981
 msgid "Ru_n a custom command instead of my shell"
 msgstr "സ്വന്തം ഷെല്ലിന് പകരം ഇഷ്ടമുളള ഒരു നിര്‍ദ്ദേശം _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/profile-preferences.ui.h:51
+#: src/profile-preferences.ui:1011
 msgid "Custom co_mmand:"
 msgstr "ഇഷ്ട _നിര്‍ദ്ദേശം:"
 
-#: ../src/profile-preferences.ui.h:52
+#: src/profile-preferences.ui:1053
 msgid "When command _exits:"
 msgstr "നിര്‍ദ്ദേശത്തില്‍ നിന്ന് _പുറത്ത് കടക്കുമ്പോള്‍ :"
 
-#: ../src/profile-preferences.ui.h:53
+#: src/profile-preferences.ui:1123
 msgid "Title and Command"
 msgstr "തലക്കെട്ടും ആജ്ഞയും"
 
-#: ../src/profile-preferences.ui.h:54
+#: src/profile-preferences.ui:1151
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:55
+#: src/profile-preferences.ui:1173
 msgid "_Use colors from system theme"
 msgstr "സിസ്റ്റമിലുള്ള പ്രമേയത്തില്‍ നിന്നും നിറങ്ങള്‍ _തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:56
+#: src/profile-preferences.ui:1197
 msgid "Built-in sche_mes:"
 msgstr "ബിള്‍ട്ടിന്‍ _സ്ക്കീമുകള്‍:"
 
-#: ../src/profile-preferences.ui.h:57
+#: src/profile-preferences.ui:1246
 msgid "_Text color:"
 msgstr "_പദാവലിയുടെ നിറം: "
 
-#: ../src/profile-preferences.ui.h:58
+#: src/profile-preferences.ui:1261
 msgid "Choose Terminal Background Color"
 msgstr "ടെര്‍മിനലിന്റെ പശ്ചാത്തലത്തിനുളള നിറം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:59
+#: src/profile-preferences.ui:1273
 msgid "Choose Terminal Text Color"
 msgstr "ടെര്‍മിനലിലുളള പദാവലിയ്ക്കു് നിറം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:60
+#: src/profile-preferences.ui:1286
 msgid "_Background color:"
 msgstr "_പശ്ചാത്തലനിറം: "
 
-#: ../src/profile-preferences.ui.h:61
+#: src/profile-preferences.ui:1336
 msgid "Bol_d color:"
 msgstr "_കട്ടിയുള്ള നിറം:"
 
-#: ../src/profile-preferences.ui.h:62
+#: src/profile-preferences.ui:1350
 msgid "_Underline color:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:63
+#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
 msgid "_Same as text color"
 msgstr "_പദാവലിയുടെ അതേ നിറം: "
 
-#: ../src/profile-preferences.ui.h:64
+#: src/profile-preferences.ui:1430
 msgid "<b>Palette</b>"
 msgstr "<b>നിറക്കൂട്ടു്</b>"
 
-#: ../src/profile-preferences.ui.h:65
+#: src/profile-preferences.ui:1456
 msgid "Built-in _schemes:"
 msgstr "ബിള്‍ട്ടിന്‍ _സ്ക്കീമുകള്‍:"
 
-#: ../src/profile-preferences.ui.h:66
+#: src/profile-preferences.ui:1708
 msgid "Color p_alette:"
 msgstr "നിറ_ക്കൂട്ട്:"
 
-#: ../src/profile-preferences.ui.h:67
+#: src/profile-preferences.ui:1724
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
@@ -1763,83 +1774,83 @@ msgstr ""
 "<small><i><b>കുറിപ്പ്:</b> ടെര്‍മിനല്‍ പ്രയോഗങ്ങള്‍ക്ക് ഈ നിറങ്ങള്‍ "
 "ലഭ്യമാണ്.</i></small>"
 
-#: ../src/profile-preferences.ui.h:68
+#: src/profile-preferences.ui:1761
 msgid "Colors"
 msgstr "നിറങ്ങള്‍"
 
-#: ../src/profile-preferences.ui.h:69
+#: src/profile-preferences.ui:1779
 msgid "_Solid color"
 msgstr "_സോളിഡ് നിറം"
 
-#: ../src/profile-preferences.ui.h:70
+#: src/profile-preferences.ui:1801
 msgid "_Background image"
 msgstr "_പശ്ചാത്തലത്തിലുളള ചിത്രം"
 
-#: ../src/profile-preferences.ui.h:71
+#: src/profile-preferences.ui:1837
 msgid "Image _file:"
 msgstr "ചിത്രത്തിനുള്ള _ഫയല്‍:"
 
-#: ../src/profile-preferences.ui.h:72
+#: src/profile-preferences.ui:1852
 msgid "Select Background Image"
 msgstr "പശ്ചാത്തല ചിത്രം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/profile-preferences.ui.h:73
+#: src/profile-preferences.ui:1869
 msgid "Background image _scrolls"
 msgstr "പശ്ചാത്തലത്തിലുള്ള ചിത്രം _സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:74
+#: src/profile-preferences.ui:1900
 msgid "_Transparent background"
 msgstr "_പുറകിലുള്ളവ കാണാവുന്ന പശ്ചാത്തലം"
 
-#: ../src/profile-preferences.ui.h:75
+#: src/profile-preferences.ui:1926
 msgid "S_hade transparent or image background:"
 msgstr "കട്ടികുറഞ്ഞ _നിറം അല്ലെങ്കില്‍ പശ്ചാത്തലത്തില്‍ ചിത്രം:"
 
-#: ../src/profile-preferences.ui.h:76
+#: src/profile-preferences.ui:1942
 msgid "S_hade transparent background:"
 msgstr ""
 
-#: ../src/profile-preferences.ui.h:77
+#: src/profile-preferences.ui:1963
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>ഒന്നുമില്ല</i></small>"
 
-#: ../src/profile-preferences.ui.h:78
+#: src/profile-preferences.ui:1993
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>ഏറ്റവും കൂടിയ</i></small>"
 
-#: ../src/profile-preferences.ui.h:79
+#: src/profile-preferences.ui:2028
 msgid "Background"
 msgstr "പശ്ചാത്തലം"
 
-#: ../src/profile-preferences.ui.h:80
+#: src/profile-preferences.ui:2049
 msgid "_Scrollbar is:"
 msgstr "_സ്ക്രോള്‍ ബാര്‍:"
 
-#: ../src/profile-preferences.ui.h:81
+#: src/profile-preferences.ui:2060
 msgid "Scroll on _output"
 msgstr "_ഔട്ട്പുട്ടില്‍ സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:82
+#: src/profile-preferences.ui:2077
 msgid "Scroll on _keystroke"
 msgstr "_കീസ്ട്രോക്കില്‍ സ്ക്രോള്‍ ചെയ്യുക"
 
-#: ../src/profile-preferences.ui.h:83
+#: src/profile-preferences.ui:2117
 msgid "lines"
 msgstr "വരികള്‍"
 
-#: ../src/profile-preferences.ui.h:84
+#: src/profile-preferences.ui:2139
 msgid "Scroll_back:"
 msgstr "സ്ക്രോള്‍_ബാക്ക്:"
 
-#: ../src/profile-preferences.ui.h:85
+#: src/profile-preferences.ui:2150
 msgid "_Unlimited"
 msgstr "_പരിധിയില്ല"
 
-#: ../src/profile-preferences.ui.h:86
+#: src/profile-preferences.ui:2207
 msgid "Scrolling"
 msgstr "സ്ക്രോളിങ്"
 
-#: ../src/profile-preferences.ui.h:87
+#: src/profile-preferences.ui:2228
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1851,254 +1862,254 @@ msgstr ""
 "ടെര്‍മിനല്‍ ഉപയോഗം ആവശ്യമുള്ള ചില പ്രയോഗങ്ങള്‍ക്കും ഓപ്പറേറ്റിങ് "
 "സിസ്റ്റങ്ങള്‍ക്കും മാത്രം ഇവ സഹായകമാകുന്നു.</i></small>"
 
-#: ../src/profile-preferences.ui.h:88
+#: src/profile-preferences.ui:2250
 msgid "_Delete key generates:"
 msgstr "_Delete കീ ഉല്‍പാദിപ്പിക്കുന്നതു്:"
 
-#: ../src/profile-preferences.ui.h:89
+#: src/profile-preferences.ui:2302
 msgid "_Backspace key generates:"
 msgstr "_Backspace കീ ഉല്‍പാദിപ്പിക്കുന്നതു്:"
 
-#: ../src/profile-preferences.ui.h:90
+#: src/profile-preferences.ui:2326
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "കോപാറ്റിബിളിറ്റി ഐച്ഛികങ്ങള്‍ സഹജമായി _ക്രമീകരിക്കുക "
 
-#: ../src/profile-preferences.ui.h:91
+#: src/profile-preferences.ui:2356
 msgid "Compatibility"
 msgstr "പൊരുത്തം"
 
-#: ../src/skey-challenge.ui.h:1
+#: src/skey-challenge.ui:100
 msgid "S/Key Challenge Response"
 msgstr "S/Key ചാലഞ്ച് മറുപടി"
 
-#: ../src/skey-challenge.ui.h:2
+#: src/skey-challenge.ui:120
 msgid "_Password:"
 msgstr "_പാസ്‌വേര്‍ഡ്:"
 
-#: ../src/skey-popup.c:165
+#: src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
 msgstr "നിങ്ങള്‍ ഞെക്കിയ പദാവലി സാധുതയുളള ഒരു S/Key ചാലഞ്ച് അല്ല."
 
-#: ../src/skey-popup.c:176
+#: src/skey-popup.c:176
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "നിങ്ങള്‍ ഞെക്കിയ പദാവലി സാധുതയുളള ഒരു OTP ചാലഞ്ച് അല്ല."
 
-#: ../src/terminal-accels.c:148
+#: src/terminal-accels.c:148
 msgid "New Tab"
 msgstr "പുതിയ കിളിവാതില്‍"
 
-#: ../src/terminal-accels.c:152
+#: src/terminal-accels.c:152
 msgid "New Window"
 msgstr "പുതിയ ജാലകം"
 
-#: ../src/terminal-accels.c:161
+#: src/terminal-accels.c:161
 msgid "Save Contents"
 msgstr "ഉള്ളടക്കം സൂക്ഷിക്കുക"
 
-#: ../src/terminal-accels.c:166
+#: src/terminal-accels.c:166
 msgid "Close Tab"
 msgstr "കിളിവാതില്‍ അടയ്ക്കുക"
 
-#: ../src/terminal-accels.c:170
+#: src/terminal-accels.c:170
 msgid "Close Window"
 msgstr "ജാലകം അടയ്ക്കുക"
 
-#: ../src/terminal-accels.c:178
+#: src/terminal-accels.c:178
 msgid "Copy"
 msgstr "പക‍ര്‍ത്തുക"
 
-#: ../src/terminal-accels.c:182
+#: src/terminal-accels.c:182
 msgid "Paste"
 msgstr "ഒട്ടിയ്ക്കുക"
 
-#: ../src/terminal-accels.c:186
+#: src/terminal-accels.c:186
 msgid "Select All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/terminal-accels.c:194
+#: src/terminal-accels.c:194
 msgid "Hide and Show menubar"
 msgstr "മെനുബാര്‍ ഒളിപ്പിക്കുകയും കാണിക്കുകയും ചെയ്യുക"
 
-#: ../src/terminal-accels.c:198
+#: src/terminal-accels.c:198
 msgid "Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമാവധി വലിപ്പമുളളതാക്കുക"
 
-#: ../src/terminal-accels.c:202
+#: src/terminal-accels.c:202
 msgid "Zoom In"
 msgstr "വലുതാക്കുക"
 
-#: ../src/terminal-accels.c:206
+#: src/terminal-accels.c:206
 msgid "Zoom Out"
 msgstr "ചെറുതാക്കുക"
 
-#: ../src/terminal-accels.c:210
+#: src/terminal-accels.c:210
 msgid "Normal Size"
 msgstr "സാധാരണ വലിപ്പം"
 
-#: ../src/terminal-accels.c:222
+#: src/terminal-accels.c:222
 msgid "Find Next"
 msgstr "അടുത്തതു് കണ്ടെത്തുക"
 
-#: ../src/terminal-accels.c:226
+#: src/terminal-accels.c:226
 msgid "Find Previous"
 msgstr "മുമ്പുളളതു് കണ്ടെത്തുക"
 
-#: ../src/terminal-accels.c:234 ../src/terminal-window.c:4169
+#: src/terminal-accels.c:234 src/terminal-window.c:4247
 msgid "Set Title"
 msgstr "തലക്കെട്ട് സജ്ജീകരിയ്ക്കുക"
 
-#: ../src/terminal-accels.c:238
+#: src/terminal-accels.c:238
 msgid "Reset"
 msgstr "വീണ്ടും തുടങ്ങുക"
 
-#: ../src/terminal-accels.c:242
+#: src/terminal-accels.c:242
 msgid "Reset and Clear"
 msgstr "വീണ്ടും തുടങ്ങി വെടിപ്പാക്കുക"
 
-#: ../src/terminal-accels.c:246
+#: src/terminal-accels.c:246
 msgid "Switch to Previous Profile"
 msgstr ""
 
-#: ../src/terminal-accels.c:250
+#: src/terminal-accels.c:250
 msgid "Switch to Next Profile"
 msgstr ""
 
-#: ../src/terminal-accels.c:258
+#: src/terminal-accels.c:258
 msgid "Switch to Previous Tab"
 msgstr "മുമ്പുളള കിളിവാതിലിലേയ്ക്കു് പോവുക"
 
-#: ../src/terminal-accels.c:262
+#: src/terminal-accels.c:262
 msgid "Switch to Next Tab"
 msgstr "അടുത്ത കിളിവാതിലിലേയ്ക്കു് പോവുക"
 
-#: ../src/terminal-accels.c:266
+#: src/terminal-accels.c:266
 msgid "Move Tab to the Left"
 msgstr "ഇടത്തേക്ക് കിളിവാതില്‍ നീക്കുക"
 
-#: ../src/terminal-accels.c:270
+#: src/terminal-accels.c:270
 msgid "Move Tab to the Right"
 msgstr "വലത്തേക്ക് കിളിവാതില്‍ നീക്കുക"
 
-#: ../src/terminal-accels.c:274
+#: src/terminal-accels.c:274
 msgid "Detach Tab"
 msgstr "കിളിവാതില്‍ വേര്‍പ്പെടുത്തുക"
 
-#: ../src/terminal-accels.c:278
+#: src/terminal-accels.c:278
 msgid "Switch to Tab 1"
 msgstr "കിളിവാതില്‍ 1-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:283
+#: src/terminal-accels.c:283
 msgid "Switch to Tab 2"
 msgstr "കിളിവാതില്‍ 2-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:288
+#: src/terminal-accels.c:288
 msgid "Switch to Tab 3"
 msgstr "കിളിവാതില്‍ 3-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:293
+#: src/terminal-accels.c:293
 msgid "Switch to Tab 4"
 msgstr "കിളിവാതില്‍ 4-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:298
+#: src/terminal-accels.c:298
 msgid "Switch to Tab 5"
 msgstr "കിളിവാതില്‍ 5-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:303
+#: src/terminal-accels.c:303
 msgid "Switch to Tab 6"
 msgstr "കിളിവാതില്‍ 6-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:308
+#: src/terminal-accels.c:308
 msgid "Switch to Tab 7"
 msgstr "കിളിവാതില്‍ 7-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:313
+#: src/terminal-accels.c:313
 msgid "Switch to Tab 8"
 msgstr "കിളിവാതില്‍ 8-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:318
+#: src/terminal-accels.c:318
 msgid "Switch to Tab 9"
 msgstr "കിളിവാതില്‍ 9-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:323
+#: src/terminal-accels.c:323
 msgid "Switch to Tab 10"
 msgstr "കിളിവാതില്‍ 10-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:328
+#: src/terminal-accels.c:328
 msgid "Switch to Tab 11"
 msgstr "കിളിവാതില്‍ 11-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:333
+#: src/terminal-accels.c:333
 msgid "Switch to Tab 12"
 msgstr "കിളിവാതില്‍ 12-ലേക്ക് പോവുക"
 
-#: ../src/terminal-accels.c:341
+#: src/terminal-accels.c:341
 msgid "Contents"
 msgstr "ഉള്ളടക്കം"
 
-#: ../src/terminal-accels.c:346
+#: src/terminal-accels.c:346
 msgid "File"
 msgstr "ഫയല്‍"
 
-#: ../src/terminal-accels.c:347
+#: src/terminal-accels.c:347
 msgid "Edit"
 msgstr "ചിട്ടപ്പെടുത്തുക"
 
-#: ../src/terminal-accels.c:348
+#: src/terminal-accels.c:348
 msgid "View"
 msgstr "കാഴ്ച"
 
-#: ../src/terminal-accels.c:349
+#: src/terminal-accels.c:349
 msgid "Search"
 msgstr "തെരച്ചില്‍"
 
-#: ../src/terminal-accels.c:351
+#: src/terminal-accels.c:351
 msgid "Tabs"
 msgstr "കിളിവാതിലുകള്‍"
 
-#: ../src/terminal-accels.c:352
+#: src/terminal-accels.c:352
 msgid "Help"
 msgstr "സഹായം"
 
-#: ../src/terminal-accels.c:855
+#: src/terminal-accels.c:855
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr ""
 "“%s” എന്ന എളുപ്പവഴി നിലവില്‍ “%s” പ്രവര്‍ത്തിയുമായി ചേര്‍ന്നിരിക്കുന്നു"
 
-#: ../src/terminal-accels.c:1011
+#: src/terminal-accels.c:1011
 msgid "_Action"
 msgstr "_പ്രവര്‍ത്തനം"
 
-#: ../src/terminal-accels.c:1030
+#: src/terminal-accels.c:1030
 msgid "Shortcut _Key"
 msgstr "_എളുപ്പ വഴി "
 
-#: ../src/terminal-app.c:540
+#: src/terminal-app.c:523
 msgid "Click button to choose profile"
 msgstr "പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുന്നതിനായി ബട്ടണ്‍ ക്ളിക്ക് ചെയ്യുക"
 
-#: ../src/terminal-app.c:623
+#: src/terminal-app.c:606
 msgid "Profile list"
 msgstr "ഫ്രൊഫൈലിന്റെ പട്ടിക"
 
-#: ../src/terminal-app.c:702
+#: src/terminal-app.c:683
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "പ്രൊഫൈല്‍ “%s” നീക്കം ചെയ്യണമോ?"
 
-#: ../src/terminal-app.c:706
+#: src/terminal-app.c:687
 msgid "_Cancel"
 msgstr "_റദ്ദാക്കുക"
 
-#: ../src/terminal-app.c:711
+#: src/terminal-app.c:692
 msgid "_Delete"
 msgstr "നീക്കം ചെയ്യുക (_D)"
 
-#: ../src/terminal-app.c:718
+#: src/terminal-app.c:699
 msgid "Delete Profile"
 msgstr "പ്രൊഫൈല്‍ നീക്കം ചെയ്യുക"
 
-#: ../src/terminal-app.c:1165
+#: src/terminal-app.c:1146
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2107,182 +2118,179 @@ msgstr ""
 "“%s” എന്ന പേരില്‍ ഒരു പ്രൊഫൈല്‍ നിലവിലുണ്ടു്. നിങ്ങള്‍ക്കു് ഇതേ പേരില്‍ "
 "മറ്റൊരു പ്രൊഫൈല്‍ ഉണ്ടാക്കണമോ?"
 
-#: ../src/terminal-app.c:1260
+#: src/terminal-app.c:1241
 msgid "Choose base profile"
 msgstr "ബെയിസ് പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുക"
 
-#: ../src/terminal-app.c:1848
+#: src/terminal-app.c:1828
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\" എന്ന പ്രൊഫൈല്‍ ലഭ്യമല്ല, സ്വതവേയുള്ളതു് ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-app.c:1875
+#: src/terminal-app.c:1855
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "തെറ്റായ ജ്യാമിതി സ്ട്രിങ് \"%s\"\n"
 
-#: ../src/terminal-app.c:2081
+#: src/terminal-app.c:2061
 msgid "User Defined"
 msgstr "ഉപയോക്താവു് നിര്‍വ്വചിച്ച"
 
-#: ../src/terminal.c:585
+#: src/terminal.c:585
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"
 
-#: ../src/terminal-encoding.c:53 ../src/terminal-encoding.c:66
-#: ../src/terminal-encoding.c:80 ../src/terminal-encoding.c:102
-#: ../src/terminal-encoding.c:113
+#: src/terminal-encoding.c:53 src/terminal-encoding.c:66
+#: src/terminal-encoding.c:80 src/terminal-encoding.c:102
+#: src/terminal-encoding.c:113
 msgid "Western"
 msgstr "പടിഞ്ഞാറന്‍"
 
-#: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:81
-#: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:111
+#: src/terminal-encoding.c:54 src/terminal-encoding.c:81
+#: src/terminal-encoding.c:92 src/terminal-encoding.c:111
 msgid "Central European"
 msgstr "മധ്യ യൂറോപ്യന്‍"
 
-#: ../src/terminal-encoding.c:55
+#: src/terminal-encoding.c:55
 msgid "South European"
 msgstr "ദക്ഷിണ യൂറോപ്യന്‍"
 
-#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:64
-#: ../src/terminal-encoding.c:118
+#: src/terminal-encoding.c:56 src/terminal-encoding.c:64
+#: src/terminal-encoding.c:118
 msgid "Baltic"
 msgstr "ബാള്‍ട്ടിക്ക്"
 
-#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:82
-#: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
-#: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
+#: src/terminal-encoding.c:57 src/terminal-encoding.c:82
+#: src/terminal-encoding.c:88 src/terminal-encoding.c:89
+#: src/terminal-encoding.c:94 src/terminal-encoding.c:112
 msgid "Cyrillic"
 msgstr "സിറിലിക്"
 
-#: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
-#: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
+#: src/terminal-encoding.c:58 src/terminal-encoding.c:85
+#: src/terminal-encoding.c:91 src/terminal-encoding.c:117
 msgid "Arabic"
 msgstr "അറബി"
 
-#: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
-#: ../src/terminal-encoding.c:114
+#: src/terminal-encoding.c:59 src/terminal-encoding.c:97
+#: src/terminal-encoding.c:114
 msgid "Greek"
 msgstr "ഗ്രീക്ക്"
 
-#: ../src/terminal-encoding.c:60
+#: src/terminal-encoding.c:60
 msgid "Hebrew Visual"
 msgstr "ഹീബ്രു വിഷ്വല്‍"
 
-#: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
-#: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
+#: src/terminal-encoding.c:61 src/terminal-encoding.c:84
+#: src/terminal-encoding.c:100 src/terminal-encoding.c:116
 msgid "Hebrew"
 msgstr "ഹീബ്രു"
 
-#: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
-#: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
+#: src/terminal-encoding.c:62 src/terminal-encoding.c:83
+#: src/terminal-encoding.c:104 src/terminal-encoding.c:115
 msgid "Turkish"
 msgstr "തുര്‍ക്കിഷ്"
 
-#: ../src/terminal-encoding.c:63
+#: src/terminal-encoding.c:63
 msgid "Nordic"
 msgstr "നോര്‍ഡിക്ക്"
 
-#: ../src/terminal-encoding.c:65
+#: src/terminal-encoding.c:65
 msgid "Celtic"
 msgstr "സെല്‍റ്റിക്ക്"
 
-#: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:103
+#: src/terminal-encoding.c:67 src/terminal-encoding.c:103
 msgid "Romanian"
 msgstr "റൊമേനിയന്‍"
 
-#. These encodings do NOT pass-through ASCII, so are always rejected.
-#. * FIXME: why are they in this table; or rather why do we need
-#. * the ASCII pass-through requirement?
-#: ../src/terminal-encoding.c:68 ../src/terminal-encoding.c:125
-#: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
-#: ../src/terminal-encoding.c:128
+#: src/terminal-encoding.c:68 src/terminal-encoding.c:125
+#: src/terminal-encoding.c:126 src/terminal-encoding.c:127
+#: src/terminal-encoding.c:128
 msgid "Unicode"
 msgstr "യുണിക്കോഡ്"
 
-#: ../src/terminal-encoding.c:69
+#: src/terminal-encoding.c:69
 msgid "Armenian"
 msgstr "അര്‍മേനിയന്‍"
 
-#: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
-#: ../src/terminal-encoding.c:75
+#: src/terminal-encoding.c:70 src/terminal-encoding.c:71
+#: src/terminal-encoding.c:75
 msgid "Chinese Traditional"
 msgstr "ചൈനീസ് പരമ്പരാഗതം"
 
-#: ../src/terminal-encoding.c:72
+#: src/terminal-encoding.c:72
 msgid "Cyrillic/Russian"
 msgstr "സിറിലിക്/റഷ്യന്‍"
 
-#: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
-#: ../src/terminal-encoding.c:106
+#: src/terminal-encoding.c:73 src/terminal-encoding.c:86
+#: src/terminal-encoding.c:106
 msgid "Japanese"
 msgstr "ജാപ്പനീസ്"
 
-#: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:87
-#: ../src/terminal-encoding.c:109 ../src/terminal-encoding.c:129
+#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
+#: src/terminal-encoding.c:109 src/terminal-encoding.c:129
 msgid "Korean"
 msgstr "കൊറിയന്‍"
 
-#: ../src/terminal-encoding.c:76 ../src/terminal-encoding.c:77
-#: ../src/terminal-encoding.c:78
+#: src/terminal-encoding.c:76 src/terminal-encoding.c:77
+#: src/terminal-encoding.c:78
 msgid "Chinese Simplified"
 msgstr "ലളിതമാക്കിയ ചൈനീസ്"
 
-#: ../src/terminal-encoding.c:79
+#: src/terminal-encoding.c:79
 msgid "Georgian"
 msgstr "ജോര്‍ജ്ജിയന്‍"
 
-#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
+#: src/terminal-encoding.c:90 src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
 msgstr "സിറിലിക്/യുക്രേനിയന്‍"
 
-#: ../src/terminal-encoding.c:93
+#: src/terminal-encoding.c:93
 msgid "Croatian"
 msgstr "ക്രൊയോഷ്യന്‍"
 
-#: ../src/terminal-encoding.c:95
+#: src/terminal-encoding.c:95
 msgid "Hindi"
 msgstr "ഹിന്ദി"
 
-#: ../src/terminal-encoding.c:96
+#: src/terminal-encoding.c:96
 msgid "Persian"
 msgstr "പേര്‍ഷ്യന്‍"
 
-#: ../src/terminal-encoding.c:98
+#: src/terminal-encoding.c:98
 msgid "Gujarati"
 msgstr "ഗുജറാത്തി"
 
-#: ../src/terminal-encoding.c:99
+#: src/terminal-encoding.c:99
 msgid "Gurmukhi"
 msgstr "ഗുര്‍മുഖി"
 
-#: ../src/terminal-encoding.c:101
+#: src/terminal-encoding.c:101
 msgid "Icelandic"
 msgstr "ഐസ്‌ലാന്റിക്"
 
-#: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:110
-#: ../src/terminal-encoding.c:119
+#: src/terminal-encoding.c:107 src/terminal-encoding.c:110
+#: src/terminal-encoding.c:119
 msgid "Vietnamese"
 msgstr "വിയറ്റ്നാമീസ്"
 
-#: ../src/terminal-encoding.c:108
+#: src/terminal-encoding.c:108
 msgid "Thai"
 msgstr "തായ്"
 
-#: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
+#: src/terminal-encoding.c:506 src/terminal-encoding.c:531
 msgid "_Description"
 msgstr "_വിവരണം "
 
-#: ../src/terminal-encoding.c:515 ../src/terminal-encoding.c:540
+#: src/terminal-encoding.c:515 src/terminal-encoding.c:540
 msgid "_Encoding"
 msgstr "കോഡ് അല്ലേല്‍ _രഹസ്യ ഭാഷയിലാക്കുന്ന സംവിധാനം(എന്‍കോഡിങ്)"
 
-#: ../src/terminal-encoding.c:598
+#: src/terminal-encoding.c:598
 msgid "Current Locale"
 msgstr "നിലവിലുളള ലോക്കെയില്‍"
 
-#: ../src/terminal-options.c:176
+#: src/terminal-options.c:176
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2293,36 +2301,36 @@ msgstr ""
 "നിങ്ങള്‍ക്കു് ഇഷ്ടമുള്ള ക്രമീകരണത്തില്‍ ഒരു പ്രൊഫൈല്‍ ഉണ്ടാക്കി, പുതിയ '--"
 "profile' ഉപാധി ഉപയോഗിക്കാം\n"
 
-#: ../src/terminal-options.c:209
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\"-ലേക്കുളള ആര്‍ഗ്യുമെന്റ് അസാധുവായ ഒരു ആജ്ഞയാണ്: %s"
 
-#: ../src/terminal-options.c:348
+#: src/terminal-options.c:348
 msgid "Two roles given for one window"
 msgstr "ഒരു ജാലകത്തിനു് രണ്ടു് ജോലികള്‍ നല്‍കിയിരിക്കുന്നു"
 
-#: ../src/terminal-options.c:369 ../src/terminal-options.c:402
+#: src/terminal-options.c:369 src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "ഒരേ ജാലകത്തിനു് \"%s\" ഉപാധി രണ്ടും തവണ നല്‍കിയിരിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:601
+#: src/terminal-options.c:601
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" ശരിയായ സൂം ഫാക്ടര്‍ അല്ല"
 
-#: ../src/terminal-options.c:608
+#: src/terminal-options.c:608
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ ചെറുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:616
+#: src/terminal-options.c:616
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ വലുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: ../src/terminal-options.c:651
+#: src/terminal-options.c:651
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2331,15 +2339,15 @@ msgstr ""
 "\"%s\" ഐച്ഛികത്തിനു്, ബാക്കിയുള്ള കമാന്‍ഡ് ലൈനില്‍ "
 "പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി കമാന്‍ഡ് നല്‍കേണ്ടതുണ്ടു്"
 
-#: ../src/terminal-options.c:813
+#: src/terminal-options.c:812
 msgid "Not a valid terminal config file."
 msgstr "ശരിയായ ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ അല്ല."
 
-#: ../src/terminal-options.c:826
+#: src/terminal-options.c:825
 msgid "Incompatible terminal config file version."
 msgstr "പൊരുത്തപ്പെടാത്ത ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ പതിപ്പു്."
 
-#: ../src/terminal-options.c:954
+#: src/terminal-options.c:953
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2347,111 +2355,111 @@ msgstr ""
 "ആക്ടിവേഷന്‍ nameserver ഉപയോഗിച്ചു് രജിസ്ടര്‍ ചെയ്യരുതു്, സജീവമായ ഒരു "
 "ടെര്‍മിനല്‍ വീണ്ടും ഉപയോഗിക്കരുതു്"
 
-#: ../src/terminal-options.c:963
+#: src/terminal-options.c:962
 msgid "Load a terminal configuration file"
 msgstr "ഒരു ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ ലഭ്യമാക്കുക"
 
-#: ../src/terminal-options.c:972
+#: src/terminal-options.c:971
 msgid "Save the terminal configuration to a file"
 msgstr "ടെര്‍മിനല്‍ ക്രമീകരണം ഒരു ഫയലിലേക്കു് സൂക്ഷിക്കുക"
 
-#: ../src/terminal-options.c:987
+#: src/terminal-options.c:986
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉള്ള ഒരു പുതിയ കിളിവാതില്‍ അടങ്ങുന്ന പുതിയ ഒരു ജാലകം "
 "തുറക്കുക"
 
-#: ../src/terminal-options.c:996
+#: src/terminal-options.c:995
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "ഒടുവില്‍ തുറന്ന ജാലകത്തില്‍ സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉപയോഗിച്ചു് ഒരു പുതിയ "
 "കിളിവാതിലില്‍ തുറക്കുക"
 
-#: ../src/terminal-options.c:1010
+#: src/terminal-options.c:1009
 msgid "Turn on the menubar"
 msgstr "മെനുബാര്‍ ഓണ്‍ ചെയ്യുക"
 
-#: ../src/terminal-options.c:1019
+#: src/terminal-options.c:1018
 msgid "Turn off the menubar"
 msgstr "മെനുബാര്‍ ഓഫ് ചെയ്യുക"
 
-#: ../src/terminal-options.c:1028
+#: src/terminal-options.c:1027
 msgid "Maximize the window"
 msgstr "ജാലകം വലുതാക്കുക"
 
-#: ../src/terminal-options.c:1037
+#: src/terminal-options.c:1036
 msgid "Full-screen the window"
 msgstr "ജാലകം പൂര്‍ണ്ണവലിപ്പത്തിലാക്കുക"
 
-#: ../src/terminal-options.c:1046
+#: src/terminal-options.c:1045
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
-#: ../src/terminal-options.c:1047
+#: src/terminal-options.c:1046
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: ../src/terminal-options.c:1055
+#: src/terminal-options.c:1054
 msgid "Set the window role"
 msgstr "ജാലകത്തിനുള്ള റോള്‍ സജ്ജമാക്കകു"
 
-#: ../src/terminal-options.c:1056
+#: src/terminal-options.c:1055
 msgid "ROLE"
 msgstr "ROLE"
 
-#: ../src/terminal-options.c:1064
+#: src/terminal-options.c:1063
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 "ജാലകത്തില്‍ ഏറ്റവും ഒടുവില്‍ പറഞ്ഞിരിക്കുന്ന കിളിവാതില്‍ സജീവമായി "
 "ക്രമീകരിക്കുക"
 
-#: ../src/terminal-options.c:1078
+#: src/terminal-options.c:1077
 msgid "Execute the argument to this option inside the terminal"
 msgstr ""
 "ടെര്‍മിനലിനുള്ളിലുള്ള ഈ ഉപാധിയിലേക്കു് ആര്‍ഗ്യുമെന്റ് പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/terminal-options.c:1087
+#: src/terminal-options.c:1086
 msgid "Use the given profile instead of the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈലിനു് പകരം നല്‍കിയിരിക്കുന്ന പ്രൊഫൈല്‍ ഉപയോഗിക്കുക"
 
-#: ../src/terminal-options.c:1088
+#: src/terminal-options.c:1087
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: ../src/terminal-options.c:1096
+#: src/terminal-options.c:1095
 msgid "Set the terminal title"
 msgstr "ടെര്‍മിനലിനുള്ള തലക്കെട്ടു് സജ്ജമാക്കുക"
 
-#: ../src/terminal-options.c:1097
+#: src/terminal-options.c:1096
 msgid "TITLE"
 msgstr "തലക്കെട്ട്"
 
-#: ../src/terminal-options.c:1105
+#: src/terminal-options.c:1104
 msgid "Set the working directory"
 msgstr "പ്രവര്‍ത്തനത്തിലുള്ള തട്ടു് സജ്ജമാക്കുക"
 
-#: ../src/terminal-options.c:1106
+#: src/terminal-options.c:1105
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: ../src/terminal-options.c:1114
+#: src/terminal-options.c:1113
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "ടെര്‍മിനലിനുള്ള സൂം ഫാക്ടര്‍ സജ്ജമാക്കുക (1.0 = സാധാരണ വലിപ്പം)"
 
-#: ../src/terminal-options.c:1115
+#: src/terminal-options.c:1114
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: ../src/terminal-options.c:1366 ../src/terminal-options.c:1369
+#: src/terminal-options.c:1365 src/terminal-options.c:1368
 msgid "MATE Terminal Emulator"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: ../src/terminal-options.c:1370
+#: src/terminal-options.c:1369
 msgid "Show MATE Terminal options"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1380
+#: src/terminal-options.c:1379
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2459,11 +2467,11 @@ msgstr ""
 "പുതിയ ജാലകങ്ങളും ടെര്‍മിനല്‍ റ്റാബുകളും തുറക്കുന്നതിനുള്ള ഐച്ഛികങ്ങള്‍; "
 "ഇവയില്‍ ഒന്നില്‍ കൂടുതല്‍ നിഷ്കര്‍ഷിക്കാം:"
 
-#: ../src/terminal-options.c:1381
+#: src/terminal-options.c:1380
 msgid "Show terminal options"
 msgstr "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1389
+#: src/terminal-options.c:1388
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2472,11 +2480,11 @@ msgstr ""
 "ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ജാലകങ്ങള്‍ക്കും "
 "സ്വതവേയുള്ളതായി സജ്ജമാക്കുന്നു:"
 
-#: ../src/terminal-options.c:1390
+#: src/terminal-options.c:1389
 msgid "Show per-window options"
 msgstr "ഓരോ ജാലകത്തിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-options.c:1398
+#: src/terminal-options.c:1397
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2485,58 +2493,58 @@ msgstr ""
 "ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ടെര്‍മിനലുകള്‍ക്കും സഹജമായി"
 " സജ്ജമാക്കുന്നു:"
 
-#: ../src/terminal-options.c:1399
+#: src/terminal-options.c:1398
 msgid "Show per-terminal options"
 msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: ../src/terminal-profile.c:165
+#: src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "പേരില്ലാത്ത"
 
-#: ../src/terminal-screen.c:1507
+#: src/terminal-screen.c:1520
 msgid "_Profile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: ../src/terminal-screen.c:1508 ../src/terminal-screen.c:1949
+#: src/terminal-screen.c:1521 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: ../src/terminal-screen.c:1511
+#: src/terminal-screen.c:1524
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: ../src/terminal-screen.c:1954
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: ../src/terminal-screen.c:1959
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "സിഗ്നല്‍ %d ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: ../src/terminal-screen.c:1964
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: ../src/terminal-tab-label.c:132
+#: src/terminal-tab-label.c:130
 msgid "Close tab"
 msgstr "കിളിവാതില്‍ അടയ്ക്കുക"
 
-#: ../src/terminal-tabs-menu.c:198
+#: src/terminal-tabs-menu.c:201
 msgid "Switch to this tab"
 msgstr "ഈ കിളിവാതിലിലേയ്ക്കു് പോവുക"
 
-#: ../src/terminal-util.c:145
+#: src/terminal-util.c:145
 msgid "There was an error displaying help"
 msgstr "സഹായം ലഭ്യമാക്കുന്നതില്‍ ഒരു പിശക്"
 
-#: ../src/terminal-util.c:217
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "മേല്‍വിലാസം “%s” തുറക്കുവാന്‍ സാധിച്ചില്ല"
 
-#: ../src/terminal-util.c:325
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2544,7 +2552,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/terminal-util.c:329
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2556,7 +2564,7 @@ msgstr ""
 "പ്രത്യേക കാര്യത്തിനു്ചേരുന്നതാണെന്നോ ഉള്ള പരോക്ഷമായ ഒരു വാറണ്ടി പോലും ഇല്ല. "
 "കൂടുതല്‍ വിവരങ്ങള്‍ക്കു് ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
-#: ../src/terminal-util.c:333
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2570,7 +2578,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:615
+#: src/terminal-window.c:618
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2578,248 +2586,238 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:621
+#: src/terminal-window.c:624
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#. Toplevel
-#: ../src/terminal-window.c:1823
+#: src/terminal-window.c:1885
 msgid "_File"
 msgstr "_ഫയല്‍"
 
-#: ../src/terminal-window.c:1824 ../src/terminal-window.c:1837
-#: ../src/terminal-window.c:2078
+#: src/terminal-window.c:1886 src/terminal-window.c:1899
+#: src/terminal-window.c:2140
 msgid "Open _Terminal"
 msgstr "ടെര്‍മിനല്‍ തുറക്കുക (_T)"
 
-#: ../src/terminal-window.c:1825 ../src/terminal-window.c:1842
-#: ../src/terminal-window.c:2083
+#: src/terminal-window.c:1887 src/terminal-window.c:1904
+#: src/terminal-window.c:2145
 msgid "Open Ta_b"
 msgstr "_കിളിവാതില്‍ തുറക്കുക"
 
-#: ../src/terminal-window.c:1826
+#: src/terminal-window.c:1888
 msgid "_Edit"
 msgstr "_മാറ്റം വരുത്തുക"
 
-#: ../src/terminal-window.c:1827
+#: src/terminal-window.c:1889
 msgid "_View"
 msgstr "_കാഴ്ച"
 
-#: ../src/terminal-window.c:1828
+#: src/terminal-window.c:1890
 msgid "_Search"
 msgstr "_തെരയുക"
 
-#: ../src/terminal-window.c:1829
+#: src/terminal-window.c:1891
 msgid "_Terminal"
 msgstr "_ടെര്‍മിനല്‍"
 
-#: ../src/terminal-window.c:1830
+#: src/terminal-window.c:1892
 msgid "Ta_bs"
 msgstr "_കിളിവാതിലുകള്‍ "
 
-#: ../src/terminal-window.c:1831
+#: src/terminal-window.c:1893
 msgid "_Help"
 msgstr "_സഹായം"
 
-#: ../src/terminal-window.c:1847
+#: src/terminal-window.c:1909
 msgid "New _Profile…"
 msgstr "പുതിയ _പ്രൊഫൈല്‍"
 
-#: ../src/terminal-window.c:1852
+#: src/terminal-window.c:1914
 msgid "_Save Contents"
 msgstr "ഉള്ളടക്കം _സൂക്ഷിക്കുക"
 
-#: ../src/terminal-window.c:1857 ../src/terminal-window.c:2093
+#: src/terminal-window.c:1919 src/terminal-window.c:2155
 msgid "C_lose Tab"
 msgstr "കിളിവാതില്‍ _അടയ്ക്കുക"
 
-#: ../src/terminal-window.c:1862
+#: src/terminal-window.c:1924
 msgid "_Close Window"
 msgstr "ജാലകം അടയ്ക്കുക (_C)"
 
-#: ../src/terminal-window.c:1869 ../src/terminal-window.c:2063
+#: src/terminal-window.c:1931 src/terminal-window.c:2125
 msgid "_Copy"
 msgstr "പകര്‍ത്തുക (_C)"
 
-#: ../src/terminal-window.c:1874 ../src/terminal-window.c:2068
+#: src/terminal-window.c:1936 src/terminal-window.c:2130
 msgid "_Paste"
 msgstr "ഒട്ടിയ്ക്കുക"
 
-#: ../src/terminal-window.c:1879 ../src/terminal-window.c:2073
+#: src/terminal-window.c:1941 src/terminal-window.c:2135
 msgid "Paste _Filenames"
 msgstr "_ഫയല്‍നാമങ്ങള്‍ ഒട്ടിക്കുക"
 
-#: ../src/terminal-window.c:1884
+#: src/terminal-window.c:1946
 msgid "Select _All"
 msgstr "_എല്ലാം തെരഞ്ഞെടുക്കുക "
 
-#: ../src/terminal-window.c:1889
+#: src/terminal-window.c:1951
 msgid "P_rofiles…"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: ../src/terminal-window.c:1894
+#: src/terminal-window.c:1956
 msgid "_Keyboard Shortcuts…"
 msgstr "_കീബോര്‍ഡിനുള്ള എളുപ്പവഴികള്‍"
 
-#: ../src/terminal-window.c:1899
+#: src/terminal-window.c:1961
 msgid "Pr_ofile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: ../src/terminal-window.c:1906
+#: src/terminal-window.c:1968
 msgid "Zoom _In"
 msgstr "വ_ലുതാക്കുക"
 
-#: ../src/terminal-window.c:1911
+#: src/terminal-window.c:1973
 msgid "Zoom _Out"
 msgstr "_ചെറുതാക്കുക"
 
-#: ../src/terminal-window.c:1916
+#: src/terminal-window.c:1978
 msgid "_Normal Size"
 msgstr "_സാധാരണ വലിപ്പം"
 
-#: ../src/terminal-window.c:1923
+#: src/terminal-window.c:1985
 msgid "_Find..."
 msgstr "തിരയുക (_F)..."
 
-#: ../src/terminal-window.c:1928
+#: src/terminal-window.c:1990
 msgid "Find Ne_xt"
 msgstr "_അടുത്തത് കണ്ടു പിടിക്കുക"
 
-#: ../src/terminal-window.c:1933
+#: src/terminal-window.c:1995
 msgid "Find Pre_vious"
 msgstr "_മുമ്പുള്ളതു് കണ്ടു പിടിക്കുക"
 
-#: ../src/terminal-window.c:1938
+#: src/terminal-window.c:2000
 msgid "_Clear Highlight"
 msgstr "എടുത്തുകാണിയ്ക്കുന്ന_തൊഴിവാക്കുക"
 
-#: ../src/terminal-window.c:1944
+#: src/terminal-window.c:2006
 msgid "Go to _Line..."
 msgstr "_വരിയിലേക്ക് പോകുക..."
 
-#: ../src/terminal-window.c:1949
+#: src/terminal-window.c:2011
 msgid "_Incremental Search..."
 msgstr "_കൂട്ടിക്കൂട്ടി തെരയുക..."
 
-#. Terminal menu
-#: ../src/terminal-window.c:1956
+#: src/terminal-window.c:2018
 msgid "Change _Profile"
 msgstr "_പ്രൊഫൈന്‍ മാറ്റം വരുത്തുക "
 
-#: ../src/terminal-window.c:1958
+#: src/terminal-window.c:2020
 msgid "_Previous Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1963
+#: src/terminal-window.c:2025
 msgid "_Next Profile"
 msgstr ""
 
-#: ../src/terminal-window.c:1968
+#: src/terminal-window.c:2030
 msgid "_Set Title…"
 msgstr "തലക്കെട്ടു് _സജ്ജമാക്കുക"
 
-#: ../src/terminal-window.c:1972
+#: src/terminal-window.c:2034
 msgid "Set _Character Encoding"
 msgstr "_അക്ഷരങ്ങള്‍ എന്‍കോഡ് ചെയ്യുന്ന സംവിധാനം ക്രമീകരിക്കുക "
 
-#: ../src/terminal-window.c:1974
+#: src/terminal-window.c:2036
 msgid "_Reset"
 msgstr "_പുനഃസ്ഥാപിക്കുക "
 
-#: ../src/terminal-window.c:1979
+#: src/terminal-window.c:2041
 msgid "Reset and C_lear"
 msgstr "പുനഃസ്ഥാപിച്ച് _വെടിപ്പാക്കുക "
 
-#: ../src/terminal-window.c:1986
+#: src/terminal-window.c:2048
 msgid "_Add or Remove…"
 msgstr "_ചേര്‍ക്കുക അല്ലെങ്കില്‍ നീക്കം ചെയ്യുക… "
 
-#: ../src/terminal-window.c:1993
+#: src/terminal-window.c:2055
 msgid "_Previous Tab"
 msgstr "_മുമ്പുളള കിളിവാതില്‍"
 
-#: ../src/terminal-window.c:1998
+#: src/terminal-window.c:2060
 msgid "_Next Tab"
 msgstr "_അടുത്ത കിളിവാതില്‍"
 
-#: ../src/terminal-window.c:2003
+#: src/terminal-window.c:2065
 msgid "Move Tab _Left"
 msgstr "കിളിവാതില്‍ _ഇടത്തേക്ക് നീക്കുക"
 
-#: ../src/terminal-window.c:2008
+#: src/terminal-window.c:2070
 msgid "Move Tab _Right"
 msgstr "കിളിവാതില്‍ _വലത്തേക്ക് നീക്കുക"
 
-#: ../src/terminal-window.c:2013
+#: src/terminal-window.c:2075
 msgid "_Detach tab"
 msgstr "കിളിവാതില്‍ _വേര്‍പ്പെടുത്തുക"
 
-#: ../src/terminal-window.c:2020
+#: src/terminal-window.c:2082
 msgid "_Contents"
 msgstr "_ഉളളടക്കം"
 
-#: ../src/terminal-window.c:2025
+#: src/terminal-window.c:2087
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: ../src/terminal-window.c:2032
+#: src/terminal-window.c:2094
 msgid "_Send Mail To…"
 msgstr "മെയില്‍ _അയയ്ക്കേണ്ടത്"
 
-#: ../src/terminal-window.c:2037
+#: src/terminal-window.c:2099
 msgid "_Copy E-mail Address"
 msgstr "ഈ-മെയില്‍ മേല്‍വിലാസം _പകര്‍ത്തുക "
 
-#: ../src/terminal-window.c:2042
+#: src/terminal-window.c:2104
 msgid "C_all To…"
 msgstr "_വിളിയ്ക്കേണ്ടതു്…"
 
-#: ../src/terminal-window.c:2047
+#: src/terminal-window.c:2109
 msgid "_Copy Call Address"
 msgstr "വിളിക്കുവാനുള്ള മേല്‍വിലാസം _പകര്‍ത്തുക"
 
-#: ../src/terminal-window.c:2052
+#: src/terminal-window.c:2114
 msgid "_Open Link"
 msgstr "_കണ്ണി തുറക്കുക"
 
-#: ../src/terminal-window.c:2057
+#: src/terminal-window.c:2119
 msgid "_Copy Link Address"
 msgstr "കണ്ണി വിലാസം _പകര്‍ത്തുക"
 
-#: ../src/terminal-window.c:2061
+#: src/terminal-window.c:2123
 msgid "P_rofiles"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: ../src/terminal-window.c:2088 ../src/terminal-window.c:3573
+#: src/terminal-window.c:2150 src/terminal-window.c:3640
 msgid "C_lose Window"
 msgstr "ജാലകം _അടയ്ക്കുക"
 
-#: ../src/terminal-window.c:2098
+#: src/terminal-window.c:2160
 msgid "L_eave Full Screen"
 msgstr "സ്ക്രീനിന്റെ പൂര്‍ണ്ണവലിപ്പത്തില്‍ നിന്നും പുറത്തു് _കടക്കുക"
 
-#: ../src/terminal-window.c:2102
+#: src/terminal-window.c:2164
 msgid "_Input Methods"
 msgstr "_ഇന്‍പുട്ട് മാര്‍ഗ്ഗങ്ങള്‍ "
 
-#: ../src/terminal-window.c:2109
+#: src/terminal-window.c:2171
 msgid "Show _Menubar"
 msgstr "_മെനു ബാര്‍ കാണിക്കുക "
 
-#: ../src/terminal-window.c:2115
+#: src/terminal-window.c:2177
 msgid "_Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമവധി _വലിപ്പമുളളതാക്കുക "
 
-#: ../src/terminal-window.c:3560
-msgid "Close this window?"
-msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
-
-#: ../src/terminal-window.c:3560
-msgid "Close this terminal?"
-msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
-
-#: ../src/terminal-window.c:3564
+#: src/terminal-window.c:3618
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2827,7 +2825,7 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ "
 "അടയ്ക്കുന്നതു് അവയെ ഇല്ലാതാക്കുന്നതാണു്."
 
-#: ../src/terminal-window.c:3568
+#: src/terminal-window.c:3621
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
@@ -2835,31 +2833,57 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും ഒരു പ്രക്രിയ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ "
 "അടയ്ക്കുന്നതു് അതിനെ ഇല്ലാതാക്കുന്നതാണു്."
 
-#: ../src/terminal-window.c:3573
+#: src/terminal-window.c:3624
+msgid "There are multiple tabs open in this window."
+msgstr ""
+
+#: src/terminal-window.c:3633
+msgid "Close this window?"
+msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
+
+#: src/terminal-window.c:3633
+msgid "Close this terminal?"
+msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
+
+#: src/terminal-window.c:3640
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അ_ടയ്ക്കുക"
 
-#: ../src/terminal-window.c:3639
+#: src/terminal-window.c:3706
 msgid "Could not save contents"
 msgstr "ഉള്ളടക്കം സൂക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/terminal-window.c:3663
+#: src/terminal-window.c:3730
 msgid "Save as..."
 msgstr "പുതിയ പേരില്‍ സൂക്ഷിക്കുക..."
 
-#: ../src/terminal-window.c:4186
+#: src/terminal-window.c:4264
 msgid "_Title:"
 msgstr "_തലക്കെട്ട്:"
 
-#: ../src/terminal-window.c:4371
+#: src/terminal-window.c:4449
 msgid "Contributors:"
 msgstr "സംഭാവനചെയ്തവര്‍:"
 
-#: ../src/terminal-window.c:4390
+#: src/terminal-window.c:4468
+msgid "About MATE Terminal"
+msgstr ""
+
+#: src/terminal-window.c:4469
+msgid ""
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE developers"
+msgstr ""
+
+#: src/terminal-window.c:4475
 msgid "A terminal emulator for the MATE desktop"
 msgstr "ഗ്നോം പണിയിടത്തിനുള്ള ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: ../src/terminal-window.c:4397
+#: src/terminal-window.c:4481
 msgid "translator-credits"
 msgstr ""
 "അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
