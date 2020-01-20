@@ -1,21 +1,46 @@
+### mate-terminal 1.23.1
+
+  * tx: fix merge issue with italian translation
+  * configure: fix typo in versioning
+  * Translations update
+  * Update copyright to 2020
+  * terminal-window: avoid to make new GSettings in every new window
+  * terminal-window: Fix memory leak
+  * terminal-screen: Fix warning when closing window
+  * Avoid NULL pointer dereference in terminal_screen_child_exited
+  * migrate from intltool to gettext
+  * Set debug & warning flags using new mate-common macros
+  * build: Use ENABLE_SKEY for setting AC_CONFIG_FILES and mate_terminal_LDADD
+  * terminal-app: remove -Wdiscarded-qualifiers warnings
+  * terminal-window: : suppress GtkAction warnings
+  * terminal-tabs-menu: suppress GtkAction warnings
+  * terminal-tabs-menu: avoid 'g_type_class_add_private'
+  * terminal-profile: avoid 'g_type_class_add_private'
+  * terminal-window: avoid 'g_type_class_add_private'
+  * terminal-screen-container: avoid 'g_type_class_add_private'
+  * terminal-screen: avoid 'g_type_class_add_private'
+  * terminal-info-bar: avoid 'g_type_class_add_private'
+  * terminal-tab-label: avoid 'g_type_class_add_private'
+  * terminal-window: "utilities-terminal" icon with "Open Terminal"
+
 ### mate-terminal 1.23.0
 
-    tx: sync with transifex
-    Remove trailing whitespaces
-    Change url project's website
-    make "highlighting things under mouse pointer" configurable
-    [ci] Add cppcheck html report
-    [ci] Enable Clang Static Analyzer
-    Ensure proper translation of the about dialog title
-    Make translatable the copyright info in about dialog
-    Show confirmation dialog if there are multiple open tabs on closing
-    Upgrade the manual to docbook 5.0
-    about: update copyright
-    Explicitly enable bright bold to match new VTE versions
-    help: update copyright
-    warning: Value stored to 'screen_number' is never read
-    Use gresources for about_DATA, uimanager_DATA & builder_DATA
-    Retain copied selection when changing tabs
+  * Translations update
+  * Remove trailing whitespaces
+  * Change url project's website
+  * make "highlighting things under mouse pointer" configurable
+  * [ci] Add cppcheck html report
+  * [ci] Enable Clang Static Analyzer
+  * Ensure proper translation of the about dialog title
+  * Make translatable the copyright info in about dialog
+  * Show confirmation dialog if there are multiple open tabs on closing
+  * Upgrade the manual to docbook 5.0
+  * about: update copyright
+  * Explicitly enable bright bold to match new VTE versions
+  * help: update copyright
+  * warning: Value stored to 'screen_number' is never read
+  * Use gresources for about_DATA, uimanager_DATA & builder_DATA
+  * Retain copied selection when changing tabs
 
 ### mate-terminal 1.22.0
 
