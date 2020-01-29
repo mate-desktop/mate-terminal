@@ -290,7 +290,6 @@ update_active_encodings_gsettings (void)
 	GSList *list, *l;
 	GArray *strings;
 	const gchar *id_string;
-	GSettings *settings;
 
 	list = terminal_app_get_active_encodings (terminal_app_get ());
 	strings = g_array_new (TRUE, TRUE, sizeof (gchar *));
@@ -302,9 +301,7 @@ update_active_encodings_gsettings (void)
 		strings = g_array_append_val (strings, id_string);
 	}
 
-	settings = g_settings_new (CONF_GLOBAL_SCHEMA);
-	g_settings_set_strv (settings, "active-encodings", (const gchar **) strings->data);
-	g_object_unref (settings);
+	g_settings_set_strv (settings_global, "active-encodings", (const gchar **) strings->data);
 
 	g_array_free (strings, TRUE);
 	g_slist_foreach (list, (GFunc) terminal_encoding_unref, NULL);
