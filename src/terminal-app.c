@@ -68,6 +68,8 @@
  *
  */
 
+GSettings *settings_global;
+
 struct _TerminalAppClass
 {
 	GObjectClass parent_class;
