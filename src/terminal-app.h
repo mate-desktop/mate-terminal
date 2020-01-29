@@ -83,7 +83,7 @@ G_BEGIN_DECLS
 typedef struct _TerminalAppClass TerminalAppClass;
 typedef struct _TerminalApp TerminalApp;
 
-GSettings *settings_global;
+extern GSettings *settings_global;
 
 GType terminal_app_get_type (void);
 
