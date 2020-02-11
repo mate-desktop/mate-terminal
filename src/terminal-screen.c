@@ -1531,8 +1531,6 @@ static void handle_error_child (TerminalScreen *screen,
 	                    info_bar, FALSE, FALSE, 0);
 	gtk_info_bar_set_default_response (GTK_INFO_BAR (info_bar), GTK_RESPONSE_CANCEL);
 	gtk_widget_show (info_bar);
-
-	g_error_free (err);
 }
 
 static void term_spawn_callback (GtkWidget *terminal,
@@ -1545,7 +1543,6 @@ static void term_spawn_callback (GtkWidget *terminal,
 	if (error)
 	{
 		handle_error_child (screen, error);
-		g_error_free (error);
 	}
 	else
 	{
