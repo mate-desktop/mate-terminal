@@ -1,0 +1,84 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-terminal
+    - gcc
+    - git
+    - intltool
+    - libsm
+    - make
+    - mate-common
+    - mate-desktop
+    - vte3
+    - which
+    - yelp-tools
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-terminal
+    - git
+    - intltool
+    - intltool
+    - libdconf-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libsm-dev
+    - libvte-2.91-dev
+    - libx11-dev
+    - make
+    - mate-common
+    - yelp-tools
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-terminal.git
+    - gcc
+    - dconf-devel
+    - desktop-file-utils
+    - git
+    - gtk3-devel
+    - libSM-devel
+    - make
+    - mate-common
+    - redhat-rpm-config
+    - vte291-devel
+
+  ubuntu:
+    - git
+    - intltool
+    - intltool
+    - libdconf-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libsm-dev
+    - libvte-2.91-dev
+    - libx11-dev
+    - make
+    - mate-common
+    - yelp-tools
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+before_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
+  -     bash ./debian.sh
+  - fi
+
+after_scripts:
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: mate-terminal-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
