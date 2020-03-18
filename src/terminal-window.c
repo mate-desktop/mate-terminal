@@ -4416,6 +4416,7 @@ help_about_callback (GtkAction *action,
     GKeyFile *key_file;
     GError *error = NULL;
     char **authors, **contributors, **artists, **documenters, **array_strv;
+    gchar *comments = NULL;
     gsize data_len, n_authors = 0, n_contributors = 0, n_artists = 0, n_documenters = 0 , i;
     GPtrArray *array;
 
@@ -4462,6 +4463,9 @@ help_about_callback (GtkAction *action,
 
     licence_text = terminal_util_get_licence_text ();
 
+    comments = g_strdup_printf (_("A terminal emulator for the MATE desktop\nUsing VTE %d.%d.%d"),
+                                vte_get_major_version (), vte_get_minor_version (), vte_get_micro_version ());
+
     gtk_show_about_dialog (GTK_WINDOW (window),
                            "program-name", _("MATE Terminal"),
                            "version", VERSION,
@@ -4472,7 +4476,7 @@ help_about_callback (GtkAction *action,
                                           "Copyright \xc2\xa9 2007–2010 Christian Persch\n"
                                           "Copyright \xc2\xa9 2011 Perberos\n"
                                           "Copyright \xc2\xa9 2012-2020 MATE developers"),
-                           "comments", _("A terminal emulator for the MATE desktop"),
+                           "comments", comments,
                            "authors", array_strv,
                            "artists", artists,
                            "documenters", documenters,
@@ -4483,6 +4487,7 @@ help_about_callback (GtkAction *action,
                            "website", "https://mate-desktop.org",
                            NULL);
 
+    g_free (comments);
     g_strfreev (array_strv);
     g_strfreev (artists);
     g_strfreev (documenters);
