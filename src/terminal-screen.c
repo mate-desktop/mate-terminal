@@ -600,7 +600,7 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 		GError *error = NULL;
 
 		skey_regexes[i] = vte_regex_new_for_match(skey_regex_patterns[i].pattern, -1,
-							  PCRE2_MULTILINE, &error);
+							  PCRE2_MULTILINE | PCRE2_UTF | PCRE2_NO_UTF_CHECK, &error);
 		if (error)
 		{
 			g_message ("%s", error->message);

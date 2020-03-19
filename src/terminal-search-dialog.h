@@ -22,6 +22,7 @@
 #define TERMINAL_SEARCH_DIALOG_H
 
 #include <gtk/gtk.h>
+#include <vte/vte.h>
 
 G_BEGIN_DECLS
 
@@ -43,7 +44,7 @@ const gchar 	*terminal_search_dialog_get_search_text	(GtkWidget   *dialog);
 
 TerminalSearchFlags
 terminal_search_dialog_get_search_flags(GtkWidget   *dialog);
-GRegex		*terminal_search_dialog_get_regex	(GtkWidget   *dialog);
+VteRegex	*terminal_search_dialog_get_regex	(GtkWidget   *dialog);
 
 G_END_DECLS
 

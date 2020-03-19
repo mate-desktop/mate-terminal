@@ -25,6 +25,9 @@
 #include "terminal-search-dialog.h"
 #include "terminal-util.h"
 
+#define PCRE2_CODE_UNIT_WIDTH 0
+#include <pcre2.h>
+
 #define HISTORY_MIN_ITEM_LEN 3
 #define HISTORY_LENGTH 10
 
@@ -60,8 +63,8 @@ typedef struct _TerminalSearchDialogPrivate
 	GtkEntryCompletion *completion;
 
 	/* Cached regex */
-	GRegex *regex;
-	GRegexCompileFlags regex_compile_flags;
+	VteRegex *regex;
+	guint32 regex_compile_flags;
 } TerminalSearchDialogPrivate;
 
 
@@ -153,7 +156,7 @@ terminal_search_dialog_private_destroy (TerminalSearchDialogPrivate *priv)
 {
 
 	if (priv->regex)
-		g_regex_unref (priv->regex);
+		vte_regex_unref (priv->regex);
 
 	g_object_unref (priv->store);
 	g_object_unref (priv->completion);
@@ -171,7 +174,7 @@ update_sensitivity (void *unused, GtkWidget *dialog)
 
 	if (priv->regex)
 	{
-		g_regex_unref (priv->regex);
+		vte_regex_unref (priv->regex);
 		priv->regex = NULL;
 	}
 
@@ -336,11 +339,11 @@ terminal_search_dialog_get_search_flags (GtkWidget *dialog)
 	return flags;
 }
 
-GRegex *
+VteRegex *
 terminal_search_dialog_get_regex (GtkWidget *dialog)
 {
 	TerminalSearchDialogPrivate *priv;
-	GRegexCompileFlags compile_flags;
+	guint32 compile_flags;
 	const char *text, *pattern;
 
 	g_return_val_if_fail (GTK_IS_DIALOG (dialog), NULL);
@@ -350,13 +353,13 @@ terminal_search_dialog_get_regex (GtkWidget *dialog)
 
 	pattern = text = terminal_search_dialog_get_search_text (dialog);
 
-	compile_flags = G_REGEX_OPTIMIZE;
+	compile_flags = PCRE2_MULTILINE | PCRE2_UTF | PCRE2_NO_UTF_CHECK;
 
 	if (!GET_FLAG (match_case_checkbutton))
-		compile_flags |= G_REGEX_CASELESS;
+		compile_flags |= PCRE2_CASELESS;
 
 	if (GET_FLAG (regex_checkbutton))
-		compile_flags |= G_REGEX_MULTILINE;
+		compile_flags |= PCRE2_UCP;
 	else
 		pattern = g_regex_escape_string (text, -1);
 
@@ -372,10 +375,12 @@ terminal_search_dialog_get_regex (GtkWidget *dialog)
 	{
 		priv->regex_compile_flags = compile_flags;
 		if (priv->regex)
-			g_regex_unref (priv->regex);
+			vte_regex_unref (priv->regex);
 
 		/* TODO Error handling */
-		priv->regex = g_regex_new (pattern, compile_flags, 0, NULL);
+		priv->regex = vte_regex_new_for_search(pattern, -1,
+						       compile_flags, NULL);
+
 	}
 
 	if (pattern != text)
