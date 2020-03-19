@@ -4064,7 +4064,7 @@ search_find_response_callback (GtkWidget *dialog,
     TerminalWindow *window = TERMINAL_WINDOW (user_data);
     TerminalWindowPrivate *priv = window->priv;
     TerminalSearchFlags flags;
-    GRegex *regex;
+    VteRegex *regex;
 
     if (response != GTK_RESPONSE_ACCEPT)
         return;
@@ -4077,7 +4077,7 @@ search_find_response_callback (GtkWidget *dialog,
 
     flags = terminal_search_dialog_get_search_flags (dialog);
 
-    vte_terminal_search_set_gregex (VTE_TERMINAL (priv->active_screen), regex, 0);
+    vte_terminal_search_set_regex (VTE_TERMINAL (priv->active_screen), regex, 0);
     vte_terminal_search_set_wrap_around (VTE_TERMINAL (priv->active_screen),
                                          (flags & TERMINAL_SEARCH_FLAG_WRAP_AROUND));
 
@@ -4148,7 +4148,7 @@ search_clear_highlight_callback (GtkAction *action,
     if (G_UNLIKELY (!window->priv->active_screen))
         return;
 
-    vte_terminal_search_set_gregex (VTE_TERMINAL (window->priv->active_screen), NULL, 0);
+    vte_terminal_search_set_regex (VTE_TERMINAL (window->priv->active_screen), NULL, 0);
 }
 
 static void
