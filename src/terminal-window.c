@@ -4224,53 +4224,29 @@ static void
 terminal_set_title_callback (GtkAction *action,
                              TerminalWindow *window)
 {
+    GtkBuilder *builder;
     TerminalWindowPrivate *priv = window->priv;
-    GtkWidget *dialog, *message_area, *hbox, *label, *entry;
+    GtkWidget *dialog, *entry;
 
     if (priv->active_screen == NULL)
         return;
 
-    /* FIXME: hook the screen up so this dialogue closes if the terminal screen closes */
+    builder = gtk_builder_new_from_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/set-title-dialog.ui");
+    dialog = GTK_WIDGET (gtk_builder_get_object (builder, "dialog"));
+    entry = GTK_WIDGET (gtk_builder_get_object (builder, "title_entry"));
+    g_object_unref (builder);
 
-    dialog = gtk_message_dialog_new (GTK_WINDOW (window),
-                                     GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                     GTK_MESSAGE_OTHER,
-                                     GTK_BUTTONS_OK_CANCEL,
-                                     "%s", "");
-
-    gtk_window_set_title (GTK_WINDOW (dialog), _("Set Title"));
-    gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
-    gtk_window_set_role (GTK_WINDOW (dialog), "mate-terminal-change-title");
-    gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
-    /* Alternative button order was set automatically by GtkMessageDialog */
+    gtk_widget_grab_focus (entry);
+    gtk_entry_set_text (GTK_ENTRY (entry), terminal_screen_get_raw_title (priv->active_screen));
+    gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
+    g_object_set_data (G_OBJECT (dialog), "title-entry", entry);
 
     g_signal_connect (dialog, "response",
                       G_CALLBACK (terminal_set_title_dialog_response_cb), priv->active_screen);
     g_signal_connect (dialog, "delete-event",
                       G_CALLBACK (terminal_util_dialog_response_on_delete), NULL);
 
-    message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
-    gtk_container_foreach (GTK_CONTAINER (message_area), (GtkCallback) gtk_widget_hide, NULL);
-
-    hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-    gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
-
-    label = gtk_label_new_with_mnemonic (_("_Title:"));
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-    gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
-
-    entry = gtk_entry_new ();
-    gtk_entry_set_width_chars (GTK_ENTRY (entry), 32);
-    gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
-    gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
-    gtk_box_pack_start (GTK_BOX (hbox), entry, TRUE, TRUE, 0);
-    gtk_widget_show_all (hbox);
-
-    gtk_widget_grab_focus (entry);
-    gtk_entry_set_text (GTK_ENTRY (entry), terminal_screen_get_raw_title (priv->active_screen));
-    gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
-    g_object_set_data (G_OBJECT (dialog), "title-entry", entry);
+    gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
 
     gtk_window_present (GTK_WINDOW (dialog));
 }
