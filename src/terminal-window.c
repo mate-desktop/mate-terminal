@@ -3566,19 +3566,13 @@ static gboolean
 confirm_close_window_or_tab (TerminalWindow *window,
                              TerminalScreen *screen)
 {
+    GtkBuilder *builder;
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *dialog;
     gboolean do_confirm;
     gboolean has_processes;
     int n_tabs;
     char *confirm_msg;
-
-    if (priv->confirm_close_dialog)
-    {
-        /* WTF, already have one? It's modal, so how did that happen? */
-        gtk_dialog_response (GTK_DIALOG (priv->confirm_close_dialog),
-                             GTK_RESPONSE_DELETE_EVENT);
-    }
 
     do_confirm = g_settings_get_boolean (settings_global, "confirm-window-close");
 
@@ -3615,30 +3609,28 @@ confirm_close_window_or_tab (TerminalWindow *window,
     if (has_processes)
     {
         if (n_tabs > 1)
-            confirm_msg = _("There are still processes running in some terminals in this window. "
+            confirm_msg = _("There are still processes running in some terminals in this window.\n"
                             "Closing the window will kill all of them.");
         else
-            confirm_msg = _("There is still a process running in this terminal. "
+            confirm_msg = _("There is still a process running in this terminal.\n"
                             "Closing the terminal will kill it.");
     } else if (n_tabs > 1)
             confirm_msg = _("There are multiple tabs open in this window.");
     else
         return FALSE;
 
-    dialog = priv->confirm_close_dialog =
-                 gtk_message_dialog_new (GTK_WINDOW (window),
-                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                         GTK_MESSAGE_WARNING,
-                                         GTK_BUTTONS_CANCEL,
-                                         "%s", n_tabs > 1 ? _("Close this window?") : _("Close this terminal?"));
 
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-            "%s", confirm_msg);
-
-    gtk_window_set_title (GTK_WINDOW (dialog), "");
-
-    gtk_dialog_add_button (GTK_DIALOG (dialog), n_tabs > 1 ? _("C_lose Window") : _("C_lose Terminal"), GTK_RESPONSE_ACCEPT);
-    gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+    builder = gtk_builder_new_from_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/confirm-close-dialog.ui");
+    priv->confirm_close_dialog = dialog = GTK_WIDGET (gtk_builder_get_object (builder, "confirm_close_dialog"));
+    if (n_tabs > 1) {
+        gtk_label_set_text (GTK_LABEL (gtk_builder_get_object (builder, "question_text")), _("Close this window?"));
+        gtk_button_set_label (GTK_BUTTON (gtk_builder_get_object (builder, "button_close")), _("C_lose Window"));
+    } else {
+        gtk_label_set_text (GTK_LABEL (gtk_builder_get_object (builder, "question_text")), _("Close this terminal?"));
+        gtk_button_set_label (GTK_BUTTON (gtk_builder_get_object (builder, "button_close")), _("C_lose Terminal"));
+    }
+    gtk_label_set_text (GTK_LABEL (gtk_builder_get_object (builder, "description_text")), confirm_msg);
+    g_object_unref (builder);
 
     g_object_set_data (G_OBJECT (dialog), "close-screen", screen);
 
@@ -3647,6 +3639,8 @@ confirm_close_window_or_tab (TerminalWindow *window,
     g_signal_connect (dialog, "response",
                       G_CALLBACK (confirm_close_response_cb), window);
 
+    gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
+    gtk_window_set_title (GTK_WINDOW (dialog), "");
     gtk_window_present (GTK_WINDOW (dialog));
 
     return TRUE;

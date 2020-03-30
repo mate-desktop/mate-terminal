@@ -158,6 +158,7 @@ CLEANFILES = \
 	$(BUILT_SOURCES)
 
 EXTRA_DIST = \
+	confirm-close-dialog.ui \
 	encodings-dialog.ui \
 	find-dialog.ui \
 	keybinding-editor.ui \
