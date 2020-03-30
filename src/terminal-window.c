@@ -4463,7 +4463,7 @@ help_about_callback (GtkAction *action,
 
     licence_text = terminal_util_get_licence_text ();
 
-    comments = g_strdup_printf (_("A terminal emulator for the MATE desktop\nUsing VTE %d.%d.%d"),
+    comments = g_strdup_printf (_("MATE Terminal is a terminal emulator for the MATE Desktop Environment.\nPowered by Virtual TErminal %d.%d.%d"),
                                 vte_get_major_version (), vte_get_minor_version (), vte_get_micro_version ());
 
     gtk_show_about_dialog (GTK_WINDOW (window),
