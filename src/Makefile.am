@@ -164,6 +164,7 @@ EXTRA_DIST = \
 	profile-manager.ui \
 	profile-new-dialog.ui \
 	profile-preferences.ui \
+	set-title-dialog.ui \
 	skey-challenge.ui \
 	terminal.about \
 	terminal.xml \
