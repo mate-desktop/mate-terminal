@@ -2142,17 +2142,17 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (file_new_window_callback)
         },
         {
-            "PopupNewTab", NULL, N_("Open Ta_b"), NULL,
+            "PopupNewTab", "tab-new", N_("Open Ta_b"), NULL,
             NULL,
             G_CALLBACK (file_new_tab_callback)
         },
         {
-            "PopupCloseWindow", NULL, N_("C_lose Window"), NULL,
+            "PopupCloseWindow", "window-close", N_("C_lose Window"), NULL,
             NULL,
             G_CALLBACK (file_close_window_callback)
         },
         {
-            "PopupCloseTab", NULL, N_("C_lose Tab"), NULL,
+            "PopupCloseTab", "window-close", N_("C_lose Tab"), NULL,
             NULL,
             G_CALLBACK (file_close_tab_callback)
         },
