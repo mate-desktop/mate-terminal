@@ -57,7 +57,28 @@ PKG_CHECK_MODULES([TERM],
 # smclient
 # ********
 
-PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0)
+# $enable_xsmp will be set to "yes" or "no"
+AC_ARG_ENABLE(smclient,
+              [AC_HELP_STRING([--enable-smclient],
+                              [Explicitly enable or disable smclient])],
+              [enable_smclient=$enableval],
+              [enable_smclient=yes])
+
+have_sm=no
+if test "x$enable_smclient" != "xno"; then
+  PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0, have_sm=yes, [
+        if test "x$enable_smclient" = "xyes"; then
+          AC_MSG_ERROR([smclient enabled but SM library not found])
+        fi
+    ])
+fi
+
+AM_CONDITIONAL(ENABLE_SMCLIENT, [test "x$have_sm" = "xyes"])
+
+if test "x$have_sm" = "xyes"; then
+  AC_DEFINE(HAVE_SMCLIENT, 1, [Have the SM development library])
+fi
+
 AC_SUBST([SMCLIENT_CFLAGS])
 AC_SUBST([SMCLIENT_LIBS])
 
@@ -150,5 +171,6 @@ echo "
 	warning flags:          ${WARN_CFLAGS}
 	linker flags:           ${LDFLAGS}
 
+	smclient support:       ${have_sm}
 	s/key support:          ${enable_skey}
 "

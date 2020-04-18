@@ -41,8 +41,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+#ifdef HAVE_SMCLIENT
 #include "eggsmclient.h"
 #include "eggdesktopfile.h"
+#endif /* HAVE_SMCLIENT */
 
 #define FALLBACK_PROFILE_ID "default"
 
@@ -1376,6 +1378,7 @@ terminal_app_manage_profiles (TerminalApp     *app,
 	gtk_window_present (GTK_WINDOW (app->manage_profiles_dialog));
 }
 
+#ifdef HAVE_SMCLIENT
 static void
 terminal_app_save_state_cb (EggSMClient *client,
                             GKeyFile *key_file,
@@ -1390,6 +1393,7 @@ terminal_app_client_quit_cb (EggSMClient *client,
 {
 	g_signal_emit (app, signals[QUIT], 0);
 }
+#endif /* HAVE_SMCLIENT */
 
 /* Class implementation */
 
@@ -1470,6 +1474,7 @@ terminal_app_init (TerminalApp *app)
 
 	terminal_accels_init ();
 
+#ifdef HAVE_SMCLIENT
 	EggSMClient *sm_client;
 	char *desktop_file;
 
@@ -1485,6 +1490,7 @@ terminal_app_init (TerminalApp *app)
 	                  G_CALLBACK (terminal_app_save_state_cb), app);
 	g_signal_connect (sm_client, "quit",
 	                  G_CALLBACK (terminal_app_client_quit_cb), app);
+#endif /* HAVE_SMCLIENT */
 }
 
 static void
@@ -1492,11 +1498,13 @@ terminal_app_finalize (GObject *object)
 {
 	TerminalApp *app = TERMINAL_APP (object);
 
+#ifdef HAVE_SMCLIENT
 	EggSMClient *sm_client;
 
 	sm_client = egg_sm_client_get ();
 	g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
 	                                      0, 0, NULL, NULL, app);
+#endif /* HAVE_SMCLIENT */
 
 	g_signal_handlers_disconnect_by_func (settings_global,
 					      G_CALLBACK(terminal_app_profile_list_notify_cb),
@@ -1741,6 +1749,7 @@ terminal_app_handle_options (TerminalApp *app,
 		/* fall-through on success */
 	}
 
+#ifdef HAVE_SMCLIENT
 	EggSMClient *sm_client;
 
 	sm_client = egg_sm_client_get ();
@@ -1754,6 +1763,7 @@ terminal_app_handle_options (TerminalApp *app,
 		        !terminal_options_merge_config (options, key_file, SOURCE_SESSION, error))
 			return FALSE;
 	}
+#endif /* HAVE_SMCLIENT */
 
 	/* Make sure we open at least one window */
 	terminal_options_ensure_window (options);
