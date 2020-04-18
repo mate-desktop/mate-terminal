@@ -34,7 +34,9 @@
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
 
+#ifdef HAVE_SMCLIENT
 #include "eggsmclient.h"
+#endif /* HAVE_SMCLIENT */
 
 #include "terminal-accels.h"
 #include "terminal-app.h"
@@ -406,79 +408,6 @@ name_lost_cb (GDBusConnection *connection,
 	gtk_main_quit ();
 }
 
-/* Settings storage works as follows:
- *   /apps/mate-terminal/global/
- *   /apps/mate-terminal/profiles/Foo/
- *
- * It's somewhat tricky to manage the profiles/ dir since we need to track
- * the list of profiles, but GSettings doesn't have a concept of notifying that
- * a directory has appeared or disappeared.
- *
- * Session state is stored entirely in the RestartCommand command line.
- *
- * The number one rule: all stored information is EITHER per-session,
- * per-profile, or set from a command line option. THERE CAN BE NO
- * OVERLAP. The UI and implementation totally break if you overlap
- * these categories. See mate-terminal 1.x for why.
- *
- * Don't use this code as an example of how to use GSettings - it's hugely
- * overcomplicated due to the profiles stuff. Most apps should not
- * have to do scary things of this nature, and should not have
- * a profiles feature.
- *
- */
-
-/* Copied from libcaja/caja-program-choosing.c; Needed in case
- * we have no DESKTOP_STARTUP_ID (with its accompanying timestamp).
- */
-static Time
-slowly_and_stupidly_obtain_timestamp (Display *xdisplay)
-{
-	Window xwindow;
-	XEvent event;
-
-	{
-		XSetWindowAttributes attrs;
-		Atom atom_name;
-		Atom atom_type;
-		const char *name;
-
-		attrs.override_redirect = True;
-		attrs.event_mask = PropertyChangeMask | StructureNotifyMask;
-
-		xwindow =
-		    XCreateWindow (xdisplay,
-		                   RootWindow (xdisplay, 0),
-		                   -100, -100, 1, 1,
-		                   0,
-		                   CopyFromParent,
-		                   CopyFromParent,
-		                   (Visual *)CopyFromParent,
-		                   CWOverrideRedirect | CWEventMask,
-		                   &attrs);
-
-		atom_name = XInternAtom (xdisplay, "WM_NAME", TRUE);
-		g_assert (atom_name != None);
-		atom_type = XInternAtom (xdisplay, "STRING", TRUE);
-		g_assert (atom_type != None);
-
-		name = "Fake Window";
-		XChangeProperty (xdisplay,
-		                 xwindow, atom_name,
-		                 atom_type,
-		                 8, PropModeReplace, (unsigned char *)name, strlen (name));
-	}
-
-	XWindowEvent (xdisplay,
-	              xwindow,
-	              PropertyChangeMask,
-	              &event);
-
-	XDestroyWindow(xdisplay, xwindow);
-
-	return event.xproperty.time;
-}
-
 static char *
 get_factory_name_for_display (const char *display_name)
 {
@@ -529,8 +458,7 @@ main (int argc, char **argv)
 	int i;
 	char **argv_copy;
 	int argc_copy;
-	const char *startup_id, *display_name, *home_dir;
-	GdkDisplay *display;
+	const char *startup_id, *home_dir;
 	TerminalOptions *options;
 	GError *error = NULL;
 	char *working_directory;
@@ -574,8 +502,10 @@ main (int argc, char **argv)
 	                                  FALSE,
 	                                  &argc, &argv,
 	                                  &error,
+#ifdef HAVE_SMCLIENT
 	                                  gtk_get_option_group (TRUE),
 	                                  egg_sm_client_get_option_group (),
+#endif /* HAVE_SMCLIENT */
 	                                  NULL);
 
 	g_free (working_directory);
@@ -596,19 +526,14 @@ main (int argc, char **argv)
 	g_unsetenv ("GIO_LAUNCHED_DESKTOP_FILE_PID");
 	g_unsetenv ("GIO_LAUNCHED_DESKTOP_FILE");
 
-	display = gdk_display_get_default ();
-	display_name = gdk_display_get_name (display);
-	options->display_name = g_strdup (display_name);
-
 	if (options->startup_id == NULL)
 	{
-		/* Create a fake one containing a timestamp that we can use */
-		Time timestamp;
-
-		timestamp = slowly_and_stupidly_obtain_timestamp (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
-
-		options->startup_id = g_strdup_printf ("_TIME%lu", timestamp);
+		options->startup_id = g_strdup_printf ("_TIME%lu", g_get_monotonic_time () / 1000);
 	}
+
+	gdk_init (&argc, &argv);
+	const char *display_name = gdk_display_get_name (gdk_display_get_default ());
+	options->display_name = g_strdup (display_name);
 
 	if (options->use_factory)
 	{
@@ -644,7 +569,7 @@ main (int argc, char **argv)
 	}
 	else
 	{
-
+		gtk_init(&argc, &argv);
 		terminal_app_handle_options (terminal_app_get (), options, TRUE /* allow resume */, &error);
 		terminal_options_free (options);
 

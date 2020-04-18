@@ -97,6 +97,7 @@ mate_terminal_LDADD += \
 	skey/libskey.la
 endif
 
+if ENABLE_SMCLIENT
 mate_terminal_SOURCES += \
 	eggdesktopfile.c \
 	eggdesktopfile.h \
@@ -109,6 +110,7 @@ mate_terminal_SOURCES += \
 mate_terminal_CFLAGS += $(SMCLIENT_CFLAGS)
 mate_terminal_CPPFLAGS += -DEGG_SM_CLIENT_BACKEND_XSMP
 mate_terminal_LDADD += $(SMCLIENT_LIBS)
+endif
 
 TYPES_H_FILES = \
 	terminal-profile.h \
