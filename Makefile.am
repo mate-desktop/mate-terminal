@@ -7,6 +7,7 @@ NULL =
 DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-schemas-install \
 	--disable-silent-rules \
+	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
 appdatadir = $(datadir)/metainfo
