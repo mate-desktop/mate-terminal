@@ -66,7 +66,7 @@ AC_ARG_ENABLE(smclient,
 
 have_sm=no
 if test "x$enable_smclient" != "xno"; then
-  PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0, have_sm=yes, [
+  PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0 ice >= 1.0.0, have_sm=yes, [
         if test "x$enable_smclient" = "xyes"; then
           AC_MSG_ERROR([smclient enabled but SM library not found])
         fi
