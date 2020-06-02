@@ -1477,9 +1477,6 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     GtkAction *action;
     gboolean can_paste, can_paste_uris, show_link, show_email_link, show_call_link, show_input_method_menu;
     int n_pages;
-    GdkEvent *event;
-    GdkSeat *seat;
-    GdkDevice *device;
 
     if (!gtk_widget_get_realized (GTK_WIDGET (screen)))
     {
@@ -1552,17 +1549,11 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     if (!gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
         gtk_menu_attach_to_widget (GTK_MENU (popup_menu),GTK_WIDGET (screen),NULL);
 
-    event = gtk_get_current_event ();
-
-    seat = gdk_display_get_default_seat (gdk_display_get_default());
-
-    device = gdk_seat_get_pointer (seat);
-
-    gdk_event_set_device (event, device);
-
-    gtk_menu_popup_at_pointer (GTK_MENU (popup_menu), (const GdkEvent*) event);
-
-    gdk_event_free (event);
+    gtk_menu_popup (GTK_MENU (popup_menu),
+                    NULL, NULL,
+                    NULL, NULL,
+                    info->button,
+                    info->timestamp);
 }
 
 static void
