@@ -66,7 +66,7 @@ AC_ARG_ENABLE(smclient,
 
 have_sm=no
 if test "x$enable_smclient" != "xno"; then
-  PKG_CHECK_MODULES(SMCLIENT, sm >= 1.0.0 ice >= 1.0.0, have_sm=yes, [
+  PKG_CHECK_MODULES(LIBEGG, sm >= 1.0.0 ice >= 1.0.0 gtk+-3.0, have_sm=yes, [
         if test "x$enable_smclient" = "xyes"; then
           AC_MSG_ERROR([smclient enabled but SM library not found])
         fi
@@ -79,8 +79,8 @@ if test "x$have_sm" = "xyes"; then
   AC_DEFINE(HAVE_SMCLIENT, 1, [Have the SM development library])
 fi
 
-AC_SUBST([SMCLIENT_CFLAGS])
-AC_SUBST([SMCLIENT_LIBS])
+AC_SUBST([LIBEGG_CFLAGS])
+AC_SUBST([LIBEGG_LIBS])
 
 # *****
 # GSettings
@@ -148,6 +148,8 @@ AC_CONFIG_FILES([
 Makefile
 mate-terminal.desktop.in
 src/Makefile
+src/mate-submodules/Makefile
+src/mate-submodules/libegg/Makefile
 src/org.mate.terminal.gschema.xml
 src/terminal-version.h
 help/Makefile

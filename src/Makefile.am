@@ -1,7 +1,13 @@
 NULL =
 
+SUBDIRS = $(NULL)
+
 if ENABLE_SKEY
-SUBDIRS = skey
+SUBDIRS += skey
+endif
+
+if ENABLE_SMCLIENT
+SUBDIRS += mate-submodules
 endif
 
 bin_PROGRAMS = mate-terminal
@@ -65,6 +71,7 @@ endif
 nodist_mate_terminal_SOURCES= $(BUILT_SOURCES)
 
 mate_terminal_CPPFLAGS = \
+	-I$(top_srcdir)/src/mate-submodules/libegg \
 	-DTERMINAL_COMPILATION \
 	-DTERMINAL_RESOURCES_PATH_PREFIX="\"/org/mate/terminal\"" \
 	-DTERM_DATADIR="\"$(datadir)\"" \
@@ -96,18 +103,7 @@ mate_terminal_LDADD += \
 endif
 
 if ENABLE_SMCLIENT
-mate_terminal_SOURCES += \
-	eggdesktopfile.c \
-	eggdesktopfile.h \
-	eggsmclient.c \
-	eggsmclient.h \
-	eggsmclient-private.h \
-	eggsmclient-xsmp.c \
-	$(NULL)
-
-mate_terminal_CFLAGS += $(SMCLIENT_CFLAGS)
-mate_terminal_CPPFLAGS += -DEGG_SM_CLIENT_BACKEND_XSMP
-mate_terminal_LDADD += $(SMCLIENT_LIBS)
+mate_terminal_LDADD += $(top_builddir)/src/mate-submodules/libegg/libegg.la
 endif
 
 TYPES_H_FILES = \
