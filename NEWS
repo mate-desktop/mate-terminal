@@ -1,3 +1,28 @@
+### mate-terminal 1.25.0
+
+  * Translations update
+  * use libegg submodules
+  * Add git.mk to generate .gitignore
+  * Compile code only when GDK supports X11
+  * restore deprecated gtk_menu_popup for context-menu
+  * Enable wayland support
+  * profile-editor: Remove enum conversion warnings
+  * terminal-encoding: Remove -Wformat warning
+  * build: SMlib is dependent on ICElib
+  * build: Isolate smclient
+  * build: silent build warnings for distcheck
+  * Add set-title-dialog.ui
+  * build: do not override the default value for MATE_COMPILE_WARNINGS
+  * terminal-window: expand the content of the comment on about dialog
+  * Add confirm-close-dialog.ui
+  * fix searching in terminal window
+  * terminal-window: add icons to "open tab" and "close window/tab"
+  * terminal-window: show VTE version in about dialog
+  * fix url highlighting due to deprecation of vte_terminal_match_add_gregex
+  * terminal-screen: prevent crash on bad term spawn due to redundant frees
+  * Use user page on github when user email is private
+  * Update authors
+
 ### mate-terminal 1.24.0
 
   * Translations update
