@@ -80,9 +80,6 @@ static const TerminalColorScheme color_schemes[] =
 static void profile_forgotten_cb (TerminalProfile           *profile,
                                   GtkWidget                 *editor);
 
-static gboolean terminal_profile_edit_dialog_page_scroll_event_cb (GtkWidget        *notebook,
-                                                                   GdkEventScroll   *event);
-
 static void profile_notify_sensitivity_cb (TerminalProfile *profile,
         GParamSpec *pspec,
         GtkWidget *editor);
@@ -657,6 +654,64 @@ terminal_profile_editor_focus_widget (GtkWidget *editor,
 		gtk_widget_grab_focus (widget);
 }
 
+static gboolean
+on_profile_editor_notebook_scroll_event (GtkWidget        *widget,
+                                         GdkEventScroll   *event)
+{
+    GtkNotebook *notebook = GTK_NOTEBOOK (widget);
+    GtkWidget *child, *event_widget, *action_widget;
+
+    child = gtk_notebook_get_nth_page (notebook, gtk_notebook_get_current_page (notebook));
+    if (child == NULL)
+        return FALSE;
+
+    event_widget = gtk_get_event_widget ((GdkEvent*) event);
+
+    /* Ignore scroll events from the content of the page */
+    if (event_widget == NULL || event_widget == child || gtk_widget_is_ancestor (event_widget, child))
+        return FALSE;
+
+    /* And also from the action widgets */
+    action_widget = gtk_notebook_get_action_widget (notebook, GTK_PACK_START);
+    if (event_widget == action_widget || (action_widget != NULL && gtk_widget_is_ancestor (event_widget, action_widget)))
+        return FALSE;
+
+    action_widget = gtk_notebook_get_action_widget (notebook, GTK_PACK_END);
+    if (event_widget == action_widget || (action_widget != NULL && gtk_widget_is_ancestor (event_widget, action_widget)))
+        return FALSE;
+
+    switch (event->direction) {
+        case GDK_SCROLL_RIGHT:
+        case GDK_SCROLL_DOWN:
+            gtk_notebook_next_page (notebook);
+            break;
+        case GDK_SCROLL_LEFT:
+        case GDK_SCROLL_UP:
+            gtk_notebook_prev_page (notebook);
+            break;
+        case GDK_SCROLL_SMOOTH:
+            switch (gtk_notebook_get_tab_pos (notebook)) {
+                case GTK_POS_LEFT:
+                case GTK_POS_RIGHT:
+                    if (event->delta_y > 0)
+                        gtk_notebook_next_page (notebook);
+                    else if (event->delta_y < 0)
+                        gtk_notebook_prev_page (notebook);
+                    break;
+                case GTK_POS_TOP:
+                case GTK_POS_BOTTOM:
+                    if (event->delta_x > 0)
+                        gtk_notebook_next_page (notebook);
+                    else if (event->delta_x < 0)
+                        gtk_notebook_prev_page (notebook);
+                    break;
+            }
+            break;
+    }
+
+    return TRUE;
+}
+
 /**
  * terminal_profile_edit:
  * @profile: a #TerminalProfile
@@ -856,54 +911,10 @@ terminal_profile_edit (TerminalProfile *profile,
     gtk_widget_add_events (w, GDK_SCROLL_MASK);
     g_signal_connect (w,
                       "scroll-event",
-                      G_CALLBACK (terminal_profile_edit_dialog_page_scroll_event_cb),
+                      G_CALLBACK (on_profile_editor_notebook_scroll_event),
                       NULL);
 
 	gtk_window_set_transient_for (GTK_WINDOW (editor),
 	                              GTK_WINDOW (transient_parent));
 	gtk_window_present (GTK_WINDOW (editor));
-}
-
-static gboolean
-terminal_profile_edit_dialog_page_scroll_event_cb (GtkWidget        *widget,
-                                                   GdkEventScroll   *event)
-
-{
-    GtkNotebook *notebook = GTK_NOTEBOOK (widget);
-    GtkWidget *child, *event_widget, *action_widget;
-
-    child = gtk_notebook_get_nth_page (notebook, gtk_notebook_get_current_page (notebook));
-    if (child == NULL)
-        return FALSE;
-
-    event_widget = gtk_get_event_widget ((GdkEvent*) event);
-
-    /* Ignore scroll events from the content of the page */
-    if (event_widget == NULL || event_widget == child || gtk_widget_is_ancestor (event_widget, child))
-        return FALSE;
-
-    /* And also from the action widgets */
-    action_widget = gtk_notebook_get_action_widget (notebook, GTK_PACK_START);
-    if (event_widget == action_widget || (action_widget != NULL && gtk_widget_is_ancestor (event_widget, action_widget)))
-        return FALSE;
-
-    action_widget = gtk_notebook_get_action_widget(notebook, GTK_PACK_END);
-    if (event_widget == action_widget || (action_widget != NULL && gtk_widget_is_ancestor (event_widget, action_widget)))
-        return FALSE;
-
-    switch (event->direction)
-    {
-        case GDK_SCROLL_RIGHT:
-        case GDK_SCROLL_DOWN:
-            gtk_notebook_next_page (notebook);
-            break;
-        case GDK_SCROLL_LEFT:
-        case GDK_SCROLL_UP:
-            gtk_notebook_prev_page (notebook);
-            break;
-        case GDK_SCROLL_SMOOTH:
-            break;
-    }
-
-    return TRUE;
 }
