@@ -9,21 +9,27 @@ MATE terminal is a fork of GNOME terminal.
 How it works
 ===
 
-Profiles - 
+Profiles -
   all settings are stored in profiles. prefs dialog edits the current
   profile
 
-Session - 
+Session -
   just the number of open windows/tabs and their profile is stored
   per-session
- 
-Command line options - 
+
+Command line options -
   do not overlap things that are preferences
 
 
 == Install ==
 
+In order to build this program from the source code you need git installed and
+ a working MATE environment version 1.2, with the development tools installed
+properly.
+
 Example:
+git submodule init
+git submodule update --remote --recursive
 ./autogen.sh --prefix=/usr --sysconfdir=/etc \
     --disable-static --localstatedir=/var --with-gnu-ld
 make
