@@ -29,6 +29,9 @@ void terminal_profile_edit (TerminalProfile *profile,
                             GtkWindow       *transient_parent,
                             const char      *widget_name);
 
+static gboolean terminal_profile_edit_dialog_page_scroll_event_cb (GtkWidget        *notebook,
+                                                                   GdkEventScroll   *event);
+
 G_END_DECLS
 
 #endif /* TERMINAL_PROFILE_EDITOR_H */
