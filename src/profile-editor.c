@@ -80,6 +80,9 @@ static const TerminalColorScheme color_schemes[] =
 static void profile_forgotten_cb (TerminalProfile           *profile,
                                   GtkWidget                 *editor);
 
+static gboolean terminal_profile_edit_dialog_page_scroll_event_cb (GtkWidget        *notebook,
+                                                                   GdkEventScroll   *event);
+
 static void profile_notify_sensitivity_cb (TerminalProfile *profile,
         GParamSpec *pspec,
         GtkWidget *editor);
