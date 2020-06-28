@@ -6,16 +6,16 @@
 # Translators:
 # Дмитрий Михирев, 2018
 # Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2018
-# Ivan, 2018
+# Ivan Kuzmenko, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
+# Alexei Sorokin, 2018
 # Aleksey Kabanov <ak099@mail.ru>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
-# Cyber Tailor <cybertailor@gmail.com>, 2018
 # monsta <monsta@inbox.ru>, 2018
 # Andreï Victorovitch Kostyrka, 2018
 # Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
 # Alex Putz, 2018
+# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Alex Putz, 2018\n"
+"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,6 +47,10 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"MATE Terminal – эмулятор терминала, используемый для доступа к командной "
+"оболочке UNIX в среде MATE. MATE Terminal эмулирует приложение xterm, "
+"разработанное консорциумом X. Он поддерживает прозрачный фон, открытие "
+"нескольких терминалов в одном окне (вкладки) и кликабельные URL."
 
 #: mate-terminal.appdata.xml.in:17
 msgid ""
@@ -54,6 +58,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"MATE Terminal – форк GNOME Terminal и часть рабочей среды MATE. Если вы "
+"хотите знать больше о MATE и MATE Terminal, пожалуйста, посетите домашнюю "
+"страницу проекта."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
 #: src/terminal-profile.c:161 src/terminal-window.c:2214
@@ -68,7 +75,7 @@ msgstr "Использовать командную строку"
 #. file name)!
 #: mate-terminal.desktop.in.in:9
 msgid "utilities-terminal"
-msgstr ""
+msgstr "utilities-terminal"
 
 #: src/eggsmclient.c:225
 msgid "Disable connection to session manager"
@@ -178,6 +185,8 @@ msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
+"Запрашивать ли подтверждение при закрытии окна терминала, которое имеет "
+"более одной открытой вкладки или в котором работает хотя бы один процесс."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
@@ -678,13 +687,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Подсвечивать URL под курсором мыши"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Если включено, URL под курсором мыши будут выделены и смогут быть открыты "
+"щелчком мыши с зажатой клавишей Control или через меню."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -1609,11 +1620,11 @@ msgstr "Скопировать выделенный текст в _буфер о
 
 #: src/profile-preferences.ui:474
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "Подсвечивать запросы _S/Key под курсором мыши"
 
 #: src/profile-preferences.ui:490
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Подсвечивать _URL под курсором мыши"
 
 #: src/profile-preferences.ui:515
 msgid "Cursor blin_k:"
@@ -2802,7 +2813,7 @@ msgstr ""
 
 #: src/terminal-window.c:3624
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "В этом окне открыто несколько вкладок"
 
 #: src/terminal-window.c:3633
 msgid "Close this window?"
@@ -2834,7 +2845,7 @@ msgstr "Помощники:"
 
 #: src/terminal-window.c:4468
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "О приложении Терминал MATE"
 
 #: src/terminal-window.c:4469
 msgid ""
@@ -2845,6 +2856,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE developers"
 
 #: src/terminal-window.c:4475
 msgid "A terminal emulator for the MATE desktop"

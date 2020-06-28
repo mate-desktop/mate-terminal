@@ -6,11 +6,9 @@
 # Translators:
 # Arif Budiman <arifpedia@gmail.com>, 2018
 # Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# airinuxazis <azis.naufal@gmail.com>, 2018
+# Febrian Setianto (Feber) <febrian.setianto@gmail.com>, 2018
 # Ibnu Daru Aji, 2018
 # Anton Toni Agung <vdrive6@gmail.com>, 2018
-# Febrian Setianto (Feber) <febrian.setianto@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
 # Hatta.z, 2018
@@ -18,6 +16,7 @@
 # hpiece 8 <hpiece8@gmail.com>, 2018
 # Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2018
 # Andika Triwidada <andika@gmail.com>, 2020
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -25,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +39,7 @@ msgstr "Terminal MATE"
 
 #: mate-terminal.appdata.xml.in:8
 msgid "A terminal emulator for the MATE desktop environment"
-msgstr "Emulator terminal untuk lingkungan desktop MATE"
+msgstr "Emulator terminal untuk lingkungan destop MATE"
 
 #: mate-terminal.appdata.xml.in:10
 msgid ""
@@ -49,8 +48,8 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
-"MATE Terminal adalah aplikasi emulasi terminal yang dapat Anda gunakan untuk"
-" mengakses shell UNIX pada lingkungan MATE. MATE Terminal mengemulasikan "
+"Terminal MATE adalah aplikasi emulasi terminal yang dapat Anda gunakan untuk"
+" mengakses shell UNIX pada lingkungan MATE. Terminal MATE mengemulasikan "
 "program xterm yang dikembangkan oleh Konsorsium X. Ini mendukung latar "
 "belakang tembus pandang, membuka banyak terminal dalam satu jendela (tab), "
 "dan URL yang dapat diklik."
@@ -61,9 +60,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
-"MATE Terminal adalah fork dari GNOME Terminal dan bagian dari Lingkungan "
-"Desktop MATE. Bila Anda ingin tahu lebih banyak tentang MATE dan MATE "
-"Terminal, silakan kunjungi laman web proyek."
+"Terminal MATE adalah fork dari Terminal GNOME dan bagian dari Lingkungan "
+"Destop MATE. Bila Anda ingin tahu lebih banyak tentang MATE dan Terminal "
+"MATE, silakan kunjungi halaman web proyek."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
 #: src/terminal-profile.c:161 src/terminal-window.c:2214
@@ -142,9 +141,8 @@ msgid ""
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
 msgstr ""
-"Menentukan apakah tombol akses ke batang menu dapat menggunakan kombinasi "
-"Alt+huruf. Ini mungkin dapat bentrok dengan aplikasi yang sedang berjalan "
-"dalam terminal."
+"Apakah tombol akses ke bilah menu dapat menggunakan kombinasi Alt+huruf. Ini"
+" mungkin dapat bentrok dengan aplikasi yang sedang berjalan dalam terminal."
 
 #: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
@@ -156,9 +154,9 @@ msgid ""
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
 msgstr ""
-"Batang menu biasanya dapat diakses dengan tombol F10. Tombol ini dapat "
-"diatur pula lewat berkas gtkrc (di bagian gtk-menu-bar-accel). Pilihan ini "
-"dapat digunakan untuk mematikan fungsi akselerator batang menu."
+"Bilah menu biasanya dapat diakses dengan tombol F10. Tombol ini dapat diatur"
+" pula lewat berkas gtkrc (di bagian gtk-menu-bar-accel). Pilihan ini dapat "
+"digunakan untuk mematikan fungsi akselerator bilah menu."
 
 #: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
@@ -167,7 +165,7 @@ msgstr "[ 'UTF-8', 'current' ]"
 
 #: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
-msgstr "Daftar encode yang tersedia"
+msgstr "Daftar enkoding yang tersedia"
 
 #: src/org.mate.terminal.gschema.xml.in:70
 msgid ""
@@ -175,13 +173,13 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
-"Bagian pengkodean karakter yang ada pada submenu Pengkodean. Ini adalah "
+"Bagian pengkodean karakter yang ada pada submenu \"Encoding\". Ini adalah "
 "daftar pengkodean yang ingin dimunculkan. Nama kode khusus \"current\" untuk"
 " menampilkan pengkodean sesuai dengan locale yang aktif."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
-msgstr "Menentukan apakah menanyakan konfirmasi saat menutup jendela terminal"
+msgstr "Apakah menanyakan konfirmasi saat menutup jendela terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:75
 msgid ""
@@ -197,7 +195,7 @@ msgstr "Tutup tab dengan klik tengah"
 
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
-msgstr "Jika berisi true, memungkinkan menutup tab memakai klik tengah"
+msgstr "Jika true, memungkinkan menutup tab memakai klik tengah."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -214,7 +212,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Default'"
+msgstr "'Bawaan'"
 
 #: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
@@ -222,18 +220,18 @@ msgstr "Nama profil yang mudah dibaca"
 
 #: src/org.mate.terminal.gschema.xml.in:94
 msgid "Human-readable name of the profile."
-msgstr "Nama profil yang mudah dibaca"
+msgstr "Nama profil yang mudah dibaca."
 
 #: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
-msgstr "Penampilan daftar menu pada jendela/tab baru"
+msgstr "Apakah menampilkan daftar menu pada jendela/tab baru"
 
 #: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr ""
-"Betul apabila batang menu ditampilkan pada jendela baru untuk jendela/tab "
+"Betul apabila bilah menu ditampilkan pada jendela baru untuk jendela/tab "
 "pada profil ini."
 
 #: src/org.mate.terminal.gschema.xml.in:103
@@ -275,8 +273,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:118
 msgid "Whether bold text should use the same color as normal text"
-msgstr ""
-"Tentukan apakah teks tebal menggunakan warna yang sama dengan teks normal"
+msgstr "Apakah teks tebal menggunakan warna yang sama dengan teks normal"
 
 #: src/org.mate.terminal.gschema.xml.in:119
 msgid ""
@@ -287,7 +284,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:123
 msgid "What to do with dynamic title"
-msgstr "Pengaturan judul dinamis"
+msgstr "Apa yang harus dilakukan dengan judul dinamis"
 
 #: src/org.mate.terminal.gschema.xml.in:124
 msgid ""
@@ -347,7 +344,7 @@ msgstr "Salin pilihan ke papan klip"
 
 #: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr "Jika benar, pilihan akan tersalin ke papan klip secara otomatis"
+msgstr "Jika true, pilihan akan tersalin ke papan klip secara otomatis."
 
 #: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
@@ -359,7 +356,7 @@ msgid ""
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
 msgstr ""
-"Saat memilih teks berdasarkan kata, urutan karakter-karakter ini akan "
+"Ketika memilih teks berdasarkan kata, urutan karakter-karakter ini akan "
 "dianggap sebagai satu kesatuan pada kata. Jangkauan karakter dapat ditulis "
 "dalam bentuk \"A-Z\". Tanda minus (yang bukan melambangkan jangkauan) bila "
 "ingin dipakai maka harus ditulis pertama kali."
@@ -403,19 +400,19 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:168
 msgid "Position of the scrollbar"
-msgstr "Posisi scrollbar"
+msgstr "Posisi bilah gulir"
 
 #: src/org.mate.terminal.gschema.xml.in:169
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr ""
-"Letak scrollbar pada terminal. Anda dapat memilih \"left\"/\"kiri\", "
+"Letak bilah gulir pada terminal. Anda dapat memilih \"left\"/\"kiri\", "
 "\"right\"/\"kanan\", atau \"hidden\"/\"tersembunyi\"."
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
-msgstr "Cacah baris yang disisakan pada saat menggulung layar ke belakang"
+msgstr "Cacah baris yang disisakan pada saat menggulir layar ke belakang"
 
 #: src/org.mate.terminal.gschema.xml.in:174
 msgid ""
@@ -431,7 +428,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr ""
-"Apakah jumlah baris gulung mundur yang tak terbatas mesti dipertahankan"
+"Apakah jumlah baris gulir mundur yang tak terbatas mesti dipertahankan"
 
 #: src/org.mate.terminal.gschema.xml.in:179
 msgid ""
@@ -439,28 +436,28 @@ msgid ""
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
 msgstr ""
-"Apabila benar, baris gulung mundur tidak akan pernah dibuang. Riwayat gulung"
-" mundur disimpan sementara di cakram, sehingga ini bisa menyebabkan sistem "
+"Apabila benar, baris gulir mundur tidak akan pernah dibuang. Riwayat gulir "
+"mundur disimpan sementara di cakram, sehingga ini bisa menyebabkan sistem "
 "kehabisan ruang cakram bila ada banyak keluaran ke terminal."
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr "Apakah menggulung sampai dasar ketika sebuah tombol ditekan"
+msgstr "Apakah menggulir sampai dasar ketika sebuah tombol ditekan"
 
 #: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr ""
-"Bila berisi true, menekan tombol akan mengembalikan batang gulir ke dasar."
+"Bila berisi true, menekan tombol akan mengembalikan bilah gulir ke dasar."
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
-msgstr "Apakah menggulung sampai dasar ketika ada keluaran baru"
+msgstr "Apakah menggulir sampai dasar ketika ada keluaran baru"
 
 #: src/org.mate.terminal.gschema.xml.in:189
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr ""
-"Bila berisi true, ketika ada keluaran baru maka terminal akan menggulung ke "
+"Bila berisi true, ketika ada keluaran baru maka terminal akan menggulir ke "
 "dasar."
 
 #: src/org.mate.terminal.gschema.xml.in:193
@@ -562,7 +559,7 @@ msgstr "Font"
 
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr "Nama font Pango. Misalnya \"Sans 12\" atau Monospace Bold 14\"."
+msgstr "Nama fonta Pango. Misalnya \"Sans 12\" atau Monospace Bold 14\"."
 
 #: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
@@ -585,19 +582,19 @@ msgstr "Gambar latar belakang"
 
 #: src/org.mate.terminal.gschema.xml.in:244
 msgid "Filename of a background image."
-msgstr "Nama berkas gambar latar belakang"
+msgstr "Nama berkas gambar latar belakang."
 
 #: src/org.mate.terminal.gschema.xml.in:248
 msgid "Whether to scroll background image"
-msgstr "Apakah citra latar belakang digulung"
+msgstr "Apakah citra latar belakang digulir"
 
 #: src/org.mate.terminal.gschema.xml.in:249
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr ""
-"Bila berisi true, menggulung gambar latar belakang dengan teks later depan; "
-"bila berisi false, pertahankan gambar pada posisi tetap dan gulung teks di "
+"Bila berisi true, menggulir gambar latar belakang dengan teks later depan; "
+"bila berisi false, pertahankan gambar pada posisi tetap dan gulir teks di "
 "atasnya."
 
 #: src/org.mate.terminal.gschema.xml.in:253
@@ -629,11 +626,11 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
-"Menentukan kode apa yang dibangkitkan oleh tombol Backspace. Nilai yang "
-"mungkin adalah \"ascii-del\" untuk karakter ASCII DEL, \"control-h\" untuk "
-"Control-H (alias karakter ASCII-BS), \"escape-sequence\" untuk urutan escape"
-" yang biasanya dipasangkan pada tombol Backspace atau Delete. Biasanya orang"
-" menggunakan isian \"ascii-del\"."
+"Atur kode apa yang dibangkitkan oleh tombol Backspace. Nilai yang mungkin "
+"adalah \"ascii-del\" untuk karakter ASCII DEL, \"control-h\" untuk Control-H"
+" (alias karakter ASCII-BS), \"escape-sequence\" untuk urutan escape yang "
+"biasanya dipasangkan pada tombol Backspace atau Delete. Biasanya orang "
+"menggunakan isian \"ascii-del\"."
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
@@ -647,11 +644,11 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
-"Menentukan kode apa yang dibangkitkan oleh tombol Delete. Anda dapat memilih"
-" \"ascii-del\" untuk karakter ASCII DEL, \"control-h\" untuk Control-H "
-"(alias karakter ASCII-BS), \"escape-sequence\" untuk urutan escape yang "
-"biasanya dipasangkan pada tombol backspace atau delete. Biasanya orang "
-"menggunakan isian \"escape-sequence\"."
+"Atur kode apa yang dibangkitkan oleh tombol Delete. Anda dapat memilih "
+"\"ascii-del\" untuk karakter ASCII DEL, \"control-h\" untuk Control-H (alias"
+" karakter ASCII-BS), \"escape-sequence\" untuk urutan escape yang biasanya "
+"dipasangkan pada tombol backspace atau delete. Biasanya orang menggunakan "
+"isian \"escape-sequence\"."
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -674,7 +671,7 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Bila berisi true, terminal akan menggunakan fonta standar desktop-global "
+"Bila berisi true, terminal akan menggunakan fonta standar destop-global "
 "apabila itu monospace (dan fonta paling mirip yang bisa diperoleh bila "
 "bukan)."
 
@@ -704,7 +701,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
-msgstr "Tombol singkat untuk membuka tab baru"
+msgstr "Pintasan papan tik untuk membuka tab baru"
 
 #: src/org.mate.terminal.gschema.xml.in:291
 msgid ""
@@ -713,13 +710,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk membuka tab baru. Ini ditulis dalam bentuk string "
+"Pintasan papan tik untuk membuka tab baru. Ini ditulis dalam bentuk string "
 "dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
 "\"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
-msgstr "Tombol singkat untuk membkua jendela baru"
+msgstr "Pintasan papan tik untuk membkua jendela baru"
 
 #: src/org.mate.terminal.gschema.xml.in:296
 msgid ""
@@ -728,13 +725,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk membuka jendela baru. Ini ditulis dalam bentuk string "
-"dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
-"\"disabled\" maka tombol singkat akan dimatikan."
+"Pintasan papan tik untuk membuka jendela baru. Ini ditulis dalam bentuk "
+"string dengan format yang sama dengan berkas resource GTK+, jika Anda isi "
+"dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
-msgstr "Tombol singkat untuk membuat profil baru"
+msgstr "Pintasan papan tik untuk membuat profil baru"
 
 #: src/org.mate.terminal.gschema.xml.in:301
 msgid ""
@@ -743,13 +740,13 @@ msgid ""
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
 msgstr ""
-"Tombol singkat untuk membuka dialog pembuatan profil. Ini ditulis dalam "
+"Pintasan papan tik untuk membuka dialog pembuatan profil. Ini ditulis dalam "
 "bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
 " isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:305
 msgid "Keyboard shortcut to save the current tab contents to file"
-msgstr "Tombol singkat untuk menyimpan isi tab kini ke berkas"
+msgstr "Pintasan papan tik untuk menyimpan isi tab kini ke berkas"
 
 #: src/org.mate.terminal.gschema.xml.in:306
 msgid ""
@@ -758,13 +755,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Tombol singkat untuk menyimpan isi tab kini ke suatu berkas. Ini ditulis "
-"dalam bentuk string dengan format yang sama dengan berkas resource GTK+, "
+"Pintasan papan tik untuk menyimpan isi tab kini ke suatu berkas. Ini ditulis"
+" dalam bentuk string dengan format yang sama dengan berkas resource GTK+, "
 "jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
-msgstr "Tombol singkat untuk menutup tab"
+msgstr "Pintasan papan tik untuk menutup tab"
 
 #: src/org.mate.terminal.gschema.xml.in:311
 msgid ""
@@ -773,13 +770,13 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Tombol singkat untuk menutup tab. Ini ditulis dalam bentuk string dengan "
-"format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
+"Pintasan papan tik untuk menutup tab. Ini ditulis dalam bentuk string dengan"
+" format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
 "\"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
-msgstr "Tombol singkat untuk menutup jendela"
+msgstr "Pintasan papan tik untuk menutup jendela"
 
 #: src/org.mate.terminal.gschema.xml.in:316
 msgid ""
@@ -788,13 +785,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk menutup jendela. Ini ditulis dalam bentuk string dengan"
-" format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
+"Pintasan papan tik untuk menutup jendela. Ini ditulis dalam bentuk string "
+"dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
 "\"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:320
 msgid "Keyboard shortcut to copy text"
-msgstr "Tombol singkat untuk menyalin teks"
+msgstr "Pintasan papan tik untuk menyalin teks"
 
 #: src/org.mate.terminal.gschema.xml.in:321
 msgid ""
@@ -803,13 +800,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Tombol singkat untuk menyalin teks yang dipilih ke dalam papan klip. Ini "
-"ditulis dalam bentuk string dengan format yang sama dengan berkas resource "
+"Pintasan papan tik untuk menyalin teks yang dipilih ke dalam papan klip. Ini"
+" ditulis dalam bentuk string dengan format yang sama dengan berkas resource "
 "GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:325
 msgid "Keyboard shortcut to paste text"
-msgstr "Tombol singkat untuk untuk menempelkan teks"
+msgstr "Pintasan papan tik untuk untuk menempelkan teks"
 
 #: src/org.mate.terminal.gschema.xml.in:326
 msgid ""
@@ -818,14 +815,14 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
-"Tombol singkat untuk menempelkan isi clipboard pada terminal. Ini ditulis "
-"dalam bentuk string dengan format yang sama dengan berkas resource GTK+. "
-"Jika Anda isi dengan \"disabled\" maka tidak akan ada tombol singkat untuk "
-"aksi ini."
+"Pintasan papan tik untuk menempelkan isi clipboard pada terminal. Ini "
+"ditulis dalam bentuk string dengan format yang sama dengan berkas resource "
+"GTK+. Jika Anda isi dengan \"disabled\" maka tidak akan ada tombol singkat "
+"untuk aksi ini."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
-msgstr "Tombol singkat untuk memilih semua teks"
+msgstr "Pintasan papan tik untuk memilih semua teks"
 
 #: src/org.mate.terminal.gschema.xml.in:331
 msgid ""
@@ -834,7 +831,7 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Pintasan papan ketik untuk memilih semua teks dalam terminal. Dinyatakan "
+"Pintasan papan tik untuk memilih semua teks dalam terminal. Dinyatakan "
 "sebagai suatu string dalam format yang sama dengan yang dipakai untuk berkas"
 " sumber daya GTK+. Bila Anda menata opsi ke string khusus \"disabled\", maka"
 " tidak akan ada pintasan papan ketik untuk aksi ini."
@@ -850,15 +847,15 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat keyboard untuk menampilkan dialog pencarian. Ditampilkan "
-"sebagai string pada format yang digunakan pada berkas sumberdaya GTK+. Jika "
-"Anda menentukan opsi string khusus \"nonaktif\" maka tidak akan ada jalan "
-"pintas keyboard untuk aksi ini. "
+"Pintasan papan tik untuk menampilkan dialog pencarian. Ditampilkan sebagai "
+"string pada format yang digunakan pada berkas sumberdaya GTK+. Jika Anda "
+"menentukan opsi string khusus \"disabled\" maka tidak akan ada pintasan "
+"papan tik untuk aksi ini."
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
-"Pintasan papan ketik untuk mencari kemunculan berikutnya dari istilah yang "
+"Pintasan papan tik untuk mencari kemunculan berikutnya dari istilah yang "
 "dicari"
 
 #: src/org.mate.terminal.gschema.xml.in:341
@@ -868,7 +865,7 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
-"Pintasan papan ketik untuk mencari kemunculan berikutnya dari istilah yang "
+"Pintasan papan tik untuk mencari kemunculan berikutnya dari istilah yang "
 "dicari dalam terminal. Dinyatakan sebagai sebuah string dengan format yang "
 "sama dengan yang dipakai untuk berkas sumber daya GTK+. Bila Anda menata "
 "opsi ke string khusus \"disabled\", maka tidak akan ada pintasan papan ketik"
@@ -877,7 +874,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
-"Pintasan papan ketik untuk mencari kemunculan sebelumnya dari istilah yang "
+"Pintasan papan tik untuk mencari kemunculan sebelumnya dari istilah yang "
 "dicari"
 
 #: src/org.mate.terminal.gschema.xml.in:346
@@ -887,7 +884,7 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
-"Pintasan papan ketik untuk mencari kemunculan sebelumnya dari istilah yang "
+"Pintasan papan tik untuk mencari kemunculan sebelumnya dari istilah yang "
 "dicari dalam terminal. Dinyatakan sebagai sebuah string dengan format yang "
 "sama dengan yang dipakai untuk berkas sumber daya GTK+. Bila Anda menata "
 "opsi ke string khusus \"disabled\", maka tidak akan ada pintasan papan ketik"
@@ -895,7 +892,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "Tombol singkat untuk menjungkit mode layar penuh"
+msgstr "Pintasan papan tik untuk menjungkit mode layar penuh"
 
 #: src/org.mate.terminal.gschema.xml.in:351
 msgid ""
@@ -904,13 +901,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tombol singkat untuk menjungkitkan mode layar penuh. Ini ditulis dalam "
+"Pintasan papan tik untuk menjungkitkan mode layar penuh. Ini ditulis dalam "
 "bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
 " isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:355
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "Tombol singkat untuk menjungkitkan kenampakan bilah menu"
+msgstr "Pintasan papan tik untuk menjungkitkan kenampakan bilah menu"
 
 #: src/org.mate.terminal.gschema.xml.in:356
 msgid ""
@@ -919,13 +916,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Tombol singkat untuk menjungkitkan kenampakan bilah menu. Ini ditulis dalam "
-"bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
-" isi dengan \"disabled\" maka tombol singkat akan dimatikan."
+"Pintasan papan tik untuk menjungkitkan kenampakan bilah menu. Ini ditulis "
+"dalam bentuk string dengan format yang sama dengan berkas resource GTK+, "
+"jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
-msgstr "Tombol singkat untuk menentukan judul terminal"
+msgstr "Pintasan papan tik untuk menentukan judul terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:361
 msgid ""
@@ -934,13 +931,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk mengatur judul terminal. Ini ditulis dalam bentuk "
+"Pintasan papan tik untuk mengatur judul terminal. Ini ditulis dalam bentuk "
 "string dengan format yang sama dengan berkas resource GTK+, jika Anda isi "
 "dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
-msgstr "Tombol singkat untuk menata ulang terminal"
+msgstr "Pintasan papan tik untuk menata ulang terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:366
 msgid ""
@@ -949,13 +946,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk menata ulang terminal. Ini ditulis dalam bentuk string "
-"dengan format yang sama dengan berkas resource GTK+, jika Anda isi dengan "
-"\"disabled\" maka tombol singkat akan dimatikan."
+"Pintasan papan tik untuk menata ulang terminal. Ini ditulis dalam bentuk "
+"string dengan format yang sama dengan berkas resource GTK+, jika Anda isi "
+"dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:370
 msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr "Tombol singkat untuk menata ulang dan membersihkan layar terminal"
+msgstr "Pintasan papan tik untuk menata ulang dan membersihkan layar terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:371
 msgid ""
@@ -964,13 +961,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tombol singkat untuk menata ulang dan membersihkan layar terminal. Ini "
+"Pintasan papan tik untuk menata ulang dan membersihkan layar terminal. Ini "
 "ditulis dalam bentuk string dengan format yang sama dengan berkas resource "
 "GTK+, jika Anda isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
-msgstr "Tombol singkat untuk berpindah ke tab sebelumnya"
+msgstr "Pintasan papan tik untuk berpindah ke tab sebelumnya"
 
 #: src/org.mate.terminal.gschema.xml.in:376
 msgid ""
@@ -979,13 +976,13 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tombol singkat untuk berpindah ke tab sebelumnya. Ini ditulis dalam bentuk "
-"string dengan format yang sama dengan berkas resource GTK+, jika Anda isi "
-"dengan \"disabled\" maka tombol singkat akan dimatikan."
+"Pintasan papan tik untuk berpindah ke tab sebelumnya. Ini ditulis dalam "
+"bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
+" isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:380
 msgid "Keyboard shortcut to switch to the next tab"
-msgstr "Tombol singkat untuk berpindah ke tab berikutnya"
+msgstr "Pintasan papan tik untuk berpindah ke tab berikutnya"
 
 #: src/org.mate.terminal.gschema.xml.in:381
 msgid ""
@@ -994,13 +991,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Tombol singkat untuk berpindah ke tab berikutnya. Ini ditulis dalam bentuk "
-"string dengan format yang sama dengan berkas resource GTK+, jika Anda isi "
-"dengan \"disabled\" maka tombol singkat akan dimatikan."
+"Pintasan papan tik untuk berpindah ke tab berikutnya. Ini ditulis dalam "
+"bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
+" isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:385
 msgid "Keyboard shortcut to switch to the previous profile"
-msgstr "Tombol singkat untuk berpindah ke profil sebelumnya"
+msgstr "Pintasan papan tik untuk berpindah ke profil sebelumnya"
 
 #: src/org.mate.terminal.gschema.xml.in:386
 msgid ""
@@ -1009,13 +1006,13 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Tombol singkat untuk berpindah ke profil sebelumnya. Ini ditulis dalam "
+"Pintasan papan tik untuk berpindah ke profil sebelumnya. Ini ditulis dalam "
 "bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
 " isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:390
 msgid "Keyboard shortcut to switch to the next profile"
-msgstr "Tombol singkat untuk berpindah ke profil berikutnya"
+msgstr "Pintasan papan tik untuk berpindah ke profil berikutnya"
 
 #: src/org.mate.terminal.gschema.xml.in:391
 msgid ""
@@ -1024,7 +1021,7 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Tombol singkat untuk berpindah ke profil berikutnya. Ini ditulis dalam "
+"Pintasan papan tik untuk berpindah ke profil berikutnya. Ini ditulis dalam "
 "bentuk string dengan format yang sama dengan berkas resource GTK+, jika Anda"
 " isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
@@ -1039,9 +1036,9 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
-"Tombol singkat untuk memindah tab saat ini ke kiri. Ini ditulis dalam bentuk"
-" string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi "
-"dengan \"disabled\" maka tombol singkat akan dimatikan."
+"Tombol akselerator untuk memindah tab saat ini ke kiri. Ini ditulis dalam "
+"bentuk string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda "
+"isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:400
 msgid "Accelerator to move the current tab to the right."
@@ -1054,7 +1051,7 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
-"Tombol singkat untuk memindah tab saat ini ke kanan. Ini ditulis dalam "
+"Tombol akselerator untuk memindah tab saat ini ke kanan. Ini ditulis dalam "
 "bentuk string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda "
 "isi dengan \"disabled\" maka tombol singkat akan dimatikan."
 
@@ -1068,13 +1065,13 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
-"Tombol singkat untuk melepas tab saat ini. Ini ditulis dalam bentuk string "
-"dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi dengan "
-"\"disabled\" maka tombol singkat akan dimatikan."
+"Tombol akselerator untuk melepas tab saat ini. Ini ditulis dalam bentuk "
+"string dengan bentuk yang sama dengan berkas sumber GTK+, jika Anda isi "
+"dengan \"disabled\" maka tombol singkat akan dimatikan."
 
 #: src/org.mate.terminal.gschema.xml.in:410
 msgid "Keyboard shortcut to switch to tab 1"
-msgstr "Shortcut keyboard untuk berpindah ke tab 1"
+msgstr "Pintasan papan tik untuk berpindah ke tab 1"
 
 #: src/org.mate.terminal.gschema.xml.in:411
 msgid ""
@@ -1083,14 +1080,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 1. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 1. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:415
 msgid "Keyboard shortcut to switch to tab 2"
-msgstr "Shortcut keyboard untuk berpindah ke tab 2"
+msgstr "Pintasan papan tik untuk berpindah ke tab 2"
 
 #: src/org.mate.terminal.gschema.xml.in:416
 msgid ""
@@ -1099,14 +1096,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 2. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 2. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:420
 msgid "Keyboard shortcut to switch to tab 3"
-msgstr "Shortcut keyboard untuk berpindah ke tab 3"
+msgstr "Pintasan papan tik untuk berpindah ke tab 3"
 
 #: src/org.mate.terminal.gschema.xml.in:421
 msgid ""
@@ -1115,14 +1112,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 3. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 3. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:425
 msgid "Keyboard shortcut to switch to tab 4"
-msgstr "Shortcut keyboard untuk berpindah ke tab 4"
+msgstr "Pintasan papan tik untuk berpindah ke tab 4"
 
 #: src/org.mate.terminal.gschema.xml.in:426
 msgid ""
@@ -1131,14 +1128,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 4. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 4. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:430
 msgid "Keyboard shortcut to switch to tab 5"
-msgstr "Shortcut keyboard untuk berpindah ke tab 5"
+msgstr "Pintasan papan tik untuk berpindah ke tab 5"
 
 #: src/org.mate.terminal.gschema.xml.in:431
 msgid ""
@@ -1147,14 +1144,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 5. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 5. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:435
 msgid "Keyboard shortcut to switch to tab 6"
-msgstr "Shortcut keyboard untuk berpindah ke tab 6"
+msgstr "Pintasan papan tik untuk berpindah ke tab 6"
 
 #: src/org.mate.terminal.gschema.xml.in:436
 msgid ""
@@ -1163,14 +1160,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 6. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 6. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:440
 msgid "Keyboard shortcut to switch to tab 7"
-msgstr "Shortcut keyboard untuk berpindah ke tab 7"
+msgstr "Pintasan papan tik untuk berpindah ke tab 7"
 
 #: src/org.mate.terminal.gschema.xml.in:441
 msgid ""
@@ -1179,14 +1176,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 7. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 7. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:445
 msgid "Keyboard shortcut to switch to tab 8"
-msgstr "Shortcut keyboard untuk berpindah ke tab 8"
+msgstr "Pintasan papan tik untuk berpindah ke tab 8"
 
 #: src/org.mate.terminal.gschema.xml.in:446
 msgid ""
@@ -1195,14 +1192,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 8. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 8. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:450
 msgid "Keyboard shortcut to switch to tab 9"
-msgstr "Shortcut keyboard untuk berpindah ke tab 9"
+msgstr "Pintasan papan tik untuk berpindah ke tab 9"
 
 #: src/org.mate.terminal.gschema.xml.in:451
 msgid ""
@@ -1211,14 +1208,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 9. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 9. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:455
 msgid "Keyboard shortcut to switch to tab 10"
-msgstr "Shortcut keyboard untuk berpindah ke tab 10"
+msgstr "Pintasan papan tik untuk berpindah ke tab 10"
 
 #: src/org.mate.terminal.gschema.xml.in:456
 msgid ""
@@ -1227,14 +1224,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 10. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 10. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:460
 msgid "Keyboard shortcut to switch to tab 11"
-msgstr "Shortcut keyboard untuk berpindah ke tab 11"
+msgstr "Pintasan papan tik untuk berpindah ke tab 11"
 
 #: src/org.mate.terminal.gschema.xml.in:461
 msgid ""
@@ -1243,14 +1240,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 11. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 11. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:465
 msgid "Keyboard shortcut to switch to tab 12"
-msgstr "Shortcut keyboard untuk berpindah ke tab 12"
+msgstr "Pintasan papan tik untuk berpindah ke tab 12"
 
 #: src/org.mate.terminal.gschema.xml.in:466
 msgid ""
@@ -1259,14 +1256,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Shortcut keyboard untuk berpindah ke tab 12. Diekspresikan sebagai string "
+"Pintasan papan tik untuk berpindah ke tab 12. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:470
 msgid "Keyboard shortcut to launch help"
-msgstr "Shortcut keyboard untuk menjalankan bantuan"
+msgstr "Pintasan papan tik untuk menjalankan bantuan"
 
 #: src/org.mate.terminal.gschema.xml.in:471
 msgid ""
@@ -1275,14 +1272,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Shortcut keyboard untuk menjalankan bantuan. Diekspresikan sebagai string "
+"Pintasan papan tik untuk menjalankan bantuan. Diekspresikan sebagai string "
 "pada format yang sama pada berkas sumberdaya GTK+. Jika Anda menentukan opsi"
 " ini pada string khusus \"dinonaktifkan\", maka tidak akan tersedia shortcut"
 " keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
-msgstr "Shortcut keyboard untuk memperbesar ukuran font"
+msgstr "Pintasan papan tik untuk memperbesar ukuran fonta"
 
 #: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
@@ -1291,14 +1288,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Shortcut keyboard untuk memperbesar ukuran font. Diekspresikan sebagai "
+"Pintasan papan tik untuk memperbesar ukuran fonta. Diekspresikan sebagai "
 "string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda "
 "menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan "
 "tersedia shortcut keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
-msgstr "Shortcut keyboard untuk memperkecil ukuran font"
+msgstr "Pintasan papan tik untuk memperkecil ukuran fonta"
 
 #: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
@@ -1307,14 +1304,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Shortcut keyboard untuk memperkecil ukuran font. Diekspresikan sebagai "
+"Pintasan papan tik untuk memperkecil ukuran fonta. Diekspresikan sebagai "
 "string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda "
 "menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan "
 "tersedia shortcut keyboard untuk tindakan ini."
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
-msgstr "Shortcut keyboard untuk membuat ukuran font menjadi normal."
+msgstr "Pintasan papan tik untuk membuat ukuran fonta menjadi normal"
 
 #: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
@@ -1323,7 +1320,7 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Shortcut keyboard untuk membuat ukuran font menjadi normal. Diekspresikan "
+"Pintasan papan tik untuk membuat ukuran fonta menjadi normal. Diekspresikan "
 "sebagai string pada format yang sama pada berkas sumberdaya GTK+. Jika Anda "
 "menentukan opsi ini pada string khusus \"dinonaktifkan\", maka tidak akan "
 "tersedia shortcut keyboard untuk tindakan ini."
@@ -1396,7 +1393,7 @@ msgstr "Tambah atau Hapus Enkoding Terminal"
 
 #: src/encodings-dialog.ui:169
 msgid "A_vailable encodings:"
-msgstr "Encoding yang _ada: "
+msgstr "Enkoding yang tersedi_a:"
 
 #: src/encodings-dialog.ui:187
 msgid "E_ncodings shown in menu:"
@@ -1432,7 +1429,7 @@ msgstr "_Lipat kata"
 
 #: src/keybinding-editor.ui:14
 msgid "Keyboard Shortcuts"
-msgstr "Tombol Pintas"
+msgstr "Pintasan Papan Tik"
 
 #: src/keybinding-editor.ui:78
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
@@ -1632,7 +1629,7 @@ msgstr "Perbolehk_an teks tebal"
 
 #: src/profile-preferences.ui:426
 msgid "Show _menubar by default in new terminals"
-msgstr "Tampilkan batang _menu pada terminal baru"
+msgstr "Tampilkan bilah _menu pada terminal baru"
 
 #: src/profile-preferences.ui:442
 msgid "Terminal _bell"
@@ -1688,7 +1685,7 @@ msgstr "<b>Judul</b>"
 
 #: src/profile-preferences.ui:834
 msgid "Initial _title:"
-msgstr "Judul _awal"
+msgstr "Judul _awal:"
 
 #: src/profile-preferences.ui:874
 msgid "When terminal commands set their o_wn titles:"
@@ -1708,11 +1705,11 @@ msgstr "Jalankan perintah tertent_u dan bukan shell"
 
 #: src/profile-preferences.ui:1011
 msgid "Custom co_mmand:"
-msgstr "Perintah ta_mbahan: "
+msgstr "Perintah ta_mbahan:"
 
 #: src/profile-preferences.ui:1053
 msgid "When command _exits:"
-msgstr "Saat perintah s_elesai dijalankan:"
+msgstr "Ketika perintah k_eluar:"
 
 #: src/profile-preferences.ui:1123
 msgid "Title and Command"
@@ -1775,7 +1772,7 @@ msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr ""
-"<small><i><b>Catat:</b>Aplikasi terminal memiliki warna-warna ini yang "
+"<small><i><b>Catatan:</b>Aplikasi terminal memiliki warna-warna ini yang "
 "tersedia bagi mereka.</i></small>"
 
 #: src/profile-preferences.ui:1761
@@ -1800,7 +1797,7 @@ msgstr "Pilih Gambar Latar Belakang"
 
 #: src/profile-preferences.ui:1869
 msgid "Background image _scrolls"
-msgstr "Citra latar belakang _menggulung"
+msgstr "Gambar latar belakang _bergulir"
 
 #: src/profile-preferences.ui:1900
 msgid "_Transparent background"
@@ -1808,7 +1805,7 @@ msgstr "Latar belakang _transparan"
 
 #: src/profile-preferences.ui:1926
 msgid "S_hade transparent or image background:"
-msgstr "Latar belakang citra atau transparan _berbayang:"
+msgstr "Latar belakang gambar atau transparan _berbayang:"
 
 #: src/profile-preferences.ui:1942
 msgid "S_hade transparent background:"
@@ -1828,15 +1825,15 @@ msgstr "Latar Belakang"
 
 #: src/profile-preferences.ui:2049
 msgid "_Scrollbar is:"
-msgstr "_Scrollbarnya:"
+msgstr "Bilah _Gulir:"
 
 #: src/profile-preferences.ui:2060
 msgid "Scroll on _output"
-msgstr "G_ulung saat ada keluaran"
+msgstr "G_ulir saat ada keluaran"
 
 #: src/profile-preferences.ui:2077
 msgid "Scroll on _keystroke"
-msgstr "Gulung pada saat tombol dite_kan"
+msgstr "Gulir pada saat tombol dite_kan"
 
 #: src/profile-preferences.ui:2117
 msgid "lines"
@@ -1844,7 +1841,7 @@ msgstr "baris"
 
 #: src/profile-preferences.ui:2139
 msgid "Scroll_back:"
-msgstr "Gulung _balik:"
+msgstr "Gulir _balik:"
 
 #: src/profile-preferences.ui:2150
 msgid "_Unlimited"
@@ -1852,7 +1849,7 @@ msgstr "Tak ter_batas"
 
 #: src/profile-preferences.ui:2207
 msgid "Scrolling"
-msgstr "Menggulung"
+msgstr "Menggulir"
 
 #: src/profile-preferences.ui:2228
 msgid ""
@@ -1861,10 +1858,10 @@ msgid ""
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
 msgstr ""
-"<small><i><b>Catat:</b>Pilihan ini dapat menyebabkan ada program yang tidak "
-"jalan dengan semestinya. Pilihan ini disediakan hanya untuk menyiasati "
-"beberapa aplikasi dan sistem operasi tertentu yang memiliki perilaku berbeda"
-" pada aplikasi terminalnya.</i></small>"
+"<small><i><b>Catatan:</b>Pilihan ini dapat menyebabkan ada program yang "
+"tidak jalan dengan semestinya. Pilihan ini disediakan hanya untuk menyiasati"
+" beberapa aplikasi dan sistem operasi tertentu yang memiliki perilaku "
+"berbeda pada aplikasi terminalnya.</i></small>"
 
 #: src/profile-preferences.ui:2250
 msgid "_Delete key generates:"
@@ -1888,7 +1885,7 @@ msgstr "Respon S/Key Challenge"
 
 #: src/skey-challenge.ui:120
 msgid "_Password:"
-msgstr "_Password:"
+msgstr "Kata _Sandi:"
 
 #: src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -2077,7 +2074,7 @@ msgstr "Bantuan"
 #: src/terminal-accels.c:855
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
-msgstr "Tombol singkat \"%s\" sudah terlebih dahulu dipasangkan pada aksi \"%s\""
+msgstr "Pintasan papan tik \"%s\" sudah terlebih dahulu dipasangkan pada aksi \"%s\""
 
 #: src/terminal-accels.c:1011
 msgid "_Action"
@@ -2168,7 +2165,7 @@ msgstr "Baltik"
 #: src/terminal-encoding.c:88 src/terminal-encoding.c:89
 #: src/terminal-encoding.c:94 src/terminal-encoding.c:112
 msgid "Cyrillic"
-msgstr "Cyrillic"
+msgstr "Sirilik"
 
 #: src/terminal-encoding.c:58 src/terminal-encoding.c:85
 #: src/terminal-encoding.c:91 src/terminal-encoding.c:117
@@ -2196,7 +2193,7 @@ msgstr "Turki"
 
 #: src/terminal-encoding.c:63
 msgid "Nordic"
-msgstr "Nordic"
+msgstr "Nordik"
 
 #: src/terminal-encoding.c:65
 msgid "Celtic"
@@ -2238,7 +2235,7 @@ msgstr "Korea"
 #: src/terminal-encoding.c:76 src/terminal-encoding.c:77
 #: src/terminal-encoding.c:78
 msgid "Chinese Simplified"
-msgstr "Cina Sederhana"
+msgstr "Cina Disederhanakan"
 
 #: src/terminal-encoding.c:79
 msgid "Georgian"
@@ -2393,24 +2390,23 @@ msgstr "Membuat jendela sepenuh layar"
 #: src/terminal-options.c:1045
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr ""
-"Tentukan ukuran jendela, misalnya 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr "Atur ukuran jendela, misalnya 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 
 #: src/terminal-options.c:1046
 msgid "GEOMETRY"
-msgstr "GEOMETRY"
+msgstr "GEOMETRI"
 
 #: src/terminal-options.c:1054
 msgid "Set the window role"
-msgstr "Tata peran jendela"
+msgstr "Atur peran jendela"
 
 #: src/terminal-options.c:1055
 msgid "ROLE"
-msgstr "ROLE"
+msgstr "PERAN"
 
 #: src/terminal-options.c:1063
 msgid "Set the last specified tab as the active one in its window"
-msgstr "Tentukan tab terakhir yang aktif pada jendela"
+msgstr "Atur tab terakhir yang aktif pada jendela"
 
 #: src/terminal-options.c:1077
 msgid "Execute the argument to this option inside the terminal"
@@ -2426,7 +2422,7 @@ msgstr "NAMA-PROFIL"
 
 #: src/terminal-options.c:1095
 msgid "Set the terminal title"
-msgstr "Menentukan judul termianl"
+msgstr "Atur judul terminal"
 
 #: src/terminal-options.c:1096
 msgid "TITLE"
@@ -2434,19 +2430,19 @@ msgstr "JUDUL"
 
 #: src/terminal-options.c:1104
 msgid "Set the working directory"
-msgstr "Menentukan direktori kerja"
+msgstr "Atur direktori kerja"
 
 #: src/terminal-options.c:1105
 msgid "DIRNAME"
-msgstr "NAMA-DIREKTORI"
+msgstr "NAMADIREKTORI"
 
 #: src/terminal-options.c:1113
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr "Tentukan faktor perbesaran terminal (1.0 = ukuran normal)"
+msgstr "Atur faktor perbesaran terminal (1.0 = ukuran normal)"
 
 #: src/terminal-options.c:1114
 msgid "ZOOM"
-msgstr "ZOOM"
+msgstr "PERBESARAN"
 
 #: src/terminal-options.c:1365 src/terminal-options.c:1368
 msgid "MATE Terminal Emulator"
@@ -2546,7 +2542,7 @@ msgid ""
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"MATE Terminal adalah perangkat lunak bebas, Anda dapat "
+"Terminal MATE adalah perangkat lunak bebas, Anda dapat "
 "menyebarluaskannya/atau memodifikasinya di bawah ketentuan GNU General "
 "Public License seperti dipublikasikan oleh Free Software Foundation; baik "
 "versi 3 dari Lisensi, atau (menurut pilihan anda) versi manapun setelahnya."
@@ -2628,7 +2624,7 @@ msgstr "_Bantuan"
 
 #: src/terminal-window.c:1909
 msgid "New _Profile…"
-msgstr "_Profil Baru..."
+msgstr "_Profil Baru…"
 
 #: src/terminal-window.c:1914
 msgid "_Save Contents"
@@ -2656,15 +2652,15 @@ msgstr "Tempel Nama _Berkas"
 
 #: src/terminal-window.c:1946
 msgid "Select _All"
-msgstr "Pilih _Semua"
+msgstr "Pilih Semu_a"
 
 #: src/terminal-window.c:1951
 msgid "P_rofiles…"
-msgstr "P_rofil..."
+msgstr "P_rofil…"
 
 #: src/terminal-window.c:1956
 msgid "_Keyboard Shortcuts…"
-msgstr "Tombol Pintas Papan _Ketik..."
+msgstr "Tombol Pintas Papan Ti_k…"
 
 #: src/terminal-window.c:1961
 msgid "Pr_ofile Preferences"
@@ -2676,7 +2672,7 @@ msgstr "Perbesar Tamp_ilan"
 
 #: src/terminal-window.c:1973
 msgid "Zoom _Out"
-msgstr "P_erkecil"
+msgstr "P_erkecil Tampilan"
 
 #: src/terminal-window.c:1978
 msgid "_Normal Size"
@@ -2720,7 +2716,7 @@ msgstr "Profil _Selanjutnya"
 
 #: src/terminal-window.c:2030
 msgid "_Set Title…"
-msgstr "_Atur Judul..."
+msgstr "Atur _Judul…"
 
 #: src/terminal-window.c:2034
 msgid "Set _Character Encoding"
@@ -2736,7 +2732,7 @@ msgstr "Atur U_lang dan Bersihkan"
 
 #: src/terminal-window.c:2048
 msgid "_Add or Remove…"
-msgstr "T_ambah atau Hapus..."
+msgstr "T_ambah atau Hapus…"
 
 #: src/terminal-window.c:2055
 msgid "_Previous Tab"
@@ -2768,7 +2764,7 @@ msgstr "_Tentang"
 
 #: src/terminal-window.c:2094
 msgid "_Send Mail To…"
-msgstr "Kirim _Surat Ke..."
+msgstr "Kirim _Surel Ke…"
 
 #: src/terminal-window.c:2099
 msgid "_Copy E-mail Address"
@@ -2856,7 +2852,7 @@ msgstr "Simpan sebagai..."
 
 #: src/terminal-window.c:4264
 msgid "_Title:"
-msgstr "_Gelar:"
+msgstr "_Judul:"
 
 #: src/terminal-window.c:4449
 msgid "Contributors:"
@@ -2875,10 +2871,16 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 2002–2004 Havoc Pennington\n"
+"Hak Cipta © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Hak Cipta © 2006 Guilherme de S. Pastore\n"
+"Hak Cipta © 2007–2010 Christian Persch\n"
+"Hak Cipta © 2011 Perberos\n"
+"Hak Cipta © 2012-2020 Pengembang MATE"
 
 #: src/terminal-window.c:4475
 msgid "A terminal emulator for the MATE desktop"
-msgstr "Emulator terminal untuk desktop MATE"
+msgstr "Emulator terminal untuk destop MATE"
 
 #: src/terminal-window.c:4481
 msgid "translator-credits"
@@ -2887,4 +2889,4 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <k@syafaat.id>, 2017, 2020."

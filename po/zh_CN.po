@@ -5,13 +5,15 @@
 # 
 # Translators:
 # Dianjin Wang <1132321739qq@gmail.com>, 2018
-# liushuyu011 <liushuyu011@gmail.com>, 2018
-# Wylmer Wang, 2018
+# shuyu liu <liushuyu011@gmail.com>, 2018
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 玉堂白鹤 <yjwork@qq.com>, 2018
 # Mingye Wang <arthur200126@gmail.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # liulitchi <xingzuo88@qq.com>, 2019
+# Mingtian Yang <i@skylee.xyz>, 2020
+# 玉堂白鹤 <yjwork@qq.com>, 2020
+# 邢家朋 <xingjiapeng10@163.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -19,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: liulitchi <xingzuo88@qq.com>, 2019\n"
+"Last-Translator: 邢家朋 <xingjiapeng10@163.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +45,8 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"MATE 终端是一个终端模拟应用程序，让你可在 MATE 桌面环境下访问 UNIX 命令提示符。MATE 终端可模拟 X 协会的 xterm "
+"程序。它还支持透明背景、在同一窗口下开启多个终端模拟器（标签页）以及 URL 浏览。"
 
 #: mate-terminal.appdata.xml.in:17
 msgid ""
@@ -50,6 +54,8 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"MATE 终端是一个 GNOME Terminal 的 fork，也是 MATE 桌面环境的一部分。欲知更多关于 MATE 及 MATE "
+"终端的信息，请访问项目主页。"
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
 #: src/terminal-profile.c:161 src/terminal-window.c:2214
@@ -64,7 +70,7 @@ msgstr "使用命令行"
 #. file name)!
 #: mate-terminal.desktop.in.in:9
 msgid "utilities-terminal"
-msgstr ""
+msgstr "utilities-terminal"
 
 #: src/eggsmclient.c:225
 msgid "Disable connection to session manager"
@@ -577,23 +583,23 @@ msgstr "如果为真，终端就将使用与桌面相同的标准字体，假如
 
 #: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
-msgstr "高亮 S/Key 挑战"
+msgstr "高亮 S/Key 质询"
 
 #: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "检测到 S/Key 挑战响应查询且单击时弹出一个对话框。在对话框中输入的密码将发送到终端。"
+msgstr "检测到 S/Key 质询响应查询且单击时弹出一个对话框。在对话框中输入的密码将发送到终端。"
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "高亮鼠标指针下的 URL"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
-msgstr ""
+msgstr "如果选定，则鼠标指针下的 URL 将被高亮，并且可以通过 Ctrl + 鼠标单击打开或在上下文菜单中使用。"
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -1397,15 +1403,15 @@ msgstr "终端响铃(_B)"
 
 #: src/profile-preferences.ui:458
 msgid "Copy selected text into _clipboard"
-msgstr "把选中的文本复制到剪贴板 (_C)"
+msgstr "把选中的文本复制到剪贴板(_C)"
 
 #: src/profile-preferences.ui:474
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "高亮 S/Key 质询(_S)"
 
 #: src/profile-preferences.ui:490
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "高亮鼠标指针下的 URL(_U)"
 
 #: src/profile-preferences.ui:515
 msgid "Cursor blin_k:"
@@ -1636,7 +1642,7 @@ msgstr "兼容性"
 
 #: src/skey-challenge.ui:100
 msgid "S/Key Challenge Response"
-msgstr "S/Key 挑战响应"
+msgstr "S/Key 质询响应"
 
 #: src/skey-challenge.ui:120
 msgid "_Password:"
@@ -1644,7 +1650,7 @@ msgstr "密码(_P)："
 
 #: src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr "您点击的文字不像是有效的 S/Key 挑战。"
+msgstr "您点击的文字不像是有效的 S/Key 质询。"
 
 #: src/skey-popup.c:176
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
@@ -2322,7 +2328,7 @@ msgstr "_%c. %s"
 
 #: src/terminal-window.c:1885
 msgid "_File"
-msgstr "文件 (_F)"
+msgstr "文件(_F)"
 
 #: src/terminal-window.c:1886 src/terminal-window.c:1899
 #: src/terminal-window.c:2140
@@ -2336,11 +2342,11 @@ msgstr "打开标签(_B)"
 
 #: src/terminal-window.c:1888
 msgid "_Edit"
-msgstr "编辑（_E）"
+msgstr "编辑(_E)"
 
 #: src/terminal-window.c:1889
 msgid "_View"
-msgstr "视图（_V）"
+msgstr "视图(_V)"
 
 #: src/terminal-window.c:1890
 msgid "_Search"
@@ -2356,7 +2362,7 @@ msgstr "标签(_B)"
 
 #: src/terminal-window.c:1893
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: src/terminal-window.c:1909
 msgid "New _Profile…"
@@ -2592,7 +2598,7 @@ msgstr "贡献者："
 
 #: src/terminal-window.c:4468
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "关于 MATE 终端"
 
 #: src/terminal-window.c:4469
 msgid ""
@@ -2620,4 +2626,5 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2015\n"
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
+"Mingtian Yang <i@skylee.xyz>, 2020"
