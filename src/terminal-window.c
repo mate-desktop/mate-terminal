@@ -2936,7 +2936,9 @@ notebook_button_press_cb (GtkWidget *widget,
     if ((event->type == GDK_BUTTON_PRESS && event->button == 2) &&
             (g_settings_get_boolean (settings, "middle-click-closes-tabs")))
     {
-        tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
+        tab_clicked = find_tab_num_at_pos (notebook,
+                                           (int)event->x_root,
+                                           (int)event->y_root);
         if (tab_clicked >= 0)
         {
             before_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
@@ -2969,7 +2971,9 @@ notebook_button_press_cb (GtkWidget *widget,
             (event->state & gtk_accelerator_get_default_mod_mask ()) != 0)
         return FALSE;
 
-    tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
+    tab_clicked = find_tab_num_at_pos (notebook,
+                                       (int)event->x_root,
+                                       (int)event->y_root);
     if (tab_clicked < 0)
         return FALSE;
 
