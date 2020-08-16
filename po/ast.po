@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Xuacu Saturio <xuacusk8@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Ḷḷumex03 <tornes@opmbx.org>, 2018
-# Iñigo Varela <ivarela@softastur.org>, 2018
+# Iñigo Varela <ivarela@softastur.org>, 2020
+# Xuacu Saturio <xuacusk8@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ḷḷumex03, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.23\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Iñigo Varela <ivarela@softastur.org>, 2018\n"
+"PO-Revision-Date: 2020-02-16 16:10+0000\n"
+"Last-Translator: Ḷḷumex03, 2020\n"
 "Language-Team: Asturian (https://www.transifex.com/mate/teams/13566/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -211,7 +211,7 @@ msgstr "Nome del perfil llexible pol humanu"
 
 #: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
-msgstr "Conseña si tien d'amosase la barra de menús nes llingüetes/solapes"
+msgstr "Conseña si tien d'amosase la barra de menús nes llingüetes"
 
 #: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
@@ -564,8 +564,8 @@ msgstr "Fonte"
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
-"Un nome de tipografía de Pangu. Dalgunos exemplos son «Sans 12» o «Monospace"
-" Bold 14»."
+"Un nome de fonte de Pango. Dalgunos exemplos son «Sans 12» o «Monospace Bold"
+" 14»."
 
 #: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
@@ -583,7 +583,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
-msgstr "Imaxe de Fondu"
+msgstr "Imaxe de fondu"
 
 #: src/org.mate.terminal.gschema.xml.in:244
 msgid "Filename of a background image."
@@ -640,7 +640,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
-msgstr "Efeutu de la tecla Esaniciar (Delete)"
+msgstr "Efeutu de la tecla Desaniciar (Delete)"
 
 #: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
@@ -650,12 +650,12 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
-"Determina qué códigu xenera la tecla Esaniciar (Delete). Los valores dables "
-"son «ascii-del» pal caráuter ASCII de DEL, «control-h» pa Control-H (tamién "
-"conocíu como'l caráuter ASCII BS), «escape-sequence» pa la secuencia "
+"Determina qué códigu xenera la tecla Desaniciar (Delete). Los valores dables"
+" son «ascii-del» pal caráuter ASCII de DEL, «control-h» pa Control-H (tamién"
+" conocíu como'l caráuter ASCII BS), «escape-sequence» pa la secuencia "
 "d'escape que típicamente ta asociada con retrocesu (backspace) o desaniciar "
 "(delete). «escape-sequence» considérase davezu como la configuración "
-"correuta pa la tecla Esaniciar (Delete)."
+"correuta pa la tecla Desaniciar (Delete)."
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -673,16 +673,16 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
-msgstr "Conseña si tien d'usase la tipografía del sistema."
+msgstr "Conseña si tien d'usase la fonte del sistema."
 
 #: src/org.mate.terminal.gschema.xml.in:274
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Si ye «true» (braero) la terminal usará la tipografía global del escritoriu "
-"si ésta ye d'anchu fixu (d'otra miente sedrá la tipografía más asemeyada "
-"dable a ésta)."
+"Si ye «true» (braero) la terminal usará la fonte global del escritoriu si "
+"ésta ye d'anchu fixu (d'otra miente sedrá la fonte más asemeyada dable a "
+"ésta)."
 
 #: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
@@ -775,7 +775,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
-msgstr "Combinación de tecles pa pesllar una llingüeta"
+msgstr "Combinación de tecles pa zarrar una llingüeta"
 
 #: src/org.mate.terminal.gschema.xml.in:311
 msgid ""
@@ -784,14 +784,14 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Combinación de tecles pa pesllar una llingüeta. Espresáu como una cadena nel"
-" mesmu formatu usáu polos archivos de recursos de GTK+. Si define esta "
-"opción cola cadena especial «disabled», entós nun habrá una combinación pa "
-"esta aición."
+"Combinación de tecles pa zarrar una llingüeta. Espresáu como una cadena nel "
+"mesmu formatu usáu polos archivos de recursos de GTK+. Si define esta opción"
+" cola cadena especial «disabled», entós nun habrá una combinación pa esta "
+"aición."
 
 #: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
-msgstr "Combinación de tecles pa pesllar una ventana"
+msgstr "Combinación de tecles pa zarrar una ventana"
 
 #: src/org.mate.terminal.gschema.xml.in:316
 msgid ""
@@ -800,7 +800,7 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Combinación de tecles pa pesllar una ventana. Espresáu como una cadena nel "
+"Combinación de tecles pa zarrar una ventana. Espresáu como una cadena nel "
 "mesmu formatu usáu polos archivos de recursos de GTK+. Si define esta opción"
 " cola cadena especial «disabled», entós nun habrá una combinación pa esta "
 "aición."
@@ -1302,7 +1302,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
-msgstr "Combinación de tecles p'agrandar la tipografía"
+msgstr "Combinación de tecles p'agrandar la fonte"
 
 #: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
@@ -1311,14 +1311,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Combinación de tecles p'agrandar la tipografía. Espresáu como una cadena nel"
-" mesmu formatu usáu polos archivos de recursos de GTK+. Si define esta "
-"opción cola cadena especial «disabled», entós nun habrá una combinación pa "
-"esta aición."
+"Combinación de tecles p'agrandar la fonte. Espresáu como una cadena nel "
+"mesmu formatu usáu polos ficheros de recursos de GTK+. Si define esta opción"
+" cola cadena especial «disabled», entós nun habrá una combinación pa esta "
+"aición."
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
-msgstr "Combinación de tecles p'amenorgar la tipografía"
+msgstr "Combinación de tecles p'amenorgar la fonte"
 
 #: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
@@ -1327,14 +1327,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Combinación de tecles p'amenorgar la tipografía. Espresáu como una cadena "
-"nel mesmu formatu usáu polos archivos de recursos de GTK+. Si define esta "
-"opción cola cadena especial «disabled», entós nun habrá una combinación pa "
-"esta aición."
+"Combinación de tecles p'amenorgar la fonte. Espresáu como una cadena nel "
+"mesmu formatu usáu polos ficheros de recursos de GTK+. Si define esta opción"
+" cola cadena especial «disabled», entós nun habrá una combinación pa esta "
+"aición."
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
-msgstr "Combinación de tecles p'afitar la tipografía al so tamañu normal"
+msgstr "Combinación de tecles p'afitar la fonte al so tamañu normal"
 
 #: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
@@ -1343,10 +1343,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Combinación de tecles pa dexar en tamañu normal la tipografía. Espresáu como"
-" una cadena nel mesmu formatu usáu polos archivos de recursos de GTK+. Si "
-"define esta opción cola cadena especial «disabled», entós nun habrá una "
-"combinación pa esta aición."
+"Combinación de tecles pa dexar en tamañu normal la fonte. Espresáu como una "
+"cadena nel mesmu formatu usáu polos ficheros de recursos de GTK+. Si define "
+"esta opción cola cadena especial «disabled», entós nun habrá una combinación"
+" pa esta aición."
 
 #: src/profile-editor.c:44
 msgid "Black on light yellow"
@@ -1398,7 +1398,7 @@ msgstr "Personalizar"
 
 #: src/profile-editor.c:595
 msgid "Images"
-msgstr "Imaxes"
+msgstr "Imáxenes"
 
 #: src/profile-editor.c:732
 #, c-format
@@ -1412,11 +1412,11 @@ msgstr "Entrada de paleta %d"
 
 #: src/encodings-dialog.ui:14
 msgid "Add or Remove Terminal Encodings"
-msgstr "Amestar o esaniciar codificaciones de la terminal"
+msgstr "Amestar o desaniciar codificaciones de la terminal"
 
 #: src/encodings-dialog.ui:169
 msgid "A_vailable encodings:"
-msgstr "_Codificaciones Disponibles:"
+msgstr "_Codificaciones disponibles:"
 
 #: src/encodings-dialog.ui:187
 msgid "E_ncodings shown in menu:"
@@ -1432,7 +1432,7 @@ msgstr "_Atopar: "
 
 #: src/find-dialog.ui:124
 msgid "_Match case"
-msgstr "Concasar _Mayúscules"
+msgstr "Concasar _mayúscules"
 
 #: src/find-dialog.ui:141
 msgid "Match _entire word only"
@@ -1637,7 +1637,7 @@ msgstr "Nome del _perfil:"
 
 #: src/profile-preferences.ui:342
 msgid "_Use the system fixed width font"
-msgstr "_Usar la tipografía d'anchu fixu del sistema"
+msgstr "_Usar la fonte d'anchu fixu del sistema"
 
 #: src/profile-preferences.ui:372
 msgid "_Font:"
@@ -1645,7 +1645,7 @@ msgstr "_Fonte:"
 
 #: src/profile-preferences.ui:389
 msgid "Choose A Terminal Font"
-msgstr "Escueya una tipografía de terminal"
+msgstr "Escueyi una fonte de terminal"
 
 #: src/profile-preferences.ui:410
 msgid "_Allow bold text"
@@ -1889,7 +1889,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:2250
 msgid "_Delete key generates:"
-msgstr "La tecla «_Esaniciar» xenera:"
+msgstr "La tecla «_Desaniciar» xenera:"
 
 #: src/profile-preferences.ui:2302
 msgid "_Backspace key generates:"
@@ -1933,7 +1933,7 @@ msgstr "Guardar conteníu"
 
 #: src/terminal-accels.c:166
 msgid "Close Tab"
-msgstr "Pesllar llingüeta"
+msgstr "Zarrar llingüeta"
 
 #: src/terminal-accels.c:170
 msgid "Close Window"
@@ -2262,11 +2262,11 @@ msgstr "Chinu Simplificáu"
 
 #: src/terminal-encoding.c:79
 msgid "Georgian"
-msgstr "Xeorxianu"
+msgstr "Xeorxanu"
 
 #: src/terminal-encoding.c:90 src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
-msgstr "Cirílicu/Ucranianu"
+msgstr "Cirílicu/Ucraín"
 
 #: src/terminal-encoding.c:93
 msgid "Croatian"
@@ -2295,7 +2295,7 @@ msgstr "Islandés"
 #: src/terminal-encoding.c:107 src/terminal-encoding.c:110
 #: src/terminal-encoding.c:119
 msgid "Vietnamese"
-msgstr "Vietnamita"
+msgstr "Vietnamés"
 
 #: src/terminal-encoding.c:108
 msgid "Thai"
@@ -2623,7 +2623,7 @@ msgstr "Abrir _terminal"
 #: src/terminal-window.c:1887 src/terminal-window.c:1904
 #: src/terminal-window.c:2145
 msgid "Open Ta_b"
-msgstr "Abrir sola_pa"
+msgstr "Abrir llingüe_ta"
 
 #: src/terminal-window.c:1888
 msgid "_Edit"
@@ -2643,7 +2643,7 @@ msgstr "_Terminal"
 
 #: src/terminal-window.c:1892
 msgid "Ta_bs"
-msgstr "_Solapas"
+msgstr "_Llingüetes"
 
 #: src/terminal-window.c:1893
 msgid "_Help"
@@ -2659,7 +2659,7 @@ msgstr "_Guardar conteníu"
 
 #: src/terminal-window.c:1919 src/terminal-window.c:2155
 msgid "C_lose Tab"
-msgstr "Pe_sllar llingüeta"
+msgstr "Za_rrar llingüeta"
 
 #: src/terminal-window.c:1924
 msgid "_Close Window"
@@ -2679,7 +2679,7 @@ msgstr "Apegar los _nomes de ficheru"
 
 #: src/terminal-window.c:1946
 msgid "Select _All"
-msgstr "Seleicion_ar too"
+msgstr "_Seleicionar too"
 
 #: src/terminal-window.c:1951
 msgid "P_rofiles…"
@@ -2703,7 +2703,7 @@ msgstr "A_menorgar"
 
 #: src/terminal-window.c:1978
 msgid "_Normal Size"
-msgstr "Tamañu _Normal"
+msgstr "Tamañu _normal"
 
 #: src/terminal-window.c:1985
 msgid "_Find..."
@@ -2711,11 +2711,11 @@ msgstr "_Atopar..."
 
 #: src/terminal-window.c:1990
 msgid "Find Ne_xt"
-msgstr "Atopar Sig_uiente"
+msgstr "Atopar _siguiente"
 
 #: src/terminal-window.c:1995
 msgid "Find Pre_vious"
-msgstr "Atopar Anter_ior"
+msgstr "Atopar _anterior"
 
 #: src/terminal-window.c:2000
 msgid "_Clear Highlight"
@@ -2723,7 +2723,7 @@ msgstr "_Llimpiar resaltáu"
 
 #: src/terminal-window.c:2006
 msgid "Go to _Line..."
-msgstr "Dir a _Llinia"
+msgstr "Dir a _llinia"
 
 #: src/terminal-window.c:2011
 msgid "_Incremental Search..."
@@ -2731,7 +2731,7 @@ msgstr "Gueta _incremental…"
 
 #: src/terminal-window.c:2018
 msgid "Change _Profile"
-msgstr "Camudar _Perfil"
+msgstr "Camudar _perfil"
 
 #: src/terminal-window.c:2020
 msgid "_Previous Profile"
@@ -2747,7 +2747,7 @@ msgstr "A_fitar títulu..."
 
 #: src/terminal-window.c:2034
 msgid "Set _Character Encoding"
-msgstr "Afitar _Codificación carauteres"
+msgstr "Afitar _codificación carauteres"
 
 #: src/terminal-window.c:2036
 msgid "_Reset"
@@ -2763,19 +2763,19 @@ msgstr "_Amestar o quitar…"
 
 #: src/terminal-window.c:2055
 msgid "_Previous Tab"
-msgstr "Llingüeta _Previa"
+msgstr "Llingüeta _previa"
 
 #: src/terminal-window.c:2060
 msgid "_Next Tab"
-msgstr "Llingüeta S_iguiente"
+msgstr "Llingüeta _siguiente"
 
 #: src/terminal-window.c:2065
 msgid "Move Tab _Left"
-msgstr "Mover Llingüeta a la _Esquierda"
+msgstr "Mover Llingüeta a la _esquierda"
 
 #: src/terminal-window.c:2070
 msgid "Move Tab _Right"
-msgstr "Mover Llingüeta a la _Drecha"
+msgstr "Mover Llingüeta a la _drecha"
 
 #: src/terminal-window.c:2075
 msgid "_Detach tab"
@@ -2807,11 +2807,11 @@ msgstr "_Copiar la direición de llamada"
 
 #: src/terminal-window.c:2114
 msgid "_Open Link"
-msgstr "_Abrir Enllaz"
+msgstr "_Abrir enllaz"
 
 #: src/terminal-window.c:2119
 msgid "_Copy Link Address"
-msgstr "_Copiar Direición del Enllaz"
+msgstr "_Copiar direición del enllaz"
 
 #: src/terminal-window.c:2123
 msgid "P_rofiles"
@@ -2819,7 +2819,7 @@ msgstr "Pe_rfiles"
 
 #: src/terminal-window.c:2150 src/terminal-window.c:3640
 msgid "C_lose Window"
-msgstr "_Pesllar ventana"
+msgstr "_Zarrar ventana"
 
 #: src/terminal-window.c:2160
 msgid "L_eave Full Screen"

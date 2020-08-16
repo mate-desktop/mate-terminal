@@ -4,20 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Kim Malmo <berencamlost@msn.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2018
-# b84df44fb72862b85bae7a669218c6c2, 2019
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
+# Kim Malmo <berencamlost@msn.com>, 2020
+# 87d96f43665dd9fb55eba4603e184cae, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Allan Nordhøy <epost@anotheragency.no>, 2020
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
+# b84df44fb72862b85bae7a669218c6c2, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.23\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
+"PO-Revision-Date: 2020-02-16 16:10+0000\n"
+"Last-Translator: b84df44fb72862b85bae7a669218c6c2, 2020\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -154,7 +155,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
-msgstr "[ 'UTF-8', 'current' ]"
+msgstr "[ 'UTF-8', 'nåværende' ]"
 
 #: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
@@ -205,7 +206,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Forvalg'"
+msgstr "'Standard'"
 
 #: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
@@ -229,7 +230,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
-msgstr "Forvalgt farge for tekst i terminalen"
+msgstr "Standard farge for tekst i terminalen"
 
 #: src/org.mate.terminal.gschema.xml.in:104
 msgid ""
@@ -241,19 +242,19 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
-msgstr "Forvalgt bakgrunnsfarge for terminalen"
+msgstr "Standard bakgrunnsfarge for terminalen"
 
 #: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
-"Forvalgt farge for terminalens bakgrunn som en fargespesifikasjon (kan være "
+"Standard farge for terminalens bakgrunn som en fargespesifikasjon (kan være "
 "HTML-type heksadesimale tall eller et fargenavn som «red»)."
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
-msgstr "Forvalgt farge for fet tekst i terminalen"
+msgstr "Standard farge for fet tekst i terminalen"
 
 #: src/org.mate.terminal.gschema.xml.in:114
 msgid ""
@@ -261,7 +262,7 @@ msgid ""
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
 msgstr ""
-"Forvalgt farge for fet tekst i terminalen som en fargespesifikasjon (kan "
+"Standard farge for fet tekst i terminalen som en fargespesifikasjon (kan "
 "være HTML-type heksadesimale tall eller et fargenavn som «red»). Overses "
 "hvis bold_color_same_as_fg er true."
 
@@ -562,7 +563,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
-msgstr "Bakgrunns bilde"
+msgstr "Bakgrunnsbilde"
 
 #: src/org.mate.terminal.gschema.xml.in:244
 msgid "Filename of a background image."
@@ -1624,7 +1625,7 @@ msgstr "Vis _menylinje som forvalg i nye terminaler"
 
 #: src/profile-preferences.ui:442
 msgid "Terminal _bell"
-msgstr "Terminal_klokke"
+msgstr "Terminal_pip"
 
 #: src/profile-preferences.ui:458
 msgid "Copy selected text into _clipboard"
@@ -1772,7 +1773,7 @@ msgstr "Farger"
 
 #: src/profile-preferences.ui:1779
 msgid "_Solid color"
-msgstr "_Helfylt farge)"
+msgstr "_Helfylt farge"
 
 #: src/profile-preferences.ui:1801
 msgid "_Background image"
@@ -2674,7 +2675,7 @@ msgstr "_Normal størrelse"
 
 #: src/terminal-window.c:1985
 msgid "_Find..."
-msgstr "_Finn …"
+msgstr "_Finn…"
 
 #: src/terminal-window.c:1990
 msgid "Find Ne_xt"
@@ -2702,7 +2703,7 @@ msgstr "Bytt _profil"
 
 #: src/terminal-window.c:2020
 msgid "_Previous Profile"
-msgstr "_Foregående profil"
+msgstr "_Forrige profil"
 
 #: src/terminal-window.c:2025
 msgid "_Next Profile"
@@ -2714,7 +2715,7 @@ msgstr "_Sett tittel …"
 
 #: src/terminal-window.c:2034
 msgid "Set _Character Encoding"
-msgstr "Sett _tegnkoding"
+msgstr "Velg _tegnkoding"
 
 #: src/terminal-window.c:2036
 msgid "_Reset"
@@ -2754,7 +2755,7 @@ msgstr "_Innhold"
 
 #: src/terminal-window.c:2087
 msgid "_About"
-msgstr "Om"
+msgstr "_Om"
 
 #: src/terminal-window.c:2094
 msgid "_Send Mail To…"

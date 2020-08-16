@@ -4,23 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Michal Slovák <michalslovak2@hotmail.com>, 2018
-# peter, 2018
-# Pavol Šimo <palo.simo@gmail.com>, 2018
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
-# Dušan Kazik <prescott66@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Juraj Oravec, 2018
-# Tibor Kaputa <tibbbi2@gmail.com>, 2018
-# Vendelín Slezák <klaykap@yandex.com>, 2018
+# Michal Slovák <michalslovak2@hotmail.com>, 2020
+# peter, 2020
+# Pavol Šimo <palo.simo@gmail.com>, 2020
+# Dušan Kazik <prescott66@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# 32442f8bc5cc500b59f161d95078a28a_525ed04, 2020
+# Tibor Kaputa <tibbbi2@gmail.com>, 2020
+# Vendelín Slezák <klaykap@yandex.com>, 2020
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.23\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2020-01-13 14:52+0100\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
+"PO-Revision-Date: 2020-02-16 16:10+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -164,6 +164,9 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Podmnožina dostupných kódovaní, ktorá bude v menu \"Kódovanie\". Toto je "
+"zoznam, ktorý sa tam objaví. Špeciálne kódovanie „current“ znamená, že sa "
+"zobrazí kódovanie, ktoré je aktuálne lokálne nastavené."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -182,6 +185,8 @@ msgstr "Zatvoriť karty stredným tlačidlom"
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Ak je táto možnosť vybraná, bude povolená možnosť zatvárať kart pomocou "
+"kliknutia stredným tlačítkom."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -192,6 +197,8 @@ msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Ak je táto možnosť vybraná, bude povolené prepínať karty pomocou [Ctrl+Tab] "
+"a [Ctrl+Shift+Tab]."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -792,6 +799,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Klávesová skratka pre vloženie textu zo schránky do terminálu. Zadaná ako "
+"reťazec v rovnakom formáte, aký používajú súbory zdrojov GTK+. Ak nastavíte "
+"špeciálnu hodnotu „disabled“, nebude pre túto činnosť priradená žiadna "
+"klávesová skratka."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
@@ -804,6 +815,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Klávesová skratka pre výber všetkého textu v termináli. Zadaná ako reťazec v"
+" rovnakom formáte, ktorý používajú súbory zdrojov GTK+. Ak nastavíte "
+"špeciálnu hodnotu „disabled“, nebude pre túto činnosť priradená žiadna "
+"klávesová skratka."
 
 #: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
@@ -823,7 +838,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Klávesová skratka pre nájdenie nasledujúceho výskytu hľadaného výrazu"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -832,10 +847,15 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Klávesová skratka pre nájdenie nasledujúceho výskytu hľadaného výrazu v "
+"termináli. Zadaná ako reťazec v rovnakom formáte, ktorý používajú súbory "
+"zdrojov GTK+. Ak nastavíte špeciálnu hodnotu „disabled“, nebude pre túto "
+"činnosť priradená žiadna klávesová skratka."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr ""
+"Klávesová skratka pre nájdenie predchádzajúceho výskytu hľadaného výrazu"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -844,6 +864,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Klávesová skratka pre nájdenie predchádzajúceho výskytu hľadaného výrazu v "
+"termináli. Zadaná ako reťazec v rovnakom formáte, ktorý používajú súbory "
+"zdrojov GTK+. Ak nastavíte špeciálnu hodnotu „disabled“, nebude pre túto "
+"činnosť priradená žiadna klávesová skratka."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1300,13 +1324,13 @@ msgstr "Biela na čiernom"
 #. translated
 #: src/profile-editor.c:69
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarized, svetlé"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:74
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarized, tmavé"
 
 #: src/profile-editor.c:497
 #, c-format
@@ -1491,7 +1515,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/profile-preferences.ui:143 src/extra-strings.c:80
 msgid "Solarized"
-msgstr ""
+msgstr "Solarized"
 
 #. Translators: Scrollbar is: ...
 #: src/profile-preferences.ui:157 src/extra-strings.c:56
@@ -1915,7 +1939,7 @@ msgstr "Obnoviť"
 
 #: src/terminal-accels.c:242
 msgid "Reset and Clear"
-msgstr "Vrátiť a vymazať"
+msgstr "Zresetovať a vyčistiť"
 
 #: src/terminal-accels.c:246
 msgid "Switch to Previous Profile"
@@ -2019,7 +2043,7 @@ msgstr "Karty"
 
 #: src/terminal-accels.c:352
 msgid "Help"
-msgstr "Pomocník"
+msgstr "Nápoveda"
 
 #: src/terminal-accels.c:855
 #, c-format
@@ -2554,7 +2578,7 @@ msgstr "_Upraviť"
 
 #: src/terminal-window.c:1889
 msgid "_View"
-msgstr "Z_obrazenie"
+msgstr "_Zobraziť"
 
 #: src/terminal-window.c:1890
 msgid "_Search"
@@ -2570,7 +2594,7 @@ msgstr "_Karty"
 
 #: src/terminal-window.c:1893
 msgid "_Help"
-msgstr "_Pomocník"
+msgstr "_Nápoveda"
 
 #: src/terminal-window.c:1909
 msgid "New _Profile…"
@@ -2706,7 +2730,7 @@ msgstr "O_dpojiť kartu"
 
 #: src/terminal-window.c:2082
 msgid "_Contents"
-msgstr "Ob_sah"
+msgstr "_Pomocník"
 
 #: src/terminal-window.c:2087
 msgid "_About"
@@ -2832,4 +2856,5 @@ msgstr ""
 "Stanislav Višňovský\n"
 "Marcel Telka <marcel@telka.sk>\n"
 "Tibor Kaputa <tibbbi2@gmail.com>\n"
-"Dušan Kazik <prescott66@gmail.com>"
+"Dušan Kazik <prescott66@gmail.com>\n"
+"Ján Ďanovský <dagsoftware@yahoo.com>"
