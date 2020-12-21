@@ -401,7 +401,6 @@ terminal_window_ReadInteger (char  *string,
 #define YValue          0x0002
 #define WidthValue      0x0004
 #define HeightValue     0x0008
-#define AllValues       0x000F
 #define XNegative       0x0010
 #define YNegative       0x0020
 
