@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.24.0\n"
+"Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2020-06-28 09:46+0200\n"
+"POT-Creation-Date: 2021-01-16 13:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4431
+#: src/terminal-options.c:189 src/terminal-window.c:4434
 msgid "MATE Terminal"
 msgstr ""
 
@@ -41,7 +41,7 @@ msgid ""
 msgstr ""
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2205
+#: src/terminal-profile.c:160 src/terminal-window.c:2204
 msgid "Terminal"
 msgstr ""
 
@@ -49,21 +49,21 @@ msgstr ""
 msgid "Use the command line"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:40 src/set-title-dialog.ui:38
-#: src/terminal-app.c:691
+#: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:691
 msgid "_Cancel"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3618
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2140
+#: src/terminal-window.c:3621
 msgid "C_lose Window"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3617
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3620
 msgid "Close this window?"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3606
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3609
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -98,201 +98,216 @@ msgstr ""
 msgid "Show session management options"
 msgstr ""
 
-#: src/encodings-dialog.ui:14
+#: src/encodings-dialog.ui:24
 msgid "Add or Remove Terminal Encodings"
 msgstr ""
 
-#: src/encodings-dialog.ui:169
+#: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
+#: src/profile-manager.ui:58 src/profile-preferences.ui:262
+#: src/terminal-window.c:1883
+msgid "_Help"
+msgstr ""
+
+#: src/encodings-dialog.ui:59 src/find-dialog.ui:42 src/keybinding-editor.ui:59
+#: src/profile-manager.ui:76 src/profile-preferences.ui:279
+msgid "_Close"
+msgstr ""
+
+#: src/encodings-dialog.ui:184
 msgid "A_vailable encodings:"
 msgstr ""
 
-#: src/encodings-dialog.ui:187
+#: src/encodings-dialog.ui:202
 msgid "E_ncodings shown in menu:"
 msgstr ""
 
 #. Translators: This refers to the Delete keybinding option
-#: src/extra-strings.c:24 src/profile-preferences.ui:174
-#: src/profile-preferences.ui:197
+#: src/extra-strings.c:24 src/profile-preferences.ui:184
+#: src/profile-preferences.ui:207
 msgid "Automatic"
 msgstr ""
 
 #. Translators: This refers to the Delete keybinding option
-#: src/extra-strings.c:26 src/profile-preferences.ui:177
-#: src/profile-preferences.ui:200
+#: src/extra-strings.c:26 src/profile-preferences.ui:187
+#: src/profile-preferences.ui:210
 msgid "Control-H"
 msgstr ""
 
 #. Translators: This refers to the Delete keybinding option
-#: src/extra-strings.c:28 src/profile-preferences.ui:180
-#: src/profile-preferences.ui:203
+#: src/extra-strings.c:28 src/profile-preferences.ui:190
+#: src/profile-preferences.ui:213
 msgid "ASCII DEL"
 msgstr ""
 
 #. Translators: This refers to the Delete keybinding option
-#: src/extra-strings.c:30 src/profile-preferences.ui:183
-#: src/profile-preferences.ui:206
+#: src/extra-strings.c:30 src/profile-preferences.ui:193
+#: src/profile-preferences.ui:216
 msgid "Escape sequence"
 msgstr ""
 
 #. Translators: This refers to the Delete keybinding option
-#: src/extra-strings.c:32 src/profile-preferences.ui:186
-#: src/profile-preferences.ui:209
+#: src/extra-strings.c:32 src/profile-preferences.ui:196
+#: src/profile-preferences.ui:219
 msgid "TTY Erase"
 msgstr ""
 
 #. Translators: Cursor shape: ...
-#: src/extra-strings.c:35 src/profile-preferences.ui:66
+#: src/extra-strings.c:35 src/profile-preferences.ui:76
 msgid "Block"
 msgstr ""
 
 #. Translators: Cursor shape: ...
-#: src/extra-strings.c:37 src/profile-preferences.ui:69
+#: src/extra-strings.c:37 src/profile-preferences.ui:79
 msgid "I-Beam"
 msgstr ""
 
 #. Translators: Cursor shape: ...
-#: src/extra-strings.c:39 src/profile-preferences.ui:72
+#: src/extra-strings.c:39 src/profile-preferences.ui:82
 msgid "Underline"
 msgstr ""
 
 #. Translators: Cursor blink: ...
-#: src/extra-strings.c:42 src/profile-preferences.ui:220
+#: src/extra-strings.c:42 src/profile-preferences.ui:230
 msgid "Use system settings"
 msgstr ""
 
 #. Translators: Cursor blink: ...
-#: src/extra-strings.c:44 src/profile-preferences.ui:223
+#: src/extra-strings.c:44 src/profile-preferences.ui:233
 msgid "Always blink"
 msgstr ""
 
 #. Translators: Cursor blink: ...
-#: src/extra-strings.c:46 src/profile-preferences.ui:226
+#: src/extra-strings.c:46 src/profile-preferences.ui:236
 msgid "Never blink"
 msgstr ""
 
 #. Translators: When command exits: ...
-#: src/extra-strings.c:49 src/profile-preferences.ui:103
+#: src/extra-strings.c:49 src/profile-preferences.ui:113
 msgid "Exit the terminal"
 msgstr ""
 
 #. Translators: When command exits: ...
-#: src/extra-strings.c:51 src/profile-preferences.ui:106
+#: src/extra-strings.c:51 src/profile-preferences.ui:116
 msgid "Restart the command"
 msgstr ""
 
 #. Translators: When command exits: ...
-#: src/extra-strings.c:53 src/profile-preferences.ui:109
+#: src/extra-strings.c:53 src/profile-preferences.ui:119
 msgid "Hold the terminal open"
 msgstr ""
 
 #. Translators: Scrollbar is: ...
-#: src/extra-strings.c:56 src/profile-preferences.ui:157
+#: src/extra-strings.c:56 src/profile-preferences.ui:167
 msgid "On the left side"
 msgstr ""
 
 #. Translators: Scrollbar is: ...
-#: src/extra-strings.c:58 src/profile-preferences.ui:160
+#: src/extra-strings.c:58 src/profile-preferences.ui:170
 msgid "On the right side"
 msgstr ""
 
 #. Translators: Scrollbar is: ...
-#: src/extra-strings.c:60 src/profile-preferences.ui:163
+#: src/extra-strings.c:60 src/profile-preferences.ui:173
 #: src/terminal-accels.c:408
 msgid "Disabled"
 msgstr ""
 
 #. Translators: When terminal commands set their own titles: ...
-#: src/extra-strings.c:63 src/profile-preferences.ui:83
+#: src/extra-strings.c:63 src/profile-preferences.ui:93
 msgid "Replace initial title"
 msgstr ""
 
 #. Translators: When terminal commands set their own titles: ...
-#: src/extra-strings.c:65 src/profile-preferences.ui:86
+#: src/extra-strings.c:65 src/profile-preferences.ui:96
 msgid "Append initial title"
 msgstr ""
 
 #. Translators: When terminal commands set their own titles: ...
-#: src/extra-strings.c:67 src/profile-preferences.ui:89
+#: src/extra-strings.c:67 src/profile-preferences.ui:99
 msgid "Prepend initial title"
 msgstr ""
 
 #. Translators: When terminal commands set their own titles: ...
-#: src/extra-strings.c:69 src/profile-preferences.ui:92
+#: src/extra-strings.c:69 src/profile-preferences.ui:102
 msgid "Keep initial title"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
-#: src/extra-strings.c:72 src/profile-preferences.ui:131
+#: src/extra-strings.c:72 src/profile-preferences.ui:141
 msgid "Tango"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
-#: src/extra-strings.c:74 src/profile-preferences.ui:134
+#: src/extra-strings.c:74 src/profile-preferences.ui:144
 msgid "Linux console"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
-#: src/extra-strings.c:76 src/profile-preferences.ui:137
+#: src/extra-strings.c:76 src/profile-preferences.ui:147
 msgid "XTerm"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
-#: src/extra-strings.c:78 src/profile-preferences.ui:140
+#: src/extra-strings.c:78 src/profile-preferences.ui:150
 msgid "Rxvt"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
-#: src/extra-strings.c:80 src/profile-preferences.ui:143
+#: src/extra-strings.c:80 src/profile-preferences.ui:153
 msgid "Solarized"
 msgstr ""
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:82 src/profile-editor.c:545
-#: src/profile-preferences.ui:120 src/profile-preferences.ui:146
+#: src/profile-preferences.ui:130 src/profile-preferences.ui:156
 msgid "Custom"
 msgstr ""
 
-#: src/find-dialog.ui:14 src/terminal-accels.c:218
+#: src/find-dialog.ui:24 src/terminal-accels.c:218
 msgid "Find"
 msgstr ""
 
-#: src/find-dialog.ui:87
+#: src/find-dialog.ui:59
+msgid "_Find"
+msgstr ""
+
+#: src/find-dialog.ui:101
 msgid "_Search for:"
 msgstr ""
 
-#: src/find-dialog.ui:124
+#: src/find-dialog.ui:138
 msgid "_Match case"
 msgstr ""
 
-#: src/find-dialog.ui:141
+#: src/find-dialog.ui:155
 msgid "Match _entire word only"
 msgstr ""
 
-#: src/find-dialog.ui:158
+#: src/find-dialog.ui:172
 msgid "Match as _regular expression"
 msgstr ""
 
-#: src/find-dialog.ui:175
+#: src/find-dialog.ui:189
 msgid "Search _backwards"
 msgstr ""
 
-#: src/find-dialog.ui:193
+#: src/find-dialog.ui:207
 msgid "_Wrap around"
 msgstr ""
 
-#: src/keybinding-editor.ui:14
+#: src/keybinding-editor.ui:24
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/keybinding-editor.ui:78
+#: src/keybinding-editor.ui:93
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
 msgstr ""
 
-#: src/keybinding-editor.ui:117
+#: src/keybinding-editor.ui:132
 msgid "Enable the _menu shortcut key (F10 by default)"
 msgstr ""
 
-#: src/keybinding-editor.ui:136
+#: src/keybinding-editor.ui:151
 msgid "_Shortcut keys:"
 msgstr ""
 
@@ -1292,287 +1307,299 @@ msgstr ""
 msgid "Images"
 msgstr ""
 
-#: src/profile-editor.c:732
+#: src/profile-editor.c:790
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr ""
 
-#: src/profile-editor.c:736
+#: src/profile-editor.c:794
 #, c-format
 msgid "Palette entry %d"
 msgstr ""
 
-#: src/profile-manager.ui:14
+#: src/profile-manager.ui:39
 msgid "Profiles"
 msgstr ""
 
-#: src/profile-manager.ui:175
+#: src/profile-manager.ui:136
+msgid "_New"
+msgstr ""
+
+#: src/profile-manager.ui:153 src/terminal-accels.c:347
+msgid "Edit"
+msgstr ""
+
+#: src/profile-manager.ui:170 src/terminal-app.c:696
+msgid "_Delete"
+msgstr ""
+
+#: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
 msgstr ""
 
-#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:13 src/terminal-accels.c:156
 msgid "New Profile"
 msgstr ""
 
-#: src/profile-new-dialog.ui:74
+#: src/profile-new-dialog.ui:81
 msgid "C_reate"
 msgstr ""
 
-#: src/profile-new-dialog.ui:132
+#: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
 msgstr ""
 
-#: src/profile-new-dialog.ui:145
+#: src/profile-new-dialog.ui:153
 msgid "_Base on:"
 msgstr ""
 
-#: src/profile-preferences.ui:233
+#: src/profile-preferences.ui:243
 msgid "Profile Editor"
 msgstr ""
 
-#: src/profile-preferences.ui:311
+#: src/profile-preferences.ui:325
 msgid "_Profile name:"
 msgstr ""
 
-#: src/profile-preferences.ui:342
+#: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
 msgstr ""
 
-#: src/profile-preferences.ui:372
+#: src/profile-preferences.ui:386
 msgid "_Font:"
 msgstr ""
 
-#: src/profile-preferences.ui:389
+#: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
 msgstr ""
 
-#: src/profile-preferences.ui:410
+#: src/profile-preferences.ui:424
 msgid "_Allow bold text"
 msgstr ""
 
-#: src/profile-preferences.ui:426
+#: src/profile-preferences.ui:440
 msgid "Show _menubar by default in new terminals"
 msgstr ""
 
-#: src/profile-preferences.ui:442
+#: src/profile-preferences.ui:456
 msgid "Terminal _bell"
 msgstr ""
 
-#: src/profile-preferences.ui:458
+#: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
 msgstr ""
 
-#: src/profile-preferences.ui:474
+#: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
 msgstr ""
 
-#: src/profile-preferences.ui:490
+#: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
 msgstr ""
 
-#: src/profile-preferences.ui:515
+#: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
 msgstr ""
 
-#: src/profile-preferences.ui:562
+#: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
 msgstr ""
 
-#: src/profile-preferences.ui:609
+#: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
 msgstr ""
 
-#: src/profile-preferences.ui:640
+#: src/profile-preferences.ui:654
 msgid "Use custom default terminal si_ze"
 msgstr ""
 
-#: src/profile-preferences.ui:670
+#: src/profile-preferences.ui:684
 msgid "Default size:"
 msgstr ""
 
-#: src/profile-preferences.ui:702
+#: src/profile-preferences.ui:716
 msgid "columns"
 msgstr ""
 
-#: src/profile-preferences.ui:741
+#: src/profile-preferences.ui:755
 msgid "rows"
 msgstr ""
 
-#: src/profile-preferences.ui:776
+#: src/profile-preferences.ui:790
 msgid "General"
 msgstr ""
 
-#: src/profile-preferences.ui:803
+#: src/profile-preferences.ui:817
 msgid "<b>Title</b>"
 msgstr ""
 
-#: src/profile-preferences.ui:834
+#: src/profile-preferences.ui:848
 msgid "Initial _title:"
 msgstr ""
 
-#: src/profile-preferences.ui:874
+#: src/profile-preferences.ui:888
 msgid "When terminal commands set their o_wn titles:"
 msgstr ""
 
-#: src/profile-preferences.ui:938
+#: src/profile-preferences.ui:952
 msgid "<b>Command</b>"
 msgstr ""
 
-#: src/profile-preferences.ui:965
+#: src/profile-preferences.ui:979
 msgid "_Run command as a login shell"
 msgstr ""
 
-#: src/profile-preferences.ui:981
+#: src/profile-preferences.ui:995
 msgid "Ru_n a custom command instead of my shell"
 msgstr ""
 
-#: src/profile-preferences.ui:1011
+#: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
 msgstr ""
 
-#: src/profile-preferences.ui:1053
+#: src/profile-preferences.ui:1067
 msgid "When command _exits:"
 msgstr ""
 
-#: src/profile-preferences.ui:1123
+#: src/profile-preferences.ui:1137
 msgid "Title and Command"
 msgstr ""
 
-#: src/profile-preferences.ui:1151
+#: src/profile-preferences.ui:1165
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr ""
 
-#: src/profile-preferences.ui:1173
+#: src/profile-preferences.ui:1187
 msgid "_Use colors from system theme"
 msgstr ""
 
-#: src/profile-preferences.ui:1197
+#: src/profile-preferences.ui:1211
 msgid "Built-in sche_mes:"
 msgstr ""
 
-#: src/profile-preferences.ui:1246
+#: src/profile-preferences.ui:1261
 msgid "_Text color:"
 msgstr ""
 
-#: src/profile-preferences.ui:1261
+#: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
 msgstr ""
 
-#: src/profile-preferences.ui:1273
+#: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
 msgstr ""
 
-#: src/profile-preferences.ui:1286
+#: src/profile-preferences.ui:1301
 msgid "_Background color:"
 msgstr ""
 
-#: src/profile-preferences.ui:1336
+#: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
 msgstr ""
 
-#: src/profile-preferences.ui:1350
+#: src/profile-preferences.ui:1381
 msgid "_Underline color:"
 msgstr ""
 
-#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
+#: src/profile-preferences.ui:1392 src/profile-preferences.ui:1407
 msgid "_Same as text color"
 msgstr ""
 
-#: src/profile-preferences.ui:1430
+#: src/profile-preferences.ui:1470
 msgid "<b>Palette</b>"
 msgstr ""
 
-#: src/profile-preferences.ui:1456
+#: src/profile-preferences.ui:1497
 msgid "Built-in _schemes:"
 msgstr ""
 
-#: src/profile-preferences.ui:1708
+#: src/profile-preferences.ui:1774
 msgid "Color p_alette:"
 msgstr ""
 
-#: src/profile-preferences.ui:1724
+#: src/profile-preferences.ui:1790
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
 msgstr ""
 
-#: src/profile-preferences.ui:1761
+#: src/profile-preferences.ui:1836
 msgid "Colors"
 msgstr ""
 
-#: src/profile-preferences.ui:1779
+#: src/profile-preferences.ui:1854
 msgid "_Solid color"
 msgstr ""
 
-#: src/profile-preferences.ui:1801
+#: src/profile-preferences.ui:1876
 msgid "_Background image"
 msgstr ""
 
-#: src/profile-preferences.ui:1837
+#: src/profile-preferences.ui:1912
 msgid "Image _file:"
 msgstr ""
 
-#: src/profile-preferences.ui:1852
+#: src/profile-preferences.ui:1927
 msgid "Select Background Image"
 msgstr ""
 
-#: src/profile-preferences.ui:1869
+#: src/profile-preferences.ui:1944
 msgid "Background image _scrolls"
 msgstr ""
 
-#: src/profile-preferences.ui:1900
+#: src/profile-preferences.ui:1975
 msgid "_Transparent background"
 msgstr ""
 
-#: src/profile-preferences.ui:1926
+#: src/profile-preferences.ui:2001
 msgid "S_hade transparent or image background:"
 msgstr ""
 
-#: src/profile-preferences.ui:1942
+#: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
 msgstr ""
 
-#: src/profile-preferences.ui:1963
+#: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
 msgstr ""
 
-#: src/profile-preferences.ui:1993
+#: src/profile-preferences.ui:2068
 msgid "<small><i>Maximum</i></small>"
 msgstr ""
 
-#: src/profile-preferences.ui:2028
+#: src/profile-preferences.ui:2103
 msgid "Background"
 msgstr ""
 
-#: src/profile-preferences.ui:2049
+#: src/profile-preferences.ui:2125
 msgid "_Scrollbar is:"
 msgstr ""
 
-#: src/profile-preferences.ui:2060
+#: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
 msgstr ""
 
-#: src/profile-preferences.ui:2077
+#: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
 msgstr ""
 
-#: src/profile-preferences.ui:2117
+#: src/profile-preferences.ui:2193
 msgid "lines"
 msgstr ""
 
-#: src/profile-preferences.ui:2139
+#: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
 msgstr ""
 
-#: src/profile-preferences.ui:2150
+#: src/profile-preferences.ui:2226
 msgid "_Unlimited"
 msgstr ""
 
-#: src/profile-preferences.ui:2207
+#: src/profile-preferences.ui:2283
 msgid "Scrolling"
 msgstr ""
 
-#: src/profile-preferences.ui:2228
+#: src/profile-preferences.ui:2304
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1580,19 +1607,19 @@ msgid ""
 "i></small>"
 msgstr ""
 
-#: src/profile-preferences.ui:2250
+#: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
 msgstr ""
 
-#: src/profile-preferences.ui:2302
+#: src/profile-preferences.ui:2379
 msgid "_Backspace key generates:"
 msgstr ""
 
-#: src/profile-preferences.ui:2326
+#: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
 msgstr ""
 
-#: src/profile-preferences.ui:2356
+#: src/profile-preferences.ui:2448
 msgid "Compatibility"
 msgstr ""
 
@@ -1600,19 +1627,23 @@ msgstr ""
 msgid "Set Title"
 msgstr ""
 
-#: src/set-title-dialog.ui:54
+#: src/set-title-dialog.ui:51
 msgid "_OK"
 msgstr ""
 
-#: src/set-title-dialog.ui:91
+#: src/set-title-dialog.ui:88
 msgid "_Title:"
 msgstr ""
 
-#: src/skey-challenge.ui:100
+#: src/skey-challenge.ui:57
+msgid "_Ok"
+msgstr ""
+
+#: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
 msgstr ""
 
-#: src/skey-challenge.ui:120
+#: src/skey-challenge.ui:134
 msgid "_Password:"
 msgstr ""
 
@@ -1776,10 +1807,6 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: src/terminal-accels.c:347
-msgid "Edit"
-msgstr ""
-
 #: src/terminal-accels.c:348
 msgid "View"
 msgstr ""
@@ -1820,10 +1847,6 @@ msgstr ""
 #: src/terminal-app.c:687
 #, c-format
 msgid "Delete profile “%s”?"
-msgstr ""
-
-#: src/terminal-app.c:696
-msgid "_Delete"
 msgstr ""
 
 #: src/terminal-app.c:703
@@ -2194,33 +2217,33 @@ msgstr ""
 msgid "Show per-terminal options"
 msgstr ""
 
-#: src/terminal-profile.c:168
+#: src/terminal-profile.c:167
 msgid "Unnamed"
 msgstr ""
 
-#: src/terminal-screen.c:1525
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr ""
 
-#: src/terminal-screen.c:1526 src/terminal-screen.c:1968
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.c:1529
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: src/terminal-screen.c:1973
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.c:1978
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: src/terminal-screen.c:1983
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2268,7 +2291,7 @@ msgstr ""
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
 #.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:617
 #, c-format
 msgid "_%d. %s"
 msgstr ""
@@ -2277,284 +2300,280 @@ msgstr ""
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
 #.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:623
 #, c-format
 msgid "_%c. %s"
 msgstr ""
 
-#: src/terminal-window.c:1876
+#: src/terminal-window.c:1875
 msgid "_File"
 msgstr ""
 
-#: src/terminal-window.c:1877 src/terminal-window.c:1890
-#: src/terminal-window.c:2131
+#: src/terminal-window.c:1876 src/terminal-window.c:1889
+#: src/terminal-window.c:2130
 msgid "Open _Terminal"
 msgstr ""
 
-#: src/terminal-window.c:1878 src/terminal-window.c:1895
-#: src/terminal-window.c:2136
+#: src/terminal-window.c:1877 src/terminal-window.c:1894
+#: src/terminal-window.c:2135
 msgid "Open Ta_b"
 msgstr ""
 
-#: src/terminal-window.c:1879
+#: src/terminal-window.c:1878
 msgid "_Edit"
 msgstr ""
 
-#: src/terminal-window.c:1880
+#: src/terminal-window.c:1879
 msgid "_View"
 msgstr ""
 
-#: src/terminal-window.c:1881
+#: src/terminal-window.c:1880
 msgid "_Search"
 msgstr ""
 
-#: src/terminal-window.c:1882
+#: src/terminal-window.c:1881
 msgid "_Terminal"
 msgstr ""
 
-#: src/terminal-window.c:1883
+#: src/terminal-window.c:1882
 msgid "Ta_bs"
 msgstr ""
 
-#: src/terminal-window.c:1884
-msgid "_Help"
-msgstr ""
-
-#: src/terminal-window.c:1900
+#: src/terminal-window.c:1899
 msgid "New _Profile…"
 msgstr ""
 
-#: src/terminal-window.c:1905
+#: src/terminal-window.c:1904
 msgid "_Save Contents"
 msgstr ""
 
-#: src/terminal-window.c:1910 src/terminal-window.c:2146
+#: src/terminal-window.c:1909 src/terminal-window.c:2145
 msgid "C_lose Tab"
 msgstr ""
 
-#: src/terminal-window.c:1915
+#: src/terminal-window.c:1914
 msgid "_Close Window"
 msgstr ""
 
-#: src/terminal-window.c:1922 src/terminal-window.c:2116
+#: src/terminal-window.c:1921 src/terminal-window.c:2115
 msgid "_Copy"
 msgstr ""
 
-#: src/terminal-window.c:1927 src/terminal-window.c:2121
+#: src/terminal-window.c:1926 src/terminal-window.c:2120
 msgid "_Paste"
 msgstr ""
 
-#: src/terminal-window.c:1932 src/terminal-window.c:2126
+#: src/terminal-window.c:1931 src/terminal-window.c:2125
 msgid "Paste _Filenames"
 msgstr ""
 
-#: src/terminal-window.c:1937
+#: src/terminal-window.c:1936
 msgid "Select _All"
 msgstr ""
 
-#: src/terminal-window.c:1942
+#: src/terminal-window.c:1941
 msgid "P_rofiles…"
 msgstr ""
 
-#: src/terminal-window.c:1947
+#: src/terminal-window.c:1946
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:1951
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#: src/terminal-window.c:1959
+#: src/terminal-window.c:1958
 msgid "Zoom _In"
 msgstr ""
 
-#: src/terminal-window.c:1964
+#: src/terminal-window.c:1963
 msgid "Zoom _Out"
 msgstr ""
 
-#: src/terminal-window.c:1969
+#: src/terminal-window.c:1968
 msgid "_Normal Size"
 msgstr ""
 
-#: src/terminal-window.c:1976
+#: src/terminal-window.c:1975
 msgid "_Find..."
 msgstr ""
 
-#: src/terminal-window.c:1981
+#: src/terminal-window.c:1980
 msgid "Find Ne_xt"
 msgstr ""
 
-#: src/terminal-window.c:1986
+#: src/terminal-window.c:1985
 msgid "Find Pre_vious"
 msgstr ""
 
-#: src/terminal-window.c:1991
+#: src/terminal-window.c:1990
 msgid "_Clear Highlight"
 msgstr ""
 
-#: src/terminal-window.c:1997
+#: src/terminal-window.c:1996
 msgid "Go to _Line..."
 msgstr ""
 
-#: src/terminal-window.c:2002
+#: src/terminal-window.c:2001
 msgid "_Incremental Search..."
 msgstr ""
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2008
 msgid "Change _Profile"
 msgstr ""
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2010
 msgid "_Previous Profile"
 msgstr ""
 
-#: src/terminal-window.c:2016
+#: src/terminal-window.c:2015
 msgid "_Next Profile"
 msgstr ""
 
-#: src/terminal-window.c:2021
+#: src/terminal-window.c:2020
 msgid "_Set Title…"
 msgstr ""
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2024
 msgid "Set _Character Encoding"
 msgstr ""
 
-#: src/terminal-window.c:2027
+#: src/terminal-window.c:2026
 msgid "_Reset"
 msgstr ""
 
-#: src/terminal-window.c:2032
+#: src/terminal-window.c:2031
 msgid "Reset and C_lear"
 msgstr ""
 
-#: src/terminal-window.c:2039
+#: src/terminal-window.c:2038
 msgid "_Add or Remove…"
 msgstr ""
 
-#: src/terminal-window.c:2046
+#: src/terminal-window.c:2045
 msgid "_Previous Tab"
 msgstr ""
 
-#: src/terminal-window.c:2051
+#: src/terminal-window.c:2050
 msgid "_Next Tab"
 msgstr ""
 
-#: src/terminal-window.c:2056
+#: src/terminal-window.c:2055
 msgid "Move Tab _Left"
 msgstr ""
 
-#: src/terminal-window.c:2061
+#: src/terminal-window.c:2060
 msgid "Move Tab _Right"
 msgstr ""
 
-#: src/terminal-window.c:2066
+#: src/terminal-window.c:2065
 msgid "_Detach tab"
 msgstr ""
 
-#: src/terminal-window.c:2073
+#: src/terminal-window.c:2072
 msgid "_Contents"
 msgstr ""
 
-#: src/terminal-window.c:2078
+#: src/terminal-window.c:2077
 msgid "_About"
 msgstr ""
 
-#: src/terminal-window.c:2085
+#: src/terminal-window.c:2084
 msgid "_Send Mail To…"
 msgstr ""
 
-#: src/terminal-window.c:2090
+#: src/terminal-window.c:2089
 msgid "_Copy E-mail Address"
 msgstr ""
 
-#: src/terminal-window.c:2095
+#: src/terminal-window.c:2094
 msgid "C_all To…"
 msgstr ""
 
-#: src/terminal-window.c:2100
+#: src/terminal-window.c:2099
 msgid "_Copy Call Address"
 msgstr ""
 
-#: src/terminal-window.c:2105
+#: src/terminal-window.c:2104
 msgid "_Open Link"
 msgstr ""
 
-#: src/terminal-window.c:2110
+#: src/terminal-window.c:2109
 msgid "_Copy Link Address"
 msgstr ""
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2113
 msgid "P_rofiles"
 msgstr ""
 
-#: src/terminal-window.c:2151
+#: src/terminal-window.c:2150
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: src/terminal-window.c:2155
+#: src/terminal-window.c:2154
 msgid "_Input Methods"
 msgstr ""
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2161
 msgid "Show _Menubar"
 msgstr ""
 
-#: src/terminal-window.c:2168
+#: src/terminal-window.c:2167
 msgid "_Full Screen"
 msgstr ""
 
-#: src/terminal-window.c:3603
+#: src/terminal-window.c:3606
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3609
+#: src/terminal-window.c:3612
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3620
+#: src/terminal-window.c:3623
 msgid "Close this terminal?"
 msgstr ""
 
-#: src/terminal-window.c:3621
+#: src/terminal-window.c:3624
 msgid "C_lose Terminal"
 msgstr ""
 
-#: src/terminal-window.c:3691
+#: src/terminal-window.c:3694
 msgid "Could not save contents"
 msgstr ""
 
-#: src/terminal-window.c:3715
+#: src/terminal-window.c:3718
 msgid "Save as..."
 msgstr ""
 
-#: src/terminal-window.c:4411
+#: src/terminal-window.c:4414
 msgid "Contributors:"
 msgstr ""
 
-#: src/terminal-window.c:4427
+#: src/terminal-window.c:4430
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4433
+#: src/terminal-window.c:4436
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4434
+#: src/terminal-window.c:4437
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Copyright © 2006 Guilherme de S. Pastore\n"
 "Copyright © 2007–2010 Christian Persch\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4446
+#: src/terminal-window.c:4449
 msgid "translator-credits"
 msgstr ""
