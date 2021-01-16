@@ -4439,7 +4439,7 @@ help_about_callback (GtkAction *action,
                                           "Copyright \xc2\xa9 2006 Guilherme de S. Pastore\n"
                                           "Copyright \xc2\xa9 2007–2010 Christian Persch\n"
                                           "Copyright \xc2\xa9 2011 Perberos\n"
-                                          "Copyright \xc2\xa9 2012-2020 MATE developers"),
+                                          "Copyright \xc2\xa9 2012-2021 MATE developers"),
                            "comments", comments,
                            "authors", array_strv,
                            "artists", artists,
