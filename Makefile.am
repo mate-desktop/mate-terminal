@@ -11,8 +11,9 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	CFLAGS='-Wno-deprecated-declarations'
 
 appdatadir = $(datadir)/metainfo
-appdata_in_files = mate-terminal.appdata.xml.in
-appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+appdata_DATA = mate-terminal.appdata.xml
+appdata_in_files = $(appdata_DATA:.xml=.xml.in)
+appdata_in_in_files = $(appdata_in_files:.xml.in=.xml.in.in)
 $(appdata_DATA): $(appdata_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
@@ -31,13 +32,18 @@ EXTRA_DIST = 			\
 	xmldocs.make		\
 	omf.make		\
 	mate-terminal.wrapper   \
-	$(appdata_in_files)	\
+	$(appdata_in_in_files)	\
 	$(man_MANS)		\
 	$(NULL)
 
 CLEANFILES = \
 	mate-terminal.appdata.xml \
+	$(appdata_DATA) \
 	$(desktop_DATA)	\
+	$(NULL)
+
+DISTCLEANFILES = \
+	$(appdata_in_files) \
 	$(NULL)
 
 MAINTAINERCLEANFILES = \

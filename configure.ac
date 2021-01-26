@@ -146,6 +146,7 @@ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 
 AC_CONFIG_FILES([
 Makefile
+mate-terminal.appdata.xml.in
 mate-terminal.desktop.in
 src/Makefile
 src/mate-submodules/Makefile

@@ -202,9 +202,15 @@ endif
 
 install_man('mate-terminal.1')
 
+appdata_file_configured = configure_file(
+  input: 'mate-terminal.appdata.xml.in.in',
+  output: 'mate-terminal.appdata.xml.in',
+  configuration: config_h,
+)
+
 appdata_file = i18n.merge_file(
   'appdata-file',
-  input: 'mate-terminal.appdata.xml.in',
+  input: appdata_file_configured,
   output: 'mate-terminal.appdata.xml',
   type: 'xml',
   po_dir: join_paths(srcdir, 'po'),
