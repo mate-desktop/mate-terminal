@@ -4448,7 +4448,7 @@ help_about_callback (GtkAction *action,
                            "wrap-license", TRUE,
                            "translator-credits", _("translator-credits"),
                            "logo-icon-name", MATE_TERMINAL_ICON_NAME,
-                           "website", "https://mate-desktop.org",
+                           "website", PACKAGE_URL,
                            NULL);
 
     g_free (comments);
