@@ -165,7 +165,10 @@ AC_OUTPUT
 # ****************************
 
 echo "
-	mate-terminal-$VERSION:
+Configure summary:
+
+	${PACKAGE_STRING}
+	`echo $PACKAGE_STRING | sed "s/./=/g"`
 
 	prefix:                 ${prefix}
 	source code location:   ${srcdir}
