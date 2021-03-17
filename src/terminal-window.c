@@ -1872,17 +1872,17 @@ terminal_window_init (TerminalWindow *window)
     const GtkActionEntry menu_entries[] =
     {
         /* Toplevel */
-        { "File", NULL, N_("_File") },
-        { "FileNewWindowProfiles", "utilities-terminal", N_("Open _Terminal")},
-        { "FileNewTabProfiles", STOCK_NEW_TAB, N_("Open Ta_b") },
-        { "Edit", NULL, N_("_Edit") },
-        { "View", NULL, N_("_View") },
-        { "Search", NULL, N_("_Search") },
-        { "Terminal", NULL, N_("_Terminal") },
-        { "Tabs", NULL, N_("Ta_bs") },
-        { "Help", NULL, N_("_Help") },
-        { "Popup", NULL, NULL },
-        { "NotebookPopup", NULL, "" },
+        { "File", NULL, N_("_File"), NULL, NULL, NULL },
+        { "FileNewWindowProfiles", "utilities-terminal", N_("Open _Terminal"), NULL, NULL, NULL },
+        { "FileNewTabProfiles", STOCK_NEW_TAB, N_("Open Ta_b"), NULL, NULL, NULL },
+        { "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
+        { "View", NULL, N_("_View"), NULL, NULL, NULL },
+        { "Search", NULL, N_("_Search"), NULL, NULL, NULL },
+        { "Terminal", NULL, N_("_Terminal"), NULL, NULL, NULL },
+        { "Tabs", NULL, N_("Ta_bs"), NULL, NULL, NULL },
+        { "Help", NULL, N_("_Help"), NULL, NULL, NULL },
+        { "Popup", NULL, NULL, NULL, NULL, NULL },
+        { "NotebookPopup", NULL, "", NULL, NULL, NULL },
 
         /* File menu */
         {
@@ -2005,7 +2005,7 @@ terminal_window_init (TerminalWindow *window)
 #endif
 
         /* Terminal menu */
-        { "TerminalProfiles", NULL, N_("Change _Profile") },
+        { "TerminalProfiles", NULL, N_("Change _Profile"), NULL, NULL, NULL },
         {
             "ProfilePrevious", NULL, N_("_Previous Profile"), "<alt>Page_Up",
             NULL,
@@ -2021,7 +2021,7 @@ terminal_window_init (TerminalWindow *window)
             NULL,
             G_CALLBACK (terminal_set_title_callback)
         },
-        { "TerminalSetEncoding", NULL, N_("Set _Character Encoding") },
+        { "TerminalSetEncoding", NULL, N_("Set _Character Encoding"), NULL, NULL, NULL },
         {
             "TerminalReset", NULL, N_("_Reset"), NULL,
             NULL,
@@ -2110,7 +2110,7 @@ terminal_window_init (TerminalWindow *window)
             NULL,
             G_CALLBACK (popup_copy_url_callback)
         },
-        { "PopupTerminalProfiles", NULL, N_("P_rofiles") },
+        { "PopupTerminalProfiles", NULL, N_("P_rofiles"), NULL, NULL, NULL },
         {
             "PopupCopy", "edit-copy", N_("_Copy"), "",
             NULL,
@@ -2151,7 +2151,7 @@ terminal_window_init (TerminalWindow *window)
             NULL,
             G_CALLBACK (popup_leave_fullscreen_callback)
         },
-        { "PopupInputMethods", NULL, N_("_Input Methods") }
+        { "PopupInputMethods", NULL, N_("_Input Methods"), NULL, NULL, NULL }
     };
 
     const GtkToggleActionEntry toggle_menu_entries[] =
