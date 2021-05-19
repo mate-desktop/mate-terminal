@@ -894,7 +894,7 @@ terminal_screen_format_title (TerminalScreen *screen,
 
 	if (!vte_terminal_get_input_enabled (VTE_TERMINAL (screen)))
 	{
-		g_string_append (title, " (Read Only)");
+		g_string_append (title, N_(" (Read Only)"));
 	}
 
 	if (*titleptr == NULL || strcmp (title->str, *titleptr) != 0)
