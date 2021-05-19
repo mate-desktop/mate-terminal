@@ -209,6 +209,8 @@ static void view_menubar_toggled_callback     (GtkToggleAction *action,
         TerminalWindow *window);
 static void view_fullscreen_toggled_callback  (GtkToggleAction *action,
         TerminalWindow *window);
+static void view_readonly_toggled_callback    (GtkToggleAction *action,
+        TerminalWindow *window);
 static void view_zoom_in_callback             (GtkAction *action,
         TerminalWindow *window);
 static void view_zoom_out_callback            (GtkAction *action,
@@ -2168,6 +2170,12 @@ terminal_window_init (TerminalWindow *window)
             NULL,
             G_CALLBACK (view_fullscreen_toggled_callback),
             FALSE
+        },
+        {
+            "ViewReadOnly", NULL, N_("_Read Only"), NULL,
+            NULL,
+            G_CALLBACK (view_readonly_toggled_callback),
+            FALSE
         }
     };
     TerminalWindowPrivate *priv;
@@ -3932,6 +3940,19 @@ view_fullscreen_toggled_callback (GtkToggleAction *action,
         gtk_window_fullscreen (GTK_WINDOW (window));
     else
         gtk_window_unfullscreen (GTK_WINDOW (window));
+}
+
+static void
+view_readonly_toggled_callback (GtkToggleAction *action,
+                                TerminalWindow *window)
+{
+    gboolean enabled;
+
+    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    enabled = gtk_toggle_action_get_active (action);
+    G_GNUC_END_IGNORE_DEPRECATIONS;
+
+    fprintf(stderr, "Read Only toggled. Value: %d\n", enabled);
 }
 
 static const double zoom_factors[] =
