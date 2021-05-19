@@ -3946,13 +3946,14 @@ static void
 view_readonly_toggled_callback (GtkToggleAction *action,
                                 TerminalWindow *window)
 {
-    gboolean enabled;
+    VteTerminal *terminal = VTE_TERMINAL (window->priv->active_screen);
+    gboolean checked;
 
     G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    enabled = gtk_toggle_action_get_active (action);
+    checked = gtk_toggle_action_get_active (action);
     G_GNUC_END_IGNORE_DEPRECATIONS;
 
-    fprintf(stderr, "Read Only toggled. Value: %d\n", enabled);
+    vte_terminal_set_input_enabled (terminal, !checked);
 }
 
 static const double zoom_factors[] =
