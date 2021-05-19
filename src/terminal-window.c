@@ -209,8 +209,6 @@ static void view_menubar_toggled_callback     (GtkToggleAction *action,
         TerminalWindow *window);
 static void view_fullscreen_toggled_callback  (GtkToggleAction *action,
         TerminalWindow *window);
-static void view_readonly_toggled_callback    (GtkToggleAction *action,
-        TerminalWindow *window);
 static void view_zoom_in_callback             (GtkAction *action,
         TerminalWindow *window);
 static void view_zoom_out_callback            (GtkAction *action,
@@ -230,6 +228,8 @@ static void terminal_next_or_previous_profile_cb (GtkAction *action,
 static void terminal_set_title_callback       (GtkAction *action,
         TerminalWindow *window);
 static void terminal_add_encoding_callback    (GtkAction *action,
+        TerminalWindow *window);
+static void terminal_readonly_toggled_callback    (GtkToggleAction *action,
         TerminalWindow *window);
 static void terminal_reset_callback           (GtkAction *action,
         TerminalWindow *window);
@@ -2171,10 +2171,11 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (view_fullscreen_toggled_callback),
             FALSE
         },
+        /* Terminal Menu */
         {
-            "ViewReadOnly", NULL, N_("_Read Only"), NULL,
+            "TerminalReadOnly", NULL, N_("_Read Only"), NULL,
             NULL,
-            G_CALLBACK (view_readonly_toggled_callback),
+            G_CALLBACK (terminal_readonly_toggled_callback),
             FALSE
         }
     };
@@ -3942,20 +3943,6 @@ view_fullscreen_toggled_callback (GtkToggleAction *action,
         gtk_window_unfullscreen (GTK_WINDOW (window));
 }
 
-static void
-view_readonly_toggled_callback (GtkToggleAction *action,
-                                TerminalWindow *window)
-{
-    VteTerminal *terminal = VTE_TERMINAL (window->priv->active_screen);
-    gboolean checked;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    checked = gtk_toggle_action_get_active (action);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    vte_terminal_set_input_enabled (terminal, !checked);
-}
-
 static const double zoom_factors[] =
 {
     TERMINAL_SCALE_MINIMUM,
@@ -4273,6 +4260,20 @@ terminal_add_encoding_callback (GtkAction *action,
 {
     terminal_app_edit_encodings (terminal_app_get (),
                                  GTK_WINDOW (window));
+}
+
+static void
+terminal_readonly_toggled_callback (GtkToggleAction *action,
+                                    TerminalWindow *window)
+{
+    VteTerminal *terminal = VTE_TERMINAL (window->priv->active_screen);
+    gboolean checked;
+
+    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    checked = gtk_toggle_action_get_active (action);
+    G_GNUC_END_IGNORE_DEPRECATIONS;
+
+    vte_terminal_set_input_enabled (terminal, !checked);
 }
 
 static void
