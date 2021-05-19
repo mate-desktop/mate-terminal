@@ -1057,6 +1057,25 @@ terminal_window_update_encoding_menu_active_encoding (TerminalWindow *window)
 }
 
 static void
+terminal_window_update_readonly_checkbox (TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    GtkToggleAction *action;
+    VteTerminal *terminal;
+    gboolean editable;
+
+    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    action = GTK_TOGGLE_ACTION (gtk_action_group_get_action (priv->action_group,
+                                                             "TerminalReadOnly"));
+    G_GNUC_END_IGNORE_DEPRECATIONS;
+
+    terminal = VTE_TERMINAL (priv->active_screen);
+    editable = vte_terminal_get_input_enabled (terminal);
+
+    gtk_toggle_action_set_active (action, !editable);
+}
+
+static void
 terminal_size_to_cb (GtkAction *action,
                      TerminalWindow *window)
 {
@@ -3147,6 +3166,7 @@ notebook_page_selected_callback (GtkWidget       *notebook,
 
     terminal_window_update_tabs_menu_sensitivity (window);
     terminal_window_update_encoding_menu_active_encoding (window);
+    terminal_window_update_readonly_checkbox (window);
     terminal_window_update_set_profile_menu_active_profile (window);
     terminal_window_update_copy_sensitivity (screen, window);
     terminal_window_update_zoom_sensitivity (window);
