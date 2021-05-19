@@ -772,8 +772,7 @@ terminal_screen_get_title (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
 
-	if (priv->cooked_title == NULL)
-		terminal_screen_cook_title (screen);
+	terminal_screen_cook_title (screen);
 
 	/* cooked_title may still be NULL */
 	if (priv->cooked_title != NULL)
@@ -891,6 +890,11 @@ terminal_screen_format_title (TerminalScreen *screen,
 
 		g_string_append (title, text_to_append);
 		add_sep = FALSE;
+	}
+
+	if (!vte_terminal_get_input_enabled (VTE_TERMINAL (screen)))
+	{
+		g_string_append (title, " (Read Only)");
 	}
 
 	if (*titleptr == NULL || strcmp (title->str, *titleptr) != 0)

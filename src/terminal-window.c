@@ -4286,14 +4286,19 @@ static void
 terminal_readonly_toggled_callback (GtkToggleAction *action,
                                     TerminalWindow *window)
 {
-    VteTerminal *terminal = VTE_TERMINAL (window->priv->active_screen);
+    TerminalScreen *screen = window->priv->active_screen;
     gboolean checked;
 
     G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
     checked = gtk_toggle_action_get_active (action);
     G_GNUC_END_IGNORE_DEPRECATIONS;
 
-    vte_terminal_set_input_enabled (terminal, !checked);
+    vte_terminal_set_input_enabled (VTE_TERMINAL (screen), !checked);
+
+    /* update titles since (Read Only) may be added or removed */
+    sync_screen_icon_title_set (screen, NULL, window);
+    sync_screen_icon_title (screen, NULL, window);
+    sync_screen_title (screen, NULL, window);
 }
 
 static void
