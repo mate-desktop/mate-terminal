@@ -2192,7 +2192,7 @@ terminal_window_init (TerminalWindow *window)
         },
         /* Terminal Menu */
         {
-            "TerminalReadOnly", NULL, N_("_Read Only"), NULL,
+            "TerminalReadOnly", NULL, N_("_Read Only"), "<shift><control>R",
             NULL,
             G_CALLBACK (terminal_readonly_toggled_callback),
             FALSE
