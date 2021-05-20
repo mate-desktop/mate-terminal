@@ -229,7 +229,7 @@ static void terminal_set_title_callback       (GtkAction *action,
         TerminalWindow *window);
 static void terminal_add_encoding_callback    (GtkAction *action,
         TerminalWindow *window);
-static void terminal_readonly_toggled_callback    (GtkToggleAction *action,
+static void terminal_readonly_toggled_callback (GtkToggleAction *action,
         TerminalWindow *window);
 static void terminal_reset_callback           (GtkAction *action,
         TerminalWindow *window);
