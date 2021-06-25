@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 1997, 1998, 1999, 2000 Free Software Foundation
  * Copyright (C) 1999, 2000 Red Hat, Inc.
+ * Copyright (C) 2012-2021 MATE Developers
  * All rights reserved.
  *
  * This file is part of the Mate Library.

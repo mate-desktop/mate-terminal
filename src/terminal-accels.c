@@ -1,6 +1,7 @@
 /*
  * Copyright © 2001, 2002 Havoc Pennington, Red Hat Inc.
  * Copyright © 2008 Christian Persch
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Mate-terminal is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -2,6 +2,7 @@
  * Copyright © 2002 Havoc Pennington
  * Copyright © 2002 Mathias Hasselmann
  * Copyright © 2008 Christian Persch
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Mate-terminal is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

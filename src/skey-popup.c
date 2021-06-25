@@ -1,6 +1,7 @@
 /*
  * Copyright © 2002 Jonathan Blandford <jrb@gnome.org>
  * Copyright © 2008 Christian Persch
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Mate-terminal is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

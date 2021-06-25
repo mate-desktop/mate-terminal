@@ -1,5 +1,6 @@
 /*
  * terminal-close-button.c
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Copyright © 2010 - Paolo Borelli
  * Copyright © 2011 - Ignacio Casal Quinteiro
