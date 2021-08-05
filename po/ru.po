@@ -7,23 +7,25 @@
 # Дмитрий Михирев, 2018
 # Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2018
 # Ivan Kuzmenko, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Alexei Sorokin, 2018
 # Aleksey Kabanov <ak099@mail.ru>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # monsta <monsta@inbox.ru>, 2018
 # Andreï Victorovitch Kostyrka, 2018
 # Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Alex Putz, 2018
 # Anna Vyalkova <cybertailor@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Alex Putz, 2021
+# Дмитрий Астанков <mornie@basealt.ru>, 2021
+# Alexey Rodionov, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.23\n"
+"Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2020-01-13 14:52+0100\n"
+"POT-Creation-Date: 2021-06-25 16:51+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
+"Last-Translator: Alexey Rodionov, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,16 +33,16 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4466
+#: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
+#: src/terminal-options.c:190 src/terminal-window.c:4435
 msgid "MATE Terminal"
 msgstr "Терминал MATE"
 
-#: mate-terminal.appdata.xml.in:8
+#: mate-terminal.appdata.xml.in.in:8
 msgid "A terminal emulator for the MATE desktop environment"
 msgstr "Эмулятор терминала для рабочего стола MATE"
 
-#: mate-terminal.appdata.xml.in:10
+#: mate-terminal.appdata.xml.in.in:10
 msgid ""
 "MATE Terminal is a terminal emulation application that you can use to access"
 " a UNIX shell in the MATE environment. MATE Terminal emulates the xterm "
@@ -52,7 +54,7 @@ msgstr ""
 "разработанное консорциумом X. Он поддерживает прозрачный фон, открытие "
 "нескольких терминалов в одном окне (вкладки) и кликабельные URL."
 
-#: mate-terminal.appdata.xml.in:17
+#: mate-terminal.appdata.xml.in.in:17
 msgid ""
 "MATE Terminal is a fork of GNOME Terminal and part of the MATE Desktop "
 "Environment. If you would like to know more about MATE and MATE Terminal, "
@@ -62,8 +64,8 @@ msgstr ""
 "хотите знать больше о MATE и MATE Terminal, пожалуйста, посетите домашнюю "
 "страницу проекта."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
-#: src/terminal-profile.c:161 src/terminal-window.c:2214
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -71,39 +73,272 @@ msgstr "Терминал"
 msgid "Use the command line"
 msgstr "Использовать командную строку"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: mate-terminal.desktop.in.in:9
-msgid "utilities-terminal"
-msgstr "utilities-terminal"
+#: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+msgid "_Cancel"
+msgstr "О_тмена"
 
-#: src/eggsmclient.c:225
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
+#: src/terminal-window.c:3622
+msgid "C_lose Window"
+msgstr "_Закрыть окно"
+
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+msgid "Close this window?"
+msgstr "Закрыть это окно?"
+
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+msgid ""
+"There is still a process running in this terminal.\n"
+"Closing the terminal will kill it."
+msgstr ""
+"В терминале запущен процесс.\n"
+"Закрытие терминала прервёт его выполнение."
+
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Не соединиться с менеджером сеансов"
 
-#: src/eggsmclient.c:230
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Указать файл, содержащий сохраненную конфигурацию"
 
-#: src/eggsmclient.c:230 src/terminal-options.c:963 src/terminal-options.c:972
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
+#: src/terminal-options.c:973
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Указать ID сеанса"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/eggsmclient.c:261
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Параметры управления сеансом:"
 
-#: src/eggsmclient.c:262
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Показать параметры управления сеансом"
+
+#: src/encodings-dialog.ui:24
+msgid "Add or Remove Terminal Encodings"
+msgstr "Добавить или удалить кодировки терминала"
+
+#: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
+#: src/profile-manager.ui:58 src/profile-preferences.ui:262
+#: src/terminal-window.c:1884
+msgid "_Help"
+msgstr "_Помощь"
+
+#: src/encodings-dialog.ui:59 src/find-dialog.ui:42
+#: src/keybinding-editor.ui:59 src/profile-manager.ui:76
+#: src/profile-preferences.ui:279
+msgid "_Close"
+msgstr "З_акрыть"
+
+#: src/encodings-dialog.ui:184
+msgid "A_vailable encodings:"
+msgstr "_Доступные кодировки:"
+
+#: src/encodings-dialog.ui:202
+msgid "E_ncodings shown in menu:"
+msgstr "Кодировки, показываемые в _меню:"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:25 src/profile-preferences.ui:184
+#: src/profile-preferences.ui:207
+msgid "Automatic"
+msgstr "Автоматический"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:27 src/profile-preferences.ui:187
+#: src/profile-preferences.ui:210
+msgid "Control-H"
+msgstr "Control-H"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:29 src/profile-preferences.ui:190
+#: src/profile-preferences.ui:213
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:31 src/profile-preferences.ui:193
+#: src/profile-preferences.ui:216
+msgid "Escape sequence"
+msgstr "Экранирующая последовательность"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:33 src/profile-preferences.ui:196
+#: src/profile-preferences.ui:219
+msgid "TTY Erase"
+msgstr "Очистить терминал"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:36 src/profile-preferences.ui:76
+msgid "Block"
+msgstr "Блок"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:38 src/profile-preferences.ui:79
+msgid "I-Beam"
+msgstr "I-образный"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:40 src/profile-preferences.ui:82
+msgid "Underline"
+msgstr "Подчёркнутый"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:43 src/profile-preferences.ui:230
+msgid "Use system settings"
+msgstr "Использовать системные параметры"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:45 src/profile-preferences.ui:233
+msgid "Always blink"
+msgstr "Всегда мигать"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:47 src/profile-preferences.ui:236
+msgid "Never blink"
+msgstr "Никогда не мигать"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:50 src/profile-preferences.ui:113
+msgid "Exit the terminal"
+msgstr "Выйти из терминала"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:52 src/profile-preferences.ui:116
+msgid "Restart the command"
+msgstr "Перезапустить команду"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:54 src/profile-preferences.ui:119
+msgid "Hold the terminal open"
+msgstr "Держать терминал открытым"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:57 src/profile-preferences.ui:167
+msgid "On the left side"
+msgstr "слева"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:59 src/profile-preferences.ui:170
+msgid "On the right side"
+msgstr "справа"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:61 src/profile-preferences.ui:173
+#: src/terminal-accels.c:409
+msgid "Disabled"
+msgstr "Выключен"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:64 src/profile-preferences.ui:93
+msgid "Replace initial title"
+msgstr "Заменить начальный заголовок"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:66 src/profile-preferences.ui:96
+msgid "Append initial title"
+msgstr "Добавить к начальному заголовку"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:68 src/profile-preferences.ui:99
+msgid "Prepend initial title"
+msgstr "Предварить начальный заголовок"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:70 src/profile-preferences.ui:102
+msgid "Keep initial title"
+msgstr "Оставить начальный заголовок"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:73 src/profile-preferences.ui:141
+msgid "Tango"
+msgstr "Tango"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:75 src/profile-preferences.ui:144
+msgid "Linux console"
+msgstr "Linux console"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:77 src/profile-preferences.ui:147
+msgid "XTerm"
+msgstr "XTerm"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:79 src/profile-preferences.ui:150
+msgid "Rxvt"
+msgstr "Rxvt"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:81 src/profile-preferences.ui:153
+msgid "Solarized"
+msgstr "Solarized"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:83 src/profile-editor.c:546
+#: src/profile-preferences.ui:130 src/profile-preferences.ui:156
+msgid "Custom"
+msgstr "Вручную"
+
+#: src/find-dialog.ui:24 src/terminal-accels.c:219
+msgid "Find"
+msgstr "Поиск"
+
+#: src/find-dialog.ui:59
+msgid "_Find"
+msgstr "_Найти"
+
+#: src/find-dialog.ui:101
+msgid "_Search for:"
+msgstr "На_йти: "
+
+#: src/find-dialog.ui:138
+msgid "_Match case"
+msgstr "Учитывать _регистр"
+
+#: src/find-dialog.ui:155
+msgid "Match _entire word only"
+msgstr "Только _полные слова"
+
+#: src/find-dialog.ui:172
+msgid "Match as _regular expression"
+msgstr "По регул_ярному выражению"
+
+#: src/find-dialog.ui:189
+msgid "Search _backwards"
+msgstr "Обратный поиск"
+
+#: src/find-dialog.ui:207
+msgid "_Wrap around"
+msgstr "Автоматически пере_ходить к началу документа"
+
+#: src/keybinding-editor.ui:24
+msgid "Keyboard Shortcuts"
+msgstr "Комбинации клавиш клавиатуры"
+
+#: src/keybinding-editor.ui:93
+msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
+msgstr ""
+"_Включить все ускорители для доступа в ме_ню (такие, как Alt+Ф для меню "
+"«Файл»)"
+
+#: src/keybinding-editor.ui:132
+msgid "Enable the _menu shortcut key (F10 by default)"
+msgstr "Включить клавишу для доступа в м_еню (F10 по умолчанию)"
+
+#: src/keybinding-editor.ui:151
+msgid "_Shortcut keys:"
+msgstr "_Комбинации клавиш:"
 
 #: src/org.mate.terminal.gschema.xml.in:49
 msgid "List of profiles"
@@ -1302,451 +1537,263 @@ msgstr ""
 "строки в формате файлов ресурсов GTK+. Если установить специальное значение "
 "«Выключено», для этого действия не будет комбинации клавиш."
 
-#: src/profile-editor.c:44
+#: src/profile-editor.c:45
 msgid "Black on light yellow"
 msgstr "чёрный на светло-жёлтом"
 
-#: src/profile-editor.c:49
+#: src/profile-editor.c:50
 msgid "Black on white"
 msgstr "чёрный на белом"
 
-#: src/profile-editor.c:54
+#: src/profile-editor.c:55
 msgid "Gray on black"
 msgstr "серый на чёрном"
 
-#: src/profile-editor.c:59
+#: src/profile-editor.c:60
 msgid "Green on black"
 msgstr "зелёный на чёрном"
 
-#: src/profile-editor.c:64
+#: src/profile-editor.c:65
 msgid "White on black"
 msgstr "белый на чёрном"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be
 #. translated
-#: src/profile-editor.c:69
+#: src/profile-editor.c:70
 msgid "Solarized light"
 msgstr "Solarized light"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
-#: src/profile-editor.c:74
+#: src/profile-editor.c:75
 msgid "Solarized dark"
 msgstr "Solarized dark"
 
-#: src/profile-editor.c:497
+#: src/profile-editor.c:498
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Ошибка в синтаксисе команды: %s"
 
-#: src/profile-editor.c:514
+#: src/profile-editor.c:515
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Изменение профиля «%s»"
 
-#. Translators: This is the name of a colour scheme
-#: src/profile-editor.c:545 src/profile-preferences.ui:120
-#: src/profile-preferences.ui:146 src/extra-strings.c:82
-msgid "Custom"
-msgstr "Вручную"
-
-#: src/profile-editor.c:595
+#: src/profile-editor.c:596
 msgid "Images"
 msgstr "Изображения"
 
-#: src/profile-editor.c:732
+#: src/profile-editor.c:791
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Изменить цвет палитры %d"
 
-#: src/profile-editor.c:736
+#: src/profile-editor.c:795
 #, c-format
 msgid "Palette entry %d"
 msgstr "Элемент палитры %d"
 
-#: src/encodings-dialog.ui:14
-msgid "Add or Remove Terminal Encodings"
-msgstr "Добавить или удалить кодировки терминала"
-
-#: src/encodings-dialog.ui:169
-msgid "A_vailable encodings:"
-msgstr "_Доступные кодировки:"
-
-#: src/encodings-dialog.ui:187
-msgid "E_ncodings shown in menu:"
-msgstr "Кодировки, показываемые в _меню:"
-
-#: src/find-dialog.ui:14 src/terminal-accels.c:218
-msgid "Find"
-msgstr "Поиск"
-
-#: src/find-dialog.ui:87
-msgid "_Search for:"
-msgstr "На_йти: "
-
-#: src/find-dialog.ui:124
-msgid "_Match case"
-msgstr "Учитывать _регистр"
-
-#: src/find-dialog.ui:141
-msgid "Match _entire word only"
-msgstr "Только _полные слова"
-
-#: src/find-dialog.ui:158
-msgid "Match as _regular expression"
-msgstr "По регул_ярному выражению"
-
-#: src/find-dialog.ui:175
-msgid "Search _backwards"
-msgstr "Обратный поиск"
-
-#: src/find-dialog.ui:193
-msgid "_Wrap around"
-msgstr "Автоматически пере_ходить к началу документа"
-
-#: src/keybinding-editor.ui:14
-msgid "Keyboard Shortcuts"
-msgstr "Комбинации клавиш клавиатуры"
-
-#: src/keybinding-editor.ui:78
-msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr ""
-"_Включить все ускорители для доступа в ме_ню (такие, как Alt+Ф для меню "
-"«Файл»)"
-
-#: src/keybinding-editor.ui:117
-msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "Включить клавишу для доступа в м_еню (F10 по умолчанию)"
-
-#: src/keybinding-editor.ui:136
-msgid "_Shortcut keys:"
-msgstr "_Комбинации клавиш:"
-
-#: src/profile-manager.ui:14
+#: src/profile-manager.ui:39
 msgid "Profiles"
 msgstr "Профили"
 
-#: src/profile-manager.ui:175
+#: src/profile-manager.ui:136
+msgid "_New"
+msgstr "_Создать"
+
+#: src/profile-manager.ui:153 src/terminal-accels.c:348
+msgid "Edit"
+msgstr "Правка"
+
+#: src/profile-manager.ui:170 src/terminal-app.c:697
+msgid "_Delete"
+msgstr "_Удалить"
+
+#: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
 msgstr "Профиль, _используемый при запуске нового терминала:"
 
-#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:13 src/terminal-accels.c:157
 msgid "New Profile"
 msgstr "Новый профиль"
 
-#: src/profile-new-dialog.ui:74
+#: src/profile-new-dialog.ui:81
 msgid "C_reate"
 msgstr "С_оздать"
 
-#: src/profile-new-dialog.ui:132
+#: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
 msgstr "_Имя профиля:"
 
-#: src/profile-new-dialog.ui:145
+#: src/profile-new-dialog.ui:153
 msgid "_Base on:"
 msgstr "_Основать новый профиль на:"
 
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:66 src/extra-strings.c:35
-msgid "Block"
-msgstr "Блок"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:69 src/extra-strings.c:37
-msgid "I-Beam"
-msgstr "I-образный"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:72 src/extra-strings.c:39
-msgid "Underline"
-msgstr "Подчёркнутый"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:83 src/extra-strings.c:63
-msgid "Replace initial title"
-msgstr "Заменить начальный заголовок"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:86 src/extra-strings.c:65
-msgid "Append initial title"
-msgstr "Добавить к начальному заголовку"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:89 src/extra-strings.c:67
-msgid "Prepend initial title"
-msgstr "Предварить начальный заголовок"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:92 src/extra-strings.c:69
-msgid "Keep initial title"
-msgstr "Оставить начальный заголовок"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:103 src/extra-strings.c:49
-msgid "Exit the terminal"
-msgstr "Выйти из терминала"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:106 src/extra-strings.c:51
-msgid "Restart the command"
-msgstr "Перезапустить команду"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:109 src/extra-strings.c:53
-msgid "Hold the terminal open"
-msgstr "Держать терминал открытым"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:131 src/extra-strings.c:72
-msgid "Tango"
-msgstr "Tango"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:134 src/extra-strings.c:74
-msgid "Linux console"
-msgstr "Linux console"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:137 src/extra-strings.c:76
-msgid "XTerm"
-msgstr "XTerm"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:140 src/extra-strings.c:78
-msgid "Rxvt"
-msgstr "Rxvt"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:143 src/extra-strings.c:80
-msgid "Solarized"
-msgstr "Solarized"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:157 src/extra-strings.c:56
-msgid "On the left side"
-msgstr "слева"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:160 src/extra-strings.c:58
-msgid "On the right side"
-msgstr "справа"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:163 src/terminal-accels.c:408
-#: src/extra-strings.c:60
-msgid "Disabled"
-msgstr "Выключен"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:174 src/profile-preferences.ui:197
-#: src/extra-strings.c:24
-msgid "Automatic"
-msgstr "Автоматический"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:177 src/profile-preferences.ui:200
-#: src/extra-strings.c:26
-msgid "Control-H"
-msgstr "Control-H"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:180 src/profile-preferences.ui:203
-#: src/extra-strings.c:28
-msgid "ASCII DEL"
-msgstr "ASCII DEL"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:183 src/profile-preferences.ui:206
-#: src/extra-strings.c:30
-msgid "Escape sequence"
-msgstr "Экранирующая последовательность"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:186 src/profile-preferences.ui:209
-#: src/extra-strings.c:32
-msgid "TTY Erase"
-msgstr "Очистить терминал"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:220 src/extra-strings.c:42
-msgid "Use system settings"
-msgstr "Использовать системные параметры"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:223 src/extra-strings.c:44
-msgid "Always blink"
-msgstr "Всегда мигать"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:226 src/extra-strings.c:46
-msgid "Never blink"
-msgstr "Никогда не мигать"
-
-#: src/profile-preferences.ui:233
+#: src/profile-preferences.ui:243
 msgid "Profile Editor"
 msgstr "Редактор профилей"
 
-#: src/profile-preferences.ui:311
+#: src/profile-preferences.ui:325
 msgid "_Profile name:"
 msgstr "_Профиль:"
 
-#: src/profile-preferences.ui:342
+#: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
 msgstr "_Использовать системный моноширинный шрифт"
 
-#: src/profile-preferences.ui:372
+#: src/profile-preferences.ui:386
 msgid "_Font:"
 msgstr "_Шрифт:"
 
-#: src/profile-preferences.ui:389
+#: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
 msgstr "Выбрать шрифт терминала"
 
-#: src/profile-preferences.ui:410
+#: src/profile-preferences.ui:424
 msgid "_Allow bold text"
 msgstr "Р_азрешать полужирный текст"
 
-#: src/profile-preferences.ui:426
+#: src/profile-preferences.ui:440
 msgid "Show _menubar by default in new terminals"
 msgstr "Показывать в новых терминалах строку мен_ю"
 
-#: src/profile-preferences.ui:442
+#: src/profile-preferences.ui:456
 msgid "Terminal _bell"
 msgstr "Подавать _гудок"
 
-#: src/profile-preferences.ui:458
+#: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
 msgstr "Скопировать выделенный текст в _буфер обмена"
 
-#: src/profile-preferences.ui:474
+#: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
 msgstr "Подсвечивать запросы _S/Key под курсором мыши"
 
-#: src/profile-preferences.ui:490
+#: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
 msgstr "Подсвечивать _URL под курсором мыши"
 
-#: src/profile-preferences.ui:515
+#: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
 msgstr "Мигание курсо_ра"
 
-#: src/profile-preferences.ui:562
+#: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
 msgstr "_Форма курсора:"
 
-#: src/profile-preferences.ui:609
+#: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
 msgstr "Выбирающие с_лово символы:"
 
-#: src/profile-preferences.ui:640
+#: src/profile-preferences.ui:654
 msgid "Use custom default terminal si_ze"
 msgstr "Использовать другой размер терминала по умолчанию"
 
-#: src/profile-preferences.ui:670
+#: src/profile-preferences.ui:684
 msgid "Default size:"
 msgstr "Размер по умолчанию:"
 
-#: src/profile-preferences.ui:702
+#: src/profile-preferences.ui:716
 msgid "columns"
 msgstr "столбцов"
 
-#: src/profile-preferences.ui:741
+#: src/profile-preferences.ui:755
 msgid "rows"
 msgstr "строк"
 
-#: src/profile-preferences.ui:776
+#: src/profile-preferences.ui:790
 msgid "General"
 msgstr "Общие"
 
-#: src/profile-preferences.ui:803
+#: src/profile-preferences.ui:817
 msgid "<b>Title</b>"
 msgstr "<b>Заголовок</b>"
 
-#: src/profile-preferences.ui:834
+#: src/profile-preferences.ui:848
 msgid "Initial _title:"
 msgstr "Ис_ходный заголовок:"
 
-#: src/profile-preferences.ui:874
+#: src/profile-preferences.ui:888
 msgid "When terminal commands set their o_wn titles:"
 msgstr "Когда команды терминала устанавливают _собственный заголовок"
 
-#: src/profile-preferences.ui:938
+#: src/profile-preferences.ui:952
 msgid "<b>Command</b>"
 msgstr "<b>Команда</b>"
 
-#: src/profile-preferences.ui:965
+#: src/profile-preferences.ui:979
 msgid "_Run command as a login shell"
 msgstr "За_пускать команду как оболочку входа"
 
-#: src/profile-preferences.ui:981
+#: src/profile-preferences.ui:995
 msgid "Ru_n a custom command instead of my shell"
 msgstr "Зап_ускать другую команду вместо моей оболочки"
 
-#: src/profile-preferences.ui:1011
+#: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
 msgstr "Друг_ая команда:"
 
-#: src/profile-preferences.ui:1053
+#: src/profile-preferences.ui:1067
 msgid "When command _exits:"
 msgstr "При в_ыходе из команды:"
 
-#: src/profile-preferences.ui:1123
+#: src/profile-preferences.ui:1137
 msgid "Title and Command"
 msgstr "Заголовок и команда"
 
-#: src/profile-preferences.ui:1151
+#: src/profile-preferences.ui:1165
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Текст, фон, полужирность и подчёркивание</b>"
 
-#: src/profile-preferences.ui:1173
+#: src/profile-preferences.ui:1187
 msgid "_Use colors from system theme"
 msgstr "_Использовать цвета из системной темы"
 
-#: src/profile-preferences.ui:1197
+#: src/profile-preferences.ui:1211
 msgid "Built-in sche_mes:"
 msgstr "Встроенные с_хемы:"
 
-#: src/profile-preferences.ui:1246
+#: src/profile-preferences.ui:1261
 msgid "_Text color:"
 msgstr "Цвет _текста:"
 
-#: src/profile-preferences.ui:1261
+#: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
 msgstr "Выбрать цвет фона терминала"
 
-#: src/profile-preferences.ui:1273
+#: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
 msgstr "Выбрать цвет текста терминала"
 
-#: src/profile-preferences.ui:1286
+#: src/profile-preferences.ui:1301
 msgid "_Background color:"
 msgstr "Цвет фо_на:"
 
-#: src/profile-preferences.ui:1336
+#: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
 msgstr "Цвет для полу_жирного текста:"
 
-#: src/profile-preferences.ui:1350
+#: src/profile-preferences.ui:1381
 msgid "_Underline color:"
 msgstr "Цвет под_чёркивания:"
 
-#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
+#: src/profile-preferences.ui:1392 src/profile-preferences.ui:1407
 msgid "_Same as text color"
 msgstr "_Цвет как у обычного текста"
 
-#: src/profile-preferences.ui:1430
+#: src/profile-preferences.ui:1470
 msgid "<b>Palette</b>"
 msgstr "<b>Палитра</b>"
 
-#: src/profile-preferences.ui:1456
+#: src/profile-preferences.ui:1497
 msgid "Built-in _schemes:"
 msgstr "Встроенные сх_емы:"
 
-#: src/profile-preferences.ui:1708
+#: src/profile-preferences.ui:1774
 msgid "Color p_alette:"
 msgstr "_Палитра:"
 
-#: src/profile-preferences.ui:1724
+#: src/profile-preferences.ui:1790
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
@@ -1754,83 +1801,83 @@ msgstr ""
 "<small><i><b>Замечание:</b> Приложениям в терминале будут доступны эти "
 "цвета. </i></small>"
 
-#: src/profile-preferences.ui:1761
+#: src/profile-preferences.ui:1836
 msgid "Colors"
 msgstr "Цвета"
 
-#: src/profile-preferences.ui:1779
+#: src/profile-preferences.ui:1854
 msgid "_Solid color"
 msgstr "_Сплошной цвет"
 
-#: src/profile-preferences.ui:1801
+#: src/profile-preferences.ui:1876
 msgid "_Background image"
 msgstr "Ф_оновое изображение"
 
-#: src/profile-preferences.ui:1837
+#: src/profile-preferences.ui:1912
 msgid "Image _file:"
 msgstr "_Файл изображения:"
 
-#: src/profile-preferences.ui:1852
+#: src/profile-preferences.ui:1927
 msgid "Select Background Image"
 msgstr "Фоновое изображение"
 
-#: src/profile-preferences.ui:1869
+#: src/profile-preferences.ui:1944
 msgid "Background image _scrolls"
 msgstr "Прокр_учивать изображение фона"
 
-#: src/profile-preferences.ui:1900
+#: src/profile-preferences.ui:1975
 msgid "_Transparent background"
 msgstr "_Прозрачный фон"
 
-#: src/profile-preferences.ui:1926
+#: src/profile-preferences.ui:2001
 msgid "S_hade transparent or image background:"
 msgstr "За_темнять прозрачность или изображение фона:"
 
-#: src/profile-preferences.ui:1942
+#: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
 msgstr "За_темнять прозрачность фона:"
 
-#: src/profile-preferences.ui:1963
+#: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>нет</i></small>"
 
-#: src/profile-preferences.ui:1993
+#: src/profile-preferences.ui:2068
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>максимально</i></small>"
 
-#: src/profile-preferences.ui:2028
+#: src/profile-preferences.ui:2103
 msgid "Background"
 msgstr "Фон"
 
-#: src/profile-preferences.ui:2049
+#: src/profile-preferences.ui:2125
 msgid "_Scrollbar is:"
 msgstr "Полоса прокр_утки:"
 
-#: src/profile-preferences.ui:2060
+#: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
 msgstr "Прокру_чивать при выводе"
 
-#: src/profile-preferences.ui:2077
+#: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
 msgstr "Прок_ручивать при нажатии клавиши"
 
-#: src/profile-preferences.ui:2117
+#: src/profile-preferences.ui:2193
 msgid "lines"
 msgstr "строк"
 
-#: src/profile-preferences.ui:2139
+#: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
 msgstr "О_братная прокрутка:"
 
-#: src/profile-preferences.ui:2150
+#: src/profile-preferences.ui:2226
 msgid "_Unlimited"
 msgstr "_Бесконечно"
 
-#: src/profile-preferences.ui:2207
+#: src/profile-preferences.ui:2283
 msgid "Scrolling"
 msgstr "Прокрутка"
 
-#: src/profile-preferences.ui:2228
+#: src/profile-preferences.ui:2304
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1842,254 +1889,254 @@ msgstr ""
 "работать с некоторыми приложениями и ОС, ожидающими другого поведения "
 "терминала.</i></small>"
 
-#: src/profile-preferences.ui:2250
+#: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
 msgstr "Клавиша «_Delete» генерирует:"
 
-#: src/profile-preferences.ui:2302
+#: src/profile-preferences.ui:2379
 msgid "_Backspace key generates:"
 msgstr "Клавиша «_Backspace» генерирует:"
 
-#: src/profile-preferences.ui:2326
+#: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "_Восстановить параметры совместимости по умолчанию"
 
-#: src/profile-preferences.ui:2356
+#: src/profile-preferences.ui:2448
 msgid "Compatibility"
 msgstr "Совместимость"
 
-#: src/skey-challenge.ui:100
+#: src/set-title-dialog.ui:18 src/terminal-accels.c:235
+msgid "Set Title"
+msgstr "Установить заголовок"
+
+#: src/set-title-dialog.ui:51
+msgid "_OK"
+msgstr "_OK"
+
+#: src/set-title-dialog.ui:88
+msgid "_Title:"
+msgstr "_Заголовок:"
+
+#: src/skey-challenge.ui:57
+msgid "_Ok"
+msgstr "_OK"
+
+#: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
 msgstr "Ответ на запрос S/Key"
 
-#: src/skey-challenge.ui:120
+#: src/skey-challenge.ui:134
 msgid "_Password:"
 msgstr "_Пароль:"
 
-#: src/skey-popup.c:165
+#: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
 msgstr ""
 "Текст, по которому вы щелкнули, не является правильным запросом S/Key."
 
-#: src/skey-popup.c:176
+#: src/skey-popup.c:177
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
 msgstr "Текст, по которому вы щелкнули, не является правильным запросом OTP."
 
-#: src/terminal-accels.c:148
+#: src/terminal-accels.c:149
 msgid "New Tab"
 msgstr "Создать вкладку"
 
-#: src/terminal-accels.c:152
+#: src/terminal-accels.c:153
 msgid "New Window"
 msgstr "Создать окно"
 
-#: src/terminal-accels.c:161
+#: src/terminal-accels.c:162
 msgid "Save Contents"
 msgstr "Сохранить содержимое"
 
-#: src/terminal-accels.c:166
+#: src/terminal-accels.c:167
 msgid "Close Tab"
 msgstr "Закрыть вкладку"
 
-#: src/terminal-accels.c:170
+#: src/terminal-accels.c:171
 msgid "Close Window"
 msgstr "Закрыть окно"
 
-#: src/terminal-accels.c:178
+#: src/terminal-accels.c:179
 msgid "Copy"
 msgstr "Скопировать"
 
-#: src/terminal-accels.c:182
+#: src/terminal-accels.c:183
 msgid "Paste"
 msgstr "Вставить"
 
-#: src/terminal-accels.c:186
+#: src/terminal-accels.c:187
 msgid "Select All"
 msgstr "Выделить всё"
 
-#: src/terminal-accels.c:194
+#: src/terminal-accels.c:195
 msgid "Hide and Show menubar"
 msgstr "Показать или скрыть строку меню"
 
-#: src/terminal-accels.c:198
+#: src/terminal-accels.c:199
 msgid "Full Screen"
 msgstr "Развернуть на полный экран"
 
-#: src/terminal-accels.c:202
+#: src/terminal-accels.c:203
 msgid "Zoom In"
 msgstr "Увеличить"
 
-#: src/terminal-accels.c:206
+#: src/terminal-accels.c:207
 msgid "Zoom Out"
 msgstr "Уменьшить"
 
-#: src/terminal-accels.c:210
+#: src/terminal-accels.c:211
 msgid "Normal Size"
 msgstr "Исходный размер"
 
-#: src/terminal-accels.c:222
+#: src/terminal-accels.c:223
 msgid "Find Next"
 msgstr "Найти следующее"
 
-#: src/terminal-accels.c:226
+#: src/terminal-accels.c:227
 msgid "Find Previous"
 msgstr "Найти предыдущее"
 
-#: src/terminal-accels.c:234 src/terminal-window.c:4247
-msgid "Set Title"
-msgstr "Установить заголовок"
-
-#: src/terminal-accels.c:238
+#: src/terminal-accels.c:239
 msgid "Reset"
 msgstr "Сброс"
 
-#: src/terminal-accels.c:242
+#: src/terminal-accels.c:243
 msgid "Reset and Clear"
 msgstr "Сброс и очистка"
 
-#: src/terminal-accels.c:246
+#: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
 msgstr "К предыдущему профилю"
 
-#: src/terminal-accels.c:250
+#: src/terminal-accels.c:251
 msgid "Switch to Next Profile"
 msgstr "К следующему профилю"
 
-#: src/terminal-accels.c:258
+#: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
 msgstr "На предыдущую вкладку"
 
-#: src/terminal-accels.c:262
+#: src/terminal-accels.c:263
 msgid "Switch to Next Tab"
 msgstr "На следующую вкладку"
 
-#: src/terminal-accels.c:266
+#: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
 msgstr "Переместить вкладку влево"
 
-#: src/terminal-accels.c:270
+#: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
 msgstr "Переместить вкладку вправо"
 
-#: src/terminal-accels.c:274
+#: src/terminal-accels.c:275
 msgid "Detach Tab"
 msgstr "Отцепить вкладку"
 
-#: src/terminal-accels.c:278
+#: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
 msgstr "На вкладку 1"
 
-#: src/terminal-accels.c:283
+#: src/terminal-accels.c:284
 msgid "Switch to Tab 2"
 msgstr "На вкладку 2"
 
-#: src/terminal-accels.c:288
+#: src/terminal-accels.c:289
 msgid "Switch to Tab 3"
 msgstr "На вкладку 3"
 
-#: src/terminal-accels.c:293
+#: src/terminal-accels.c:294
 msgid "Switch to Tab 4"
 msgstr "На вкладку 4"
 
-#: src/terminal-accels.c:298
+#: src/terminal-accels.c:299
 msgid "Switch to Tab 5"
 msgstr "На вкладку 5"
 
-#: src/terminal-accels.c:303
+#: src/terminal-accels.c:304
 msgid "Switch to Tab 6"
 msgstr "На вкладку 6"
 
-#: src/terminal-accels.c:308
+#: src/terminal-accels.c:309
 msgid "Switch to Tab 7"
 msgstr "На вкладку 7"
 
-#: src/terminal-accels.c:313
+#: src/terminal-accels.c:314
 msgid "Switch to Tab 8"
 msgstr "На вкладку 8"
 
-#: src/terminal-accels.c:318
+#: src/terminal-accels.c:319
 msgid "Switch to Tab 9"
 msgstr "На вкладку 9"
 
-#: src/terminal-accels.c:323
+#: src/terminal-accels.c:324
 msgid "Switch to Tab 10"
 msgstr "На вкладку 10"
 
-#: src/terminal-accels.c:328
+#: src/terminal-accels.c:329
 msgid "Switch to Tab 11"
 msgstr "На вкладку 11"
 
-#: src/terminal-accels.c:333
+#: src/terminal-accels.c:334
 msgid "Switch to Tab 12"
 msgstr "На вкладку 12"
 
-#: src/terminal-accels.c:341
+#: src/terminal-accels.c:342
 msgid "Contents"
 msgstr "Содержание"
 
-#: src/terminal-accels.c:346
+#: src/terminal-accels.c:347
 msgid "File"
 msgstr "Файл"
 
-#: src/terminal-accels.c:347
-msgid "Edit"
-msgstr "Правка"
-
-#: src/terminal-accels.c:348
+#: src/terminal-accels.c:349
 msgid "View"
 msgstr "Вид"
 
-#: src/terminal-accels.c:349
+#: src/terminal-accels.c:350
 msgid "Search"
 msgstr "Поиск"
 
-#: src/terminal-accels.c:351
+#: src/terminal-accels.c:352
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: src/terminal-accels.c:352
+#: src/terminal-accels.c:353
 msgid "Help"
 msgstr "Справка"
 
-#: src/terminal-accels.c:855
+#: src/terminal-accels.c:856
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Комбинация клавиш «%s» уже привязана к действию «%s»"
 
-#: src/terminal-accels.c:1011
+#: src/terminal-accels.c:1012
 msgid "_Action"
 msgstr "_Действие"
 
-#: src/terminal-accels.c:1030
+#: src/terminal-accels.c:1031
 msgid "Shortcut _Key"
 msgstr "_Комбинация клавиш"
 
-#: src/terminal-app.c:523
+#: src/terminal-app.c:528
 msgid "Click button to choose profile"
 msgstr "Нажать кнопку, чтобы выбрать профиль"
 
-#: src/terminal-app.c:606
+#: src/terminal-app.c:611
 msgid "Profile list"
 msgstr "Список профилей"
 
-#: src/terminal-app.c:683
+#: src/terminal-app.c:688
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Удалить профиль «%s»?"
 
-#: src/terminal-app.c:687
-msgid "_Cancel"
-msgstr "О_тмена"
-
-#: src/terminal-app.c:692
-msgid "_Delete"
-msgstr "_Удалить"
-
-#: src/terminal-app.c:699
+#: src/terminal-app.c:704
 msgid "Delete Profile"
 msgstr "Удаление профиля"
 
-#: src/terminal-app.c:1146
+#: src/terminal-app.c:1151
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2098,179 +2145,179 @@ msgstr ""
 "Профиль с именем «%s» уже существует. Вы действительно хотите создать другой"
 " профиль с таким же именем?"
 
-#: src/terminal-app.c:1241
+#: src/terminal-app.c:1246
 msgid "Choose base profile"
 msgstr "Выберите основной профиль"
 
-#: src/terminal-app.c:1828
+#: src/terminal-app.c:1841
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Профиль «%s» не существует, используется профиль по умолчанию\n"
 
-#: src/terminal-app.c:1855
+#: src/terminal-app.c:1868
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Строка размера «%s» недопустима\n"
 
-#: src/terminal-app.c:2061
+#: src/terminal-app.c:2074
 msgid "User Defined"
 msgstr "Определённая пользователем"
 
-#: src/terminal.c:585
+#: src/terminal.c:513
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не удалось  определить аргументы: %s\n"
 
-#: src/terminal-encoding.c:53 src/terminal-encoding.c:66
-#: src/terminal-encoding.c:80 src/terminal-encoding.c:102
-#: src/terminal-encoding.c:113
+#: src/terminal-encoding.c:54 src/terminal-encoding.c:67
+#: src/terminal-encoding.c:81 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:114
 msgid "Western"
 msgstr "Западная"
 
-#: src/terminal-encoding.c:54 src/terminal-encoding.c:81
-#: src/terminal-encoding.c:92 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:55 src/terminal-encoding.c:82
+#: src/terminal-encoding.c:93 src/terminal-encoding.c:112
 msgid "Central European"
 msgstr "Центральноевропейская"
 
-#: src/terminal-encoding.c:55
+#: src/terminal-encoding.c:56
 msgid "South European"
 msgstr "Южноевропейская"
 
-#: src/terminal-encoding.c:56 src/terminal-encoding.c:64
-#: src/terminal-encoding.c:118
+#: src/terminal-encoding.c:57 src/terminal-encoding.c:65
+#: src/terminal-encoding.c:119
 msgid "Baltic"
 msgstr "Балтийская"
 
-#: src/terminal-encoding.c:57 src/terminal-encoding.c:82
-#: src/terminal-encoding.c:88 src/terminal-encoding.c:89
-#: src/terminal-encoding.c:94 src/terminal-encoding.c:112
+#: src/terminal-encoding.c:58 src/terminal-encoding.c:83
+#: src/terminal-encoding.c:89 src/terminal-encoding.c:90
+#: src/terminal-encoding.c:95 src/terminal-encoding.c:113
 msgid "Cyrillic"
 msgstr "Кириллица"
 
-#: src/terminal-encoding.c:58 src/terminal-encoding.c:85
-#: src/terminal-encoding.c:91 src/terminal-encoding.c:117
+#: src/terminal-encoding.c:59 src/terminal-encoding.c:86
+#: src/terminal-encoding.c:92 src/terminal-encoding.c:118
 msgid "Arabic"
 msgstr "Арабский"
 
-#: src/terminal-encoding.c:59 src/terminal-encoding.c:97
-#: src/terminal-encoding.c:114
+#: src/terminal-encoding.c:60 src/terminal-encoding.c:98
+#: src/terminal-encoding.c:115
 msgid "Greek"
 msgstr "Греческий"
 
-#: src/terminal-encoding.c:60
+#: src/terminal-encoding.c:61
 msgid "Hebrew Visual"
 msgstr "Еврейская отображаемая"
 
-#: src/terminal-encoding.c:61 src/terminal-encoding.c:84
-#: src/terminal-encoding.c:100 src/terminal-encoding.c:116
+#: src/terminal-encoding.c:62 src/terminal-encoding.c:85
+#: src/terminal-encoding.c:101 src/terminal-encoding.c:117
 msgid "Hebrew"
 msgstr "Иврит"
 
-#: src/terminal-encoding.c:62 src/terminal-encoding.c:83
-#: src/terminal-encoding.c:104 src/terminal-encoding.c:115
+#: src/terminal-encoding.c:63 src/terminal-encoding.c:84
+#: src/terminal-encoding.c:105 src/terminal-encoding.c:116
 msgid "Turkish"
 msgstr "Турецкая"
 
-#: src/terminal-encoding.c:63
+#: src/terminal-encoding.c:64
 msgid "Nordic"
 msgstr "Северная"
 
-#: src/terminal-encoding.c:65
+#: src/terminal-encoding.c:66
 msgid "Celtic"
 msgstr "Кельтская"
 
-#: src/terminal-encoding.c:67 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:68 src/terminal-encoding.c:104
 msgid "Romanian"
 msgstr "Романская"
 
-#: src/terminal-encoding.c:68 src/terminal-encoding.c:125
-#: src/terminal-encoding.c:126 src/terminal-encoding.c:127
-#: src/terminal-encoding.c:128
+#: src/terminal-encoding.c:69 src/terminal-encoding.c:126
+#: src/terminal-encoding.c:127 src/terminal-encoding.c:128
+#: src/terminal-encoding.c:129
 msgid "Unicode"
 msgstr "Юникод"
 
-#: src/terminal-encoding.c:69
+#: src/terminal-encoding.c:70
 msgid "Armenian"
 msgstr "Армянский"
 
-#: src/terminal-encoding.c:70 src/terminal-encoding.c:71
-#: src/terminal-encoding.c:75
+#: src/terminal-encoding.c:71 src/terminal-encoding.c:72
+#: src/terminal-encoding.c:76
 msgid "Chinese Traditional"
 msgstr "Китайская традиционная"
 
-#: src/terminal-encoding.c:72
+#: src/terminal-encoding.c:73
 msgid "Cyrillic/Russian"
 msgstr "Кириллица (российская)"
 
-#: src/terminal-encoding.c:73 src/terminal-encoding.c:86
-#: src/terminal-encoding.c:106
+#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
+#: src/terminal-encoding.c:107
 msgid "Japanese"
 msgstr "Японская"
 
-#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
-#: src/terminal-encoding.c:109 src/terminal-encoding.c:129
+#: src/terminal-encoding.c:75 src/terminal-encoding.c:88
+#: src/terminal-encoding.c:110 src/terminal-encoding.c:130
 msgid "Korean"
 msgstr "Корейская"
 
-#: src/terminal-encoding.c:76 src/terminal-encoding.c:77
-#: src/terminal-encoding.c:78
+#: src/terminal-encoding.c:77 src/terminal-encoding.c:78
+#: src/terminal-encoding.c:79
 msgid "Chinese Simplified"
 msgstr "Китайская упрощённая"
 
-#: src/terminal-encoding.c:79
+#: src/terminal-encoding.c:80
 msgid "Georgian"
 msgstr "Грузинский"
 
-#: src/terminal-encoding.c:90 src/terminal-encoding.c:105
+#: src/terminal-encoding.c:91 src/terminal-encoding.c:106
 msgid "Cyrillic/Ukrainian"
 msgstr "Кириллица (украинская)"
 
-#: src/terminal-encoding.c:93
+#: src/terminal-encoding.c:94
 msgid "Croatian"
 msgstr "Хорватская"
 
-#: src/terminal-encoding.c:95
+#: src/terminal-encoding.c:96
 msgid "Hindi"
 msgstr "Хинди"
 
-#: src/terminal-encoding.c:96
+#: src/terminal-encoding.c:97
 msgid "Persian"
 msgstr "Персидская"
 
-#: src/terminal-encoding.c:98
+#: src/terminal-encoding.c:99
 msgid "Gujarati"
 msgstr "Гуджарати"
 
-#: src/terminal-encoding.c:99
+#: src/terminal-encoding.c:100
 msgid "Gurmukhi"
 msgstr "Гурмукхи"
 
-#: src/terminal-encoding.c:101
+#: src/terminal-encoding.c:102
 msgid "Icelandic"
 msgstr "Исландская"
 
-#: src/terminal-encoding.c:107 src/terminal-encoding.c:110
-#: src/terminal-encoding.c:119
+#: src/terminal-encoding.c:108 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:120
 msgid "Vietnamese"
 msgstr "Вьетнамская"
 
-#: src/terminal-encoding.c:108
+#: src/terminal-encoding.c:109
 msgid "Thai"
 msgstr "Тайский"
 
-#: src/terminal-encoding.c:506 src/terminal-encoding.c:531
+#: src/terminal-encoding.c:504 src/terminal-encoding.c:529
 msgid "_Description"
 msgstr "_Описание"
 
-#: src/terminal-encoding.c:515 src/terminal-encoding.c:540
+#: src/terminal-encoding.c:513 src/terminal-encoding.c:538
 msgid "_Encoding"
 msgstr "_Кодировка"
 
-#: src/terminal-encoding.c:598
+#: src/terminal-encoding.c:596
 msgid "Current Locale"
 msgstr "Текущей локали"
 
-#: src/terminal-options.c:176
+#: src/terminal-options.c:177
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2281,36 +2328,36 @@ msgstr ""
 " вы можете создать профиль с желаемыми параметрами и использовать новый "
 "параметр «--profile»\n"
 
-#: src/terminal-options.c:209
+#: src/terminal-options.c:210
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Аргумент для «%s» не является допустимой командой: %s"
 
-#: src/terminal-options.c:348
+#: src/terminal-options.c:349
 msgid "Two roles given for one window"
 msgstr "Две роли заданы для одного окна"
 
-#: src/terminal-options.c:369 src/terminal-options.c:402
+#: src/terminal-options.c:370 src/terminal-options.c:403
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Параметр «%s» задан дважды для одного окна\n"
 
-#: src/terminal-options.c:601
+#: src/terminal-options.c:602
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "Значение «%s» не является допустимым масштабом"
 
-#: src/terminal-options.c:608
+#: src/terminal-options.c:609
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Масштаб %g слишком мал, используется масштаб %g\n"
 
-#: src/terminal-options.c:616
+#: src/terminal-options.c:617
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Масштаб %g слишком велик, используется масштаб %g\n"
 
-#: src/terminal-options.c:651
+#: src/terminal-options.c:652
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2319,15 +2366,15 @@ msgstr ""
 "Параметр «%s» требует указания команды для запуска в оставшейся части "
 "командной строки"
 
-#: src/terminal-options.c:812
+#: src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "Неверный формат файла конфигурации терминала"
 
-#: src/terminal-options.c:825
+#: src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "Версия файла конфигурации и терминала не совместимы"
 
-#: src/terminal-options.c:953
+#: src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2335,106 +2382,106 @@ msgstr ""
 "Не регистрировать с помощью сервера имён активации, не использовать повторно"
 " терминал"
 
-#: src/terminal-options.c:962
+#: src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "Загрузить конфигурацию терминала из файла"
 
-#: src/terminal-options.c:971
+#: src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "Сохранить конфигурацию терминала в файл"
 
-#: src/terminal-options.c:986
+#: src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Открыть новое окно, содержащее вкладку с профилем по умолчанию"
 
-#: src/terminal-options.c:995
+#: src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Открыть новую вкладку с профилем по умолчанию в последнем открытом окне"
 
-#: src/terminal-options.c:1009
+#: src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Показать строку меню"
 
-#: src/terminal-options.c:1018
+#: src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Скрыть строку меню"
 
-#: src/terminal-options.c:1027
+#: src/terminal-options.c:1028
 msgid "Maximize the window"
 msgstr "Развернуть на весь экран"
 
-#: src/terminal-options.c:1036
+#: src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "Развернуть во весь экран"
 
-#: src/terminal-options.c:1045
+#: src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Задать размер окна; пример: 80x24 или 80x24+200+200 (СТОЛБЦОВxСТРОК+X+Y)"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "ГЕОМЕТРИЯ"
 
-#: src/terminal-options.c:1054
+#: src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "Установить роль окна"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "РОЛЬ"
 
-#: src/terminal-options.c:1063
+#: src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Установить последнюю указанную вкладку как активную в этом окне"
 
-#: src/terminal-options.c:1077
+#: src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Выполнить аргумент к этому параметру в терминале"
 
-#: src/terminal-options.c:1086
+#: src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "Использовать данный профиль вместо профиля по умолчанию"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "ИМЯ-ПРОФИЛЯ"
 
-#: src/terminal-options.c:1095
+#: src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Установить заголовок терминала"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "ЗАГОЛОВОК"
 
-#: src/terminal-options.c:1104
+#: src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Установить рабочий каталог"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "КАТАЛОГ"
 
-#: src/terminal-options.c:1113
+#: src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Установить масштаб терминала (1.0 = обычный размер)"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "МАСШТАБ"
 
-#: src/terminal-options.c:1365 src/terminal-options.c:1368
+#: src/terminal-options.c:1366 src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "Эмулятор терминала MATE"
 
-#: src/terminal-options.c:1369
+#: src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "Показать параметры терминала MATE"
 
-#: src/terminal-options.c:1379
+#: src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2442,11 +2489,11 @@ msgstr ""
 "Параметры для открытия новых окон или вкладов терминала; эти параметры могут"
 " быть использованы несколько раз:"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "Показать параметры терминала"
 
-#: src/terminal-options.c:1388
+#: src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2454,11 +2501,11 @@ msgstr ""
 "Параметры окна; если используются до первого аргумента --window или --tab, "
 "устанавливаются по умолчанию для всех окон"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "Показать параметры, применяемые к окну"
 
-#: src/terminal-options.c:1397
+#: src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2466,7 +2513,7 @@ msgstr ""
 "Параметры терминала; Если используются до первого аргумента --window или "
 "--tab, устанавливаются по умолчанию для всех терминалов:"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "Показать параметры, применяемые к терминалу"
 
@@ -2474,50 +2521,50 @@ msgstr "Показать параметры, применяемые к терм�
 msgid "Unnamed"
 msgstr "Безымянный"
 
-#: src/terminal-screen.c:1520
+#: src/terminal-screen.c:1524
 msgid "_Profile Preferences"
 msgstr "Параметры п_рофиля"
 
-#: src/terminal-screen.c:1521 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
 msgid "_Relaunch"
 msgstr "Перезапуск"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1528
 msgid "There was an error creating the child process for this terminal"
 msgstr "Произошла ошибка при создании дочернего процесса для этого терминала"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:1972
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Дочерний процесс корректно завершился с кодом %d."
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:1977
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Работа дочернего процесса прервана по сигналу %d."
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:1982
 msgid "The child process was terminated."
 msgstr "Работа дочернего процесса прервана."
 
-#: src/terminal-tab-label.c:130
+#: src/terminal-tab-label.c:131
 msgid "Close tab"
 msgstr "Закрыть вкладку"
 
-#: src/terminal-tabs-menu.c:201
+#: src/terminal-tabs-menu.c:202
 msgid "Switch to this tab"
 msgstr "Переключиться на эту вкладку"
 
-#: src/terminal-util.c:145
+#: src/terminal-util.c:146
 msgid "There was an error displaying help"
 msgstr "Произошла ошибка при отображении справки"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Не удалось открыть адрес «%s»"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2529,7 +2576,7 @@ msgstr ""
 "опубликованной Фондом свободного программного обеспечения; либо версии 3 "
 "этой лицензии, либо (по вашему выбору) любой более поздней версии."
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2542,7 +2589,7 @@ msgstr ""
 "ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Для получения дополнительных сведений "
 "обратитесь к лицензии GNU General Public License."
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2569,311 +2616,287 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1885
+#: src/terminal-window.c:1876
 msgid "_File"
 msgstr "_Файл"
 
-#: src/terminal-window.c:1886 src/terminal-window.c:1899
-#: src/terminal-window.c:2140
+#: src/terminal-window.c:1877 src/terminal-window.c:1890
+#: src/terminal-window.c:2131
 msgid "Open _Terminal"
 msgstr "Открыть _терминал"
 
-#: src/terminal-window.c:1887 src/terminal-window.c:1904
-#: src/terminal-window.c:2145
+#: src/terminal-window.c:1878 src/terminal-window.c:1895
+#: src/terminal-window.c:2136
 msgid "Open Ta_b"
 msgstr "Открыть _вкладку"
 
-#: src/terminal-window.c:1888
+#: src/terminal-window.c:1879
 msgid "_Edit"
 msgstr "_Правка"
 
-#: src/terminal-window.c:1889
+#: src/terminal-window.c:1880
 msgid "_View"
 msgstr "_Вид"
 
-#: src/terminal-window.c:1890
+#: src/terminal-window.c:1881
 msgid "_Search"
 msgstr "П_оиск"
 
-#: src/terminal-window.c:1891
+#: src/terminal-window.c:1882
 msgid "_Terminal"
 msgstr "_Терминал"
 
-#: src/terminal-window.c:1892
+#: src/terminal-window.c:1883
 msgid "Ta_bs"
 msgstr "В_кладки"
 
-#: src/terminal-window.c:1893
-msgid "_Help"
-msgstr "_Помощь"
-
-#: src/terminal-window.c:1909
+#: src/terminal-window.c:1900
 msgid "New _Profile…"
 msgstr "Создать _профиль…"
 
-#: src/terminal-window.c:1914
+#: src/terminal-window.c:1905
 msgid "_Save Contents"
 msgstr "Со_хранить содержимое"
 
-#: src/terminal-window.c:1919 src/terminal-window.c:2155
+#: src/terminal-window.c:1910 src/terminal-window.c:2146
 msgid "C_lose Tab"
 msgstr "Закрыть в_кладку"
 
-#: src/terminal-window.c:1924
+#: src/terminal-window.c:1915
 msgid "_Close Window"
 msgstr "_Закрыть окно"
 
-#: src/terminal-window.c:1931 src/terminal-window.c:2125
+#: src/terminal-window.c:1922 src/terminal-window.c:2116
 msgid "_Copy"
 msgstr "_Копировать"
 
-#: src/terminal-window.c:1936 src/terminal-window.c:2130
+#: src/terminal-window.c:1927 src/terminal-window.c:2121
 msgid "_Paste"
 msgstr "Вст_авить"
 
-#: src/terminal-window.c:1941 src/terminal-window.c:2135
+#: src/terminal-window.c:1932 src/terminal-window.c:2126
 msgid "Paste _Filenames"
 msgstr "Вставить _имена файлов"
 
-#: src/terminal-window.c:1946
+#: src/terminal-window.c:1937
 msgid "Select _All"
 msgstr "Выделить _всё"
 
-#: src/terminal-window.c:1951
+#: src/terminal-window.c:1942
 msgid "P_rofiles…"
 msgstr "П_рофили…"
 
-#: src/terminal-window.c:1956
+#: src/terminal-window.c:1947
 msgid "_Keyboard Shortcuts…"
 msgstr "_Комбинации клавиш…"
 
-#: src/terminal-window.c:1961
+#: src/terminal-window.c:1952
 msgid "Pr_ofile Preferences"
 msgstr "Параметры п_рофиля"
 
-#: src/terminal-window.c:1968
+#: src/terminal-window.c:1959
 msgid "Zoom _In"
 msgstr "У_величить"
 
-#: src/terminal-window.c:1973
+#: src/terminal-window.c:1964
 msgid "Zoom _Out"
 msgstr "У_меньшить"
 
-#: src/terminal-window.c:1978
+#: src/terminal-window.c:1969
 msgid "_Normal Size"
 msgstr "_Нормальный размер"
 
-#: src/terminal-window.c:1985
+#: src/terminal-window.c:1976
 msgid "_Find..."
 msgstr "_Поиск..."
 
-#: src/terminal-window.c:1990
+#: src/terminal-window.c:1981
 msgid "Find Ne_xt"
 msgstr "Найти _следующее"
 
-#: src/terminal-window.c:1995
+#: src/terminal-window.c:1986
 msgid "Find Pre_vious"
 msgstr "Найти пр_едыдущее"
 
-#: src/terminal-window.c:2000
+#: src/terminal-window.c:1991
 msgid "_Clear Highlight"
 msgstr "Очистить выделение"
 
-#: src/terminal-window.c:2006
+#: src/terminal-window.c:1997
 msgid "Go to _Line..."
 msgstr "Перейти к _строке…"
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2002
 msgid "_Incremental Search..."
 msgstr "По_шаговый поиск…"
 
-#: src/terminal-window.c:2018
+#: src/terminal-window.c:2009
 msgid "Change _Profile"
 msgstr "Изменить _профиль"
 
-#: src/terminal-window.c:2020
+#: src/terminal-window.c:2011
 msgid "_Previous Profile"
 msgstr "_Предыдущий профиль"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2016
 msgid "_Next Profile"
 msgstr "_Следующий профиль"
 
-#: src/terminal-window.c:2030
+#: src/terminal-window.c:2021
 msgid "_Set Title…"
 msgstr "_Установить заголовок…"
 
-#: src/terminal-window.c:2034
+#: src/terminal-window.c:2025
 msgid "Set _Character Encoding"
 msgstr "Установить _кодировку символов"
 
-#: src/terminal-window.c:2036
+#: src/terminal-window.c:2027
 msgid "_Reset"
 msgstr "_Сброс"
 
-#: src/terminal-window.c:2041
+#: src/terminal-window.c:2032
 msgid "Reset and C_lear"
 msgstr "Сброс и о_чистка"
 
-#: src/terminal-window.c:2048
+#: src/terminal-window.c:2039
 msgid "_Add or Remove…"
 msgstr "_Добавить или удалить…"
 
-#: src/terminal-window.c:2055
+#: src/terminal-window.c:2046
 msgid "_Previous Tab"
 msgstr "На п_редыдущую вкладку"
 
-#: src/terminal-window.c:2060
+#: src/terminal-window.c:2051
 msgid "_Next Tab"
 msgstr "На _следующую вкладку"
 
-#: src/terminal-window.c:2065
+#: src/terminal-window.c:2056
 msgid "Move Tab _Left"
 msgstr "Переместить вкладку в_лево"
 
-#: src/terminal-window.c:2070
+#: src/terminal-window.c:2061
 msgid "Move Tab _Right"
 msgstr "Переместить вкладку в_право"
 
-#: src/terminal-window.c:2075
+#: src/terminal-window.c:2066
 msgid "_Detach tab"
 msgstr "От_цепить вк_ладку"
 
-#: src/terminal-window.c:2082
+#: src/terminal-window.c:2073
 msgid "_Contents"
 msgstr "_Содержание"
 
-#: src/terminal-window.c:2087
+#: src/terminal-window.c:2078
 msgid "_About"
 msgstr "_Об апплете"
 
-#: src/terminal-window.c:2094
+#: src/terminal-window.c:2085
 msgid "_Send Mail To…"
 msgstr "_Послать E-mail…"
 
-#: src/terminal-window.c:2099
+#: src/terminal-window.c:2090
 msgid "_Copy E-mail Address"
 msgstr "Скопировать адрес E-mail"
 
-#: src/terminal-window.c:2104
+#: src/terminal-window.c:2095
 msgid "C_all To…"
 msgstr "_Позвонить…"
 
-#: src/terminal-window.c:2109
+#: src/terminal-window.c:2100
 msgid "_Copy Call Address"
 msgstr "_Скопировать адрес E-mail"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2105
 msgid "_Open Link"
 msgstr "_Открыть ссылку"
 
-#: src/terminal-window.c:2119
+#: src/terminal-window.c:2110
 msgid "_Copy Link Address"
 msgstr "_Копировать адрес ссылки"
 
-#: src/terminal-window.c:2123
+#: src/terminal-window.c:2114
 msgid "P_rofiles"
 msgstr "П_рофили"
 
-#: src/terminal-window.c:2150 src/terminal-window.c:3640
-msgid "C_lose Window"
-msgstr "_Закрыть окно"
-
-#: src/terminal-window.c:2160
+#: src/terminal-window.c:2151
 msgid "L_eave Full Screen"
 msgstr "Покинуть полны_й экран"
 
-#: src/terminal-window.c:2164
+#: src/terminal-window.c:2155
 msgid "_Input Methods"
 msgstr "Использовать метод вв_ода"
 
-#: src/terminal-window.c:2171
+#: src/terminal-window.c:2162
 msgid "Show _Menubar"
 msgstr "Показывать _меню"
 
-#: src/terminal-window.c:2177
+#: src/terminal-window.c:2168
 msgid "_Full Screen"
 msgstr "Развернуть на полный _экран"
 
-#: src/terminal-window.c:3618
+#: src/terminal-window.c:3607
 msgid ""
-"There are still processes running in some terminals in this window. Closing "
-"the window will kill all of them."
+"There are still processes running in some terminals in this window.\n"
+"Closing the window will kill all of them."
 msgstr ""
-"В некоторых терминалах этого окна запущены процессы. Закрытие окна прервёт "
-"выполнение всех этих процессов."
+"В некоторых терминалах этого окна запущены процессы.\n"
+"Закрытие окна прервёт выполнение всех этих процессов."
 
-#: src/terminal-window.c:3621
-msgid ""
-"There is still a process running in this terminal. Closing the terminal will"
-" kill it."
-msgstr ""
-"В терминале запущен процесс.  Закрытие терминала прервёт выполнение "
-"процесса."
-
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
 msgstr "В этом окне открыто несколько вкладок"
 
-#: src/terminal-window.c:3633
-msgid "Close this window?"
-msgstr "Закрыть это окно?"
-
-#: src/terminal-window.c:3633
+#: src/terminal-window.c:3624
 msgid "Close this terminal?"
 msgstr "Закрыть этот терминал?"
 
-#: src/terminal-window.c:3640
+#: src/terminal-window.c:3625
 msgid "C_lose Terminal"
 msgstr "_Закрыть терминал"
 
-#: src/terminal-window.c:3706
+#: src/terminal-window.c:3695
 msgid "Could not save contents"
 msgstr "Не удалось сохранить содержимое"
 
-#: src/terminal-window.c:3730
+#: src/terminal-window.c:3719
 msgid "Save as..."
 msgstr "Сохранить как…"
 
-#: src/terminal-window.c:4264
-msgid "_Title:"
-msgstr "_Заголовок:"
-
-#: src/terminal-window.c:4449
+#: src/terminal-window.c:4415
 msgid "Contributors:"
 msgstr "Помощники:"
 
-#: src/terminal-window.c:4468
+#: src/terminal-window.c:4431
+#, c-format
+msgid ""
+"MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
+"Powered by Virtual TErminal %d.%d.%d"
+msgstr ""
+"MATE Terminal - эмулятор терминала для рабочего стола MATE.\n"
+"Основан на Virtual TErminal %d.%d.%d "
+
+#: src/terminal-window.c:4437
 msgid "About MATE Terminal"
 msgstr "О приложении Терминал MATE"
 
-#: src/terminal-window.c:4469
+#: src/terminal-window.c:4438
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Copyright © 2006 Guilherme de S. Pastore\n"
 "Copyright © 2007–2010 Christian Persch\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
-"Copyright © 2002–2004 Havoc Pennington\n"
-"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
-"Copyright © 2006 Guilherme de S. Pastore\n"
-"Copyright © 2007–2010 Christian Persch\n"
-"Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
 
-#: src/terminal-window.c:4475
-msgid "A terminal emulator for the MATE desktop"
-msgstr "Эмулятор терминала для рабочего стола MATE"
-
-#: src/terminal-window.c:4481
+#: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr ""
 "Александр Сапрыкин <xelfium@gmail.com>\n"
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
+"Алексей Родионов <alexey.rodionov@red-soft.ru>\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"

@@ -5,15 +5,15 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# abuyop <abuyop@gmail.com>, 2020
+# abuyop <abuyop@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.23\n"
+"Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2020-01-13 14:52+0100\n"
+"POT-Creation-Date: 2021-06-25 16:51+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>, 2020\n"
+"Last-Translator: abuyop <abuyop@gmail.com>, 2021\n"
 "Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,16 +21,16 @@ msgstr ""
 "Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4466
+#: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
+#: src/terminal-options.c:190 src/terminal-window.c:4435
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
-#: mate-terminal.appdata.xml.in:8
+#: mate-terminal.appdata.xml.in.in:8
 msgid "A terminal emulator for the MATE desktop environment"
 msgstr "Emulator terminal untuk persekitaran desktop MATE"
 
-#: mate-terminal.appdata.xml.in:10
+#: mate-terminal.appdata.xml.in.in:10
 msgid ""
 "MATE Terminal is a terminal emulation application that you can use to access"
 " a UNIX shell in the MATE environment. MATE Terminal emulates the xterm "
@@ -42,7 +42,7 @@ msgstr ""
 "telah dibangunkan oleh X Consortium. Ia menyokong latar belakang lutsinar, "
 "pembukaan terminal berbilang dalam satu tinggal (tab) dan URL boleh klik."
 
-#: mate-terminal.appdata.xml.in:17
+#: mate-terminal.appdata.xml.in.in:17
 msgid ""
 "MATE Terminal is a fork of GNOME Terminal and part of the MATE Desktop "
 "Environment. If you would like to know more about MATE and MATE Terminal, "
@@ -52,8 +52,8 @@ msgstr ""
 "Persekitaran Atas Meja MATE. Jika anda mahu ketahui lebih lanjut mengenai "
 "MATE dan Terminal MATE, sila lawati laman sesawang projek."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
-#: src/terminal-profile.c:161 src/terminal-window.c:2214
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -61,39 +61,270 @@ msgstr "Terminal"
 msgid "Use the command line"
 msgstr "Guna baris perintah"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: mate-terminal.desktop.in.in:9
-msgid "utilities-terminal"
-msgstr "utilities-terminal"
+#: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+msgid "_Cancel"
+msgstr "_Batal"
 
-#: src/eggsmclient.c:225
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
+#: src/terminal-window.c:3622
+msgid "C_lose Window"
+msgstr "T_utup Tetingkap"
+
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+msgid "Close this window?"
+msgstr "Tutup tetingkap ini?"
+
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+msgid ""
+"There is still a process running in this terminal.\n"
+"Closing the terminal will kill it."
+msgstr ""
+"Masih terdapat satu proses berjalan dalam terminal ini\n"
+"Penutupan terminal akan mematikannya."
+
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Lumpuhkan sambungan dengan pengurus sesi"
 
-#: src/eggsmclient.c:230
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Nyatakan fail mengandungi konfigurasi tersimpan"
 
-#: src/eggsmclient.c:230 src/terminal-options.c:963 src/terminal-options.c:972
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
+#: src/terminal-options.c:973
 msgid "FILE"
 msgstr "FAIL"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Nyatakan ID pengurusan sesi"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/eggsmclient.c:261
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Pilihan pengurusan sesi:"
 
-#: src/eggsmclient.c:262
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Tunjuk pilihan pengurusan sesi"
+
+#: src/encodings-dialog.ui:24
+msgid "Add or Remove Terminal Encodings"
+msgstr "Tambah atau Buang Pengekodan Terminal"
+
+#: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
+#: src/profile-manager.ui:58 src/profile-preferences.ui:262
+#: src/terminal-window.c:1884
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: src/encodings-dialog.ui:59 src/find-dialog.ui:42
+#: src/keybinding-editor.ui:59 src/profile-manager.ui:76
+#: src/profile-preferences.ui:279
+msgid "_Close"
+msgstr "_Tutup"
+
+#: src/encodings-dialog.ui:184
+msgid "A_vailable encodings:"
+msgstr "Pengekodan tersedi_a:"
+
+#: src/encodings-dialog.ui:202
+msgid "E_ncodings shown in menu:"
+msgstr "_Pengekodan ditunjuk dalam menu:"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:25 src/profile-preferences.ui:184
+#: src/profile-preferences.ui:207
+msgid "Automatic"
+msgstr "Automatik"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:27 src/profile-preferences.ui:187
+#: src/profile-preferences.ui:210
+msgid "Control-H"
+msgstr "Control-H"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:29 src/profile-preferences.ui:190
+#: src/profile-preferences.ui:213
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:31 src/profile-preferences.ui:193
+#: src/profile-preferences.ui:216
+msgid "Escape sequence"
+msgstr "Jujukan Esc"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:33 src/profile-preferences.ui:196
+#: src/profile-preferences.ui:219
+msgid "TTY Erase"
+msgstr "Padam TTY"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:36 src/profile-preferences.ui:76
+msgid "Block"
+msgstr "Blok"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:38 src/profile-preferences.ui:79
+msgid "I-Beam"
+msgstr "I-Beam"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:40 src/profile-preferences.ui:82
+msgid "Underline"
+msgstr "Garis bawah"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:43 src/profile-preferences.ui:230
+msgid "Use system settings"
+msgstr "Guna tetapan sistem"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:45 src/profile-preferences.ui:233
+msgid "Always blink"
+msgstr "Sentiasa berkelip"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:47 src/profile-preferences.ui:236
+msgid "Never blink"
+msgstr "Tidak sesekali berkelip"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:50 src/profile-preferences.ui:113
+msgid "Exit the terminal"
+msgstr "Keluar dari terminal"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:52 src/profile-preferences.ui:116
+msgid "Restart the command"
+msgstr "Mula semula perintah"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:54 src/profile-preferences.ui:119
+msgid "Hold the terminal open"
+msgstr "Tahan terminal terbuka"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:57 src/profile-preferences.ui:167
+msgid "On the left side"
+msgstr "Di sisi kiri"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:59 src/profile-preferences.ui:170
+msgid "On the right side"
+msgstr "Di sisi kanan"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:61 src/profile-preferences.ui:173
+#: src/terminal-accels.c:409
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:64 src/profile-preferences.ui:93
+msgid "Replace initial title"
+msgstr "Ganti tajuk awal"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:66 src/profile-preferences.ui:96
+msgid "Append initial title"
+msgstr "Tambah tajuk awal"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:68 src/profile-preferences.ui:99
+msgid "Prepend initial title"
+msgstr "Sisip tajuk awal"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:70 src/profile-preferences.ui:102
+msgid "Keep initial title"
+msgstr "Kekalkan tajuk awal"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:73 src/profile-preferences.ui:141
+msgid "Tango"
+msgstr "Tango"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:75 src/profile-preferences.ui:144
+msgid "Linux console"
+msgstr "Konsol linux"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:77 src/profile-preferences.ui:147
+msgid "XTerm"
+msgstr "XTerm"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:79 src/profile-preferences.ui:150
+msgid "Rxvt"
+msgstr "Rxvt"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:81 src/profile-preferences.ui:153
+msgid "Solarized"
+msgstr "Tersuria"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:83 src/profile-editor.c:546
+#: src/profile-preferences.ui:130 src/profile-preferences.ui:156
+msgid "Custom"
+msgstr "Suai"
+
+#: src/find-dialog.ui:24 src/terminal-accels.c:219
+msgid "Find"
+msgstr "Cari"
+
+#: src/find-dialog.ui:59
+msgid "_Find"
+msgstr "_Cari:"
+
+#: src/find-dialog.ui:101
+msgid "_Search for:"
+msgstr "_Gelintar untuk: "
+
+#: src/find-dialog.ui:138
+msgid "_Match case"
+msgstr "_Padan kata"
+
+#: src/find-dialog.ui:155
+msgid "Match _entire word only"
+msgstr "Padan ke_seluruhan perkataan sahaja"
+
+#: src/find-dialog.ui:172
+msgid "Match as _regular expression"
+msgstr "Padan sebagai ungkapan _nalar"
+
+#: src/find-dialog.ui:189
+msgid "Search _backwards"
+msgstr "Gelintar meng_undur"
+
+#: src/find-dialog.ui:207
+msgid "_Wrap around"
+msgstr "_Lilit sekeliling"
+
+#: src/keybinding-editor.ui:24
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Papan Kekunci"
+
+#: src/keybinding-editor.ui:93
+msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
+msgstr "B_enarkan kekunci capaian menu (seperti Alt+F untuk buka menu Fail)"
+
+#: src/keybinding-editor.ui:132
+msgid "Enable the _menu shortcut key (F10 by default)"
+msgstr "Benarkan kekunci pintasan _menu (F10 secara lalai)"
+
+#: src/keybinding-editor.ui:151
+msgid "_Shortcut keys:"
+msgstr "Kekunci _pintasan:"
 
 #: src/org.mate.terminal.gschema.xml.in:49
 msgid "List of profiles"
@@ -1333,449 +1564,263 @@ msgstr ""
 "Jika anda menetapkan pilihan ke rentetan khas \"disabled\", maka tiada "
 "ikatan kekunci bagi tindakan ini."
 
-#: src/profile-editor.c:44
+#: src/profile-editor.c:45
 msgid "Black on light yellow"
 msgstr "Hitam diatas kuning cerah"
 
-#: src/profile-editor.c:49
+#: src/profile-editor.c:50
 msgid "Black on white"
 msgstr "Hitam diatas putih"
 
-#: src/profile-editor.c:54
+#: src/profile-editor.c:55
 msgid "Gray on black"
 msgstr "Kelabu diatas hitam"
 
-#: src/profile-editor.c:59
+#: src/profile-editor.c:60
 msgid "Green on black"
 msgstr "Hijau diatas hitam"
 
-#: src/profile-editor.c:64
+#: src/profile-editor.c:65
 msgid "White on black"
 msgstr "Putih di atas hitam"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be
 #. translated
-#: src/profile-editor.c:69
+#: src/profile-editor.c:70
 msgid "Solarized light"
 msgstr "Cerah tersuria"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
-#: src/profile-editor.c:74
+#: src/profile-editor.c:75
 msgid "Solarized dark"
 msgstr "Gelap tersuria"
 
-#: src/profile-editor.c:497
+#: src/profile-editor.c:498
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Ralat menghurai perintah: %s"
 
-#: src/profile-editor.c:514
+#: src/profile-editor.c:515
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Menyunting Profil \"%s\""
 
-#. Translators: This is the name of a colour scheme
-#: src/profile-editor.c:545 src/profile-preferences.ui:120
-#: src/profile-preferences.ui:146 src/extra-strings.c:82
-msgid "Custom"
-msgstr "Suai"
-
-#: src/profile-editor.c:595
+#: src/profile-editor.c:596
 msgid "Images"
 msgstr "Imej"
 
-#: src/profile-editor.c:732
+#: src/profile-editor.c:791
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Pilih Warna Palet %d"
 
-#: src/profile-editor.c:736
+#: src/profile-editor.c:795
 #, c-format
 msgid "Palette entry %d"
 msgstr "Masukan palet %d"
 
-#: src/encodings-dialog.ui:14
-msgid "Add or Remove Terminal Encodings"
-msgstr "Tambah atau Buang Pengekodan Terminal"
-
-#: src/encodings-dialog.ui:169
-msgid "A_vailable encodings:"
-msgstr "Pengekodan tersedi_a:"
-
-#: src/encodings-dialog.ui:187
-msgid "E_ncodings shown in menu:"
-msgstr "_Pengekodan ditunjuk dalam menu:"
-
-#: src/find-dialog.ui:14 src/terminal-accels.c:218
-msgid "Find"
-msgstr "Cari"
-
-#: src/find-dialog.ui:87
-msgid "_Search for:"
-msgstr "_Gelintar untuk: "
-
-#: src/find-dialog.ui:124
-msgid "_Match case"
-msgstr "_Padan kata"
-
-#: src/find-dialog.ui:141
-msgid "Match _entire word only"
-msgstr "Padan ke_seluruhan perkataan sahaja"
-
-#: src/find-dialog.ui:158
-msgid "Match as _regular expression"
-msgstr "Padan sebagai ungkapan _nalar"
-
-#: src/find-dialog.ui:175
-msgid "Search _backwards"
-msgstr "Gelintar meng_undur"
-
-#: src/find-dialog.ui:193
-msgid "_Wrap around"
-msgstr "_Lilit sekeliling"
-
-#: src/keybinding-editor.ui:14
-msgid "Keyboard Shortcuts"
-msgstr "Pintasan Papan Kekunci"
-
-#: src/keybinding-editor.ui:78
-msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "B_enarkan kekunci capaian menu (seperti Alt+F untuk buka menu Fail)"
-
-#: src/keybinding-editor.ui:117
-msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "Benarkan kekunci pintasan _menu (F10 secara lalai)"
-
-#: src/keybinding-editor.ui:136
-msgid "_Shortcut keys:"
-msgstr "Kekunci _pintasan:"
-
-#: src/profile-manager.ui:14
+#: src/profile-manager.ui:39
 msgid "Profiles"
 msgstr "Profil:"
 
-#: src/profile-manager.ui:175
+#: src/profile-manager.ui:136
+msgid "_New"
+msgstr "_Baru"
+
+#: src/profile-manager.ui:153 src/terminal-accels.c:348
+msgid "Edit"
+msgstr "Sunting"
+
+#: src/profile-manager.ui:170 src/terminal-app.c:697
+msgid "_Delete"
+msgstr "Pa_dam"
+
+#: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
 msgstr "_Profil yang diguna bila melancarkan terminal baru:"
 
-#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:13 src/terminal-accels.c:157
 msgid "New Profile"
 msgstr "Profil Baru"
 
-#: src/profile-new-dialog.ui:74
+#: src/profile-new-dialog.ui:81
 msgid "C_reate"
 msgstr "C_ipta"
 
-#: src/profile-new-dialog.ui:132
+#: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
 msgstr "_Nama profil:"
 
-#: src/profile-new-dialog.ui:145
+#: src/profile-new-dialog.ui:153
 msgid "_Base on:"
 msgstr "Ber_dasarkan:"
 
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:66 src/extra-strings.c:35
-msgid "Block"
-msgstr "Blok"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:69 src/extra-strings.c:37
-msgid "I-Beam"
-msgstr "I-Beam"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:72 src/extra-strings.c:39
-msgid "Underline"
-msgstr "Garis bawah"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:83 src/extra-strings.c:63
-msgid "Replace initial title"
-msgstr "Ganti tajuk awal"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:86 src/extra-strings.c:65
-msgid "Append initial title"
-msgstr "Tambah tajuk awal"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:89 src/extra-strings.c:67
-msgid "Prepend initial title"
-msgstr "Sisip tajuk awal"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:92 src/extra-strings.c:69
-msgid "Keep initial title"
-msgstr "Kekalkan tajuk awal"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:103 src/extra-strings.c:49
-msgid "Exit the terminal"
-msgstr "Keluar dari terminal"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:106 src/extra-strings.c:51
-msgid "Restart the command"
-msgstr "Mula semula perintah"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:109 src/extra-strings.c:53
-msgid "Hold the terminal open"
-msgstr "Tahan terminal terbuka"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:131 src/extra-strings.c:72
-msgid "Tango"
-msgstr "Tango"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:134 src/extra-strings.c:74
-msgid "Linux console"
-msgstr "Konsol linux"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:137 src/extra-strings.c:76
-msgid "XTerm"
-msgstr "XTerm"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:140 src/extra-strings.c:78
-msgid "Rxvt"
-msgstr "Rxvt"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:143 src/extra-strings.c:80
-msgid "Solarized"
-msgstr "Tersuria"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:157 src/extra-strings.c:56
-msgid "On the left side"
-msgstr "Di sisi kiri"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:160 src/extra-strings.c:58
-msgid "On the right side"
-msgstr "Di sisi kanan"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:163 src/terminal-accels.c:408
-#: src/extra-strings.c:60
-msgid "Disabled"
-msgstr "Dilumpuhkan"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:174 src/profile-preferences.ui:197
-#: src/extra-strings.c:24
-msgid "Automatic"
-msgstr "Automatik"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:177 src/profile-preferences.ui:200
-#: src/extra-strings.c:26
-msgid "Control-H"
-msgstr "Control-H"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:180 src/profile-preferences.ui:203
-#: src/extra-strings.c:28
-msgid "ASCII DEL"
-msgstr "ASCII DEL"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:183 src/profile-preferences.ui:206
-#: src/extra-strings.c:30
-msgid "Escape sequence"
-msgstr "Jujukan Esc"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:186 src/profile-preferences.ui:209
-#: src/extra-strings.c:32
-msgid "TTY Erase"
-msgstr "Padam TTY"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:220 src/extra-strings.c:42
-msgid "Use system settings"
-msgstr "Guna tetapan sistem"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:223 src/extra-strings.c:44
-msgid "Always blink"
-msgstr "Sentiasa berkelip"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:226 src/extra-strings.c:46
-msgid "Never blink"
-msgstr "Tidak sesekali berkelip"
-
-#: src/profile-preferences.ui:233
+#: src/profile-preferences.ui:243
 msgid "Profile Editor"
 msgstr "Penyunting Profil"
 
-#: src/profile-preferences.ui:311
+#: src/profile-preferences.ui:325
 msgid "_Profile name:"
 msgstr "_Nama profil: "
 
-#: src/profile-preferences.ui:342
+#: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
 msgstr "G_una fon lebar tetap sistem"
 
-#: src/profile-preferences.ui:372
+#: src/profile-preferences.ui:386
 msgid "_Font:"
 msgstr "_Fon:"
 
-#: src/profile-preferences.ui:389
+#: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
 msgstr "Pilih Satu Fon Terminal"
 
-#: src/profile-preferences.ui:410
+#: src/profile-preferences.ui:424
 msgid "_Allow bold text"
 msgstr "_Benarkan teks tebal"
 
-#: src/profile-preferences.ui:426
+#: src/profile-preferences.ui:440
 msgid "Show _menubar by default in new terminals"
 msgstr "Tunjuk palang _menu secara lalai dalam terminal baru"
 
-#: src/profile-preferences.ui:442
+#: src/profile-preferences.ui:456
 msgid "Terminal _bell"
 msgstr "_Loceng Terminal"
 
-#: src/profile-preferences.ui:458
+#: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
 msgstr "Salin teks terpilih ke dalam papan _keratan"
 
-#: src/profile-preferences.ui:474
+#: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
 msgstr "Sorot cabaran _S/Kekunci di bawah penuding tetikus"
 
-#: src/profile-preferences.ui:490
+#: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
 msgstr "Sorot _URL di bawah penuding tetikus"
 
-#: src/profile-preferences.ui:515
+#: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
 msgstr "Kelipan _kursor:"
 
-#: src/profile-preferences.ui:562
+#: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
 msgstr "_Bentuk kursor:"
 
-#: src/profile-preferences.ui:609
+#: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
 msgstr "Aksara _dipilih-ikut-perkataan:"
 
-#: src/profile-preferences.ui:640
+#: src/profile-preferences.ui:654
 msgid "Use custom default terminal si_ze"
 msgstr "Guna sai_z terminal lalai suai"
 
-#: src/profile-preferences.ui:670
+#: src/profile-preferences.ui:684
 msgid "Default size:"
 msgstr "Saiz lalai:"
 
-#: src/profile-preferences.ui:702
+#: src/profile-preferences.ui:716
 msgid "columns"
 msgstr "lajur"
 
-#: src/profile-preferences.ui:741
+#: src/profile-preferences.ui:755
 msgid "rows"
 msgstr "baris"
 
-#: src/profile-preferences.ui:776
+#: src/profile-preferences.ui:790
 msgid "General"
 msgstr "Am"
 
-#: src/profile-preferences.ui:803
+#: src/profile-preferences.ui:817
 msgid "<b>Title</b>"
 msgstr "<b>Tajuk</b>"
 
-#: src/profile-preferences.ui:834
+#: src/profile-preferences.ui:848
 msgid "Initial _title:"
 msgstr "_Tajuk awalan:"
 
-#: src/profile-preferences.ui:874
+#: src/profile-preferences.ui:888
 msgid "When terminal commands set their o_wn titles:"
 msgstr "Bila perintah terminal tetapkan tajuk mere_ka sendiri:"
 
-#: src/profile-preferences.ui:938
+#: src/profile-preferences.ui:952
 msgid "<b>Command</b>"
 msgstr "<b>Perintah</b>"
 
-#: src/profile-preferences.ui:965
+#: src/profile-preferences.ui:979
 msgid "_Run command as a login shell"
 msgstr "_Jalankan perintah sebagai shell daftar masuk"
 
-#: src/profile-preferences.ui:981
+#: src/profile-preferences.ui:995
 msgid "Ru_n a custom command instead of my shell"
 msgstr "_Jalankan program suai selain dari shell"
 
-#: src/profile-preferences.ui:1011
+#: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
 msgstr "Perintah sua_i:"
 
-#: src/profile-preferences.ui:1053
+#: src/profile-preferences.ui:1067
 msgid "When command _exits:"
 msgstr "Bila perintah _tamat:"
 
-#: src/profile-preferences.ui:1123
+#: src/profile-preferences.ui:1137
 msgid "Title and Command"
 msgstr "Tajuk dan Perintah"
 
-#: src/profile-preferences.ui:1151
+#: src/profile-preferences.ui:1165
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Latar Hadapan, Latar Belakang, Tebal dan Garis Bawah</b>"
 
-#: src/profile-preferences.ui:1173
+#: src/profile-preferences.ui:1187
 msgid "_Use colors from system theme"
 msgstr "G_una warna dari tema sistem"
 
-#: src/profile-preferences.ui:1197
+#: src/profile-preferences.ui:1211
 msgid "Built-in sche_mes:"
 msgstr "Ske_ma terbina-dalam:"
 
-#: src/profile-preferences.ui:1246
+#: src/profile-preferences.ui:1261
 msgid "_Text color:"
 msgstr "Warna _Teks:"
 
-#: src/profile-preferences.ui:1261
+#: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
 msgstr "Pilih Warna Latar Belakang Terminal"
 
-#: src/profile-preferences.ui:1273
+#: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
 msgstr "Pilih Warna Teks Terminal"
 
-#: src/profile-preferences.ui:1286
+#: src/profile-preferences.ui:1301
 msgid "_Background color:"
 msgstr "Warna latar belakang:"
 
-#: src/profile-preferences.ui:1336
+#: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
 msgstr "Warna Te_bal:"
 
-#: src/profile-preferences.ui:1350
+#: src/profile-preferences.ui:1381
 msgid "_Underline color:"
 msgstr "Warna _garis bawah:"
 
-#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
+#: src/profile-preferences.ui:1392 src/profile-preferences.ui:1407
 msgid "_Same as text color"
 msgstr "_Sama seperti warna teks"
 
-#: src/profile-preferences.ui:1430
+#: src/profile-preferences.ui:1470
 msgid "<b>Palette</b>"
 msgstr "<b>Palet</b>"
 
-#: src/profile-preferences.ui:1456
+#: src/profile-preferences.ui:1497
 msgid "Built-in _schemes:"
 msgstr "_Skema terbina-dalam:"
 
-#: src/profile-preferences.ui:1708
+#: src/profile-preferences.ui:1774
 msgid "Color p_alette:"
 msgstr "P_alet warna:"
 
-#: src/profile-preferences.ui:1724
+#: src/profile-preferences.ui:1790
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
@@ -1783,83 +1828,83 @@ msgstr ""
 "<small><i><b>Perhatian:</b> Aplikasi terminal mempunyai warna ini tersedia "
 "padanya.</i></small>"
 
-#: src/profile-preferences.ui:1761
+#: src/profile-preferences.ui:1836
 msgid "Colors"
 msgstr "Warna"
 
-#: src/profile-preferences.ui:1779
+#: src/profile-preferences.ui:1854
 msgid "_Solid color"
 msgstr "Warna _tegar"
 
-#: src/profile-preferences.ui:1801
+#: src/profile-preferences.ui:1876
 msgid "_Background image"
 msgstr "Imej latar _belakang"
 
-#: src/profile-preferences.ui:1837
+#: src/profile-preferences.ui:1912
 msgid "Image _file:"
 msgstr "_Fail imej:"
 
-#: src/profile-preferences.ui:1852
+#: src/profile-preferences.ui:1927
 msgid "Select Background Image"
 msgstr "Pilih Imej Latar Belakang"
 
-#: src/profile-preferences.ui:1869
+#: src/profile-preferences.ui:1944
 msgid "Background image _scrolls"
 msgstr "Tatal imej _latar belakang"
 
-#: src/profile-preferences.ui:1900
+#: src/profile-preferences.ui:1975
 msgid "_Transparent background"
 msgstr "Latar belakang _Lutsinar"
 
-#: src/profile-preferences.ui:1926
+#: src/profile-preferences.ui:2001
 msgid "S_hade transparent or image background:"
 msgstr "Latar belakang lutsinar be_rlorek atau imej:"
 
-#: src/profile-preferences.ui:1942
+#: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
 msgstr "_Lorek latar belakang lutsinar:"
 
-#: src/profile-preferences.ui:1963
+#: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Tiada</i></small>"
 
-#: src/profile-preferences.ui:1993
+#: src/profile-preferences.ui:2068
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Maksimum</i></small>"
 
-#: src/profile-preferences.ui:2028
+#: src/profile-preferences.ui:2103
 msgid "Background"
 msgstr "Latar Belakang"
 
-#: src/profile-preferences.ui:2049
+#: src/profile-preferences.ui:2125
 msgid "_Scrollbar is:"
 msgstr "Tatal balik adalah:"
 
-#: src/profile-preferences.ui:2060
+#: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
 msgstr "Tatal pada _output"
 
-#: src/profile-preferences.ui:2077
+#: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
 msgstr "Tatap pada _ketukan kekunci"
 
-#: src/profile-preferences.ui:2117
+#: src/profile-preferences.ui:2193
 msgid "lines"
 msgstr "garis"
 
-#: src/profile-preferences.ui:2139
+#: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
 msgstr "Tatal _balik:"
 
-#: src/profile-preferences.ui:2150
+#: src/profile-preferences.ui:2226
 msgid "_Unlimited"
 msgstr "Tanpa _Had"
 
-#: src/profile-preferences.ui:2207
+#: src/profile-preferences.ui:2283
 msgid "Scrolling"
 msgstr "Penatalan"
 
-#: src/profile-preferences.ui:2228
+#: src/profile-preferences.ui:2304
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1871,253 +1916,253 @@ msgstr ""
 "dengan beberapa aplikasi dan sistem pengoperasian yang menjangkakan kelakuan"
 " terminal yang berbeza.</i></small>"
 
-#: src/profile-preferences.ui:2250
+#: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
 msgstr "Kekunci _Del menjana:"
 
-#: src/profile-preferences.ui:2302
+#: src/profile-preferences.ui:2379
 msgid "_Backspace key generates:"
 msgstr "Kekunci _Backspace menjana:"
 
-#: src/profile-preferences.ui:2326
+#: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "_Tetap Semula Pilihan Keserasian ke Lalai"
 
-#: src/profile-preferences.ui:2356
+#: src/profile-preferences.ui:2448
 msgid "Compatibility"
 msgstr "Keserasian"
 
-#: src/skey-challenge.ui:100
-msgid "S/Key Challenge Response"
-msgstr "Respons Cabaran S/Key"
-
-#: src/skey-challenge.ui:120
-msgid "_Password:"
-msgstr "_Kata Laluan:"
-
-#: src/skey-popup.c:165
-msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr "Teks yang anda klik tidak kelihatan sebagai cabaran S/Key yang sah."
-
-#: src/skey-popup.c:176
-msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
-msgstr "Teks yang anda klik tidak kelihatan sebagai cabaran OTP yang sah."
-
-#: src/terminal-accels.c:148
-msgid "New Tab"
-msgstr "Tab Baru"
-
-#: src/terminal-accels.c:152
-msgid "New Window"
-msgstr "Tetingkap Baru"
-
-#: src/terminal-accels.c:161
-msgid "Save Contents"
-msgstr "Simpan Kandungan"
-
-#: src/terminal-accels.c:166
-msgid "Close Tab"
-msgstr "Tutup Tab"
-
-#: src/terminal-accels.c:170
-msgid "Close Window"
-msgstr "Tutup Tetingkap"
-
-#: src/terminal-accels.c:178
-msgid "Copy"
-msgstr "Salin"
-
-#: src/terminal-accels.c:182
-msgid "Paste"
-msgstr "Tampal"
-
-#: src/terminal-accels.c:186
-msgid "Select All"
-msgstr "Pilih Semua"
-
-#: src/terminal-accels.c:194
-msgid "Hide and Show menubar"
-msgstr "Sembunyi dan Tunjuk palang menu"
-
-#: src/terminal-accels.c:198
-msgid "Full Screen"
-msgstr "Skrin Penuh"
-
-#: src/terminal-accels.c:202
-msgid "Zoom In"
-msgstr "Zum Masuk"
-
-#: src/terminal-accels.c:206
-msgid "Zoom Out"
-msgstr "Zum Keluar"
-
-#: src/terminal-accels.c:210
-msgid "Normal Size"
-msgstr "Saiz Biasa"
-
-#: src/terminal-accels.c:222
-msgid "Find Next"
-msgstr "Cari Berikutnya"
-
-#: src/terminal-accels.c:226
-msgid "Find Previous"
-msgstr "Cari Terdahulu"
-
-#: src/terminal-accels.c:234 src/terminal-window.c:4247
+#: src/set-title-dialog.ui:18 src/terminal-accels.c:235
 msgid "Set Title"
 msgstr "Tetapkan Tajuk"
 
-#: src/terminal-accels.c:238
+#: src/set-title-dialog.ui:51
+msgid "_OK"
+msgstr "_OK"
+
+#: src/set-title-dialog.ui:88
+msgid "_Title:"
+msgstr "_Tajuk:"
+
+#: src/skey-challenge.ui:57
+msgid "_Ok"
+msgstr "_Ok"
+
+#: src/skey-challenge.ui:114
+msgid "S/Key Challenge Response"
+msgstr "Respons Cabaran S/Key"
+
+#: src/skey-challenge.ui:134
+msgid "_Password:"
+msgstr "_Kata Laluan:"
+
+#: src/skey-popup.c:166
+msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
+msgstr "Teks yang anda klik tidak kelihatan sebagai cabaran S/Key yang sah."
+
+#: src/skey-popup.c:177
+msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
+msgstr "Teks yang anda klik tidak kelihatan sebagai cabaran OTP yang sah."
+
+#: src/terminal-accels.c:149
+msgid "New Tab"
+msgstr "Tab Baru"
+
+#: src/terminal-accels.c:153
+msgid "New Window"
+msgstr "Tetingkap Baru"
+
+#: src/terminal-accels.c:162
+msgid "Save Contents"
+msgstr "Simpan Kandungan"
+
+#: src/terminal-accels.c:167
+msgid "Close Tab"
+msgstr "Tutup Tab"
+
+#: src/terminal-accels.c:171
+msgid "Close Window"
+msgstr "Tutup Tetingkap"
+
+#: src/terminal-accels.c:179
+msgid "Copy"
+msgstr "Salin"
+
+#: src/terminal-accels.c:183
+msgid "Paste"
+msgstr "Tampal"
+
+#: src/terminal-accels.c:187
+msgid "Select All"
+msgstr "Pilih Semua"
+
+#: src/terminal-accels.c:195
+msgid "Hide and Show menubar"
+msgstr "Sembunyi dan Tunjuk palang menu"
+
+#: src/terminal-accels.c:199
+msgid "Full Screen"
+msgstr "Skrin Penuh"
+
+#: src/terminal-accels.c:203
+msgid "Zoom In"
+msgstr "Zum Masuk"
+
+#: src/terminal-accels.c:207
+msgid "Zoom Out"
+msgstr "Zum Keluar"
+
+#: src/terminal-accels.c:211
+msgid "Normal Size"
+msgstr "Saiz Biasa"
+
+#: src/terminal-accels.c:223
+msgid "Find Next"
+msgstr "Cari Berikutnya"
+
+#: src/terminal-accels.c:227
+msgid "Find Previous"
+msgstr "Cari Terdahulu"
+
+#: src/terminal-accels.c:239
 msgid "Reset"
 msgstr "Tetap semula"
 
-#: src/terminal-accels.c:242
+#: src/terminal-accels.c:243
 msgid "Reset and Clear"
 msgstr "Tetap Semula dan Kosongkan"
 
-#: src/terminal-accels.c:246
+#: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
 msgstr "Tukar ke Profil Terdahulu"
 
-#: src/terminal-accels.c:250
+#: src/terminal-accels.c:251
 msgid "Switch to Next Profile"
 msgstr "Tukar ke Profil Seterusnya"
 
-#: src/terminal-accels.c:258
+#: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
 msgstr "Tukar ke Tab Terdahulu"
 
-#: src/terminal-accels.c:262
+#: src/terminal-accels.c:263
 msgid "Switch to Next Tab"
 msgstr "Tukar ke Tab Berikutnya"
 
-#: src/terminal-accels.c:266
+#: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
 msgstr "Alih Tab ke Kiri"
 
-#: src/terminal-accels.c:270
+#: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
 msgstr "Alih Tab ke Kiri"
 
-#: src/terminal-accels.c:274
+#: src/terminal-accels.c:275
 msgid "Detach Tab"
 msgstr "Tanggalkan Tab"
 
-#: src/terminal-accels.c:278
+#: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
 msgstr "Tukar ke Tab 1"
 
-#: src/terminal-accels.c:283
+#: src/terminal-accels.c:284
 msgid "Switch to Tab 2"
 msgstr "Tukar ke Tab 2"
 
-#: src/terminal-accels.c:288
+#: src/terminal-accels.c:289
 msgid "Switch to Tab 3"
 msgstr "Tukar ke Tab 3"
 
-#: src/terminal-accels.c:293
+#: src/terminal-accels.c:294
 msgid "Switch to Tab 4"
 msgstr "Tukar ke Tab 4"
 
-#: src/terminal-accels.c:298
+#: src/terminal-accels.c:299
 msgid "Switch to Tab 5"
 msgstr "Tukar ke Tab 5"
 
-#: src/terminal-accels.c:303
+#: src/terminal-accels.c:304
 msgid "Switch to Tab 6"
 msgstr "Tukar ke Tab 6"
 
-#: src/terminal-accels.c:308
+#: src/terminal-accels.c:309
 msgid "Switch to Tab 7"
 msgstr "Tukar ke Tab 7"
 
-#: src/terminal-accels.c:313
+#: src/terminal-accels.c:314
 msgid "Switch to Tab 8"
 msgstr "Tukar ke Tab 8"
 
-#: src/terminal-accels.c:318
+#: src/terminal-accels.c:319
 msgid "Switch to Tab 9"
 msgstr "Tukar ke Tab 9"
 
-#: src/terminal-accels.c:323
+#: src/terminal-accels.c:324
 msgid "Switch to Tab 10"
 msgstr "Tukar ke Tab 10"
 
-#: src/terminal-accels.c:328
+#: src/terminal-accels.c:329
 msgid "Switch to Tab 11"
 msgstr "Tukar ke Tab 11"
 
-#: src/terminal-accels.c:333
+#: src/terminal-accels.c:334
 msgid "Switch to Tab 12"
 msgstr "Tukar ke Tab 12"
 
-#: src/terminal-accels.c:341
+#: src/terminal-accels.c:342
 msgid "Contents"
 msgstr "Kandungan"
 
-#: src/terminal-accels.c:346
+#: src/terminal-accels.c:347
 msgid "File"
 msgstr "Fail"
 
-#: src/terminal-accels.c:347
-msgid "Edit"
-msgstr "Sunting"
-
-#: src/terminal-accels.c:348
+#: src/terminal-accels.c:349
 msgid "View"
 msgstr "Lihat"
 
-#: src/terminal-accels.c:349
+#: src/terminal-accels.c:350
 msgid "Search"
 msgstr "Gelintar"
 
-#: src/terminal-accels.c:351
+#: src/terminal-accels.c:352
 msgid "Tabs"
 msgstr "Tab"
 
-#: src/terminal-accels.c:352
+#: src/terminal-accels.c:353
 msgid "Help"
 msgstr "Bantuan"
 
-#: src/terminal-accels.c:855
+#: src/terminal-accels.c:856
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "Pintasan kekunci \"%s\" sudah diikat ke tindakan \"%s\""
 
-#: src/terminal-accels.c:1011
+#: src/terminal-accels.c:1012
 msgid "_Action"
 msgstr "Tind_akan"
 
-#: src/terminal-accels.c:1030
+#: src/terminal-accels.c:1031
 msgid "Shortcut _Key"
 msgstr "_Kekunci Pintasan"
 
-#: src/terminal-app.c:523
+#: src/terminal-app.c:528
 msgid "Click button to choose profile"
 msgstr "Klik butang untuk memilih profil"
 
-#: src/terminal-app.c:606
+#: src/terminal-app.c:611
 msgid "Profile list"
 msgstr "Senarai Profil"
 
-#: src/terminal-app.c:683
+#: src/terminal-app.c:688
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Padam profil \"%s\"?"
 
-#: src/terminal-app.c:687
-msgid "_Cancel"
-msgstr "_Batal"
-
-#: src/terminal-app.c:692
-msgid "_Delete"
-msgstr "Pa_dam"
-
-#: src/terminal-app.c:699
+#: src/terminal-app.c:704
 msgid "Delete Profile"
 msgstr "Padam Profil"
 
-#: src/terminal-app.c:1146
+#: src/terminal-app.c:1151
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2126,179 +2171,179 @@ msgstr ""
 "Anda sudah mempunyai profil bernama \"%s\". Anda hendak cipta profil lain "
 "dengan nama yang sama?"
 
-#: src/terminal-app.c:1241
+#: src/terminal-app.c:1246
 msgid "Choose base profile"
 msgstr "Pilih profil asas"
 
-#: src/terminal-app.c:1828
+#: src/terminal-app.c:1841
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Tiada profil \"%s\" sebegitu, menggunakan profil lalai ⏎\n"
 
-#: src/terminal-app.c:1855
+#: src/terminal-app.c:1868
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Rentetan geometri tidak sah \"%s\"\n"
 
-#: src/terminal-app.c:2061
+#: src/terminal-app.c:2074
 msgid "User Defined"
 msgstr "Ditakrif Pengguna"
 
-#: src/terminal.c:585
+#: src/terminal.c:513
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Gagal menghurai argumen: %s⏎\n"
 
-#: src/terminal-encoding.c:53 src/terminal-encoding.c:66
-#: src/terminal-encoding.c:80 src/terminal-encoding.c:102
-#: src/terminal-encoding.c:113
+#: src/terminal-encoding.c:54 src/terminal-encoding.c:67
+#: src/terminal-encoding.c:81 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:114
 msgid "Western"
 msgstr "Barat"
 
-#: src/terminal-encoding.c:54 src/terminal-encoding.c:81
-#: src/terminal-encoding.c:92 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:55 src/terminal-encoding.c:82
+#: src/terminal-encoding.c:93 src/terminal-encoding.c:112
 msgid "Central European"
 msgstr "Eropah Tengah"
 
-#: src/terminal-encoding.c:55
+#: src/terminal-encoding.c:56
 msgid "South European"
 msgstr "Eropah Selatan"
 
-#: src/terminal-encoding.c:56 src/terminal-encoding.c:64
-#: src/terminal-encoding.c:118
+#: src/terminal-encoding.c:57 src/terminal-encoding.c:65
+#: src/terminal-encoding.c:119
 msgid "Baltic"
 msgstr "Baltik"
 
-#: src/terminal-encoding.c:57 src/terminal-encoding.c:82
-#: src/terminal-encoding.c:88 src/terminal-encoding.c:89
-#: src/terminal-encoding.c:94 src/terminal-encoding.c:112
+#: src/terminal-encoding.c:58 src/terminal-encoding.c:83
+#: src/terminal-encoding.c:89 src/terminal-encoding.c:90
+#: src/terminal-encoding.c:95 src/terminal-encoding.c:113
 msgid "Cyrillic"
 msgstr "Cyril"
 
-#: src/terminal-encoding.c:58 src/terminal-encoding.c:85
-#: src/terminal-encoding.c:91 src/terminal-encoding.c:117
+#: src/terminal-encoding.c:59 src/terminal-encoding.c:86
+#: src/terminal-encoding.c:92 src/terminal-encoding.c:118
 msgid "Arabic"
 msgstr "Arab"
 
-#: src/terminal-encoding.c:59 src/terminal-encoding.c:97
-#: src/terminal-encoding.c:114
+#: src/terminal-encoding.c:60 src/terminal-encoding.c:98
+#: src/terminal-encoding.c:115
 msgid "Greek"
 msgstr "Yunani"
 
-#: src/terminal-encoding.c:60
+#: src/terminal-encoding.c:61
 msgid "Hebrew Visual"
 msgstr "Ibrani Visual"
 
-#: src/terminal-encoding.c:61 src/terminal-encoding.c:84
-#: src/terminal-encoding.c:100 src/terminal-encoding.c:116
+#: src/terminal-encoding.c:62 src/terminal-encoding.c:85
+#: src/terminal-encoding.c:101 src/terminal-encoding.c:117
 msgid "Hebrew"
 msgstr "Ibrani"
 
-#: src/terminal-encoding.c:62 src/terminal-encoding.c:83
-#: src/terminal-encoding.c:104 src/terminal-encoding.c:115
+#: src/terminal-encoding.c:63 src/terminal-encoding.c:84
+#: src/terminal-encoding.c:105 src/terminal-encoding.c:116
 msgid "Turkish"
 msgstr "Turki"
 
-#: src/terminal-encoding.c:63
+#: src/terminal-encoding.c:64
 msgid "Nordic"
 msgstr "Nordik"
 
-#: src/terminal-encoding.c:65
+#: src/terminal-encoding.c:66
 msgid "Celtic"
 msgstr "Celtik"
 
-#: src/terminal-encoding.c:67 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:68 src/terminal-encoding.c:104
 msgid "Romanian"
 msgstr "Romania"
 
-#: src/terminal-encoding.c:68 src/terminal-encoding.c:125
-#: src/terminal-encoding.c:126 src/terminal-encoding.c:127
-#: src/terminal-encoding.c:128
+#: src/terminal-encoding.c:69 src/terminal-encoding.c:126
+#: src/terminal-encoding.c:127 src/terminal-encoding.c:128
+#: src/terminal-encoding.c:129
 msgid "Unicode"
 msgstr "Unikod"
 
-#: src/terminal-encoding.c:69
+#: src/terminal-encoding.c:70
 msgid "Armenian"
 msgstr "Armenia"
 
-#: src/terminal-encoding.c:70 src/terminal-encoding.c:71
-#: src/terminal-encoding.c:75
+#: src/terminal-encoding.c:71 src/terminal-encoding.c:72
+#: src/terminal-encoding.c:76
 msgid "Chinese Traditional"
 msgstr "Cina Tradisional"
 
-#: src/terminal-encoding.c:72
+#: src/terminal-encoding.c:73
 msgid "Cyrillic/Russian"
 msgstr "Cyril/Rusia"
 
-#: src/terminal-encoding.c:73 src/terminal-encoding.c:86
-#: src/terminal-encoding.c:106
+#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
+#: src/terminal-encoding.c:107
 msgid "Japanese"
 msgstr "Jepun"
 
-#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
-#: src/terminal-encoding.c:109 src/terminal-encoding.c:129
+#: src/terminal-encoding.c:75 src/terminal-encoding.c:88
+#: src/terminal-encoding.c:110 src/terminal-encoding.c:130
 msgid "Korean"
 msgstr "Korea"
 
-#: src/terminal-encoding.c:76 src/terminal-encoding.c:77
-#: src/terminal-encoding.c:78
+#: src/terminal-encoding.c:77 src/terminal-encoding.c:78
+#: src/terminal-encoding.c:79
 msgid "Chinese Simplified"
 msgstr "Cina Dipermudah"
 
-#: src/terminal-encoding.c:79
+#: src/terminal-encoding.c:80
 msgid "Georgian"
 msgstr "Georgia"
 
-#: src/terminal-encoding.c:90 src/terminal-encoding.c:105
+#: src/terminal-encoding.c:91 src/terminal-encoding.c:106
 msgid "Cyrillic/Ukrainian"
 msgstr "Cyril/Ukraine"
 
-#: src/terminal-encoding.c:93
+#: src/terminal-encoding.c:94
 msgid "Croatian"
 msgstr "Croatia"
 
-#: src/terminal-encoding.c:95
+#: src/terminal-encoding.c:96
 msgid "Hindi"
 msgstr "Hindi"
 
-#: src/terminal-encoding.c:96
+#: src/terminal-encoding.c:97
 msgid "Persian"
 msgstr "Parsi"
 
-#: src/terminal-encoding.c:98
+#: src/terminal-encoding.c:99
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: src/terminal-encoding.c:99
+#: src/terminal-encoding.c:100
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: src/terminal-encoding.c:101
+#: src/terminal-encoding.c:102
 msgid "Icelandic"
 msgstr "Iceland"
 
-#: src/terminal-encoding.c:107 src/terminal-encoding.c:110
-#: src/terminal-encoding.c:119
+#: src/terminal-encoding.c:108 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:120
 msgid "Vietnamese"
 msgstr "Vietnam"
 
-#: src/terminal-encoding.c:108
+#: src/terminal-encoding.c:109
 msgid "Thai"
 msgstr "Siam"
 
-#: src/terminal-encoding.c:506 src/terminal-encoding.c:531
+#: src/terminal-encoding.c:504 src/terminal-encoding.c:529
 msgid "_Description"
 msgstr "_Keterangan"
 
-#: src/terminal-encoding.c:515 src/terminal-encoding.c:540
+#: src/terminal-encoding.c:513 src/terminal-encoding.c:538
 msgid "_Encoding"
 msgstr "Penge_kodan"
 
-#: src/terminal-encoding.c:598
+#: src/terminal-encoding.c:596
 msgid "Current Locale"
 msgstr "Lokaliti Semasa"
 
-#: src/terminal-options.c:176
+#: src/terminal-options.c:177
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2309,36 +2354,36 @@ msgstr ""
 "mungkin hendak cipta profil dengan tetapan yang dikehendaki, dan guna "
 "pilihan '--profile' baru⏎\n"
 
-#: src/terminal-options.c:209
+#: src/terminal-options.c:210
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Argumen ke \"%s\" bukan perintah yang sah: %s"
 
-#: src/terminal-options.c:348
+#: src/terminal-options.c:349
 msgid "Two roles given for one window"
 msgstr "Dua peranan diberi untuk satu tetingkap"
 
-#: src/terminal-options.c:369 src/terminal-options.c:402
+#: src/terminal-options.c:370 src/terminal-options.c:403
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Pilihan \"%s\" diberikan sebanyak dua kali untuk tetingkap yang sama\n"
 
-#: src/terminal-options.c:601
+#: src/terminal-options.c:602
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" bukan faktor zum yang sah"
 
-#: src/terminal-options.c:608
+#: src/terminal-options.c:609
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Faktor zum \"%g\" adalah terlalu kecil, menggunakan %g\n"
 
-#: src/terminal-options.c:616
+#: src/terminal-options.c:617
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Faktor zum \"%g\" adalah terlalu besar, menggunakan %g\n"
 
-#: src/terminal-options.c:651
+#: src/terminal-options.c:652
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2347,15 +2392,15 @@ msgstr ""
 "Pilihan \"%s\" perlu nyatakan perintah untuk dijalankan pada baki baris "
 "perintah"
 
-#: src/terminal-options.c:812
+#: src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "Bukan fail konfig terminal yang sah."
 
-#: src/terminal-options.c:825
+#: src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "Versi fail konfig terminal tidak serasi."
 
-#: src/terminal-options.c:953
+#: src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2363,106 +2408,106 @@ msgstr ""
 "Jangan daftar dengan pelayan nama pengaktifan, jangan guna semula terminal "
 "aktif"
 
-#: src/terminal-options.c:962
+#: src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "Muatkan fail konfigurasi terminal"
 
-#: src/terminal-options.c:971
+#: src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "Simpan konfigurasi terminal ke fail"
 
-#: src/terminal-options.c:986
+#: src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Buka tetingkap baru yang mengandungi tab dengan profil lalai"
 
-#: src/terminal-options.c:995
+#: src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Buka tab baru dalam tetingkap terakhir-dibuka dengan profil lalai"
 
-#: src/terminal-options.c:1009
+#: src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Hidupkan palang menu"
 
-#: src/terminal-options.c:1018
+#: src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Matikan palang menu"
 
-#: src/terminal-options.c:1027
+#: src/terminal-options.c:1028
 msgid "Maximize the window"
 msgstr "Maksimumkan tetingkap"
 
-#: src/terminal-options.c:1036
+#: src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "Skrin-penuhkan tetingkap"
 
-#: src/terminal-options.c:1045
+#: src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Tetapkan saiz tetingkap; contohnya: 80x24, atau 80x24+200+200 "
 "(COLSxROWS+X+Y)"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "GEOMETRI"
 
-#: src/terminal-options.c:1054
+#: src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "Tetapkan peranan tetingkap"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "PERANAN"
 
-#: src/terminal-options.c:1063
+#: src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Tetapkan tab terakhir dinyatakan sebagai  aktif pada tetingkapnya"
 
-#: src/terminal-options.c:1077
+#: src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Lakukan argumen ke pilihan ini di dalam terminal"
 
-#: src/terminal-options.c:1086
+#: src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "Guna profil yang diberi selain dari profil lalai"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "NAMA-PROFIL"
 
-#: src/terminal-options.c:1095
+#: src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Tetapkan tajuk terminal"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "TAJUK"
 
-#: src/terminal-options.c:1104
+#: src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Tetapkan direktori kerja"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "NAMADIR"
 
-#: src/terminal-options.c:1113
+#: src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Tetapkan faktor zum bagi terminal (1.0 = saiz biasa)"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "ZUM"
 
-#: src/terminal-options.c:1365 src/terminal-options.c:1368
+#: src/terminal-options.c:1366 src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "Emulator Terminal MATE"
 
-#: src/terminal-options.c:1369
+#: src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "Tunjuk pilihan Terminal MATE"
 
-#: src/terminal-options.c:1379
+#: src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2470,11 +2515,11 @@ msgstr ""
 "Pilihan untuk buka tetingkap atau tab terminal baru; lebih dari satu darinya"
 " boleh dinyatakan:"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "Tunjuk pilihan terminal"
 
-#: src/terminal-options.c:1388
+#: src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2482,11 +2527,11 @@ msgstr ""
 "Pilihan tetingkap; jika diguna sebelum argumen --windows atau --tab pertama,"
 " tetapkan lalai untuk semua tetingkap:"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "Tunjuk pilihan per-tetingkap"
 
-#: src/terminal-options.c:1397
+#: src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2494,7 +2539,7 @@ msgstr ""
 "Pilihan terminal; jika diguna sebelum argumen --windows atau --tab pertama, "
 "tetapkan lalai untuk semua terminal:"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "Tunjuk pilihan per-terminal"
 
@@ -2502,50 +2547,50 @@ msgstr "Tunjuk pilihan per-terminal"
 msgid "Unnamed"
 msgstr "Tidak Bernama"
 
-#: src/terminal-screen.c:1520
+#: src/terminal-screen.c:1524
 msgid "_Profile Preferences"
 msgstr "Keutamaan _Profil"
 
-#: src/terminal-screen.c:1521 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
 msgid "_Relaunch"
 msgstr "_Lancar Semula"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1528
 msgid "There was an error creating the child process for this terminal"
 msgstr "Terdapat ralat mencipta proses anak bagi terminal ini"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:1972
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Proses anak keluar secara normal dengan status %d."
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:1977
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Proses anak telah ditamatkan dengan isyarat %d."
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:1982
 msgid "The child process was terminated."
 msgstr "Proses anak telah ditamatkan."
 
-#: src/terminal-tab-label.c:130
+#: src/terminal-tab-label.c:131
 msgid "Close tab"
 msgstr "Tutup tab"
 
-#: src/terminal-tabs-menu.c:201
+#: src/terminal-tabs-menu.c:202
 msgid "Switch to this tab"
 msgstr "Tukar ke tab ini"
 
-#: src/terminal-util.c:145
+#: src/terminal-util.c:146
 msgid "There was an error displaying help"
 msgstr "Terdapat ralat pemaparan bantuan"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Tidak dapat buka alamat \"%s\""
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2557,7 +2602,7 @@ msgstr ""
 "dikeluarkan oleh Free Software Foundation; samada versi ke-2 lesen, atau "
 "(mengikut pilihan anda) sebarang versi terkemudian."
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2569,7 +2614,7 @@ msgstr ""
 "KESESUAIAN UNTUK SESUATU TUJUAN. Sila rujuk GNU General Public LIcense untuk"
 " keterangan lanjut."
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2595,304 +2640,285 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "%c. %s"
 
-#: src/terminal-window.c:1885
+#: src/terminal-window.c:1876
 msgid "_File"
 msgstr "_Fail"
 
-#: src/terminal-window.c:1886 src/terminal-window.c:1899
-#: src/terminal-window.c:2140
+#: src/terminal-window.c:1877 src/terminal-window.c:1890
+#: src/terminal-window.c:2131
 msgid "Open _Terminal"
 msgstr "Buka _Terminal"
 
-#: src/terminal-window.c:1887 src/terminal-window.c:1904
-#: src/terminal-window.c:2145
+#: src/terminal-window.c:1878 src/terminal-window.c:1895
+#: src/terminal-window.c:2136
 msgid "Open Ta_b"
 msgstr "Buka T_ab"
 
-#: src/terminal-window.c:1888
+#: src/terminal-window.c:1879
 msgid "_Edit"
 msgstr "_Sunting"
 
-#: src/terminal-window.c:1889
+#: src/terminal-window.c:1880
 msgid "_View"
 msgstr "_Lihat"
 
-#: src/terminal-window.c:1890
+#: src/terminal-window.c:1881
 msgid "_Search"
 msgstr "_Gelintar"
 
-#: src/terminal-window.c:1891
+#: src/terminal-window.c:1882
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: src/terminal-window.c:1892
+#: src/terminal-window.c:1883
 msgid "Ta_bs"
 msgstr "T_ab"
 
-#: src/terminal-window.c:1893
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: src/terminal-window.c:1909
+#: src/terminal-window.c:1900
 msgid "New _Profile…"
 msgstr "_Profil Baru..."
 
-#: src/terminal-window.c:1914
+#: src/terminal-window.c:1905
 msgid "_Save Contents"
 msgstr "_Simpan Kandungan"
 
-#: src/terminal-window.c:1919 src/terminal-window.c:2155
+#: src/terminal-window.c:1910 src/terminal-window.c:2146
 msgid "C_lose Tab"
 msgstr "Tutup ta_b"
 
-#: src/terminal-window.c:1924
+#: src/terminal-window.c:1915
 msgid "_Close Window"
 msgstr "_Tutup Tetingkap"
 
-#: src/terminal-window.c:1931 src/terminal-window.c:2125
+#: src/terminal-window.c:1922 src/terminal-window.c:2116
 msgid "_Copy"
 msgstr "_Salin"
 
-#: src/terminal-window.c:1936 src/terminal-window.c:2130
+#: src/terminal-window.c:1927 src/terminal-window.c:2121
 msgid "_Paste"
 msgstr "_Tampal"
 
-#: src/terminal-window.c:1941 src/terminal-window.c:2135
+#: src/terminal-window.c:1932 src/terminal-window.c:2126
 msgid "Paste _Filenames"
 msgstr "Tampal Nama _Fail"
 
-#: src/terminal-window.c:1946
+#: src/terminal-window.c:1937
 msgid "Select _All"
 msgstr "Pilih Semu_a"
 
-#: src/terminal-window.c:1951
+#: src/terminal-window.c:1942
 msgid "P_rofiles…"
 msgstr "P_rofil..."
 
-#: src/terminal-window.c:1956
+#: src/terminal-window.c:1947
 msgid "_Keyboard Shortcuts…"
 msgstr "Pintasan Papan _Kekunci..."
 
-#: src/terminal-window.c:1961
+#: src/terminal-window.c:1952
 msgid "Pr_ofile Preferences"
 msgstr "Keutamaan Pr_ofil"
 
-#: src/terminal-window.c:1968
+#: src/terminal-window.c:1959
 msgid "Zoom _In"
 msgstr "Zum _Masuk"
 
-#: src/terminal-window.c:1973
+#: src/terminal-window.c:1964
 msgid "Zoom _Out"
 msgstr "Zum _Keluar"
 
-#: src/terminal-window.c:1978
+#: src/terminal-window.c:1969
 msgid "_Normal Size"
 msgstr "Saiz _Biasa"
 
-#: src/terminal-window.c:1985
+#: src/terminal-window.c:1976
 msgid "_Find..."
 msgstr "_Cari..."
 
-#: src/terminal-window.c:1990
+#: src/terminal-window.c:1981
 msgid "Find Ne_xt"
 msgstr "Cari _Lagi"
 
-#: src/terminal-window.c:1995
+#: src/terminal-window.c:1986
 msgid "Find Pre_vious"
 msgstr "Cari Ter_dahulu"
 
-#: src/terminal-window.c:2000
+#: src/terminal-window.c:1991
 msgid "_Clear Highlight"
 msgstr "K_osongkan Sorot"
 
-#: src/terminal-window.c:2006
+#: src/terminal-window.c:1997
 msgid "Go to _Line..."
 msgstr "Pergi ke _Baris..."
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2002
 msgid "_Incremental Search..."
 msgstr "Gelintar Ber_tokokan..."
 
-#: src/terminal-window.c:2018
+#: src/terminal-window.c:2009
 msgid "Change _Profile"
 msgstr "Tukar _Profil"
 
-#: src/terminal-window.c:2020
+#: src/terminal-window.c:2011
 msgid "_Previous Profile"
 msgstr "_Profil Terdahulu"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2016
 msgid "_Next Profile"
 msgstr "Profil Seterus_nya"
 
-#: src/terminal-window.c:2030
+#: src/terminal-window.c:2021
 msgid "_Set Title…"
 msgstr "T_etapkan Tajuk..."
 
-#: src/terminal-window.c:2034
+#: src/terminal-window.c:2025
 msgid "Set _Character Encoding"
 msgstr "Set Pengekodan _Aksara"
 
-#: src/terminal-window.c:2036
+#: src/terminal-window.c:2027
 msgid "_Reset"
 msgstr "T_etap Semula"
 
-#: src/terminal-window.c:2041
+#: src/terminal-window.c:2032
 msgid "Reset and C_lear"
 msgstr "Tetap Semula dan _Kosongkan"
 
-#: src/terminal-window.c:2048
+#: src/terminal-window.c:2039
 msgid "_Add or Remove…"
 msgstr "T_ambah atau Buang..."
 
-#: src/terminal-window.c:2055
+#: src/terminal-window.c:2046
 msgid "_Previous Tab"
 msgstr "Tab _Terdahulu"
 
-#: src/terminal-window.c:2060
+#: src/terminal-window.c:2051
 msgid "_Next Tab"
 msgstr "Tab _Berikutnya"
 
-#: src/terminal-window.c:2065
+#: src/terminal-window.c:2056
 msgid "Move Tab _Left"
 msgstr "Alih Tab K_iri"
 
-#: src/terminal-window.c:2070
+#: src/terminal-window.c:2061
 msgid "Move Tab _Right"
 msgstr "Alih Tab K_anan"
 
-#: src/terminal-window.c:2075
+#: src/terminal-window.c:2066
 msgid "_Detach tab"
 msgstr "Tan_ggalkan tab"
 
-#: src/terminal-window.c:2082
+#: src/terminal-window.c:2073
 msgid "_Contents"
 msgstr "_Kandungan"
 
-#: src/terminal-window.c:2087
+#: src/terminal-window.c:2078
 msgid "_About"
 msgstr "Perih_al"
 
-#: src/terminal-window.c:2094
+#: src/terminal-window.c:2085
 msgid "_Send Mail To…"
 msgstr "_Hantar Mel Ke..."
 
-#: src/terminal-window.c:2099
+#: src/terminal-window.c:2090
 msgid "_Copy E-mail Address"
 msgstr "Sa_lin Alamat E-mel"
 
-#: src/terminal-window.c:2104
+#: src/terminal-window.c:2095
 msgid "C_all To…"
 msgstr "P_anggil Ke..."
 
-#: src/terminal-window.c:2109
+#: src/terminal-window.c:2100
 msgid "_Copy Call Address"
 msgstr "Sa_lin Alamat Panggilan"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2105
 msgid "_Open Link"
 msgstr "B_uka Pautan"
 
-#: src/terminal-window.c:2119
+#: src/terminal-window.c:2110
 msgid "_Copy Link Address"
 msgstr "Sa_lin Alamat Pautan"
 
-#: src/terminal-window.c:2123
+#: src/terminal-window.c:2114
 msgid "P_rofiles"
 msgstr "P_rofil"
 
-#: src/terminal-window.c:2150 src/terminal-window.c:3640
-msgid "C_lose Window"
-msgstr "T_utup Tetingkap"
-
-#: src/terminal-window.c:2160
+#: src/terminal-window.c:2151
 msgid "L_eave Full Screen"
 msgstr "T_inggalkan Skrin Penuh"
 
-#: src/terminal-window.c:2164
+#: src/terminal-window.c:2155
 msgid "_Input Methods"
 msgstr "Kaedah _Input"
 
-#: src/terminal-window.c:2171
+#: src/terminal-window.c:2162
 msgid "Show _Menubar"
 msgstr "Tunjuk Palang Menu"
 
-#: src/terminal-window.c:2177
+#: src/terminal-window.c:2168
 msgid "_Full Screen"
 msgstr "S_krin penuh"
 
-#: src/terminal-window.c:3618
+#: src/terminal-window.c:3607
 msgid ""
-"There are still processes running in some terminals in this window. Closing "
-"the window will kill all of them."
+"There are still processes running in some terminals in this window.\n"
+"Closing the window will kill all of them."
 msgstr ""
-"Masih terdapat proses yang berjalan dalam sesetengah terminal dalam "
-"tetingkap ini. Menutup tetingkap akan matikan mereka semua."
+"Masih terdapat proses-proses berjalan pada beberapa terminal dalam tetingkap ini.\n"
+"Penutupan tetingkap akan mematikan kesemuanya."
 
-#: src/terminal-window.c:3621
-msgid ""
-"There is still a process running in this terminal. Closing the terminal will"
-" kill it."
-msgstr ""
-"Masih terdapat proses yang berjalan dalam terminal ini. Menutup terminal "
-"akan mematikannya."
-
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
 msgstr "Terdapat banyak tab terbuka di dalam tetingkap ini."
 
-#: src/terminal-window.c:3633
-msgid "Close this window?"
-msgstr "Tutup tetingkap ini?"
-
-#: src/terminal-window.c:3633
+#: src/terminal-window.c:3624
 msgid "Close this terminal?"
 msgstr "Tutup terminal ini?"
 
-#: src/terminal-window.c:3640
+#: src/terminal-window.c:3625
 msgid "C_lose Terminal"
 msgstr "T_utup Terminal"
 
-#: src/terminal-window.c:3706
+#: src/terminal-window.c:3695
 msgid "Could not save contents"
 msgstr "Tidak dapat simpan kandungan"
 
-#: src/terminal-window.c:3730
+#: src/terminal-window.c:3719
 msgid "Save as..."
 msgstr "Simpan sebagai..."
 
-#: src/terminal-window.c:4264
-msgid "_Title:"
-msgstr "_Tajuk:"
-
-#: src/terminal-window.c:4449
+#: src/terminal-window.c:4415
 msgid "Contributors:"
 msgstr "Penyumbang:"
 
-#: src/terminal-window.c:4468
+#: src/terminal-window.c:4431
+#, c-format
+msgid ""
+"MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
+"Powered by Virtual TErminal %d.%d.%d"
+msgstr ""
+"Terminal MATE ialah sebuah emulator terminal untuk Persekitaran Atas Meja MATE.\n"
+"DIperkasakan oleh Virtual TErminal %d.%d.%d"
+
+#: src/terminal-window.c:4437
 msgid "About MATE Terminal"
 msgstr "Perihal Terminal MATE"
 
-#: src/terminal-window.c:4469
+#: src/terminal-window.c:4438
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Copyright © 2006 Guilherme de S. Pastore\n"
 "Copyright © 2007–2010 Christian Persch\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 "Hak Cipta © 2002–2004 Havoc Pennington\n"
 "Hak Cipta © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Hak Cipta © 2006 Guilherme de S. Pastore\n"
 "Hak Cipta © 2007–2010 Christian Persch\n"
 "Hak Cipta © 2011 Perberos\n"
-"Hak Cipta © 2012-2020 Pembangun MATE"
+"Hak Cipta © 2012-2021 Pembangun MATE"
 
-#: src/terminal-window.c:4475
-msgid "A terminal emulator for the MATE desktop"
-msgstr "Emulator terminal untuk desktop MATE"
-
-#: src/terminal-window.c:4481
+#: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr "Abuyop"

@@ -4,16 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# André Rivero Castillo <hab130@gmail.com>, 2021
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.23\n"
+"Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2020-01-13 14:52+0100\n"
+"POT-Creation-Date: 2021-06-25 16:51+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,16 +22,16 @@ msgstr ""
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: mate-terminal.appdata.xml.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4466
+#: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
+#: src/terminal-options.c:190 src/terminal-window.c:4435
 msgid "MATE Terminal"
 msgstr "Terminal do MATE"
 
-#: mate-terminal.appdata.xml.in:8
+#: mate-terminal.appdata.xml.in.in:8
 msgid "A terminal emulator for the MATE desktop environment"
 msgstr "Un emulador de terminal para o contorno de escritorio MATE"
 
-#: mate-terminal.appdata.xml.in:10
+#: mate-terminal.appdata.xml.in.in:10
 msgid ""
 "MATE Terminal is a terminal emulation application that you can use to access"
 " a UNIX shell in the MATE environment. MATE Terminal emulates the xterm "
@@ -43,7 +44,7 @@ msgstr ""
 "translucidos, a apertura de múltiples terminais (lapelas)  nunha mesma "
 "xanela e URL no que poder premer."
 
-#: mate-terminal.appdata.xml.in:17
+#: mate-terminal.appdata.xml.in.in:17
 msgid ""
 "MATE Terminal is a fork of GNOME Terminal and part of the MATE Desktop "
 "Environment. If you would like to know more about MATE and MATE Terminal, "
@@ -53,8 +54,8 @@ msgstr ""
 "escritorio MATE. Se quere saber máis sobre MATE e MATE Terminal, vexa a "
 "páxina do proxecto."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:350 src/terminal.c:590
-#: src/terminal-profile.c:161 src/terminal-window.c:2214
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -62,39 +63,272 @@ msgstr "Terminal"
 msgid "Use the command line"
 msgstr "Usar a liña de ordes"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: mate-terminal.desktop.in.in:9
-msgid "utilities-terminal"
-msgstr "utilities-terminal"
+#: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+msgid "_Cancel"
+msgstr "_Cancelar"
 
-#: src/eggsmclient.c:225
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
+#: src/terminal-window.c:3622
+msgid "C_lose Window"
+msgstr "P_echar a xanela"
+
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+msgid "Close this window?"
+msgstr "Quere pechar esta xanela?"
+
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+msgid ""
+"There is still a process running in this terminal.\n"
+"Closing the terminal will kill it."
+msgstr ""
+"Aínda hai un proceso en execución neste terminal. Pechar o terminal "
+"mataríao."
+
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Desactivar a conexión co xestor de sesións"
 
-#: src/eggsmclient.c:230
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Especifique o ficheiro que contén a configuración gardada"
 
-#: src/eggsmclient.c:230 src/terminal-options.c:963 src/terminal-options.c:972
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
+#: src/terminal-options.c:973
 msgid "FILE"
 msgstr "FICHEIRO"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Especifique o ID de xestión de sesión"
 
-#: src/eggsmclient.c:235
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/eggsmclient.c:261
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Amosar as opcións da xestión de sesión:"
 
-#: src/eggsmclient.c:262
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Amosar as opcións da xestión de sesións"
+
+#: src/encodings-dialog.ui:24
+msgid "Add or Remove Terminal Encodings"
+msgstr "Engadir ou eliminar as codificacións do terminal"
+
+#: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
+#: src/profile-manager.ui:58 src/profile-preferences.ui:262
+#: src/terminal-window.c:1884
+msgid "_Help"
+msgstr "_Axuda"
+
+#: src/encodings-dialog.ui:59 src/find-dialog.ui:42
+#: src/keybinding-editor.ui:59 src/profile-manager.ui:76
+#: src/profile-preferences.ui:279
+msgid "_Close"
+msgstr "_Pechar"
+
+#: src/encodings-dialog.ui:184
+msgid "A_vailable encodings:"
+msgstr "Codificacións _dispoñíbeis:"
+
+#: src/encodings-dialog.ui:202
+msgid "E_ncodings shown in menu:"
+msgstr "Co_dificacións amosadas no menú:"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:25 src/profile-preferences.ui:184
+#: src/profile-preferences.ui:207
+msgid "Automatic"
+msgstr "Automático"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:27 src/profile-preferences.ui:187
+#: src/profile-preferences.ui:210
+msgid "Control-H"
+msgstr "Control-H"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:29 src/profile-preferences.ui:190
+#: src/profile-preferences.ui:213
+msgid "ASCII DEL"
+msgstr "Supr ASCII"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:31 src/profile-preferences.ui:193
+#: src/profile-preferences.ui:216
+msgid "Escape sequence"
+msgstr "Secuencia de escape"
+
+#. Translators: This refers to the Delete keybinding option
+#: src/extra-strings.c:33 src/profile-preferences.ui:196
+#: src/profile-preferences.ui:219
+msgid "TTY Erase"
+msgstr "Borrar TTY"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:36 src/profile-preferences.ui:76
+msgid "Block"
+msgstr "Bloque"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:38 src/profile-preferences.ui:79
+msgid "I-Beam"
+msgstr "I-Beam"
+
+#. Translators: Cursor shape: ...
+#: src/extra-strings.c:40 src/profile-preferences.ui:82
+msgid "Underline"
+msgstr "Subliñado"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:43 src/profile-preferences.ui:230
+msgid "Use system settings"
+msgstr "Usar os axustes do sistema"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:45 src/profile-preferences.ui:233
+msgid "Always blink"
+msgstr "Escintilar sempre"
+
+#. Translators: Cursor blink: ...
+#: src/extra-strings.c:47 src/profile-preferences.ui:236
+msgid "Never blink"
+msgstr "Non escintilar nunca"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:50 src/profile-preferences.ui:113
+msgid "Exit the terminal"
+msgstr "Deixar o terminal"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:52 src/profile-preferences.ui:116
+msgid "Restart the command"
+msgstr "Reiniciar a orde"
+
+#. Translators: When command exits: ...
+#: src/extra-strings.c:54 src/profile-preferences.ui:119
+msgid "Hold the terminal open"
+msgstr "Deixar o terminal aberto"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:57 src/profile-preferences.ui:167
+msgid "On the left side"
+msgstr "Ao lado esqueredo"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:59 src/profile-preferences.ui:170
+msgid "On the right side"
+msgstr "Ao lado dereito"
+
+#. Translators: Scrollbar is: ...
+#: src/extra-strings.c:61 src/profile-preferences.ui:173
+#: src/terminal-accels.c:409
+msgid "Disabled"
+msgstr "Desactivado"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:64 src/profile-preferences.ui:93
+msgid "Replace initial title"
+msgstr "Substituír o título inicial"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:66 src/profile-preferences.ui:96
+msgid "Append initial title"
+msgstr "Engadir un título inicial ao remate"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:68 src/profile-preferences.ui:99
+msgid "Prepend initial title"
+msgstr "Engadir un título inicial ao principio"
+
+#. Translators: When terminal commands set their own titles: ...
+#: src/extra-strings.c:70 src/profile-preferences.ui:102
+msgid "Keep initial title"
+msgstr "Gardar o título inicial"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:73 src/profile-preferences.ui:141
+msgid "Tango"
+msgstr "Tango"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:75 src/profile-preferences.ui:144
+msgid "Linux console"
+msgstr "Consola de Linux"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:77 src/profile-preferences.ui:147
+msgid "XTerm"
+msgstr "XTerm"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:79 src/profile-preferences.ui:150
+msgid "Rxvt"
+msgstr "Rxvt"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:81 src/profile-preferences.ui:153
+msgid "Solarized"
+msgstr "Solarizado"
+
+#. Translators: This is the name of a colour scheme
+#: src/extra-strings.c:83 src/profile-editor.c:546
+#: src/profile-preferences.ui:130 src/profile-preferences.ui:156
+msgid "Custom"
+msgstr "Personalizado"
+
+#: src/find-dialog.ui:24 src/terminal-accels.c:219
+msgid "Find"
+msgstr "Atopar"
+
+#: src/find-dialog.ui:59
+msgid "_Find"
+msgstr "_Atopar"
+
+#: src/find-dialog.ui:101
+msgid "_Search for:"
+msgstr "_Buscar por:"
+
+#: src/find-dialog.ui:138
+msgid "_Match case"
+msgstr "_Coincidir coa capitalización"
+
+#: src/find-dialog.ui:155
+msgid "Match _entire word only"
+msgstr "Coincidir só coa palabra _enteira"
+
+#: src/find-dialog.ui:172
+msgid "Match as _regular expression"
+msgstr "Coincidir coa expresión _regular"
+
+#: src/find-dialog.ui:189
+msgid "Search _backwards"
+msgstr "Buscar cara _atrás"
+
+#: src/find-dialog.ui:207
+msgid "_Wrap around"
+msgstr "_Volver ao principio"
+
+#: src/keybinding-editor.ui:24
+msgid "Keyboard Shortcuts"
+msgstr "Atallo de teclado"
+
+#: src/keybinding-editor.ui:93
+msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
+msgstr ""
+"_Activar as teclas de acceso ao menú (como, por exemplo, Alt+F para abrir o "
+"menú Ficheiro)"
+
+#: src/keybinding-editor.ui:132
+msgid "Enable the _menu shortcut key (F10 by default)"
+msgstr "Activar a tecla de atallo de _menú (F10 predeterminada)"
+
+#: src/keybinding-editor.ui:151
+msgid "_Shortcut keys:"
+msgstr "_Atallos de teclado:"
 
 #: src/org.mate.terminal.gschema.xml.in:49
 msgid "List of profiles"
@@ -603,7 +837,7 @@ msgid ""
 "keep the image in a fixed position and scroll the text above it."
 msgstr ""
 "Se é verdadeiro, a imaxe de fondo desprázase co texto en primeiro plano; se "
-"é false, mantense a imaxe nunha posición fixa e o texto desprázase sobre "
+"é falso, mantense a imaxe nunha posición fixa e o texto desprázase sobre "
 "ela."
 
 #: src/org.mate.terminal.gschema.xml.in:253
@@ -1352,451 +1586,263 @@ msgstr ""
 "GTK+. Se define a opción coa cadea especial «disabled», entón non haberá "
 "ningún atallo de teclado para esta acción."
 
-#: src/profile-editor.c:44
+#: src/profile-editor.c:45
 msgid "Black on light yellow"
 msgstr "Negro sobre amarelo claro"
 
-#: src/profile-editor.c:49
+#: src/profile-editor.c:50
 msgid "Black on white"
 msgstr "Negro sobre branco"
 
-#: src/profile-editor.c:54
+#: src/profile-editor.c:55
 msgid "Gray on black"
 msgstr "Gris sobre negro"
 
-#: src/profile-editor.c:59
+#: src/profile-editor.c:60
 msgid "Green on black"
 msgstr "Verde sobre negro"
 
-#: src/profile-editor.c:64
+#: src/profile-editor.c:65
 msgid "White on black"
 msgstr "Branco sobre negro"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be
 #. translated
-#: src/profile-editor.c:69
+#: src/profile-editor.c:70
 msgid "Solarized light"
 msgstr "Solarizado claro"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
-#: src/profile-editor.c:74
+#: src/profile-editor.c:75
 msgid "Solarized dark"
 msgstr "Solarizado escuro"
 
-#: src/profile-editor.c:497
+#: src/profile-editor.c:498
 #, c-format
 msgid "Error parsing command: %s"
 msgstr "Produciuse un erro ao analizar o orde: %s"
 
-#: src/profile-editor.c:514
+#: src/profile-editor.c:515
 #, c-format
 msgid "Editing Profile “%s”"
 msgstr "Editando o perfil «%s»"
 
-#. Translators: This is the name of a colour scheme
-#: src/profile-editor.c:545 src/profile-preferences.ui:120
-#: src/profile-preferences.ui:146 src/extra-strings.c:82
-msgid "Custom"
-msgstr "Personalizado"
-
-#: src/profile-editor.c:595
+#: src/profile-editor.c:596
 msgid "Images"
 msgstr "Imaxes"
 
-#: src/profile-editor.c:732
+#: src/profile-editor.c:791
 #, c-format
 msgid "Choose Palette Color %d"
 msgstr "Escolla a paleta de cores %d"
 
-#: src/profile-editor.c:736
+#: src/profile-editor.c:795
 #, c-format
 msgid "Palette entry %d"
 msgstr "Entrada da paleta %d"
 
-#: src/encodings-dialog.ui:14
-msgid "Add or Remove Terminal Encodings"
-msgstr "Engadir ou eliminar as codificacións do terminal"
-
-#: src/encodings-dialog.ui:169
-msgid "A_vailable encodings:"
-msgstr "Codificacións _dispoñíbeis:"
-
-#: src/encodings-dialog.ui:187
-msgid "E_ncodings shown in menu:"
-msgstr "Co_dificacións amosadas no menú:"
-
-#: src/find-dialog.ui:14 src/terminal-accels.c:218
-msgid "Find"
-msgstr "Atopar"
-
-#: src/find-dialog.ui:87
-msgid "_Search for:"
-msgstr "_Buscar por:"
-
-#: src/find-dialog.ui:124
-msgid "_Match case"
-msgstr "_Coincidir coa capitalización"
-
-#: src/find-dialog.ui:141
-msgid "Match _entire word only"
-msgstr "Coincidir só coa palabra _enteira"
-
-#: src/find-dialog.ui:158
-msgid "Match as _regular expression"
-msgstr "Coincidir coa expresión _regular"
-
-#: src/find-dialog.ui:175
-msgid "Search _backwards"
-msgstr "Buscar cara _atrás"
-
-#: src/find-dialog.ui:193
-msgid "_Wrap around"
-msgstr "_Volver ao principio"
-
-#: src/keybinding-editor.ui:14
-msgid "Keyboard Shortcuts"
-msgstr "Atallo de teclado"
-
-#: src/keybinding-editor.ui:78
-msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr ""
-"_Activar as teclas de acceso ao menú (como, por exemplo, Alt+F para abrir o "
-"menú Ficheiro)"
-
-#: src/keybinding-editor.ui:117
-msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "Activar a tecla de atallo de _menú (F10 predeterminada)"
-
-#: src/keybinding-editor.ui:136
-msgid "_Shortcut keys:"
-msgstr "_Atallos de teclado:"
-
-#: src/profile-manager.ui:14
+#: src/profile-manager.ui:39
 msgid "Profiles"
 msgstr "Perfís"
 
-#: src/profile-manager.ui:175
+#: src/profile-manager.ui:136
+msgid "_New"
+msgstr "_Novo"
+
+#: src/profile-manager.ui:153 src/terminal-accels.c:348
+msgid "Edit"
+msgstr "Editar"
+
+#: src/profile-manager.ui:170 src/terminal-app.c:697
+msgid "_Delete"
+msgstr "E_liminar"
+
+#: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
 msgstr "_Perfil utilizado cando se inicia un terminal novo:"
 
-#: src/profile-new-dialog.ui:8 src/terminal-accels.c:156
+#: src/profile-new-dialog.ui:13 src/terminal-accels.c:157
 msgid "New Profile"
 msgstr "Perfil novo"
 
-#: src/profile-new-dialog.ui:74
+#: src/profile-new-dialog.ui:81
 msgid "C_reate"
 msgstr "C_rear"
 
-#: src/profile-new-dialog.ui:132
+#: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
 msgstr "_Nome do perfil:"
 
-#: src/profile-new-dialog.ui:145
+#: src/profile-new-dialog.ui:153
 msgid "_Base on:"
 msgstr "_Basear en:"
 
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:66 src/extra-strings.c:35
-msgid "Block"
-msgstr "Bloque"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:69 src/extra-strings.c:37
-msgid "I-Beam"
-msgstr "I-Beam"
-
-#. Translators: Cursor shape: ...
-#: src/profile-preferences.ui:72 src/extra-strings.c:39
-msgid "Underline"
-msgstr "Subliñado"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:83 src/extra-strings.c:63
-msgid "Replace initial title"
-msgstr "Substituír o título inicial"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:86 src/extra-strings.c:65
-msgid "Append initial title"
-msgstr "Engadir un título inicial ao remate"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:89 src/extra-strings.c:67
-msgid "Prepend initial title"
-msgstr "Engadir un título inicial ao principio"
-
-#. Translators: When terminal commands set their own titles: ...
-#: src/profile-preferences.ui:92 src/extra-strings.c:69
-msgid "Keep initial title"
-msgstr "Gardar o título inicial"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:103 src/extra-strings.c:49
-msgid "Exit the terminal"
-msgstr "Deixar o terminal"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:106 src/extra-strings.c:51
-msgid "Restart the command"
-msgstr "Reiniciar a orde"
-
-#. Translators: When command exits: ...
-#: src/profile-preferences.ui:109 src/extra-strings.c:53
-msgid "Hold the terminal open"
-msgstr "Deixar o terminal aberto"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:131 src/extra-strings.c:72
-msgid "Tango"
-msgstr "Tango"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:134 src/extra-strings.c:74
-msgid "Linux console"
-msgstr "Consola de Linux"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:137 src/extra-strings.c:76
-msgid "XTerm"
-msgstr "XTerm"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:140 src/extra-strings.c:78
-msgid "Rxvt"
-msgstr "Rxvt"
-
-#. Translators: This is the name of a colour scheme
-#: src/profile-preferences.ui:143 src/extra-strings.c:80
-msgid "Solarized"
-msgstr "Solarizado"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:157 src/extra-strings.c:56
-msgid "On the left side"
-msgstr "Ao lado esqueredo"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:160 src/extra-strings.c:58
-msgid "On the right side"
-msgstr "Ao lado dereito"
-
-#. Translators: Scrollbar is: ...
-#: src/profile-preferences.ui:163 src/terminal-accels.c:408
-#: src/extra-strings.c:60
-msgid "Disabled"
-msgstr "Desactivado"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:174 src/profile-preferences.ui:197
-#: src/extra-strings.c:24
-msgid "Automatic"
-msgstr "Automático"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:177 src/profile-preferences.ui:200
-#: src/extra-strings.c:26
-msgid "Control-H"
-msgstr "Control-H"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:180 src/profile-preferences.ui:203
-#: src/extra-strings.c:28
-msgid "ASCII DEL"
-msgstr "Supr ASCII"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:183 src/profile-preferences.ui:206
-#: src/extra-strings.c:30
-msgid "Escape sequence"
-msgstr "Secuencia de escape"
-
-#. Translators: This refers to the Delete keybinding option
-#: src/profile-preferences.ui:186 src/profile-preferences.ui:209
-#: src/extra-strings.c:32
-msgid "TTY Erase"
-msgstr "Borrar TTY"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:220 src/extra-strings.c:42
-msgid "Use system settings"
-msgstr "Usar os axustes do sistema"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:223 src/extra-strings.c:44
-msgid "Always blink"
-msgstr "Escintilar sempre"
-
-#. Translators: Cursor blink: ...
-#: src/profile-preferences.ui:226 src/extra-strings.c:46
-msgid "Never blink"
-msgstr "Non escintilar nunca"
-
-#: src/profile-preferences.ui:233
+#: src/profile-preferences.ui:243
 msgid "Profile Editor"
 msgstr "Editor de perfís"
 
-#: src/profile-preferences.ui:311
+#: src/profile-preferences.ui:325
 msgid "_Profile name:"
 msgstr "Nome do _perfil:"
 
-#: src/profile-preferences.ui:342
+#: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
 msgstr "_Usar o tipo de letra de largura fixa do sistema"
 
-#: src/profile-preferences.ui:372
+#: src/profile-preferences.ui:386
 msgid "_Font:"
 msgstr "_Tipo de letra:"
 
-#: src/profile-preferences.ui:389
+#: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
 msgstr "Seleccione un tipo de letra do terminal"
 
-#: src/profile-preferences.ui:410
+#: src/profile-preferences.ui:424
 msgid "_Allow bold text"
 msgstr "Permitir texto en _negra"
 
-#: src/profile-preferences.ui:426
+#: src/profile-preferences.ui:440
 msgid "Show _menubar by default in new terminals"
 msgstr "Amosar por omisión, a barra de _menú nos terminais novos"
 
-#: src/profile-preferences.ui:442
+#: src/profile-preferences.ui:456
 msgid "Terminal _bell"
 msgstr "_Campá do terminal"
 
-#: src/profile-preferences.ui:458
+#: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
 msgstr "Copiar o texto seleccionado no _portapapeis"
 
-#: src/profile-preferences.ui:474
+#: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
 msgstr "Resaltar os desafíos _S/Keys baixo o punteiro do rato"
 
-#: src/profile-preferences.ui:490
+#: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
 msgstr "Resaltar os _URL baixo o punteiro do rato"
 
-#: src/profile-preferences.ui:515
+#: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
 msgstr "Escin_tileo do cursor:"
 
-#: src/profile-preferences.ui:562
+#: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
 msgstr "_Forma do cursor:"
 
-#: src/profile-preferences.ui:609
+#: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
 msgstr "Caracteres que _separan palabras:"
 
-#: src/profile-preferences.ui:640
+#: src/profile-preferences.ui:654
 msgid "Use custom default terminal si_ze"
 msgstr "Usar o ta_maño de terminal predeterminado personalizado"
 
-#: src/profile-preferences.ui:670
+#: src/profile-preferences.ui:684
 msgid "Default size:"
 msgstr "Tamaño predeterminado:"
 
-#: src/profile-preferences.ui:702
+#: src/profile-preferences.ui:716
 msgid "columns"
 msgstr "columnas"
 
-#: src/profile-preferences.ui:741
+#: src/profile-preferences.ui:755
 msgid "rows"
 msgstr "filas"
 
-#: src/profile-preferences.ui:776
+#: src/profile-preferences.ui:790
 msgid "General"
 msgstr "Xeral"
 
-#: src/profile-preferences.ui:803
+#: src/profile-preferences.ui:817
 msgid "<b>Title</b>"
 msgstr "<b>Título</b>"
 
-#: src/profile-preferences.ui:834
+#: src/profile-preferences.ui:848
 msgid "Initial _title:"
 msgstr "_Título inicial:"
 
-#: src/profile-preferences.ui:874
+#: src/profile-preferences.ui:888
 msgid "When terminal commands set their o_wn titles:"
 msgstr "Cando as ordes do terminal definen os seus p_ropios títulos:"
 
-#: src/profile-preferences.ui:938
+#: src/profile-preferences.ui:952
 msgid "<b>Command</b>"
 msgstr "<b>Orde</b>"
 
-#: src/profile-preferences.ui:965
+#: src/profile-preferences.ui:979
 msgid "_Run command as a login shell"
 msgstr "_Executar a orde como un intérprete de ordes de inicio de sesión"
 
-#: src/profile-preferences.ui:981
+#: src/profile-preferences.ui:995
 msgid "Ru_n a custom command instead of my shell"
 msgstr "E_xecutar un orde personalizado en vez do intérprete de ordes"
 
-#: src/profile-preferences.ui:1011
+#: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
 msgstr "O_rde personalizada:"
 
-#: src/profile-preferences.ui:1053
+#: src/profile-preferences.ui:1067
 msgid "When command _exits:"
 msgstr "Cando a orde _sae:"
 
-#: src/profile-preferences.ui:1123
+#: src/profile-preferences.ui:1137
 msgid "Title and Command"
 msgstr "Título e orde"
 
-#: src/profile-preferences.ui:1151
+#: src/profile-preferences.ui:1165
 msgid "<b>Foreground, Background, Bold and Underline</b>"
 msgstr "<b>Primeiro plano, segundo plano, negriña e subliñado</b>"
 
-#: src/profile-preferences.ui:1173
+#: src/profile-preferences.ui:1187
 msgid "_Use colors from system theme"
 msgstr "_Usar as cores do tema do sistema"
 
-#: src/profile-preferences.ui:1197
+#: src/profile-preferences.ui:1211
 msgid "Built-in sche_mes:"
 msgstr "Esque_mas incorporados:"
 
-#: src/profile-preferences.ui:1246
+#: src/profile-preferences.ui:1261
 msgid "_Text color:"
 msgstr "Cor do _texto:"
 
-#: src/profile-preferences.ui:1261
+#: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
 msgstr "Seleccione a cor de fondo do terminal"
 
-#: src/profile-preferences.ui:1273
+#: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
 msgstr "Seleccione a cor de texto do terminal"
 
-#: src/profile-preferences.ui:1286
+#: src/profile-preferences.ui:1301
 msgid "_Background color:"
 msgstr "Cor de _fondo:"
 
-#: src/profile-preferences.ui:1336
+#: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
 msgstr "Cor _negriña."
 
-#: src/profile-preferences.ui:1350
+#: src/profile-preferences.ui:1381
 msgid "_Underline color:"
 msgstr "Cor do _subliñado:"
 
-#: src/profile-preferences.ui:1361 src/profile-preferences.ui:1376
+#: src/profile-preferences.ui:1392 src/profile-preferences.ui:1407
 msgid "_Same as text color"
 msgstr "A _mesma que a cor do texto"
 
-#: src/profile-preferences.ui:1430
+#: src/profile-preferences.ui:1470
 msgid "<b>Palette</b>"
 msgstr "<b>Paleta</b>"
 
-#: src/profile-preferences.ui:1456
+#: src/profile-preferences.ui:1497
 msgid "Built-in _schemes:"
 msgstr "E_squemas incorporados:"
 
-#: src/profile-preferences.ui:1708
+#: src/profile-preferences.ui:1774
 msgid "Color p_alette:"
 msgstr "P_aleta de cor:"
 
-#: src/profile-preferences.ui:1724
+#: src/profile-preferences.ui:1790
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
@@ -1804,83 +1850,83 @@ msgstr ""
 "<small><i><b>Nota:</b> As aplicacións do terminal teñen estas cores "
 "dispoñíbeis.</i></small>"
 
-#: src/profile-preferences.ui:1761
+#: src/profile-preferences.ui:1836
 msgid "Colors"
 msgstr "Cores"
 
-#: src/profile-preferences.ui:1779
+#: src/profile-preferences.ui:1854
 msgid "_Solid color"
 msgstr "Cor _sólida"
 
-#: src/profile-preferences.ui:1801
+#: src/profile-preferences.ui:1876
 msgid "_Background image"
 msgstr "Imaxe de _fondo"
 
-#: src/profile-preferences.ui:1837
+#: src/profile-preferences.ui:1912
 msgid "Image _file:"
 msgstr "_Ficheiro de imaxe:"
 
-#: src/profile-preferences.ui:1852
+#: src/profile-preferences.ui:1927
 msgid "Select Background Image"
 msgstr "Seleccionar unha imaxe de fondo"
 
-#: src/profile-preferences.ui:1869
+#: src/profile-preferences.ui:1944
 msgid "Background image _scrolls"
 msgstr "A imaxe de fondo _desprázase"
 
-#: src/profile-preferences.ui:1900
+#: src/profile-preferences.ui:1975
 msgid "_Transparent background"
 msgstr "Fondo _transparente"
 
-#: src/profile-preferences.ui:1926
+#: src/profile-preferences.ui:2001
 msgid "S_hade transparent or image background:"
 msgstr "_Sombra transparente ou imaxe de fondo:"
 
-#: src/profile-preferences.ui:1942
+#: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
 msgstr "_Sombra de fondo transparente:"
 
-#: src/profile-preferences.ui:1963
+#: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
 msgstr "<small><i>Ningún</i></small>"
 
-#: src/profile-preferences.ui:1993
+#: src/profile-preferences.ui:2068
 msgid "<small><i>Maximum</i></small>"
 msgstr "<small><i>Máximo</i></small>"
 
-#: src/profile-preferences.ui:2028
+#: src/profile-preferences.ui:2103
 msgid "Background"
 msgstr "Fondo"
 
-#: src/profile-preferences.ui:2049
+#: src/profile-preferences.ui:2125
 msgid "_Scrollbar is:"
 msgstr "A _barra de desprazamento é:"
 
-#: src/profile-preferences.ui:2060
+#: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
 msgstr "Desprazar a s_aída"
 
-#: src/profile-preferences.ui:2077
+#: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
 msgstr "Desprazar cunha _pulsación de tecla"
 
-#: src/profile-preferences.ui:2117
+#: src/profile-preferences.ui:2193
 msgid "lines"
 msgstr "liñas"
 
-#: src/profile-preferences.ui:2139
+#: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
 msgstr "Despra_zamento cara a atrás:"
 
-#: src/profile-preferences.ui:2150
+#: src/profile-preferences.ui:2226
 msgid "_Unlimited"
 msgstr "Non _limitado"
 
-#: src/profile-preferences.ui:2207
+#: src/profile-preferences.ui:2283
 msgid "Scrolling"
 msgstr "Desprazamento"
 
-#: src/profile-preferences.ui:2228
+#: src/profile-preferences.ui:2304
 msgid ""
 "<small><i><b>Note:</b> These options may cause some applications to behave "
 "incorrectly.  They are only here to allow you to work around certain "
@@ -1892,253 +1938,253 @@ msgstr ""
 "determinadas aplicacións e sistemas operativos que esperan un comportamento "
 "do terminal diferente.</i></small>"
 
-#: src/profile-preferences.ui:2250
+#: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
 msgstr "A tecla _suprimir xera:"
 
-#: src/profile-preferences.ui:2302
+#: src/profile-preferences.ui:2379
 msgid "_Backspace key generates:"
 msgstr "A tecla de _retroceso xera:"
 
-#: src/profile-preferences.ui:2326
+#: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
 msgstr "_Restabelecer as opcións de compatibilidade predeterminadas"
 
-#: src/profile-preferences.ui:2356
+#: src/profile-preferences.ui:2448
 msgid "Compatibility"
 msgstr "Compatibilidade"
 
-#: src/skey-challenge.ui:100
-msgid "S/Key Challenge Response"
-msgstr "Resposta ao desafío S/Key"
-
-#: src/skey-challenge.ui:120
-msgid "_Password:"
-msgstr "_Contrasinal:"
-
-#: src/skey-popup.c:165
-msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr "O texto que premeu non semella ser un desafío S/Key válido."
-
-#: src/skey-popup.c:176
-msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
-msgstr "O texto que premeu non semella ser un desafío OTP válido."
-
-#: src/terminal-accels.c:148
-msgid "New Tab"
-msgstr "Lapela nova"
-
-#: src/terminal-accels.c:152
-msgid "New Window"
-msgstr "Xanela nova"
-
-#: src/terminal-accels.c:161
-msgid "Save Contents"
-msgstr "Gardar os contidos"
-
-#: src/terminal-accels.c:166
-msgid "Close Tab"
-msgstr "Pechar a lapela"
-
-#: src/terminal-accels.c:170
-msgid "Close Window"
-msgstr "Pechar a xanela"
-
-#: src/terminal-accels.c:178
-msgid "Copy"
-msgstr "Copiar"
-
-#: src/terminal-accels.c:182
-msgid "Paste"
-msgstr "Pegar"
-
-#: src/terminal-accels.c:186
-msgid "Select All"
-msgstr "Seleccionar todo"
-
-#: src/terminal-accels.c:194
-msgid "Hide and Show menubar"
-msgstr "Agochar e amosar a barra de menú"
-
-#: src/terminal-accels.c:198
-msgid "Full Screen"
-msgstr "Pantalla completa"
-
-#: src/terminal-accels.c:202
-msgid "Zoom In"
-msgstr "Ampliar"
-
-#: src/terminal-accels.c:206
-msgid "Zoom Out"
-msgstr "Reducir"
-
-#: src/terminal-accels.c:210
-msgid "Normal Size"
-msgstr "Tamaño normal"
-
-#: src/terminal-accels.c:222
-msgid "Find Next"
-msgstr "Atopar o seguinte"
-
-#: src/terminal-accels.c:226
-msgid "Find Previous"
-msgstr "Atopar o anterior"
-
-#: src/terminal-accels.c:234 src/terminal-window.c:4247
+#: src/set-title-dialog.ui:18 src/terminal-accels.c:235
 msgid "Set Title"
 msgstr "Definir o título"
 
-#: src/terminal-accels.c:238
+#: src/set-title-dialog.ui:51
+msgid "_OK"
+msgstr "_Aceptar"
+
+#: src/set-title-dialog.ui:88
+msgid "_Title:"
+msgstr "_Título:"
+
+#: src/skey-challenge.ui:57
+msgid "_Ok"
+msgstr "_Aceptar"
+
+#: src/skey-challenge.ui:114
+msgid "S/Key Challenge Response"
+msgstr "Resposta ao desafío S/Key"
+
+#: src/skey-challenge.ui:134
+msgid "_Password:"
+msgstr "_Contrasinal:"
+
+#: src/skey-popup.c:166
+msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
+msgstr "O texto que premeu non semella ser un desafío S/Key válido."
+
+#: src/skey-popup.c:177
+msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
+msgstr "O texto que premeu non semella ser un desafío OTP válido."
+
+#: src/terminal-accels.c:149
+msgid "New Tab"
+msgstr "Lapela nova"
+
+#: src/terminal-accels.c:153
+msgid "New Window"
+msgstr "Xanela nova"
+
+#: src/terminal-accels.c:162
+msgid "Save Contents"
+msgstr "Gardar os contidos"
+
+#: src/terminal-accels.c:167
+msgid "Close Tab"
+msgstr "Pechar a lapela"
+
+#: src/terminal-accels.c:171
+msgid "Close Window"
+msgstr "Pechar a xanela"
+
+#: src/terminal-accels.c:179
+msgid "Copy"
+msgstr "Copiar"
+
+#: src/terminal-accels.c:183
+msgid "Paste"
+msgstr "Pegar"
+
+#: src/terminal-accels.c:187
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: src/terminal-accels.c:195
+msgid "Hide and Show menubar"
+msgstr "Agochar e amosar a barra de menú"
+
+#: src/terminal-accels.c:199
+msgid "Full Screen"
+msgstr "Pantalla completa"
+
+#: src/terminal-accels.c:203
+msgid "Zoom In"
+msgstr "Ampliar"
+
+#: src/terminal-accels.c:207
+msgid "Zoom Out"
+msgstr "Reducir"
+
+#: src/terminal-accels.c:211
+msgid "Normal Size"
+msgstr "Tamaño normal"
+
+#: src/terminal-accels.c:223
+msgid "Find Next"
+msgstr "Atopar o seguinte"
+
+#: src/terminal-accels.c:227
+msgid "Find Previous"
+msgstr "Atopar o anterior"
+
+#: src/terminal-accels.c:239
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: src/terminal-accels.c:242
+#: src/terminal-accels.c:243
 msgid "Reset and Clear"
 msgstr "Restaurar e limpar"
 
-#: src/terminal-accels.c:246
+#: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
 msgstr "Cambiar ao perfil anterior"
 
-#: src/terminal-accels.c:250
+#: src/terminal-accels.c:251
 msgid "Switch to Next Profile"
 msgstr "Cambiar ao seguinte perfil"
 
-#: src/terminal-accels.c:258
+#: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
 msgstr "Cambiar á lapela anterior"
 
-#: src/terminal-accels.c:262
+#: src/terminal-accels.c:263
 msgid "Switch to Next Tab"
 msgstr "Cambiará lapela seguinte"
 
-#: src/terminal-accels.c:266
+#: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
 msgstr "Mover a lapela cara a esquerda"
 
-#: src/terminal-accels.c:270
+#: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
 msgstr "Mover a lapela cara a dereita"
 
-#: src/terminal-accels.c:274
+#: src/terminal-accels.c:275
 msgid "Detach Tab"
 msgstr "Desprender a lapela"
 
-#: src/terminal-accels.c:278
+#: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
 msgstr "Cambiar á lapela 1"
 
-#: src/terminal-accels.c:283
+#: src/terminal-accels.c:284
 msgid "Switch to Tab 2"
 msgstr "Cambiar á lapela 2"
 
-#: src/terminal-accels.c:288
+#: src/terminal-accels.c:289
 msgid "Switch to Tab 3"
 msgstr "Cambiar á lapela 3"
 
-#: src/terminal-accels.c:293
+#: src/terminal-accels.c:294
 msgid "Switch to Tab 4"
 msgstr "Cambiar á lapela 4"
 
-#: src/terminal-accels.c:298
+#: src/terminal-accels.c:299
 msgid "Switch to Tab 5"
 msgstr "Cambiar á lapela 5"
 
-#: src/terminal-accels.c:303
+#: src/terminal-accels.c:304
 msgid "Switch to Tab 6"
 msgstr "Cambiar á lapela 6"
 
-#: src/terminal-accels.c:308
+#: src/terminal-accels.c:309
 msgid "Switch to Tab 7"
 msgstr "Cambiar á lapela 7"
 
-#: src/terminal-accels.c:313
+#: src/terminal-accels.c:314
 msgid "Switch to Tab 8"
 msgstr "Cambiar á lapela 8"
 
-#: src/terminal-accels.c:318
+#: src/terminal-accels.c:319
 msgid "Switch to Tab 9"
 msgstr "Cambiar á lapela 9"
 
-#: src/terminal-accels.c:323
+#: src/terminal-accels.c:324
 msgid "Switch to Tab 10"
 msgstr "Cambiar á lapela 10"
 
-#: src/terminal-accels.c:328
+#: src/terminal-accels.c:329
 msgid "Switch to Tab 11"
 msgstr "Cambiar á lapela 11"
 
-#: src/terminal-accels.c:333
+#: src/terminal-accels.c:334
 msgid "Switch to Tab 12"
 msgstr "Cambiar á lapela 12"
 
-#: src/terminal-accels.c:341
+#: src/terminal-accels.c:342
 msgid "Contents"
 msgstr "Contidos"
 
-#: src/terminal-accels.c:346
+#: src/terminal-accels.c:347
 msgid "File"
 msgstr "Ficheiro"
 
-#: src/terminal-accels.c:347
-msgid "Edit"
-msgstr "Editar"
-
-#: src/terminal-accels.c:348
+#: src/terminal-accels.c:349
 msgid "View"
 msgstr "Ver"
 
-#: src/terminal-accels.c:349
+#: src/terminal-accels.c:350
 msgid "Search"
 msgstr "Buscar"
 
-#: src/terminal-accels.c:351
+#: src/terminal-accels.c:352
 msgid "Tabs"
 msgstr "Lapelas"
 
-#: src/terminal-accels.c:352
+#: src/terminal-accels.c:353
 msgid "Help"
 msgstr "Axuda"
 
-#: src/terminal-accels.c:855
+#: src/terminal-accels.c:856
 #, c-format
 msgid "The shortcut key “%s” is already bound to the “%s” action"
 msgstr "A tecla de atallo «%s» xa está vinculada á acción «%s»"
 
-#: src/terminal-accels.c:1011
+#: src/terminal-accels.c:1012
 msgid "_Action"
 msgstr "_Acción"
 
-#: src/terminal-accels.c:1030
+#: src/terminal-accels.c:1031
 msgid "Shortcut _Key"
 msgstr "_Tecla de atallo"
 
-#: src/terminal-app.c:523
+#: src/terminal-app.c:528
 msgid "Click button to choose profile"
 msgstr "Prema o botón para escoller o perfil"
 
-#: src/terminal-app.c:606
+#: src/terminal-app.c:611
 msgid "Profile list"
 msgstr "Lista dos perfís"
 
-#: src/terminal-app.c:683
+#: src/terminal-app.c:688
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Quere eliminar o perfil «%s»?"
 
-#: src/terminal-app.c:687
-msgid "_Cancel"
-msgstr "_Cancelar"
-
-#: src/terminal-app.c:692
-msgid "_Delete"
-msgstr "E_liminar"
-
-#: src/terminal-app.c:699
+#: src/terminal-app.c:704
 msgid "Delete Profile"
 msgstr "Eliminar o perfil"
 
-#: src/terminal-app.c:1146
+#: src/terminal-app.c:1151
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2146,179 +2192,179 @@ msgid ""
 msgstr ""
 "Xa ten un perfil denominado «%s». Quere crear outro perfil co mesmo nome?"
 
-#: src/terminal-app.c:1241
+#: src/terminal-app.c:1246
 msgid "Choose base profile"
 msgstr "Escolla o perfil base"
 
-#: src/terminal-app.c:1828
+#: src/terminal-app.c:1841
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Non existe o perfil «%s», utilizarase un perfil predeterminadas\n"
 
-#: src/terminal-app.c:1855
+#: src/terminal-app.c:1868
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "A xeometría da cadea «%s» non é válida\n"
 
-#: src/terminal-app.c:2061
+#: src/terminal-app.c:2074
 msgid "User Defined"
 msgstr "Definida polo usuario"
 
-#: src/terminal.c:585
+#: src/terminal.c:513
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Produciuse un erro ao analizar os argumentos: %s\n"
 
-#: src/terminal-encoding.c:53 src/terminal-encoding.c:66
-#: src/terminal-encoding.c:80 src/terminal-encoding.c:102
-#: src/terminal-encoding.c:113
+#: src/terminal-encoding.c:54 src/terminal-encoding.c:67
+#: src/terminal-encoding.c:81 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:114
 msgid "Western"
 msgstr "Occidental"
 
-#: src/terminal-encoding.c:54 src/terminal-encoding.c:81
-#: src/terminal-encoding.c:92 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:55 src/terminal-encoding.c:82
+#: src/terminal-encoding.c:93 src/terminal-encoding.c:112
 msgid "Central European"
 msgstr "Europa Central"
 
-#: src/terminal-encoding.c:55
+#: src/terminal-encoding.c:56
 msgid "South European"
 msgstr "Europa do Sur"
 
-#: src/terminal-encoding.c:56 src/terminal-encoding.c:64
-#: src/terminal-encoding.c:118
+#: src/terminal-encoding.c:57 src/terminal-encoding.c:65
+#: src/terminal-encoding.c:119
 msgid "Baltic"
 msgstr "Báltico"
 
-#: src/terminal-encoding.c:57 src/terminal-encoding.c:82
-#: src/terminal-encoding.c:88 src/terminal-encoding.c:89
-#: src/terminal-encoding.c:94 src/terminal-encoding.c:112
+#: src/terminal-encoding.c:58 src/terminal-encoding.c:83
+#: src/terminal-encoding.c:89 src/terminal-encoding.c:90
+#: src/terminal-encoding.c:95 src/terminal-encoding.c:113
 msgid "Cyrillic"
 msgstr "Cirílico"
 
-#: src/terminal-encoding.c:58 src/terminal-encoding.c:85
-#: src/terminal-encoding.c:91 src/terminal-encoding.c:117
+#: src/terminal-encoding.c:59 src/terminal-encoding.c:86
+#: src/terminal-encoding.c:92 src/terminal-encoding.c:118
 msgid "Arabic"
 msgstr "Árabe"
 
-#: src/terminal-encoding.c:59 src/terminal-encoding.c:97
-#: src/terminal-encoding.c:114
+#: src/terminal-encoding.c:60 src/terminal-encoding.c:98
+#: src/terminal-encoding.c:115
 msgid "Greek"
 msgstr "Grego"
 
-#: src/terminal-encoding.c:60
+#: src/terminal-encoding.c:61
 msgid "Hebrew Visual"
 msgstr "Hebreo visual"
 
-#: src/terminal-encoding.c:61 src/terminal-encoding.c:84
-#: src/terminal-encoding.c:100 src/terminal-encoding.c:116
+#: src/terminal-encoding.c:62 src/terminal-encoding.c:85
+#: src/terminal-encoding.c:101 src/terminal-encoding.c:117
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: src/terminal-encoding.c:62 src/terminal-encoding.c:83
-#: src/terminal-encoding.c:104 src/terminal-encoding.c:115
+#: src/terminal-encoding.c:63 src/terminal-encoding.c:84
+#: src/terminal-encoding.c:105 src/terminal-encoding.c:116
 msgid "Turkish"
 msgstr "Turco"
 
-#: src/terminal-encoding.c:63
+#: src/terminal-encoding.c:64
 msgid "Nordic"
 msgstr "Nórdico"
 
-#: src/terminal-encoding.c:65
+#: src/terminal-encoding.c:66
 msgid "Celtic"
 msgstr "Celta"
 
-#: src/terminal-encoding.c:67 src/terminal-encoding.c:103
+#: src/terminal-encoding.c:68 src/terminal-encoding.c:104
 msgid "Romanian"
 msgstr "Romanés"
 
-#: src/terminal-encoding.c:68 src/terminal-encoding.c:125
-#: src/terminal-encoding.c:126 src/terminal-encoding.c:127
-#: src/terminal-encoding.c:128
+#: src/terminal-encoding.c:69 src/terminal-encoding.c:126
+#: src/terminal-encoding.c:127 src/terminal-encoding.c:128
+#: src/terminal-encoding.c:129
 msgid "Unicode"
 msgstr "Unicode"
 
-#: src/terminal-encoding.c:69
+#: src/terminal-encoding.c:70
 msgid "Armenian"
 msgstr "Armenio"
 
-#: src/terminal-encoding.c:70 src/terminal-encoding.c:71
-#: src/terminal-encoding.c:75
+#: src/terminal-encoding.c:71 src/terminal-encoding.c:72
+#: src/terminal-encoding.c:76
 msgid "Chinese Traditional"
 msgstr "Chinés tradicional"
 
-#: src/terminal-encoding.c:72
+#: src/terminal-encoding.c:73
 msgid "Cyrillic/Russian"
 msgstr "Cirílico/Ruso"
 
-#: src/terminal-encoding.c:73 src/terminal-encoding.c:86
-#: src/terminal-encoding.c:106
+#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
+#: src/terminal-encoding.c:107
 msgid "Japanese"
 msgstr "Xaponés"
 
-#: src/terminal-encoding.c:74 src/terminal-encoding.c:87
-#: src/terminal-encoding.c:109 src/terminal-encoding.c:129
+#: src/terminal-encoding.c:75 src/terminal-encoding.c:88
+#: src/terminal-encoding.c:110 src/terminal-encoding.c:130
 msgid "Korean"
 msgstr "Coreano"
 
-#: src/terminal-encoding.c:76 src/terminal-encoding.c:77
-#: src/terminal-encoding.c:78
+#: src/terminal-encoding.c:77 src/terminal-encoding.c:78
+#: src/terminal-encoding.c:79
 msgid "Chinese Simplified"
 msgstr "Chinés simplificado"
 
-#: src/terminal-encoding.c:79
+#: src/terminal-encoding.c:80
 msgid "Georgian"
 msgstr "Xeorxiano"
 
-#: src/terminal-encoding.c:90 src/terminal-encoding.c:105
+#: src/terminal-encoding.c:91 src/terminal-encoding.c:106
 msgid "Cyrillic/Ukrainian"
 msgstr "Cirílico/Ucraíno"
 
-#: src/terminal-encoding.c:93
+#: src/terminal-encoding.c:94
 msgid "Croatian"
 msgstr "Croata"
 
-#: src/terminal-encoding.c:95
+#: src/terminal-encoding.c:96
 msgid "Hindi"
 msgstr "Hindi"
 
-#: src/terminal-encoding.c:96
+#: src/terminal-encoding.c:97
 msgid "Persian"
 msgstr "Persa"
 
-#: src/terminal-encoding.c:98
+#: src/terminal-encoding.c:99
 msgid "Gujarati"
 msgstr "Guxarati"
 
-#: src/terminal-encoding.c:99
+#: src/terminal-encoding.c:100
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: src/terminal-encoding.c:101
+#: src/terminal-encoding.c:102
 msgid "Icelandic"
 msgstr "Islandés"
 
-#: src/terminal-encoding.c:107 src/terminal-encoding.c:110
-#: src/terminal-encoding.c:119
+#: src/terminal-encoding.c:108 src/terminal-encoding.c:111
+#: src/terminal-encoding.c:120
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: src/terminal-encoding.c:108
+#: src/terminal-encoding.c:109
 msgid "Thai"
 msgstr "Tailandés"
 
-#: src/terminal-encoding.c:506 src/terminal-encoding.c:531
+#: src/terminal-encoding.c:504 src/terminal-encoding.c:529
 msgid "_Description"
 msgstr "_Descrición"
 
-#: src/terminal-encoding.c:515 src/terminal-encoding.c:540
+#: src/terminal-encoding.c:513 src/terminal-encoding.c:538
 msgid "_Encoding"
 msgstr "_Codificación"
 
-#: src/terminal-encoding.c:598
+#: src/terminal-encoding.c:596
 msgid "Current Locale"
 msgstr "Configuración rexional actual"
 
-#: src/terminal-options.c:176
+#: src/terminal-options.c:177
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2329,36 +2375,36 @@ msgstr ""
 "que queira crear un perfil cos axustes desexados e usar a nova opción '--"
 "profile'\n"
 
-#: src/terminal-options.c:209
+#: src/terminal-options.c:210
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "O argumento para «%s» non é unha orde válida: %s"
 
-#: src/terminal-options.c:348
+#: src/terminal-options.c:349
 msgid "Two roles given for one window"
 msgstr "Indicáronse dous roles para unha xanela"
 
-#: src/terminal-options.c:369 src/terminal-options.c:402
+#: src/terminal-options.c:370 src/terminal-options.c:403
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "A opción «%s» indicouse dúas veces para a mesma xanela\n"
 
-#: src/terminal-options.c:601
+#: src/terminal-options.c:602
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "«%s» non é un factor de zoom válido"
 
-#: src/terminal-options.c:608
+#: src/terminal-options.c:609
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "O factor de zoom «%g» é demasiado pequeno, usarase %g\n"
 
-#: src/terminal-options.c:616
+#: src/terminal-options.c:617
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "O factor de zoom «%g» é demasiado grande, usarase %g\n"
 
-#: src/terminal-options.c:651
+#: src/terminal-options.c:652
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2367,15 +2413,15 @@ msgstr ""
 "A opción «%s» require especificar a orde para executar no resto da liña de "
 "ordes"
 
-#: src/terminal-options.c:812
+#: src/terminal-options.c:813
 msgid "Not a valid terminal config file."
 msgstr "O ficheiro de configuración do terminal non é válido."
 
-#: src/terminal-options.c:825
+#: src/terminal-options.c:826
 msgid "Incompatible terminal config file version."
 msgstr "O ficheiro de configuración do terminal non é válido."
 
-#: src/terminal-options.c:953
+#: src/terminal-options.c:954
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2383,108 +2429,108 @@ msgstr ""
 "Non rexistrar co servidor de nomes de activación; non reutilizar un terminal"
 " activo"
 
-#: src/terminal-options.c:962
+#: src/terminal-options.c:963
 msgid "Load a terminal configuration file"
 msgstr "Cargar un ficheiro de configuración do terminal"
 
-#: src/terminal-options.c:971
+#: src/terminal-options.c:972
 msgid "Save the terminal configuration to a file"
 msgstr "Gardar a configuración do terminal nun ficheiro"
 
-#: src/terminal-options.c:986
+#: src/terminal-options.c:987
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "Abrir unha xanela nova que conteña unha lapela co perfil predeterminado"
 
-#: src/terminal-options.c:995
+#: src/terminal-options.c:996
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Abrir unha lapela nova na última xanela aberta co perfil predeterminado"
 
-#: src/terminal-options.c:1009
+#: src/terminal-options.c:1010
 msgid "Turn on the menubar"
 msgstr "Activar a barra de menú"
 
-#: src/terminal-options.c:1018
+#: src/terminal-options.c:1019
 msgid "Turn off the menubar"
 msgstr "Desactivar a barra de menú"
 
-#: src/terminal-options.c:1027
+#: src/terminal-options.c:1028
 msgid "Maximize the window"
 msgstr "Maximizar a xanela"
 
-#: src/terminal-options.c:1036
+#: src/terminal-options.c:1037
 msgid "Full-screen the window"
 msgstr "Pór a xanela no modo de pantalla completa"
 
-#: src/terminal-options.c:1045
+#: src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Estabelecer o tamaño da xanela, por exemplo: 80x24, ou 80x24+200+200 "
 "(COLUMNASxFILAS+X+Y)"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1047
 msgid "GEOMETRY"
 msgstr "XEOMETRÍA"
 
-#: src/terminal-options.c:1054
+#: src/terminal-options.c:1055
 msgid "Set the window role"
 msgstr "Definir o rol da xanela"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1056
 msgid "ROLE"
 msgstr "ROL"
 
-#: src/terminal-options.c:1063
+#: src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Definir a última lapela especificada como a activa na súa xanela"
 
-#: src/terminal-options.c:1077
+#: src/terminal-options.c:1078
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Executar o argumento para esta opción dentro do terminal"
 
-#: src/terminal-options.c:1086
+#: src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
 msgstr "Usar o perfil proporcionado en vez do perfil predeterminado"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1088
 msgid "PROFILE-NAME"
 msgstr "NOME DO PERFIL"
 
-#: src/terminal-options.c:1095
+#: src/terminal-options.c:1096
 msgid "Set the terminal title"
 msgstr "Definir o título do terminal"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1097
 msgid "TITLE"
 msgstr "TÍTULO"
 
-#: src/terminal-options.c:1104
+#: src/terminal-options.c:1105
 msgid "Set the working directory"
 msgstr "Definir o directorio de traballo"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1106
 msgid "DIRNAME"
 msgstr "NOME DO DIRECTORIO"
 
-#: src/terminal-options.c:1113
+#: src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Definir o factor zoom do terminal (1.0 = tamaño normal)"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1115
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.c:1365 src/terminal-options.c:1368
+#: src/terminal-options.c:1366 src/terminal-options.c:1369
 msgid "MATE Terminal Emulator"
 msgstr "Emulador do Terminal do MATE"
 
-#: src/terminal-options.c:1369
+#: src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
 msgstr "Amosar as opcións do Terminal do MATE"
 
-#: src/terminal-options.c:1379
+#: src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2492,11 +2538,11 @@ msgstr ""
 "Opcións para abrir unha nova xanela ou lapela de terminal; pode ser "
 "especificada máis dunha:"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1381
 msgid "Show terminal options"
 msgstr "Amosar as opcións do terminal"
 
-#: src/terminal-options.c:1388
+#: src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2504,11 +2550,11 @@ msgstr ""
 "Opcións de xanela; se se usan antes do primeiro argumento --window or --tab,"
 " estabelécense os valores predeterminado para todas as xanelas:"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1390
 msgid "Show per-window options"
 msgstr "Amosar as opcións por xanela"
 
-#: src/terminal-options.c:1397
+#: src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2516,7 +2562,7 @@ msgstr ""
 "Opcións de terminal, se se usan antes do primeiro argumento --window or "
 "--tab, estabelécense os valores predeterminados para todos os terminais:"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1399
 msgid "Show per-terminal options"
 msgstr "Amosar as opcións por terminal"
 
@@ -2524,50 +2570,50 @@ msgstr "Amosar as opcións por terminal"
 msgid "Unnamed"
 msgstr "Sen nome"
 
-#: src/terminal-screen.c:1520
+#: src/terminal-screen.c:1524
 msgid "_Profile Preferences"
 msgstr "Pr_eferencias do perfil"
 
-#: src/terminal-screen.c:1521 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
 msgid "_Relaunch"
 msgstr "_Reiniciar"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1528
 msgid "There was an error creating the child process for this terminal"
 msgstr "Produciuse un erro ao crear o proceso fillo para este terminal"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:1972
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "O proceso fillo saíu de forma normal co estado %d."
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:1977
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "O proceso fillo foi rematado polo sinal %d."
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:1982
 msgid "The child process was terminated."
 msgstr "O proceso fillo foi rematado."
 
-#: src/terminal-tab-label.c:130
+#: src/terminal-tab-label.c:131
 msgid "Close tab"
 msgstr "Pechar a lapela"
 
-#: src/terminal-tabs-menu.c:201
+#: src/terminal-tabs-menu.c:202
 msgid "Switch to this tab"
 msgstr "Cambiar a esta lapela"
 
-#: src/terminal-util.c:145
+#: src/terminal-util.c:146
 msgid "There was an error displaying help"
 msgstr "Produciuse un erro ao amosar a axuda"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Non foi posíbel abrir o enderezo «%s»"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2579,7 +2625,7 @@ msgstr ""
 "Foundation, xa sexa na versión 3 da licenza como (segundo o seu criterio) en"
 " calquera outra versión posterior."
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2591,7 +2637,7 @@ msgstr ""
 "IDONEIDADE PARA UN PROPÓSITO PARTICULAR. Para máis detalles vexa a Licenza "
 "Pública Xeral de GNU."
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2617,305 +2663,286 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1885
+#: src/terminal-window.c:1876
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: src/terminal-window.c:1886 src/terminal-window.c:1899
-#: src/terminal-window.c:2140
+#: src/terminal-window.c:1877 src/terminal-window.c:1890
+#: src/terminal-window.c:2131
 msgid "Open _Terminal"
 msgstr "Abrir o _terminal"
 
-#: src/terminal-window.c:1887 src/terminal-window.c:1904
-#: src/terminal-window.c:2145
+#: src/terminal-window.c:1878 src/terminal-window.c:1895
+#: src/terminal-window.c:2136
 msgid "Open Ta_b"
 msgstr "Abrir unha _lapela"
 
-#: src/terminal-window.c:1888
+#: src/terminal-window.c:1879
 msgid "_Edit"
 msgstr "_Editar"
 
-#: src/terminal-window.c:1889
+#: src/terminal-window.c:1880
 msgid "_View"
 msgstr "_Ver"
 
-#: src/terminal-window.c:1890
+#: src/terminal-window.c:1881
 msgid "_Search"
 msgstr "_Buscar"
 
-#: src/terminal-window.c:1891
+#: src/terminal-window.c:1882
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: src/terminal-window.c:1892
+#: src/terminal-window.c:1883
 msgid "Ta_bs"
 msgstr "_Lapelas"
 
-#: src/terminal-window.c:1893
-msgid "_Help"
-msgstr "_Axuda"
-
-#: src/terminal-window.c:1909
+#: src/terminal-window.c:1900
 msgid "New _Profile…"
 msgstr "_Perfil novo..."
 
-#: src/terminal-window.c:1914
+#: src/terminal-window.c:1905
 msgid "_Save Contents"
 msgstr "_Gardar os contidos"
 
-#: src/terminal-window.c:1919 src/terminal-window.c:2155
+#: src/terminal-window.c:1910 src/terminal-window.c:2146
 msgid "C_lose Tab"
 msgstr "P_echar a lapela"
 
-#: src/terminal-window.c:1924
+#: src/terminal-window.c:1915
 msgid "_Close Window"
 msgstr "_Pechar a xanela"
 
-#: src/terminal-window.c:1931 src/terminal-window.c:2125
+#: src/terminal-window.c:1922 src/terminal-window.c:2116
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: src/terminal-window.c:1936 src/terminal-window.c:2130
+#: src/terminal-window.c:1927 src/terminal-window.c:2121
 msgid "_Paste"
 msgstr "_Pegar"
 
-#: src/terminal-window.c:1941 src/terminal-window.c:2135
+#: src/terminal-window.c:1932 src/terminal-window.c:2126
 msgid "Paste _Filenames"
 msgstr "Pegar nomes de _ficheiros"
 
-#: src/terminal-window.c:1946
+#: src/terminal-window.c:1937
 msgid "Select _All"
 msgstr "Seleccionar _todo"
 
-#: src/terminal-window.c:1951
+#: src/terminal-window.c:1942
 msgid "P_rofiles…"
 msgstr "Pe_rfís..."
 
-#: src/terminal-window.c:1956
+#: src/terminal-window.c:1947
 msgid "_Keyboard Shortcuts…"
 msgstr "_Atallos de teclado..."
 
-#: src/terminal-window.c:1961
+#: src/terminal-window.c:1952
 msgid "Pr_ofile Preferences"
 msgstr "Pr_eferencias do perfil"
 
-#: src/terminal-window.c:1968
+#: src/terminal-window.c:1959
 msgid "Zoom _In"
 msgstr "Acer_car"
 
-#: src/terminal-window.c:1973
+#: src/terminal-window.c:1964
 msgid "Zoom _Out"
 msgstr "_Reducir"
 
-#: src/terminal-window.c:1978
+#: src/terminal-window.c:1969
 msgid "_Normal Size"
 msgstr "Tamaño _normal"
 
-#: src/terminal-window.c:1985
+#: src/terminal-window.c:1976
 msgid "_Find..."
 msgstr "_Atopar..."
 
-#: src/terminal-window.c:1990
+#: src/terminal-window.c:1981
 msgid "Find Ne_xt"
 msgstr "Atopar _seguinte"
 
-#: src/terminal-window.c:1995
+#: src/terminal-window.c:1986
 msgid "Find Pre_vious"
 msgstr "Atopar a an_terior"
 
-#: src/terminal-window.c:2000
+#: src/terminal-window.c:1991
 msgid "_Clear Highlight"
 msgstr "_Limpar o resaltado"
 
-#: src/terminal-window.c:2006
+#: src/terminal-window.c:1997
 msgid "Go to _Line..."
 msgstr "Ir á _liña..."
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2002
 msgid "_Incremental Search..."
 msgstr "Busca _incremental..."
 
-#: src/terminal-window.c:2018
+#: src/terminal-window.c:2009
 msgid "Change _Profile"
 msgstr "Modificar o _perfil"
 
-#: src/terminal-window.c:2020
+#: src/terminal-window.c:2011
 msgid "_Previous Profile"
 msgstr "Perfil _anterior"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2016
 msgid "_Next Profile"
 msgstr "Perfil _seguinte"
 
-#: src/terminal-window.c:2030
+#: src/terminal-window.c:2021
 msgid "_Set Title…"
 msgstr "_Definir o título..."
 
-#: src/terminal-window.c:2034
+#: src/terminal-window.c:2025
 msgid "Set _Character Encoding"
 msgstr "Definir a codificación de _caracteres"
 
-#: src/terminal-window.c:2036
+#: src/terminal-window.c:2027
 msgid "_Reset"
-msgstr "_Restabelecer"
+msgstr "_Restaurar"
 
-#: src/terminal-window.c:2041
+#: src/terminal-window.c:2032
 msgid "Reset and C_lear"
 msgstr "Restaurar e _limpar"
 
-#: src/terminal-window.c:2048
+#: src/terminal-window.c:2039
 msgid "_Add or Remove…"
 msgstr "_Engadir ou eliminar..."
 
-#: src/terminal-window.c:2055
+#: src/terminal-window.c:2046
 msgid "_Previous Tab"
 msgstr "Lapela a_nterior"
 
-#: src/terminal-window.c:2060
+#: src/terminal-window.c:2051
 msgid "_Next Tab"
 msgstr "_Seguinte lapela"
 
-#: src/terminal-window.c:2065
+#: src/terminal-window.c:2056
 msgid "Move Tab _Left"
 msgstr "Mover a lapela cara a _esquerda"
 
-#: src/terminal-window.c:2070
+#: src/terminal-window.c:2061
 msgid "Move Tab _Right"
 msgstr "Mover a lapela cara a _dereita"
 
-#: src/terminal-window.c:2075
+#: src/terminal-window.c:2066
 msgid "_Detach tab"
 msgstr "_Desprender a lapela"
 
-#: src/terminal-window.c:2082
+#: src/terminal-window.c:2073
 msgid "_Contents"
 msgstr "_Contidos"
 
-#: src/terminal-window.c:2087
+#: src/terminal-window.c:2078
 msgid "_About"
 msgstr "_Sobre"
 
-#: src/terminal-window.c:2094
+#: src/terminal-window.c:2085
 msgid "_Send Mail To…"
 msgstr "_Enviar un correo a…"
 
-#: src/terminal-window.c:2099
+#: src/terminal-window.c:2090
 msgid "_Copy E-mail Address"
 msgstr "_Copiar o enderezo de correo"
 
-#: src/terminal-window.c:2104
+#: src/terminal-window.c:2095
 msgid "C_all To…"
 msgstr "Ch_amar a…"
 
-#: src/terminal-window.c:2109
+#: src/terminal-window.c:2100
 msgid "_Copy Call Address"
 msgstr "_Copiar o enderezo de chamada"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2105
 msgid "_Open Link"
 msgstr "_Abrir a ligazón"
 
-#: src/terminal-window.c:2119
+#: src/terminal-window.c:2110
 msgid "_Copy Link Address"
 msgstr "_Copiar a ligazón do enderezo"
 
-#: src/terminal-window.c:2123
+#: src/terminal-window.c:2114
 msgid "P_rofiles"
 msgstr "Pe_rfís"
 
-#: src/terminal-window.c:2150 src/terminal-window.c:3640
-msgid "C_lose Window"
-msgstr "P_echar a xanela"
-
-#: src/terminal-window.c:2160
+#: src/terminal-window.c:2151
 msgid "L_eave Full Screen"
 msgstr "_Abandonar a pantalla completa"
 
-#: src/terminal-window.c:2164
+#: src/terminal-window.c:2155
 msgid "_Input Methods"
 msgstr "Métodos de _entrada"
 
-#: src/terminal-window.c:2171
+#: src/terminal-window.c:2162
 msgid "Show _Menubar"
 msgstr "Amosar a barra de _menú"
 
-#: src/terminal-window.c:2177
+#: src/terminal-window.c:2168
 msgid "_Full Screen"
 msgstr "_Pantalla completa"
 
-#: src/terminal-window.c:3618
+#: src/terminal-window.c:3607
 msgid ""
-"There are still processes running in some terminals in this window. Closing "
-"the window will kill all of them."
+"There are still processes running in some terminals in this window.\n"
+"Closing the window will kill all of them."
 msgstr ""
 "Aínda hai procesos en execución nalgún terminal desta xanela. Pechar a "
 "xanela mataría todos estes procesos."
 
-#: src/terminal-window.c:3621
-msgid ""
-"There is still a process running in this terminal. Closing the terminal will"
-" kill it."
-msgstr ""
-"Aínda hai un proceso en execución neste terminal. Pechar o terminal "
-"mataríao."
-
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
 msgstr "Hai varias lapelas abertas nesta xanela."
 
-#: src/terminal-window.c:3633
-msgid "Close this window?"
-msgstr "Quere pechar esta xanela?"
-
-#: src/terminal-window.c:3633
+#: src/terminal-window.c:3624
 msgid "Close this terminal?"
 msgstr "Quere pechar este terminal?"
 
-#: src/terminal-window.c:3640
+#: src/terminal-window.c:3625
 msgid "C_lose Terminal"
 msgstr "_Pechar o terminal"
 
-#: src/terminal-window.c:3706
+#: src/terminal-window.c:3695
 msgid "Could not save contents"
 msgstr "Non foi posíbel gardar os contidos"
 
-#: src/terminal-window.c:3730
+#: src/terminal-window.c:3719
 msgid "Save as..."
 msgstr "Gardar como..."
 
-#: src/terminal-window.c:4264
-msgid "_Title:"
-msgstr "_Título:"
-
-#: src/terminal-window.c:4449
+#: src/terminal-window.c:4415
 msgid "Contributors:"
 msgstr "Colaboradores:"
 
-#: src/terminal-window.c:4468
+#: src/terminal-window.c:4431
+#, c-format
+msgid ""
+"MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
+"Powered by Virtual TErminal %d.%d.%d"
+msgstr ""
+"O terminal do MATE é un emulador de terminal para o contorno de escritorio MATE.\n"
+"Co ainfraestrutura do Virtual TErminal %d.%d.%d"
+
+#: src/terminal-window.c:4437
 msgid "About MATE Terminal"
 msgstr "Sobre o Terminal do MATE"
 
-#: src/terminal-window.c:4469
+#: src/terminal-window.c:4438
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Copyright © 2006 Guilherme de S. Pastore\n"
 "Copyright © 2007–2010 Christian Persch\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
 "Copyright © 2006 Guilherme de S. Pastore\n"
 "Copyright © 2007–2010 Christian Persch\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 Os desenvolvedores do MATE "
+"Copyright © 2012-2021 Os desenvolvedores do MATE "
 
-#: src/terminal-window.c:4475
-msgid "A terminal emulator for the MATE desktop"
-msgstr "Un emulador do terminal para o escritorio do MATE"
-
-#: src/terminal-window.c:4481
+#: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr ""
 "Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
