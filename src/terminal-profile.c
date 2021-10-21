@@ -1224,12 +1224,14 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 {\
   GParamSpec *pspec = propSpec;\
   g_object_class_install_property (object_class, propId, pspec);\
-\
-  if (propGSettings)\
-    {\
-      g_param_spec_set_qdata (pspec, gsettings_key_quark, (gpointer) propGSettings);\
-      g_hash_table_insert (klass->gsettings_keys, (gpointer) propGSettings, pspec);\
-    }\
+  g_param_spec_set_qdata (pspec, gsettings_key_quark, (gpointer) propGSettings);\
+  g_hash_table_insert (klass->gsettings_keys, (gpointer) propGSettings, pspec);\
+}
+
+#define TERMINAL_PROFILE_PROPERTY_OUTER(propId, propSpec) \
+{\
+  GParamSpec *pspec = propSpec;\
+  g_object_class_install_property (object_class, propId, pspec);\
 }
 
 #define TERMINAL_PROFILE_PROPERTY_BOOLEAN(prop, propDefault, propGSettings) \
@@ -1268,12 +1270,11 @@ terminal_profile_class_init (TerminalProfileClass *klass)
     propGSettings)
 
 	/* these are all read-only */
-#define TERMINAL_PROFILE_PROPERTY_OBJECT(prop, propType, propGSettings)\
-  TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
+#define TERMINAL_PROFILE_PROPERTY_OBJECT(prop, propType)\
+  TERMINAL_PROFILE_PROPERTY_OUTER (PROP_##prop,\
     g_param_spec_object (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propType,\
-                         G_PARAM_READABLE | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propGSettings)
+                         G_PARAM_READABLE | TERMINAL_PROFILE_PSPEC_STATIC))
 
 #define TERMINAL_PROFILE_PROPERTY_STRING(prop, propDefault, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
@@ -1282,12 +1283,11 @@ terminal_profile_class_init (TerminalProfileClass *klass)
                          G_PARAM_READWRITE | TERMINAL_PROFILE_PSPEC_STATIC),\
     propGSettings)
 
-#define TERMINAL_PROFILE_PROPERTY_STRING_CO(prop, propDefault, propGSettings)\
-  TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
+#define TERMINAL_PROFILE_PROPERTY_STRING_CO(prop, propDefault)\
+  TERMINAL_PROFILE_PROPERTY_OUTER (PROP_##prop,\
     g_param_spec_string (TERMINAL_PROFILE_##prop, NULL, NULL,\
                          propDefault,\
-                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | TERMINAL_PROFILE_PSPEC_STATIC),\
-    propGSettings)
+                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | TERMINAL_PROFILE_PSPEC_STATIC))
 
 #define TERMINAL_PROFILE_PROPERTY_VALUE_ARRAY_BOXED(prop, propElementName, propElementType, propGSettings)\
   TERMINAL_PROFILE_PROPERTY (PROP_##prop,\
@@ -1336,9 +1336,10 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 	TERMINAL_PROFILE_PROPERTY_INT (DEFAULT_SIZE_ROWS, 1, 1024, DEFAULT_DEFAULT_SIZE_ROWS, KEY_DEFAULT_SIZE_ROWS);
 	TERMINAL_PROFILE_PROPERTY_INT (SCROLLBACK_LINES, 1, G_MAXINT, DEFAULT_SCROLLBACK_LINES, KEY_SCROLLBACK_LINES);
 
-	TERMINAL_PROFILE_PROPERTY_OBJECT (BACKGROUND_IMAGE, GDK_TYPE_PIXBUF, NULL);
+	TERMINAL_PROFILE_PROPERTY_OBJECT (BACKGROUND_IMAGE, GDK_TYPE_PIXBUF);
 
-	TERMINAL_PROFILE_PROPERTY_STRING_CO (NAME, DEFAULT_NAME, NULL);
+	TERMINAL_PROFILE_PROPERTY_STRING_CO (NAME, DEFAULT_NAME);
+
 	TERMINAL_PROFILE_PROPERTY_STRING (BACKGROUND_IMAGE_FILE, DEFAULT_BACKGROUND_IMAGE_FILE, KEY_BACKGROUND_IMAGE_FILE);
 	TERMINAL_PROFILE_PROPERTY_STRING (CUSTOM_COMMAND, DEFAULT_CUSTOM_COMMAND, KEY_CUSTOM_COMMAND);
 	TERMINAL_PROFILE_PROPERTY_STRING (TITLE, _(DEFAULT_TITLE), KEY_TITLE);
