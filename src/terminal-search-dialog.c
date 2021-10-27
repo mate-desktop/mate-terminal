@@ -43,7 +43,6 @@ get_quark (void)
 	return quark;
 }
 
-
 #define TERMINAL_SEARCH_DIALOG_GET_PRIVATE(object) \
   ((TerminalSearchDialogPrivate *) g_object_get_qdata (G_OBJECT (object), get_quark ()))
 
@@ -68,14 +67,12 @@ typedef struct _TerminalSearchDialogPrivate
 	guint32 regex_compile_flags;
 } TerminalSearchDialogPrivate;
 
-
 static void update_sensitivity (void *unused,
                                 GtkWidget *dialog);
 static void response_handler (GtkWidget *dialog,
                               gint       response_id,
                               gpointer   data);
 static void terminal_search_dialog_private_destroy (TerminalSearchDialogPrivate *priv);
-
 
 GtkWidget *
 terminal_search_dialog_new (GtkWindow   *parent)
@@ -104,7 +101,6 @@ terminal_search_dialog_new (GtkWindow   *parent)
 
 	g_object_set_qdata_full (G_OBJECT (dialog), get_quark (), priv,
 	                         (GDestroyNotify) terminal_search_dialog_private_destroy);
-
 
 	priv->search_text_entry = gtk_bin_get_child (GTK_BIN (priv->search_entry));
 	gtk_widget_set_size_request (priv->search_entry, 300, -1);
@@ -164,7 +160,6 @@ terminal_search_dialog_private_destroy (TerminalSearchDialogPrivate *priv)
 
 	g_free (priv);
 }
-
 
 static void
 update_sensitivity (void *unused, GtkWidget *dialog)
@@ -286,7 +281,6 @@ response_handler (GtkWidget *dialog,
 	if (*str != '\0')
 		history_entry_insert (priv->store, str);
 }
-
 
 void
 terminal_search_dialog_set_search_text (GtkWidget   *dialog,

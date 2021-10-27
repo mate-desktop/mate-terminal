@@ -1741,7 +1741,6 @@ terminal_window_map_event (GtkWidget    *widget,
     return FALSE;
 }
 
-
 static gboolean
 terminal_window_state_event (GtkWidget            *widget,
                              GdkEventWindowState  *event)
@@ -3600,7 +3599,6 @@ confirm_close_window_or_tab (TerminalWindow *window,
         g_list_free (tabs);
     }
 
-
     if (has_processes)
     {
         if (n_tabs > 1)
@@ -3613,7 +3611,6 @@ confirm_close_window_or_tab (TerminalWindow *window,
             confirm_msg = _("There are multiple tabs open in this window.");
     else
         return FALSE;
-
 
     builder = gtk_builder_new_from_resource (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/confirm-close-dialog.ui");
     priv->confirm_close_dialog = dialog = GTK_WIDGET (gtk_builder_get_object (builder, "confirm_close_dialog"));
@@ -4044,7 +4041,6 @@ view_zoom_normal_callback (GtkAction *action,
     terminal_window_update_zoom_sensitivity (window);
 }
 
-
 static void
 search_find_response_callback (GtkWidget *dialog,
                                int        response,
@@ -4385,7 +4381,6 @@ help_about_callback (GtkAction *action,
     gsize data_len, n_authors = 0, n_contributors = 0, n_artists = 0, n_documenters = 0 , i;
     GPtrArray *array;
 
-
     bytes = g_resources_lookup_data (TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/terminal.about",
                                      G_RESOURCE_LOOKUP_FLAGS_NONE,
                                      &error);
@@ -4534,7 +4529,6 @@ terminal_window_save_state (TerminalWindow *window,
     g_key_file_set_string_list (key_file, group, TERMINAL_CONFIG_WINDOW_PROP_TABS, (const char * const *) tab_names, len);
     g_strfreev (tab_names);
 }
-
 
 TerminalWindow *
 terminal_window_get_latest_focused (TerminalWindow *window1,

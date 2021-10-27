@@ -291,7 +291,6 @@ name_acquired_cb (GDBusConnection *connection,
 		g_assert_not_reached ();
 	}
 
-
 	if (!terminal_app_handle_options (terminal_app_get (), data->options, TRUE /* do resume */, &error))
 	{
 		g_printerr ("Failed to handle options: %s\n", error->message);

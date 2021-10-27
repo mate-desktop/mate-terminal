@@ -180,7 +180,6 @@ unsupported_option_callback (const gchar *option_name,
 	return TRUE; /* we do not want to bail out here but continue */
 }
 
-
 static gboolean G_GNUC_NORETURN
 option_version_cb (const gchar *option_name,
                    const gchar *value,
@@ -281,7 +280,6 @@ option_profile_id_cb (const gchar *option_name,
 
 	return TRUE;
 }
-
 
 static gboolean
 option_window_callback (const gchar *option_name,

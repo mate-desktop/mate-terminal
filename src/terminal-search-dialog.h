@@ -33,7 +33,6 @@ typedef enum _TerminalSearchFlags
     TERMINAL_SEARCH_FLAG_WRAP_AROUND	= 1 << 1
 } TerminalSearchFlags;
 
-
 GtkWidget	*terminal_search_dialog_new		(GtkWindow   *parent);
 
 void		 terminal_search_dialog_present		(GtkWidget   *dialog);

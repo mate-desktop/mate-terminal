@@ -23,7 +23,6 @@ static struct skey_hash hash_table[] =
 	{ SHA1Keycrunch, SHA1SKey }
 };
 
-
 char *skey(SKeyAlgorithm algorithm, int seq, const char *seed, const char *passphrase)
 {
 	char key[SKEY_SIZE];

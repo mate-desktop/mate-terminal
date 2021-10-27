@@ -180,7 +180,6 @@ static guint n_url_regexes;
 
 static void terminal_screen_url_match_remove (TerminalScreen *screen);
 
-
 #ifdef ENABLE_SKEY
 static const TerminalRegexPattern skey_regex_patterns[] =
 {
