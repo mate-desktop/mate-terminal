@@ -590,7 +590,6 @@ terminal_encodings_get_builtins (void)
 	                      NULL,
 	                      (GDestroyNotify) terminal_encoding_unref);
 
-
 	/* Placeholder entry for the current locale's charset */
 	encoding = terminal_encoding_new ("current",
 	                                  _("Current Locale"),

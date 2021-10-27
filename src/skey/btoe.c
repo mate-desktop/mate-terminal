@@ -274,7 +274,6 @@ char *btoe(unsigned char *md)
 
 }
 
-
 /*
  * Extract 'length' bits from the char array 's'
  * starting with bit 'start'

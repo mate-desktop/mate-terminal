@@ -168,7 +168,6 @@ terminal_util_set_atk_name_description (GtkWidget  *widget,
 		return;
 	}
 
-
 	if (!GTK_IS_ACCESSIBLE (obj))
 		return; /* This means GAIL is not loaded so we have the NoOp accessible */
 

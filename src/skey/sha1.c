@@ -35,7 +35,6 @@ static void byteReverse(unsigned char *buf, unsigned longs)
 }
 #endif
 
-
 int SHA1Keycrunch(char *result, const char *seed, const char *passphrase)
 {
 	char *buf;

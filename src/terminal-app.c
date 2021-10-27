@@ -158,7 +158,6 @@ static TerminalApp *global_app = NULL;
 
 #define ENCODING_LIST_KEY "active-encodings"
 
-
 /* two following functions were copied from libmate-desktop to get rid
  * of dependency on it
  *
@@ -286,7 +285,6 @@ terminal_app_get_workspace_for_window (TerminalWindow *window)
   g_free (data);
   return ret;
 }
-
 
 /* Menubar mnemonics settings handling */
 
@@ -1437,7 +1435,6 @@ terminal_app_init (TerminalApp *app)
 			  "changed::" MONOSPACE_FONT_KEY,
 			  G_CALLBACK(terminal_app_system_font_notify_cb),
 			  app);
-
 
 	g_signal_connect (settings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
