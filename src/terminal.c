@@ -243,6 +243,7 @@ bus_acquired_cb (GDBusConnection *connection,
 		method_call_cb,
 		NULL,
 		NULL,
+		{ 0 }
 	};
 
 	OwnData *data = (OwnData *) user_data;
