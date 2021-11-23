@@ -40,7 +40,6 @@
 #include "terminal-encoding.h"
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
 
 #ifdef HAVE_SMCLIENT
 #include "eggsmclient.h"
