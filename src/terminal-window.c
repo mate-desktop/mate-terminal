@@ -106,8 +106,6 @@ struct _TerminalWindowPrivate
     guint disposed : 1;
     guint present_on_insert : 1;
 
-    /* Workaround until gtk+ bug #535557 is fixed */
-    guint icon_title_set : 1;
     time_t focus_time;
 
     /* should we copy selection to clibpoard */
@@ -2536,8 +2534,6 @@ sync_screen_icon_title (TerminalScreen *screen,
         return;
 
     gdk_window_set_icon_name (gtk_widget_get_window (GTK_WIDGET (window)), terminal_screen_get_icon_title (screen));
-
-    priv->icon_title_set = TRUE;
 }
 
 static void
@@ -2550,10 +2546,6 @@ sync_screen_icon_title_set (TerminalScreen *screen,
     if (!gtk_widget_get_realized (GTK_WIDGET (window)))
         return;
 
-    /* No need to restore the title if we never set an icon title */
-    if (!priv->icon_title_set)
-        return;
-
     if (screen != priv->active_screen)
         return;
 
@@ -2561,12 +2553,7 @@ sync_screen_icon_title_set (TerminalScreen *screen,
         return;
 
     /* Need to reset the icon name */
-    /* FIXME: Once gtk+ bug 535557 is fixed, use that to unset the icon title. */
-
-    g_object_set_qdata (G_OBJECT (gtk_widget_get_window (GTK_WIDGET (window))),
-                        g_quark_from_static_string ("gdk-icon-name-set"),
-                        GUINT_TO_POINTER (FALSE));
-    priv->icon_title_set = FALSE;
+    gdk_window_set_icon_name (gtk_widget_get_window (GTK_WIDGET (window)), NULL);
 
     /* Re-setting the right title will be done by the notify::title handler which comes after this one */
 }
