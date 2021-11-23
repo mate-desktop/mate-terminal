@@ -25,7 +25,6 @@
 #include <errno.h>
 #include <locale.h>
 #include <stdlib.h>
-#include <time.h>
 #include <unistd.h>
 
 #include <glib.h>
@@ -525,7 +524,8 @@ main (int argc, char **argv)
 
 	if (options->startup_id == NULL)
 	{
-		options->startup_id = g_strdup_printf ("_TIME%lu", g_get_monotonic_time () / 1000);
+		options->startup_id = g_strdup_printf ("_TIME%" G_GINT64_FORMAT,
+		                                       g_get_monotonic_time () / 1000);
 	}
 
 	gdk_init (&argc, &argv);

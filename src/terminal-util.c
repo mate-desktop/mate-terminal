@@ -24,7 +24,6 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
 #include <unistd.h>
 #include <sys/types.h>
 
@@ -49,7 +48,8 @@ terminal_util_set_unique_role (GtkWindow *window, const char *prefix)
 {
 	char *role;
 
-	role = g_strdup_printf ("%s-%d-%d-%d", prefix, getpid (), g_random_int (), (int) time (NULL));
+	role = g_strdup_printf ("%s-%d-%d-%" G_GINT64_FORMAT, prefix, getpid (), g_random_int (),
+	                        g_get_real_time () / G_USEC_PER_SEC);
 	gtk_window_set_role (window, role);
 	g_free (role);
 }
