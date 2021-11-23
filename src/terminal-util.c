@@ -869,9 +869,9 @@ widget_change_notify_cb (PropertyChange *change)
 	}
 	else if (GTK_IS_SPIN_BUTTON (widget))
 	{
-		int value;
+		gint value;
 
-		value = (int) gtk_spin_button_get_value (GTK_SPIN_BUTTON (widget));
+		value = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (widget));
 		g_object_set (object, object_prop, value, NULL);
 	}
 	else if (GTK_IS_ENTRY (widget))
