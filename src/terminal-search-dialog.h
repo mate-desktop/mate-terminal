@@ -46,6 +46,7 @@ const gchar 	*terminal_search_dialog_get_search_text	(GtkWidget   *dialog);
 TerminalSearchFlags
 terminal_search_dialog_get_search_flags(GtkWidget   *dialog);
 VteRegex	*terminal_search_dialog_get_regex	(GtkWidget   *dialog);
+void terminal_search_dialog_show_notfound(GtkWidget   *dialog);
 
 G_END_DECLS
 

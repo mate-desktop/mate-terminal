@@ -390,3 +390,13 @@ terminal_search_dialog_get_regex (GtkWidget *dialog)
 	return priv->regex;
 }
 
+void
+terminal_search_dialog_show_notfound (GtkWidget   *dialog) {
+    GtkWidget *notfound_dialog = gtk_message_dialog_new (GTK_WINDOW(dialog),
+                                     GTK_DIALOG_DESTROY_WITH_PARENT,
+                                     GTK_MESSAGE_INFO,
+                                     GTK_BUTTONS_CLOSE,
+                                     "Found nothing.");
+    gtk_dialog_run (GTK_DIALOG (notfound_dialog));
+    gtk_widget_destroy (notfound_dialog);
+}

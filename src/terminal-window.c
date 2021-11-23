@@ -4054,6 +4054,7 @@ search_find_response_callback (GtkWidget *dialog,
     TerminalWindowPrivate *priv = window->priv;
     TerminalSearchFlags flags;
     VteRegex *regex;
+    gboolean found = 0;
 
     if (response != GTK_RESPONSE_ACCEPT)
         return;
@@ -4071,9 +4072,13 @@ search_find_response_callback (GtkWidget *dialog,
                                          (flags & TERMINAL_SEARCH_FLAG_WRAP_AROUND));
 
     if (flags & TERMINAL_SEARCH_FLAG_BACKWARDS)
-        vte_terminal_search_find_previous (VTE_TERMINAL (priv->active_screen));
+        found = vte_terminal_search_find_previous (VTE_TERMINAL (priv->active_screen));
     else
-        vte_terminal_search_find_next (VTE_TERMINAL (priv->active_screen));
+        found = vte_terminal_search_find_next (VTE_TERMINAL (priv->active_screen));
+
+    if(!found) {
+        terminal_search_dialog_show_notfound(dialog);
+    }
 
     terminal_window_update_search_sensitivity (priv->active_screen, window);
 }
