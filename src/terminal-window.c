@@ -2725,7 +2725,7 @@ terminal_window_set_menubar_visible (TerminalWindow *window,
     if (setting == priv->menubar_visible)
         return;
 
-    priv->menubar_visible = setting;
+    priv->menubar_visible = (setting != FALSE);
 
     G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
     action = gtk_action_group_get_action (priv->action_group, "ViewMenubar");
