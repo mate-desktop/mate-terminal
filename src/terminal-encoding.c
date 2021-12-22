@@ -159,8 +159,8 @@ terminal_encoding_new (const char *charset,
 	encoding->refcount = 1;
 	encoding->id = g_strdup (charset);
 	encoding->name = g_strdup (display_name);
-	encoding->valid = encoding->validity_checked = force_valid;
-	encoding->is_custom = is_custom;
+	encoding->valid = encoding->validity_checked = (force_valid != FALSE);
+	encoding->is_custom = (is_custom != FALSE);
 	encoding->is_active = FALSE;
 
 	return encoding;
