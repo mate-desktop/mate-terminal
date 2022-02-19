@@ -177,7 +177,6 @@ desktop_file_configured = configure_file(
 )
 
 desktop_file = i18n.merge_file(
-  'desktop-file',
   input: desktop_file_configured,
   output: 'mate-terminal.desktop',
   type: 'desktop',
@@ -209,7 +208,6 @@ appdata_file_configured = configure_file(
 )
 
 appdata_file = i18n.merge_file(
-  'appdata-file',
   input: appdata_file_configured,
   output: 'mate-terminal.appdata.xml',
   type: 'xml',
