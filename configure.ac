@@ -59,7 +59,7 @@ PKG_CHECK_MODULES([TERM],
 
 # $enable_xsmp will be set to "yes" or "no"
 AC_ARG_ENABLE(smclient,
-              [AC_HELP_STRING([--enable-smclient],
+              [AS_HELP_STRING([--enable-smclient],
                               [Explicitly enable or disable smclient])],
               [enable_smclient=$enableval],
               [enable_smclient=yes])
