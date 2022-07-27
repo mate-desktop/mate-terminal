@@ -3553,14 +3553,11 @@ confirm_close_window_or_tab (TerminalWindow *window,
     GtkBuilder *builder;
     TerminalWindowPrivate *priv = window->priv;
     GtkWidget *dialog;
-    gboolean do_confirm;
     gboolean has_processes;
     int n_tabs;
     char *confirm_msg;
 
-    do_confirm = g_settings_get_boolean (settings_global, "confirm-window-close");
-
-    if (!do_confirm)
+    if (!g_settings_get_boolean (settings_global, "confirm-window-close"))
         return FALSE;
 
     if (screen)
@@ -3571,8 +3568,6 @@ confirm_close_window_or_tab (TerminalWindow *window,
     else
     {
         GList *tabs, *t;
-
-        do_confirm = FALSE;
 
         tabs = terminal_window_list_screen_containers (window);
         n_tabs = g_list_length (tabs);
