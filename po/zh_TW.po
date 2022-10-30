@@ -6,15 +6,15 @@
 # Translators:
 # Walter Cheuk <wwycheuk@gmail.com>, 2018
 # 趙惟倫 <bluebat@member.fsf.org>, 2018
-# byStarTW (pan93412) <pan93412@gmail.com>, 2018
+# pan93412 <pan93412@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 黃柏諺 <s8321414@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2021\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "MATE 終端機"
 
@@ -52,7 +52,7 @@ msgstr ""
 "MATE 終端機是一個 GNOME 終端機的衍生產品，且為 MATE 桌面環境的一部份。如果您想要知道關於 MATE 及 MATE "
 "終端機的更多資訊，請參觀專案首頁。"
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "終端機"
@@ -62,20 +62,20 @@ msgid "Use the command line"
 msgstr "使用命令列"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "取消(_C)"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "關閉視窗(_L)"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "是否關閉這個視窗？"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -83,32 +83,32 @@ msgstr ""
 "在這個終端機還有程式在執行。\n"
 "關閉終端機會終結它們。"
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "停用到作業階段管理程式的連線"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "指定含有已儲存組態的檔案"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "檔案"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "指定作業階段管理 ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "作業階段管理選項:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "顯示作業階段管理選項"
 
@@ -787,8 +787,8 @@ msgid ""
 "setting for the Delete key."
 msgstr ""
 "Delete 鍵會產生哪個字元。可接受的值為：「ascii-del」產生 ASCII 的 DEL 字元、「control-h」產生 ASCII 的 BS"
-" 字元、「escape-sequence」產生代表 backspace 或 delete 的「轉義字元序列」。正常來說，Delete 鍵應該使用"
-"「ascii-sequence」。"
+" 字元、「escape-sequence」產生代表 backspace 或 delete 的「轉義字元序列」。正常來說，Delete "
+"鍵應該使用「ascii-sequence」。"
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -1439,7 +1439,7 @@ msgstr "新增(_N)"
 msgid "Edit"
 msgstr "編輯"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "刪除(_D)"
 
@@ -1947,49 +1947,49 @@ msgstr "動作(_A)"
 msgid "Shortcut _Key"
 msgstr "捷徑鍵(_K)"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "按下本按鈕來選取設定檔"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "設定檔清單"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "刪除設定檔“%s”？"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "刪除設定檔"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr "名為“%s”的設定檔已經存在。您是否想建構另一個有相同名字的設定檔？"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "選取基礎設定檔"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "指定的設定檔「%s」不存在，改為使用預設的設定檔\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "指定位置及尺寸的字串“%s”無效\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "自行定義"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "分析引數失敗：%s\n"
@@ -2139,7 +2139,7 @@ msgstr "描述(_D)"
 msgid "_Encoding"
 msgstr "編碼(_E)"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "目前的地區設定"
 
@@ -2151,180 +2151,180 @@ msgid ""
 "profile' option\n"
 msgstr "這個版本的 mate-terminal 不再支援「%s」選項；請建立您需要的設定檔，然後使用新的「--profile」選項\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "「%s」選項後的引數不是一個有效的指令：%s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "同一個視窗指定了兩次視窗識別碼"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "同一個視窗中使用了兩次“%s”選項\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "「%s」是無效的縮放倍率"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "縮放倍率“%g”太小，改為使用 %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "縮放倍率“%g”太大，改為使用 %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "「%s」選項後需要指定準備執行的指令"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "並非有效的終端機設定檔。"
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "不相容的終端機設定檔版本。"
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "不向 activation nameserver 登記，因此不會使用現有終端機的資源"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "載入終端機組態檔案"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "將終端機組態儲存為檔案"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr "開啟新的終端機視窗，當中含有預設的設定檔的分頁。"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "在最後開啟的視窗中，使用預設的設定檔開啟新的終端機分頁。"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "開啟選單列"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "關閉選單列"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "最大化視窗"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "將視窗轉為全螢幕"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "設定視窗的大小；例如：80x24、或 80x24+200+200 (欄x列+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "位置大小"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "設定視窗角色"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "視窗識別碼"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "在終端機視窗中，以最後一個分頁作為使用中的分頁"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "在終端機中執行這個選項的引數"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "使用指定的設定檔代替預設的設定檔"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "設定檔名稱"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "設定終端機標題"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "標題"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "設定工作目錄"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "目錄"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "設定終端機的縮放倍率 (1.0 = 原來尺寸)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "縮放"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "MATE 終端機模擬器"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "顯示 MATE 終端機選項"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "用來開啟新視窗或終端機分頁的選項；可以指定多個："
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "顯示終端機選項"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr "視窗選項；如果用在第一個 --window 或 --tab 之前，就會成為所有視窗的預設值："
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "顯示各別視窗選項"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr "終端機選項；如果用在第一個 --window 或 --tab 之前，就會成為所有終端機的預設值："
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "顯示各別終端機選項"
 
@@ -2332,29 +2332,29 @@ msgstr "顯示各別終端機選項"
 msgid "Unnamed"
 msgstr "未命名的"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "設定檔偏好設定(_P)"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "重新執行(_R)"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "產生該終端機的副行程時出現錯誤"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子程序正常的以狀態 %d 結束。"
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子程序被信號 %d 中止。"
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "子程序被中止。"
 
@@ -2370,12 +2370,12 @@ msgstr "切換到這個分頁"
 msgid "There was an error displaying help"
 msgstr "顯示說明文件時發生錯誤"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "無法開啟位址「%s」"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2385,7 +2385,7 @@ msgstr ""
 "MATE 終端機是自由軟體；您可以遵照自由軟體基金會 (Free Software Foundation) 出版的 GNU 通用公共許可證條款 (GNU"
 " General Public License) 第三版來修改和重新發布這一程式，或者自由選擇使用任何更新的版本。"
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2393,7 +2393,7 @@ msgid ""
 "more details."
 msgstr "發布 MATE 終端機的目的是希望它有用，但沒有任何擔保。甚至沒有適合特定目的而隱含的擔保。更詳細的情況請參閱 GNU 通用公共許可證。"
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2405,7 +2405,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2413,7 +2413,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2636,7 +2636,7 @@ msgstr "顯示選單列(_M)"
 msgid "_Full Screen"
 msgstr "全螢幕(_F)"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2644,31 +2644,31 @@ msgstr ""
 "在這個視窗的部分終端機還有程式在執行。\n"
 "關閉視窗會終結它們。"
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr "此視窗中有多個開啟的分頁。"
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "是否關閉這個終端機？"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "關閉終端機(_L)"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "無法儲存內容"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "另存新檔…"
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "貢獻者："
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2677,11 +2677,11 @@ msgstr ""
 "MATE 終端機是 MATE 桌面環境的終端機模擬程式。\n"
 "威力本源 Virtual TErminal %d.%d.%d"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "關於 MATE Terminal"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2697,7 +2697,7 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE 開發者"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n"

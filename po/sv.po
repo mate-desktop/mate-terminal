@@ -18,9 +18,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2021\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "MATE-terminal"
 
@@ -62,7 +62,7 @@ msgstr ""
 "skrivbordsmiljön MATE. Om du vill veta mer om MATE och MATE Terminal, besök "
 "gärna projektets hemsida."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
@@ -72,20 +72,20 @@ msgid "Use the command line"
 msgstr "Använd kommandoraden"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "_Avbryt"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "Stän_g fönster"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "Stäng detta fönster?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -93,32 +93,32 @@ msgstr ""
 "Det finns fortfarande en process igång i denna terminal. Stängning av "
 "terminalen kommer att döda den."
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Inaktivera anslutning till sessionshanterare"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Ange fil som innehåller sparad konfiguration"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FIL"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Ange id för sessionshantering"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Flaggor för sessionshantering:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Visa flaggor för sessionshantering"
 
@@ -1635,7 +1635,7 @@ msgstr "_Ny"
 msgid "Edit"
 msgstr "Redigera"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Ta bort"
 
@@ -2148,24 +2148,24 @@ msgstr "_Åtgärd"
 msgid "Shortcut _Key"
 msgstr "Snabb_tangent"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Klicka på knappen för att välja profil"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Profillista"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Ta bort profilen \"%s\"?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Ta bort profil"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2174,25 +2174,25 @@ msgstr ""
 "Du har redan en profil med namnet \"%s\". Vill du skapa en annan profil med "
 "samma namn?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "Välj basprofil"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Det finns ingen profil \"%s\", använder standardprofilen\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Ogiltig geometristräng \"%s\"\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Avändardefinierad"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Misslyckades med att tolka argument: %s\n"
@@ -2342,7 +2342,7 @@ msgstr "_Beskrivning"
 msgid "_Encoding"
 msgstr "_Kodning"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Aktuell lokal"
 
@@ -2357,36 +2357,36 @@ msgstr ""
 "kanske skapa en profil med den önskade inställningen och använda den nya "
 "flaggan \"--profile\"\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Argumentet till \"%s\" är inte ett giltigt kommando: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Två roller angivna för ett fönster"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Flaggan \"%s\" angavs två gånger för samma fönster\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" är inte en giltig zoomfaktor"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Zoomfaktorn \"%g\" är för liten, använder %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Zoomfaktorn \"%g\" är för stor, använder %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2395,121 +2395,121 @@ msgstr ""
 "Flaggan \"%s\" kräver att det kommando som ska köras anges på resten av "
 "kommandoraden"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Inte en giltig terminalkonfigurationsfil."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Inkompatibel version för terminalkonfigurationsfil."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 "Registrera inte i aktiveringsnamnservern, återanvänd inte en aktiv terminal"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Läs in en terminalkonfigurationsfil"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "Spara terminalkonfigurationen till en fil"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Öppna ett nytt fönster som innehåller en flik med standardprofilen"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Öppna en ny flik i det senast öppnade fönstret med standardprofilen"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Aktivera menyraden"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Stäng av menyraden"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Maximera fönstret"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Helskärm för fönstret"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Ställ in fönsterstorleken; till exempel: 80x24 eller 80x24+200+200 "
 "(COLSxROWS+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GEOMETRI"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Ställ in fönsterrollen"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "ROLL"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Ställ in den senast angivna fliken som den aktiva i dess fönster"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Kör argumentet till denna flagga inuti terminalen."
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Använd angiven profil istället för standardprofilen"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "PROFILNAMN"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Ställ in terminaltiteln"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "TITEL"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Ställ in arbetskatalogen"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "KATNAMN"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Ställ in terminalens zoomfaktor (1,0 = normal storlek)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "MATE-terminalemulator"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Visa flaggor för MATE-terminal"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2517,11 +2517,11 @@ msgstr ""
 "Flaggor för att öppna nya fönster eller terminalflikar; fler än en av dessa "
 "kan anges:"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Visa terminalflaggor"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2529,11 +2529,11 @@ msgstr ""
 "Fönsterflaggor; om används innan första argumentet --window eller --tab, "
 "ställer in standarden för alla fönster:"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Visa flaggor för per-fönster"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2541,7 +2541,7 @@ msgstr ""
 "Terminalflaggor; om används innan första argumentet --window eller --tab, "
 "ställer in standarden för alla terminaler:"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Visa flaggor för per-terminal"
 
@@ -2549,29 +2549,29 @@ msgstr "Visa flaggor för per-terminal"
 msgid "Unnamed"
 msgstr "Namnlös"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "Profil_inställningar"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "Sta_rta igen"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "Ett fel uppstod vid skapande av barnprocessen för denna terminal"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Barnprocessen avslutades normalt med status %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Barnprocessen terminerades av signal %d."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "Barnprocessen terminerades."
 
@@ -2587,12 +2587,12 @@ msgstr "Växla till denna flik"
 msgid "There was an error displaying help"
 msgstr "Det uppstod ett fel vid visning av hjälp"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Kunde inte öppna adressen \"%s\""
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2604,7 +2604,7 @@ msgstr ""
 "Software Foundation, antingen version 3 eller (om du så vill) någon senare "
 "version."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2616,7 +2616,7 @@ msgstr ""
 " LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för "
 "ytterligare information."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2629,7 +2629,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2637,7 +2637,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2860,48 +2860,48 @@ msgstr "Visa _menyrad"
 msgid "_Full Screen"
 msgstr "_Helskärmsläge"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr "Det finns flera öppna flikar i det här fönstret."
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Stäng denna terminal?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "S_täng terminal"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Kunde inte spara innehåll"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Spara som..."
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Bidragsgivare:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "Om MATE Terminal"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2917,6 +2917,6 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE utvecklarna"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"

@@ -13,7 +13,7 @@
 # Honza K. <honza889@gmail.com>, 2018
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
 # Michal <sinope@seznam.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
+# LiberteCzech <martin.kriz.czech@gmail.com>, 2018
 # 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2018
 # Lukáš Lommer <drom@kdyne.net>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
@@ -22,9 +22,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "Terminál MATE"
 
@@ -65,7 +65,7 @@ msgstr ""
 "Pokud se chcete dozvědět více o MATE a MATE Terminal, navštivte domovskou "
 "stránku projektu."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminál"
@@ -75,20 +75,20 @@ msgid "Use the command line"
 msgstr "Používat příkazový řádek"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "_Zrušit"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "_Zavřít okno"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "Zavřít toto okno?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -96,32 +96,32 @@ msgstr ""
 "V tomto terminálu stále běží proces.\n"
 "Zavření terminálu jej ukončí."
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Zakázat napojení na správce sezení"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Vyberte soubor s uloženou konfigurací"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "SOUBOR"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Stanovit ID Správy sezení"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Možnosti Správy sezení:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Zobrazit možnosti Správy sezení"
 
@@ -1611,7 +1611,7 @@ msgstr "_Nový"
 msgid "Edit"
 msgstr "Upravit"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Smazat"
 
@@ -2124,24 +2124,24 @@ msgstr "_Akce"
 msgid "Shortcut _Key"
 msgstr "_Klávesová zkratka"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Kliknutím vyberete profil"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Seznam profilů"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Odstranit profil „%s“?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Odstranění profilu"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2150,25 +2150,25 @@ msgstr ""
 "Profil nazvaný „%s“ již existuje. Chcete vytvořit další profil se stejným "
 "názvem?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "Vyberte základní profil"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Profil „%s“ neexistuje, použije se výchozí profil\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Neplatný řetězec geometrie „%s“\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Uživatelem definované"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Chyba při parsování argumentů: %s\n"
@@ -2318,7 +2318,7 @@ msgstr "_Popis"
 msgid "_Encoding"
 msgstr "_Kódování"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Aktuální kódování"
 
@@ -2333,36 +2333,36 @@ msgstr ""
 "chtít vytvořit profil s požadovaným nastavením a použít novou volbu '--"
 "profile'\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Argument pro „%s“ není platný příkaz: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Dvě úlohy dané jednomu oknu"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Volba „%s“ zadána dvakrát pro totéž okno\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "„%s“ není platný poměr zvětšení"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Poměr zvětšení „%g“ je příliš nízký, použije se %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Poměr zvětšení „%g“ je příliš vysoký, použije se %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2371,15 +2371,15 @@ msgstr ""
 "Volba „%s“ vyžaduje zadání příkazu, který bude spuštěn na zbytku příkazového"
 " řádku"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Neplatný soubor s konfigurací terminálu."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Nekompatibilní verze souboru s konfigurací terminálu."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2387,106 +2387,106 @@ msgstr ""
 "Neregistrovat u aktivačního serveru, nesnažit se znovu použít aktivní "
 "terminál"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Nahrát soubor s konfigurací terminálu"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "Uložit konfiguraci terminálu do souboru"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Otevřít nové okno obsahující kartu s výchozím profilem"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Otevřít novou kartu s výchozím profilem v naposledy otevřeném okně"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Zobrazit panel nabídky"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Skrýt panel nabídky"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Maximalizace okna"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Okno na celou obrazovku"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Nastavení velikosti okna; například: 80x24, nebo 80x24+200+200 "
 "(SLOUPCExŘÁDKY+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GEOMETRIE"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Nastavit funkci okna"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "FUNKCE"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Nastavit poslední určenou záložku jako aktivní v tomto okně"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Spustit argument tohoto přepínače uvnitř terminálu"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Použít nabídnutý profil namísto výchozího"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "NÁZEV-PROFILU"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Nastavit titulek terminálu"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "TITULEK"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Nastavit pracovní adresář terminálu"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "ADRESÁŘ"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Nastavení poměru zvětšení terminálu (1.0 = normální velikost)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ZVĚTŠENÍ"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "Emulátor terminálu pro MATE"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Zobrazit nastavení Terminálu MATE"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2494,11 +2494,11 @@ msgstr ""
 "Volby otevírání nových oken a karet; můžete specifikovat více než jednu "
 "vlastnost:"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Zobrazit nastavení Terminálu MATE"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2506,11 +2506,11 @@ msgstr ""
 "Volby okna; pokud je použito před prvním argumentem --window nebo --tab, "
 "nastavuje výchozí vlastnosti pro všechna okna:"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Zobrazit nastavení po oknech"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2518,7 +2518,7 @@ msgstr ""
 "Volby terminálu; pokud je použito před prvním argumentem --window nebo "
 "--tab, nastavuje výchozí vlastnosti pro všechny terminály:"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Zobrazit nastavení po terminálech"
 
@@ -2526,29 +2526,29 @@ msgstr "Zobrazit nastavení po terminálech"
 msgid "Unnamed"
 msgstr "Nepojmenováno"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "_Předvolby profilu"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_Spustit znovu"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "Při vytváření procesu potomka pro tento terminál došlo k chybě"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Dětský proces byl standartně ukončen stavem %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Dětský proces byl ukončen signálem %d."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "Dětský proces byl ukončen."
 
@@ -2564,12 +2564,12 @@ msgstr "Přepnout na tuto kartu"
 msgid "There was an error displaying help"
 msgstr "Při zobrazování nápovědy se vyskytla chyba"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Nelze otevřít adresu “%s”"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2581,7 +2581,7 @@ msgstr ""
 "Foundation; a to buď verze 3. této licence anebo (podle vlastního uvážení) "
 "kterékoliv pozdější verze."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2592,7 +2592,7 @@ msgstr ""
 "ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO "
 "URČITÝ ÚČEL. Další podrobnosti hledejte v GNU General Public License."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2605,7 +2605,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2613,7 +2613,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2836,7 +2836,7 @@ msgstr "Zobrazit _panel nabídky"
 msgid "_Full Screen"
 msgstr "_Celá obrazovka"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2844,31 +2844,31 @@ msgstr ""
 "V tomto okně stále běží v některých terminálech procesy. Zavřením okna je "
 "všechny ukončíte."
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr "V tomto okně je otevřeno více karet."
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Zavřít tento terminál?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "_Zavřít terminál"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Obsah nelze uložit"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Uložit jako…"
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Přispěvatelé:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2877,11 +2877,11 @@ msgstr ""
 "Terminál MATE emulátor terminálu pro pravocní prostředí MATE.\n"
 "Je postaven na Virtual TErminal %d.%d.%d"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "O aplikaci Terminál MATE"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2897,7 +2897,7 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 vývojáři MATE"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "Stanislav Brabec <utx@penguin.cz>\n"

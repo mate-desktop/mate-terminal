@@ -20,9 +20,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Tubuntu, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
@@ -30,10 +30,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
@@ -64,7 +64,7 @@ msgstr ""
 "Environment. Si vous souhaitez en savoir plus sur MATE et MATE Terminal, "
 "veuillez visiter la page d'accueil du projet."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
@@ -74,20 +74,20 @@ msgid "Use the command line"
 msgstr "Utiliser la ligne de commande"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "_Annuler"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "Fermer _la fenêtre"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "Fermer cette fenêtre ?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -95,32 +95,32 @@ msgstr ""
 "Il y a un processus actif dans ce terminal. Fermer le terminal "
 "l'interrompra."
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Désactive la connexion au gestionnaire de sessions"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Indique le fichier contenant la configuration enregistrée"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FICHIER"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Indique l'ID de la gestion de sessions"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Options de gestion de sessions :"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Afficher les options de gestion de sessions"
 
@@ -410,8 +410,8 @@ msgid ""
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
 "Dans le sous-menu « codage » ne figure qu'un sous-ensemble des codages "
-"disponibles. Cette liste précise ce sous-ensemble. La valeur spéciale « "
-"current » affiche le codage de la locale actuelle du système."
+"disponibles. Cette liste précise ce sous-ensemble. La valeur spéciale "
+"« current » affiche le codage de la locale actuelle du système."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -541,8 +541,8 @@ msgid ""
 msgstr ""
 "Une application dans le terminal peut préciser son titre ; beaucoup "
 "d'utilisateurs ont leur shell configuré pour cela. Le titre de l'application"
-" peut remplacer celui du terminal (« replace »), être inséré avant lui (« "
-"before »), après lui (« after »), ou être ignoré (« ignore »)."
+" peut remplacer celui du terminal (« replace »), être inséré avant lui "
+"(« before »), après lui (« after »), ou être ignoré (« ignore »)."
 
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
@@ -722,8 +722,8 @@ msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr ""
-"Les valeurs possibles sont « close » (pour fermer le terminal) et « restart "
-"» (pour relancer la commande)."
+"Les valeurs possibles sont « close » (pour fermer le terminal) et "
+"« restart » (pour relancer la commande)."
 
 #: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -762,8 +762,8 @@ msgid ""
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr ""
 "Les valeurs possibles sont « system » (système) pour utiliser les "
-"préférences globales de clignotement du curseur, ou « on » (actif) et « off "
-"» (inactif) pour définir explicitement le mode."
+"préférences globales de clignotement du curseur, ou « on » (actif) et "
+"« off » (inactif) pour définir explicitement le mode."
 
 #: src/org.mate.terminal.gschema.xml.in:213
 msgid "The cursor appearance"
@@ -775,8 +775,8 @@ msgid ""
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
 "Les valeurs possibles sont « block » pour utiliser le curseur en forme de "
-"bloc, « ibeam » pour le curseur formé d'une ligne verticale, ou « underline "
-"» pour le curseur formé d'un caractère de soulignement."
+"bloc, « ibeam » pour le curseur formé d'une ligne verticale, ou "
+"« underline » pour le curseur formé d'un caractère de soulignement."
 
 #: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
@@ -883,10 +883,10 @@ msgid ""
 "correct setting for the Backspace key."
 msgstr ""
 "Indique ce que génère l'appui sur la touche « retour arrière » (backspace). "
-"Les valeurs possibles sont « ascii-del » (caractère ASCII DEL), « control-h "
-"» (Ctrl-H, c'est à dire le caractère ASCII BS) et « escape-sequence » "
-"(séquence d'échappement usuelle liée à « retour arrière » ou à « supprimer »"
-" ). La valeur normale est « ascii-del »."
+"Les valeurs possibles sont « ascii-del » (caractère ASCII DEL), "
+"« control-h » (Ctrl-H, c'est à dire le caractère ASCII BS) et « escape-"
+"sequence » (séquence d'échappement usuelle liée à « retour arrière » ou à "
+"« supprimer » ). La valeur normale est « ascii-del »."
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
@@ -1187,8 +1187,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour cacher/afficher la barre de menus. Exprimé en tant "
 "que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
@@ -1203,8 +1203,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour définir un titre pour le terminal. Exprimé en tant "
 "que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
@@ -1235,8 +1235,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour réinitialiser et effacer le terminal. Exprimé en "
 "tant que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -1602,8 +1602,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour avoir une taille normale avec la police. Exprimé en"
 " tant que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/profile-editor.c:45
 msgid "Black on light yellow"
@@ -1673,7 +1673,7 @@ msgstr "_Nouveau"
 msgid "Edit"
 msgstr "Édition"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Effacer"
 
@@ -2187,24 +2187,24 @@ msgstr "_Action"
 msgid "Shortcut _Key"
 msgstr "_Raccourci clavier"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Cliquez pour choisir un profil"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Liste des profils"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Supprimer le profil « %s » ?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Supprimer le profil"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2213,25 +2213,25 @@ msgstr ""
 "Vous avez déjà un profil nommé « %s ». Voulez-vous créer un autre profil "
 "avec le même nom ?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "Choisissez le profil de base"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Le profil « %s » n'existe pas, utilisation du profil par défaut\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Chaîne de géométrie « %s » non valide\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Défini par l'utilisateur"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Impossible d'analyser les paramètres : %s\n"
@@ -2381,7 +2381,7 @@ msgstr "_Description"
 msgid "_Encoding"
 msgstr "_Encodage"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Locale actuelle"
 
@@ -2396,36 +2396,36 @@ msgstr ""
 "terminal ; vous devriez créer un profil avec les réglages désirés et "
 "utiliser la nouvelle option « --profile »\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Le paramètre de « %s » n'est pas une commande valide : %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Deux rôles ont été attribués à la même fenêtre"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "L'option « %s » a été utilisée deux fois pour la même fenêtre\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "« %s » n'est pas un facteur de zoom valide"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "La facteur de zoom « %g » est trop petit, utilise %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "La facteur de zoom « %g » est trop grand, utilise %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2434,15 +2434,15 @@ msgstr ""
 "L'option « %s » nécessite d'indiquer la commande à lancer à la suite de la "
 "ligne de commande"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Fichier de configuration pour le terminal incorrect."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Version de fichier de configuration pour le terminal incompatible."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2450,109 +2450,109 @@ msgstr ""
 "Ne pas s'enregistrer auprès du serveur de noms d'activation, ne pas "
 "réutiliser un terminal actif"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Charge un fichier de configuration pour le terminal"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "Enregistre dans un fichier la configuration du terminal"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "Ouvre une nouvelle fenêtre contenant un onglet avec le profil par défaut"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Ouvre un nouvel onglet dans la dernière fenêtre ouverte avec le profil par "
 "défaut"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Affiche la barre de menus"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Masque la barre de menus"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Maximiser la fenêtre"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Fenêtre en plein écran"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Définit la taille de la fenêtre ; par exemple : 80x24 ou 80x24+200+200 "
 "(COLONNESxLIGNES+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GÉOMÉTRIE"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Définit le rôle de la fenêtre"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "RÔLE"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Rend le dernier onglet indiqué actif"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Exécute le paramètre de cette option dans le terminal"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Utilise le profil indiqué au lieu du profil par défaut"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "NOMDUPROFIL"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Définit le titre du terminal"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "TITRE"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Définit le répertoire de travail"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "RÉPTRAVAIL"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Définit le facteur de zoom du terminal (1.0 = taille normale)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "Émulateur de terminal MATE"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Afficher les options du terminal MATE"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2560,11 +2560,11 @@ msgstr ""
 "Options d'ouverture de nouvelles fenêtres ou onglets de terminaux ; "
 "plusieurs d'entre elles peuvent être indiquées :"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Afficher les options du terminal"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2573,11 +2573,11 @@ msgstr ""
 "--window ou --tab, elles définissent les options par défaut pour toutes les "
 "fenêtres :"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Afficher les options par fenêtre"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2586,7 +2586,7 @@ msgstr ""
 "--window ou --tab, elles définissent les options par défaut pour tous les "
 "terminaux :"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Afficher les options par terminal"
 
@@ -2594,30 +2594,30 @@ msgstr "Afficher les options par terminal"
 msgid "Unnamed"
 msgstr "Sans nom"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "Préférences du _profil"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_Relancer"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Il y a eu une erreur lors de la création du processus fils pour ce terminal"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Le processus fils a quitté normalement avec le statut %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Le processus fils a été interrompu par le signal %d."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "Le processus fils a été interrompu."
 
@@ -2633,12 +2633,12 @@ msgstr "Activer cet onglet"
 msgid "There was an error displaying help"
 msgstr "Une erreur s'est produite lors de l'affichage de l'aide"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Impossible d'ouvrir l'adresse « %s »"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2650,7 +2650,7 @@ msgstr ""
 " Free Software Foundation ; soit la version 3 de la license, soit (à votre "
 "discrétion) toute version ultérieure."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2662,7 +2662,7 @@ msgstr ""
 "d'ADÉQUATION A UN BESOIN PARTICULIER. Consultez la Licence Publique Générale"
 " GNU pour plus de détails."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2676,7 +2676,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2684,7 +2684,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2907,7 +2907,7 @@ msgstr "Afficher la barre de _menus"
 msgid "_Full Screen"
 msgstr "_Plein écran"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2915,31 +2915,31 @@ msgstr ""
 "Il y a des processus actifs dans certains terminaux de cette fenêtre. Fermer"
 " la fenêtre les interrompra tous."
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr "Il y a plusieurs onglets ouverts dans cette fenêtre."
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Fermer ce terminal ?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "Fe_rmer le terminal"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Impossible d'enregistrer le contenu"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Enregistrer sous..."
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Contributeurs :"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2948,11 +2948,11 @@ msgstr ""
 "MATE Terminal est un émulateur de terminal pour l'environnement de bureau "
 "MATE propulsé par Virtual Terminal %d. %d. %d"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "À propos de l'émulateur de terminal MATE"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2968,7 +2968,7 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 Développeurs de MATE"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "Contributeurs au projet MATE :\n"

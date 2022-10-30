@@ -10,18 +10,19 @@
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # Skylee Ming-Tian Yang <i@skylee.xyz>, 2020
 # a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2020
-# liulitchi <xingzuo88@qq.com>, 2020
+# liu lizhi <xingzuo88@qq.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# shuyu liu <liushuyu011@gmail.com>, 2021
 # 玉堂白鹤 <yjwork@qq.com>, 2021
+# shuyu liu <liushuyu011@gmail.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2021\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,13 +31,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "MATE 终端"
 
 #: mate-terminal.appdata.xml.in.in:8
 msgid "A terminal emulator for the MATE desktop environment"
-msgstr "用于 MATE 桌面的终端模拟器"
+msgstr "MATE 桌面环境的终端模拟器"
 
 #: mate-terminal.appdata.xml.in.in:10
 msgid ""
@@ -45,8 +46,8 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
-"MATE 终端是一个终端模拟应用程序，让你可在 MATE 桌面环境下访问 UNIX 命令提示符。MATE 终端可模拟 X 协会的 xterm "
-"程序。它还支持透明背景、在同一窗口下开启多个终端模拟器（标签页）以及 URL 浏览。"
+"MATE 终端是一个终端模拟应用程序，让您可在 MATE 环境下访问 UNIX shell。MATE 终端可模拟 X 协会开发的的 xterm "
+"程序。它还支持透明背景、在同一窗口下开启多个终端（标签页）以及点击 URL。"
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -54,10 +55,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
-"MATE 终端是一个 GNOME Terminal 的 fork，也是 MATE 桌面环境的一部分。欲知更多关于 MATE 及 MATE "
-"终端的信息，请访问项目主页。"
+"MATE 终端是 GNOME 终端的分叉，也是 MATE 桌面环境的一部分。想了解更多关于 MATE 及 MATE 终端的信息，请访问项目主页。"
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "终端"
@@ -67,20 +67,20 @@ msgid "Use the command line"
 msgstr "使用命令行"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "取消(_C)"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "关闭窗口(_L)"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "关闭这个窗口？"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -88,32 +88,32 @@ msgstr ""
 "终端中仍有进程在运行。\n"
 "关闭终端会杀死此进程。"
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "禁止连接到会话管理器"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "指定包含有已保存配置的文件"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "文件"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "指定会话管理 ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "会话管理选项："
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "显示会话管理选项"
 
@@ -163,7 +163,7 @@ msgstr "ASCII DEL"
 #: src/extra-strings.c:31 src/profile-preferences.ui:193
 #: src/profile-preferences.ui:216
 msgid "Escape sequence"
-msgstr "Esc 序列"
+msgstr "转义序列"
 
 #. Translators: This refers to the Delete keybinding option
 #: src/extra-strings.c:33 src/profile-preferences.ui:196
@@ -235,7 +235,7 @@ msgstr "禁用"
 #. Translators: When terminal commands set their own titles: ...
 #: src/extra-strings.c:64 src/profile-preferences.ui:93
 msgid "Replace initial title"
-msgstr "替换原始标题"
+msgstr "替换初始标题"
 
 #. Translators: When terminal commands set their own titles: ...
 #: src/extra-strings.c:66 src/profile-preferences.ui:96
@@ -245,12 +245,12 @@ msgstr "添加到初始标题之前"
 #. Translators: When terminal commands set their own titles: ...
 #: src/extra-strings.c:68 src/profile-preferences.ui:99
 msgid "Prepend initial title"
-msgstr "添加到原始标题之后"
+msgstr "添加到初始标题之后"
 
 #. Translators: When terminal commands set their own titles: ...
 #: src/extra-strings.c:70 src/profile-preferences.ui:102
 msgid "Keep initial title"
-msgstr "保持原始标题"
+msgstr "保持初始标题"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:73 src/profile-preferences.ui:141
@@ -301,11 +301,11 @@ msgstr "区分大小写(_M)"
 
 #: src/find-dialog.ui:155
 msgid "Match _entire word only"
-msgstr "匹配整个单词(_E)"
+msgstr "仅匹配整个单词(_E)"
 
 #: src/find-dialog.ui:172
 msgid "Match as _regular expression"
-msgstr "使用正则表达式匹配(_R)"
+msgstr "视为正则表达式进行匹配(_R)"
 
 #: src/find-dialog.ui:189
 msgid "Search _backwards"
@@ -313,7 +313,7 @@ msgstr "反向搜索(_B)"
 
 #: src/find-dialog.ui:207
 msgid "_Wrap around"
-msgstr "回到文档头部继续搜索(_W)"
+msgstr "在首末处绕回(_W)"
 
 #: src/keybinding-editor.ui:24
 msgid "Keyboard Shortcuts"
@@ -321,11 +321,11 @@ msgstr "键盘快捷键"
 
 #: src/keybinding-editor.ui:93
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr "启用所有菜单访问键（如使用 Alt+F 来打开文件菜单）(_E)"
+msgstr "启用菜单访问键（如使用 Alt+F 来打开文件菜单）(_E)"
 
 #: src/keybinding-editor.ui:132
 msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr "启用菜单快捷键（默认是 F10）(_M)"
+msgstr "启用菜单快捷键（默认为 F10）(_M)"
 
 #: src/keybinding-editor.ui:151
 msgid "_Shortcut keys:"
@@ -339,8 +339,7 @@ msgstr "配置文件列表"
 msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
-msgstr ""
-"列出了 mate-terminal 已知的配置文件。列表包含的子目录是相对于 /apps/mate-terminal/profiles 的。"
+msgstr "列出了 mate-terminal 已知的配置文件。列表包含的子目录是相对于 /org/mate/terminal/profiles 的。"
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
@@ -350,7 +349,7 @@ msgstr "新终端要使用的配置文件"
 msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
-msgstr "打开新窗口或标签页时要使用的配置文件。必须位于配置文件列表 (profile_list) 中。"
+msgstr "打开新窗口或标签页时要使用的配置文件。必须位于 profile_list 中。"
 
 #: src/org.mate.terminal.gschema.xml.in:59
 msgid "Whether the menubar has access keys"
@@ -361,7 +360,7 @@ msgid ""
 "Whether to have Alt+letter access keys for the menubar. They may interfere "
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
-msgstr "菜单栏是否使用 Alt+字母的快捷键。终端运行的很多程序都可能与此快捷键产生冲突，所以可以关闭此特性。"
+msgstr "菜单栏是否使用 Alt+字母的快捷键。终端运行的某些程序可能与此快捷键产生冲突，所以可以关闭此特性。"
 
 #: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
@@ -379,7 +378,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
-msgstr "[ 'UTF-8', 'GB18030', 'GBK', 'GB2312', 'current']"
+msgstr "[ 'UTF-8', 'GB18030', 'GBK', 'GB2312', 'current' ]"
 
 #: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
@@ -390,7 +389,7 @@ msgid ""
 "A subset of possible encodings are presented in the \"Encoding\" submenu. "
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
-msgstr "可选编码的一部分会出现在“编码”菜单中。特殊的编码名称“当前 (current)”指显示当前语系的编码。"
+msgstr "可选编码的一部分会出现在“编码”菜单中。此键值是出现在“编码”菜单的编码列表。特殊的编码名称“current”指显示当前区域设置的编码。"
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -400,7 +399,7 @@ msgstr "是否在关闭终端窗口时请求确认"
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
-msgstr "关闭多个选项卡，或任何前端子进程窗口时是否要确认。"
+msgstr "关闭含有多个选项卡，或含有前台子进程的终端窗口时是否请求确认。"
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
@@ -408,7 +407,7 @@ msgstr "使用中键关闭标签页"
 
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
-msgstr "如果为 True，您可以使用中键关闭标签页。"
+msgstr "如果为 true，您可以使用中键关闭标签页。"
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -418,12 +417,12 @@ msgstr "使用 [Ctrl]+[Tab] 切换标签页"
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
-msgstr "如果为 True，您可以使用 [Ctrl + Tab] 和 [Ctrl + Shift + Tab] 切换标签页。"
+msgstr "如果为 true，您可以使用 [Ctrl+Tab] 和 [Ctrl+Shift+Tab] 切换标签页。"
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Default'"
+msgstr "'默认'"
 
 #: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
@@ -441,7 +440,7 @@ msgstr "是否在新窗口/标签页显示菜单栏"
 msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
-msgstr "True 代表要在使用此配置文件的新窗口中显示菜单栏。"
+msgstr "True 代表要在使用此配置文件的新窗口/标签页中显示菜单栏。"
 
 #: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
@@ -451,7 +450,7 @@ msgstr "终端文字的默认颜色"
 msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
-msgstr "终端文字的默认颜色，遵照颜色指定的格式(可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称)。"
+msgstr "终端文字的默认颜色，遵照颜色说明符的格式（可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称）。"
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
@@ -461,7 +460,7 @@ msgstr "终端背景的默认颜色"
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
-msgstr "终端背景的默认颜色，遵照颜色指定的格式（可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称）。"
+msgstr "终端背景的默认颜色，遵照颜色说明符的格式（可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称）。"
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
@@ -473,8 +472,8 @@ msgid ""
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
 msgstr ""
-"终端加粗文字的默认颜色，遵照颜色指定的格式（可以是 HTML "
-"风格的十六进制数码，也可以是像“red”这样的颜色名称）。如果bold_color_same_as_fg 为真，这个选项将被忽略。"
+"终端加粗文字的默认颜色，遵照颜色说明符的格式（可以是 HTML 风格的十六进制数码，也可以是像“red”这样的颜色名称）。如果 "
+"bold_color_same_as_fg 为真，这个选项将被忽略。"
 
 #: src/org.mate.terminal.gschema.xml.in:118
 msgid "Whether bold text should use the same color as normal text"
@@ -497,12 +496,12 @@ msgid ""
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
 "如果终端中的程序设置了标题（最典型的就是用户自定义的 Shell "
-"可能执行这一操作），动态设置的标题可以删除配置好的标题，或者在原有标题前/后插入。可供选择的值有“替换”、“之前”、“之后”和“忽略”。"
+"可能执行这一操作），动态设置的标题可以删除配置好的标题，或者在原有标题前/后插入。可供选择的值有“replace”（替换）、“before”（之前）、“after”（之后）和“ignore”（忽略）。"
 
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
 msgid "'Terminal'"
-msgstr "‘终端’"
+msgstr "'终端'"
 
 #: src/org.mate.terminal.gschema.xml.in:128
 msgid "Title for terminal"
@@ -531,7 +530,7 @@ msgstr "是否禁用终端响铃"
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
-msgstr "如果为真，在应用程序发送终端响铃的转码序列时就闷声不响。"
+msgstr "如果为真，在应用程序发送终端响铃的转义序列时就闷声不响。"
 
 #: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
@@ -539,7 +538,7 @@ msgstr "把选中的文本复制到剪贴板"
 
 #: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
-msgstr "如果为 True，选区将自动复制到剪贴板缓存中。"
+msgstr "如果为 True，选中的文本将自动复制到剪贴板缓存中。"
 
 #: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
@@ -550,7 +549,7 @@ msgid ""
 "When selecting text by word, sequences of these characters are considered "
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
-msgstr "逐词选中文字时，这些字符的序列将被认为是一个单词。范围可以像“A-Z”这样给定。连字符，若不表示范围的话，必须是给出的第一个字符。"
+msgstr "按单词选中文字时，这些字符构成的序列将被认为是一个单词。范围可以像“A-Z”这样给定。连字符，若不表示范围的话，必须是给出的第一个字符。"
 
 #: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
@@ -590,7 +589,7 @@ msgstr "滚动条的位置"
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
-msgstr "将终端滚动条放在哪里。可供选择的值是“左”、“右”和“隐藏”。"
+msgstr "将终端滚动条放在哪里。可供选择的值是“left”（左）、“right”（右）和“hidden”（隐藏）。"
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
@@ -602,7 +601,7 @@ msgid ""
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr ""
-"要保留的回滚行数。您可以往回滚动终端到这么多行；不在回滚之内的行将被丢弃。如果scrollback_unlimited被设置为真，这个值将被忽略。"
+"要保留的回滚行数。您可以回滚终端这么多行；不在回滚范围之内的行将被丢弃。如果 scrollback_unlimited 为真，这个值将被忽略。"
 
 #: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
@@ -613,7 +612,7 @@ msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
-msgstr "如果为真，回滚的行将不被丢弃。回滚历史记录临时保存在磁盘上，所以如果终端输出的内容很多，这个选项可能导致磁盘空间耗尽。"
+msgstr "如果为真，回滚的行将永远不被丢弃。回滚历史记录临时保存在磁盘上，所以如果终端输出的内容很多，这个选项可能导致磁盘空间耗尽。"
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -621,7 +620,7 @@ msgstr "是否在按键时滚动到底部"
 
 #: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr "如果为真，按键就把滚动条滚动到底部。"
+msgstr "如果为真，按下按键时滚动条就会滚动到底部。"
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
@@ -640,7 +639,7 @@ msgstr "如何对待子命令退出"
 msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
-msgstr "可供选择的值中，“关闭 close”关闭终端，“重新启动 restart”重新启动命令。"
+msgstr "可供选择的值中，“close”关闭终端，“restart”重新启动命令。"
 
 #: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -660,7 +659,7 @@ msgstr "是否运行自定义命令而不是 Shell"
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "如果为真，将会使用用户自定义的设置来取代 Shell。"
+msgstr "如果为真，将会使用 custom_command 设置的值，而不是运行 Shell。"
 
 #: src/org.mate.terminal.gschema.xml.in:208
 msgid "Whether to blink the cursor"
@@ -680,15 +679,15 @@ msgstr "光标外观"
 msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
-msgstr "可能值为 \"block\" 以使用块状鼠标，\"ibeam\" 以使用垂直线鼠标，或者 \"underline\" 以使用下划线鼠标。"
+msgstr "可能值为“block”以使用块状光标，“ibeam”以使用 I 型光标，或者“underline”以使用下划线光标。"
 
 #: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
-msgstr "取代 Shell 的自定义命令"
+msgstr "取代 shell 的自定义命令"
 
 #: src/org.mate.terminal.gschema.xml.in:219
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "如果 use_custom_command 为 True，运行此命令而非 Shell。"
+msgstr "如果 use_custom_command 为 true，运行此命令而非 Shell。"
 
 #: src/org.mate.terminal.gschema.xml.in:223
 msgid "Icon for terminal window"
@@ -707,7 +706,8 @@ msgid ""
 "Terminals have a 16-color palette that applications inside the terminal can "
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr "终端使用 16 色的调色板，以供终端中的程序使用。这就是该调色板，格式为冒号分隔的颜色名称。颜色名必须是十六进制格式，即“#FF00FF”"
+msgstr ""
+"终端使用 16 色的调色板，以供终端中的程序使用。这就是该调色板，格式为冒号分隔的颜色名称。颜色名必须是十六进制格式，例如“#FF00FF”"
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
@@ -726,7 +726,8 @@ msgid ""
 "Type of terminal background. May be \"solid\" for a solid color, \"image\" "
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
-msgstr "终端背景的类型。可以是“纯色”代表单一颜色，“图像”代表图像，以及“透明”代表真透明(如果一个复合窗口管理器在运行)，否者为假透明。"
+msgstr ""
+"终端背景的类型。可以是“solid”代表单一颜色，“image”代表图像，以及“transparent”代表真透明（如果一个复合窗口管理器在运行），否则为伪透明。"
 
 #: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
@@ -744,11 +745,11 @@ msgstr "是否滚动背景图像"
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
-msgstr "如果为真，就和前景文字一起滚动背景图像；如果为 false，就将图像保留在固定位置，而只滚动其上的文字。"
+msgstr "如果为 true，就和前景文字一起滚动背景图像；如果为 false，就将图像保留在固定位置，而只滚动其上的文字。"
 
 #: src/org.mate.terminal.gschema.xml.in:253
 msgid "How much to darken the background image"
-msgstr "背景图像的灰暗程度"
+msgstr "背景图像的变暗程度"
 
 #: src/org.mate.terminal.gschema.xml.in:254
 msgid ""
@@ -757,12 +758,12 @@ msgid ""
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
 msgstr ""
-"介于 0.0 和 1.0 之间的值，表明背景图像的灰暗程度。0.0 表示不作处理，1.0 "
-"表明全黑。在目前的实现方案中，只有两种级别的灰暗程度，所以这里的设置和布尔值类似，即 0.0 禁用灰暗效果。"
+"介于 0.0 和 1.0 之间的值，表明背景图像的变暗程度。0.0 表示不作处理，1.0 "
+"表明完全变暗。在目前的实现方案中，只有两种级别的变暗程度，所以这里的设置和布尔值类似，即 0.0 禁用变暗效果。"
 
 #: src/org.mate.terminal.gschema.xml.in:258
 msgid "Effect of the Backspace key"
-msgstr "退格键效果"
+msgstr "Backspace 键效果"
 
 #: src/org.mate.terminal.gschema.xml.in:259
 msgid ""
@@ -772,13 +773,13 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
-"设置退格键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H（即 ASCII "
-"BS 字符），“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-"
-"del”通常是退格键正确的设置。"
+"设置 Backspace 键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 "
+"Ctrl+H（即 ASCII BS 字符），“escape-sequence”代表 backspace 或 delete "
+"通常绑定的转义序列。“ascii-del”通常是 Backspace 键正确的设置。"
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
-msgstr "删除键效果"
+msgstr "Delete 键效果"
 
 #: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
@@ -789,8 +790,8 @@ msgid ""
 "setting for the Delete key."
 msgstr ""
 "设置 Delete 键生成的代码。可供选择的值有，“ascii-del”代表 ASCII DEL 字符，“control-h”代表 Ctrl+H（即 "
-"ASCII BS 字符），“escape-sequence”代表 backspace 或 delete 代表的转码序列。“ascii-del”通常是 "
-"Delete 键正确的设置。"
+"ASCII BS 字符），“escape-sequence”代表 backspace 或 delete 通常绑定的转义序列。“escape-"
+"sequence”通常是 Delete 键正确的设置。"
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -800,7 +801,7 @@ msgstr "是否为终端部件使用主题中的颜色"
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
-msgstr "如果为真，终端就会使用文本输入框的主题颜色配对，而不是用户给出的颜色。"
+msgstr "如果为真，终端就会使用主题的文本输入框的颜色方案，而不是用户给出的颜色。"
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
@@ -810,17 +811,17 @@ msgstr "是否使用系统字体"
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
-msgstr "如果为真，终端就将使用与桌面相同的标准字体，假如该字体为等宽字体的话(否则就是用最为接近的字体)。"
+msgstr "如果为真，终端就将使用与桌面环境相同的标准字体，假如该字体为等宽字体的话（否则就使用最为接近的字体）。"
 
 #: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
-msgstr "高亮 S/Key 质询"
+msgstr "高亮 S/Key 挑战"
 
 #: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
-msgstr "检测到 S/Key 质询响应查询且单击时弹出一个对话框。在对话框中输入的密码将发送到终端。"
+msgstr "检测到 S/Key 挑战响应请求且被单击时弹出一个对话框。在对话框中输入的密码将发送到终端。"
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
@@ -830,7 +831,7 @@ msgstr "高亮鼠标指针下的 URL"
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
-msgstr "如果选定，则鼠标指针下的 URL 将被高亮，并且可以通过 Ctrl + 鼠标单击打开或在上下文菜单中使用。"
+msgstr "如果为 true，则鼠标指针下的 URL 将被高亮，并且可以通过 Ctrl + 鼠标单击打开或在上下文菜单中使用。"
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -842,7 +843,7 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "打开新标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"disabled\"，则此操作就没有快捷键。"
+msgstr "打开新标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
@@ -892,7 +893,7 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "关闭标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr "关闭标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
@@ -929,11 +930,11 @@ msgid ""
 "terminal. Expressed as a string in the same format used for GTK+ resource "
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
-msgstr "从剪贴板粘贴文字的快捷键并以 GTK+ 资源文件所用格式表达字符串。如果您将此项设为特殊字符串“disabled”，此操作将没有快捷键。"
+msgstr "从剪贴板粘贴文字的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将此项设为特殊字符串“disabled”，此操作将没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
-msgstr "文字全选的快捷键"
+msgstr "全选文字的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:331
 msgid ""
@@ -958,7 +959,7 @@ msgstr "显示查找对话框的快捷键。以 GTK+ 资源文件所用格式给
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr "查找下个搜索关键词的快捷键"
+msgstr "查找搜索关键词下一次出现的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -967,11 +968,12 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
-"用于查找终端中下一段文字的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+"用于在终端中查找搜索关键词下一次出现的快捷键。以 GTK+ "
+"资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr "查找上个搜索关键词的快捷键"
+msgstr "查找搜索关键词上一次出现的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -980,11 +982,12 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
-"用于查找终端中上一段文字的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+"用于在终端中查找搜索关键词上一次出现的快捷键。以 GTK+ "
+"资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "切换全屏模式的快捷键"
+msgstr "开关全屏模式的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:351
 msgid ""
@@ -992,11 +995,11 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "切换全屏模式的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "开关全屏模式的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:355
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "切换菜单栏是否可见的快捷键"
+msgstr "开关菜单栏的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:356
 msgid ""
@@ -1004,8 +1007,7 @@ msgid ""
 "a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr ""
-"切换菜单栏是否可见的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "开关菜单栏的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
@@ -1017,11 +1019,11 @@ msgid ""
 "the same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "设定终端标题的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "设置终端标题的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
-msgstr "重置终端的快捷键"
+msgstr "复位终端的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:366
 msgid ""
@@ -1029,11 +1031,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "重置终端的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "复位终端的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:370
 msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr "重置并清除终端的快捷键"
+msgstr "复位并清屏终端的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:371
 msgid ""
@@ -1041,7 +1043,7 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "重置并清除终端的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "复位并清屏终端的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -1105,7 +1107,8 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "将当前标签页左移的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"将当前标签页左移的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:400
 msgid "Accelerator to move the current tab to the right."
@@ -1117,7 +1120,8 @@ msgid ""
 "in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
-msgstr "将当前标签页右移的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"将当前标签页右移的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:405
 msgid "Accelerator to detach current tab."
@@ -1128,7 +1132,7 @@ msgid ""
 "Accelerator key to detach current tab. Expressed as a string in the same "
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
-msgstr "分离当前标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr "分离当前标签页的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:410
 msgid "Keyboard shortcut to switch to tab 1"
@@ -1140,7 +1144,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 1 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 1 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:415
 msgid "Keyboard shortcut to switch to tab 2"
@@ -1152,7 +1157,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 2 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 2 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:420
 msgid "Keyboard shortcut to switch to tab 3"
@@ -1164,7 +1170,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 3 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 3 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:425
 msgid "Keyboard shortcut to switch to tab 4"
@@ -1176,7 +1183,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 4 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 4 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:430
 msgid "Keyboard shortcut to switch to tab 5"
@@ -1188,7 +1196,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 5 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 5 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:435
 msgid "Keyboard shortcut to switch to tab 6"
@@ -1200,7 +1209,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 6 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 6 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:440
 msgid "Keyboard shortcut to switch to tab 7"
@@ -1212,7 +1222,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 7 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 7 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:445
 msgid "Keyboard shortcut to switch to tab 8"
@@ -1224,7 +1235,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 8 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 8 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:450
 msgid "Keyboard shortcut to switch to tab 9"
@@ -1236,7 +1248,8 @@ msgid ""
 " format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "切换到标签页 9 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 9 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:455
 msgid "Keyboard shortcut to switch to tab 10"
@@ -1248,7 +1261,8 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "切换到标签页 10 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 10 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:460
 msgid "Keyboard shortcut to switch to tab 11"
@@ -1260,7 +1274,8 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "切换到标签页 11 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 11 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:465
 msgid "Keyboard shortcut to switch to tab 12"
@@ -1272,7 +1287,8 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "切换到标签页 12 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串 \"禁用\"，则此操作就没有快捷键。"
+msgstr ""
+"切换到标签页 12 的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:470
 msgid "Keyboard shortcut to launch help"
@@ -1288,7 +1304,7 @@ msgstr "调用帮助的快捷键。以 GTK+ 资源文件所用格式给出的字
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
-msgstr "大字体的快捷键"
+msgstr "增大字体大小的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
@@ -1296,11 +1312,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "设为大字体的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "增大字体大小的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
-msgstr "小字体的快捷键"
+msgstr "减小字体大小的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
@@ -1308,11 +1324,11 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "设为小字体的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr "减小字体大小的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
-msgstr "普通字号的快捷键"
+msgstr "将字体设为正常大小的快捷键"
 
 #: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
@@ -1320,7 +1336,8 @@ msgid ""
 " in the same format used for GTK+ resource files. If you set the option to "
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
-msgstr "设为普通字体的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
+msgstr ""
+"将字体设为正常大小的快捷键。以 GTK+ 资源文件所用格式给出的字符串。如果您将选项设为特殊字符串“disabled”，则此操作就没有快捷键。"
 
 #: src/profile-editor.c:45
 msgid "Black on light yellow"
@@ -1390,7 +1407,7 @@ msgstr "新建(_N)"
 msgid "Edit"
 msgstr "编辑"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "删除(_D)"
 
@@ -1408,7 +1425,7 @@ msgstr "创建(_R)"
 
 #: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
-msgstr "配置名称(_N)："
+msgstr "配置文件名称(_N)："
 
 #: src/profile-new-dialog.ui:153
 msgid "_Base on:"
@@ -1420,7 +1437,7 @@ msgstr "配置文件编辑器"
 
 #: src/profile-preferences.ui:325
 msgid "_Profile name:"
-msgstr "配置文件名(_P)："
+msgstr "配置文件名称(_P)："
 
 #: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
@@ -1452,11 +1469,11 @@ msgstr "把选中的文本复制到剪贴板(_C)"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr "高亮 S/Key 质询(_S)"
+msgstr "高亮鼠标指针下的 _S/Key 挑战"
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr "高亮鼠标指针下的 URL(_U)"
+msgstr "高亮鼠标指针下的 _URL"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1464,11 +1481,11 @@ msgstr "光标闪烁(_K)："
 
 #: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
-msgstr "鼠标形状(_s)："
+msgstr "光标形状(_S)："
 
 #: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
-msgstr "选择单词的标识字符(_W)："
+msgstr "选择单个单词时包含的字符(_W)："
 
 #: src/profile-preferences.ui:654
 msgid "Use custom default terminal si_ze"
@@ -1496,7 +1513,7 @@ msgstr "<b>标题</b>"
 
 #: src/profile-preferences.ui:848
 msgid "Initial _title:"
-msgstr "起始标题(_T)："
+msgstr "初始标题(_T)："
 
 #: src/profile-preferences.ui:888
 msgid "When terminal commands set their o_wn titles:"
@@ -1508,11 +1525,11 @@ msgstr "<b>命令</b>"
 
 #: src/profile-preferences.ui:979
 msgid "_Run command as a login shell"
-msgstr "以登录 Shell 方式运行命令(_R)"
+msgstr "以登录 shell 方式运行命令(_R)"
 
 #: src/profile-preferences.ui:995
 msgid "Ru_n a custom command instead of my shell"
-msgstr "运行自定义命令而不是 Shell(_N)"
+msgstr "运行自定义命令而不是 shell(_N)"
 
 #: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
@@ -1614,11 +1631,11 @@ msgstr "透明背景(_T)"
 
 #: src/profile-preferences.ui:2001
 msgid "S_hade transparent or image background:"
-msgstr "加深透明和图像背景(_H)："
+msgstr "弱化透明或图像背景(_H)："
 
 #: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
-msgstr "透明背景(_H)："
+msgstr "弱化透明背景(_H)："
 
 #: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
@@ -1642,7 +1659,7 @@ msgstr "输出时滚动(_O)"
 
 #: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
-msgstr "击键时滚动(_K)"
+msgstr "按键时滚动(_K)"
 
 #: src/profile-preferences.ui:2193
 msgid "lines"
@@ -1654,7 +1671,7 @@ msgstr "回滚(_B)："
 
 #: src/profile-preferences.ui:2226
 msgid "_Unlimited"
-msgstr "不限制(_U)"
+msgstr "无限制(_U)"
 
 #: src/profile-preferences.ui:2283
 msgid "Scrolling"
@@ -1667,7 +1684,7 @@ msgid ""
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
 msgstr ""
-"<small><i><b>注意：</b>这些选项可能造成一些应用程序产生不正确的行为。仅用于允许您在一些应用程序和操作系统中作调整以获得不同的终端行为。</i></small>"
+"<small><i><b>注意：</b>这些选项可能造成一些应用程序产生不正确的行为。仅用于临时解决某些期望不同终端行为的应用程序和操作系统引起的问题。</i></small>"
 
 #: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
@@ -1695,15 +1712,15 @@ msgstr "确定(_O)"
 
 #: src/set-title-dialog.ui:88
 msgid "_Title:"
-msgstr "称谓(_T)："
+msgstr "标题(_T)："
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr "确定 (_O)"
+msgstr "确定(_O)"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
-msgstr "S/Key 质询响应"
+msgstr "S/Key 挑战响应"
 
 #: src/skey-challenge.ui:134
 msgid "_Password:"
@@ -1711,7 +1728,7 @@ msgstr "密码(_P)："
 
 #: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr "您点击的文字不像是有效的 S/Key 质询。"
+msgstr "您点击的文字不像是有效的 S/Key 挑战。"
 
 #: src/skey-popup.c:177
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
@@ -1767,7 +1784,7 @@ msgstr "缩小"
 
 #: src/terminal-accels.c:211
 msgid "Normal Size"
-msgstr "普通大小"
+msgstr "正常大小"
 
 #: src/terminal-accels.c:223
 msgid "Find Next"
@@ -1779,11 +1796,11 @@ msgstr "查找上一个"
 
 #: src/terminal-accels.c:239
 msgid "Reset"
-msgstr "重置"
+msgstr "复位"
 
 #: src/terminal-accels.c:243
 msgid "Reset and Clear"
-msgstr "复位并清除"
+msgstr "复位并清屏"
 
 #: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
@@ -1811,7 +1828,7 @@ msgstr "标签页右移"
 
 #: src/terminal-accels.c:275
 msgid "Detach Tab"
-msgstr "漂移标签页"
+msgstr "分离标签页"
 
 #: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
@@ -1875,11 +1892,11 @@ msgstr "查看"
 
 #: src/terminal-accels.c:350
 msgid "Search"
-msgstr "查找"
+msgstr "搜索"
 
 #: src/terminal-accels.c:352
 msgid "Tabs"
-msgstr "标签页"
+msgstr "标签"
 
 #: src/terminal-accels.c:353
 msgid "Help"
@@ -1898,52 +1915,52 @@ msgstr "动作(_A)"
 msgid "Shortcut _Key"
 msgstr "快捷键(_K)"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
-msgstr "单击此按钮以选择配置文件"
+msgstr "单击按钮以选择配置文件"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "配置文件列表"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "删除配置文件“%s”吗？"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "删除配置文件"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
-msgstr "您已经有名为“%s”的配置文件。您是否想要使用相同的名称创建另外一个配置文件？"
+msgstr "您已经有一个名为“%s”的配置文件。您是否想要使用相同的名称创建另外一个配置文件？"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "选择基础配置文件"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "不存在配置文件“%s”，使用默认配置文件\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "无效的几何属性字符串“%s”\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "用户定义"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
-msgstr "无法处理参数：%s\n"
+msgstr "无法解析参数：%s\n"
 
 #: src/terminal-encoding.c:54 src/terminal-encoding.c:67
 #: src/terminal-encoding.c:81 src/terminal-encoding.c:103
@@ -2090,9 +2107,9 @@ msgstr "描述(_D)"
 msgid "_Encoding"
 msgstr "编码(_E)"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
-msgstr "当前区域"
+msgstr "当前区域设置"
 
 #: src/terminal-options.c:177
 #, c-format
@@ -2101,182 +2118,183 @@ msgid ""
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
 msgstr ""
-"此版本的 mate-terminal 已不再支持选项 \"%s\" ；您可能想要创建一个有期望设定的配置文件，然后使用新的“--profile”选项\n"
+"此版本的 mate-terminal 已不再支持选项 \"%s\"；您可能想要创建一个含有您期望的设定的配置文件，然后使用新的 \"--"
+"profile\" 选项\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\" 的参数为无效的命令：%s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "给一个窗口指定了两种角色"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
-msgstr "为同一窗口指定了两次“%s”选项\n"
+msgstr "为同一窗口指定了两次 \"%s\" 选项\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" 不是有效的缩放系数"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "缩放系数 \"%g\" 太小，使用 %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "缩放系数 \"%g\" 太大，使用 %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "选项 \"%s\" 需要在剩余的命令行中指定要执行的命令"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "不是一个有效的终端配置文件。"
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "终端配置文件版本不兼容。"
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "不用激活名称服务器注册，不重用激活终端"
+msgstr "不要在激活名称服务器上注册，不要重用活动的终端"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "载入一个终端配置文件"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "保存终端配置到文件"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
-msgstr "打开包含默认配置下一个标签页的一个新窗口"
+msgstr "使用默认配置打开包含一个标签页的一个新窗口"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
-msgstr "在最后一个打开的窗口中打开一个默认配置下的新标签页"
+msgstr "使用默认配置在最后一个打开的窗口中打开一个新标签页"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "打开菜单栏"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "关闭菜单栏"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "最大化窗口"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
-msgstr "全屏幕窗口"
+msgstr "全屏窗口"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "设置窗口大小；例如：80x24，或 80x24+200+200（列 x 行 + X 坐标 + Y 坐标）"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
-msgstr "几何形状"
+msgstr "几何属性"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "设置窗口角色"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "角色"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
-msgstr "将上次指定的标签页设定为所在窗口的当前标签页"
+msgstr "将上次指定的标签页设定为所在窗口的活动标签页"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "在终端中执行此选项的参数"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
-msgstr "使用提供的配置文件而非默认配置"
+msgstr "使用提供的配置文件而非默认配置文件"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "配置文件名"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "设置终端标题"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "标题"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "设置工作目录"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "目录名"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "设置终端的缩放系数（1.0 = 正常大小）"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "缩放"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "MATE 终端模拟器"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "显示 MATE 终端选项"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "打开新窗口或终端标签页的选项；可指定多个。"
+msgstr "打开新窗口或终端标签页的选项；可指定多个："
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "显示终端选项"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "窗口选项；如果在第一个 --window 或 --tab 参数前使用，将设定为所有窗口的默认配置。"
+msgstr "窗口选项；如果在第一个 --window 或 --tab 参数前使用，将设定为所有窗口的默认配置："
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "显示每个窗口的选项"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "终端选项；如果在第一个 --window 或 --tab 参数前使用，将设定为所有终端的默认配置。"
+msgstr "终端选项；如果在第一个 --window 或 --tab 参数前使用，将设定为所有终端的默认配置："
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "显示每个终端的选项"
 
@@ -2284,31 +2302,31 @@ msgstr "显示每个终端的选项"
 msgid "Unnamed"
 msgstr "未命名"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "配置文件首选项(_P)"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
-msgstr "子进程以状态%d正常的退出。"
+msgstr "子进程以状态 %d 正常退出。"
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
-msgstr "子进程被信号%d中断。"
+msgstr "子进程被信号 %d 终止。"
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
-msgstr "子进程被中断。"
+msgstr "子进程被终止。"
 
 #: src/terminal-tab-label.c:131
 msgid "Close tab"
@@ -2316,49 +2334,49 @@ msgstr "关闭标签页"
 
 #: src/terminal-tabs-menu.c:202
 msgid "Switch to this tab"
-msgstr "切换到这一标签页"
+msgstr "切换到此标签页"
 
 #: src/terminal-util.c:146
 msgid "There was an error displaying help"
-msgstr "显示帮助时出现一个错误"
+msgstr "显示帮助时发生了一个错误"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "无法打开地址“%s”"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"MATE 终端是自由软件；您可以在自由软件基金会发布的 GNU 通用公共许可证下重新发布或修改它；许可证应使用第三版本或您所选择的更新的版本。"
+"MATE 终端是自由软件；您可以按照自由软件基金会所发布的 GNU "
+"通用公共许可证再分发和/或修改它；您可以使用此许可证的第三版或（依您所愿）任何更新的版本。"
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"发布 MATE 终端的目的是希望它能够在一定程度上帮到您。但我们并不为它提供任何形式的担保，也无法保证它可以在特定用途中得到您希望的结果。请参看 GNU"
-" GPL 许可中的更多细节。"
+"分发 MATE 终端的目的是希望它对您有用，但没有任何保证；甚至没有对适销性或特定用途适用性的默示保证。请阅读 GNU 通用公共许可证以了解更多细节。"
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
-"您应该在收到 MATE Web 浏览器的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由软件基金会写信，地址是 51 "
-"Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+"您应该在收到 MATE 终端的同时也收到了 GNU 通用公共许可证的副本；如果没有收到该许可证的话，您可以写信给自由软件基金会，地址是：51 "
+"Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2366,7 +2384,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2391,7 +2409,7 @@ msgstr "编辑(_E)"
 
 #: src/terminal-window.c:1880
 msgid "_View"
-msgstr "视图(_V)"
+msgstr "查看(_V)"
 
 #: src/terminal-window.c:1881
 msgid "_Search"
@@ -2407,7 +2425,7 @@ msgstr "标签(_B)"
 
 #: src/terminal-window.c:1900
 msgid "New _Profile…"
-msgstr "新建配置文件(_P)..."
+msgstr "新建配置文件(_P)…"
 
 #: src/terminal-window.c:1905
 msgid "_Save Contents"
@@ -2443,7 +2461,7 @@ msgstr "配置文件(_R)…"
 
 #: src/terminal-window.c:1947
 msgid "_Keyboard Shortcuts…"
-msgstr "键盘快捷键(_K)..."
+msgstr "键盘快捷键(_K)…"
 
 #: src/terminal-window.c:1952
 msgid "Pr_ofile Preferences"
@@ -2499,7 +2517,7 @@ msgstr "下个配置:(_N)"
 
 #: src/terminal-window.c:2021
 msgid "_Set Title…"
-msgstr "设置标题(_S)..."
+msgstr "设置标题(_S)…"
 
 #: src/terminal-window.c:2025
 msgid "Set _Character Encoding"
@@ -2515,15 +2533,15 @@ msgstr "复位并清屏(_L)"
 
 #: src/terminal-window.c:2039
 msgid "_Add or Remove…"
-msgstr "添加或删除(_A)..."
+msgstr "添加或删除(_A)…"
 
 #: src/terminal-window.c:2046
 msgid "_Previous Tab"
-msgstr "前一标签页(_P)"
+msgstr "上一标签页(_P)"
 
 #: src/terminal-window.c:2051
 msgid "_Next Tab"
-msgstr "后一标签页(_N)"
+msgstr "下一标签页(_N)"
 
 #: src/terminal-window.c:2056
 msgid "Move Tab _Left"
@@ -2547,7 +2565,7 @@ msgstr "关于(_A)"
 
 #: src/terminal-window.c:2085
 msgid "_Send Mail To…"
-msgstr "发送邮件给(_S)..."
+msgstr "发送邮件给(_S)…"
 
 #: src/terminal-window.c:2090
 msgid "_Copy E-mail Address"
@@ -2555,7 +2573,7 @@ msgstr "复制电子邮件地址(_C)"
 
 #: src/terminal-window.c:2095
 msgid "C_all To…"
-msgstr "呼叫(_A)..."
+msgstr "呼叫(_A)…"
 
 #: src/terminal-window.c:2100
 msgid "_Copy Call Address"
@@ -2589,7 +2607,7 @@ msgstr "显示菜单栏(_M)"
 msgid "_Full Screen"
 msgstr "全屏(_F)"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2597,44 +2615,44 @@ msgstr ""
 "窗口内仍有一些进程在终端中运行。\n"
 "关闭该窗口将杀死所有进程。"
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
-msgstr "此窗口中打开了多个选项卡。"
+msgstr "此窗口中打开了多个标签页。"
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "关闭终端(_L)"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "无法保存内容"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "另存为…"
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "贡献者："
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 "“MATE终端”为 MATE 桌面环境的终端模拟器。\n"
-"Powered by Virtual TErminal %d.%d.%d"
+"由 Virtual TErminal %d.%d.%d 提供强劲动力"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "关于 MATE 终端"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2643,14 +2661,14 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
-"版权所有 © 2002–2004 Havoc Pennington\n"
-"版权所有 © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
-"版权所有 © 2006 Guilherme de S. Pastore\n"
-"版权所有 © 2007–2010 Christian Persch\n"
-"版权所有 © 2011 Perberos\n"
-"版权所有 © 2012-2021 MATE developers"
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 MATE 开发者"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "Christopher Meng <i@cicku.me>, 2012-2013\n"
@@ -2663,4 +2681,5 @@ msgstr ""
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
 "刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"Mingtian Yang <i@skylee.xyz>, 2020"
+"Mingtian Yang <i@skylee.xyz>, 2020\n"
+"Wenbin Lv <wenbin816@gmail.com>, 2021-2022"

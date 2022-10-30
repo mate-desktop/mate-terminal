@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍"
 
@@ -44,7 +44,7 @@ msgid ""
 "please visit the project's home page."
 msgstr ""
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "ടെര്‍മിനല്‍"
@@ -54,51 +54,51 @@ msgid "Use the command line"
 msgstr "കമാന്‍ഡ് ലൈന്‍ ഉപയോഗിക്കുക"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "_റദ്ദാക്കുക"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "ജാലകം _അടയ്ക്കുക"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള കണക്ഷന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "സൂക്ഷിച്ചിട്ടുള്ള ക്രമീകരണം അടങ്ങുന്ന ഫയല്‍ നല്‍കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FILE"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ID വ്യക്തമാക്കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍ കാണിക്കുക"
 
@@ -1621,7 +1621,7 @@ msgstr "പുതിയ (_N)"
 msgid "Edit"
 msgstr "ചിട്ടപ്പെടുത്തുക"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "നീക്കം ചെയ്യുക (_D)"
 
@@ -2135,24 +2135,24 @@ msgstr "_പ്രവര്‍ത്തനം"
 msgid "Shortcut _Key"
 msgstr "_എളുപ്പ വഴി "
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുന്നതിനായി ബട്ടണ്‍ ക്ളിക്ക് ചെയ്യുക"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "ഫ്രൊഫൈലിന്റെ പട്ടിക"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "പ്രൊഫൈല്‍ “%s” നീക്കം ചെയ്യണമോ?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "പ്രൊഫൈല്‍ നീക്കം ചെയ്യുക"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2161,25 +2161,25 @@ msgstr ""
 "“%s” എന്ന പേരില്‍ ഒരു പ്രൊഫൈല്‍ നിലവിലുണ്ടു്. നിങ്ങള്‍ക്കു് ഇതേ പേരില്‍ "
 "മറ്റൊരു പ്രൊഫൈല്‍ ഉണ്ടാക്കണമോ?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "ബെയിസ് പ്രൊഫൈല്‍ തെരഞ്ഞെടുക്കുക"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "\"%s\" എന്ന പ്രൊഫൈല്‍ ലഭ്യമല്ല, സ്വതവേയുള്ളതു് ഉപയോഗിക്കുന്നു\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "തെറ്റായ ജ്യാമിതി സ്ട്രിങ് \"%s\"\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "ഉപയോക്താവു് നിര്‍വ്വചിച്ച"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"
@@ -2329,7 +2329,7 @@ msgstr "_വിവരണം "
 msgid "_Encoding"
 msgstr "കോഡ് അല്ലേല്‍ _രഹസ്യ ഭാഷയിലാക്കുന്ന സംവിധാനം(എന്‍കോഡിങ്)"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "നിലവിലുളള ലോക്കെയില്‍"
 
@@ -2344,36 +2344,36 @@ msgstr ""
 "നിങ്ങള്‍ക്കു് ഇഷ്ടമുള്ള ക്രമീകരണത്തില്‍ ഒരു പ്രൊഫൈല്‍ ഉണ്ടാക്കി, പുതിയ '--"
 "profile' ഉപാധി ഉപയോഗിക്കാം\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\"-ലേക്കുളള ആര്‍ഗ്യുമെന്റ് അസാധുവായ ഒരു ആജ്ഞയാണ്: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "ഒരു ജാലകത്തിനു് രണ്ടു് ജോലികള്‍ നല്‍കിയിരിക്കുന്നു"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "ഒരേ ജാലകത്തിനു് \"%s\" ഉപാധി രണ്ടും തവണ നല്‍കിയിരിക്കുന്നു\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" ശരിയായ സൂം ഫാക്ടര്‍ അല്ല"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ ചെറുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ വലുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2382,15 +2382,15 @@ msgstr ""
 "\"%s\" ഐച്ഛികത്തിനു്, ബാക്കിയുള്ള കമാന്‍ഡ് ലൈനില്‍ "
 "പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി കമാന്‍ഡ് നല്‍കേണ്ടതുണ്ടു്"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "ശരിയായ ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ അല്ല."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "പൊരുത്തപ്പെടാത്ത ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ പതിപ്പു്."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2398,111 +2398,111 @@ msgstr ""
 "ആക്ടിവേഷന്‍ nameserver ഉപയോഗിച്ചു് രജിസ്ടര്‍ ചെയ്യരുതു്, സജീവമായ ഒരു "
 "ടെര്‍മിനല്‍ വീണ്ടും ഉപയോഗിക്കരുതു്"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "ഒരു ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ ലഭ്യമാക്കുക"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "ടെര്‍മിനല്‍ ക്രമീകരണം ഒരു ഫയലിലേക്കു് സൂക്ഷിക്കുക"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉള്ള ഒരു പുതിയ കിളിവാതില്‍ അടങ്ങുന്ന പുതിയ ഒരു ജാലകം "
 "തുറക്കുക"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "ഒടുവില്‍ തുറന്ന ജാലകത്തില്‍ സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉപയോഗിച്ചു് ഒരു പുതിയ "
 "കിളിവാതിലില്‍ തുറക്കുക"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "മെനുബാര്‍ ഓണ്‍ ചെയ്യുക"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "മെനുബാര്‍ ഓഫ് ചെയ്യുക"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "ജാലകം വലുതാക്കുക"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "ജാലകം പൂര്‍ണ്ണവലിപ്പത്തിലാക്കുക"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "ജാലകത്തിനുള്ള റോള്‍ സജ്ജമാക്കകു"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "ROLE"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 "ജാലകത്തില്‍ ഏറ്റവും ഒടുവില്‍ പറഞ്ഞിരിക്കുന്ന കിളിവാതില്‍ സജീവമായി "
 "ക്രമീകരിക്കുക"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr ""
 "ടെര്‍മിനലിനുള്ളിലുള്ള ഈ ഉപാധിയിലേക്കു് ആര്‍ഗ്യുമെന്റ് പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈലിനു് പകരം നല്‍കിയിരിക്കുന്ന പ്രൊഫൈല്‍ ഉപയോഗിക്കുക"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "ടെര്‍മിനലിനുള്ള തലക്കെട്ടു് സജ്ജമാക്കുക"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "തലക്കെട്ട്"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "പ്രവര്‍ത്തനത്തിലുള്ള തട്ടു് സജ്ജമാക്കുക"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "ടെര്‍മിനലിനുള്ള സൂം ഫാക്ടര്‍ സജ്ജമാക്കുക (1.0 = സാധാരണ വലിപ്പം)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2510,11 +2510,11 @@ msgstr ""
 "പുതിയ ജാലകങ്ങളും ടെര്‍മിനല്‍ റ്റാബുകളും തുറക്കുന്നതിനുള്ള ഐച്ഛികങ്ങള്‍; "
 "ഇവയില്‍ ഒന്നില്‍ കൂടുതല്‍ നിഷ്കര്‍ഷിക്കാം:"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2523,11 +2523,11 @@ msgstr ""
 "ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ജാലകങ്ങള്‍ക്കും "
 "സ്വതവേയുള്ളതായി സജ്ജമാക്കുന്നു:"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "ഓരോ ജാലകത്തിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2536,7 +2536,7 @@ msgstr ""
 "ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി ഉപായോഗിച്ചാല്‍, എല്ലാ ടെര്‍മിനലുകള്‍ക്കും സഹജമായി"
 " സജ്ജമാക്കുന്നു:"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
@@ -2544,29 +2544,29 @@ msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്�
 msgid "Unnamed"
 msgstr "പേരില്ലാത്ത"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "സിഗ്നല്‍ %d ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
@@ -2582,12 +2582,12 @@ msgstr "ഈ കിളിവാതിലിലേയ്ക്കു് പോവ�
 msgid "There was an error displaying help"
 msgstr "സഹായം ലഭ്യമാക്കുന്നതില്‍ ഒരു പിശക്"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "മേല്‍വിലാസം “%s” തുറക്കുവാന്‍ സാധിച്ചില്ല"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2595,7 +2595,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2607,7 +2607,7 @@ msgstr ""
 "പ്രത്യേക കാര്യത്തിനു്ചേരുന്നതാണെന്നോ ഉള്ള പരോക്ഷമായ ഒരു വാറണ്ടി പോലും ഇല്ല. "
 "കൂടുതല്‍ വിവരങ്ങള്‍ക്കു് ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2621,7 +2621,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2629,7 +2629,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2852,48 +2852,48 @@ msgstr "_മെനു ബാര്‍ കാണിക്കുക "
 msgid "_Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമവധി _വലിപ്പമുളളതാക്കുക "
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അ_ടയ്ക്കുക"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "ഉള്ളടക്കം സൂക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "പുതിയ പേരില്‍ സൂക്ഷിക്കുക..."
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "സംഭാവനചെയ്തവര്‍:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2903,7 +2903,7 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"

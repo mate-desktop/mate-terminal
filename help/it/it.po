@@ -6,30 +6,30 @@
 # Giuseppe Pignataro <rogepix@gmail.com>, 2019
 # Enrico B. <enricobe@hotmail.com>, 2019
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
-# Alessandro Volturno <alelvb@inwind.it>, 2021
+# Alessandro Volturno <alelvb@inwind.it>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 13:37+0100\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-10-05 19:26+0000\n"
-"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
+"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Alessandro Volturno, 2020"
+msgstr "Alessandro Volturno, 2020, 2022"
 
 #. (itstool) path: info/title
 #: C/index.docbook:9
 msgid "MATE Terminal Manual"
-msgstr "Manuale del Terminale di MATE"
+msgstr "Manuale di MATE Terminal"
 
 #. (itstool) path: info/copyright
 #: C/index.docbook:11
@@ -240,12 +240,12 @@ msgstr ""
 #. (itstool) path: info/releaseinfo
 #: C/index.docbook:191
 msgid "This manual describes version 1.22 of MATE Terminal."
-msgstr "Questo manuale descrive la versione 1.22 di Terminale di MATE."
+msgstr "Questo manuale descrive la versione 1.22 di MATE Terminal"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:195
 msgid "<primary>MATE Terminal</primary>"
-msgstr "<primary>Terminale di MATE</primary>"
+msgstr "<primary>MATE Terminal</primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:198
@@ -263,14 +263,14 @@ msgid ""
 "<application>MATE Terminal</application> is a terminal emulation application"
 " that you can use to perform the following tasks:"
 msgstr ""
-"<application>Terminale di MATE</application> è un'applicazione per "
-"l'emulazione del terminale che può essere utilizzata per per svolgere le "
-"seguenti attività:"
+"<application>MATE Terminal</application> è un'applicazione per l'emulazione "
+"del terminale che può essere utilizzata per per svolgere le seguenti "
+"attività:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:209
 msgid "Access a UNIX shell in the MATE environment"
-msgstr "Accedere a una shell UNIX nell'ambiente MATE"
+msgstr "Accedere ad una shell UNIX nell'ambiente MATE"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:211
@@ -282,8 +282,8 @@ msgid ""
 " time."
 msgstr ""
 "Una shell è un programma che interpreta ed esegue i comandi che si scrivono "
-"da un prompt dei comandi. Quando si avvia <application>Terminale di "
-"MATE</application>, l'applicazione avvia la shell predefinita che è "
+"da un prompt dei comandi. Quando si avvia <application>MATE "
+"Terminal</application>, l'applicazione avvia la shell predefinita che è "
 "specificata nel vostro account di sistema. Potete cambiare shell in "
 "qualsiasi momento."
 
@@ -293,7 +293,7 @@ msgid ""
 "Run any application that is designed to run on VT102, VT220, and "
 "<application>xterm</application> terminals"
 msgstr ""
-"Eseguire una qualunque applicazione progettata per essere eseguita sui "
+"Eseguire una qualsiasi applicazione progettata per essere eseguita sui "
 "terminali VT102, VT220, e <application>xterm</application>."
 
 #. (itstool) path: listitem/para
@@ -308,7 +308,7 @@ msgid ""
 "escape sequences that the VT102 and VT220 terminals use for functions such "
 "as to position the cursor and to clear the screen."
 msgstr ""
-"<application>Terminale di MATE</application> emula l'applicazione "
+"<application>MATE Terminal</application> emula l'applicazione "
 "<application>xterm</application> sviluppata da X Consortium. A sua volta, "
 "l'applicazione <application>xterm</application> emula il terminale DEC VT102"
 " e supporta inoltre le sequenze di escape del DEC VT220. Una sequenza de "
@@ -328,13 +328,13 @@ msgid ""
 "The following sections describe how to start <application>MATE "
 "Terminal</application>."
 msgstr ""
-"Le sezioni seguenti descrivono come avviare <application>Terminale di "
-"MATE</application>."
+"Le sezioni seguenti descrivono come avviare <application>MATE "
+"Terminal</application>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:234
 msgid "Starting MATE Terminal"
-msgstr "Avviare Terminale di MATE"
+msgstr "Avviare MATE Terminal"
 
 #. (itstool) path: section/para
 #: C/index.docbook:235
@@ -342,8 +342,8 @@ msgid ""
 "You can start <application>MATE Terminal</application> in the following "
 "ways:"
 msgstr ""
-"È possibile avviare il <application>Terminale di MATE</application> nei "
-"seguenti modi:"
+"È possibile avviare il <application>MATE Terminal</application> nei seguenti"
+" modi:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:240
@@ -377,14 +377,14 @@ msgid ""
 "execute the following command: <command>mate-terminal --help</command>"
 msgstr ""
 "È possibile utilizzare opzioni da riga di comando per modificare il modo in "
-"cui si esegue <application>Terminale di MATE</application>. Per vedere "
-"l'elenco delle opzioni  da riga di comando, eseguire il seguente comando: "
+"cui si esegue <application>MATE Terminal</application>. Per vedere l'elenco "
+"delle opzioni  da riga di comando, eseguire il seguente comando: "
 "<command>mate-terminal --help</command>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:260
 msgid "When You First Start MATE Terminal"
-msgstr "Quando si avvia Terminale di MATE per la prima volta"
+msgstr "Quando si avvia il Terminale di MATE per la prima volta"
 
 #. (itstool) path: section/para
 #: C/index.docbook:261
@@ -393,19 +393,20 @@ msgid ""
 "the application opens a terminal window with a group of default settings. "
 "The group of default settings is called the Default profile."
 msgstr ""
-"Quando si avvia Terminale di MATE per la prima volta, l'applicazione apre "
-"una finestra di terminale con un gruppo di impostazioni predefinite. Il "
-"gruppo di impostazioni predefinite è chiamato il profilo Predefinito."
+"Quando si avvia <application>MATE Terminal</application> per la prima volta,"
+" l'applicazione apre una finestra di terminale con un gruppo di impostazioni"
+" predefinite. Il gruppo di impostazioni predefinite è chiamato il profilo "
+"Predefinito."
 
 #. (itstool) path: info/title
 #: C/index.docbook:263
 msgid "Example of a Default MATE Terminal Window"
-msgstr "Esempio di una finestra Terminale di MATE Predefinita"
+msgstr "Esempio di una finestra MATE Terminal con il profilo Predefinito"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:265 C/index.docbook:324
 msgid "MATE Terminal default window"
-msgstr "Finestra predefinita del Terminale di MATE"
+msgstr "Finestra predefinita di MATE Terminal"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -430,7 +431,7 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/mate-terminal-default.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>finestra predefinita di"
-" Terminale di MATE</phrase> </textobject>"
+" MATE Terminal</phrase> </textobject>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:276
@@ -447,9 +448,8 @@ msgstr ""
 " &gt;, $, o un qualsiasi altro carattere speciale. Il cursore è posizionato "
 "subito dopo il prompt dei comandi. Quando si scrive un comando UNIX e si "
 "pressa <keycap>Invio</keycap>, il computer esegue il comando. Per "
-"impostazione predefinita, <application>Terminale di MATE</application> "
-"utilizza la shell predefinita specificata per l'utente che avvia "
-"l'applicazione."
+"impostazione predefinita, <application>MATE Terminal</application> utilizza "
+"la shell predefinita specificata per l'utente che avvia l'applicazione."
 
 #. (itstool) path: section/para
 #: C/index.docbook:279
@@ -457,8 +457,8 @@ msgid ""
 "<application>MATE Terminal</application> also sets the following environment"
 " variables:"
 msgstr ""
-"<application>Terminale di MATE</application> imposta anche le seguenti "
-"variabili di ambiente:"
+"<application>MATE Terminal</application> imposta anche le seguenti variabili"
+" di ambiente:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:284
@@ -513,8 +513,8 @@ msgid ""
 "application from a command line, use the following command:"
 msgstr ""
 "Ogni profilo del terminale viene definito nella finestra di dialogo "
-"<guilabel>Profili</guilabel>, che si raggiunge dal menu "
-"<guimenu>Modifica</guimenu>. Si possono definire tanti profili quanto si "
+"<guilabel>Profili</guilabel>, che si raggiunge dal menù "
+"<guimenu>Modifica</guimenu>. Si possono definire tanti profili quanti se ne "
 "desidera. Quando si avvia un terminale, si può scegliere quale profilo "
 "utilizzare per il terminale. In alternativa, è possibile cambiare il profilo"
 " del terminale quando il terminale è già in uso. Per specificare un profilo "
@@ -538,9 +538,9 @@ msgid ""
 "titlebar name in the <guilabel>Editing Profile</guilabel> dialog."
 msgstr ""
 "Il nome del profilo corrente appare nella barra del titolo di "
-"<application>Terminale di MATE</application>, almeno che non si sia "
-"specificato un nome per la barra del titolo nel dialogo <guilabel>Modifiche "
-"del Profilo</guilabel>."
+"<application>MATE Terminal</application>, almeno che non si sia specificato "
+"un nome per la barra del titolo nella finestra di dialogo "
+"<guilabel>Modifiche del Profilo</guilabel>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:313
@@ -554,7 +554,7 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.docbook:317
 msgid "Working With Multiple Terminals"
-msgstr "Lavorare con più Terminali."
+msgstr "Lavorare con più Terminali"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -566,13 +566,13 @@ msgid ""
 "can use each terminal for different tasks. You can apply a different profile"
 " to each tabbed terminal in the window."
 msgstr ""
-"<application>Terminale di MATE</application> fornisce la possibilità di "
-"avere le schede che permettono di aprire più terminali in una singola "
-"finestra. Ciascun terminale viene aperto in una nuova scheda. Fare click "
-"sulla scheda appropriata per mostrare il terminale nella finestra. Ciascuna "
-"scheda terminale è un processo indipendente, in modo che si può impiegare "
-"ciascun terminale per compiti differenti. È possibile applicare un profilo "
-"diverso per ciascuna scheda di terminale aperta."
+"<application>MATE Terminal</application> fornisce la possibilità di avere le"
+" schede che permettono di aprire più terminali in una singola finestra. "
+"Ciascun terminale viene aperto in una nuova scheda. Fare clic sulla scheda "
+"appropriata per mostrare il terminale nella finestra. Ciascuna scheda "
+"terminale è un processo indipendente, in modo da poter impiegare ciascun "
+"terminale per compiti differenti. È possibile applicare un profilo diverso "
+"per ciascuna scheda di terminale aperta."
 
 #. (itstool) path: section/para
 #: C/index.docbook:320
@@ -586,8 +586,8 @@ msgid ""
 msgstr ""
 "La barra del titolo mostrerà il nome del profilo corrente, o il nome "
 "specificato dal profilo attuale. <xref linkend=\"mate-terminal-tabbed\"/> "
-"mostra un <application>Terminale di MATE</application> con quattro schede, "
-"in questo caso ciascuna di esse ha un suo profilo differente. Il nome del "
+"mostra un <application>MATE Terminal</application> con quattro schede, in "
+"questo caso ciascuna di esse ha un suo profilo differente. Il nome del "
 "profilo nella scheda attiva, Profile 1, compare nella barra del titolo."
 
 #. (itstool) path: info/title
@@ -651,7 +651,7 @@ msgid ""
 "Terminal</guimenuitem></menuchoice>."
 msgstr ""
 "Selezionare <menuchoice><guimenu>File</guimenu><guimenuitem>Apri "
-"Terminale</guimenuitem></menuchoice>.\\"
+"Terminale</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:353
@@ -665,7 +665,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:358
 msgid "To close a terminal window:"
-msgstr "Chiudere una finestra Terminale:"
+msgstr "Chiudere una finestra del Terminale:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:360
@@ -685,12 +685,12 @@ msgid ""
 msgstr ""
 "Questa azione chiude il terminale e ogni sotto-processo che si è aperto da "
 "quel terminale. Se si chiude l'ultima finestra del terminale, l'applicazione"
-" <application>Terminale di MATE</application> si chiude."
+" <application>MATE Terminal</application> si chiude."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:367
 msgid "To add a new tabbed terminal to a window:"
-msgstr "Aggiungere una nuova scheda Terminale alla finestra:"
+msgstr "Aggiungere una nuova scheda del Terminale alla finestra:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:369
@@ -708,7 +708,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:374
 msgid "To display a tabbed terminal:"
-msgstr "Mostrare una scheda Terminale:"
+msgstr "Mostrare una scheda del Terminale:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:376
@@ -749,7 +749,7 @@ msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Tab</guimenuitem></menuchoice>."
 msgstr ""
-"Selezionare <menuchoice><guimenu>File</guimenu><guimenuitem>Clhiudi "
+"Selezionare <menuchoice><guimenu>File</guimenu><guimenuitem>Chiudi "
 "Scheda</guimenuitem></menuchoice>."
 
 #. (itstool) path: info/title
@@ -787,8 +787,8 @@ msgid ""
 "Use the <guilabel>Base on</guilabel> drop-down list to select the profile on"
 " which you want to base the new profile."
 msgstr ""
-"Utilizzare l'elenco <guilabel>Basato su</guilabel> per selezionare il "
-"profilo su cui basare il nuovo profilo."
+"Utilizzare l'elenco a tendina <guilabel>Basato su</guilabel> per selezionare"
+" il profilo su cui basare il nuovo profilo."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:425
@@ -807,8 +807,8 @@ msgid ""
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu></menuchoice> submenu."
 msgstr ""
-"Fare clic su <guibutton>Chiudi</guibutton>. <application>Terminale di "
-"MATE</application> aggiunge il profilo al sottomenù "
+"Fare clic su <guibutton>Chiudi</guibutton>. <application>MATE "
+"Terminal</application> aggiungerà il profilo al sottomenù "
 "<menuchoice><guimenu>Terminale</guimenu><guisubmenu>Cambia "
 "Profilo</guisubmenu></menuchoice>."
 
@@ -868,7 +868,7 @@ msgid ""
 msgstr ""
 "Fare clic col pulsante destro del mouse nella finestra del terminale, quindi"
 " selezionare <menuchoice><guimenuitem>Profili</guimenuitem> "
-"<guimenuitem>Preferenze del Profilo</guimenuitem></menuchoice> dal menu a "
+"<guimenuitem>Preferenze del Profilo</guimenuitem></menuchoice> dal menù a "
 "comparsa."
 
 #. (itstool) path: listitem/para
@@ -907,10 +907,10 @@ msgid ""
 "<guibutton>Delete</guibutton>. The <guilabel>Delete Profile</guilabel> "
 "dialog is displayed."
 msgstr ""
-"Selezionare il nome del profilo che si vuole cancellare nell'elenco "
-"<guilabel>profili</guilabel>, quindi fare clic sul pulsante "
-"<guibutton>Elimina</guibutton>. Verrà mostrato il dialogo <guilabel>Elimina "
-"Profilo</guilabel>."
+"Selezionare il nome del profilo che si vuole cancellare dall'elenco "
+"<guilabel>Profili</guilabel>, quindi fare clic sul pulsante "
+"<guibutton>Elimina</guibutton>. Verrà mostrata la finestra di dialogo "
+"<guilabel>Elimina profilo</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:488
@@ -924,8 +924,8 @@ msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Edit "
 "Profiles</guilabel> dialog."
 msgstr ""
-"Fare clic sul pulsane <guibutton>Chiudi</guibutton> per chiudere il dialogo "
-"<guilabel>Modifica del Profilo</guilabel>."
+"Fare clic sul pulsane <guibutton>Chiudi</guibutton> per chiudere la finestra"
+" di dialogo <guilabel>Modifica del Profilo</guilabel>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:502
@@ -957,8 +957,8 @@ msgid ""
 "Right-click on the terminal window, then choose <guimenuitem>Show "
 "Menubar</guimenuitem> from the popup menu."
 msgstr ""
-"Fare clic con il tasto destro del mouse e seleziona <guimenuitem>Mostra "
-"barra dei menù</guimenuitem>."
+"Fare clic con il tasto destro del mouse sulla finestra del terminale e "
+"selezionare <guimenuitem>Mostra barra dei menù</guimenuitem>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:518
@@ -966,8 +966,8 @@ msgid ""
 "To display the <application>MATE Terminal</application> window in full-"
 "screen mode:"
 msgstr ""
-"Per mostrare la finestra <application>Terminale di MATE</application> in "
-"modalità schermo pieno:"
+"Per mostrare la finestra di <application>MATE Terminal</application> in "
+"modalità a schermo intero:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:520
@@ -1018,7 +1018,7 @@ msgstr "Scorrere i comandi e l'output precedenti:"
 #. (itstool) path: listitem/para
 #: C/index.docbook:538
 msgid "Perform one of the following actions:"
-msgstr "Procedere come segue:"
+msgstr "Eseguire una delle seguenti azioni:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:543
@@ -1059,8 +1059,8 @@ msgstr ""
 "Il numero di righe che si possono riesaminare nella finestra del terminale è"
 " determinato dall'impostazione <guilabel>Scorrimento all'indietro</guilabel>"
 " nella sezione scheda <guilabel>Scorrimento</guilabel> della finestra di "
-"dialogo <guilabel>Modifica  Profilo</guilabel>. Si può inoltre scorrere in "
-"su o in giù una riga alla volta premendo "
+"dialogo <guilabel>Modifica Profilo</guilabel>. Si può inoltre scorrere in su"
+" o in giù una riga alla volta premendo "
 "<keycombo><keycap>Control</keycap><keycap>Shift</keycap><keycap>Su</keycap></keycombo>"
 " o "
 "<keycombo><keycap>Control</keycap><keycap>Shift</keycap><keycap>Giù</keycap></keycombo>."
@@ -1073,7 +1073,7 @@ msgstr "Selezionare e copiare il testo:"
 #. (itstool) path: listitem/para
 #: C/index.docbook:558
 msgid "You can select text in any of the following ways:"
-msgstr "È possibile selezionare il teso in uno dei modi seguenti:"
+msgstr "È possibile selezionare il testo in uno qualsiasi dei modi seguenti:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:563
@@ -1116,9 +1116,9 @@ msgid ""
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
 msgstr ""
 "Queste azioni selezionano tutto il testo compreso tra il primo e l'ultimo "
-"oggetto. In qualsiasi caso, <application>Terminale di MATE</application> "
-"copia il testo selezionato negli appunti quando si rilascia il pulsante del "
-"mouse. Per copiare il testo in modo esplicito, selezionare "
+"oggetto. In qualsiasi caso, <application>MATE Terminal</application> copia "
+"il testo selezionato negli appunti quando si rilascia il pulsante del mouse."
+" Per copiare il testo in modo esplicito, selezionare "
 "<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Copia</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
@@ -1153,7 +1153,7 @@ msgid ""
 "To paste text that you explicitly copied, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice>."
 msgstr ""
-"Per incollare del testo che si è copiato esplicitamente , selezionare "
+"Per incollare del testo che si è copiato esplicitamente, selezionare "
 "<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Incolla</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
@@ -1182,7 +1182,7 @@ msgid ""
 "To access a Uniform Resource Locator (URL) that is displayed in a terminal, "
 "perform the following steps:"
 msgstr ""
-"Per accedere ad un Uniform Resource Loctor (URL) che è mostrato in un "
+"Per accedere ad uno Uniform Resource Locator (URL) che è mostrato in un "
 "terminale, procedere come segue:"
 
 #. (itstool) path: listitem/para
@@ -1195,7 +1195,7 @@ msgstr ""
 #: C/index.docbook:614
 msgid "Right-click on the URL to open a popup menu."
 msgstr ""
-"Fare click con il pulsante destro del mouse per aprire un menu a comparsa."
+"Fare clic con il pulsante destro del mouse per aprire un menu a comparsa."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:618
@@ -1220,8 +1220,8 @@ msgid ""
 "Shortcuts</guimenuitem></menuchoice>. The <guilabel>Keyboard "
 "Shortcuts</guilabel> dialog contains the following items:"
 msgstr ""
-"Per visualizzare le scorciatoie da tastiera che sono definite per il "
-"<application>Terminale di MATE</application>, selezionare "
+"Per visualizzare le scorciatoie da tastiera che sono definite per "
+"<application>MATE Terminal</application>, selezionare "
 "<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Scorciatoie da "
 "Tastiera</guimenuitem></menuchoice>.  La finestra di dialogo "
 "<guilabel>Scorciatoie da Tastiera</guilabel> contiene i seguenti oggetti: "
@@ -1233,7 +1233,7 @@ msgid ""
 "menu)</guilabel>"
 msgstr ""
 "<guilabel>Disabilita tutti i tasti di accesso al menu (come Alt+f per aprire"
-" il menu File)</guilabel>"
+" il menù File)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:634
@@ -1244,18 +1244,18 @@ msgid ""
 " In some cases, you must press the <keycap>Alt</keycap> key in combination "
 "with the access key to perform the action."
 msgstr ""
-"Deselezionare questa opzione per disabilitare i tasti di accesso per "
-"permettere di utilizzare la tastiera invece che il mouse per selezionare un "
-"oggetto del menu. In un menu o in un 'opzione di dialogo, ciascun tasto di "
-"accesso è definito da una lettera sottolineata. In alcuni casi, per eseguire"
-" un'azione, occorre tenere premuto il tasto <keycap>Alt</keycap> in "
-"combinazione al tasto di accesso."
+"Deselezionare questa opzione per disabilitare i tasti di accesso concepiti "
+"per permettere di utilizzare la tastiera al posto del mouse per selezionare "
+"un oggetto del menù. In un menù o in un'opzione di dialogo, ciascun tasto di"
+" accesso è definito da una lettera sottolineata. In alcuni casi, per "
+"eseguire un'azione, occorre tenere premuto il tasto <keycap>Alt</keycap> in "
+"combinazione con il tasto di accesso."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:639
 msgid "<guilabel>Disable menu shortcut key (F10 by default)</guilabel>"
 msgstr ""
-"<guilabel>Disabilitare il tasto scorciatoia per i menù (F10 come "
+"<guilabel>Disabilitare il tasto scorciatoia per i menù (F10 di "
 "default)</guilabel>"
 
 #. (itstool) path: listitem/para
@@ -1266,9 +1266,9 @@ msgid ""
 "default shortcut key to access the menus is <keycap>F10</keycap>."
 msgstr ""
 "Deselezionare questa opzione per disabilitare la combinazione di tasti "
-"scorciatoia definita per accedere ai menu di <application>Terminale di "
-"MATE</application>. Il tasto predefinito scorciatoia di accesso ai menù è "
-"<keycap>F10</keycap>."
+"scorciatoia definita per accedere ai menù di <application>MATE "
+"Terminal</application>. Il tasto predefinito scorciatoia di accesso ai menù "
+"è <keycap>F10</keycap>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:646
@@ -1303,7 +1303,7 @@ msgid ""
 "You can use the following methods to resize the text in the MATE Terminal "
 "window:"
 msgstr ""
-"Per ridimensionare il testo in una finestra di Terminale MATE, si possono "
+"Per ridimensionare il testo in una finestra di MATE Terminal, si possono "
 "utilizzare i seguenti procedimenti:"
 
 #. (itstool) path: listitem/para
@@ -1324,7 +1324,7 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
 "Out</guimenuitem></menuchoice>."
 msgstr ""
-"Per ridurre la dimensione del testo, seleziona "
+"Per ridurre la dimensione del testo, selezionare "
 "<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Riduci "
 "ingrandimento</guimenuitem></menuchoice>."
 
@@ -1335,7 +1335,7 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Normal "
 "Size</guimenuitem></menuchoice>."
 msgstr ""
-"Per vedere il testo alle dimensioni effettive, seleziona "
+"Per vedere il testo alle dimensioni effettive, selezionare "
 "<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Dimensione "
 "Normale</guimenuitem></menuchoice>."
 
@@ -1369,7 +1369,7 @@ msgid ""
 "<application>MATE Terminal</application> applies the change immediately."
 msgstr ""
 "Inserire il nuovo titolo nella casella di testo <guilabel>Titolo</guilabel>."
-" <application>Terminale di MATE</application> applicherà le modifiche "
+" <application>MATE Terminal</application> applicherà le modifiche "
 "immediatamente."
 
 #. (itstool) path: listitem/para
@@ -1430,7 +1430,7 @@ msgid ""
 "menu, select the encoding in the <guilabel>Available encodings</guilabel> "
 "list box, then click the right arrow button."
 msgstr ""
-"Per aggiungere una codifica al menu<guisubmenu>Imposta la Codifica dei "
+"Per aggiungere una codifica al menù <guisubmenu>Imposta la Codifica dei "
 "caratteri</guisubmenu>, selezionare la codifica dall'elenco "
 "<guilabel>Codifiche disponibili</guilabel> quindi premere il pulsante "
 "contrassegnato dalla freccia verso destra."
@@ -1442,7 +1442,7 @@ msgid ""
 "Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings "
 "shown in menu</guilabel> list box, then click the left arrow button."
 msgstr ""
-"Per rimuovere una codifica dal menu<guisubmenu>Imposta la Codifica dei "
+"Per rimuovere una codifica dal menù <guisubmenu>Imposta la Codifica dei "
 "caratteri</guisubmenu>, selezionare la codifica dall'elenco "
 "<guilabel>Codifiche disponibili</guilabel> quindi premere il pulsante "
 "contrassegnato dalla freccia verso sinistra."
@@ -1453,7 +1453,7 @@ msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove "
 "Terminal Encodings</guilabel> dialog."
 msgstr ""
-"Fare clic su <guibutton>Chiiudi</guibutton> per chiudere la finestra di "
+"Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di "
 "dialogo <guilabel>Aggiungi o rimuovi codifiche di terminale</guilabel>."
 
 #. (itstool) path: info/title
@@ -1512,7 +1512,7 @@ msgid ""
 " select the profile you want to edit, then click "
 "<guibutton>Edit</guibutton>."
 msgstr ""
-"Per configurare <application>Terminale di MATE</application>, selezionare "
+"Per configurare <application>MATE Terminal</application>, selezionare "
 "<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Preferenze del "
 "Profilo</guimenuitem></menuchoice>. Per configurare un profilo che si è "
 "impostato precedentemente, selezionare "
@@ -1529,7 +1529,7 @@ msgid ""
 msgstr ""
 "La finestra di dialogo <guilabel>Modifica del profilo</guilabel> contiene le"
 " seguenti sezioni a schede che possono essere utilizzate per configurare "
-"<application>Terminale di MATE</application>."
+"<application>MATE Terminal</application>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:763
@@ -1561,14 +1561,13 @@ msgid ""
 "<application>Appearance</application> preference tool."
 msgstr ""
 "Selezionare questa opzione per utilizzare il carattere a spaziatura fissa "
-"standard che è impostato nella scheda <guilabel>Tipi di Carattere</guilabel>"
-" della sezione <application>Aspetto</application> dello strumento "
-"preferenze."
+"standard che è impostato nella scheda <guilabel>Font</guilabel> della "
+"sezione <application>Aspetto</application> dello strumento preferenze."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:784
 msgid "<guilabel>Font</guilabel>"
-msgstr "<guilabel>Tipo di carattere</guilabel>"
+msgstr "<guilabel>Font</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:787
@@ -1577,10 +1576,9 @@ msgid ""
 "This button is only enabled if the <guilabel>Use the system terminal "
 "font</guilabel> option is unselected."
 msgstr ""
-"Fare clic su questo pulsante per selezionare un tipo di carattere e una sua "
-"dimensione per il terminale. Questo pulsante è attivo solo se l'opzione "
-"<guilabel>Usa il carattere del terminale di sistema</guilabel> è "
-"deselezionato."
+"Fare clic su questo pulsante per selezionare font e dimensione del font per "
+"il terminale. Questo pulsante è attivo solo se l'opzione <guilabel>Usa il "
+"carattere del terminale di sistema</guilabel> è deselezionato."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:792
@@ -1630,11 +1628,11 @@ msgid ""
 "select text by word. See <xref linkend=\"mate-terminal-contents\"/> for more"
 " information about how to select text by word."
 msgstr ""
-"Usare questo campo di testo per specificare i caratteri o i gruppi di "
-"caratteri che <application>Terminale di MATE</application> considera essere "
-"parole distinte quando si seleziona il testo per parole. Vedere <xref "
-"linkend=\"mate-terminal-contents\"/> per maggiori informazioni su come "
-"selezionare il testo per parole."
+"Utilizzare questo campo di testo per specificare i caratteri o i gruppi di "
+"caratteri che <application>MATE Terminal</application> considera essere "
+"parole quando si seleziona il testo per parole. Vedere <xref linkend=\"mate-"
+"terminal-contents\"/> per maggiori informazioni su come selezionare il testo"
+" per parole."
 
 #. (itstool) path: info/title
 #: C/index.docbook:831
@@ -1655,7 +1653,7 @@ msgid ""
 msgstr ""
 "Utilizzare questo campo di testo per specificare il titolo iniziale dei "
 "terminali che utilizzano il profilo. I nuovi terminali avviati dal terminale"
-" corrente avranno il titolo qui specificato."
+" corrente avranno il nuovo titolo qui specificato."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:843
@@ -1670,7 +1668,7 @@ msgid ""
 "Use this drop-down list to specify how to handle dynamically-set titles, "
 "that is, terminal titles set by commands that run in the terminal."
 msgstr ""
-"Utilizzare questa opzione per specificare come gestire i titoli impostati "
+"Utilizzare questo elenco per specificare come gestire i titoli impostati "
 "dinamicamente, cioè, i titoli del terminale impostati da comandi che sono "
 "eseguiti nel terminale."
 
@@ -1687,7 +1685,7 @@ msgid ""
 " has no effect."
 msgstr ""
 "Selezionare questa opzione per forzare il comando attualmente in esecuzione "
-"nel terminale di essere eseguito come una shell di login. Se il comando non "
+"nel terminale ad essere eseguito come una shell di login. Se il comando non "
 "è una shell, questa impostazione non ha effetto."
 
 #. (itstool) path: varlistentry/term
@@ -1734,8 +1732,8 @@ msgid ""
 "Use this drop-down list to specify what action to perform when the command "
 "exits."
 msgstr ""
-"Usare questo elenco a tendina per specificare quale azione compiere quando "
-"il comando termina."
+"Utilizzare questo elenco per specificare quale azione compiere quando il "
+"comando termina."
 
 #. (itstool) path: info/title
 #: C/index.docbook:891
@@ -1771,10 +1769,10 @@ msgid ""
 "Terminal</application> supports the following foreground and background "
 "color combinations:"
 msgstr ""
-"Utilizzare la lista a tendina <guilabel>Schemi incorporati</guilabel> per "
+"Utilizzare l'elenco a tendina <guilabel>Schemi predefiniti</guilabel> per "
 "specificare i colori di primo piano e di sfondo per il terminale. "
-"<application>Terminale di MATE</application> supporta le seguenti "
-"combinazioni per i colori di primo piano e dello sfondo:"
+"<application>MATE Terminal</application> supporta le seguenti combinazioni "
+"per i colori di primo piano e dello sfondo:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:906
@@ -1828,11 +1826,11 @@ msgid ""
 msgstr ""
 "Il risultato della scelta dei colori può variare a seconda del tema di "
 "colori che si sceglie. Ad esempio, se si seleziona <guilabel>Bianco su "
-"bero</guilabel> e lo schema di colori <guilabel>Console Linux</guilabel>, "
+"nero</guilabel> e lo schema di colori <guilabel>Console Linux</guilabel>, "
 "l'applicazione mostra i colori di primo-piano e di sfondo come grigio chiaro"
-" su nero. La lista <guilabel>Temi incorporati</guilabel> è disponibile solo "
-"se l'opzione <guilabel>Usare i colori dal tema di sistema</guilabel> non è "
-"selezionata."
+" su nero. La lista <guilabel>Schemi predefiniti</guilabel> è disponibile "
+"solo se l'opzione <guilabel>Usare i colori dal tema di sistema</guilabel> "
+"non è selezionata."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:942
@@ -1860,7 +1858,7 @@ msgid ""
 "<guibutton>Background colour</guibutton> button is only enabled if the "
 "<guilabel>Use colours from system theme</guilabel> option is unselected."
 msgstr ""
-"Fare click sul pulsante <guibutton>Colore dello sfondo</guibutton> per "
+"Fare clic sul pulsante <guibutton>Colore dello sfondo</guibutton> per "
 "mostrare la finestra di dialogo <guilabel>Scegli il colore dello sfondo del "
 "terminale</guilabel>. Utilizzare la ruota dei colori o le caselle per "
 "personalizzare il colore che si desidera usare come colore per lo sfondo, "
@@ -1883,7 +1881,7 @@ msgstr ""
 "L'emulazione del terminale può utilizzare solo 16 colori alla volta per "
 "disegnare il testo. La tavolozza colori specifica questi 16 colori. Le "
 "applicazioni che sono eseguite nel terminale utilizzano un numero indice per"
-" specificare un colore da questa tacvolozza."
+" specificare un colore da questa tavolozza."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:956
@@ -1892,10 +1890,10 @@ msgid ""
 "preset color schemes. The color palette below and the contents of the "
 "terminal window both update to show the scheme."
 msgstr ""
-"Utilizzare la lista a tendina <guilabel>Schemi incorporati</guilabel> per "
+"Utilizzare la lista a tendina <guilabel>Schemi predefiniti</guilabel> per "
 "selezionare uno schema di colori preimpostato. La tavolozza dei colori in "
-"basso  e la finestra del terminale si aggiorneranno entrambe per mostrare lo"
-" schema selezionato."
+"basso e la finestra del terminale si aggiorneranno entrambe per mostrare lo "
+"schema selezionato."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:957
@@ -1907,8 +1905,8 @@ msgid ""
 "<guibutton>OK</guibutton>."
 msgstr ""
 "Utilizzare la <guilabel>Tavolozza colori</guilabel> per personalizzare i 16 "
-"colori nella tavolozza colori personale. Per modificare un colore fare click"
-" sul colore per mostrare la finestra di dialogo "
+"colori nella tavolozza colori personale. Per modificare un colore fare clic "
+"sul colore per mostrare la finestra di dialogo "
 "<guilabel>Tavolozza</guilabel>. Utilizzare la ruota dei colori o le caselle "
 "per personalizzare il colore , quindi fare clic su "
 "<guibutton>Seleziona</guibutton>."
@@ -1985,7 +1983,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:992
 msgid "<guilabel>Transparent background</guilabel>"
-msgstr "<guilabel>Immagine di sfondo</guilabel>"
+msgstr "<guilabel>Sfondo trasparente</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:995
@@ -2060,7 +2058,7 @@ msgid ""
 "the terminal continues to display more output from a command."
 msgstr ""
 "Selezionare questa opzione per consentire di scorrere l'output sul terminale"
-" mentre il terminale continua a mostrare nuovo output de un comando."
+" mentre il terminale continua a mostrare nuovo output da un comando."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1045
@@ -2117,7 +2115,7 @@ msgstr ""
 #: C/index.docbook:1077
 msgid "<guibutton>Reset compatibility options to defaults</guibutton>"
 msgstr ""
-"<guibutton>Ripristina valori predefiniti per opzioni di "
+"<guibutton>Ripristina i valori predefiniti per le opzioni di "
 "compatibilità</guibutton>"
 
 #. (itstool) path: listitem/para
@@ -2141,9 +2139,9 @@ msgid ""
 msgstr ""
 "Questo documento può essere copiato, distribuito e/o modificato in "
 "conformità dei termini della GNU Free Documentation License (GFDL) Versione "
-"1.1 o delle versioni successive pubblicate dalla Free Software Foundation "
-"senza sezioni invariabili, frontespizi e testi di copertina. Una copia della"
-" GFDL è disponibile su questo <link xlink:href=\"help:fdl\" "
+"1.1 o di una qualsiasi versione successive pubblicata dalla Free Software "
+"Foundation senza sezioni invariabili, frontespizi e testi di copertina. Una "
+"copia della GFDL è disponibile su questo <link xlink:href=\"help:fdl\" "
 "type=\"help\">collegamento</link> o nel file COPYING-DOCS distribuito con "
 "questo manuale."
 
@@ -2254,5 +2252,6 @@ msgid ""
 "user-guide/feedback\">MATE Feedback Page</link>."
 msgstr ""
 "Per segnalare un malfunzionamento o un suggerimento per Terminale di MATE o "
-"su questo manuale, segui le indicazioni nella <link xlink:href=\"help:mate-"
-"user-guide/feedback\">Pagina di feedback di MATE</link>."
+"su questo manuale, seguire le indicazioni nella <link "
+"xlink:href=\"help:mate-user-guide/feedback\">Pagina di feedback di "
+"MATE</link>."

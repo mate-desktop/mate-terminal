@@ -7,19 +7,20 @@
 # worm <thewormhole@gmail.com>, 2018
 # Marko Šterman <marko.chamillionaire@gmail.com>, 2018
 # Damir Jerovšek <jierro@windowslive.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2018
 # jetomit <timotej.lazar@araneo.si>, 2018
 # Arnold Marko <arnold.marko@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Helena S <ele@tutamail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2021\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,9 +29,9 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
-msgstr "MATE Terminal"
+msgstr "Terminal MATE"
 
 #: mate-terminal.appdata.xml.in.in:8
 msgid "A terminal emulator for the MATE desktop environment"
@@ -50,8 +51,11 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"Terminal MATE je priredba programa GNOME Terminal in je del MATE namiznega "
+"okolja. Če želite izvedeti več o MATE in Terminalu MATE, obiščite domačo "
+"stran projekta."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
@@ -61,51 +65,53 @@ msgid "Use the command line"
 msgstr "Uporabi ukazno vrstico"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
-msgstr "_Prekliči"
+msgstr "Pre_kliči"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "_Zapri okno"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
-msgstr "Zapri to okno?"
+msgstr "Ali želite zapreti to okno?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Še vedno je dejavno opravilo v tem terminalu.\n"
+"Z zaprtjem terminala ga boste ustavili."
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Onemogoči povezavo z upravljalnikom seje"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Navaja datoteko s shranjenimi nastavitvami"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "DATOTEKA"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Določi ID upravljanja seje"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Možnosti upravljanja seje:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Pokaži možnosti upravljanja seje"
 
@@ -117,7 +123,7 @@ msgstr "Dodaj ali odstrani kodni nabor znakov terminala"
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
 #: src/terminal-window.c:1884
 msgid "_Help"
-msgstr "_Pomoč"
+msgstr "Po_moč"
 
 #: src/encodings-dialog.ui:59 src/find-dialog.ui:42
 #: src/keybinding-editor.ui:59 src/profile-manager.ui:76
@@ -131,7 +137,7 @@ msgstr "Podprti _nabori:"
 
 #: src/encodings-dialog.ui:202
 msgid "E_ncodings shown in menu:"
-msgstr "Nabori _prikazani v meniju:"
+msgstr "Nabori, _prikazani v meniju:"
 
 #. Translators: This refers to the Delete keybinding option
 #: src/extra-strings.c:25 src/profile-preferences.ui:184
@@ -161,7 +167,7 @@ msgstr "Ubežno zaporedje"
 #: src/extra-strings.c:33 src/profile-preferences.ui:196
 #: src/profile-preferences.ui:219
 msgid "TTY Erase"
-msgstr "TTY izbris"
+msgstr "Izbris TTY"
 
 #. Translators: Cursor shape: ...
 #: src/extra-strings.c:36 src/profile-preferences.ui:76
@@ -222,7 +228,7 @@ msgstr "Na desni strani"
 #: src/extra-strings.c:61 src/profile-preferences.ui:173
 #: src/terminal-accels.c:409
 msgid "Disabled"
-msgstr "Neomogočeno"
+msgstr "Onemogočeno"
 
 #. Translators: When terminal commands set their own titles: ...
 #: src/extra-strings.c:64 src/profile-preferences.ui:93
@@ -252,7 +258,7 @@ msgstr "Tango"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:75 src/profile-preferences.ui:144
 msgid "Linux console"
-msgstr "Linux konzola"
+msgstr "Konzola Linux"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:77 src/profile-preferences.ui:147
@@ -267,7 +273,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr ""
+msgstr "Solarizacija"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -390,6 +396,9 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Podrejeni izbor razpoložljivih naborov znakov je prikazan v podmeniju "
+"kodiranja. Nabor \"current\" (trenutno) pokaže kodiranje kot ga določajo "
+"trenutne jezikovne nastavitve."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -400,6 +409,8 @@ msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
+"Ali želite vprašanje za potrditev pri zapiranju okna terminala, ki ima odprt"
+" več kot en zavihek ali morebitne podprocese v ospredju."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
@@ -895,7 +906,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Poudari URL-je pod kazalcem miške"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
@@ -1022,6 +1033,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za prilepljenje vsebine odložišča v terminal, določena kot niz v "
+"enaki obliki kot je uporabljen v datotekah virov GTK+. V kolikor je določena"
+" vrednost \"onemogočena\", za to dejanje ne bo razpoložljive tipkovne "
+"bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
@@ -1034,6 +1049,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Bližnjica za izbiranje vsega besedila v terminalu, določena kot niz v enaki "
+"obliki kot je uporabljen v datotekah virov GTK+. Če je določena vrednost "
+"»onemogočena« (»disabled«), za to dejanje ne bo razpoložljive tipkovne "
+"bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
@@ -1046,10 +1065,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Bližnjica za prikaz okna iskanja, določena kot niz v enaki obliki kot je "
+"uporabljen v datotekah virov GTK+. Če je določena vrednost »onemogočena« "
+"(»disabled«), za to dejanje ne bo razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Tipkovna bližnjica za iskanje naslednje pojavitve iskanega izraza"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -1058,10 +1080,14 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za iskanje naslednje pojavitve iskanega izraza v terminalu, "
+"določena kot niz v enaki obliki kot je uporabljen v datotekah virov GTK+. Če"
+" je določena vrednost »onemogočena« (»disabled«), za to dejanje ne bo "
+"razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Tipkovna bližnjica za iskanje prejšnje pojavitve iskanega izraza"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -1070,6 +1096,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za iskanje prejšnje pojavitve iskanega izraza v terminalu, "
+"določena kot niz v enaki obliki kot je uporabljen v datotekah virov GTK+. Če"
+" je določena vrednost »onemogočena« (»disabled«), za to dejanje ne bo "
+"razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1519,13 +1549,13 @@ msgstr "Belo na črnem"
 #. translated
 #: src/profile-editor.c:70
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarizacija, svetlo"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:75
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarizacija, temno"
 
 #: src/profile-editor.c:498
 #, c-format
@@ -1563,7 +1593,7 @@ msgstr "_Nov"
 msgid "Edit"
 msgstr "Uredi"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Izbriši"
 
@@ -1629,7 +1659,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Poudari _URL-je pod kazalcem miške"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1877,7 +1907,7 @@ msgstr "_Naziv:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "V _redu"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2076,24 +2106,24 @@ msgstr "_Dejanje"
 msgid "Shortcut _Key"
 msgstr "_Tipkovna bližnjica"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Kliknite gumb za izbiro profila"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Seznam profilov"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Ali naj se izbriše profil “%s”?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Izbriši profil"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2102,25 +2132,25 @@ msgstr ""
 "Profil z imenom “%s” že obstaja. Ali želite ustvariti nov profil z istim "
 "imenom?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "Izberi osnovni profil"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Profil \"%s\" ne obstaja, uporabljen bo privzeti profil\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Neveljaven geometrijski niz \"%s\"\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Prikrojeno"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Napaka med razčlenjevanjem argumentov: %s\n"
@@ -2270,7 +2300,7 @@ msgstr "_Opis"
 msgid "_Encoding"
 msgstr "_Nabor znakov"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Trenutne jezikovne nastavitve"
 
@@ -2285,36 +2315,36 @@ msgstr ""
 "želeli ustvariti profil z želeno nastavitvijo in uporabiti novo možnost '--"
 "profile'\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Argument za \"%s\" ni veljaven ukaz: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Dani sta dve vlogi za eno okno"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Možnost \"%s\" je za isto okno podana dvakrat\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" ni veljavna vrednost približanja"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Določilo približanja \"%g\" je premajhno, zato bo uporabljeno %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Določilo približanja \"%g\" je preveliko, zato bo uporabljeno %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2323,15 +2353,15 @@ msgstr ""
 "Možnost \"%s\" zahteva navedbo ukaza, ki se požene na preostanku ukazne "
 "vrstice"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Ni veljavna datoteka nastavitev terminala."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Nepodprta različica nastavitvene datoteke terminala."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2339,105 +2369,105 @@ msgstr ""
 "Ne vpiši se pri aktivacijskem imenskem strežniku in ne uporabi ponovno "
 "dejavnega terminala"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Naloži nastavitveno datoteko terminala"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "Shrani nastavitve terminala v datoteko"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Odpri novo okno, ki vsebuje zavihek s privzetim profilom"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Odpri nov zavihek v zadnje odprtem oknu s privzetim profilom"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Pokaži menijsko vrstico"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Skrij menijsko vrstico"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Razpni okno"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Celozaslonsko okno"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Določitev velikosti okna; primer: 80x24 ali 80x24+200+200 (COLSxROWS+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GEOMETRIJA"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Nastavi vlogo okna"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "VLOGA"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Nastavi zadnji naveden zavihek kot dejaven v tem oknu"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Izvedi argument možnosti znotraj terminala"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Uporabi podan profil namesto privzetega"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "IME-PROFILA"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Nastavi naziv terminala"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "NAZIV"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Nastavi delovni imenik terminala"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "IMEIMENIKA"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Nastavi približanje terminala (1.0 = običajna velikost)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "Približanje"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "MATE posnemovalnik terminala"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Pokaži možnosti MATE terminala"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2445,11 +2475,11 @@ msgstr ""
 "Možnosti za odpiranje novih oken ali zavihkov terminala; določiti je mogoče "
 "več kot en predmet:"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Pokaži možnosti terminala"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2457,11 +2487,11 @@ msgstr ""
 "Možnosti okna; v primeru, da je uporabljena pred prvim --window ali --tab "
 "argumentom, je določilo privzeto za vsa okna:"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Pokaži možnosti za vsako okno terminala"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2469,7 +2499,7 @@ msgstr ""
 "Možnosti terminala; v primeru, da je uporabljena pred prvim --window ali "
 "--tab argumentom, je določilo privzeto za vse terminale:"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Pokaži možnosti za vsak terminal"
 
@@ -2477,30 +2507,30 @@ msgstr "Pokaži možnosti za vsak terminal"
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "_Možnosti profila"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_Ponovno zaženi"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Prišlo je do napake pri ustvarjanju podrejenih procesov tega terminala"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Podrejeno opravilo je pričakovano končano s stanjem %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Podrejeno opravilo je končano s signalom %d."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "Podrejeno opravilo je prekinjeno."
 
@@ -2516,12 +2546,12 @@ msgstr "Preklopi na ta zavihek"
 msgid "There was an error displaying help"
 msgstr "Med prikazovanjem pomoči je prišlo do napake"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Ni mogoče odpreti naslova “%s”"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2532,7 +2562,7 @@ msgstr ""
 "spreminjate pod pogoji GNU Splošnega javnega dovoljenja, kot ga izdaja Free "
 "Software Foundation; različica 2 ali kasnejše različice."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2542,7 +2572,7 @@ msgstr ""
 "MATE Terminal se širi v upanju, da bo uporaben, vendar brez kakršnekoli "
 "garancije. Za več podrobnosti si oglejte GNU Splošno javno licenco."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2555,7 +2585,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2563,7 +2593,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2786,48 +2816,52 @@ msgstr "Pokaži _menijsko vrstico"
 msgid "_Full Screen"
 msgstr "_Celozaslonski način"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Še vedno so dejavna opravila v terminalih tega okna.\n"
+"Z zapiranjem okna ustavite vsa."
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "V tem oknu je odprtih več zavihkov."
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Ali naj se okno terminala zapre?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "_Zapri terminal"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Ni mogoče shraniti vsebine"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Shrani kot ..."
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Sodelavci:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"Terminal MATE je emulator terminala za namizno okolje MATE.\n"
+"Poganja ga Virtual TErminal %d.%d.%d"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "O programu Terminal MATE"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2836,7 +2870,13 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2002–2004 Havoc Pennington\n"
+"Avtorske pravice © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Avtorske pravice © 2006 Guilherme de S. Pastore\n"
+"Avtorske pravice © 2007–2010 Christian Persch\n"
+"Avtorske pravice © 2011 Perberos\n"
+"Avtorske pravice © 2012-2021 razvijalci MATE"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr "zasluge-prevajalcev"

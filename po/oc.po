@@ -7,15 +7,15 @@
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
-# Quentin PAGÈS, 2021
+# Quentin PAGÈS, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Quentin PAGÈS, 2021\n"
+"Last-Translator: Quentin PAGÈS, 2022\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "Terminal MATE"
 
@@ -50,7 +50,7 @@ msgstr ""
 "l’environament de burèu MATE. Se volètz ne saber mai tocant MATE e MATE "
 "TERMINAL, consultatz lo site del projècte."
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Terminal"
@@ -60,20 +60,20 @@ msgid "Use the command line"
 msgstr "Utilizar la linha de comanda"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "_Anullar"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "Tampar _la fenèstra"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "Tampar aquesta fenèstra ?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -81,32 +81,32 @@ msgstr ""
 "I a un processus actiu dins aqueste terminal.\n"
 "Tampar lo terminal l'interromprà."
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Desactivar la connexion al gestionari de sessions"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Indicar un fichièr que conten la configuracion enregistrada"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FICHIÈR"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Indicar l'ID de gestion de session"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "Identificador"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Opcions de gestion de sessions :"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Afichar las opcions de gestion de sessions"
 
@@ -268,7 +268,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr ""
+msgstr "Solarizat"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -456,16 +456,16 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
-msgstr "Color per defaut del rèire plan del terminal"
+msgstr "Color per defaut del rèireplan del terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
-"Color per defaut del rèire plan del terminal. Coma en HTML, aquesta color "
-"pòt èsser indicada per un nom (« red ») o per de valors exadecimalas (« "
-"#FF003F »)."
+"Color per defaut del rèireplan del terminal. Coma en HTML, aquesta color pòt"
+" èsser indicada per un nom (« red ») o per de valors exadecimalas (« #FF003F"
+" »)."
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
@@ -532,7 +532,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
-msgstr ""
+msgstr "Indica se cal rendre mut lo bip del terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
@@ -743,7 +743,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
-msgstr "Poliça"
+msgstr "Polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
@@ -825,10 +825,13 @@ msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
+"se definit a true, lo jòc de colors del tèma utilizat per las bóstias de "
+"sasida de tèxte es utilizat pel terminal, a la plaça de las colors indicadas"
+" per l'utilizaire."
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
-msgstr "Utilizar la poliça sistèma"
+msgstr "Utilizar la polissa sistèma"
 
 #: src/org.mate.terminal.gschema.xml.in:274
 msgid ""
@@ -980,7 +983,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Acorchi de clavièr per anar al resultat seguent del tèrme recercat"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -992,7 +995,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Acorchi de clavièr per anar al resultat precedent del tèrme recercat"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -1303,7 +1306,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
-msgstr "Acorchi de clavièr per aumentar la talha de la poliça"
+msgstr "Acorchi de clavièr per aumentar la talha de la polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
@@ -1315,7 +1318,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
-msgstr "Acorchi de clavièr per redusir la talha de la poliça"
+msgstr "Acorchi de clavièr per redusir la talha de la polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
@@ -1327,7 +1330,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
-msgstr "Acorchi de clavièr per reïnicializar la poliça a la talha normala"
+msgstr "Acorchi de clavièr per reïnicializar la polissa a la talha normala"
 
 #: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
@@ -1361,13 +1364,13 @@ msgstr "Blanc sus negre"
 #. translated
 #: src/profile-editor.c:70
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarizat clar"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:75
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarizat escur"
 
 #: src/profile-editor.c:498
 #, c-format
@@ -1405,7 +1408,7 @@ msgstr "_Novèl"
 msgid "Edit"
 msgstr "Edicion"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Suprimir"
 
@@ -1439,15 +1442,15 @@ msgstr "Nom del _perfil :"
 
 #: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
-msgstr ""
+msgstr "_Utilizar la polissa de chassa fixa del sistèma"
 
 #: src/profile-preferences.ui:386
 msgid "_Font:"
-msgstr "_Poliça :"
+msgstr "_Polissa :"
 
 #: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
-msgstr "Causissètz la poliça del terminal"
+msgstr "Causissètz la polissa del terminal"
 
 #: src/profile-preferences.ui:424
 msgid "_Allow bold text"
@@ -1559,7 +1562,7 @@ msgstr "Color del _tèxte :"
 
 #: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
-msgstr "Causissètz la color del rèire plan del terminal"
+msgstr "Causissètz la color del rèireplan del terminal"
 
 #: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
@@ -1567,7 +1570,7 @@ msgstr "Causissètz la color del tèxte del terminal"
 
 #: src/profile-preferences.ui:1301
 msgid "_Background color:"
-msgstr "Color de _rèire plan :"
+msgstr "Color de _rèireplan :"
 
 #: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
@@ -1667,11 +1670,11 @@ msgstr "linhas"
 
 #: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
-msgstr ""
+msgstr "Linhas d'_istoric :"
 
 #: src/profile-preferences.ui:2226
 msgid "_Unlimited"
-msgstr ""
+msgstr "_Illimitat"
 
 #: src/profile-preferences.ui:2283
 msgid "Scrolling"
@@ -1715,7 +1718,7 @@ msgstr "_Títol :"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_D'acòrdi"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -1811,23 +1814,23 @@ msgstr ""
 
 #: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
-msgstr ""
+msgstr "Tornar a l'onglet precedent"
 
 #: src/terminal-accels.c:263
 msgid "Switch to Next Tab"
-msgstr ""
+msgstr "Passar a l'onglet seguent"
 
 #: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
-msgstr ""
+msgstr "Desplaçar l'onglet cap a esquèrra"
 
 #: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
-msgstr ""
+msgstr "Desplaçar l'onglet cap a dreita"
 
 #: src/terminal-accels.c:275
 msgid "Detach Tab"
-msgstr ""
+msgstr "Destacar l'onglet"
 
 #: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
@@ -1914,49 +1917,49 @@ msgstr "_Accion"
 msgid "Shortcut _Key"
 msgstr "A_corchi de clavièr"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Clicatz per causir un perfil"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Lista dels perfils"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Suprimir lo perfil « %s » ?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Suprimir lo perfil"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
 "profile with the same name?"
 msgstr ""
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
-msgstr ""
+msgstr "Causir un perfil de basa"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr ""
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr ""
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Definit per l'utilizaire"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Impossible d'analisar los paramètres : %s\n"
@@ -2106,7 +2109,7 @@ msgstr "_Descripcion"
 msgid "_Encoding"
 msgstr "_Encodatge"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Lenga actuala"
 
@@ -2118,36 +2121,36 @@ msgid ""
 "profile' option\n"
 msgstr ""
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Lo paramètre de « %s » es pas una comanda valida : %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Dos ròtles son estats atribuits a la meteissa fenèstra"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "l'opcion « %s » es estada atribuida dos còps a la meteissa fenèstra\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "« %s » es pas un factor de zoom valid"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "Lo factor de zoom « %g » es tròp pichon, utilizacion de %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "Lo factor de zoom « %g » es tròp grand, utilizacion de %g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2156,15 +2159,15 @@ msgstr ""
 "L'opcion « %s » necessita d'indicar la comanda d'aviar a la seguida de la "
 "linha de comanda"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Fichièr de configuracion pel terminal incorrècte."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Version de fichièr de configuracion pel terminal incompatible."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2172,107 +2175,109 @@ msgstr ""
 "S'enregistrar pas alprèp del servidor de noms d'activacion, reütilizar pas "
 "un terminal actiu"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Carga un fichièr de configuracion pel terminal"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr ""
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "Dobrís una novèla fenèstra que conten un onglet amb lo perfil per defaut"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Dobrís un novèl onglet dins la darrièra fenèstra dobèrta amb lo perfil per "
 "defaut"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Afichar la barra de menú"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Amagar la barra de menú"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Maximiza la fenèstra"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Fenèstra en ecran complet"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
+"Definís la talha de la fenèstra ; per exemple : 80x24 o 80x24+200+200 "
+"(COLOMNASxLINHAS+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "GEOMETRIA"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Definís lo ròtle de la fenèstra"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "RÒTLE"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Rend lo darrièr onglet indicat actiu"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Executa lo paramètre d'aquesta opcion dins lo terminal"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Utiliza lo perfil indicat a la plaça del perfil per defaut"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "NOMDELPERFIL"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Definir lo títol del terminal"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "TÍTOL"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Definís lo repertòri de trabalh"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "REPTRABALH"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Definís lo factor de zoom del terminal (1.0 = talha normala)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "Emulator de terminal MATE"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Mostrar las opcion del Terminal MATE"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2280,11 +2285,11 @@ msgstr ""
 "Opcions de dobertura de novèlas fenèstras o onglets de terminals ; mai d'una"
 " d'entre elas pòdon èsser indicadas :"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Afichar las opcions del terminal"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2293,11 +2298,11 @@ msgstr ""
 "--window o --tab, definisson las opcions per defaut per totas las fenèstras "
 ":"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Afichar las opcions per fenèstra"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2306,7 +2311,7 @@ msgstr ""
 "--window o --tab, definisson las opcions per defaut per totes los terminals "
 ":"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Afichar las opcions per terminal"
 
@@ -2314,31 +2319,31 @@ msgstr "Afichar las opcions per terminal"
 msgid "Unnamed"
 msgstr "Sens nom"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "Preferéncias del _perfil"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "_Reaviar"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "I a agut una error al moment de la creacion del processus filh per aqueste "
 "terminal"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Lo processus filh a quitat normalament amb l'estatut %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2354,12 +2359,12 @@ msgstr "Activar aqueste onglet"
 msgid "There was an error displaying help"
 msgstr "Una error s'es produsida al moment de l'afichatge de l'ajuda"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Impossible de dobrir l'adreça « %s »"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2371,7 +2376,7 @@ msgstr ""
 "publicada per la Free Software Foundation ; version 2 de la licéncia, o (se "
 "volètz) tota version seguenta."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2383,7 +2388,7 @@ msgstr ""
 "CONFORMITAT A UNA UTILIZACION PARTICULARA. Vejatz la Licéncia Publica "
 "Generala GNU per mai de detalhs."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2396,7 +2401,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2404,7 +2409,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2573,7 +2578,7 @@ msgstr "Bolegar l'onglet cap a _drecha"
 
 #: src/terminal-window.c:2066
 msgid "_Detach tab"
-msgstr ""
+msgstr "_Destacar l’onglet"
 
 #: src/terminal-window.c:2073
 msgid "_Contents"
@@ -2617,7 +2622,7 @@ msgstr "_Quitar l'ecran complet"
 
 #: src/terminal-window.c:2155
 msgid "_Input Methods"
-msgstr ""
+msgstr "_Metòdes de picada"
 
 #: src/terminal-window.c:2162
 msgid "Show _Menubar"
@@ -2627,37 +2632,37 @@ msgstr "Afichar la barra de _menú"
 msgid "_Full Screen"
 msgstr "_Ecran complet"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Tampar aqueste terminal ?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "Ta_mpar lo terminal"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Impossible d'enregistrar lo contengut"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Enregistrar jos..."
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Contributors :"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2666,11 +2671,11 @@ msgstr ""
 "MATE Terminal es un emulator de terminal per l'environament de burèu MATE.\n"
 "Propulsat per Virtual TErminal %d.%d.%d"
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr "A prepaus del Terminal MATE"
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2686,7 +2691,7 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 Los desvolopaires de MATE"
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "

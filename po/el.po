@@ -11,18 +11,18 @@
 # Achillefs Zogias <achillefs76@hotmail.com>, 2018
 # thunk <thunk77@gmail.com>, 2018
 # Alexandros Kapetanios <alexandros@gnugr.org>, 2018
-# Angelos Chraniotis <chraniotis@gmail.com>, 2018
+# Angelos Chraniotis, 2018
 # anvo <fragos.george@hotmail.com>, 2020
-# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2021\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "Τερματικό MATE"
 
@@ -54,7 +54,7 @@ msgid ""
 "please visit the project's home page."
 msgstr ""
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "Τερματικό"
@@ -64,51 +64,51 @@ msgid "Use the command line"
 msgstr "Χρήση γραμμής εντολών"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "Α_κύρωση"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "_Κλείσιμο παραθύρου"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "Κλείσιμο παραθύρου;"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "Απενεργοποίηση σύνδεσης με τον διαχειριστή συνεδρίας"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "Καθορισμός του αρχείου που περιέχει τις αποθηκευμένες ρυθμίσεις"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "ΑΡΧΕΙΟ"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "Καθορισμός ID διαχείρισης συνεδρίας"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "Επιλογές διαχείρισης συνεδρίας"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "Εμφάνιση επιλογών διαχείρισης συνεδρίας"
 
@@ -284,7 +284,7 @@ msgstr "Εύρεση"
 
 #: src/find-dialog.ui:59
 msgid "_Find"
-msgstr ""
+msgstr "_Εύρεση"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
@@ -1643,7 +1643,7 @@ msgstr "_Νέο"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
@@ -2160,24 +2160,24 @@ msgstr "_Ενέργεια"
 msgid "Shortcut _Key"
 msgstr "_Πλήκτρο συντόμευσης"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "Πατήστε το κουμπί για να επιλέξετε προφίλ"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "Λίστα προφίλ"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "Διαγραφή προφίλ “%s”;"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "Διαγραφή προφίλ"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2186,25 +2186,25 @@ msgstr ""
 "Υπάρχει ήδη προφίλ με το όνομα “%s”. Θέλετε να δημιουργήσετε δεύτερο προφίλ "
 "με το ίδιο όνομα;"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "Επιλέξτε βασικό προφίλ"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Δεν υπάρχει το προφίλ \"%s\". Θα χρησιμοποιηθεί το προεπιλεγμένο\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Μη έγκυρο αλφαριθμητικό γεωμετρίας \"%s\"\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "Καθορισμένη από το χρήστη"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Απέτυχε η ανάλυση των ορισμάτων: %s\n"
@@ -2354,7 +2354,7 @@ msgstr "_Περιγραφή"
 msgid "_Encoding"
 msgstr "_Κωδικοποίηση"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "Τρέχουσα εντοπιότητα"
 
@@ -2369,39 +2369,39 @@ msgstr ""
 "terminal. Μπορείτε να δημιουργήσετε ένα προφίλ με την επιθυμητή ρύθμιση και "
 "να χρησιμοποιήσετε τη νέα επιλογή '--profile'\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "Το όρισμα του \"%s\" δεν είναι έγκυρη εντολή: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "Δόθηκαν δύο ρόλοι στο ίδιο παράθυρο"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "Η επιλογή \"%s\" έχει δοθεί δύο φορές για το ίδιο παράθυρο\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "Το \"%s\" δεν είναι έγκυρος συντελεστής μεγέθυνσης"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr ""
 "Ο συντελεστής μεγέθυνσης \"%g\" είναι πολύ μικρός, θα χρησιμοποιηθεί το %g\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr ""
 "Ο συντελεστής μεγέθυνσης \"%g\" είναι πολύ μεγάλος, θα χρησιμοποιηθεί το "
 "%g\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2410,15 +2410,15 @@ msgstr ""
 "Η επιλογή \"%s\" απαιτεί να οριστεί η εντολή που θα εκτελεστεί στο υπόλοιπο "
 "της γραμμής εντολών"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "Μη έγκυρο αρχείο ρυθμίσεων τερματικού."
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "Μη συμβατή έκδοση αρχείου ρυθμίσεων τερματικού."
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2426,111 +2426,111 @@ msgstr ""
 "Να μη γίνεται εγγραφή στον activation nameserver, να μην "
 "επαναχρησιμοποιείται το ενεργό τερματικό"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "Φόρτωση αρχείου ρυθμίσεων τερματικού"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "Αποθήκευση σε αρχείο των ρυθμίσεων του τερματικού"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 "Άνοιγμα νέου παραθύρου, που να περιλαμβάνει μία καρτέλα με το προεπιλεγμένο "
 "προφίλ"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Άνοιγμα νέας καρτέλας στο τελευταίο παράθυρο που ανοίχθηκε με το "
 "προεπιλεγμένο προφίλ"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "Ενεργοποίηση γραμμής μενού"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "Απενεργοποίηση γραμμής μενού"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "Μεγιστοποίηση παραθύρου"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "Εμφάνιση του παραθύρου σε πλήρη οθόνη"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Ορισμός μεγέθους παραθύρου. Για παράδειγμα: 80x24, ή 80x24+200+200 "
 "(ΧΡΩΜΑΤΑxΓΡΑΜΜΕΣ+X+Y)"
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "ΓΕΩΜΕΤΡΙΑ"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "Ορισμός του ρόλου του παραθύρου"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "ΡΟΛΟΣ"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 "Ορισμός της τελευταίας καθορισμένης καρτέλας ως ενεργής στο παράθυρό της"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Εκτέλεση του ορίσματος αυτής της επιλογής μέσα στο τερματικό"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "Χρήση αυτού του προφίλ αντί του προεπιλεγμένου"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "ΟΝΟΜΑ-ΠΡΟΦΙΛ"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "Ορισμός του τίτλου του τερματικού"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "ΤΙΤΛΟΣ"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "Ορισμός του καταλόγου εργασίας του τερματικού"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "ΟΝΟΜΑΚΑΤΑΛΟΓΟΥ"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "Ορισμός του συντελεστή μεγέθυνσης τερματικού (1.0 = κανονικό μέγεθος)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ΜΕΓΕΘΥΝΣΗ"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "Προσομοίωση τερματικού MATE"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "Προβολή επιλογών τερματικού MATE"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2538,11 +2538,11 @@ msgstr ""
 "Επιλογές για το άνοιγμα νέων παραθύρων ή καρτελών τερματικού. Επιτρέπεται ο "
 "ορισμός πολλαπλών επιλογών:"
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "Προβολή επιλογών τερματικού"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2550,11 +2550,11 @@ msgstr ""
 "Επιλογές παραθύρων. Αν προηγούνται του πρώτου ορίσματος --window ή --tab, "
 "ορίζονται ως προεπιλογές για όλα τα παράθυρα:"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "Προβολή επιλογών ανά παράθυρο"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2562,7 +2562,7 @@ msgstr ""
 "Επιλογές τερματικών. Αν προηγούνται του πρώτου ορίσματος --window ή --tab, "
 "ορίζονται ως προεπιλογές για όλα τα τερματικά:"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "Προβολή επιλογών ανά τερματικό"
 
@@ -2570,30 +2570,30 @@ msgstr "Προβολή επιλογών ανά τερματικό"
 msgid "Unnamed"
 msgstr "Χωρίς όνομα"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "_Προτιμήσεις προφίλ"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "Επα_νεκκίνηση"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Σφάλμα κατά τη δημιουργία της θυγατρικής διεργασίας για αυτό το τερματικό"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Η θυγατρική διεργασία τερματίσθηκε κανονικά με κατάσταση %d."
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Η θυγατρική διεργασία τερματίστηκε από το σήμα %d."
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "Η θυγατρική διεργασία τερματίσθηκε."
 
@@ -2609,12 +2609,12 @@ msgstr "Μετάβαση σε αυτή την καρτέλα"
 msgid "There was an error displaying help"
 msgstr "Παρουσιάστηκε σφάλμα κατά την εμφάνιση της βοήθειας"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Αδυναμία ανοίγματος της διεύθυνσης “%s”"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2627,7 +2627,7 @@ msgstr ""
 "Λογισμικού (Free Software Foundation) - είτε της έκδοσης 2 της άδειας, είτε "
 "(κατ' επιλογήν) οποιασδήποτε μεταγενέστερης έκδοσης."
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2639,7 +2639,7 @@ msgstr ""
 "Η ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΓΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε για περισσότερες λεπτομέρειες"
 " ·την GNU General Public License."
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2652,7 +2652,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2660,7 +2660,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2883,48 +2883,48 @@ msgstr "Εμφάνιση γραμμής _μενού"
 msgid "_Full Screen"
 msgstr "_Πλήρης οθόνη"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "Κλείσιμο τερματικού;"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "Κλείσιμο τε_ρματικού"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "Αδύνατη η αποθήκευση του περιεχομένου"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "Αποθήκευση ως…"
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "Συντελεστές:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2934,7 +2934,7 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα MATE\n"

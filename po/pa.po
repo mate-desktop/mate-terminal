@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.25.0\n"
+"Project-Id-Version: mate-terminal 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2021-06-25 16:51+0200\n"
+"POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Panjabi (Punjabi) (https://www.transifex.com/mate/teams/13566/pa/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:190 src/terminal-window.c:4435
+#: src/terminal-options.c:189 src/terminal-window.c:4415
 msgid "MATE Terminal"
 msgstr "ਗਨੋਮ ਟਰਮੀਨਲ"
 
@@ -44,7 +44,7 @@ msgid ""
 "please visit the project's home page."
 msgstr ""
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
+#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
 msgid "Terminal"
 msgstr "ਟਰਮੀਨਲ"
@@ -54,51 +54,51 @@ msgid "Use the command line"
 msgstr "ਕਮਾਂਡ ਲਾਇਨ ਵਰਤੋਂ"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
-#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
+#: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:689
 msgid "_Cancel"
 msgstr "ਰੱਦ ਕਰੋ(_C)"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3622
+#: src/terminal-window.c:3604
 msgid "C_lose Window"
 msgstr "ਵਿੰਡੋ ਬੰਦ ਕਰੋ(_l)"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
 msgid "Close this window?"
 msgstr "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰਨੀ?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:234
+#: src/mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239
+#: src/mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "ਸੰਭਾਲੀ ਸੰਰਚਨਾ ਦੇਣ ਵਾਲੀ ਫਾਇਲ ਦਿਓ"
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:964
-#: src/terminal-options.c:973
+#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/terminal-options.c:971
 msgid "FILE"
 msgstr "ਫਾਇਲ"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ID ਦਿਓ"
 
-#: src/mate-submodules/libegg/eggsmclient.c:244
+#: src/mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ਚੋਣਾਂ:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:271
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ਚੋਣਾਂ ਵੇਖੋ"
 
@@ -1531,7 +1531,7 @@ msgstr "ਵੇਖੋ(_N)"
 msgid "Edit"
 msgstr "ਸੋਧ"
 
-#: src/profile-manager.ui:170 src/terminal-app.c:697
+#: src/profile-manager.ui:170 src/terminal-app.c:694
 msgid "_Delete"
 msgstr "ਹਟਾਓ(_D)"
 
@@ -2042,24 +2042,24 @@ msgstr "ਕਾਰਵਾਈ(_A)"
 msgid "Shortcut _Key"
 msgstr "ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚ(_K)"
 
-#: src/terminal-app.c:528
+#: src/terminal-app.c:525
 msgid "Click button to choose profile"
 msgstr "ਪਰੋਫਾਇਲ ਚੁਣਨ ਲਈ ਬਟਨ ਦਬਾਓ"
 
-#: src/terminal-app.c:611
+#: src/terminal-app.c:608
 msgid "Profile list"
 msgstr "ਪਰੋਫਾਇਲ ਲਿਸਟ"
 
-#: src/terminal-app.c:688
+#: src/terminal-app.c:685
 #, c-format
 msgid "Delete profile “%s”?"
 msgstr "ਕੀ ਪਰੋਫਾਇਲ “%s” ਹਟਾਉਣਾ ਹੈ?"
 
-#: src/terminal-app.c:704
+#: src/terminal-app.c:701
 msgid "Delete Profile"
 msgstr "ਪਰੋਫਾਇਲ ਹਟਾਓ"
 
-#: src/terminal-app.c:1151
+#: src/terminal-app.c:1148
 #, c-format
 msgid ""
 "You already have a profile called “%s”. Do you want to create another "
@@ -2068,25 +2068,25 @@ msgstr ""
 "ਤੁਹਾਡੇ ਕੋਲ ਪਹਿਲਾਂ ਹੀ “%s” ਪਰੋਫਾਇਲ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸੇ ਨਾਂ ਨਾਲ ਹੋਰ ਪਰੋਫਾਇਲ "
 "ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: src/terminal-app.c:1246
+#: src/terminal-app.c:1243
 msgid "Choose base profile"
 msgstr "ਬੇਸ ਪਰੋਫਾਇਲ ਚੁਣੋ"
 
-#: src/terminal-app.c:1841
+#: src/terminal-app.c:1837
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "ਇੰਜ ਦਾ ਕੋਈ ਪਰੋਫਾਇਲ \"%s\" ਨਹੀਂ, ਮੂਲ ਪਰੋਫਾਇਲ ਹੀ ਵਰਤ ਰਿਹਾ ਹੈ\n"
 
-#: src/terminal-app.c:1868
+#: src/terminal-app.c:1864
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "ਗਲਤ ਢਾਂਚਾ ਸਤਰ \"%s\"\n"
 
-#: src/terminal-app.c:2074
+#: src/terminal-app.c:2070
 msgid "User Defined"
 msgstr "ਯੂਜ਼ਰ ਪਰਭਾਸ਼ਿਤ"
 
-#: src/terminal.c:513
+#: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ਆਰਗੂਮੈਂਟ ਪਾਰਸ ਕਰਨ ਲਈ ਫੇਲ੍ਹ: %s\n"
@@ -2236,7 +2236,7 @@ msgstr "ਵੇਰਵਾ(_D)"
 msgid "_Encoding"
 msgstr "ਇੰਕੋਡਿੰਗ(_E)"
 
-#: src/terminal-encoding.c:596
+#: src/terminal-encoding.c:595
 msgid "Current Locale"
 msgstr "ਮੌਜੂਦ ਲੋਕੇਲ"
 
@@ -2251,154 +2251,154 @@ msgstr ""
 " ਨਾਲ ਪਰੋਫਾਇਲ ਬਣਾਉਣਾ ਚਾਹੀਦਾ ਹੈ, ਅਤੇ ਨਵੀਂ '--profile' ਚੋਣ ਦੀ ਵਰਤੋਂ ਕਰਨੀ ਚਾਹੀਦੀ"
 " ਹੈ।\n"
 
-#: src/terminal-options.c:210
+#: src/terminal-options.c:209
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr "\"%s\" ਲਈ ਆਰਗੂਮੈਂਟ ਇੱਕ ਠੀਕ ਕਮਾਂਡ ਨਹੀਂ ਹੈ: %s"
 
-#: src/terminal-options.c:349
+#: src/terminal-options.c:347
 msgid "Two roles given for one window"
 msgstr "ਇਕੋ ਵਿੰਡੋ ਲਈ ਦੋ ਰੋਲ ਦਿੱਤੇ ਗਏ ਹਨ"
 
-#: src/terminal-options.c:370 src/terminal-options.c:403
+#: src/terminal-options.c:368 src/terminal-options.c:401
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr "ਇੱਕੋ ਵਿੰਡੋ ਲਈ ਚੋਣ \"%s\" ਦੋ ਵਾਰ ਕੀਤੀ ਗਈ\n"
 
-#: src/terminal-options.c:602
+#: src/terminal-options.c:600
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr "\"%s\" ਇੱਕ ਜਾਇਜ਼ ਜ਼ੂਮ ਫੈਕਟਰ ਨਹੀਂ ਹੈ।"
 
-#: src/terminal-options.c:609
+#: src/terminal-options.c:607
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr "ਜ਼ੂਮ ਫੈਕਟਰ \"%g\" ਬਹੁਤ ਛੋਟਾ ਹੈ, %g ਦੀ ਵਰਤੋਂ ਨਾਲ\n"
 
-#: src/terminal-options.c:617
+#: src/terminal-options.c:615
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr "ਜ਼ੂਮ ਫੈਕਟਰ \"%g\" ਬਹੁਤ ਵੱਧ ਹੈ, %g ਦੀ ਵਰਤੋਂ ਨਾਲ\n"
 
-#: src/terminal-options.c:652
+#: src/terminal-options.c:650
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr "ਚੋਣ \"%s\" ਲਈ ਇੱਕ ਕਮਾਂਡ ਲੋਡ਼ੀਦੀ ਹੈ, ਜੋ ਬਾਕੀ ਕਮਾਂਡ ਲਾਈਨਾਂ ਤੇ ਚੱਲੇ"
 
-#: src/terminal-options.c:813
+#: src/terminal-options.c:811
 msgid "Not a valid terminal config file."
 msgstr "ਇੱਕ ਢੁੱਕਵੀਂ ਟਰਮੀਨਲ ਸੰਰਚਨਾ ਫਾਇਲ ਨਹੀਂ ਹੈ।"
 
-#: src/terminal-options.c:826
+#: src/terminal-options.c:824
 msgid "Incompatible terminal config file version."
 msgstr "ਅਢੁੱਕਵਾਂ ਟਰਮੀਨਲ ਸੰਰਚਨਾ ਫਾਇਲ ਵਰਜਨ ਹੈ।"
 
-#: src/terminal-options.c:954
+#: src/terminal-options.c:952
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "ਸਰਗਰਮ ਨਾਂ-ਸਰਵਰ ਨਾਲ ਰਜਿਸਟਰ ਨਾ ਕਰੋ, ਨਾ ਹੀ ਮੁਡ਼ ਸਰਗਰਮ ਟਰਮੀਨਲ ਵਰਤੋਂ"
 
-#: src/terminal-options.c:963
+#: src/terminal-options.c:961
 msgid "Load a terminal configuration file"
 msgstr "ਟਰਮੀਨਲ ਸੰਰਚਨਾ ਫਾਇਲ ਲੋਡ ਕਰੋ"
 
-#: src/terminal-options.c:972
+#: src/terminal-options.c:970
 msgid "Save the terminal configuration to a file"
 msgstr "ਟਰਮੀਨਲ ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ ਸੰਭਾਲੋ"
 
-#: src/terminal-options.c:987
+#: src/terminal-options.c:985
 msgid "Open a new window containing a tab with the default profile"
 msgstr "ਡਿਫਾਲਟ ਪਰੋਫਾਇਲ ਰੱਖਣ ਵਾਲੀ ਇੱਕ ਟੈਬ ਇੱਕ ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: src/terminal-options.c:996
+#: src/terminal-options.c:994
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "ਆਖਰੀ-ਖੁੱਲੀ ਵਿੰਡੋ ਵਿੱਚ ਦਿੱਤੇ ਡਿਫਾਲਟ ਪਰੋਫਾਇਲ ਨਾਲ ਨਵੀਂ ਟੈਬ ਖੋਲ੍ਹੋ।"
 
-#: src/terminal-options.c:1010
+#: src/terminal-options.c:1008
 msgid "Turn on the menubar"
 msgstr "ਮੇਨੂ-ਪੱਟੀ ਵੇਖੋ"
 
-#: src/terminal-options.c:1019
+#: src/terminal-options.c:1017
 msgid "Turn off the menubar"
 msgstr "ਮੇਨੂਪੱਟੀ ਓਹਲੇ"
 
-#: src/terminal-options.c:1028
+#: src/terminal-options.c:1026
 msgid "Maximize the window"
 msgstr "ਵਿੰਡੋ ਮੈਕਸੀਮਾਈਜ਼"
 
-#: src/terminal-options.c:1037
+#: src/terminal-options.c:1035
 msgid "Full-screen the window"
 msgstr "ਵਿੰਡੋ ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ"
 
-#: src/terminal-options.c:1046
+#: src/terminal-options.c:1044
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
-#: src/terminal-options.c:1047
+#: src/terminal-options.c:1045
 msgid "GEOMETRY"
 msgstr "ਜੁਮੈਟਰੀ"
 
-#: src/terminal-options.c:1055
+#: src/terminal-options.c:1053
 msgid "Set the window role"
 msgstr "ਵਿੰਡੋ ਰੋਲ ਦਿਓ"
 
-#: src/terminal-options.c:1056
+#: src/terminal-options.c:1054
 msgid "ROLE"
 msgstr "ਰੋਲ"
 
-#: src/terminal-options.c:1064
+#: src/terminal-options.c:1062
 msgid "Set the last specified tab as the active one in its window"
 msgstr "ਆਖਰੀ ਦਿੱਤੀ ਟੈਬ ਇਸ ਦੇ ਇੱਕ ਝਰੋਖੇ ਵਿੱਚ ਸਰਗਰਮ ਸੈੱਟ ਕਰੋ"
 
-#: src/terminal-options.c:1078
+#: src/terminal-options.c:1076
 msgid "Execute the argument to this option inside the terminal"
 msgstr "ਟਰਮੀਨਲ ਵਿੱਚ ਇਹ ਚੋਣ ਲਈ ਆਰਗੂਮੈਂਟ ਚਲਾਓ"
 
-#: src/terminal-options.c:1087
+#: src/terminal-options.c:1085
 msgid "Use the given profile instead of the default profile"
 msgstr "ਡਿਫਾਲਟ ਪਰੋਫਾਇਲ ਦੀ ਬਜਾਏ ਦਿੱਤਾ ਪਰੋਫਾਇਲ ਵਰਤੋਂ"
 
-#: src/terminal-options.c:1088
+#: src/terminal-options.c:1086
 msgid "PROFILE-NAME"
 msgstr "ਪਰੋਫਾਇਲ-ਨਾਂ"
 
-#: src/terminal-options.c:1096
+#: src/terminal-options.c:1094
 msgid "Set the terminal title"
 msgstr "ਟਰਮੀਨਲ ਟਾਈਟਲ ਸੈੱਟ ਕਰੋ"
 
-#: src/terminal-options.c:1097
+#: src/terminal-options.c:1095
 msgid "TITLE"
 msgstr "ਟਾਈਟਲ"
 
-#: src/terminal-options.c:1105
+#: src/terminal-options.c:1103
 msgid "Set the working directory"
 msgstr "ਵਰਕਿੰਗ ਡਾਇਰੈਕਟਰੀ ਸੈੱਟ ਕਰੋ"
 
-#: src/terminal-options.c:1106
+#: src/terminal-options.c:1104
 msgid "DIRNAME"
 msgstr "ਡਾਇ ਨਾਂ"
 
-#: src/terminal-options.c:1114
+#: src/terminal-options.c:1112
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr "ਟਰਮੀਨਲ ਦਾ ਜ਼ੂਮ ਫੈਕਟਰ ਦਿਓ (੧.੦=ਸਧਾਰਨ ਅਕਾਰ)"
 
-#: src/terminal-options.c:1115
+#: src/terminal-options.c:1113
 msgid "ZOOM"
 msgstr "ਜ਼ੂਮ"
 
-#: src/terminal-options.c:1366 src/terminal-options.c:1369
+#: src/terminal-options.c:1364 src/terminal-options.c:1367
 msgid "MATE Terminal Emulator"
 msgstr "ਗਨੋਮ ਟਰਮੀਨਲ ਈਮੂਲੇਟਰ"
 
-#: src/terminal-options.c:1370
+#: src/terminal-options.c:1368
 msgid "Show MATE Terminal options"
 msgstr "ਗਨੋਮ ਟਰਮੀਨਲ ਚੋਣਾਂ ਵੇਖੋ"
 
-#: src/terminal-options.c:1380
+#: src/terminal-options.c:1378
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2406,11 +2406,11 @@ msgstr ""
 "ਨਵੀਆਂ ਵਿੰਡੋਜ਼ ਜਾਂ ਟਰਮੀਨਲ ਟੈਬਾਂ ਖੋਲ੍ਹਣ ਲਈ ਚੋਣਾਂ; ਇੱਕ ਤੋਂ ਵੱਧ ਵੀ ਦਿੱਤੀਆਂ ਜਾ "
 "ਸਕਦੀਆਂ ਹਨ: "
 
-#: src/terminal-options.c:1381
+#: src/terminal-options.c:1379
 msgid "Show terminal options"
 msgstr "ਟਰਮੀਨਲ ਚੋਣਾਂ ਵੇਖੋ"
 
-#: src/terminal-options.c:1389
+#: src/terminal-options.c:1387
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2418,11 +2418,11 @@ msgstr ""
 "ਵਿੰਡੋ ਚੋਣਾਂ: ਜੇ ਪਹਿਲੇ --window ਜਾਂ --tab ਆਰਗੂਮੈਂਟ ਤੋਂ ਪਹਿਲਾਂ ਵਰਤਿਆ ਤਾਂ ਸਭ "
 "ਵਿੰਡੋਜ਼ ਲਈ ਡਿਫਾਲਟ ਸੈੱਟ ਹੋਵੇਗਾ।"
 
-#: src/terminal-options.c:1390
+#: src/terminal-options.c:1388
 msgid "Show per-window options"
 msgstr "ਹਰੇਕ-ਵਿੰਡੋ ਚੋਣਾਂ ਵੇਖੋ"
 
-#: src/terminal-options.c:1398
+#: src/terminal-options.c:1396
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2430,7 +2430,7 @@ msgstr ""
 "ਟਰਮੀਨਲ ਚੋਣਾਂ; ਜੇ ਇਸ ਨੂੰ ਪਹਿਲੇ --window ਜਾਂ --tab ਆਰਗੂਮੈਂਟ ਤੋਂ ਪਹਿਲਾਂ ਵਰਤਿਆ "
 "ਤਾਂ ਸਭ ਟਰਮੀਨਲਾਂ ਲਈ ਡਿਫਾਲਟ ਸੈੱਟ ਹੋਵੇਗਾ।"
 
-#: src/terminal-options.c:1399
+#: src/terminal-options.c:1397
 msgid "Show per-terminal options"
 msgstr "ਹਰ-ਟਰਮੀਨਲ ਚੋਣਾਂ ਵੇਖੋ"
 
@@ -2438,29 +2438,29 @@ msgstr "ਹਰ-ਟਰਮੀਨਲ ਚੋਣਾਂ ਵੇਖੋ"
 msgid "Unnamed"
 msgstr "ਬਿਨ-ਨਾਂ"
 
-#: src/terminal-screen.c:1524
+#: src/terminal-screen.c:1523
 msgid "_Profile Preferences"
 msgstr "ਪਰੋਫਾਇਲ ਪਸੰਦ(_P)"
 
-#: src/terminal-screen.c:1525 src/terminal-screen.c:1967
+#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
 msgid "_Relaunch"
 msgstr "ਮੁੜ-ਚਲਾਓ(_R)"
 
-#: src/terminal-screen.c:1528
+#: src/terminal-screen.c:1527
 msgid "There was an error creating the child process for this terminal"
 msgstr "ਇਸ ਟਰਮੀਨਲ ਲਈ ਚਲਾਇਡ ਕਾਰਜ ਬਣਾਉਣ ਵਿੱਚ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/terminal-screen.c:1972
+#: src/terminal-screen.c:1971
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈਸ ਅਚਾਨਕ ਹੀ %d ਹਾਲਤ ਨਾਲ ਬੰਦ ਹੋ ਗਿਆ।"
 
-#: src/terminal-screen.c:1977
+#: src/terminal-screen.c:1976
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਨੂੰ ਸਿਗਨਲ %d ਵਲੋਂ ਬੰਦ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: src/terminal-screen.c:1982
+#: src/terminal-screen.c:1981
 msgid "The child process was terminated."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਨੂੰ ਬੰਦ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
@@ -2476,12 +2476,12 @@ msgstr "ਅਗਲੀ ਟੈਬ ਉੱਤੇ ਜਾਓ"
 msgid "There was an error displaying help"
 msgstr "ਮੱਦਦ ਵੇਖਾਉਣ ਦੇ ਦੌਰਾਨ ਗਲਤੀ"
 
-#: src/terminal-util.c:218
+#: src/terminal-util.c:217
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "ਐਡਰੈੱਸ “%s” ਖੁੱਲ ਨਹੀਂ ਸਕਿਆ"
 
-#: src/terminal-util.c:326
+#: src/terminal-util.c:325
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2492,7 +2492,7 @@ msgstr ""
 "ਨੂੰ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਨਡੇਸ਼ਨ ਨੇ ਤਿਆਰ ਕੀਤਾ ਹੈ, ਦੇ ਵਰਜਨ ੩ ਜਾਂ ਨਵੇਂ ਦੀਆਂ ਸ਼ਰਤਾਂ "
 "(ਉਹ ਤੁਹਾਡੀ ਆਪਣੀ ਮਰਜ਼ੀ ਹੈ) ਅਧੀਨ ਵੰਡ ਅਤੇ/ਜਾਂ ਸੋਧ ਸਕਦੇ ਹੋ।"
 
-#: src/terminal-util.c:330
+#: src/terminal-util.c:329
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2503,7 +2503,7 @@ msgstr ""
 "ਕੋਈ ਵਾਰੰਟੀ ਨਹੀਂ ਲਈ ਜਾ ਰਹੀ ਹੈ, ਕਿਸੇ ਖਾਸ ਕੰਮ ਲਈ ਅਨੁਕੂਲ ਹੋਣ ਜਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ "
 "ਕਰਨ ਦੀ ਵੀ ਕੋਈ ਗਾਰੰਟੀ ਨਹੀਂ ਹੈ। ਹੋਰ ਵੇਰਵੇ ਲਈ ਗਨੂ ਜਰਨਲ ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਨੂੰ ਪੜ੍ਹੋ।"
 
-#: src/terminal-util.c:334
+#: src/terminal-util.c:333
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2516,7 +2516,7 @@ msgstr ""
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: src/terminal-window.c:618
+#: src/terminal-window.c:619
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2524,7 +2524,7 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: src/terminal-window.c:624
+#: src/terminal-window.c:625
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
@@ -2747,48 +2747,48 @@ msgstr "ਮੇਨੂ-ਪੱਟੀ ਵੇਖੋ(_M)"
 msgid "_Full Screen"
 msgstr "ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ(_F)"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3590
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3613
+#: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3624
+#: src/terminal-window.c:3606
 msgid "Close this terminal?"
 msgstr "ਇਹ ਟਰਮੀਨਲ ਬੰਦ ਕਰਨਾ?"
 
-#: src/terminal-window.c:3625
+#: src/terminal-window.c:3607
 msgid "C_lose Terminal"
 msgstr "ਟਰਮੀਨਲ ਬੰਦ ਕਰੋ(_l)"
 
-#: src/terminal-window.c:3695
+#: src/terminal-window.c:3677
 msgid "Could not save contents"
 msgstr "ਸਮੱਗਰੀ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ"
 
-#: src/terminal-window.c:3719
+#: src/terminal-window.c:3701
 msgid "Save as..."
 msgstr "...ਵਜੋਂ ਸੰਭਾਲੋ"
 
-#: src/terminal-window.c:4415
+#: src/terminal-window.c:4395
 msgid "Contributors:"
 msgstr "ਯੋਗਦਾਨੀ:"
 
-#: src/terminal-window.c:4431
+#: src/terminal-window.c:4411
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4437
+#: src/terminal-window.c:4417
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4438
+#: src/terminal-window.c:4418
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2798,7 +2798,7 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4450
+#: src/terminal-window.c:4430
 msgid "translator-credits"
 msgstr ""
 "ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ ੨੦੦੪\n"
