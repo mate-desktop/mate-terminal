@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<page xmlns="http://projectmallard.org/1.0/" id="mate-terminal-first-start" type="topic">
+  <info>
+    <link type="guide" xref="index#get-started"/>
+    <link type="next" xref="mate-terminal-profiles"/>
+  </info>
+  <title>When You First Start MATE Terminal</title>
+  <p>
+          When you start <app>MATE Terminal</app> for the first time, the application opens a terminal window with a group of default settings. The group of default settings is called the Default profile.  </p>
+  <figure>
+      <title>Example of a Default MATE Terminal Window</title>
+      <media type="image" src="figures/mate-terminal-default.png"/>
+  </figure>
+  <p>
+          The terminal window displays a command prompt where you can type UNIX commands. The command prompt can be a %, #, &gt;, $, or any other special character. The cursor is positioned at the command prompt. When you type a UNIX command and press <key>Return</key>, the computer executes the command. By default, <app>MATE Terminal</app> uses the default shell specified for the user who starts the application. 
+        </p>
+  <p><app>MATE Terminal</app> also sets the following environment variables: 
+        </p>
+  <terms style="variablelist">
+    <item>
+      <title>
+        <code style="varname">TERM</code>
+      </title>
+      <p>
+                  Set to <code style="literal">xterm-256color</code> by default. 
+                </p>
+    </item>
+    <item>
+      <title>
+        <code style="varname">WINDOWID</code>
+      </title>
+      <p>
+                  Set to the X11 window identifier by default. 
+                </p>
+    </item>
+  </terms>
+</page>

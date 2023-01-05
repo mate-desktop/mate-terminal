@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<page xmlns="http://projectmallard.org/1.0/" id="mate-terminal-contents" type="topic">
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="next" xref="mate-terminal-shortcuts"/>
+  </info>
+  <title>Working with the Contents of Terminal Windows</title>
+  <terms style="variablelist">
+    <item>
+      <title>To scroll through previous commands and output:</title>
+      <p>
+                  Perform one of the following actions: 
+                </p>
+      <list style="itemizedlist">
+        <item>
+          <p>
+                        Use the scrollbar, which is usually displayed on the right of the terminal window.  </p>
+        </item>
+        <item>
+          <p>
+                        Press the <keyseq><key>Shift</key><key>Page Up</key></keyseq>, <keyseq><key>Shift</key><key>Page Down</key></keyseq>, <keyseq><key>Shift</key><key>Home</key></keyseq>, or <keyseq><key>Shift</key><key>End</key></keyseq> keys.  </p>
+        </item>
+      </list>
+      <p>
+                  The number of lines that you can scroll back to in the terminal window is determined by the <gui style="guilabel">Scrollback</gui> setting in the <gui style="guilabel">Scrolling</gui> tabbed section of the <gui style="guilabel">Editing Profile</gui> dialog.  You can also scroll up or down one line at a time by pressing <keyseq><key>Control</key><key>Shift</key><key>Up</key></keyseq> or <keyseq><key>Control</key><key>Shift</key><key>Down</key></keyseq>. </p>
+    </item>
+    <item>
+      <title>To select and copy text:</title>
+      <p>
+                  You can select text in any of the following ways: 
+                </p>
+      <list style="itemizedlist">
+        <item>
+          <p>
+                        To select a character at a time, click on the first character that you want to select and drag the mouse to the last character that you want to select.  </p>
+        </item>
+        <item>
+          <p>
+                        To select a word at a time, double-click on the first word that you want to select and drag the mouse to the last word that you want to select. Symbols are selected individually.</p>
+        </item>
+        <item>
+          <p>
+                        To select a line at a time, triple-click on the first line that you want to select and drag the mouse to the last line that you want to select.  </p>
+        </item>
+      </list>
+      <p>
+                  These actions select all text between the first and last items. For all text selections, <app>MATE Terminal</app> copies the selected text into the clipboard when you release the mouse button. To explicitly copy the selected text, choose <guiseq><gui style="guimenu">Edit</gui><gui style="guimenuitem">Copy</gui></guiseq>.</p>
+    </item>
+    <item>
+      <title>To paste text into a terminal:</title>
+      <p>
+                  If you previously copied text to the clipboard, you can paste the text into a terminal by performing one of the following actions: </p>
+      <list style="itemizedlist">
+        <item>
+          <p>
+                        To paste text that you copied by selection only, middle-click at the command prompt. If you do not have a middle mouse button, refer to the X Server documentation for information about how to emulate the middle mouse button.  </p>
+        </item>
+        <item>
+          <p>
+                        To paste text that you explicitly copied, choose <guiseq><gui style="guimenu">Edit</gui><gui style="guimenuitem">Paste</gui></guiseq>. </p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <title>To drag a file name into a terminal window:</title>
+      <p>
+                  You can drag a file name to a terminal from another application such as a file manager. The terminal displays the path and the full name of the file.  </p>
+    </item>
+    <item>
+      <title>To access a link:</title>
+      <p>
+                  To access a Uniform Resource Locator (URL) that is displayed in a terminal, perform the following steps: </p>
+      <p> 
+                      
+                        
+                          Move the mouse over the URL until the URL is underlined.  
+                      
+                      
+                        
+                          Right-click on the URL to open a popup menu.  
+                      
+                      
+                        
+                          Choose <gui style="guimenuitem">Open Link</gui> to start a link application and display the file located at the URL.  
+                      
+                  </p>
+    </item>
+  </terms>
+</page>
