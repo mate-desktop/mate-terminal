@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<page xmlns="http://projectmallard.org/1.0/" id="mate-terminal-prefs-colors" type="topic">
+  <info>
+    <link type="guide" xref="index#prefs"/>
+    <link type="next" xref="mate-terminal-prefs-effects"/>
+  </info>
+  <title>Colours</title>
+  <terms style="variablelist">
+    <item>
+      <title>
+        <gui style="guilabel">Foreground and Background</gui>
+      </title>
+      <p>
+                  Select the <gui style="guilabel">Use colours from system theme</gui> option to use the colors that are specified in the MATE Desktop theme that is selected in the <gui style="guilabel">Theme</gui> tab of the <app>Appearance</app> preference tool.
+                </p>
+      <p>
+                  Use the <gui style="guilabel">Built-in schemes</gui> drop-down list to specify the foreground and background colors for the terminal. <app>MATE Terminal</app> supports the following foreground and background color combinations: 
+                </p>
+      <list style="itemizedlist">
+        <item>
+          <p>
+            <gui style="guilabel">Black on light yellow</gui>
+          </p>
+        </item>
+        <item>
+          <p>
+            <gui style="guilabel">Black on white</gui>
+          </p>
+        </item>
+        <item>
+          <p>
+            <gui style="guilabel">Gray on black</gui>
+          </p>
+        </item>
+        <item>
+          <p>
+            <gui style="guilabel">Green on black</gui>
+          </p>
+        </item>
+        <item>
+          <p>
+            <gui style="guilabel">White on black</gui>
+          </p>
+        </item>
+        <item>
+          <p>
+            <gui style="guilabel">Custom</gui>
+          </p>
+          <p>
+                        This option enables you to select colors that are not in the selected color scheme. 
+                     </p>
+        </item>
+      </list>
+      <p>
+                  The actual display of the foreground and background colors can vary depending on the color scheme that you choose. For example, if you choose <gui style="guilabel">White on black</gui> and the <gui style="guilabel">Linux console</gui> color scheme, the application displays the foreground and background colors as light gray on black. The <gui style="guilabel">Built-in schemes</gui> drop-down list is only enabled if the <gui style="guilabel">Use colours from system theme</gui> option is unselected. 
+                </p>
+      <p>
+                  Click on the <gui style="guibutton">Text colour</gui> button to display the <gui style="guilabel">Choose terminal text colour</gui> dialog. Use the color wheel or the spin boxes to customize the color that you want to use as the text color, then click <gui style="guibutton">OK</gui>. The <gui style="guibutton">Text colour</gui> button is only enabled if the <gui style="guilabel">Use colours from system theme</gui> option is unselected.
+                </p>
+      <p>
+                  Click on the <gui style="guibutton">Background colour</gui> button to display the <gui style="guilabel">Choose terminal background colour</gui> dialog. Use the color wheel or the spin boxes to customize the color that you want to use as the background color, then click <gui style="guibutton">OK</gui>. The <gui style="guibutton">Background colour</gui> button is only enabled if the <gui style="guilabel">Use colours from system theme</gui> option is unselected.
+                </p>
+    </item>
+    <item>
+      <title>
+        <gui style="guilabel">Palette</gui>
+      </title>
+      <p>
+                  The terminal emulation can only use 16 colors at a time to draw text. The color palette specifies these 16 colors. Applications that run in the terminal use an index number to specify a color from this palette.</p>
+      <p>Use the <gui style="guilabel">Built-in schemes</gui> drop-down list to choose a preset color schemes. The color palette below and the contents of the terminal window both update to show the scheme.</p>
+      <p>Use the <gui style="guilabel">Colour palette</gui> to customize the 16 default colors in the custom color palette. To customize a color, click on the color to display the <gui style="guilabel">Palette entry</gui> dialog. Use the color wheel or the spin boxes to customize the color, then click <gui style="guibutton">OK</gui>. 
+                </p>
+    </item>
+  </terms>
+</page>
