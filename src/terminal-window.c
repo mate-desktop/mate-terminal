@@ -1554,6 +1554,8 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
                     NULL, NULL,
                     info->button,
                     info->timestamp);
+    gtk_style_context_add_class(gtk_widget_get_style_context (popup_menu),
+                                GTK_STYLE_CLASS_CONTEXT_MENU);
 }
 
 static void
