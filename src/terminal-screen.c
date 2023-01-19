@@ -55,7 +55,7 @@
 typedef struct
 {
 	int tag;
-	TerminalURLFlavour flavor;
+	TerminalURLFlavor flavor;
 } TagData;
 
 struct _TerminalScreenPrivate
@@ -161,7 +161,7 @@ static guint signals[LAST_SIGNAL] = { 0 };
 typedef struct
 {
 	const char *pattern;
-	TerminalURLFlavour flavor;
+	TerminalURLFlavor flavor;
 	guint32 flags;
 } TerminalRegexPattern;
 
@@ -175,7 +175,7 @@ static const TerminalRegexPattern url_regex_patterns[] =
 };
 
 static VteRegex **url_regexes;
-static TerminalURLFlavour *url_regex_flavors;
+static TerminalURLFlavor *url_regex_flavors;
 static guint n_url_regexes;
 
 static void terminal_screen_url_match_remove (TerminalScreen *screen);
@@ -574,7 +574,7 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 	/* Precompile the regexes */
 	n_url_regexes = G_N_ELEMENTS (url_regex_patterns);
 	url_regexes = g_new0 (VteRegex*, n_url_regexes);
-	url_regex_flavors = g_new0 (TerminalURLFlavour, n_url_regexes);
+	url_regex_flavors = g_new0 (TerminalURLFlavor, n_url_regexes);
 
 	for (i = 0; i < n_url_regexes; ++i)
 	{
@@ -1657,7 +1657,7 @@ terminal_screen_popup_info_unref (TerminalScreenPopupInfo *info)
 		return;
 
 	g_object_unref (info->screen);
-	g_free (info->string);
+	g_free (info->url);
 	g_slice_free (TerminalScreenPopupInfo, info);
 }
 
@@ -1684,33 +1684,33 @@ terminal_screen_button_press (GtkWidget      *widget,
 	TerminalScreen *screen = TERMINAL_SCREEN (widget);
 	gboolean (* button_press_event) (GtkWidget*, GdkEventButton*) =
 	    GTK_WIDGET_CLASS (terminal_screen_parent_class)->button_press_event;
-	char *matched_string;
-	int matched_flavor = 0;
+	char *url;
+	int url_flavor = 0;
 	guint state;
 
 	state = event->state & gtk_accelerator_get_default_mod_mask ();
 
-	matched_string = terminal_screen_check_match (screen, (GdkEvent*)event, &matched_flavor);
+	url = terminal_screen_check_match (screen, (GdkEvent*)event, &url_flavor);
 
-	if (matched_string != NULL &&
+	if (url != NULL &&
 	        (event->button == 1 || event->button == 2) &&
 	        (state & GDK_CONTROL_MASK))
 	{
 		gboolean handled = FALSE;
 
 #ifdef ENABLE_SKEY
-		if (matched_flavor != FLAVOR_SKEY ||
+		if (url_flavor != FLAVOR_SKEY ||
 		        terminal_profile_get_property_boolean (screen->priv->profile, TERMINAL_PROFILE_USE_SKEY))
 #endif
 		{
 			g_signal_emit (screen, signals[MATCH_CLICKED], 0,
-			               matched_string,
-			               matched_flavor,
+			               url,
+			               url_flavor,
 			               state,
 			               &handled);
 		}
 
-		g_free (matched_string);
+		g_free (url);
 
 		if (handled)
 			return TRUE; /* don't do anything else such as select with the click */
@@ -1725,8 +1725,8 @@ terminal_screen_button_press (GtkWidget      *widget,
 		info->button = event->button;
 		info->state = state;
 		info->timestamp = event->time;
-		info->string = matched_string; /* adopted */
-		info->flavour = matched_flavor;
+		info->url = url; /* adopted */
+		info->flavor = url_flavor;
 
 		g_signal_emit (screen, signals[SHOW_POPUP_MENU], 0, info);
 		terminal_screen_popup_info_unref (info);
