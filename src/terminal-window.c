@@ -1375,7 +1375,7 @@ popup_open_url_callback (GtkAction *action,
     if (info == NULL)
         return;
 
-    terminal_util_open_url (GTK_WIDGET (window), info->string, info->flavour,
+    terminal_util_open_url (GTK_WIDGET (window), info->url, info->flavor,
                             gtk_get_current_event_time ());
 }
 
@@ -1390,11 +1390,11 @@ popup_copy_url_callback (GtkAction *action,
     if (info == NULL)
         return;
 
-    if (info->string == NULL)
+    if (info->url == NULL)
         return;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (window), GDK_SELECTION_CLIPBOARD);
-    gtk_clipboard_set_text (clipboard, info->string, -1);
+    gtk_clipboard_set_text (clipboard, info->url, -1);
 }
 
 static void
@@ -1494,9 +1494,9 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
 
     can_paste = targets != NULL && gtk_targets_include_text (targets, n_targets);
     can_paste_uris = targets != NULL && gtk_targets_include_uri (targets, n_targets);
-    show_link = info->string != NULL && (info->flavour == FLAVOR_AS_IS || info->flavour == FLAVOR_DEFAULT_TO_HTTP);
-    show_email_link = info->string != NULL && info->flavour == FLAVOR_EMAIL;
-    show_call_link = info->string != NULL && info->flavour == FLAVOR_VOIP_CALL;
+    show_link = info->url != NULL && (info->flavor == FLAVOR_AS_IS || info->flavor == FLAVOR_DEFAULT_TO_HTTP);
+    show_email_link = info->url != NULL && info->flavor == FLAVOR_EMAIL;
+    show_call_link = info->url != NULL && info->flavor == FLAVOR_VOIP_CALL;
 
     G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
     action = gtk_action_group_get_action (priv->action_group, "PopupSendEmail");
@@ -1576,8 +1576,8 @@ screen_show_popup_menu_callback (TerminalScreen *screen,
 
 static gboolean
 screen_match_clicked_cb (TerminalScreen *screen,
-                         const char *match,
-                         int flavour,
+                         const char *url,
+                         int url_flavor,
                          guint state,
                          TerminalWindow *window)
 {
@@ -1586,16 +1586,16 @@ screen_match_clicked_cb (TerminalScreen *screen,
     if (screen != priv->active_screen)
         return FALSE;
 
-    switch (flavour)
+    switch (url_flavor)
     {
 #ifdef ENABLE_SKEY
     case FLAVOR_SKEY:
-        terminal_skey_do_popup (GTK_WINDOW (window), screen, match);
+        terminal_skey_do_popup (GTK_WINDOW (window), screen, url);
         break;
 #endif
     default:
         gtk_widget_grab_focus (GTK_WIDGET (screen));
-        terminal_util_open_url (GTK_WIDGET (window), match, flavour,
+        terminal_util_open_url (GTK_WIDGET (window), url, url_flavor,
                                 gtk_get_current_event_time ());
         break;
     }

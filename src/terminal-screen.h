@@ -35,7 +35,7 @@ typedef enum
     FLAVOR_VOIP_CALL,
     FLAVOR_EMAIL,
     FLAVOR_SKEY
-} TerminalURLFlavour;
+} TerminalURLFlavor;
 
 /* Forward decls */
 typedef struct _TerminalScreenPopupInfo TerminalScreenPopupInfo;
@@ -69,7 +69,7 @@ struct _TerminalScreenClass
 	                             TerminalScreenPopupInfo *info);
 	gboolean (* match_clicked)  (TerminalScreen *screen,
 	                             const char *url,
-	                             int flavour,
+	                             int url_flavor,
 	                             guint state);
 	void (* close_screen)       (TerminalScreen *screen);
 };
@@ -147,8 +147,8 @@ struct _TerminalScreenPopupInfo
 	int ref_count;
 	TerminalWindow *window;
 	TerminalScreen *screen;
-	char *string;
-	TerminalURLFlavour flavour;
+	char *url;
+	TerminalURLFlavor flavor;
 	guint button;
 	guint state;
 	guint32 timestamp;
