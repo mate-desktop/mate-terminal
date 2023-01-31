@@ -148,6 +148,7 @@ struct _TerminalScreenPopupInfo
 	TerminalWindow *window;
 	TerminalScreen *screen;
 	char *url;
+	char *hyperlink;
 	TerminalURLFlavor flavor;
 	guint button;
 	guint state;
