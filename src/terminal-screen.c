@@ -137,6 +137,9 @@ static void terminal_screen_icon_title_changed        (VteTerminal *vte_terminal
 
 static void update_color_scheme                      (TerminalScreen *screen);
 
+static char* terminal_screen_check_hyperlink (TerminalScreen *screen,
+        GdkEvent *event);
+
 static gboolean terminal_screen_format_title (TerminalScreen *screen, const char *raw_title, char **old_cooked_title);
 
 static void terminal_screen_cook_title      (TerminalScreen *screen);
@@ -352,6 +355,8 @@ terminal_screen_init (TerminalScreen *screen)
 #if VTE_CHECK_VERSION (0, 52, 0)
 	vte_terminal_set_bold_is_bright (VTE_TERMINAL (screen), TRUE);
 #endif
+
+	vte_terminal_set_allow_hyperlink (VTE_TERMINAL (screen), TRUE);
 
 	priv->child_pid = -1;
 
@@ -1680,6 +1685,7 @@ terminal_screen_popup_info_unref (TerminalScreenPopupInfo *info)
 		return;
 
 	g_object_unref (info->screen);
+	g_free (info->hyperlink);
 	g_free (info->url);
 	g_slice_free (TerminalScreenPopupInfo, info);
 }
@@ -1707,24 +1713,39 @@ terminal_screen_button_press (GtkWidget      *widget,
 	TerminalScreen *screen = TERMINAL_SCREEN (widget);
 	gboolean (* button_press_event) (GtkWidget*, GdkEventButton*) =
 	    GTK_WIDGET_CLASS (terminal_screen_parent_class)->button_press_event;
+	char *hyperlink;
 	char *url;
-	int url_flavor = 0;
+	int url_flavor = FLAVOR_AS_IS;
 	guint state;
 
 	state = event->state & gtk_accelerator_get_default_mod_mask ();
-
+	hyperlink = terminal_screen_check_hyperlink (screen, (GdkEvent*)event);
 	url = terminal_screen_check_match (screen, (GdkEvent*)event, &url_flavor);
 
-	if (url != NULL &&
-	        (event->button == 1 || event->button == 2) &&
-	        (state & GDK_CONTROL_MASK))
+	// left or middle button with Ctrl
+	if ((event->button == 1 || event->button == 2) &&
+		(state & GDK_CONTROL_MASK))
 	{
 		gboolean handled = FALSE;
+
+		if (hyperlink != NULL)
+			g_signal_emit (screen, signals[MATCH_CLICKED], 0,
+			               hyperlink,
+			               FLAVOR_AS_IS,
+			               state,
+			               &handled);
+
+		if (handled) {
+			g_free (url);
+			g_free (hyperlink);
+			return TRUE; /* don't do anything else such as select with the click */
+		}
 
 #ifdef ENABLE_SKEY
 		if (url_flavor != FLAVOR_SKEY ||
 		        terminal_profile_get_property_boolean (screen->priv->profile, TERMINAL_PROFILE_USE_SKEY))
 #endif
+		if (url != NULL)
 		{
 			g_signal_emit (screen, signals[MATCH_CLICKED], 0,
 			               url,
@@ -1733,12 +1754,14 @@ terminal_screen_button_press (GtkWidget      *widget,
 			               &handled);
 		}
 
-		g_free (url);
-
-		if (handled)
+		if (handled) {
+			g_free (url);
+			g_free (hyperlink);
 			return TRUE; /* don't do anything else such as select with the click */
+		}
 	}
 
+	// right button with no Ctrl, Alt or Shift
 	if (event->button == 3 &&
 	        (state & (GDK_SHIFT_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK)) == 0)
 	{
@@ -1749,6 +1772,7 @@ terminal_screen_button_press (GtkWidget      *widget,
 		info->state = state;
 		info->timestamp = event->time;
 		info->url = url; /* adopted */
+		info->hyperlink = hyperlink; /* adopted */
 		info->flavor = url_flavor;
 
 		g_signal_emit (screen, signals[SHOW_POPUP_MENU], 0, info);
@@ -1756,6 +1780,9 @@ terminal_screen_button_press (GtkWidget      *widget,
 
 		return TRUE;
 	}
+
+	g_free (url);
+	g_free (hyperlink);
 
 	/* default behavior is to let the terminal widget deal with it */
 	if (button_press_event)
@@ -2378,6 +2405,13 @@ terminal_screen_url_match_remove (TerminalScreen *screen)
 
 		l = next;
 	}
+}
+
+static char*
+terminal_screen_check_hyperlink (TerminalScreen *screen,
+                                 GdkEvent       *event)
+{
+	return vte_terminal_hyperlink_check_event (VTE_TERMINAL (screen), event);
 }
 
 static char*

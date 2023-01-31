@@ -1366,6 +1366,38 @@ handle_tab_droped_on_desktop (GtkNotebook *source_notebook,
 /* Terminal screen popup menu handling */
 
 static void
+popup_open_hyperlink_callback (GtkAction *action,
+                               TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    TerminalScreenPopupInfo *info = priv->popup_info;
+
+    if (info == NULL)
+        return;
+
+    terminal_util_open_url (GTK_WIDGET (window), info->hyperlink, FLAVOR_AS_IS,
+                            gtk_get_current_event_time ());
+}
+
+static void
+popup_copy_hyperlink_callback (GtkAction *action,
+                               TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    TerminalScreenPopupInfo *info = priv->popup_info;
+    GtkClipboard *clipboard;
+
+    if (info == NULL)
+        return;
+
+    if (info->hyperlink == NULL)
+        return;
+
+    clipboard = gtk_widget_get_clipboard (GTK_WIDGET (window), GDK_SELECTION_CLIPBOARD);
+    gtk_clipboard_set_text (clipboard, info->hyperlink, -1);
+}
+
+static void
 popup_open_url_callback (GtkAction *action,
                          TerminalWindow *window)
 {
@@ -1476,7 +1508,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     TerminalScreen *screen = info->screen;
     GtkWidget *popup_menu;
     GtkAction *action;
-    gboolean can_paste, can_paste_uris, show_link, show_email_link, show_call_link, show_input_method_menu;
+    gboolean can_paste, can_paste_uris, show_hyperlink, show_link, show_email_link, show_call_link, show_input_method_menu;
     int n_pages;
 
     if (!gtk_widget_get_realized (GTK_WIDGET (screen)))
@@ -1494,11 +1526,16 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
 
     can_paste = targets != NULL && gtk_targets_include_text (targets, n_targets);
     can_paste_uris = targets != NULL && gtk_targets_include_uri (targets, n_targets);
-    show_link = info->url != NULL && (info->flavor == FLAVOR_AS_IS || info->flavor == FLAVOR_DEFAULT_TO_HTTP);
-    show_email_link = info->url != NULL && info->flavor == FLAVOR_EMAIL;
-    show_call_link = info->url != NULL && info->flavor == FLAVOR_VOIP_CALL;
+    show_hyperlink = info->hyperlink != NULL;
+    show_link = !show_hyperlink && info->url != NULL && (info->flavor == FLAVOR_AS_IS || info->flavor == FLAVOR_DEFAULT_TO_HTTP);
+    show_email_link = !show_hyperlink && info->url != NULL && info->flavor == FLAVOR_EMAIL;
+    show_call_link = !show_hyperlink && info->url != NULL && info->flavor == FLAVOR_VOIP_CALL;
 
     G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    action = gtk_action_group_get_action (priv->action_group, "PopupOpenHyperlink");
+    gtk_action_set_visible (action, show_hyperlink);
+    action = gtk_action_group_get_action (priv->action_group, "PopupCopyHyperlinkAddress");
+    gtk_action_set_visible (action, show_hyperlink);
     action = gtk_action_group_get_action (priv->action_group, "PopupSendEmail");
     gtk_action_set_visible (action, show_email_link);
     action = gtk_action_group_get_action (priv->action_group, "PopupCopyEmailAddress");
@@ -2117,6 +2154,16 @@ terminal_window_init (TerminalWindow *window)
 
         /* Popup menu */
         {
+            "PopupOpenHyperlink", NULL, N_("_Open Hyperlink"), NULL,
+            NULL,
+            G_CALLBACK (popup_open_hyperlink_callback)
+        },
+        {
+            "PopupCopyHyperlinkAddress", NULL, N_("_Copy Hyperlink Address"), NULL,
+            NULL,
+            G_CALLBACK (popup_copy_hyperlink_callback)
+        },
+        {
             "PopupSendEmail", NULL, N_("_Send Mail To…"), NULL,
             NULL,
             G_CALLBACK (popup_open_url_callback)
@@ -2594,6 +2641,23 @@ sync_screen_icon_title_set (TerminalScreen *screen,
     gdk_window_set_icon_name (gtk_widget_get_window (GTK_WIDGET (window)), NULL);
 
     /* Re-setting the right title will be done by the notify::title handler which comes after this one */
+}
+
+static void
+screen_hyperlink_hover_uri_changed (TerminalScreen *screen,
+                                    const char *uri,
+                                    const GdkRectangle *bbox G_GNUC_UNUSED,
+                                    TerminalWindow *window G_GNUC_UNUSED)
+{
+    char *label = NULL;
+
+    if (!gtk_widget_get_realized (GTK_WIDGET (screen)))
+        return;
+
+    label = terminal_util_hyperlink_uri_label (uri);
+
+    gtk_widget_set_tooltip_text (GTK_WIDGET (screen), label);
+    g_free(label);
 }
 
 /* Notebook callbacks */
@@ -3209,6 +3273,8 @@ notebook_page_added_callback (GtkWidget       *notebook,
                       G_CALLBACK (sync_screen_icon_title_set), window);
     g_signal_connect (screen, "selection-changed",
                       G_CALLBACK (terminal_window_update_copy_sensitivity), window);
+    g_signal_connect (screen, "hyperlink-hover-uri-changed",
+                      G_CALLBACK (screen_hyperlink_hover_uri_changed), window);
 
     g_signal_connect (screen, "show-popup-menu",
                       G_CALLBACK (screen_show_popup_menu_callback), window);
@@ -3287,6 +3353,10 @@ notebook_page_removed_callback (GtkWidget       *notebook,
 
     g_signal_handlers_disconnect_by_func (G_OBJECT (screen),
                                           G_CALLBACK (terminal_window_update_copy_sensitivity),
+                                          window);
+
+    g_signal_handlers_disconnect_by_func (G_OBJECT (screen),
+                                          G_CALLBACK (screen_hyperlink_hover_uri_changed),
                                           window);
 
     g_signal_handlers_disconnect_by_func (screen,

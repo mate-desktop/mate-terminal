@@ -104,6 +104,8 @@ void terminal_util_bind_object_property_to_widget (GObject *object,
 
 void terminal_util_x11_clear_demands_attention (GdkWindow *window);
 
+char *terminal_util_hyperlink_uri_label (const char *str);
+
 G_END_DECLS
 
 #endif /* TERMINAL_UTIL_H */
