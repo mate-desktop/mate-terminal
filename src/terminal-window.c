@@ -4224,6 +4224,8 @@ terminal_set_title_callback (GtkAction *action,
     g_signal_connect (dialog, "delete-event",
                       G_CALLBACK (terminal_util_dialog_response_on_delete), NULL);
 
+    gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+
     gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
 
     gtk_window_present (GTK_WINDOW (dialog));
