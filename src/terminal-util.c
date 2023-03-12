@@ -754,6 +754,25 @@ char *terminal_util_hyperlink_uri_label (const char *uri)
 		}
 		g_free(unidn);
 	}
+	if (g_ascii_strncasecmp(unesc, "mailto:", 7) == 0)
+	{
+		const char *hostname = strchr(unesc, '@');
+		if (hostname != NULL)
+		{
+			const char *unidn = g_hostname_to_unicode(++hostname);
+			replace_hostname = unidn != NULL && g_ascii_strcasecmp(unidn, hostname) != 0;
+			if (replace_hostname)
+			{
+				char *new_unesc = g_strdup_printf("%.*s%s",
+				                                  (int) (hostname - unesc),
+				                                  unesc,
+				                                  unidn);
+				g_free(unesc);
+				unesc = new_unesc;
+			}
+			g_free(unidn);
+		}
+	}
 	return unesc;
 }
 
