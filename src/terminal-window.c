@@ -231,6 +231,8 @@ static void terminal_set_title_callback       (GtkAction *action,
         TerminalWindow *window);
 static void terminal_add_encoding_callback    (GtkAction *action,
         TerminalWindow *window);
+static void terminal_readonly_toggled_callback (GtkToggleAction *action,
+        TerminalWindow *window);
 static void terminal_reset_callback           (GtkAction *action,
         TerminalWindow *window);
 static void terminal_reset_clear_callback     (GtkAction *action,
@@ -1054,6 +1056,25 @@ terminal_window_update_encoding_menu_active_encoding (TerminalWindow *window)
     gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
     G_GNUC_END_IGNORE_DEPRECATIONS;
     g_signal_handlers_unblock_by_func (action, G_CALLBACK (terminal_set_encoding_callback), window);
+}
+
+static void
+terminal_window_update_readonly_checkbox (TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    GtkToggleAction *action;
+    VteTerminal *terminal;
+    gboolean editable;
+
+    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    action = GTK_TOGGLE_ACTION (gtk_action_group_get_action (priv->action_group,
+                                                             "TerminalReadOnly"));
+    G_GNUC_END_IGNORE_DEPRECATIONS;
+
+    terminal = VTE_TERMINAL (priv->active_screen);
+    editable = vte_terminal_get_input_enabled (terminal);
+
+    gtk_toggle_action_set_active (action, !editable);
 }
 
 static void
@@ -2171,6 +2192,13 @@ terminal_window_init (TerminalWindow *window)
             NULL,
             G_CALLBACK (view_fullscreen_toggled_callback),
             FALSE
+        },
+        /* Terminal Menu */
+        {
+            "TerminalReadOnly", NULL, N_("_Read Only"), "<shift><control>R",
+            NULL,
+            G_CALLBACK (terminal_readonly_toggled_callback),
+            FALSE
         }
     };
     TerminalWindowPrivate *priv;
@@ -3130,6 +3158,7 @@ notebook_page_selected_callback (GtkWidget       *notebook,
 
     terminal_window_update_tabs_menu_sensitivity (window);
     terminal_window_update_encoding_menu_active_encoding (window);
+    terminal_window_update_readonly_checkbox (window);
     terminal_window_update_set_profile_menu_active_profile (window);
     terminal_window_update_copy_sensitivity (screen, window);
     terminal_window_update_zoom_sensitivity (window);
@@ -4235,6 +4264,25 @@ terminal_add_encoding_callback (GtkAction *action,
 {
     terminal_app_edit_encodings (terminal_app_get (),
                                  GTK_WINDOW (window));
+}
+
+static void
+terminal_readonly_toggled_callback (GtkToggleAction *action,
+                                    TerminalWindow *window)
+{
+    TerminalScreen *screen = window->priv->active_screen;
+    gboolean checked;
+
+    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+    checked = gtk_toggle_action_get_active (action);
+    G_GNUC_END_IGNORE_DEPRECATIONS;
+
+    vte_terminal_set_input_enabled (VTE_TERMINAL (screen), !checked);
+
+    /* update titles since (Read Only) may be added or removed */
+    sync_screen_icon_title_set (screen, NULL, window);
+    sync_screen_icon_title (screen, NULL, window);
+    sync_screen_title (screen, NULL, window);
 }
 
 static void
