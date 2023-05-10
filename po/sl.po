@@ -4,23 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# worm <thewormhole@gmail.com>, 2018
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2018
-# Damir Jerovšek <jierro@windowslive.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
-# jetomit <timotej.lazar@araneo.si>, 2018
-# Arnold Marko <arnold.marko@gmail.com>, 2020
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Marko Šterman <marko.chamillionaire@gmail.com>, 2021
+# Damir Jerovšek <jierro@windowslive.com>, 2021
+# worm <thewormhole@gmail.com>, 2021
 # Helena S <ele@tutamail.com>, 2021
+# jetomit <timotej.lazar@araneo.si>, 2021
+# Arnold Marko <arnold.marko@gmail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2021\n"
-"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
+"Language-Team: Slovenian (https://app.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,6 +51,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"Terminal MATE je priredba programa GNOME Terminal in je del MATE namiznega "
+"okolja. Če želite izvedeti več o MATE in Terminalu MATE, obiščite domačo "
+"stran projekta."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
@@ -79,6 +83,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Še vedno je dejavno opravilo v tem terminalu.\n"
+"Z zaprtjem terminala ga boste ustavili."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -267,7 +273,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr ""
+msgstr "Solarizacija"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -390,6 +396,9 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Podrejeni izbor razpoložljivih naborov znakov je prikazan v podmeniju "
+"kodiranja. Nabor \"current\" (trenutno) pokaže kodiranje kot ga določajo "
+"trenutne jezikovne nastavitve."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -400,6 +409,8 @@ msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
+"Ali želite vprašanje za potrditev pri zapiranju okna terminala, ki ima odprt"
+" več kot en zavihek ali morebitne podprocese v ospredju."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
@@ -895,7 +906,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Poudari URL-je pod kazalcem miške"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
@@ -1022,6 +1033,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za prilepljenje vsebine odložišča v terminal, določena kot niz v "
+"enaki obliki kot je uporabljen v datotekah virov GTK+. V kolikor je določena"
+" vrednost \"onemogočena\", za to dejanje ne bo razpoložljive tipkovne "
+"bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
@@ -1034,6 +1049,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Bližnjica za izbiranje vsega besedila v terminalu, določena kot niz v enaki "
+"obliki kot je uporabljen v datotekah virov GTK+. Če je določena vrednost "
+"»onemogočena« (»disabled«), za to dejanje ne bo razpoložljive tipkovne "
+"bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
@@ -1046,10 +1065,13 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Bližnjica za prikaz okna iskanja, določena kot niz v enaki obliki kot je "
+"uporabljen v datotekah virov GTK+. Če je določena vrednost »onemogočena« "
+"(»disabled«), za to dejanje ne bo razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Tipkovna bližnjica za iskanje naslednje pojavitve iskanega izraza"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -1058,10 +1080,14 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za iskanje naslednje pojavitve iskanega izraza v terminalu, "
+"določena kot niz v enaki obliki kot je uporabljen v datotekah virov GTK+. Če"
+" je določena vrednost »onemogočena« (»disabled«), za to dejanje ne bo "
+"razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Tipkovna bližnjica za iskanje naslednje pojavitve iskanega izraza"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -1070,6 +1096,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Bližnjica za iskanje prejšnje pojavitve iskanega izraza v terminalu, "
+"določena kot niz v enaki obliki kot je uporabljen v datotekah virov GTK+. Če"
+" je določena vrednost »onemogočena« (»disabled«), za to dejanje ne bo "
+"razpoložljive tipkovne bližnjice."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1519,13 +1549,13 @@ msgstr "Belo na črnem"
 #. translated
 #: src/profile-editor.c:70
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarizacija, svetlo"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:75
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarizacija, temno"
 
 #: src/profile-editor.c:498
 #, c-format
@@ -1629,7 +1659,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Poudari _URL-je pod kazalcem miške"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1877,7 +1907,7 @@ msgstr "_Naziv:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "V _redu"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2588,7 +2618,7 @@ msgstr "_Uredi"
 
 #: src/terminal-window.c:1880
 msgid "_View"
-msgstr "_Pogled"
+msgstr "_Prikaz"
 
 #: src/terminal-window.c:1881
 msgid "_Search"
@@ -2736,7 +2766,7 @@ msgstr "_Odpni zavihek"
 
 #: src/terminal-window.c:2073
 msgid "_Contents"
-msgstr "_Vsebina"
+msgstr "_Vsebine"
 
 #: src/terminal-window.c:2078
 msgid "_About"
@@ -2791,10 +2821,12 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Še vedno so dejavna opravila v terminalih tega okna.\n"
+"Z zapiranjem okna ustavite vse."
 
 #: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "V tem oknu je odprtih več zavihkov."
 
 #: src/terminal-window.c:3624
 msgid "Close this terminal?"
@@ -2822,10 +2854,12 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"Terminal MATE je emulator terminala za namizno okolje MATE.\n"
+"Poganja ga Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4437
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "O programu Terminal MATE"
 
 #: src/terminal-window.c:4438
 msgid ""
@@ -2836,6 +2870,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2002–2004 Havoc Pennington\n"
+"Avtorske pravice © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Avtorske pravice © 2006 Guilherme de S. Pastore\n"
+"Avtorske pravice © 2007–2010 Christian Persch\n"
+"Avtorske pravice © 2011 Perberos\n"
+"Avtorske pravice © 2012-2021 razvijalci MATE"
 
 #: src/terminal-window.c:4450
 msgid "translator-credits"

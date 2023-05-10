@@ -4,29 +4,30 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ruben Scopacasa <ruben3642@gmail.com>, 2018
-# Marco Z. <minaz666@gmail.com>, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# l3nn4rt, 2018
-# Enrico B. <enricobe@hotmail.com>, 2019
+# Ruben Scopacasa <ruben3642@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Dario Di Nucci <linkin88mail@gmail.com>, 2021
 # Giuseppe Pignataro <rogepix@gmail.com>, 2021
+# Enrico B. <enricobe@hotmail.com>, 2021
+# Marco Bartolucci, 2021
+# Marco Z. <minaz666@gmail.com>, 2021
+# l3nn4rt, 2021
 # Alessandro Volturno <alelvb@inwind.it>, 2021
+# 6d1bb5d393520b00f70a137a58397ea1_b5ba1e2 <22cc5e560e0d5b6554809bfb51b90403_882095>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: 6d1bb5d393520b00f70a137a58397ea1_b5ba1e2 <22cc5e560e0d5b6554809bfb51b90403_882095>, 2021\n"
+"Language-Team: Italian (https://app.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:190 src/terminal-window.c:4435
@@ -67,12 +68,12 @@ msgstr "Terminale"
 
 #: mate-terminal.desktop.in.in:5
 msgid "Use the command line"
-msgstr "Usa la riga di comando"
+msgstr "Utilizza la riga di comando"
 
 #: src/confirm-close-dialog.ui:40 src/profile-new-dialog.ui:31
 #: src/set-title-dialog.ui:35 src/skey-challenge.ui:40 src/terminal-app.c:692
 msgid "_Cancel"
-msgstr "A_nnulla"
+msgstr "Annulla"
 
 #: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
 #: src/terminal-window.c:3622
@@ -106,7 +107,7 @@ msgstr "FILE"
 
 #: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
-msgstr "Specifica l'ID di gestione sessione"
+msgstr "Specifica l'ID di gestione della sessione"
 
 #: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
@@ -114,11 +115,11 @@ msgstr "ID"
 
 #: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
-msgstr "Opzioni di gestione sessione:"
+msgstr "Opzioni di gestione della sessione:"
 
 #: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
-msgstr "Mostra le opzioni di gestione sessione"
+msgstr "Mostra le opzioni di gestione della sessione"
 
 #: src/encodings-dialog.ui:24
 msgid "Add or Remove Terminal Encodings"
@@ -128,7 +129,7 @@ msgstr "Aggiungi o rimuovi codifiche di terminale"
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
 #: src/terminal-window.c:1884
 msgid "_Help"
-msgstr "_Aiuto"
+msgstr "Aiuto"
 
 #: src/encodings-dialog.ui:59 src/find-dialog.ui:42
 #: src/keybinding-editor.ui:59 src/profile-manager.ui:76
@@ -142,7 +143,7 @@ msgstr "Codifiche disponi_bili:"
 
 #: src/encodings-dialog.ui:202
 msgid "E_ncodings shown in menu:"
-msgstr "Codifiche _mostrate nel menù:"
+msgstr "Codifiche mostrate nel me_nù:"
 
 #. Translators: This refers to the Delete keybinding option
 #: src/extra-strings.c:25 src/profile-preferences.ui:184
@@ -217,7 +218,7 @@ msgstr "Riavvia il comando"
 #. Translators: When command exits: ...
 #: src/extra-strings.c:54 src/profile-preferences.ui:119
 msgid "Hold the terminal open"
-msgstr "Mantieni aperto il terminale"
+msgstr "Tieni aperto il terminale"
 
 #. Translators: Scrollbar is: ...
 #: src/extra-strings.c:57 src/profile-preferences.ui:167
@@ -300,7 +301,7 @@ msgstr "C_erca: "
 
 #: src/find-dialog.ui:138
 msgid "_Match case"
-msgstr "Corrispondenza _Maiuscole/Minuscole"
+msgstr "distingui _Maiuscole/Minuscole"
 
 #: src/find-dialog.ui:155
 msgid "Match _entire word only"
@@ -430,7 +431,7 @@ msgstr "Chiudi schede con il clic del tasto centrale"
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
-"Se attivato, consente di chiudere le schede con un click del tasto centrale."
+"Se attivato, consente di chiudere le schede con un clic del tasto centrale."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -441,12 +442,13 @@ msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
-"Se attivato, consente di cambiare schede con  [Ctrl+Tab] e [Ctrl+Shift+Tab]."
+"Se \"vero\", consente di cambiare schede utilizzando  [Ctrl+Tab] e "
+"[Ctrl+Shift+Tab]."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "Predefinito"
+msgstr "'Predefinito'"
 
 #: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
@@ -458,7 +460,7 @@ msgstr "Nome mnemonico per il profilo"
 
 #: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
-msgstr "Indica se mostrare la barra dei menu nelle nuove finestre terminale"
+msgstr "Indica se mostrare la barra dei menù nelle nuove finestre/schede"
 
 #: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
@@ -608,7 +610,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
 msgstr ""
-"Indica se utilizzare la dimensione personalizzata nelle nuove finestre"
+"Indica se utilizzare la dimensione personalizzata delle nuove finestre"
 
 #: src/org.mate.terminal.gschema.xml.in:154
 msgid ""
@@ -656,7 +658,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
-msgstr "Numero di righe da mantenere per scorrere all'indietro"
+msgstr "Numero di righe da mantenere nel riavvolgimento"
 
 #: src/org.mate.terminal.gschema.xml.in:174
 msgid ""
@@ -681,10 +683,10 @@ msgid ""
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
 msgstr ""
-"Se \"vero\", le righe precedenti non verranno mai cancellate. La cronologia "
-"delle righe viene archiviata temporaneamente sul disco, questo potrebbe "
-"quindi causare il superamento dello spazio disponibile se c'è molto output "
-"nel terminale."
+"Se impostato a vero, le righe precedenti non verranno mai cancellate. La "
+"cronologia delle righe viene archiviata temporaneamente sul disco, questo "
+"potrebbe quindi causare il superamento dello spazio disponibile se c'è molto"
+" output nel terminale."
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -693,8 +695,8 @@ msgstr "Indica se far scorrere verso il basso quando viene premuto un tasto"
 #: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr ""
-"Se \"vero\", alla pressione di un tasto la barra di scorrimento viene "
-"spostata verso il basso."
+"Seimpostato a vero, alla pressione di un tasto la barra di scorrimento viene"
+" spostata verso il basso."
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
@@ -899,15 +901,16 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
-msgstr "Indica se usare i colori dal tema per il widget del terminale"
+msgstr "Indica se usare i colori dal tema per il componente del terminale"
 
 #: src/org.mate.terminal.gschema.xml.in:269
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
-"Se \"vero\", lo schema di colori del tema usato per le caselle di testo sarà"
-" usato per il testo del terminale, invece dei colori forniti dall'utente."
+"Se impostato a vero, lo schema di colori del tema usato per le caselle di "
+"testo sarà impiegato per il testo del terminale, invece dei colori forniti "
+"dall'utente."
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
@@ -1668,7 +1671,7 @@ msgstr "Modifica"
 
 #: src/profile-manager.ui:170 src/terminal-app.c:697
 msgid "_Delete"
-msgstr "_Elimina"
+msgstr "Elimina"
 
 #: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
@@ -1700,7 +1703,7 @@ msgstr "Nome del _profilo:"
 
 #: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
-msgstr "_Usare il tipo di carattere a larghezza fissa di sistema"
+msgstr "_Usa il tipo di carattere a larghezza fissa di sistema"
 
 #: src/profile-preferences.ui:386
 msgid "_Font:"
@@ -1724,7 +1727,7 @@ msgstr "Avviso acust_ico"
 
 #: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
-msgstr "_Copia il testo selezionato negli appunti"
+msgstr "Copia il testo selezionato negli appunti"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
@@ -1736,7 +1739,7 @@ msgstr "Evidenzia _URL al passaggio del mouse"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
-msgstr "_Lampeggiamento cursore"
+msgstr "_Lampeggiamento del cursore"
 
 #: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
@@ -1800,7 +1803,7 @@ msgstr "_Quando il comando termina:"
 
 #: src/profile-preferences.ui:1137
 msgid "Title and Command"
-msgstr "Titolo e comando"
+msgstr "Titolo e Comando"
 
 #: src/profile-preferences.ui:1165
 msgid "<b>Foreground, Background, Bold and Underline</b>"
@@ -1988,7 +1991,7 @@ msgstr "Risposta alla \"S/Key challenge\""
 
 #: src/skey-challenge.ui:134
 msgid "_Password:"
-msgstr "Pass_word:"
+msgstr "_Password:"
 
 #: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -2016,7 +2019,7 @@ msgstr "Chiudi scheda"
 
 #: src/terminal-accels.c:171
 msgid "Close Window"
-msgstr "Chiudi finestra"
+msgstr "Chiudi la finestra"
 
 #: src/terminal-accels.c:179
 msgid "Copy"
@@ -2040,11 +2043,11 @@ msgstr "Schermo intero"
 
 #: src/terminal-accels.c:203
 msgid "Zoom In"
-msgstr "Aumenta ingrandimento"
+msgstr "Aumenta zoom"
 
 #: src/terminal-accels.c:207
 msgid "Zoom Out"
-msgstr "Riduci ingrandimento"
+msgstr "Riduci zoom"
 
 #: src/terminal-accels.c:211
 msgid "Normal Size"
@@ -2052,7 +2055,7 @@ msgstr "Dimensione normale"
 
 #: src/terminal-accels.c:223
 msgid "Find Next"
-msgstr "Trova successiva"
+msgstr "Trova successivo"
 
 #: src/terminal-accels.c:227
 msgid "Find Previous"
@@ -2144,7 +2147,7 @@ msgstr "Passa alla scheda 12"
 
 #: src/terminal-accels.c:342
 msgid "Contents"
-msgstr "Sommario"
+msgstr "Contenuti"
 
 #: src/terminal-accels.c:347
 msgid "File"
@@ -2152,7 +2155,7 @@ msgstr "File"
 
 #: src/terminal-accels.c:349
 msgid "View"
-msgstr "Visualizza"
+msgstr "Vista"
 
 #: src/terminal-accels.c:350
 msgid "Search"
@@ -2207,7 +2210,7 @@ msgstr ""
 
 #: src/terminal-app.c:1246
 msgid "Choose base profile"
-msgstr "Scegliere il profilo base"
+msgstr "Seleziona il profilo base"
 
 #: src/terminal-app.c:1841
 #, c-format
@@ -2505,7 +2508,7 @@ msgstr "Esegui l'argomento di questa opzione nel terminale"
 
 #: src/terminal-options.c:1087
 msgid "Use the given profile instead of the default profile"
-msgstr "Usa il profilo fornito al posto di quello predefinito"
+msgstr "Usa il profilo fornito in vece di quello predefinito"
 
 #: src/terminal-options.c:1088
 msgid "PROFILE-NAME"
@@ -2693,7 +2696,7 @@ msgstr "Apri sch_eda"
 
 #: src/terminal-window.c:1879
 msgid "_Edit"
-msgstr "_Modifica"
+msgstr "Modifica"
 
 #: src/terminal-window.c:1880
 msgid "_View"
@@ -2733,7 +2736,7 @@ msgstr "_Copia"
 
 #: src/terminal-window.c:1927 src/terminal-window.c:2121
 msgid "_Paste"
-msgstr "_Incolla"
+msgstr "Incolla"
 
 #: src/terminal-window.c:1932 src/terminal-window.c:2126
 msgid "Paste _Filenames"
@@ -2757,11 +2760,11 @@ msgstr "_Preferenze del profilo"
 
 #: src/terminal-window.c:1959
 msgid "Zoom _In"
-msgstr "Aum_enta ingrandimento"
+msgstr "Aumenta _ingrandimento"
 
 #: src/terminal-window.c:1964
 msgid "Zoom _Out"
-msgstr "Rid_uci ingrandimento"
+msgstr "Riduci ingrandiment_o"
 
 #: src/terminal-window.c:1969
 msgid "_Normal Size"
@@ -2849,7 +2852,7 @@ msgstr "_Sommario"
 
 #: src/terminal-window.c:2078
 msgid "_About"
-msgstr "_Informazioni"
+msgstr "Informazioni"
 
 #: src/terminal-window.c:2085
 msgid "_Send Mail To…"
@@ -2905,7 +2908,7 @@ msgstr ""
 
 #: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
-msgstr "Ci sono diversi tab aperti in questa finestra."
+msgstr "Ci sono diverse schede aperte in questa finestra."
 
 #: src/terminal-window.c:3624
 msgid "Close this terminal?"
@@ -2958,6 +2961,4 @@ msgstr ""
 
 #: src/terminal-window.c:4450
 msgid "translator-credits"
-msgstr ""
-"Enrico Bella, 2019\n"
-"Alessandro Volturno, 2020"
+msgstr "Alessandro Volturno, 2021"

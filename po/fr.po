@@ -4,33 +4,34 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# jeremy shields <jeremy.shields@orange.fr>, 2018
-# Nicolas Dobigeon <dobigeon@gmail.com>, 2018
-# Lothaire B <translations@lothai.re>, 2018
-# mauron, 2018
-# Charles Monzat <c.monzat@laposte.net>, 2018
-# yoplait <yoplait@tememe.org>, 2018
-# Clément GERARDIN <clement.gerardin@univ-amu.fr>, 2019
-# roxfr <roxfr@outlook.fr>, 2020
-# Laurent Napias, 2020
-# Yoan Mollard <yoan@aubrune.eu>, 2020
+# jeremy shields <jeremy.shields@orange.fr>, 2021
+# Lothaire B <translations@lothai.re>, 2021
+# Nicolas Dobigeon <dobigeon@gmail.com>, 2021
+# roxfr <roxfr@outlook.fr>, 2021
+# mauron, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Étienne Deparis <etienne@depar.is>, 2021
 # Tubuntu, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Charles Monzat <c.monzat@laposte.net>, 2021
+# Étienne Deparis <etienne@depar.is>, 2021
+# yoplait <yoplait@tememe.org>, 2021
+# Laurent Napias, 2021
+# Clément GERARDIN <clement.gerardin@univ-amu.fr>, 2021
+# Yoan Mollard <yoan@aubrune.eu>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Tubuntu, 2021\n"
-"Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: Yoan Mollard <yoan@aubrune.eu>, 2021\n"
+"Language-Team: French (https://app.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:190 src/terminal-window.c:4435
@@ -48,11 +49,11 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
-"MATE Terminal est une application d'émulation de terminal que vous pouvez "
-"utiliser pour accéder à un shell UNIX dans l'environnement MATE. MATE "
-"Terminal émule le programme xterm développé par le Consortium X. Il prend en"
-" charge les arrière-plans translucides, ouvrant plusieurs terminaux dans une"
-" seule fenêtre (onglets) et des URL cliquables."
+"Le Terminal MATE est une application d'émulation de terminal que vous pouvez"
+" utiliser pour accéder à un shell UNIX dans l'environnement MATE. Le "
+"Terminal MATE émule le programme xterm développé par le Consortium X. Il "
+"prend en charge les arrière-plans translucides, l'ouverture de plusieurs "
+"terminaux dans une seule fenêtre (onglets) et les URL cliquables."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -60,9 +61,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
-"MATE Terminal est un fork de GNOME Terminal et fait partie de MATE Desktop "
-"Environment. Si vous souhaitez en savoir plus sur MATE et MATE Terminal, "
-"veuillez visiter la page d'accueil du projet."
+"Le Terminal MATE est un fork du Terminal GNOME et fait partie de "
+"l'Environnement de bureau MATE. Si vous souhaitez en savoir plus sur MATE et"
+" le Terminal MATE, veuillez visiter la page d'accueil du projet."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
@@ -132,7 +133,7 @@ msgstr "Ajouter ou supprimer des codages du terminal"
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
 #: src/terminal-window.c:1884
 msgid "_Help"
-msgstr "Aid_e"
+msgstr "Aide"
 
 #: src/encodings-dialog.ui:59 src/find-dialog.ui:42
 #: src/keybinding-editor.ui:59 src/profile-manager.ui:76
@@ -349,8 +350,8 @@ msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
 msgstr ""
-"Liste des profils accessibles pour mate-terminal. Cette liste doit contenir "
-"des noms de sous-répertoires de /org/mate/terminal/profiles."
+"Liste des profils accessibles pour mate-terminal. Cette liste contient les "
+"chaînes des noms de sous-répertoires relatifs à /org/mate/terminal/profiles."
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
@@ -410,8 +411,8 @@ msgid ""
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
 "Dans le sous-menu « codage » ne figure qu'un sous-ensemble des codages "
-"disponibles. Cette liste précise ce sous-ensemble. La valeur spéciale « "
-"current » affiche le codage de la locale actuelle du système."
+"disponibles. Cette liste précise ce sous-ensemble. La valeur spéciale "
+"« current » affiche le codage de la locale actuelle du système."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -541,8 +542,8 @@ msgid ""
 msgstr ""
 "Une application dans le terminal peut préciser son titre ; beaucoup "
 "d'utilisateurs ont leur shell configuré pour cela. Le titre de l'application"
-" peut remplacer celui du terminal (« replace »), être inséré avant lui (« "
-"before »), après lui (« after »), ou être ignoré (« ignore »)."
+" peut remplacer celui du terminal (« replace »), être inséré avant lui "
+"(« before »), après lui (« after »), ou être ignoré (« ignore »)."
 
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
@@ -722,8 +723,8 @@ msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr ""
-"Les valeurs possibles sont « close » (pour fermer le terminal) et « restart "
-"» (pour relancer la commande)."
+"Les valeurs possibles sont « close » (pour fermer le terminal) et "
+"« restart » (pour relancer la commande)."
 
 #: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -762,8 +763,8 @@ msgid ""
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr ""
 "Les valeurs possibles sont « system » (système) pour utiliser les "
-"préférences globales de clignotement du curseur, ou « on » (actif) et « off "
-"» (inactif) pour définir explicitement le mode."
+"préférences globales de clignotement du curseur, ou « on » (actif) et "
+"« off » (inactif) pour définir explicitement le mode."
 
 #: src/org.mate.terminal.gschema.xml.in:213
 msgid "The cursor appearance"
@@ -775,8 +776,8 @@ msgid ""
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
 "Les valeurs possibles sont « block » pour utiliser le curseur en forme de "
-"bloc, « ibeam » pour le curseur formé d'une ligne verticale, ou « underline "
-"» pour le curseur formé d'un caractère de soulignement."
+"bloc, « ibeam » pour le curseur formé d'une ligne verticale, ou "
+"« underline » pour le curseur formé d'un caractère de soulignement."
 
 #: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
@@ -883,10 +884,10 @@ msgid ""
 "correct setting for the Backspace key."
 msgstr ""
 "Indique ce que génère l'appui sur la touche « retour arrière » (backspace). "
-"Les valeurs possibles sont « ascii-del » (caractère ASCII DEL), « control-h "
-"» (Ctrl-H, c'est à dire le caractère ASCII BS) et « escape-sequence » "
-"(séquence d'échappement usuelle liée à « retour arrière » ou à « supprimer »"
-" ). La valeur normale est « ascii-del »."
+"Les valeurs possibles sont « ascii-del » (caractère ASCII DEL), "
+"« control-h » (Ctrl-H, c'est à dire le caractère ASCII BS) et « escape-"
+"sequence » (séquence d'échappement usuelle liée à « retour arrière » ou à "
+"« supprimer » ). La valeur normale est « ascii-del »."
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
@@ -1187,8 +1188,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour cacher/afficher la barre de menus. Exprimé en tant "
 "que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
@@ -1203,8 +1204,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour définir un titre pour le terminal. Exprimé en tant "
 "que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
@@ -1235,8 +1236,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour réinitialiser et effacer le terminal. Exprimé en "
 "tant que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -1602,8 +1603,8 @@ msgid ""
 msgstr ""
 "Touche de raccourci pour avoir une taille normale avec la police. Exprimé en"
 " tant que chaîne dans le même format que celui utilisé dans les fichiers de "
-"ressources GTK+. Si vous définissez l'option à la chaîne spéciale « disabled"
-" », alors il n'y aura pas de raccourci pour cette action."
+"ressources GTK+. Si vous définissez l'option à la chaîne spéciale "
+"« disabled », alors il n'y aura pas de raccourci pour cette action."
 
 #: src/profile-editor.c:45
 msgid "Black on light yellow"
@@ -1687,7 +1688,7 @@ msgstr "Nouveau profil"
 
 #: src/profile-new-dialog.ui:81
 msgid "C_reate"
-msgstr "_Créer"
+msgstr "C_réer"
 
 #: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
@@ -1996,7 +1997,7 @@ msgstr "Réponse au challenge S/Key"
 
 #: src/skey-challenge.ui:134
 msgid "_Password:"
-msgstr "_Mot de passe :"
+msgstr "Mot de _passe :"
 
 #: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -2164,7 +2165,7 @@ msgstr "Affichage"
 
 #: src/terminal-accels.c:350
 msgid "Search"
-msgstr "Rechercher"
+msgstr "Recherche"
 
 #: src/terminal-accels.c:352
 msgid "Tabs"
@@ -2705,11 +2706,11 @@ msgstr "Ouvrir un _onglet"
 
 #: src/terminal-window.c:1879
 msgid "_Edit"
-msgstr "_Édition"
+msgstr "Édit_er"
 
 #: src/terminal-window.c:1880
 msgid "_View"
-msgstr "_Affichage"
+msgstr "Affichage"
 
 #: src/terminal-window.c:1881
 msgid "_Search"
@@ -2857,7 +2858,7 @@ msgstr "Dé_tacher l'onglet"
 
 #: src/terminal-window.c:2073
 msgid "_Contents"
-msgstr "_Sommaire"
+msgstr "Sommaire"
 
 #: src/terminal-window.c:2078
 msgid "_About"
@@ -2971,7 +2972,7 @@ msgstr ""
 #: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet MATE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"

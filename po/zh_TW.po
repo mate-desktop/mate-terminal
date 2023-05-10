@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Walter Cheuk <wwycheuk@gmail.com>, 2018
-# 趙惟倫 <bluebat@member.fsf.org>, 2018
-# byStarTW (pan93412) <pan93412@gmail.com>, 2018
+# Walter Cheuk <wwycheuk@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 趙惟倫 <bluebat@member.fsf.org>, 2021
 # 黃柏諺 <s8321414@gmail.com>, 2021
+# pan93412 <pan93412@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2021\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>, 2021\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -607,8 +607,7 @@ msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is"
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
-msgstr ""
-"如果設為 true，回捲的行將永遠不會被丟棄。回捲的歷史紀錄會暫時儲存在磁碟機上，因此當終端機有大量輸出內容時有可能會造成系统用盡磁碟機空間。"
+msgstr "如果設為 true，回捲的行將永遠不會被丟棄。回捲的歷史紀錄會暫時儲存在磁碟上，因此當終端機有大量輸出內容時有可能會造成系统用盡磁碟空間。"
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -787,8 +786,8 @@ msgid ""
 "setting for the Delete key."
 msgstr ""
 "Delete 鍵會產生哪個字元。可接受的值為：「ascii-del」產生 ASCII 的 DEL 字元、「control-h」產生 ASCII 的 BS"
-" 字元、「escape-sequence」產生代表 backspace 或 delete 的「轉義字元序列」。正常來說，Delete 鍵應該使用"
-"「ascii-sequence」。"
+" 字元、「escape-sequence」產生代表 backspace 或 delete 的「轉義字元序列」。正常來說，Delete "
+"鍵應該使用「ascii-sequence」。"
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -798,7 +797,7 @@ msgstr "在終端機元件是否使用主題提供的色彩"
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
-msgstr "如設定為真，終端機會使用主題提供的色彩，而不是使用者自訂的色彩。"
+msgstr "如設定為 true，終端機會使用主題提供的色彩，而不是使用者自訂的色彩。"
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
@@ -2700,7 +2699,7 @@ msgstr ""
 #: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr ""
-"黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n"
+"Jeff Huang <s8321414@yahoo.com.tw>,2013-2021\n"
 "Launchpad 貢獻者：\n"
 "  Jose Sun https://launchpad.net/~josesun\n"
 "  Toomore https://launchpad.net/~toomore\n"

@@ -4,41 +4,43 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Felipe Rozelio <feliperozelio@gmail.com>, 2018
-# Aldo Oliveira <america103@gmail.com>, 2018
-# Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2018
-# Cleber Teixeira, 2018
-# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
-# Allan Richardson <luke.downhill@gmail.com>, 2018
-# Herick Vinicius <herick.gustavo@gmail.com>, 2018
-# Matheus Macabu <mkbu95@gmail.com>, 2018
-# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2018
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2018
-# 65f2af3cfa184c075942a0418b98d2de_d688669, 2018
-# Victor Gonçalves <hotcyv@gmail.com>, 2018
-# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
-# Carlos Eduardo Serpa de Sousa <cess@cin.ufpe.br>, 2018
-# Roger Araújo <roger.rf@gmail.com>, 2018
-# Lucas Dias <lucasdiaas@outlook.com>, 2018
-# George Silva <algoritmo.linux@gmail.com>, 2019
-# 18ab4449a00621534598e84a949423ea, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Samuel Henrique <samueloph@debian.org>, 2021
+# Felipe Rozelio <feliperozelio@gmail.com>, 2021
+# Matheus Macabu <mkbu95@gmail.com>, 2021
+# Cleber Teixeira, 2021
 # jose, 2021
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Aldo Oliveira <america103@gmail.com>, 2021
+# 65f2af3cfa184c075942a0418b98d2de_d688669, 2021
+# Victor Gonçalves <hotcyv@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Samuel Henrique <samueloph@debian.org>, 2021
+# Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2021
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2021
+# Carlos Eduardo Serpa de Sousa <cess@cin.ufpe.br>, 2021
+# 18ab4449a00621534598e84a949423ea, 2021
+# Roger Araújo <roger.rf@gmail.com>, 2021
+# Allan Richardson <luke.downhill@gmail.com>, 2021
+# Herick Vinicius <herick.gustavo@gmail.com>, 2021
+# Lucas Dias <lucasdiaas@outlook.com>, 2021
+# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2021
+# George Silva <algoritmo.linux@gmail.com>, 2021
+# Josué Teodoro Moreira <jteodomo@gmail.com>, 2021
+# Luciano Luck, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: jose, 2021\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: Luciano Luck, 2022\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:190 src/terminal-window.c:4435
@@ -56,6 +58,10 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"O MATE Terminal é um aplicativo de emulação de terminal que você pode usar "
+"para acessar um shell UNIX no ambiente MATE. O Terminal MATE emula o "
+"programa xterm desenvolvido pelo X Consortium. Suporta fundos translúcidos, "
+"abrindo vários terminais em uma única janela (abas) e URLs clicáveis."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -63,6 +69,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"O MATE Terminal é um fork do GNOME Terminal e parte do MATE Desktop "
+"Environment. Se você quiser saber mais sobre o MATE e o MATE Terminal, "
+"visite a página inicial do projeto."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:518
 #: src/terminal-profile.c:161 src/terminal-window.c:2205
@@ -92,6 +101,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Ainda há um processo em execução neste terminal.\n"
+"Fechar o terminal irá matá-lo."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -933,13 +944,16 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Realçar URLs sob o ponteiro do mouse"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Se verdadeiro, os URLs sob o ponteiro do mouse são destacados e podem ser "
+"abertos com um clique do mouse junto com a tecla de controle ou usados ​​no "
+"menu de contexto."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -1710,11 +1724,11 @@ msgstr "Copiar o texto selecionado para a área de transferên_cia"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "Destaque os desafios _S/Key sob o ponteiro do mouse"
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Realce _URLs sob o ponteiro do mouse"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1962,7 +1976,7 @@ msgstr "_Título:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_Ok"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2450,7 +2464,7 @@ msgstr "Desativa a barra de menu"
 
 #: src/terminal-options.c:1028
 msgid "Maximize the window"
-msgstr "Maximiza a janela"
+msgstr "Maximizar a janela"
 
 #: src/terminal-options.c:1037
 msgid "Full-screen the window"
@@ -2879,6 +2893,8 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Ainda existem processos em execução em alguns terminais nesta janela.\n"
+"Fechar a janela matará todos eles."
 
 #: src/terminal-window.c:3613
 msgid "There are multiple tabs open in this window."
@@ -2910,10 +2926,12 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"MATE Terminal é um emulador de terminal para o MATE Desktop Environment.\n"
+"Alimentado por Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4437
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "Sobre o Terminal MATE"
 
 #: src/terminal-window.c:4438
 msgid ""
@@ -2924,6 +2942,10 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 2002–2004 Havoc PenningtonCopyright © 2003–2004, 2007 Mariano "
+"Suárez-AlvarezCopyright © 2006 Guilherme de S. PastoreCopyright © 2007–2010 "
+"Christian PerschCopyright © 2011 PerberosCopyright © 2012-2021 "
+"desenvolvedores do MATE"
 
 #: src/terminal-window.c:4450
 msgid "translator-credits"
@@ -2948,4 +2970,7 @@ msgstr ""
 "Matheus Martins https://www.transifex.com/accounts/profile/Matheus_Martins\n"
 "Michele dos Santos da Silva https://www.transifex.com/accounts/profile/mchelem\n"
 "Thiago Cangussu https://www.transifex.com/accounts/profile/cangussu.thg\n"
-"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti"
+"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti\n"
+"Ítalo Rangel Penaforte https://www.transifex.com/accounts/profile/italo.penaforte\n"
+"George Salu da Silva https://www.transifex.com/user/profile/George_salu_da_silva/\n"
+"Josué Teodoro Moreira https://www.transifex.com/user/profile/J0sueTM/"

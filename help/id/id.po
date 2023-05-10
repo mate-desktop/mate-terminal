@@ -1,20 +1,22 @@
 # 
 # Translators:
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Chotibul Studio <chotibulstudio@gmail.com>, 2020
-# Andika Triwidada <andika@gmail.com>, 2021
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2021
+# Chotibul Studio <chotibulstudio@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Aril Apria Susanto <awriel@gmail.com>, 2021
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2021
 # Aryo Kamandanu <novarinoakise@gmail.com>, 2021
+# Andika Triwidada <andika@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 13:37+0100\n"
-"PO-Revision-Date: 2018-10-05 19:26+0000\n"
-"Last-Translator: Aryo Kamandanu <novarinoakise@gmail.com>, 2021\n"
-"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
+"PO-Revision-Date: 2021-09-21 17:43+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2022\n"
+"Language-Team: Indonesian (https://app.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +31,9 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020, 2021.\n"
+"Triyan W. Nugroho <triyan.wn@gmail.com>, 2021."
 
 #. (itstool) path: info/title
 #: C/index.docbook:9
@@ -63,7 +67,7 @@ msgstr ""
 #. (itstool) path: info/copyright
 #: C/index.docbook:30
 msgid "<year>2000</year> <holder>Miguel de Icaza</holder>"
-msgstr "<year>2000</year><holder>Miguel de </holder>lcaza"
+msgstr "<year>2000</year><holder>Miguel de lcaza</holder>"
 
 #. (itstool) path: info/copyright
 #: C/index.docbook:34
@@ -282,6 +286,10 @@ msgid ""
 "specified in your system account. You can switch to a different shell at any"
 " time."
 msgstr ""
+"Shell adalah program yang menafsirkan dan menjalankan perintah yang Anda "
+"ketik pada prompt baris perintah. Saat Anda memulai <application>MATE "
+"Terminal</application>, aplikasi akan memulai shell baku yang ditentukan di "
+"akun sistem Anda. Anda dapat beralih ke shell yang berbeda kapan saja."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:217
@@ -289,6 +297,8 @@ msgid ""
 "Run any application that is designed to run on VT102, VT220, and "
 "<application>xterm</application> terminals"
 msgstr ""
+"Jalankan aplikasi apa pun yang dirancang untuk berjalan di terminal VT102, "
+"VT220, dan <application>xterm</application>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:219
@@ -302,11 +312,19 @@ msgid ""
 "escape sequences that the VT102 and VT220 terminals use for functions such "
 "as to position the cursor and to clear the screen."
 msgstr ""
+"<application>Terminal MATE</application> mengemulasi aplikasi "
+"<application>xterm</application> yang dikembangkan oleh Konsorsium X. Pada "
+"gilirannya, aplikasi <application>xterm</application> mengemulasi terminal "
+"DEC VT102 dan juga mendukung urutan escape DEC VT220. Urutan escape adalah "
+"serangkaian karakter yang dimulai dengan karakter <keycap>Esc</keycap>. "
+"<application>Terminal MATE</application> menerima semua urutan escape yang "
+"digunakan terminal VT102 dan VT220 untuk fungsi seperti memposisikan kursor "
+"dan untuk membersihkan layar."
 
 #. (itstool) path: info/title
 #: C/index.docbook:229
 msgid "Getting Started"
-msgstr "Mulai"
+msgstr "Memulai"
 
 #. (itstool) path: section/para
 #: C/index.docbook:230
@@ -314,11 +332,13 @@ msgid ""
 "The following sections describe how to start <application>MATE "
 "Terminal</application>."
 msgstr ""
+"Bagian berikut menjelaskan cara memulai <application>Terminal "
+"MATE</application>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:234
 msgid "Starting MATE Terminal"
-msgstr ""
+msgstr "Memulai Terminal MATE"
 
 #. (itstool) path: section/para
 #: C/index.docbook:235
@@ -326,6 +346,8 @@ msgid ""
 "You can start <application>MATE Terminal</application> in the following "
 "ways:"
 msgstr ""
+"Anda dapat memulai <application>Terminal MATE</application> dengan cara "
+"berikut:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:240
@@ -338,6 +360,8 @@ msgid ""
 "Choose "
 "<menuchoice><guimenu>Accessories</guimenu><guimenuitem>Terminal</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih "
+"<menuchoice><guimenu>Aksesori</guimenu><guimenuitem>Terminal</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:247
@@ -347,7 +371,7 @@ msgstr "Baris perintah"
 #. (itstool) path: listitem/para
 #: C/index.docbook:249
 msgid "Execute the following command: <command>mate-terminal</command>"
-msgstr ""
+msgstr "Jalankan perintah berikut: <command>mate-terminal</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:252
@@ -356,11 +380,15 @@ msgid ""
 "<application>MATE Terminal</application>. To view the command line options, "
 "execute the following command: <command>mate-terminal --help</command>"
 msgstr ""
+"Anda dapat menggunakan opsi baris perintah untuk mengubah cara Anda "
+"menjalankan <application>Terminal MATE</application>. Untuk melihat opsi "
+"baris perintah, jalankan perintah berikut: <command>mate-terminal "
+"--help</command>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:260
 msgid "When You First Start MATE Terminal"
-msgstr ""
+msgstr "Saat Pertama Kali Memulai Terminal MATE"
 
 #. (itstool) path: section/para
 #: C/index.docbook:261
@@ -369,16 +397,19 @@ msgid ""
 "the application opens a terminal window with a group of default settings. "
 "The group of default settings is called the Default profile."
 msgstr ""
+"Saat Anda memulai <application>Terminal MATE</application> untuk pertama "
+"kalinya, aplikasi membuka jendela terminal dengan sekelompok pengaturan "
+"baku. Grup pengaturan baku disebut profil Baku."
 
 #. (itstool) path: info/title
 #: C/index.docbook:263
 msgid "Example of a Default MATE Terminal Window"
-msgstr ""
+msgstr "Contoh Jendela Baku Terminal MATE"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:265 C/index.docbook:324
 msgid "MATE Terminal default window"
-msgstr ""
+msgstr "Jendela baku Terminal MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -391,6 +422,8 @@ msgid ""
 "external ref='figures/mate-terminal-default.png' "
 "md5='fccdfe734f4180cb393cd23679d6dd18'"
 msgstr ""
+"external ref='figures/mate-terminal-default.png' "
+"md5='fccdfe734f4180cb393cd23679d6dd18'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:266
@@ -399,6 +432,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal default "
 "window</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mate-terminal-default.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Jendela baku Terminal "
+"MATE</phrase> </textobject>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:276
@@ -410,6 +446,12 @@ msgid ""
 "command. By default, <application>MATE Terminal</application> uses the "
 "default shell specified for the user who starts the application."
 msgstr ""
+"Jendela terminal menampilkan command prompt di mana Anda dapat mengetik "
+"perintah UNIX. Command prompt dapat berupa %, #, &gt;, $, atau karakter "
+"khusus lainnya. Kursor diposisikan pada command prompt. Saat Anda mengetik "
+"perintah UNIX dan menekan <keycap>Return</keycap>, komputer menjalankan "
+"perintah. Secara baku, <application>Terminal MATE</application> menggunakan "
+"shell baku yang ditentukan untuk pengguna yang memulai aplikasi."
 
 #. (itstool) path: section/para
 #: C/index.docbook:279
@@ -417,31 +459,33 @@ msgid ""
 "<application>MATE Terminal</application> also sets the following environment"
 " variables:"
 msgstr ""
+"<application>Terminal MATE</application> juga menetapkan variabel lingkungan"
+" berikut:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:284
 msgid "<varname>TERM</varname>"
-msgstr ""
+msgstr "<varname>TERM</varname>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:287
 msgid "Set to <literal>xterm-256color</literal> by default."
-msgstr ""
+msgstr "Mengatur ke <literal>xterm-256color</literal> secara baku."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:293
 msgid "<varname>WINDOWID</varname>"
-msgstr ""
+msgstr "<varname>WINDOWID</varname>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:296
 msgid "Set to the X11 window identifier by default."
-msgstr ""
+msgstr "Atur ke pengidentifikasi jendela X11 secara baku."
 
 #. (itstool) path: info/title
 #: C/index.docbook:304
 msgid "Terminal Profiles"
-msgstr ""
+msgstr "Profil Terminal"
 
 #. (itstool) path: section/para
 #: C/index.docbook:305
@@ -452,6 +496,11 @@ msgid ""
 "automatically when you start <application>MATE Terminal</application> in the"
 " profile."
 msgstr ""
+"Anda dapat membuat profil baru, dan menerapkan profil baru ke terminal untuk"
+" memodifikasi karakteristik seperti fonta, warna dan efek, perilaku gulir, "
+"judul jendela, dan kompatibilitas. Anda juga dapat menentukan perintah yang "
+"berjalan secara otomatis saat memulai <application>Terminal "
+"MATE</application> di profil."
 
 #. (itstool) path: section/para
 #: C/index.docbook:307
@@ -464,6 +513,13 @@ msgid ""
 "terminal. To specify an initial profile for a terminal when you start the "
 "application from a command line, use the following command:"
 msgstr ""
+"Anda menentukan setiap profil terminal dalam dialog "
+"<guilabel>Profil</guilabel>, yang Anda akses dari menu "
+"<guimenu>Sunting</guimenu>. Anda dapat menentukan profil yang berbeda yang "
+"Anda butuhkan. Saat memulai terminal, Anda dapat memilih profil yang ingin "
+"Anda gunakan untuk terminal. Atau, Anda dapat mengubah profil terminal saat "
+"Anda menggunakan terminal. Untuk menentukan profil awal bagi terminal saat "
+"Anda memulai aplikasi dari baris perintah, gunakan perintah berikut:"
 
 #. (itstool) path: section/para
 #: C/index.docbook:308
@@ -471,6 +527,8 @@ msgid ""
 "<command>mate-terminal --window-with-"
 "profile=<replaceable>profilename</replaceable></command>"
 msgstr ""
+"<command>mate-terminal --window-with-"
+"profile=<replaceable>namaprofil</replaceable></command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:311
@@ -479,6 +537,9 @@ msgid ""
 "<application>MATE Terminal</application>, unless you specify a different "
 "titlebar name in the <guilabel>Editing Profile</guilabel> dialog."
 msgstr ""
+"Nama profil saat ini muncul di bilah judul <application>Terminal "
+"MATE</application>, kecuali Jika Anda menentukan nama bilah judul yang "
+"berbeda dalam dialog <guilabel>Penyuntingan Profil</guilabel>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:313
@@ -486,11 +547,13 @@ msgid ""
 "See <xref linkend=\"mate-terminal-manage-profiles\"/> for information about "
 "how to define and use a new terminal profile."
 msgstr ""
+"Lihat <xref linkend=\"mate-terminal-manage-profiles\"/> untuk informasi "
+"tentang cara menentukan dan menggunakan profil terminal baru."
 
 #. (itstool) path: info/title
 #: C/index.docbook:317
 msgid "Working With Multiple Terminals"
-msgstr ""
+msgstr "Bekerja Dengan Beberapa Terminal"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -502,6 +565,13 @@ msgid ""
 "can use each terminal for different tasks. You can apply a different profile"
 " to each tabbed terminal in the window."
 msgstr ""
+"<application>Terminal MATE</application> menyediakan fitur tab yang "
+"memungkinkan Anda membuka beberapa terminal dalam satu jendela. Setiap "
+"terminal terbuka di tab terpisah. Klik pada tab yang sesuai untuk "
+"menampilkan terminal di jendela. Setiap terminal bertab di jendela adalah "
+"subproses terpisah, sehingga Anda dapat menggunakan setiap terminal untuk "
+"tugas yang berbeda. Anda dapat menerapkan profil yang berbeda ke setiap "
+"terminal bertab di jendela."
 
 #. (itstool) path: section/para
 #: C/index.docbook:320
@@ -513,11 +583,17 @@ msgid ""
 " The name of the profile in the active tab, Profile 1, appears in the "
 "titlebar."
 msgstr ""
+"Bilah judul jendela terminal menunjukkan nama profil saat ini, atau nama "
+"yang ditentukan oleh profil saat ini. <xref linkend=\"mate-terminal-"
+"tabbed\"/> memperlihatkan jendela <application>Terminal MATE</application> "
+"dengan empat tab. Dalam hal ini, masing-masing dari empat tab memiliki "
+"profil yang berbeda. Nama profil di tab aktif, Profil 1, muncul di bilah "
+"judul."
 
 #. (itstool) path: info/title
 #: C/index.docbook:322
 msgid "Example of a Terminal Window With Tabs"
-msgstr ""
+msgstr "Contoh Jendela Terminal Dengan Tab"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -530,6 +606,8 @@ msgid ""
 "external ref='figures/mate-terminal-tabbed.png' "
 "md5='fd1c1b81fec91087349f1500b82501fe'"
 msgstr ""
+"external ref='figures/mate-terminal-tabbed.png' "
+"md5='fd1c1b81fec91087349f1500b82501fe'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:325
@@ -538,6 +616,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal window "
 "with four tabs</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mate-terminal-tabbed.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Jendela Terminal MATE "
+"dengan empat tab</phrase> </textobject>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:335
@@ -545,6 +626,8 @@ msgid ""
 "See <xref linkend=\"mate-terminal-windows\"/> for information about how to "
 "open a new tabbed terminal."
 msgstr ""
+"Lihat <xref linkend=\"mate-terminal-windows\"/> untuk informasi tentang cara"
+" membuka terminal baru bertab."
 
 #. (itstool) path: info/title
 #: C/index.docbook:344
@@ -554,12 +637,12 @@ msgstr "Cara pakai"
 #. (itstool) path: info/title
 #: C/index.docbook:346
 msgid "Opening and Closing Terminals"
-msgstr ""
+msgstr "Membuka dan Menutup Terminal"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:349
 msgid "To open a new terminal window:"
-msgstr ""
+msgstr "Untuk membuka jendela terminal baru:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:351
@@ -567,6 +650,8 @@ msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open "
 "Terminal</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Berkas</guimenu> <guimenuitem>Buka "
+"Terminal</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:353
@@ -574,11 +659,13 @@ msgid ""
 "The new terminal inherits the application settings and default shell from "
 "the parent terminal."
 msgstr ""
+"Terminal baru mewarisi pengaturan aplikasi dan shell baku dari terminal "
+"induk."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:358
 msgid "To close a terminal window:"
-msgstr ""
+msgstr "Untuk menutup jendela terminal:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:360
@@ -586,6 +673,8 @@ msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Window</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Berkas</guimenu> <guimenuitem>Tutup "
+"Jendela</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:362
@@ -594,11 +683,14 @@ msgid ""
 "the terminal. If you close the last terminal window, the <application>MATE "
 "Terminal</application> application exits."
 msgstr ""
+"Tindakan ini menutup terminal dan subproses apa pun yang Anda buka dari "
+"terminal. Jika Anda menutup jendela terminal terakhir, aplikasi "
+"<application>Terminal MATE</application> akan keluar."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:367
 msgid "To add a new tabbed terminal to a window:"
-msgstr ""
+msgstr "Untuk menambahkan terminal bertab baru ke jendela:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:369
@@ -608,11 +700,15 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Open "
 "Tab</guimenuitem></menuchoice> if there is no submenu."
 msgstr ""
+"Pilih <menuchoice><guimenu>Berkas</guimenu><guisubmenu>Buka "
+"Tab</guisubmenu><guimenuitem>Baku</guimenuitem></menuchoice> atau sekadar "
+"<menuchoice><guimenuitem>Berkas</guimenuitem><guimenu>Buka "
+"Tab</guimenu></menuchoice> jika tidak ada sub menu."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:374
 msgid "To display a tabbed terminal:"
-msgstr ""
+msgstr "Untuk menampilkan terminal bertab:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:376
@@ -620,6 +716,8 @@ msgid ""
 "Click on the tab of the tabbed terminal that you want to display, or select "
 "a tab title from the <guimenu>Tabs</guimenu> menu."
 msgstr ""
+"Klik pada tab dari terminal bertab yang ingin Anda tampilkan, atau pilih "
+"judul tab dari menu <guimenu>Tab</guimenu>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:379
@@ -629,16 +727,20 @@ msgid ""
 "<menuchoice><guimenu>Tabs</guimenu><guimenuitem>Previous "
 "Tab</guimenuitem></menuchoice> to navigate between tabs."
 msgstr ""
+"Atau, pilih <menuchoice><guimenu>Tab</guimenu><guimenuitem>Tab "
+"Selanjutnya</guimenuitem></menuchoice> atau "
+"<menuchoice><guimenuitem>Tab</guimenuitem><guimenu>Tab "
+"Sebelumnya</guimenu></menuchoice> untuk menavigasi di antara tab."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:385
 msgid "To close a tabbed terminal:"
-msgstr ""
+msgstr "Untuk menutup terminal bertab:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:390
 msgid "Display the tabbed terminal that you want to close."
-msgstr ""
+msgstr "Tampilkan terminal tab yang ingin Anda tutup."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:395
@@ -646,16 +748,18 @@ msgid ""
 "Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close "
 "Tab</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Berkas</guimenu> <guimenuitem>Tutup "
+"Tab</guimenuitem></menuchoice>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:405
 msgid "Managing Profiles"
-msgstr ""
+msgstr "Mengelola Profil"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:408
 msgid "To add a new profile:"
-msgstr ""
+msgstr "Untuk menambahkan profil baru:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:413
@@ -664,12 +768,16 @@ msgid ""
 "Profile</guimenuitem></menuchoice> to display the <guilabel>New "
 "Profile</guilabel> dialog."
 msgstr ""
+"Pilih <menuchoice><guimenu>Berkas</guimenu><guimenuitem>Profil "
+"Baru</guimenuitem></menuchoice> untuk menampilkan dialog <guilabel>Profil "
+"Baru</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:417
 msgid ""
 "Type the new profile name in the <guilabel>Profile name</guilabel> text box."
 msgstr ""
+"Ketik nama profil baru dalam kotak teks <guilabel>Nama profil</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:421
@@ -677,6 +785,8 @@ msgid ""
 "Use the <guilabel>Base on</guilabel> drop-down list to select the profile on"
 " which you want to base the new profile."
 msgstr ""
+"Gunakan daftar tarik turun <guilabel>Berdasarkan</guilabel> untuk memilih "
+"profil tempat Anda ingin mendasarkan profil baru."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:425
@@ -684,6 +794,8 @@ msgid ""
 "Click <guibutton>Create</guibutton> to display the <guilabel>Editing "
 "Profile</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Buat</guibutton> untuk menampilkan dialog "
+"<guilabel>Penyuntingan Profil</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:429
@@ -693,18 +805,21 @@ msgid ""
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu></menuchoice> submenu."
 msgstr ""
+"Klik <guibutton>Tutup</guibutton>. <application>Terminal MATE</application> "
+"menambahkan profil ke sub menu <menuchoice><guimenu>Terminal</guimenu> "
+"<guisubmenu>Ubah Profil</guisubmenu></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:437
 msgid "To change the profile of a tabbed terminal:"
-msgstr ""
+msgstr "Untuk mengubah profil terminal bertab:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:442
 msgid ""
 "Click on the tab of the tabbed terminal for which you want to change the "
 "profile."
-msgstr ""
+msgstr "Klik pada tab dari terminal bertab yang ingin Anda ubah profilnya."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:446
@@ -712,11 +827,13 @@ msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu><guimenuitem><replaceable>profilename</replaceable></guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Ubah "
+"Profil</guisubmenu><guimenuitem><replaceable>namaprofil</replaceable></guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:454
 msgid "To edit a profile:"
-msgstr ""
+msgstr "Untuk menyunting suatu profil:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:456
@@ -725,6 +842,9 @@ msgid ""
 "can access the <guilabel>Editing Profile</guilabel> dialog in the following "
 "ways:"
 msgstr ""
+"Anda menyunting profil dalam dialog <guilabel>Penyuntingan "
+"Profil</guilabel>. Anda dapat mengakses dialog <guilabel>Penyuntingan "
+"Profil</guilabel> dengan cara berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:460
@@ -732,6 +852,8 @@ msgid ""
 "Choose <menuchoice><guimenu>Edit</guimenu><guisubmenu>Current "
 "Profile</guisubmenu></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Sunting</guimenu> <guisubmenu>Profil "
+"Kini</guisubmenu></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:464
@@ -740,6 +862,9 @@ msgid ""
 "<menuchoice><guimenuitem>Profiles</guimenuitem> <guimenuitem>Profile "
 "Preferences</guimenuitem></menuchoice> from the popup menu."
 msgstr ""
+"Klik kanan di jendela terminal, lalu pilih "
+"<menuchoice><guimenuitem>Profil</guimenuitem><guimenuitem>Preferensi "
+"Profil</guimenuitem></menuchoice> dari menu popup."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:468
@@ -750,11 +875,16 @@ msgid ""
 "<guibutton>Edit</guibutton>. For information on the options you can set for "
 "profiles, see <xref linkend=\"mate-terminal-prefs\"/>."
 msgstr ""
+"Pilih "
+"<menuchoice><guimenu>Sunting</guimenu><guisubmenu>Profil</guisubmenu></menuchoice>,"
+" pilih profil yang ingin Anda sunting, lalu klik "
+"<guibutton>Sunting</guibutton>. Untuk informasi tentang opsi yang dapat Anda"
+" atur bagi profil, lihat <xref linkend=\"mate-terminal-prefs\"/>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:475
 msgid "To delete a profile:"
-msgstr ""
+msgstr "Untuk menghapus suatu profil:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:480
@@ -762,6 +892,8 @@ msgid ""
 "Choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Profiles</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih "
+"<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Profil</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:484
@@ -771,11 +903,14 @@ msgid ""
 "<guibutton>Delete</guibutton>. The <guilabel>Delete Profile</guilabel> "
 "dialog is displayed."
 msgstr ""
+"Pilih nama profil yang ingin Anda hapus di daftar "
+"<guilabel>Profil</guilabel>, lalu klik <guibutton>Hapus</guibutton>. Dialog "
+"<guilabel>Hapus Profil</guilabel> ditampilkan."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:488
 msgid "Click <guibutton>Delete</guibutton> to confirm the deletion."
-msgstr ""
+msgstr "Klik <guibutton>Hapus</guibutton> untuk mengonfirmasi penghapusan."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:492
@@ -783,16 +918,18 @@ msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Edit "
 "Profiles</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Tutup</guibutton> untuk menutup dialog <guilabel>Sunting "
+"Profil</guilabel>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:502
 msgid "Modifying a Terminal Window"
-msgstr ""
+msgstr "Memodifikasi Jendela Terminal"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:505
 msgid "To hide the menubar:"
-msgstr ""
+msgstr "Untuk menyembunyikan bilah menu:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:507
@@ -800,11 +937,13 @@ msgid ""
 "Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Show "
 "Menubar</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Tampilan</guimenu> <guimenuitem>Tampilkan Bilah "
+"Menu</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:512
 msgid "To show a hidden menubar:"
-msgstr ""
+msgstr "Untuk menampilkan bilah menu tersembunyi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:514
@@ -812,6 +951,8 @@ msgid ""
 "Right-click on the terminal window, then choose <guimenuitem>Show "
 "Menubar</guimenuitem> from the popup menu."
 msgstr ""
+"Klik kanan pada jendela terminal, lalu pilih <guimenuitem>Tampilkan Bilah "
+"Menu</guimenuitem> dari menu popup."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:518
@@ -819,6 +960,8 @@ msgid ""
 "To display the <application>MATE Terminal</application> window in full-"
 "screen mode:"
 msgstr ""
+"Untuk menampilkan jendela <application>Terminal MATE</application> dalam "
+"mode layar penuh:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:520
@@ -830,11 +973,17 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Full "
 "Screen</guimenuitem></menuchoice> again."
 msgstr ""
+"Pilih <menuchoice><guimenu>Tampilan</guimenu> <guimenuitem>Layar "
+"Penuh</guimenuitem></menuchoice>. Mode layar penuh menampilkan teks di "
+"jendela yang mengisi seluruh layar. Jendela tidak berisi bingkai jendela "
+"atau bilah judul. Untuk keluar dari mode ini, pilih "
+"<menuchoice><guimenu>Tampilan</guimenu> <guimenuitem>Layar "
+"Penuh</guimenuitem></menuchoice> lagi."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:524
 msgid "To change the appearance of the terminal window:"
-msgstr ""
+msgstr "Untuk mengubah penampilan jendela terminal:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:526
@@ -844,21 +993,25 @@ msgid ""
 "dialog to change the appearance of the terminal window. For example, you can"
 " change the background color, or the location of the scrollbar."
 msgstr ""
+"Lihat <xref linkend=\"mate-terminal-prefs\"/> untuk informasi tentang opsi "
+"yang dapat Anda pilih dalam dialog <guilabel>Penyuntingan Profil</guilabel> "
+"untuk mengubah tampilan jendela terminal. Misalnya, Anda dapat mengubah "
+"warna latar belakang, atau lokasi bilah gulir."
 
 #. (itstool) path: info/title
 #: C/index.docbook:533
 msgid "Working with the Contents of Terminal Windows"
-msgstr ""
+msgstr "Bekerja dengan Isi Jendela Terminal"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:536
 msgid "To scroll through previous commands and output:"
-msgstr ""
+msgstr "Untuk menggulir perintah dan keluaran sebelumnya:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:538
 msgid "Perform one of the following actions:"
-msgstr ""
+msgstr "Lakukan salah satu tindakan berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:543
@@ -866,6 +1019,8 @@ msgid ""
 "Use the scrollbar, which is usually displayed on the right of the terminal "
 "window."
 msgstr ""
+"Gunakan bilah gulir, yang biasanya ditampilkan di sebelah kanan jendela "
+"terminal."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:547
@@ -876,6 +1031,11 @@ msgid ""
 "<keycombo><keycap>Shift</keycap><keycap>Home</keycap></keycombo>, or "
 "<keycombo><keycap>Shift</keycap><keycap>End</keycap></keycombo> keys."
 msgstr ""
+"Tekan tombol <keycombo><keycap>Shift</keycap><keycap>Page "
+"Up</keycap></keycombo>, <keycombo><keycap>Shift</keycap><keycap>Page "
+"Down</keycap></keycombo>, "
+"<keycombo><keycap>Shift</keycap><keycap>Home</keycap></keycombo>, atau "
+"<keycombo><keycap>Shift</keycap><keycap>End</keycap></keycombo>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:551
@@ -889,16 +1049,25 @@ msgid ""
 " or "
 "<keycombo><keycap>Control</keycap><keycap>Shift</keycap><keycap>Down</keycap></keycombo>."
 msgstr ""
+"Cacah baris yang dapat Anda gulir balik di jendela terminal ditentukan oleh "
+"pengaturan <guilabel>Gulir Balik</guilabel> di bagian tab "
+"<guilabel>Gulir</guilabel> dari dialog <guilabel>Penyuntingan "
+"Profil</guilabel>. Anda juga dapat menggulir ke atas atau ke bawah satu "
+"baris pada satu waktu dengan menekan "
+"<keycombo><keycap>Control</keycap><keycap>Shift</keycap><keycap>Panah "
+"Atas</keycap></keycombo> atau "
+"<keycombo><keycap>Control</keycap><keycap>Shift</keycap><keycap>Panah "
+"Bawah</keycap></keycombo>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:556
 msgid "To select and copy text:"
-msgstr ""
+msgstr "Untuk memilih dan menyalin teks:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:558
 msgid "You can select text in any of the following ways:"
-msgstr ""
+msgstr "Anda dapat memilih teks dengan salah satu cara berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:563
@@ -906,6 +1075,9 @@ msgid ""
 "To select a character at a time, click on the first character that you want "
 "to select and drag the mouse to the last character that you want to select."
 msgstr ""
+"Untuk memilih satu karakter pada suatu saat, klik karakter pertama yang "
+"ingin Anda pilih dan seret tetikus ke karakter terakhir yang ingin Anda "
+"pilih."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:567
@@ -914,6 +1086,9 @@ msgid ""
 "select and drag the mouse to the last word that you want to select. Symbols "
 "are selected individually."
 msgstr ""
+"Untuk memilih kata sekaligus, klik ganda pada kata pertama yang ingin Anda "
+"pilih dan seret tetikus ke kata terakhir yang ingin Anda pilih. Simbol "
+"dipilih secara individual."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:571
@@ -921,6 +1096,8 @@ msgid ""
 "To select a line at a time, triple-click on the first line that you want to "
 "select and drag the mouse to the last line that you want to select."
 msgstr ""
+"Untuk memilih garis sekaligus, klik tiga kali pada baris pertama yang ingin "
+"Anda pilih dan seret tetikus ke baris terakhir yang ingin Anda pilih."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:575
@@ -931,11 +1108,16 @@ msgid ""
 "copy the selected text, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
 msgstr ""
+"Tindakan ini memilih semua teks antara butir pertama dan terakhir. Untuk "
+"semua pilihan teks, <application>MATE Terminal</application> menyalin teks "
+"yang dipilih ke clipboard saat Anda melepaskan tombol mouse. Untuk menyalin "
+"teks yang dipilih secara eksplisit, pilih "
+"<menuchoice><guimenu>EditCopy</guimenu><guimenuitem></guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:580
 msgid "To paste text into a terminal:"
-msgstr ""
+msgstr "Untuk menempelkan teks ke terminal:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:582
@@ -943,6 +1125,8 @@ msgid ""
 "If you previously copied text to the clipboard, you can paste the text into "
 "a terminal by performing one of the following actions:"
 msgstr ""
+"Jika sebelumnya Anda menyalin teks ke papan klip, Anda dapat menempelkan "
+"teks ke terminal dengan melakukan salah satu tindakan berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:586
@@ -951,6 +1135,10 @@ msgid ""
 " prompt. If you do not have a middle mouse button, refer to the X Server "
 "documentation for information about how to emulate the middle mouse button."
 msgstr ""
+"Untuk menempelkan teks yang Anda salin hanya dengan pilihan, klik tengah "
+"pada command prompt. Jika Anda tidak memiliki tombol tengah tetikus, lihat "
+"dokumentasi X Server untuk informasi tentang cara meniru tombol tengah "
+"tetikus."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:590
@@ -958,11 +1146,13 @@ msgid ""
 "To paste text that you explicitly copied, choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice>."
 msgstr ""
+"Untuk menempelkan teks yang Anda salin secara eksplisit, pilih "
+"<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Tempel</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:597
 msgid "To drag a file name into a terminal window:"
-msgstr ""
+msgstr "Untuk menyeret nama berkas ke jendela terminal:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:599
@@ -970,11 +1160,13 @@ msgid ""
 "You can drag a file name to a terminal from another application such as a "
 "file manager. The terminal displays the path and the full name of the file."
 msgstr ""
+"Anda dapat menyeret nama berkas ke terminal dari aplikasi lain seperti "
+"manajer berkas. Terminal menampilkan path dan nama lengkap berkas."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:604
 msgid "To access a link:"
-msgstr ""
+msgstr "Untuk mengakses suatu tautan:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:606
@@ -982,16 +1174,18 @@ msgid ""
 "To access a Uniform Resource Locator (URL) that is displayed in a terminal, "
 "perform the following steps:"
 msgstr ""
+"Untuk mengakses Uniform Resource Locator (URL) yang ditampilkan di terminal,"
+" lakukan langkah-langkah berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:610
 msgid "Move the mouse over the URL until the URL is underlined."
-msgstr ""
+msgstr "Pindahkan tetikus ke URL hingga URL digarisbawahi."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:614
 msgid "Right-click on the URL to open a popup menu."
-msgstr ""
+msgstr "Klik kanan pada URL untuk membuka menu popup."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:618
@@ -999,11 +1193,13 @@ msgid ""
 "Choose <guimenuitem>Open Link</guimenuitem> to start a link application and "
 "display the file located at the URL."
 msgstr ""
+"Pilih <guimenuitem>Buka Tautan</guimenuitem> untuk memulai aplikasi tautan "
+"dan menampilkan berkas yang terletak di URL."
 
 #. (itstool) path: info/title
 #: C/index.docbook:627
 msgid "Viewing the Keyboard Shortcut Settings"
-msgstr ""
+msgstr "Melihat Pengaturan Pintasan Papan Ketik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:628
@@ -1014,6 +1210,11 @@ msgid ""
 "Shortcuts</guimenuitem></menuchoice>. The <guilabel>Keyboard "
 "Shortcuts</guilabel> dialog contains the following items:"
 msgstr ""
+"Untuk melihat pengaturan pintasan papan ketik yang didefinisikan untuk "
+"<application>Terminal MATE</application>, pilih "
+"<menuchoice><guimenu>Sunting</guimenu> <guimenuitem>Pintasan Papan "
+"Ketik</guimenuitem></menuchoice>. Dialog <guilabel>Pintasan Papan "
+"Ketik</guilabel> berisi butir-butir berikut:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:632
@@ -1021,6 +1222,8 @@ msgid ""
 "<guilabel>Disable all menu access keys (such as Alt+f to open File "
 "menu)</guilabel>"
 msgstr ""
+"<guilabel>Nonaktifkan semua tombol akses menu (seperti Alt+f untuk membuka "
+"menu Berkas)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:634
@@ -1031,11 +1234,18 @@ msgid ""
 " In some cases, you must press the <keycap>Alt</keycap> key in combination "
 "with the access key to perform the action."
 msgstr ""
+"Batal pilih opsi ini untuk menonaktifkan tombol akses yang didefinisikan "
+"untuk memungkinkan Anda menggunakan papan ketik alih-alih tetikus untuk "
+"memilih butir menu. Setiap tombol akses diidentifikasi dengan huruf yang "
+"digarisbawahi pada menu atau opsi dialog. Dalam beberapa kasus, Anda harus "
+"menekan tombol <keycap>Alt</keycap> dalam kombinasi dengan tombol akses "
+"untuk melakukan tindakan."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:639
 msgid "<guilabel>Disable menu shortcut key (F10 by default)</guilabel>"
 msgstr ""
+"<guilabel>Nonaktifkan tombol pintasan menu (F10 secara baku)</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:641
@@ -1044,11 +1254,15 @@ msgid ""
 "you to access the <application>MATE Terminal</application> menus. The "
 "default shortcut key to access the menus is <keycap>F10</keycap>."
 msgstr ""
+"Batal pilih opsi ini untuk menonaktifkan tombol pintasan yang ditentukan "
+"untuk memungkinkan Anda mengakses menu <application>Terminal "
+"MATE</application>. Tombol pintasan baku untuk mengakses menu adalah "
+"<keycap>F10</keycap>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:646
 msgid "<guilabel>Shortcut Keys</guilabel>"
-msgstr ""
+msgstr "<guilabel>Tombol Pintasan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:648
@@ -1056,17 +1270,21 @@ msgid ""
 "The <guilabel>Shortcut Keys</guilabel> section of the dialog lists the "
 "shortcut keys that are defined for each menu item."
 msgstr ""
+"Bagian <guilabel>Tombol Pintas</guilabel> dari dialog mencantumkan tombol "
+"pintasan yang ditentukan untuk setiap butir menu."
 
 #. (itstool) path: note/para
 #: C/index.docbook:650
 msgid ""
 "Not all keys can be used as shortcut keys, such as <keycap>Tab</keycap>."
 msgstr ""
+"Tidak semua tombol dapat digunakan sebagai tombol pintas, seperti "
+"<keycap>Tab</keycap>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:656
 msgid "Text Size"
-msgstr ""
+msgstr "Ukuran Teks"
 
 #. (itstool) path: section/para
 #: C/index.docbook:657
@@ -1074,6 +1292,8 @@ msgid ""
 "You can use the following methods to resize the text in the MATE Terminal "
 "window:"
 msgstr ""
+"Anda dapat menggunakan metode berikut untuk mengubah ukuran teks di jendela "
+"Terminal MATE:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:659
@@ -1082,6 +1302,8 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
 "In</guimenuitem></menuchoice>."
 msgstr ""
+"Untuk memperbesar ukuran teks, pilih "
+"<menuchoice><guimenu>Tampilan</guimenu><guimenuitem>Perbesar</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:661
@@ -1090,6 +1312,8 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Zoom "
 "Out</guimenuitem></menuchoice>."
 msgstr ""
+"Untuk mengurangi ukuran teks, pilih "
+"<menuchoice><guimenu>Tampilan</guimenu><guimenuitem>Perkecil</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:663
@@ -1098,11 +1322,14 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Normal "
 "Size</guimenuitem></menuchoice>."
 msgstr ""
+"Untuk melihat teks pada ukuran sebenarnya, pilih "
+"<menuchoice><guimenu>Tampilan</guimenu><guimenuitem>Ukuran "
+"Normal</guimenuitem></menuchoice>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:668
 msgid "To Change the Terminal Title"
-msgstr ""
+msgstr "Untuk Mengubah Judul Terminal"
 
 #. (itstool) path: section/para
 #: C/index.docbook:669
@@ -1110,6 +1337,8 @@ msgid ""
 "To change the title of the currently displayed terminal, perform the "
 "following steps:"
 msgstr ""
+"Untuk mengubah judul terminal yang ditampilkan saat ini, lakukan langkah-"
+"langkah berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:673
@@ -1117,6 +1346,8 @@ msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Set "
 "Title</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Atur "
+"Judul</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:676
@@ -1124,6 +1355,8 @@ msgid ""
 "Type the new title in the <guilabel>Title</guilabel> text box. "
 "<application>MATE Terminal</application> applies the change immediately."
 msgstr ""
+"Ketik judul baru di kotak teks <guilabel>Judul</guilabel>. "
+"<application>Terminal MATE</application> seketika menerapkan perubahan."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:679
@@ -1131,11 +1364,13 @@ msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Set "
 "Title</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Tutup</guibutton> untuk menutup dialog <guilabel>Atur "
+"Judul</guilabel>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:684
 msgid "To Change the Character Encoding"
-msgstr ""
+msgstr "Untuk Mengubah Pengodean Karakter"
 
 #. (itstool) path: section/para
 #: C/index.docbook:685
@@ -1144,11 +1379,14 @@ msgid ""
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
 "Encoding</guisubmenu></menuchoice>, then select the appropriate encoding."
 msgstr ""
+"Untuk mengubah pengodean karakter, pilih "
+"<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Atur Pengodean "
+"Karakter</guisubmenu></menuchoice>, lalu pilih pengodean yang sesuai."
 
 #. (itstool) path: info/title
 #: C/index.docbook:689
 msgid "To Change the List of Character Encodings"
-msgstr ""
+msgstr "Untuk Mengubah Daftar Pengodean Karakter"
 
 #. (itstool) path: section/para
 #: C/index.docbook:690
@@ -1156,6 +1394,9 @@ msgid ""
 "To change the list of character encodings displayed in the <guisubmenu>Set "
 "Character Encoding</guisubmenu> menu, perform the following steps:"
 msgstr ""
+"Untuk mengubah daftar pengodean karakter yang ditampilkan di menu "
+"<guisubmenu>Atur Pengodean Karakter</guisubmenu>, lakukan langkah-langkah "
+"berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:695
@@ -1163,6 +1404,9 @@ msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Set Character "
 "Encoding</guisubmenu><guimenuitem>Add or Remove</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Terminal</guimenu><guisubmenu>Atur Pengodean "
+"Karakter</guisubmenu><guimenuitem>Tambah atau "
+"Hapus</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:699
@@ -1171,6 +1415,9 @@ msgid ""
 "menu, select the encoding in the <guilabel>Available encodings</guilabel> "
 "list box, then click the right arrow button."
 msgstr ""
+"Untuk menambahkan pengodean ke menu <guisubmenu>Atur Pengodean "
+"Karakter</guisubmenu>, pilih pengodean dalam kotak daftar "
+"<guilabel>Pengodean yang tersedia</guilabel>, lalu klik tombol panah kanan."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:703
@@ -1179,6 +1426,10 @@ msgid ""
 "Encoding</guisubmenu> menu, select the encoding in the <guilabel>Encodings "
 "shown in menu</guilabel> list box, then click the left arrow button."
 msgstr ""
+"Untuk menghapus pengodean dari menu <guisubmenu>Atur Pengodean "
+"Karakter</guisubmenu>, pilih pengodean dalam kotak daftar "
+"<guilabel>Pengodean yang ditampilkan dalam menu</guilabel>, lalu klik tombol"
+" panah kiri."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:707
@@ -1186,21 +1437,25 @@ msgid ""
 "Click <guibutton>Close</guibutton> to close the <guilabel>Add or Remove "
 "Terminal Encodings</guilabel> dialog."
 msgstr ""
+"Klik <guibutton>Tutup</guibutton> untuk menutup dialog <guilabel>Tambah atau"
+" Hapus Pengodean Terminal</guilabel>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:714
 msgid "To Recover Your Terminal"
-msgstr ""
+msgstr "Untuk Memulihkan Terminal Anda"
 
 #. (itstool) path: section/para
 #: C/index.docbook:715
 msgid "This section provides some advice if you have problems with terminals."
 msgstr ""
+"Bagian ini memberikan beberapa saran jika Anda memiliki masalah dengan "
+"terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:720
 msgid "To reset the state of the terminal:"
-msgstr ""
+msgstr "Untuk mengatur ulang keadaan terminal:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:722
@@ -1208,11 +1463,13 @@ msgid ""
 "Choose "
 "<menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih "
+"<menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:730
 msgid "To reset the terminal and clear the screen:"
-msgstr ""
+msgstr "Untuk mengatur ulang terminal dan membersihkan layar:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:732
@@ -1220,6 +1477,8 @@ msgid ""
 "Choose <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset and "
 "Clear</guimenuitem></menuchoice>."
 msgstr ""
+"Pilih <menuchoice><guimenu>Terminal</guimenu><guimenuitem>Reset dan "
+"Bersihkan</guimenuitem></menuchoice>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:743
@@ -1237,6 +1496,12 @@ msgid ""
 " select the profile you want to edit, then click "
 "<guibutton>Edit</guibutton>."
 msgstr ""
+"Untuk mengonfigurasi <application>Terminal MATE</application>, pilih "
+"<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Profil "
+"Kini</guimenuitem></menuchoice>. Untuk mengonfigurasi profil lain yang Anda "
+"siapkan pilih "
+"<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Profil</guimenuitem></menuchoice>,"
+" pilih profil yang ingin Anda sunting, lalu klik Sunting."
 
 #. (itstool) path: section/para
 #: C/index.docbook:746
@@ -1245,6 +1510,9 @@ msgid ""
 "tabbed sections that you can use to configure <application>MATE "
 "Terminal</application>:"
 msgstr ""
+"Dialog <guilabel>Penyuntingan Profil</guilabel> berisi bagian bertab berikut"
+" yang dapat Anda gunakan untuk mengonfigurasi <application>Terminal "
+"MATE</application>:"
 
 #. (itstool) path: info/title
 #: C/index.docbook:763
@@ -1254,17 +1522,17 @@ msgstr "Umum"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:766
 msgid "<guilabel>Profile name</guilabel>"
-msgstr ""
+msgstr "<guilabel>Nama profil</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:769
 msgid "Use this text box to specify the name of the current profile."
-msgstr ""
+msgstr "Gunakan kotak teks ini untuk menentukan nama profil saat ini."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:775
 msgid "<guilabel>Use the system fixed width font</guilabel>"
-msgstr ""
+msgstr "<guilabel>Menggunakan fonta lebar tetap sistem</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:778
@@ -1273,11 +1541,14 @@ msgid ""
 " the <guilabel>Font</guilabel> tab of the "
 "<application>Appearance</application> preference tool."
 msgstr ""
+"Pilih opsi ini untuk menggunakan fonta lebar tetap standar yang ditentukan "
+"di tab <guilabel>Fonta</guilabel> dari alat preferensi "
+"<application>Penampilan</application>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:784
 msgid "<guilabel>Font</guilabel>"
-msgstr ""
+msgstr "<guilabel>Fonta</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:787
@@ -1286,41 +1557,46 @@ msgid ""
 "This button is only enabled if the <guilabel>Use the system terminal "
 "font</guilabel> option is unselected."
 msgstr ""
+"Klik tombol ini untuk memilih jenis fonta dan ukuran fonta untuk terminal. "
+"Tombol ini hanya diaktifkan jika opsi <guilabel>Gunakan fonta terminal "
+"sistem</guilabel> tidak dipilih."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:792
 msgid "<guilabel>Allow bold text</guilabel>"
-msgstr ""
+msgstr "<guilabel>Perbolehkan teks tebal</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:795
 msgid "Select this option to enable the terminal to display bold text."
 msgstr ""
+"Pilih opsi ini untuk mengaktifkan terminal agar menampilkan teks tebal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:801
 msgid "<guilabel>Show menubar by default in new terminals</guilabel>"
 msgstr ""
+"<guilabel>Tampilkan bilah menu secara baku di terminal baru</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:805
 msgid "Select this option to show the menubar on new terminal windows."
-msgstr ""
+msgstr "Pilih opsi ini untuk menampilkan bilah menu di jendela terminal baru."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:811
 msgid "<guilabel>Terminal bell</guilabel>"
-msgstr ""
+msgstr "<guilabel>Bel terminal</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:814
 msgid "Select this option to enable the terminal bell."
-msgstr ""
+msgstr "Pilih opsi ini untuk mengaktifkan bel terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:820
 msgid "<guilabel>Select-by-word characters</guilabel>"
-msgstr ""
+msgstr "<guilabel>Karakter pilih-berdasar-kata</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:823
@@ -1330,6 +1606,11 @@ msgid ""
 "select text by word. See <xref linkend=\"mate-terminal-contents\"/> for more"
 " information about how to select text by word."
 msgstr ""
+"Gunakan kotak teks ini untuk menentukan karakter atau grup karakter yang "
+"dianggap oleh <application>Terminal MATE</application> sebagai kata saat "
+"Anda memilih teks menurut kata. Lihat <xref linkend=\"mate-terminal-"
+"contents\"/> untuk informasi selengkapnya tentang cara memilih teks menurut "
+"kata."
 
 #. (itstool) path: info/title
 #: C/index.docbook:831
@@ -1339,7 +1620,7 @@ msgstr "Judul dan Perintah"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:834
 msgid "<guilabel>Initial title</guilabel>"
-msgstr ""
+msgstr "<guilabel>Judul awal</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:837
@@ -1348,11 +1629,16 @@ msgid ""
 "profile. New terminals that are started from the current terminal have the "
 "new initial title."
 msgstr ""
+"Gunakan kotak teks ini untuk menentukan judul awal terminal yang menggunakan"
+" profil. Terminal baru yang dimulai dari terminal saat ini memiliki judul "
+"awal yang baru."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:843
 msgid "<guilabel>When terminal commands set their own titles</guilabel>"
 msgstr ""
+"<guilabel>Ketika perintah terminal menetapkan judul mereka "
+"sendiri</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:846
@@ -1360,11 +1646,14 @@ msgid ""
 "Use this drop-down list to specify how to handle dynamically-set titles, "
 "that is, terminal titles set by commands that run in the terminal."
 msgstr ""
+"Gunakan daftar tarik turun ini untuk menentukan cara menangani judul yang "
+"ditetapkan secara dinamis, yaitu judul terminal yang ditetapkan oleh "
+"perintah yang berjalan di terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:852
 msgid "<guilabel>Run command as a login shell</guilabel>"
-msgstr ""
+msgstr "<guilabel>Jalankan perintah sebagai shell login</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:855
@@ -1373,11 +1662,15 @@ msgid ""
 "terminal to run as a login shell. If the command is not a shell, the setting"
 " has no effect."
 msgstr ""
+"Pilih opsi ini untuk memaksa perintah yang saat ini berjalan di dalam "
+"terminal untuk berjalan sebagai shell login. Jika perintah bukan shell, "
+"pengaturan tidak berpengaruh."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:861
 msgid "<guilabel>Update login records when command is launched</guilabel>"
 msgstr ""
+"<guilabel>Memperbarui catatan login saat perintah diluncurkan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:864
@@ -1385,11 +1678,13 @@ msgid ""
 "Select this option to insert a new entry in the login records when a new "
 "shell is opened."
 msgstr ""
+"Pilih opsi ini untuk menyisipkan entri baru dalam catatan login saat shell "
+"baru dibuka."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:870
 msgid "<guilabel>Run a custom command instead of my shell</guilabel>"
-msgstr ""
+msgstr "<guilabel>Menjalankan perintah ubahan, bukan shell saya</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:874
@@ -1398,11 +1693,14 @@ msgid ""
 "in the terminal. Specify the custom command in the <guilabel>Custom "
 "command</guilabel> text box."
 msgstr ""
+"Pilih opsi ini untuk menjalankan perintah yang ditentukan, selain shell "
+"normal, di terminal. Tentukan perintah kustom dalam kotak teks "
+"<guilabel>Perintah ubahan</guilabel>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:880
 msgid "<guilabel>When command exits</guilabel>"
-msgstr ""
+msgstr "<guilabel>Saat perintah keluar</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:883
@@ -1410,16 +1708,18 @@ msgid ""
 "Use this drop-down list to specify what action to perform when the command "
 "exits."
 msgstr ""
+"Gunakan daftar tarik turun ini untuk menentukan tindakan apa yang harus "
+"dilakukan saat perintah keluar."
 
 #. (itstool) path: info/title
 #: C/index.docbook:891
 msgid "Colours"
-msgstr ""
+msgstr "Warna"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:894
 msgid "<guilabel>Foreground and Background</guilabel>"
-msgstr ""
+msgstr "<guilabel>Latar Depan dan Latar Belakang</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:898
@@ -1430,6 +1730,11 @@ msgid ""
 "guide/prefs-theme\"><application>Appearance</application> preference "
 "tool</link>."
 msgstr ""
+"Pilih opsi <guilabel>Gunakan warna dari tema sistem</guilabel> untuk "
+"menggunakan warna yang ditentukan dalam tema Desktop MATE yang dipilih di "
+"tab <guilabel>Tema</guilabel> dari <link xlink:href=\"help:mate-user-"
+"guide/prefs-theme\">alat preferensi "
+"<application>Penampilan</application></link>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:901
@@ -1439,36 +1744,40 @@ msgid ""
 "Terminal</application> supports the following foreground and background "
 "color combinations:"
 msgstr ""
+"Gunakan daftar tarik turun <guilabel>Skema bawaan</guilabel> untuk "
+"menentukan warna latar depan dan latar belakang bagi terminal. "
+"<application>Terminal MATE</application> mendukung kombinasi warna latar "
+"depan dan latar belakang berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:906
 msgid "<guilabel>Black on light yellow</guilabel>"
-msgstr ""
+msgstr "<guilabel>Hitam di atas kuning terang</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:911
 msgid "<guilabel>Black on white</guilabel>"
-msgstr ""
+msgstr "<guilabel>Hitam di atas putih</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:916
 msgid "<guilabel>Gray on black</guilabel>"
-msgstr ""
+msgstr "<guilabel>Abu-abu di atas hitam</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:921
 msgid "<guilabel>Green on black</guilabel>"
-msgstr ""
+msgstr "<guilabel>Hijau di atas hitam</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:926
 msgid "<guilabel>White on black</guilabel>"
-msgstr ""
+msgstr "<guilabel>Putih di atas hitam</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:931
 msgid "<guilabel>Custom</guilabel>"
-msgstr ""
+msgstr "<guilabel>Ubahan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:934
@@ -1476,6 +1785,8 @@ msgid ""
 "This option enables you to select colors that are not in the selected color "
 "scheme."
 msgstr ""
+"Opsi ini memungkinkan Anda memilih warna yang tidak ada dalam skema warna "
+"yang dipilih."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:939
@@ -1488,6 +1799,13 @@ msgid ""
 "schemes</guilabel> drop-down list is only enabled if the <guilabel>Use "
 "colours from system theme</guilabel> option is unselected."
 msgstr ""
+"Tampilan sebenarnya dari warna latar depan dan latar belakang dapat "
+"bervariasi tergantung pada skema warna yang Anda pilih. Misalnya, jika Anda "
+"memilih <guilabel>Putih di atas hitam</guilabel> dan skema warna "
+"<guilabel>konsol Linux</guilabel>, aplikasi menampilkan warna latar depan "
+"dan latar belakang sebagai abu-abu muda pada hitam. Daftar tarik turun "
+"<guilabel>Skema bawaan</guilabel> hanya diaktifkan jika opsi "
+"<guilabel>Gunakan warna dari tema sistem</guilabel> tidak dipilih."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:942
@@ -1499,6 +1817,12 @@ msgid ""
 "colour</guibutton> button is only enabled if the <guilabel>Use colours from "
 "system theme</guilabel> option is unselected."
 msgstr ""
+"Klik tombol <guibutton>Warna teks</guibutton> untuk menampilkan dialog "
+"<guilabel>Pilih warna teks terminal</guilabel>. Gunakan roda warna atau "
+"kotak puntir untuk menyesuaikan warna yang ingin Anda gunakan sebagai warna "
+"teks, lalu klik <guibutton>OK</guibutton>. Tombol <guibutton>Warna "
+"teks</guibutton> hanya diaktifkan jika opsi <guilabel>Gunakan warna dari "
+"tema sistem</guilabel> tidak dipilih."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:945
@@ -1510,11 +1834,17 @@ msgid ""
 "<guibutton>Background colour</guibutton> button is only enabled if the "
 "<guilabel>Use colours from system theme</guilabel> option is unselected."
 msgstr ""
+"Klik tombol <guibutton>Warna latar Belakang</guibutton> untuk menampilkan "
+"dialog <guilabel>Pilih warna latar belakang terminal</guilabel>. Gunakan "
+"roda warna atau kotak puntir untuk menyesuaikan warna yang ingin Anda "
+"gunakan sebagai warna latar belakang, lalu klik <guibutton>OK</guibutton>. "
+"Tombol <guibutton>Warna latar belakang</guibutton> hanya diaktifkan jika "
+"opsi <guilabel>Gunakan warna dari tema sistem</guilabel> tidak dipilih."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:951
 msgid "<guilabel>Palette</guilabel>"
-msgstr ""
+msgstr "<guilabel>Palet</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:954
@@ -1523,6 +1853,9 @@ msgid ""
 "color palette specifies these 16 colors. Applications that run in the "
 "terminal use an index number to specify a color from this palette."
 msgstr ""
+"Emulasi terminal hanya dapat menggunakan 16 warna sekaligus untuk menggambar"
+" teks. Palet warna menentukan 16 warna ini. Aplikasi yang berjalan di "
+"terminal menggunakan nomor indeks untuk menentukan warna dari palet ini."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:956
@@ -1531,6 +1864,9 @@ msgid ""
 "preset color schemes. The color palette below and the contents of the "
 "terminal window both update to show the scheme."
 msgstr ""
+"Gunakan daftar tarik turun <guilabel>Skema bawaan</guilabel> untuk memilih "
+"skema warna pratata. Palet warna di bawah ini dan isi jendela terminal "
+"keduanya diperbarui untuk menunjukkan skema."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:957
@@ -1541,6 +1877,10 @@ msgid ""
 "wheel or the spin boxes to customize the color, then click "
 "<guibutton>OK</guibutton>."
 msgstr ""
+"Gunakan <guilabel>Palet warna</guilabel> untuk menyesuaikan 16 warna baku "
+"dalam palet warna ubahan. Untuk menyesuaikan warna, klik warna untuk "
+"menampilkan dialog <guilabel>Entri palet</guilabel>. Gunakan roda warna atau"
+" kotak puntir untuk menyesuaikan warna, lalu klik <guibutton>OK</guibutton>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:964
@@ -1557,11 +1897,13 @@ msgstr "<guilabel>Latar Belakang</guilabel>"
 msgid ""
 "Select a background for the terminal window. The options are as follows:"
 msgstr ""
+"Pilih latar belakang untuk jendela terminal. Pilihannya adalah sebagai "
+"berikut:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:975
 msgid "<guilabel>Solid color</guilabel>"
-msgstr ""
+msgstr "<guilabel>Warna rata</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:978
@@ -1570,11 +1912,14 @@ msgid ""
 "<guilabel>Colors</guilabel> tabbed section as the background color for the "
 "terminal."
 msgstr ""
+"Pilih opsi ini untuk menggunakan warna latar belakang yang ditentukan di "
+"bagian bertab <guilabel>Warna</guilabel> sebagai warna latar belakang untuk "
+"terminal."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:983
 msgid "<guilabel>Background image</guilabel>"
-msgstr ""
+msgstr "<guilabel>Gambar latar belakang</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:986
@@ -1584,6 +1929,10 @@ msgid ""
 " the location and name of the image file. Alternatively, click "
 "<guibutton>Browse</guibutton> to search for and select the image file."
 msgstr ""
+"Pilih opsi ini untuk menggunakan berkas gambar sebagai latar belakang "
+"terminal. Gunakan kotak kombinasi tarik turun <guilabel>Berkas "
+"gambar</guilabel> untuk menentukan lokasi dan nama berkas gambar. Atau, klik"
+" <guibutton>Telusuri</guibutton> untuk mencari dan memilih berkas gambar."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:989
@@ -1594,21 +1943,29 @@ msgid ""
 "fixed on the terminal background and only the text scrolls. This option is "
 "only enabled if you select the <guilabel>Background image</guilabel> option."
 msgstr ""
+"Pilih opsi <guilabel>Gambar latar belakang bergulir</guilabel> untuk "
+"mengaktifkan gambar latar belakang agar menggulir dengan teks saat Anda "
+"menggulir terminal. Jika Anda tidak memilih opsi ini, gambar latar belakang "
+"tetap terpaku pada latar belakang terminal dan hanya teks yang bergulir. "
+"Opsi ini hanya diaktifkan jika Anda memilih opsi <guilabel>Gambar latar "
+"belakang</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:992
 msgid "<guilabel>Transparent background</guilabel>"
-msgstr ""
+msgstr "<guilabel>Latar belakang transparan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:995
 msgid "Select this option to use a transparent background for the terminal."
 msgstr ""
+"Pilih opsi ini untuk menggunakan latar belakang transparan bagi terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1003
 msgid "<guilabel>Shade transparent or image background</guilabel>"
 msgstr ""
+"<guilabel>Warna transparan atau latar belakang gambar berbayang</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1007
@@ -1617,16 +1974,20 @@ msgid ""
 "is only enabled if you select the <guilabel>Background image</guilabel> or "
 "<guilabel>Transparent background</guilabel> options."
 msgstr ""
+"Gunakan penggeser ini untuk membuat berbayang atau meredupkan latar belakang"
+" terminal. Opsi ini hanya diaktifkan jika Anda memilih opsi <guilabel>Gambar"
+" latar belakang</guilabel> atau <guilabel>Latar belakang "
+"transparan</guilabel>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1015
 msgid "Scrolling"
-msgstr "Menggulung"
+msgstr "Menggulir"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1018
 msgid "<guilabel>Scrollbar is</guilabel>"
-msgstr ""
+msgstr "<guilabel>Bilah gulir adalah</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1021
@@ -1634,11 +1995,13 @@ msgid ""
 "Use this drop-down list to specify the position of the scrollbar on the "
 "terminal window."
 msgstr ""
+"Gunakan daftar tarik turun ini untuk menentukan posisi bilah gulir di "
+"jendela terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1027
 msgid "<guilabel>Scrollback ... lines</guilabel>"
-msgstr ""
+msgstr "<guilabel>Gulir balik ... baris</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1030
@@ -1647,11 +2010,14 @@ msgid ""
 "using the scrollbar. For example, if you specify 100 you can scroll back the"
 " last 100 lines displayed in the terminal."
 msgstr ""
+"Gunakan kotak puntir ini untuk menentukan cacah baris yang dapat Anda gulir "
+"kembali menggunakan bilah gulir. Misalnya, jika Anda menentukan 100, Anda "
+"dapat menggulir kembali 100 baris terakhir yang ditampilkan di terminal."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1036
 msgid "<guilabel>Scroll on output</guilabel>"
-msgstr ""
+msgstr "<guilabel>Gulir saat ada keluaran</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1039
@@ -1659,11 +2025,13 @@ msgid ""
 "Select this option to enable you to scroll the output on the terminal while "
 "the terminal continues to display more output from a command."
 msgstr ""
+"Pilih opsi ini untuk memungkinkan Anda menggulir keluaran pada terminal "
+"sementara terminal terus menampilkan lebih banyak keluaran dari perintah."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1045
 msgid "<guilabel>Scroll on keystroke</guilabel>"
-msgstr ""
+msgstr "<guilabel>Gulir pada penekanan tombol</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1048
@@ -1673,6 +2041,10 @@ msgid ""
 "you scrolled up the terminal window and you want to return to the command "
 "prompt."
 msgstr ""
+"Pilih opsi ini untuk memungkinkan Anda menekan tombol apa pun pada papan "
+"ketik untuk menggulir turun jendela terminal ke command prompt. Tindakan ini"
+" hanya berlaku jika Anda menggulir naik jendela terminal dan Anda ingin "
+"kembali ke command prompt."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1056
@@ -1682,7 +2054,7 @@ msgstr "Kompatibilitas"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1059
 msgid "<guilabel>Backspace key generates</guilabel>"
-msgstr ""
+msgstr "<guilabel>Tombol backspace menghasilkan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1062
@@ -1690,11 +2062,13 @@ msgid ""
 "Use the drop-down list to select the function that you want the "
 "<keycap>Backspace</keycap> key to perform."
 msgstr ""
+"Gunakan daftar tarik turun untuk memilih fungsi yang Anda inginkan agar "
+"dilakukan oleh tombol <keycap>Backspace</keycap>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1068
 msgid "<guilabel>Delete key generates</guilabel>"
-msgstr ""
+msgstr "<guilabel>Tombol delete menghasilkan</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1071
@@ -1702,11 +2076,13 @@ msgid ""
 "Use the drop-down list to select the function that you want the "
 "<keycap>Delete</keycap> key to perform."
 msgstr ""
+"Gunakan daftar tarik turun untuk memilih fungsi yang Anda ingin dilakukan "
+"oleh tombol <keycap>Delete</keycap>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1077
 msgid "<guibutton>Reset compatibility options to defaults</guibutton>"
-msgstr ""
+msgstr "<guibutton>Mereset opsi kompatibilitas ke baku</guibutton>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1080
@@ -1714,6 +2090,8 @@ msgid ""
 "Click on this button to reset the options on the "
 "<guilabel>Compatibility</guilabel> tabbed section to the default settings."
 msgstr ""
+"Klik tombol ini untuk mengatur ulang opsi pada bagian bertab "
+"<guilabel>Kompatibilitas</guilabel> ke pengaturan baku."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:4
@@ -1725,6 +2103,13 @@ msgid ""
 " of the GFDL at this <link xlink:href=\"help:fdl\" type=\"help\">link</link>"
 " or in the file COPYING-DOCS distributed with this manual."
 msgstr ""
+"Izin diberikan untuk menyalin, mendistribusikan dan/atau memodifikasi "
+"dokumen ini di bawah ketentuan GNU Free Documentation License (GFDL), Versi "
+"1.1 atau versi yang lebih baru yang diterbitkan oleh Free Software "
+"Foundation tanpa Bagian Invarian, tidak ada Teks Sampul Depan, dan tidak ada"
+" Teks Sampul Belakang. Anda dapat menemukan salinan GFDL di <link "
+"xlink:href=\"help:fdl\" type=\"help\">tautan</link> ini atau di berkas "
+"COPYING-DOCS yang didistribusikan dengan manual ini."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:13
@@ -1769,17 +2154,17 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+"DOKUMEN DISEDIAKAN \"SEBAGAIMANA ADANYA\", TANPA JAMINAN APA PUN, BAIK "
+"TERSURAT MAUPUN TERSIRAT, TERMASUK, TANPA BATASAN, JAMINAN BAHWA DOKUMEN "
+"ATAU VERSI MODIFIKASI DOKUMEN BEBAS DARI CACAT DAPAT DIPERDAGANGKAN ATAU "
+"TIDAK UNTUK TUJUAN TERTENTU -INFRINGING. SELURUH RISIKO TERKAIT KUALITAS, "
+"AKURASI, DAN KINERJA DOKUMEN ATAU VERSI MODIFIKASI DOKUMEN ADALAH PADA ANDA."
+" SEHARUSNYA DOKUMEN ATAU VERSI YANG DIMODIFIKASI TERBUKTI CACAT DALAM HAL "
+"APA PUN, ANDA (BUKAN PENULIS AWAL, PENGARANG ATAU KONTRIBUTOR APA PUN) "
+"BERTANGGUNG JAWAB BIAYA PELAYANAN, PERBAIKAN, ATAU KOREKSI YANG DIPERLUKAN. "
+"PENAFIAN JAMINAN INI MENJADI BAGIAN PENTING LISENSI INI. TIDAK ADA "
+"PENGGUNAAN DOKUMEN ATAU VERSI MODIFIKASI DOKUMEN YANG DIIZINKAN DI SINI "
+"KECUALI BERDASARKAN PENAFIAN INI; DAN"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:56
@@ -1795,16 +2180,17 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
+"DALAM KEADAAN APA PUN DAN DALAM TEORI HUKUM, BAIK DALAM TOR (TERMASUK "
+"KELALAIAN), KONTRAK, ATAU LAINNYA, PENULIS, PENULIS AWAL, KONTRIBUTOR APA "
+"PUN, ATAU DISTRIBUTOR DOKUMEN ATAU VERSI YANG DIMODIFIKASI DARI DOKUMEN APA "
+"PUN, ATAU VERSI YANG DIMODIFIKASI DARI DOKUMEN APA PUN, ATAU DARI PIHAK "
+"TERSEBUT, BERTANGGUNG JAWAB KEPADA SIAPAPUN ATAS KERUSAKAN LANGSUNG, TIDAK "
+"LANGSUNG, KHUSUS, INSIDENTAL, ATAU KONSEKUENSIAL DARI SETIAP KARAKTER "
+"TERMASUK, TANPA BATASAN, KERUSAKAN ATAS KEHILANGAN NAMA BAIK, PENGHENTIAN "
+"KERJA, KEGAGALAN KOMPUTER ATAU KESALAHAN LAINNYA, ATAU KERUSAKAN APA PUN DAN"
+" SEMUA KERUSAKAN ATAU KERUGIAN YANG TIMBUL KARENA ATAU TERKAIT DENGAN "
+"PENGGUNAAN DOKUMEN DAN VERSI YANG DIUBAH DARI DOKUMEN, MESKIPUN PIHAK "
+"TERSEBUT TELAH DIBERITAHU TENTANG KEMUNGKINAN KERUSAKAN TERSEBUT."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:29
@@ -1813,8 +2199,8 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"DOKUMEN DAN VERSI MODIFIKASI DOKUMEN DIBERIKAN BERDASARKAN PERSYARATAN "
+"LISENSI DOKUMENTASI GRATIS GNU DENGAN PEMAHAMAN LEBIH LANJUT BAHWA: "
 "<_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
@@ -1829,3 +2215,6 @@ msgid ""
 " or this manual, follow the directions in the <link xlink:href=\"help:mate-"
 "user-guide/feedback\">MATE Feedback Page</link>."
 msgstr ""
+"Untuk melaporkan bug atau membuat saran mengenai aplikasi Terminal MATE atau"
+" manual ini, ikuti petunjuk di <link xlink:href=\"help:mate-user-"
+"guide/feedback\">Halaman Umpan Balik MATE</link>."

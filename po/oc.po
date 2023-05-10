@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
-# Quentin PAGÈS, 2021
+# Quentin PAGÈS, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2021-06-25 16:51+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Quentin PAGÈS, 2021\n"
-"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2021-09-21 17:35+0000\n"
+"Last-Translator: Quentin PAGÈS, 2023\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -71,7 +71,7 @@ msgstr "Tampar _la fenèstra"
 
 #: src/confirm-close-dialog.ui:119 src/terminal-window.c:3621
 msgid "Close this window?"
-msgstr "Tampar aquesta fenèstra ?"
+msgstr "Tampar aquesta fenèstra ?"
 
 #: src/confirm-close-dialog.ui:138 src/terminal-window.c:3610
 msgid ""
@@ -132,7 +132,7 @@ msgstr "Encodatges _disponibles :"
 
 #: src/encodings-dialog.ui:202
 msgid "E_ncodings shown in menu:"
-msgstr "Encodatges _afichats dins lo menú :"
+msgstr "Encodatges _afichats dins lo menú :"
 
 #. Translators: This refers to the Delete keybinding option
 #: src/extra-strings.c:25 src/profile-preferences.ui:184
@@ -268,7 +268,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr ""
+msgstr "Solarizat"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -286,7 +286,7 @@ msgstr "_Recercar"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
-msgstr "_Recercar :"
+msgstr "_Recercar :"
 
 #: src/find-dialog.ui:138
 msgid "_Match case"
@@ -336,7 +336,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
-msgstr "Perfil d'utilizar pels terminals novèls"
+msgstr "Perfil utilizat pel terminals novèls"
 
 #: src/org.mate.terminal.gschema.xml.in:55
 msgid ""
@@ -456,16 +456,16 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
-msgstr "Color per defaut del rèire plan del terminal"
+msgstr "Color per defaut del rèireplan del terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
-"Color per defaut del rèire plan del terminal. Coma en HTML, aquesta color "
-"pòt èsser indicada per un nom (« red ») o per de valors exadecimalas (« "
-"#FF003F »)."
+"Color per defaut del rèireplan del terminal. Coma en HTML, aquesta color pòt"
+" èsser indicada per un nom (« red ») o per de valors exadecimalas (« #FF003F"
+" »)."
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
@@ -490,8 +490,8 @@ msgstr ""
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr ""
-"Se verai, los tèxtes en gras son afichats de la meteissa color que pel tèxte"
-" normal."
+"se definit a true, los tèxtes en gras son afichats de la meteissa color que "
+"pel tèxte normal."
 
 #: src/org.mate.terminal.gschema.xml.in:123
 msgid "What to do with dynamic title"
@@ -528,11 +528,12 @@ msgstr "Indica se cal autorizar lo tèxte en gras"
 #: src/org.mate.terminal.gschema.xml.in:134
 msgid "If true, allow applications in the terminal to make text boldface."
 msgstr ""
-"Se verai, las aplicacions seràn autorizadas a utilizar de tèxte en gras."
+"se definit a true, las aplicacions seràn autorizadas a utilizar de tèxte en "
+"gras."
 
 #: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
-msgstr ""
+msgstr "Indica se cal rendre mut lo bip del terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
@@ -605,7 +606,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
-msgstr "Nombre de linhas de gardar en memòria pel desfilament"
+msgstr "Nombre de linhas de gardar en memòria pel defilament"
 
 #: src/org.mate.terminal.gschema.xml.in:174
 msgid ""
@@ -613,7 +614,7 @@ msgid ""
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr ""
-"Nombre de linhas de gardar en memòria pel desfilament. Serà possible de « "
+"Nombre de linhas de gardar en memòria pel defilament. Serà possible de « "
 "remontar » dins lo terminal d'aqueste nombre de linhas ; de delà, las "
 "ancianas linhas seràn doblidadas. Se lo paramètre scrollback_unlimited es "
 "actiu, aquesta valor es ignorada."
@@ -622,7 +623,7 @@ msgstr ""
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr ""
 "Indica se un nombre illimitat de linhas deu èsser gardat en memòria pel "
-"desfilament"
+"defilament"
 
 #: src/org.mate.terminal.gschema.xml.in:179
 msgid ""
@@ -630,10 +631,10 @@ msgid ""
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
 msgstr ""
-"Se verai, las linhas pel desfilament son totjorn conservadas. Coma l'istoric"
-" de desfilament es emmagazinat temporàriament sul disc, es possible que lo "
-"sistèma se retròbe a cort d'espaci de disc se lo terminal produsís fòrça "
-"sortidas."
+"se definit a true, las linhas pel defilament son totjorn conservadas. Coma "
+"l'istoric de defilament es emmagazinat temporàriament sul disc, es possible "
+"que lo sistèma se retròbe a cort d'espaci de disc se lo terminal produsís "
+"fòrça sortidas."
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
@@ -642,7 +643,8 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr "Se verai, quichar una tòca fa desfilar lo terminal fins al bas."
+msgstr ""
+"se definit a true, quichar una tòca fa defilar lo terminal fins al bas."
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
@@ -653,8 +655,8 @@ msgstr ""
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr ""
-"Se verai, tota novèla sortida afichada farà desfilar lo terminal fins al "
-"bas."
+"se definit a true, tota novèla sortida afichada farà defilar lo terminal "
+"fins al bas."
 
 #: src/org.mate.terminal.gschema.xml.in:193
 msgid "What to do with the terminal when the child command exits"
@@ -686,8 +688,8 @@ msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr ""
-"Se verai, aviar la comanda indicada dins custom_command a la plaça del "
-"shell."
+"se definit a true, aviar la comanda indicada dins custom_command a la plaça "
+"del shell."
 
 #: src/org.mate.terminal.gschema.xml.in:208
 msgid "Whether to blink the cursor"
@@ -743,7 +745,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
-msgstr "Poliça"
+msgstr "Polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
@@ -825,10 +827,13 @@ msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
+"se definit a true, lo jòc de colors del tèma utilizat per las bóstias de "
+"sasida de tèxte es utilizat pel terminal, a la plaça de las colors indicadas"
+" per l'utilizaire."
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
-msgstr "Utilizar la poliça sistèma"
+msgstr "Utilizar la polissa sistèma"
 
 #: src/org.mate.terminal.gschema.xml.in:274
 msgid ""
@@ -980,7 +985,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Acorchi de clavièr per anar al resultat seguent del tèrme recercat"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -992,7 +997,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Acorchi de clavièr per anar al resultat precedent del tèrme recercat"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -1004,7 +1009,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "Acorchi de clavièr per bascular en mòde ecran complet"
+msgstr "Acorchi de clavièr per bascular en mòde ecran complèt"
 
 #: src/org.mate.terminal.gschema.xml.in:351
 msgid ""
@@ -1303,7 +1308,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
-msgstr "Acorchi de clavièr per aumentar la talha de la poliça"
+msgstr "Acorchi de clavièr per aumentar la talha de la polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:476
 msgid ""
@@ -1315,7 +1320,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
-msgstr "Acorchi de clavièr per redusir la talha de la poliça"
+msgstr "Acorchi de clavièr per redusir la talha de la polissa"
 
 #: src/org.mate.terminal.gschema.xml.in:481
 msgid ""
@@ -1327,7 +1332,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
-msgstr "Acorchi de clavièr per reïnicializar la poliça a la talha normala"
+msgstr "Acorchi de clavièr per reïnicializar la polissa a la talha normala"
 
 #: src/org.mate.terminal.gschema.xml.in:486
 msgid ""
@@ -1361,18 +1366,18 @@ msgstr "Blanc sus negre"
 #. translated
 #: src/profile-editor.c:70
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarizat clar"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:75
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarizat escur"
 
 #: src/profile-editor.c:498
 #, c-format
 msgid "Error parsing command: %s"
-msgstr "Error a l'analisi de la comanda : %s"
+msgstr "Error a l'analisi de la comanda : %s"
 
 #: src/profile-editor.c:515
 #, c-format
@@ -1411,7 +1416,7 @@ msgstr "_Suprimir"
 
 #: src/profile-manager.ui:210
 msgid "_Profile used when launching a new terminal:"
-msgstr "Perfil _utilizat a l'aviada d'un novèl terminal :"
+msgstr "Perfil _utilizat a l'aviada d'un novèl terminal :"
 
 #: src/profile-new-dialog.ui:13 src/terminal-accels.c:157
 msgid "New Profile"
@@ -1423,11 +1428,11 @@ msgstr "C_rear"
 
 #: src/profile-new-dialog.ui:140
 msgid "Profile _name:"
-msgstr "_Nom del perfil :"
+msgstr "_Nom del perfil :"
 
 #: src/profile-new-dialog.ui:153
 msgid "_Base on:"
-msgstr "_Basat sus :"
+msgstr "_Basat sus :"
 
 #: src/profile-preferences.ui:243
 msgid "Profile Editor"
@@ -1435,19 +1440,19 @@ msgstr "Editor de perfil"
 
 #: src/profile-preferences.ui:325
 msgid "_Profile name:"
-msgstr "Nom del _perfil :"
+msgstr "Nom del _perfil :"
 
 #: src/profile-preferences.ui:356
 msgid "_Use the system fixed width font"
-msgstr ""
+msgstr "_Utilizar la polissa de chassa fixa del sistèma"
 
 #: src/profile-preferences.ui:386
 msgid "_Font:"
-msgstr "_Poliça :"
+msgstr "_Polissa :"
 
 #: src/profile-preferences.ui:403
 msgid "Choose A Terminal Font"
-msgstr "Causissètz la poliça del terminal"
+msgstr "Causissètz la polissa del terminal"
 
 #: src/profile-preferences.ui:424
 msgid "_Allow bold text"
@@ -1479,7 +1484,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
-msgstr "Forma del cur_sor :"
+msgstr "Fòrma del cur_sor :"
 
 #: src/profile-preferences.ui:623
 msgid "Select-by-_word characters:"
@@ -1491,7 +1496,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:684
 msgid "Default size:"
-msgstr "Talha per defaut :"
+msgstr "Talha per defaut :"
 
 #: src/profile-preferences.ui:716
 msgid "columns"
@@ -1531,11 +1536,11 @@ msgstr "_Executar una comanda personalizada a la plaça de mon shell"
 
 #: src/profile-preferences.ui:1025
 msgid "Custom co_mmand:"
-msgstr "Comanda _personalizada :"
+msgstr "Comanda _personalizada :"
 
 #: src/profile-preferences.ui:1067
 msgid "When command _exits:"
-msgstr "Quand la comanda s'a_caba :"
+msgstr "Quand la comanda s'a_caba :"
 
 #: src/profile-preferences.ui:1137
 msgid "Title and Command"
@@ -1551,15 +1556,15 @@ msgstr "_Utilizar las colors del tèma sistèma"
 
 #: src/profile-preferences.ui:1211
 msgid "Built-in sche_mes:"
-msgstr "_Paletas predefinidas :"
+msgstr "_Paletas predefinidas :"
 
 #: src/profile-preferences.ui:1261
 msgid "_Text color:"
-msgstr "Color del _tèxte :"
+msgstr "Color del _tèxte :"
 
 #: src/profile-preferences.ui:1276
 msgid "Choose Terminal Background Color"
-msgstr "Causissètz la color del rèire plan del terminal"
+msgstr "Causissètz la color del rèireplan del terminal"
 
 #: src/profile-preferences.ui:1288
 msgid "Choose Terminal Text Color"
@@ -1567,15 +1572,15 @@ msgstr "Causissètz la color del tèxte del terminal"
 
 #: src/profile-preferences.ui:1301
 msgid "_Background color:"
-msgstr "Color de _rèire plan :"
+msgstr "Color de _rèireplan :"
 
 #: src/profile-preferences.ui:1367
 msgid "Bol_d color:"
-msgstr "Color del _gras :"
+msgstr "Color del _gras :"
 
 #: src/profile-preferences.ui:1381
 msgid "_Underline color:"
-msgstr "Color del solin_hament :"
+msgstr "Color del solin_hament :"
 
 #: src/profile-preferences.ui:1392 src/profile-preferences.ui:1407
 msgid "_Same as text color"
@@ -1587,11 +1592,11 @@ msgstr "<b>Paleta</b>"
 
 #: src/profile-preferences.ui:1497
 msgid "Built-in _schemes:"
-msgstr "Pa_letas predefinidas :"
+msgstr "Pa_letas predefinidas :"
 
 #: src/profile-preferences.ui:1774
 msgid "Color p_alette:"
-msgstr "P_aleta de colors :"
+msgstr "P_aleta de colors :"
 
 #: src/profile-preferences.ui:1790
 msgid ""
@@ -1615,7 +1620,7 @@ msgstr "Imatge de _fons"
 
 #: src/profile-preferences.ui:1912
 msgid "Image _file:"
-msgstr "_Fichièr imatge :"
+msgstr "_Fichièr imatge :"
 
 #: src/profile-preferences.ui:1927
 msgid "Select Background Image"
@@ -1655,11 +1660,11 @@ msgstr ""
 
 #: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
-msgstr "Desfilament sus la _sortida"
+msgstr "Defilament sus la _sortida"
 
 #: src/profile-preferences.ui:2153
 msgid "Scroll on _keystroke"
-msgstr "Desfilament sus _pression d'una tòca"
+msgstr "Defilament sus _pression d'una tòca"
 
 #: src/profile-preferences.ui:2193
 msgid "lines"
@@ -1667,15 +1672,15 @@ msgstr "linhas"
 
 #: src/profile-preferences.ui:2215
 msgid "Scroll_back:"
-msgstr ""
+msgstr "Linhas d'_istoric :"
 
 #: src/profile-preferences.ui:2226
 msgid "_Unlimited"
-msgstr ""
+msgstr "_Illimitat"
 
 #: src/profile-preferences.ui:2283
 msgid "Scrolling"
-msgstr "Desfilament"
+msgstr "Defilament"
 
 #: src/profile-preferences.ui:2304
 msgid ""
@@ -1687,11 +1692,11 @@ msgstr ""
 
 #: src/profile-preferences.ui:2327
 msgid "_Delete key generates:"
-msgstr "La tòca « _Supr » emet :"
+msgstr "La tòca « _Supr » emet :"
 
 #: src/profile-preferences.ui:2379
 msgid "_Backspace key generates:"
-msgstr "La tòca « _Retorn arrièr » emet :"
+msgstr "La tòca « _Retorn arrièr » emet :"
 
 #: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
@@ -1711,11 +1716,11 @@ msgstr "_D’acòrdi"
 
 #: src/set-title-dialog.ui:88
 msgid "_Title:"
-msgstr "_Títol :"
+msgstr "_Títol :"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_D'acòrdi"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -1723,7 +1728,7 @@ msgstr ""
 
 #: src/skey-challenge.ui:134
 msgid "_Password:"
-msgstr "Sen_hal :"
+msgstr "Sen_hal :"
 
 #: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -1771,7 +1776,7 @@ msgstr ""
 
 #: src/terminal-accels.c:199
 msgid "Full Screen"
-msgstr "Ecran complet"
+msgstr "Ecran complèt"
 
 #: src/terminal-accels.c:203
 msgid "Zoom In"
@@ -1811,23 +1816,23 @@ msgstr ""
 
 #: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
-msgstr ""
+msgstr "Tornar a l'onglet precedent"
 
 #: src/terminal-accels.c:263
 msgid "Switch to Next Tab"
-msgstr ""
+msgstr "Passar a l'onglet seguent"
 
 #: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
-msgstr ""
+msgstr "Desplaçar l'onglet cap a esquèrra"
 
 #: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
-msgstr ""
+msgstr "Desplaçar l'onglet cap a dreita"
 
 #: src/terminal-accels.c:275
 msgid "Detach Tab"
-msgstr ""
+msgstr "Destacar l'onglet"
 
 #: src/terminal-accels.c:279
 msgid "Switch to Tab 1"
@@ -1925,7 +1930,7 @@ msgstr "Lista dels perfils"
 #: src/terminal-app.c:688
 #, c-format
 msgid "Delete profile “%s”?"
-msgstr "Suprimir lo perfil « %s » ?"
+msgstr "Suprimir lo perfil « %s » ?"
 
 #: src/terminal-app.c:704
 msgid "Delete Profile"
@@ -1940,7 +1945,7 @@ msgstr ""
 
 #: src/terminal-app.c:1246
 msgid "Choose base profile"
-msgstr ""
+msgstr "Causir un perfil de basa"
 
 #: src/terminal-app.c:1841
 #, c-format
@@ -1959,7 +1964,7 @@ msgstr "Definit per l'utilizaire"
 #: src/terminal.c:513
 #, c-format
 msgid "Failed to parse arguments: %s\n"
-msgstr "Impossible d'analisar los paramètres : %s\n"
+msgstr "Impossible d'analisar los paramètres : %s\n"
 
 #: src/terminal-encoding.c:54 src/terminal-encoding.c:67
 #: src/terminal-encoding.c:81 src/terminal-encoding.c:103
@@ -2121,7 +2126,7 @@ msgstr ""
 #: src/terminal-options.c:210
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
-msgstr "Lo paramètre de « %s » es pas una comanda valida : %s"
+msgstr "Lo paramètre de « %s » es pas una comanda valida : %s"
 
 #: src/terminal-options.c:349
 msgid "Two roles given for one window"
@@ -2205,12 +2210,14 @@ msgstr "Maximiza la fenèstra"
 
 #: src/terminal-options.c:1037
 msgid "Full-screen the window"
-msgstr "Fenèstra en ecran complet"
+msgstr "Fenèstra en ecran complèt"
 
 #: src/terminal-options.c:1046
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
+"Definís la talha de la fenèstra ; per exemple : 80x24 o 80x24+200+200 "
+"(COLOMNASxLINHAS+X+Y)"
 
 #: src/terminal-options.c:1047
 msgid "GEOMETRY"
@@ -2278,7 +2285,7 @@ msgid ""
 "specified:"
 msgstr ""
 "Opcions de dobertura de novèlas fenèstras o onglets de terminals ; mai d'una"
-" d'entre elas pòdon èsser indicadas :"
+" d'entre elas pòdon èsser indicadas :"
 
 #: src/terminal-options.c:1381
 msgid "Show terminal options"
@@ -2290,8 +2297,8 @@ msgid ""
 "the default for all windows:"
 msgstr ""
 "Opcions de fenèstra ; quand son plaçadas davant lo primièr paramètre "
-"--window o --tab, definisson las opcions per defaut per totas las fenèstras "
-":"
+"--window o --tab, definisson las opcions per defaut per totas las "
+"fenèstras :"
 
 #: src/terminal-options.c:1390
 msgid "Show per-window options"
@@ -2303,8 +2310,8 @@ msgid ""
 "the default for all terminals:"
 msgstr ""
 "Opxions del terminal ; quand son plaçadas davant lo primièr paramètre "
-"--window o --tab, definisson las opcions per defaut per totes los terminals "
-":"
+"--window o --tab, definisson las opcions per defaut per totes los "
+"terminals :"
 
 #: src/terminal-options.c:1399
 msgid "Show per-terminal options"
@@ -2368,7 +2375,7 @@ msgid ""
 msgstr ""
 "Lo Terminal MATE es un logicial liure ; lo podètz tornar distribuir e/o lo "
 "modificar segon los tèrmes de la licéncia publica generala GNU, coma es "
-"publicada per la Free Software Foundation ; version 2 de la licéncia, o (se "
+"publicada per la Free Software Foundation ; version 3 de la licéncia, o (se "
 "volètz) tota version seguenta."
 
 #: src/terminal-util.c:330
@@ -2489,7 +2496,7 @@ msgstr "Pr_eferéncias del perfil"
 
 #: src/terminal-window.c:1959
 msgid "Zoom _In"
-msgstr "Zo_om -"
+msgstr "Zo_om +"
 
 #: src/terminal-window.c:1964
 msgid "Zoom _Out"
@@ -2517,11 +2524,11 @@ msgstr "Es_cafar las susbrilhanças"
 
 #: src/terminal-window.c:1997
 msgid "Go to _Line..."
-msgstr "Anar a la _linha…"
+msgstr "Anar a la _linha..."
 
 #: src/terminal-window.c:2002
 msgid "_Incremental Search..."
-msgstr "Recèrca _incrementala…"
+msgstr "Recèrca _incrementala..."
 
 #: src/terminal-window.c:2009
 msgid "Change _Profile"
@@ -2573,7 +2580,7 @@ msgstr "Bolegar l'onglet cap a _drecha"
 
 #: src/terminal-window.c:2066
 msgid "_Detach tab"
-msgstr ""
+msgstr "_Destacar l’onglet"
 
 #: src/terminal-window.c:2073
 msgid "_Contents"
@@ -2613,11 +2620,11 @@ msgstr "P_erfils"
 
 #: src/terminal-window.c:2151
 msgid "L_eave Full Screen"
-msgstr "_Quitar l'ecran complet"
+msgstr "_Quitar l'ecran complèt"
 
 #: src/terminal-window.c:2155
 msgid "_Input Methods"
-msgstr ""
+msgstr "_Metòdes de picada"
 
 #: src/terminal-window.c:2162
 msgid "Show _Menubar"
@@ -2625,7 +2632,7 @@ msgstr "Afichar la barra de _menú"
 
 #: src/terminal-window.c:2168
 msgid "_Full Screen"
-msgstr "_Ecran complet"
+msgstr "_Ecran complèt"
 
 #: src/terminal-window.c:3607
 msgid ""
@@ -2639,7 +2646,7 @@ msgstr ""
 
 #: src/terminal-window.c:3624
 msgid "Close this terminal?"
-msgstr "Tampar aqueste terminal ?"
+msgstr "Tampar aqueste terminal ?"
 
 #: src/terminal-window.c:3625
 msgid "C_lose Terminal"
@@ -2655,7 +2662,7 @@ msgstr "Enregistrar jos..."
 
 #: src/terminal-window.c:4415
 msgid "Contributors:"
-msgstr "Contributors :"
+msgstr "Contributors :"
 
 #: src/terminal-window.c:4431
 #, c-format
@@ -2664,7 +2671,7 @@ msgid ""
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 "MATE Terminal es un emulator de terminal per l'environament de burèu MATE.\n"
-"Propulsat per Virtual TErminal %d.%d.%d"
+"Propulsat per Virtual Terminal %d.%d.%d"
 
 #: src/terminal-window.c:4437
 msgid "About MATE Terminal"
@@ -2689,5 +2696,5 @@ msgstr ""
 #: src/terminal-window.c:4450
 msgid "translator-credits"
 msgstr ""
-"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>"
+"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary "
+"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin Pagès"
