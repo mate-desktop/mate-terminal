@@ -1,6 +1,6 @@
 m4_define(mt_major_version, 1)
 m4_define(mt_minor_version, 26)
-m4_define(mt_micro_version, 0)
+m4_define(mt_micro_version, 1)
 m4_define(mt_version, mt_major_version.mt_minor_version.mt_micro_version)
 
 m4_define(mt_api_version, 0)
