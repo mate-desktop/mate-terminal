@@ -1713,6 +1713,39 @@ terminal_window_realize (GtkWidget *widget)
 }
 
 static gboolean
+terminal_window_draw (GtkWidget *widget,
+                      cairo_t   *cr)
+{
+	if (gtk_widget_get_app_paintable(widget))
+	{
+		GtkAllocation child_allocation;
+		GtkStyleContext *context;
+		int width;
+		int height;
+		GtkWidget *child;
+
+		/* Get the *child* allocation, so we don't overwrite window borders */
+		child = gtk_bin_get_child (GTK_BIN (widget));
+		gtk_widget_get_allocation (child, &child_allocation);
+
+		context = gtk_widget_get_style_context (widget);
+		width = gtk_widget_get_allocated_width (widget);
+		height = gtk_widget_get_allocated_height (widget);
+		gtk_render_background (context, cr, 0, 0, width, height);
+		gtk_render_frame (context, cr, 0, 0, width, height);
+
+		gtk_render_background (context, cr,
+							   child_allocation.x, child_allocation.y,
+							   child_allocation.width, child_allocation.height);
+		gtk_render_frame (context, cr,
+						  child_allocation.x, child_allocation.y,
+						  child_allocation.width, child_allocation.height);
+	}
+
+    return GTK_WIDGET_CLASS (terminal_window_parent_class)->draw (widget, cr);
+}
+
+static gboolean
 terminal_window_map_event (GtkWidget    *widget,
                            GdkEventAny  *event)
 {
@@ -2345,6 +2378,7 @@ terminal_window_class_init (TerminalWindowClass *klass)
 
     widget_class->show = terminal_window_show;
     widget_class->realize = terminal_window_realize;
+    widget_class->draw = terminal_window_draw;
     widget_class->map_event = terminal_window_map_event;
     widget_class->window_state_event = terminal_window_state_event;
     widget_class->screen_changed = terminal_window_screen_changed;
