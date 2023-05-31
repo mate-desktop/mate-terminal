@@ -125,6 +125,8 @@ static void terminal_screen_change_font (TerminalScreen *screen);
 static gboolean terminal_screen_popup_menu (GtkWidget *widget);
 static gboolean terminal_screen_button_press (GtkWidget *widget,
         GdkEventButton *event);
+static void terminal_screen_hierarchy_changed (GtkWidget *widget,
+        GtkWidget *previous_toplevel);
 static void terminal_screen_launch_child_on_idle (TerminalScreen *screen);
 static void terminal_screen_child_exited (VteTerminal *terminal, int status);
 
@@ -484,6 +486,7 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 	widget_class->style_updated = terminal_screen_style_updated;
 	widget_class->drag_data_received = terminal_screen_drag_data_received;
 	widget_class->button_press_event = terminal_screen_button_press;
+	widget_class->hierarchy_changed = terminal_screen_hierarchy_changed;
 	widget_class->popup_menu = terminal_screen_popup_menu;
 
 	terminal_class->child_exited = terminal_screen_child_exited;
@@ -1075,6 +1078,26 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 }
 
 static void
+update_toplevel_transparency (TerminalScreen *screen)
+{
+	GtkWidget *widget = GTK_WIDGET (screen);
+	TerminalScreenPrivate *priv = screen->priv;
+	GSettings *profile = priv->profile;
+	TerminalBackgroundType bg_type = terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
+
+	if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
+	{
+		GtkWidget *toplevel;
+		toplevel = gtk_widget_get_toplevel (widget);
+		if (toplevel != NULL && gtk_widget_is_toplevel (toplevel)
+			&& !gtk_widget_get_app_paintable (toplevel))
+		{
+			gtk_widget_set_app_paintable (toplevel, TRUE);
+		}
+	}
+}
+
+static void
 update_color_scheme (TerminalScreen *screen)
 {
 	TerminalScreenPrivate *priv = screen->priv;
@@ -1159,6 +1182,8 @@ update_color_scheme (TerminalScreen *screen)
 	if (bold_rgba)
 		vte_terminal_set_color_bold (VTE_TERMINAL (screen),
 		                             bold_rgba);
+
+	update_toplevel_transparency (screen);
 }
 
 void
@@ -1739,6 +1764,13 @@ terminal_screen_button_press (GtkWidget      *widget,
 		return button_press_event (widget, event);
 
 	return FALSE;
+}
+
+static void
+terminal_screen_hierarchy_changed (GtkWidget *widget,
+								   GtkWidget *previous_toplevel)
+{
+	update_toplevel_transparency (TERMINAL_SCREEN (widget));
 }
 
 static void
