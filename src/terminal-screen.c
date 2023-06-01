@@ -1082,7 +1082,7 @@ update_toplevel_transparency (TerminalScreen *screen)
 {
 	GtkWidget *widget = GTK_WIDGET (screen);
 	TerminalScreenPrivate *priv = screen->priv;
-	GSettings *profile = priv->profile;
+	TerminalProfile *profile = priv->profile;
 	TerminalBackgroundType bg_type = terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
 
 	if (bg_type == TERMINAL_BACKGROUND_TRANSPARENT)
