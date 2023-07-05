@@ -4239,6 +4239,7 @@ terminal_set_title_dialog_response_cb (GtkWidget *dialog,
     }
 
     gtk_widget_destroy (dialog);
+    gtk_widget_grab_focus(screen);
 }
 
 static void
