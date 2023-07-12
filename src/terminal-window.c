@@ -2992,9 +2992,9 @@ notebook_button_press_cb (GtkWidget *widget,
     }
 
     /* If the event is a double click, display the set title dialog */
-    if(event->type == GDK_DOUBLE_BUTTON_PRESS)
+    if (event->type == GDK_DOUBLE_BUTTON_PRESS)
     {
-      terminal_set_title_callback(NULL, window);
+      terminal_set_title_callback (NULL, window);
 
       /* handle ONLY the double-click event */
       return TRUE;
@@ -4239,7 +4239,7 @@ terminal_set_title_dialog_response_cb (GtkWidget *dialog,
     }
 
     gtk_widget_destroy (dialog);
-    gtk_widget_grab_focus(screen);
+    gtk_widget_grab_focus (GTK_WIDGET (screen));
 }
 
 static void
