@@ -2991,12 +2991,12 @@ notebook_button_press_cb (GtkWidget *widget,
         }
     }
 
-    /* If the event is a double click, pop up the set title dialog */
+    /* If the event is a double click, display the set title dialog */
     if(event->type == GDK_DOUBLE_BUTTON_PRESS)
     {
-      terminal_set_title_callback(action, window);
+      terminal_set_title_callback(NULL, window);
 
-      /* handle ONLY the double button event, the callback is called separately for the regular click event */
+      /* handle ONLY the double-click event */
       return TRUE;
     }
 
