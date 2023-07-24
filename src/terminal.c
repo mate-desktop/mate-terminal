@@ -45,9 +45,9 @@
 #include "terminal-options.h"
 #include "terminal-util.h"
 
-#define TERMINAL_FACTORY_SERVICE_NAME_PREFIX  "org.mate.Terminal.Display"
-#define TERMINAL_FACTORY_SERVICE_PATH         "/org/mate/Terminal/Factory"
-#define TERMINAL_FACTORY_INTERFACE_NAME       "org.mate.Terminal.Factory"
+#define TERMINAL_FACTORY_SERVICE_NAME_PREFIX  "org.nate.Terminal.Display"
+#define TERMINAL_FACTORY_SERVICE_PATH         "/org/nate/Terminal/Factory"
+#define TERMINAL_FACTORY_INTERFACE_NAME       "org.nate.Terminal.Factory"
 
 static char *
 ay_to_string (GVariant *variant,
@@ -225,8 +225,8 @@ bus_acquired_cb (GDBusConnection *connection,
                  gpointer user_data)
 {
 	static const char dbus_introspection_xml[] =
-	    "<node name='/org/mate/Terminal'>"
-	    "<interface name='org.mate.Terminal.Factory'>"
+	    "<node name='/org/nate/Terminal'>"
+	    "<interface name='org.nate.Terminal.Factory'>"
 	    "<method name='HandleArguments'>"
 	    "<arg type='ay' name='working_directory' direction='in' />"
 	    "<arg type='ay' name='display_name' direction='in' />"

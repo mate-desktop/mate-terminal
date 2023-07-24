@@ -1,4 +1,4 @@
-### mate-terminal 1.27.0
+### nate-terminal 1.27.0
 
   * tx: sync with transifex
   * tx: update resource
@@ -16,7 +16,7 @@
   * Use a blank line at most
   * Title dialog: just hit Return to validate
 
-### mate-terminal 1.26.0
+### nate-terminal 1.26.0
 
   * Translations update
   * update copyright to 2021
@@ -38,7 +38,7 @@
   * Add compilation help
   * Add tab scrolling support for GTK3
 
-### mate-terminal 1.25.0
+### nate-terminal 1.25.0
 
   * Translations update
   * use libegg submodules
@@ -63,13 +63,13 @@
   * Use user page on github when user email is private
   * Update authors
 
-### mate-terminal 1.24.0
+### nate-terminal 1.24.0
 
   * Translations update
   * terminal-encoding: use settings_global variable
   * Fix build using gcc 10 -fno-common flag
 
-### mate-terminal 1.23.1
+### nate-terminal 1.23.1
 
   * tx: fix merge issue with italian translation
   * configure: fix typo in versioning
@@ -80,8 +80,8 @@
   * terminal-screen: Fix warning when closing window
   * Avoid NULL pointer dereference in terminal_screen_child_exited
   * migrate from intltool to gettext
-  * Set debug & warning flags using new mate-common macros
-  * build: Use ENABLE_SKEY for setting AC_CONFIG_FILES and mate_terminal_LDADD
+  * Set debug & warning flags using new nate-common macros
+  * build: Use ENABLE_SKEY for setting AC_CONFIG_FILES and nate_terminal_LDADD
   * terminal-app: remove -Wdiscarded-qualifiers warnings
   * terminal-window: : suppress GtkAction warnings
   * terminal-tabs-menu: suppress GtkAction warnings
@@ -94,7 +94,7 @@
   * terminal-tab-label: avoid 'g_type_class_add_private'
   * terminal-window: "utilities-terminal" icon with "Open Terminal"
 
-### mate-terminal 1.23.0
+### nate-terminal 1.23.0
 
   * Translations update
   * Remove trailing whitespaces
@@ -113,7 +113,7 @@
   * Use gresources for about_DATA, uimanager_DATA & builder_DATA
   * Retain copied selection when changing tabs
 
-### mate-terminal 1.22.0
+### nate-terminal 1.22.0
 
   * Translations update
   * Initialize Travis CI support
@@ -130,7 +130,7 @@
   * src/terminal-screen.c: Set TERM to 'xterm-256color' (instead of just 'xterm').
   * move appdata to metainfo directory
 
-### mate-terminal 1.21.1
+### nate-terminal 1.21.1
 
   * Translations update
   * disable deprecation warnings for distcheck
@@ -142,7 +142,7 @@
   * terminal-window: Fix warnings with menu popup
   * terminal-window: replace deprecated gtk_menu_popup
 
-### mate-terminal 1.21.0
+### nate-terminal 1.21.0
 
   * Translations update
   * term-screen: avoid deprecated 'gtk_style_context_get_background_color'
@@ -152,7 +152,7 @@
   * terminal-app: avoid gtk_dialog_add_buttons with stock ids
   * avoid deprecated GtkStock
 
-### mate-terminal 1.20.0
+### nate-terminal 1.20.0
 
   * Translations update
   * require GTK+ 3.22 and GLib 2.50
@@ -170,7 +170,7 @@
   * make indent more uniform in a few files
   * fix possible crash when handling DBus method call
 
-### mate-terminal 1.19.1
+### nate-terminal 1.19.1
 
   * sync with transifex
   * Spelling: Whitespace removed, in the terminal, Ctrl
@@ -183,7 +183,7 @@
   * avoid deprecated vte_terminal_search_get_gregex
   * add "select all" keyboard shortcut: [control] + [shift] + [A]
 
-### mate-terminal 1.19.0
+### nate-terminal 1.19.0
 
   * Translations update
   * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
@@ -196,14 +196,14 @@
   * update copyright year to 2017
   * Fix: Double click with right button causes Xorg to crash
 
-### mate-terminal 1.18.0
+### nate-terminal 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
     to make generating release announcements easier
   * Add ability to close tabs with middle mouse button
   * Translations update
 
-### mate-terminal 1.16.2
+### nate-terminal 1.16.2
 
   * Bring back exit confirmation when there's a process running
   * Fix possible crash on window closing
@@ -215,46 +215,46 @@
   * Attach popup menus to their parent widgets (useful on Wayland)
   * Force X11 backend
 
-### mate-terminal 1.16.1
+### nate-terminal 1.16.1
 
   * Fix crash after detaching tab and then changing its title
   * Fix window positioning when using --geometry option
   * Translations update
 
-### mate-terminal 1.16.0
+### nate-terminal 1.16.0
 
   * Move to GTK+3, require GTK+ 3.14 and VTE 0.38 (API 2.91)
   * Drop GTK+2 code and --with-gtk build option
   * Use GtkAboutDialog instead of MateAboutDialog
-  * Copy dconf and gsettings helpers from libmate-desktop and drop
-    dependency on libmate-desktop
+  * Copy dconf and gsettings helpers from libnate-desktop and drop
+    dependency on libnate-desktop
   * React on WM change only on X11
   * Fix lots of GTK+ deprecations
   * Some more fixes and cleanups
   * Translations update
 
-### mate-terminal 1.14.1
+### nate-terminal 1.14.1
 
   * man: add missing description of -x / --execute command line option
   * Translations update
 
-### mate-terminal 1.14.0
+### nate-terminal 1.14.0
 
   * Compile dingu regexes with MULTILINE option
   * Fix incorrect ordering of COLS and ROWS in command-line option
   * description and in the manpage
-  * GTK+3: add style class mate-terminal
+  * GTK+3: add style class nate-terminal
   * GTK+3: fix window sizes for 3.20
   * GTK+3: fix several deprecations
   * Some more fixes and cleanups
   * Translations update
   * Fix Changelog generation
 
-### mate-terminal 1.12.1
+### nate-terminal 1.12.1
 
   * GTK+3: switch to VTE 2.91 API, require VTE 0.38 for build
 
-### mate-terminal 1.12.0
+### nate-terminal 1.12.0
 
   * Fix --tab option that has been broken in 1.10.0
   * Retrieve strings directly from gschema (requires intltool 0.50.1)
@@ -262,16 +262,16 @@
   * Drop support for win32/osx
   * Some cleanups
 
-### mate-terminal 1.10.1
+### nate-terminal 1.10.1
 
   * Several help fixes.
   * fix size of profile-preferences window in GTK3 version with a default
 
-### mate-terminal 1.10.0
+### nate-terminal 1.10.0
 
-  * Add dependency on libmate-desktop to use common functions
+  * Add dependency on libnate-desktop to use common functions
 
-### mate-terminal 1.8.0
+### nate-terminal 1.8.0
 
   * Add GTK3 support
   * Add previous/next profile keyboard shortcuts and menu items

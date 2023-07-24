@@ -49,8 +49,8 @@
 #define FALLBACK_PROFILE_ID "default"
 
 /* Settings storage works as follows:
- *   /apps/mate-terminal/global/
- *   /apps/mate-terminal/profiles/Foo/
+ *   /apps/nate-terminal/global/
+ *   /apps/nate-terminal/profiles/Foo/
  *
  * It's somewhat tricky to manage the profiles/ dir since we need to track
  * the list of profiles, but GSettings doesn't have a concept of notifying that
@@ -61,7 +61,7 @@
  * The number one rule: all stored information is EITHER per-session,
  * per-profile, or set from a command line option. THERE CAN BE NO
  * OVERLAP. The UI and implementation totally break if you overlap
- * these categories. See mate-terminal 1.x for why.
+ * these categories. See nate-terminal 1.x for why.
  *
  * Don't use this code as an example of how to use GSettings - it's hugely
  * overcomplicated due to the profiles stuff. Most apps should not
@@ -142,7 +142,7 @@ enum
 
 static TerminalApp *global_app = NULL;
 
-#define MONOSPACE_FONT_SCHEMA "org.mate.interface"
+#define MONOSPACE_FONT_SCHEMA "org.nate.interface"
 #define MONOSPACE_FONT_KEY "monospace-font-name"
 #define DEFAULT_MONOSPACE_FONT ("Monospace 10")
 
@@ -157,7 +157,7 @@ static TerminalApp *global_app = NULL;
 
 #define ENCODING_LIST_KEY "active-encodings"
 
-/* two following functions were copied from libmate-desktop to get rid
+/* two following functions were copied from libnate-desktop to get rid
  * of dependency on it
  *
  * FIXME: I suspect there's no need for excessive copies, we might use
@@ -640,7 +640,7 @@ profile_list_delete_confirm_response_cb (GtkWidget *dialog,
 }
 
 static void
-mate_dialog_add_button (GtkDialog   *dialog,
+nate_dialog_add_button (GtkDialog   *dialog,
                         const gchar *button_text,
                         const gchar *icon_name,
                         gint         response_id)
@@ -685,12 +685,12 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 	                                 _("Delete profile “%s”?"),
 	                                 terminal_profile_get_property_string (selected_profile, TERMINAL_PROFILE_VISIBLE_NAME));
 
-	mate_dialog_add_button (GTK_DIALOG (dialog),
+	nate_dialog_add_button (GTK_DIALOG (dialog),
 	                        _("_Cancel"),
 	                        "process-stop",
 	                        GTK_RESPONSE_REJECT);
 
-	mate_dialog_add_button (GTK_DIALOG (dialog),
+	nate_dialog_add_button (GTK_DIALOG (dialog),
 	                        _("_Delete"),
 	                        "edit-delete",
 	                        GTK_RESPONSE_ACCEPT);
@@ -1277,7 +1277,7 @@ profile_list_response_cb (GtkWidget *dialog,
 
 	if (id == GTK_RESPONSE_HELP)
 	{
-		terminal_util_show_help ("mate-terminal-manage-profiles", GTK_WINDOW (dialog));
+		terminal_util_show_help ("nate-terminal-manage-profiles", GTK_WINDOW (dialog));
 		return;
 	}
 

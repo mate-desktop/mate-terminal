@@ -1,5 +1,5 @@
 project(
-  'mate-terminal', 'c',
+  'nate-terminal', 'c',
   version: '1.27.0',
   meson_version: '>=0.47.0',
   license: 'GPL2',
@@ -22,7 +22,7 @@ config_h.set_quoted('PACKAGE', package_name, description: 'Name of package')
 config_h.set_quoted('PACKAGE_NAME', package_name, description: 'Define to the full name of this package.')
 config_h.set_quoted('PACKAGE_STRING', package_string, description: 'Define to the full name and version of this package.')
 config_h.set_quoted('PACKAGE_VERSION', package_version, description: 'Define to the version of this package.')
-config_h.set_quoted('PACKAGE_URL', 'https://mate-desktop.org', description: 'Define to the home page for this package.')
+config_h.set_quoted('PACKAGE_URL', 'https://nate-desktop.org', description: 'Define to the home page for this package.')
 config_h.set_quoted('GETTEXT_PACKAGE', package_name, description: 'Gettext package')
 config_h.set_quoted('VERSION', package_version, description: 'Name of package')
 
@@ -153,9 +153,9 @@ ice_dep = dependency('ice', version: ice_req, required: false)
 if get_option('sm') and sm_dep.found() and ice_dep.found()
   build_sm = true
   config_h.set('HAVE_SMCLIENT', 1)
-  mate_submodules_dep = dependency('mate-submodules', version: '1.24.0',
-    fallback: ['mate-submodules', 'mate_submodules_dep'])
-  term_deps += [mate_submodules_dep]
+  nate_submodules_dep = dependency('nate-submodules', version: '1.24.0',
+    fallback: ['nate-submodules', 'nate_submodules_dep'])
+  term_deps += [nate_submodules_dep]
 endif
 
 configure_file(
@@ -171,14 +171,14 @@ desktop_in = configuration_data()
 desktop_in.set('VERSION', meson.project_version())
 
 desktop_file_configured = configure_file(
-  input: 'mate-terminal.desktop.in.in',
-  output: 'mate-terminal.desktop.in',
+  input: 'nate-terminal.desktop.in.in',
+  output: 'nate-terminal.desktop.in',
   configuration: desktop_in,
 )
 
 desktop_file = i18n.merge_file(
   input: desktop_file_configured,
-  output: 'mate-terminal.desktop',
+  output: 'nate-terminal.desktop',
   type: 'desktop',
   po_dir: join_paths(srcdir, 'po'),
   install: true,
@@ -199,17 +199,17 @@ if desktop_file_validate.found()
   )
 endif
 
-install_man('mate-terminal.1')
+install_man('nate-terminal.1')
 
 appdata_file_configured = configure_file(
-  input: 'mate-terminal.appdata.xml.in.in',
-  output: 'mate-terminal.appdata.xml.in',
+  input: 'nate-terminal.appdata.xml.in.in',
+  output: 'nate-terminal.appdata.xml.in',
   configuration: config_h,
 )
 
 appdata_file = i18n.merge_file(
   input: appdata_file_configured,
-  output: 'mate-terminal.appdata.xml',
+  output: 'nate-terminal.appdata.xml',
   type: 'xml',
   po_dir: join_paths(srcdir, 'po'),
   install: true,
@@ -233,14 +233,14 @@ if appstream_util.found()
 endif
 
 install_data(
-  'mate-terminal.wrapper',
+  'nate-terminal.wrapper',
   install_mode: 'rwxr-xr-x',
   install_dir: get_option('bindir')
   )
 
 summary = [
   '',
-  'mate-terminal-@0@:'.format(meson.project_version()),
+  'nate-terminal-@0@:'.format(meson.project_version()),
   '',
   '	prefix:                   @0@'.format(prefix),
   '	source code location:     @0@'.format(srcdir),

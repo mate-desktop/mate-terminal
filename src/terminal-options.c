@@ -174,7 +174,7 @@ unsupported_option_callback (const gchar *option_name,
                              gpointer     data,
                              GError     **error)
 {
-	g_printerr (_("Option \"%s\" is no longer supported in this version of mate-terminal;"
+	g_printerr (_("Option \"%s\" is no longer supported in this version of nate-terminal;"
 	              " you might want to create a profile with the desired setting, and use"
 	              " the new '--profile' option\n"), option_name);
 	return TRUE; /* we do not want to bail out here but continue */
@@ -1363,7 +1363,7 @@ get_goption_context (TerminalOptions *options)
 	g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
 	g_option_context_set_description (context, N_("MATE Terminal Emulator"));
 
-	group = g_option_group_new ("mate-terminal",
+	group = g_option_group_new ("nate-terminal",
 	                            N_("MATE Terminal Emulator"),
 	                            N_("Show MATE Terminal options"),
 	                            options,

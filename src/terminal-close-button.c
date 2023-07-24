@@ -51,7 +51,7 @@ terminal_close_button_init (TerminalCloseButton *button)
 	GtkWidget *image;
 	GtkStyleContext *context;
 
-	gtk_widget_set_name (GTK_WIDGET (button), "mate-terminal-tab-close-button");
+	gtk_widget_set_name (GTK_WIDGET (button), "nate-terminal-tab-close-button");
 
 	image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_MENU);
 	gtk_widget_show (image);

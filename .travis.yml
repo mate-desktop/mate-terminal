@@ -15,8 +15,8 @@ branches:
     - gh-pages
 
 before_install:
-  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - curl -Ls -o gen-index https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/gen-index.sh
+  - curl -Ls -o docker-build https://github.com/nate-desktop/nate-dev-scripts/raw/master/travis/docker-build
+  - curl -Ls -o gen-index https://github.com/nate-desktop/nate-dev-scripts/raw/master/travis/gen-index.sh
   - chmod +x docker-build gen-index
 
 install:
@@ -29,9 +29,9 @@ script:
 notifications:
   irc:
     if: (tag OR branch = master) AND
-        repo = "mate-desktop/mate-terminal"
+        repo = "nate-desktop/nate-terminal"
     channels:
-      - "irc.libera.chat#mate-dev"
+      - "irc.libera.chat#nate-dev"
     template:
       - "[%{repository_name}] %{author}: %{commit_subject}"
       - "[%{branch}] %{commit} %{message} %{build_url}"
@@ -61,7 +61,7 @@ after_success:
   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
         REPO_SLUG_ARRAY=(${TRAVIS_REPO_SLUG//\// });
         REPO_NAME=${REPO_SLUG_ARRAY[1]};
-        URL="https://${REPO_NAME}.mate-desktop.dev";
+        URL="https://${REPO_NAME}.nate-desktop.dev";
         COMMENT="Code analysis completed";
         curl -H "Authorization: token $GITHUB_TOKEN" -X POST
            -d "{\"state\": \"success\", \"description\": \"$COMMENT\", \"context\":\"scan-build\", \"target_url\": \"$URL\"}"

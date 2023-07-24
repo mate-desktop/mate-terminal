@@ -133,11 +133,11 @@ terminal_util_show_help (const char *topic,
 
 	if (topic)
 	{
-		url = g_strdup_printf ("help:mate-terminal/%s", topic);
+		url = g_strdup_printf ("help:nate-terminal/%s", topic);
 	}
 	else
 	{
-		url = g_strdup ("help:mate-terminal");
+		url = g_strdup ("help:nate-terminal");
 	}
 
 	if (!gtk_show_uri_on_window (GTK_WINDOW (parent), url, gtk_get_current_event_time (), &error))

@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 		g_error ("Locale not supported by C library!\n");
 
 	g_test_init (&argc, &argv, NULL);
-	g_test_bug_base ("http://bugzilla.mate.org/enter_bug.cgi?product=mate-terminal");
+	g_test_bug_base ("http://bugzilla.nate.org/enter_bug.cgi?product=nate-terminal");
 
 	for (i = 0; i < G_N_ELEMENTS (tests); ++i)
 	{

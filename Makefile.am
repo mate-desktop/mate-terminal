@@ -11,33 +11,33 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	CFLAGS='-Wno-deprecated-declarations'
 
 appdatadir = $(datadir)/metainfo
-appdata_DATA = mate-terminal.appdata.xml
+appdata_DATA = nate-terminal.appdata.xml
 appdata_in_files = $(appdata_DATA:.xml=.xml.in)
 appdata_in_in_files = $(appdata_in_files:.xml.in=.xml.in.in)
 $(appdata_DATA): $(appdata_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = mate-terminal.desktop.in.in
+desktop_in_files = nate-terminal.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 $(desktop_DATA): $(desktop_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-man_MANS = mate-terminal.1
+man_MANS = nate-terminal.1
 
-bin_SCRIPTS = mate-terminal.wrapper
+bin_SCRIPTS = nate-terminal.wrapper
 
 EXTRA_DIST = 			\
 	autogen.sh		\
 	xmldocs.make		\
 	omf.make		\
-	mate-terminal.wrapper   \
+	nate-terminal.wrapper   \
 	$(appdata_in_in_files)	\
 	$(man_MANS)		\
 	$(NULL)
 
 CLEANFILES = \
-	mate-terminal.appdata.xml \
+	nate-terminal.appdata.xml \
 	$(appdata_DATA) \
 	$(desktop_DATA)	\
 	$(NULL)

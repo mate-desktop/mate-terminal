@@ -4,7 +4,7 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="mate-terminal"
+PKG_NAME="nate-terminal"
 
 (test -f $srcdir/configure.ac) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
@@ -12,8 +12,8 @@ PKG_NAME="mate-terminal"
     exit 1
 }
 
-which mate-autogen || {
-    echo "You need to install mate-common"
+which nate-autogen || {
+    echo "You need to install nate-common"
     exit 1
 }
 
@@ -23,8 +23,8 @@ which yelp-build || {
 }
 
 REQUIRED_AUTOMAKE_VERSION=1.9
-MATE_DATADIR="$mate_datadir"
+MATE_DATADIR="$nate_datadir"
 USE_COMMON_DOC_BUILD=yes
 
-. mate-autogen
+. nate-autogen
 

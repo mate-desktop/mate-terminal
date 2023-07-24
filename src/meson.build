@@ -12,7 +12,7 @@ version_h = configure_file(
 cargs = [
   '-DG_LOG_DOMAIN="marco"',
   '-DTERMINAL_COMPILATION',
-  '-DTERMINAL_RESOURCES_PATH_PREFIX="/org/mate/terminal"',
+  '-DTERMINAL_RESOURCES_PATH_PREFIX="/org/nate/terminal"',
   '-DTERM_DATADIR="@0@"'.format(datadir),
   '-DTERM_LOCALEDIR="@0@/locale"'.format(datadir),
   '-DTERM_PKGDATADIR="@0@"'.format(pkgdatadir),
@@ -80,7 +80,7 @@ schemas_data = configuration_data()
 schemas_data.set('GETTEXT_PACKAGE', meson.project_name())
 
 schemas_in = [
-  'org.mate.terminal.gschema.xml',
+  'org.nate.terminal.gschema.xml',
 ]
 
 schemas = []
@@ -114,7 +114,7 @@ marshalers = gnome.genmarshal('terminal-marshal',
   prefix: '_terminal_marshal',
 )
 
-executable('mate-terminal',
+executable('nate-terminal',
   sources, source_enum, source_resources, marshalers,
   include_directories : [
     include_directories('.'),

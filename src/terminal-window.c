@@ -2235,7 +2235,7 @@ terminal_window_init (TerminalWindow *window)
     GtkStyleContext *context;
 
     context = gtk_widget_get_style_context (GTK_WIDGET (window));
-    gtk_style_context_add_class (context, "mate-terminal");
+    gtk_style_context_add_class (context, "nate-terminal");
 
     gtk_window_set_title (GTK_WINDOW (window), _("Terminal"));
 
@@ -2250,7 +2250,7 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_scrollable (GTK_NOTEBOOK (priv->notebook), TRUE);
     gtk_notebook_set_show_border (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
-    gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
+    gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("nate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
                       G_CALLBACK (notebook_button_press_cb), settings_global);
     g_signal_connect (window, "key-press-event",
@@ -2364,7 +2364,7 @@ terminal_window_init (TerminalWindow *window)
     gtk_window_group_add_window (window_group, GTK_WINDOW (window));
     g_object_unref (window_group);
 
-    terminal_util_set_unique_role (GTK_WINDOW (window), "mate-terminal-window");
+    terminal_util_set_unique_role (GTK_WINDOW (window), "nate-terminal-window");
 }
 
 static void

@@ -3,23 +3,23 @@
 ##########################################################
 requires:
   archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-terminal
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/nate-terminal
     - autoconf-archive
     - clang
     - gcc
     - git
     - libsm
     - make
-    - mate-common
-    - mate-desktop
+    - nate-common
+    - nate-desktop
     - meson
     - vte3
     - which
     - yelp-tools
 
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-terminal
+    # Useful URL: https://github.com/nate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-nate-team/nate-terminal
     - autoconf-archive
     - autopoint
     - clang
@@ -34,12 +34,12 @@ requires:
     - libvte-2.91-dev
     - libx11-dev
     - make
-    - mate-common
+    - nate-common
     - meson
     - yelp-tools
 
   fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-terminal.git
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/nate-terminal.git
     - autoconf-archive
     - clang
     - clang-analyzer
@@ -51,7 +51,7 @@ requires:
     - gtk3-devel
     - libSM-devel
     - make
-    - mate-common
+    - nate-common
     - meson
     - redhat-rpm-config
     - vte291-devel
@@ -70,7 +70,7 @@ requires:
     - libvte-2.91-dev
     - libx11-dev
     - make
-    - mate-common
+    - nate-common
     - meson
     - yelp-tools
 
@@ -124,7 +124,7 @@ after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
   -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
   -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
-  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/utilities-terminal.png
+  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/nate-icon-theme/raw/master/nate/16x16/apps/utilities-terminal.png
   - fi
   - make distcheck
 
@@ -133,10 +133,10 @@ releases:
   prerelease: false
   checksum: true
   file_glob: true
-  files: mate-terminal-*.tar.xz
+  files: nate-terminal-*.tar.xz
   github_release:
     tags: true
     overwrite: true
     base_version: 1.20.0
     notify_servers:
-      - https://release.mate-desktop.org/release
+      - https://release.nate-desktop.org/release

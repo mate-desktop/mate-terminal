@@ -337,7 +337,7 @@ terminal_screen_init (TerminalScreen *screen)
 		{ "GTK_NOTEBOOK_TAB", GTK_TARGET_SAME_APP, TARGET_TAB },
 		{ "application/x-color", 0, TARGET_COLOR },
 		{ "property/bgimage",    0, TARGET_BGIMAGE },
-		{ "x-special/mate-reset-background", 0, TARGET_RESET_BG },
+		{ "x-special/nate-reset-background", 0, TARGET_RESET_BG },
 		{ "text/x-moz-url",  0, TARGET_MOZ_URL },
 		{ "_NETSCAPE_URL", 0, TARGET_NETSCAPE_URL }
 	};

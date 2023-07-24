@@ -315,7 +315,7 @@ response_callback (GtkWidget *window,
                    EncodingDialogData *data)
 {
 	if (id == GTK_RESPONSE_HELP)
-		terminal_util_show_help ("mate-terminal-encoding-add", GTK_WINDOW (window));
+		terminal_util_show_help ("nate-terminal-encoding-add", GTK_WINDOW (window));
 	else
 		gtk_widget_destroy (GTK_WIDGET (window));
 }
@@ -487,7 +487,7 @@ terminal_encoding_dialog_show (GtkWindow *transient_parent)
 	g_object_set_data_full (G_OBJECT (data->dialog), "GT::Data", data, (GDestroyNotify) encoding_dialog_data_free);
 
 	gtk_window_set_transient_for (GTK_WINDOW (data->dialog), transient_parent);
-	gtk_window_set_role (GTK_WINDOW (data->dialog), "mate-terminal-encodings");
+	gtk_window_set_role (GTK_WINDOW (data->dialog), "nate-terminal-encodings");
 	g_signal_connect (data->dialog, "response",
 	                  G_CALLBACK (response_callback), data);
 

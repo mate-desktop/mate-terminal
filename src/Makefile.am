@@ -7,10 +7,10 @@ SUBDIRS += skey
 endif
 
 if ENABLE_SMCLIENT
-SUBDIRS += mate-submodules
+SUBDIRS += nate-submodules
 endif
 
-bin_PROGRAMS = mate-terminal
+bin_PROGRAMS = nate-terminal
 
 BUILT_SOURCES = \
 	terminal-marshal.c \
@@ -21,7 +21,7 @@ BUILT_SOURCES = \
 	terminal-type-builtins.h \
 	$(NULL)
 
-mate_terminal_SOURCES= \
+nate_terminal_SOURCES= \
 	eggshell.c \
 	eggshell.h \
 	profile-editor.c \
@@ -62,18 +62,18 @@ mate_terminal_SOURCES= \
 	$(NULL)
 
 if ENABLE_SKEY
-mate_terminal_SOURCES += \
+nate_terminal_SOURCES += \
 	skey-popup.c \
 	skey-popup.h \
 	$(NULL)
 endif
 
-nodist_mate_terminal_SOURCES= $(BUILT_SOURCES)
+nodist_nate_terminal_SOURCES= $(BUILT_SOURCES)
 
-mate_terminal_CPPFLAGS = \
-	-I$(top_srcdir)/src/mate-submodules/libegg \
+nate_terminal_CPPFLAGS = \
+	-I$(top_srcdir)/src/nate-submodules/libegg \
 	-DTERMINAL_COMPILATION \
-	-DTERMINAL_RESOURCES_PATH_PREFIX="\"/org/mate/terminal\"" \
+	-DTERMINAL_RESOURCES_PATH_PREFIX="\"/org/nate/terminal\"" \
 	-DTERM_DATADIR="\"$(datadir)\"" \
 	-DTERM_LOCALEDIR="\"$(datadir)/locale\"" \
 	-DTERM_PKGDATADIR="\"$(pkgdatadir)\"" \
@@ -89,21 +89,21 @@ mate_terminal_CPPFLAGS = \
 	$(DISABLE_DEPRECATED) \
 	$(AM_CPPFLAGS)
 
-mate_terminal_CFLAGS = \
+nate_terminal_CFLAGS = \
 	$(TERM_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(AM_CFLAGS)
 
-mate_terminal_LDADD = \
+nate_terminal_LDADD = \
 	$(TERM_LIBS)
 
 if ENABLE_SKEY
-mate_terminal_LDADD += \
+nate_terminal_LDADD += \
 	skey/libskey.la
 endif
 
 if ENABLE_SMCLIENT
-mate_terminal_LDADD += $(top_builddir)/src/mate-submodules/libegg/libegg.la
+nate_terminal_LDADD += $(top_builddir)/src/nate-submodules/libegg/libegg.la
 endif
 
 TYPES_H_FILES = \
@@ -142,13 +142,13 @@ terminal-marshal.c: $(srcdir)/terminal-marshal.list
 terminal-resources.h terminal-resources.c: terminal.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/terminal.gresource.xml)
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name terminal $<
 
-gsettingsschema_in_files = org.mate.terminal.gschema.xml.in
+gsettingsschema_in_files = org.nate.terminal.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 .PRECIOUS: $(gsettings_SCHEMAS)
 
 CLEANFILES = \
 	stamp-terminal-type-builtins.h \
-	mate-terminal.schemas \
+	nate-terminal.schemas \
 	$(gsettings_SCHEMAS) \
 	stamp-terminal-type-builtins.h \
 	$(BUILT_SOURCES)

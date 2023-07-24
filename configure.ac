@@ -5,9 +5,9 @@ m4_define(mt_version, mt_major_version.mt_minor_version.mt_micro_version)
 
 m4_define(mt_api_version, 0)
 
-AC_INIT([mate-terminal],[mt_version],
-        [https://github.com/mate-desktop/mate-terminal/issues],
-        [mate-terminal], [https://mate-desktop.org])
+AC_INIT([nate-terminal],[mt_version],
+        [https://github.com/nate-desktop/nate-terminal/issues],
+        [nate-terminal], [https://nate-desktop.org])
 AC_CONFIG_SRCDIR([src/terminal.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -140,18 +140,18 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=mate-terminal
+GETTEXT_PACKAGE=nate-terminal
 AC_SUBST([GETTEXT_PACKAGE])
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 
 AC_CONFIG_FILES([
 Makefile
-mate-terminal.appdata.xml.in
-mate-terminal.desktop.in
+nate-terminal.appdata.xml.in
+nate-terminal.desktop.in
 src/Makefile
-src/mate-submodules/Makefile
-src/mate-submodules/libegg/Makefile
-src/org.mate.terminal.gschema.xml
+src/nate-submodules/Makefile
+src/nate-submodules/libegg/Makefile
+src/org.nate.terminal.gschema.xml
 src/terminal-version.h
 help/Makefile
 po/Makefile.in
