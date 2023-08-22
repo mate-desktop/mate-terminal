@@ -8,7 +8,8 @@
 # Porrumentzio <porrumentzio@riseup.net>, 2020
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Alexander Gabilondo <alexgabi@disroot.org>, 2021
+# Alexander Gabilondo <alexgabi@disroot.org>, 2022
+# Gorka Gonzalez, 2023
 # 
 msgid ""
 msgstr ""
@@ -16,8 +17,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Alexander Gabilondo <alexgabi@disroot.org>, 2021\n"
-"Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
+"Last-Translator: Gorka Gonzalez, 2023\n"
+"Language-Team: Basque (https://app.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -186,7 +187,7 @@ msgstr "Azpimarra"
 #. Translators: Cursor blink: ...
 #: src/extra-strings.c:43 src/profile-preferences.ui:230
 msgid "Use system settings"
-msgstr ""
+msgstr "Erabili sistemaren ezarpenak"
 
 #. Translators: Cursor blink: ...
 #: src/extra-strings.c:45 src/profile-preferences.ui:233
@@ -286,7 +287,7 @@ msgstr "Bilatu"
 
 #: src/find-dialog.ui:59
 msgid "_Find"
-msgstr ""
+msgstr "_Bilatu"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
@@ -419,13 +420,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
-msgstr ""
+msgstr "Mugitu fitxetan zehar [ktrl] + [tab]"
 
 #: src/org.mate.terminal.gschema.xml.in:85
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Egiazkoa bada, fitxetan zehar mugitzea ahalbidetuko du, [ktrl + tab] eta "
+"[ktrl + maius + tab] erabiliz."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -520,7 +523,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
 msgid "'Terminal'"
-msgstr ""
+msgstr "'Terminala'"
 
 #: src/org.mate.terminal.gschema.xml.in:128
 msgid "Title for terminal"
@@ -560,11 +563,12 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
-msgstr ""
+msgstr "Kopiatu hautatutakoa arbelean."
 
 #: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr ""
+"Egiazkoa bada, hautatutakoa automatikoki kopiatuko da arbelaren buffer-ean"
 
 #: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
@@ -1635,7 +1639,7 @@ msgstr "Terminal-_soinua"
 
 #: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
-msgstr ""
+msgstr "Hautatutako testua _arbelean kopiatu"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
@@ -1891,7 +1895,7 @@ msgstr "_Titulua:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_Ados"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -1979,11 +1983,11 @@ msgstr "Berrezarri eta garbitu"
 
 #: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
-msgstr ""
+msgstr "Aldatu Aurreko Profilara"
 
 #: src/terminal-accels.c:251
 msgid "Switch to Next Profile"
-msgstr ""
+msgstr "Aldatu Hurrengo Profilera"
 
 #: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
@@ -2390,6 +2394,7 @@ msgstr "Pantaila osoko leihoa"
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
+"Ezarri leihoaren tamaina. Adib: 80x24, edo 80x24+200+200 (ZUTABxERREN+X+Y)"
 
 #: src/terminal-options.c:1045
 msgid "GEOMETRY"
@@ -2541,6 +2546,9 @@ msgid ""
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"MATE terminala software librea da; birbana eta/edo alda dezakezu Software "
+"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 3. bertsioan,"
+" edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero."
 
 #: src/terminal-util.c:329
 msgid ""
@@ -2700,11 +2708,11 @@ msgstr "Aldatu p_rofila"
 
 #: src/terminal-window.c:2011
 msgid "_Previous Profile"
-msgstr ""
+msgstr "_Aurreko Profila"
 
 #: src/terminal-window.c:2016
 msgid "_Next Profile"
-msgstr ""
+msgstr "_Hurrengo Profila"
 
 #: src/terminal-window.c:2021
 msgid "_Set Title…"
@@ -2803,10 +2811,12 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Leiho honetako terminaletan prozesuak daude oraindik\n"
+"Leihoa ixteak denak hilko ditu"
 
 #: src/terminal-window.c:3596
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "Leiho honetan hainbat taula daude zabalik."
 
 #: src/terminal-window.c:3606
 msgid "Close this terminal?"
@@ -2837,7 +2847,7 @@ msgstr ""
 
 #: src/terminal-window.c:4417
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "MATE terminalari buruz"
 
 #: src/terminal-window.c:4418
 msgid ""

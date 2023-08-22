@@ -10,15 +10,15 @@
 # Lucas Dias <lucasdiaas@outlook.com>, 2019
 # George Silva <algoritmo.linux@gmail.com>, 2019
 # Luciano Luck, 2022
-# Doretox <doretox@protonmail.com>, 2022
+# Vitor Henrique, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:30+0200\n"
 "PO-Revision-Date: 2018-10-05 19:26+0000\n"
-"Last-Translator: Doretox <doretox@protonmail.com>, 2022\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
+"Last-Translator: Vitor Henrique, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -267,12 +267,12 @@ msgstr ""
 #. (itstool) path: info/releaseinfo
 #: C/index.docbook:191
 msgid "This manual describes version 1.22 of MATE Terminal."
-msgstr "Este manual descreve a versão 1.22 do MATE Terminal."
+msgstr "Este manual descreve a versão 1.22 do Terminal MATE."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:195
 msgid "<primary>MATE Terminal</primary>"
-msgstr "<primary>MATE Terminal</primary>"
+msgstr "Terminal MATE</primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:198
@@ -290,8 +290,8 @@ msgid ""
 "<application>MATE Terminal</application> is a terminal emulation application"
 " that you can use to perform the following tasks:"
 msgstr ""
-"<application>MATE Terminal</application> é um aplicativo de emulação de "
-"terminal que você pode usar para executar as seguintes tarefas:"
+"O <application>Terminal MATE</application> é um aplicativo de emulação de "
+"terminal que você pode usar para realizar as seguintes tarefas:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:209
@@ -308,10 +308,10 @@ msgid ""
 " time."
 msgstr ""
 "Uma shell é um programa que interpreta e executa os comandos que você digita"
-" na interface de linha de comando. Quando você inicia o <application>MATE "
-"Terminal</application>, a aplicação inicia a shell padrão que é especificada"
-" na sua conta do sistema. Você pode mudar para uma shell diferente a "
-"qualquer momento."
+" na interface de linha de comando. Quando você inicia o "
+"<application>Terminal MATE</application>, a aplicação inicia a shell padrão "
+"que é especificada na sua conta do sistema. Você pode mudar para uma shell "
+"diferente a qualquer momento."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:217
@@ -332,6 +332,14 @@ msgid ""
 "escape sequences that the VT102 and VT220 terminals use for functions such "
 "as to position the cursor and to clear the screen."
 msgstr ""
+"O <application>Terminal MATE</application> emula o aplicativo "
+"<application>xterm</application> desenvolvido pela X Consortium. Por sua "
+"vez, o aplicativo <application>xterm</application>emula o terminal DEC VT102"
+" e também suporta sequências de escape do terminal DEC VT220. Uma sequência "
+"de escapes é uma série de caracteres que começa com o caractere "
+"<keycap>Esc</keycap>. O <application>MATE Terminal</application> aceita "
+"todas as sequências de escape que os terminais VT102 e VT220 utilizam para "
+"funções como posicionar o cursor e limpar a tela."
 
 #. (itstool) path: info/title
 #: C/index.docbook:229
@@ -344,6 +352,8 @@ msgid ""
 "The following sections describe how to start <application>MATE "
 "Terminal</application>."
 msgstr ""
+"As seguintes seções descrevem como iniciar o <application>Terminal "
+"MATE</application>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:234
@@ -379,7 +389,7 @@ msgstr "Linha de comando"
 #. (itstool) path: listitem/para
 #: C/index.docbook:249
 msgid "Execute the following command: <command>mate-terminal</command>"
-msgstr ""
+msgstr "Execute o seguinte comando: <command>mate-terminal</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:252
@@ -388,11 +398,15 @@ msgid ""
 "<application>MATE Terminal</application>. To view the command line options, "
 "execute the following command: <command>mate-terminal --help</command>"
 msgstr ""
+"Você pode utilizar as opções de linha de comando para modificar a forma como"
+" você executa o  <application>MATE Terminal</application>. Para exibir as "
+"opções de linha de comando, execute o seguinte comando: <command>mate-"
+"terminal --help</command>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:260
 msgid "When You First Start MATE Terminal"
-msgstr "Quando você começa MATE Terminal"
+msgstr "A primeira inicialização do Terminal MATE"
 
 #. (itstool) path: section/para
 #: C/index.docbook:261
@@ -401,16 +415,19 @@ msgid ""
 "the application opens a terminal window with a group of default settings. "
 "The group of default settings is called the Default profile."
 msgstr ""
+"Quando você inicia o Terminal MATE pela primeira vez, o aplicativo abre uma "
+"janela de terminal com um conjunto de configurações padrão. O conjunto de "
+"configurações padrão é chamado de perfil Padrão."
 
 #. (itstool) path: info/title
 #: C/index.docbook:263
 msgid "Example of a Default MATE Terminal Window"
-msgstr ""
+msgstr "Exemplos de uma janela do Terminal MATE padrão"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:265 C/index.docbook:324
 msgid "MATE Terminal default window"
-msgstr "MATE Terminal janela padrão"
+msgstr "Janela padrão do Terminal MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -433,6 +450,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal default "
 "window</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mate-terminal-default.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> Janela padrão do Terminal "
+"MATE</phrase> </textobject>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:276
@@ -444,6 +464,13 @@ msgid ""
 "command. By default, <application>MATE Terminal</application> uses the "
 "default shell specified for the user who starts the application."
 msgstr ""
+"A janela do terminal exibe um prompt de comando no qual você pode digitar "
+"comandos UNIX. O prompt de comando pode ser um %, #, &gt;, $ ou qualquer "
+"outro caractere especial. O cursor é posicionado no prompt de comando. "
+"Quando você digita um comando UNIX e pressiona <keycap>Enter</keycap>, o "
+"computador executa o comando. Por padrão, o <application>Terminal "
+"MATE</application> usa o shell padrão especificado para o usuário que inicia"
+" o aplicativo."
 
 #. (itstool) path: section/para
 #: C/index.docbook:279
@@ -451,6 +478,8 @@ msgid ""
 "<application>MATE Terminal</application> also sets the following environment"
 " variables:"
 msgstr ""
+"O <application>Terminal MATE</application> também define as seguintes "
+"variáveis de ambiente:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:284
@@ -486,6 +515,11 @@ msgid ""
 "automatically when you start <application>MATE Terminal</application> in the"
 " profile."
 msgstr ""
+"Você pode criar um novo perfil e aplicar o novo perfil ao terminal para "
+"modificar características como fonte, cor e efeitos, comportamento de "
+"rolagem, título da janela e compatibilidade. Você também pode especificar um"
+" comando que é executado automaticamente quando você inicia o "
+"<application>Terminal MATE</application> no perfil."
 
 #. (itstool) path: section/para
 #: C/index.docbook:307
@@ -505,6 +539,8 @@ msgid ""
 "<command>mate-terminal --window-with-"
 "profile=<replaceable>profilename</replaceable></command>"
 msgstr ""
+"<command>mate-terminal --window-with-"
+"profile=<replaceable>nomedoperfil</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:311
@@ -513,6 +549,9 @@ msgid ""
 "<application>MATE Terminal</application>, unless you specify a different "
 "titlebar name in the <guilabel>Editing Profile</guilabel> dialog."
 msgstr ""
+"O nome do perfil padrão aparece na barra de título do <application>Terminal "
+"MATE</application>, a menos que você especifique um nome diferente para a "
+"barra de título no diálogo <guilabel>Editar perfil</guilabel>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:313
@@ -520,6 +559,8 @@ msgid ""
 "See <xref linkend=\"mate-terminal-manage-profiles\"/> for information about "
 "how to define and use a new terminal profile."
 msgstr ""
+"Veja <xref linkend=\"mate-terminal-manage-profiles\"/> para informações "
+"sobre como definir e usar um novo perfil de terminal."
 
 #. (itstool) path: info/title
 #: C/index.docbook:317
@@ -536,6 +577,12 @@ msgid ""
 "can use each terminal for different tasks. You can apply a different profile"
 " to each tabbed terminal in the window."
 msgstr ""
+"O <application>MATE Terminal</application> oferece um recurso de abas que "
+"permite abrir vários terminais em uma única janela. Cada terminal é aberto "
+"em uma aba separada. Clique na aba apropriada para exibir o terminal na "
+"janela. Cada terminal de uma aba em uma janela é um subprocesso separado, "
+"portanto, você pode usar cada terminal para tarefas diferentes. Você pode "
+"aplicar um perfil diferente a cada terminal de uma guia na janela."
 
 #. (itstool) path: section/para
 #: C/index.docbook:320
@@ -547,6 +594,11 @@ msgid ""
 " The name of the profile in the active tab, Profile 1, appears in the "
 "titlebar."
 msgstr ""
+"A barra de título da janela do terminal mostra ou o nome do perfil atual ou "
+"o nome especificado pelo perfil atual. <xref linkend=\"mate-terminal-"
+"tabbed\"/> mostra uma janela do <application>Terminal MATE</application> com"
+" quatro abas. Nesse caso, cada uma das quatro abas tem um perfil diferente. "
+"O nome do perfil na aba ativa, Perfil 1, aparece na barra de título."
 
 #. (itstool) path: info/title
 #: C/index.docbook:322
@@ -574,6 +626,9 @@ msgid ""
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Terminal window "
 "with four tabs</phrase> </textobject>"
 msgstr ""
+"<imageobject> <imagedata fileref=\"figures/mate-terminal-tabbed.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Janela do Terminal MATE"
+" com quatro abas </textobject>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:335
@@ -581,6 +636,8 @@ msgid ""
 "See <xref linkend=\"mate-terminal-windows\"/> for information about how to "
 "open a new tabbed terminal."
 msgstr ""
+"Veja <xref linkend=\"mate-terminal-windows\"/> para informações sobre como "
+"abrir um novo terminal com abas."
 
 #. (itstool) path: info/title
 #: C/index.docbook:344
@@ -630,6 +687,9 @@ msgid ""
 "the terminal. If you close the last terminal window, the <application>MATE "
 "Terminal</application> application exits."
 msgstr ""
+"Esta ação fecha o terminal e qualquer subprocesso que você abriu no "
+"terminal. Se você fechar a última janela do terminal, o aplicativo "
+"<application>Terminal MATE</application> será fechado."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:367
@@ -729,6 +789,10 @@ msgid ""
 "<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Change "
 "Profile</guisubmenu></menuchoice> submenu."
 msgstr ""
+"Clique em<guibutton>Fechar</guibutton>. O <application>Terminal "
+"MATE</application> adiciona o perfil ao submenu "
+"<menuchoice><guimenu>Terminal</guimenu><guisubmenu>Alterar "
+"perfil</guisubmenu></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:437
@@ -786,6 +850,11 @@ msgid ""
 "<guibutton>Edit</guibutton>. For information on the options you can set for "
 "profiles, see <xref linkend=\"mate-terminal-prefs\"/>."
 msgstr ""
+"Escolha "
+"<menuchoice><guimenu>Editar</guimenu><guisubmenu>Perfis</guisubmenu></menuchoice>,"
+" selecione o perfil que deseja editar e clique em "
+"<guibutton>Editar</guibutton>. Para informações sobre as opções que você "
+"pode definir para perfis, veja <xref linkend=\"mate-terminal-prefs\"/>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:475
@@ -855,6 +924,8 @@ msgid ""
 "To display the <application>MATE Terminal</application> window in full-"
 "screen mode:"
 msgstr ""
+"Para mostrar a janela do  <application>Terminal MATE</application> no modo "
+"de tela cheia:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:520
@@ -880,6 +951,10 @@ msgid ""
 "dialog to change the appearance of the terminal window. For example, you can"
 " change the background color, or the location of the scrollbar."
 msgstr ""
+"Veja <xref linkend=\"mate-terminal-prefs\"/> para informações sobre as "
+"opções que você pode escolher na caixa de diálogo <guilabel>Editar "
+"perfil</guilabel> para alterar a aparência da janela do terminal. Por "
+"exemplo, você pode alterar a cor de fundo ou o local da barra de rolagem."
 
 #. (itstool) path: info/title
 #: C/index.docbook:533
@@ -1867,3 +1942,6 @@ msgid ""
 " or this manual, follow the directions in the <link xlink:href=\"help:mate-"
 "user-guide/feedback\">MATE Feedback Page</link>."
 msgstr ""
+"Para relatar um bug ou fazer uma sugestão com relação ao aplicativo Terminal"
+" MATE ou a este manual, siga as instruções na <link xlink:href=\"help:mate-"
+"user-guide/feedback\">Página de feedback do MATE</link>."
