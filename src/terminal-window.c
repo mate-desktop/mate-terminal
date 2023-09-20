@@ -519,27 +519,23 @@ escape_underscores (const char *name)
 }
 
 static int
-find_tab_num_at_pos (GtkNotebook *notebook,
+find_tab_num_at_pos (GtkNotebook *nb,
                      int screen_x,
                      int screen_y)
 {
-    GtkPositionType tab_pos;
     int page_num = 0;
-    GtkNotebook *nb = GTK_NOTEBOOK (notebook);
     GtkWidget *page;
     GtkAllocation tab_allocation;
-
-    tab_pos = gtk_notebook_get_tab_pos (GTK_NOTEBOOK (notebook));
 
     while ((page = gtk_notebook_get_nth_page (nb, page_num)))
     {
         GtkWidget *tab;
-        int max_x, max_y, x_root, y_root;
+        int x_root, y_root;
 
         tab = gtk_notebook_get_tab_label (nb, page);
         g_return_val_if_fail (tab != NULL, -1);
 
-        if (!gtk_widget_get_mapped (GTK_WIDGET (tab)))
+        if (!gtk_widget_get_mapped (tab))
         {
             page_num++;
             continue;
@@ -548,13 +544,10 @@ find_tab_num_at_pos (GtkNotebook *notebook,
         gdk_window_get_origin (gtk_widget_get_window (tab), &x_root, &y_root);
 
         gtk_widget_get_allocation (tab, &tab_allocation);
-        max_x = x_root + tab_allocation.x + tab_allocation.width;
-        max_y = y_root + tab_allocation.y + tab_allocation.height;
-
-        if ((tab_pos == GTK_POS_TOP || tab_pos == GTK_POS_BOTTOM) && screen_x <= max_x)
-            return page_num;
-
-        if ((tab_pos == GTK_POS_LEFT || tab_pos == GTK_POS_RIGHT) && screen_y <= max_y)
+        if (screen_x >= x_root + tab_allocation.x &&
+            screen_x <= x_root + tab_allocation.x + tab_allocation.width &&
+            screen_y >= y_root + tab_allocation.y &&
+            screen_y <= y_root + tab_allocation.y + tab_allocation.height)
             return page_num;
 
         page_num++;
@@ -3056,7 +3049,8 @@ notebook_button_press_cb (GtkWidget *widget,
     }
 
     /* If the event is a double click, display the set title dialog */
-    if (event->type == GDK_DOUBLE_BUTTON_PRESS)
+    if (event->type == GDK_DOUBLE_BUTTON_PRESS &&
+        find_tab_num_at_pos (notebook, (int) event->x_root, (int) event->y_root) >= 0)
     {
         terminal_set_title_callback (NULL, window);
 
