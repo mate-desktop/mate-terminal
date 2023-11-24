@@ -3883,8 +3883,7 @@ clipboard_uris_received_cb (GtkClipboard *clipboard,
     }
 
     /* This potentially modifies the strings in |uris| but that's ok */
-    if (data->uris_as_paths)
-        terminal_util_transform_uris_to_quoted_fuse_paths (uris);
+    terminal_util_transform_uris_to_quoted_fuse_paths (uris);
 
     text = terminal_util_concat_uris (uris, &len);
     vte_terminal_feed_child (VTE_TERMINAL (data->screen), text, len);
@@ -3907,7 +3906,7 @@ clipboard_targets_received_cb (GtkClipboard *clipboard,
         return;
     }
 
-    if (gtk_targets_include_uri (targets, n_targets))
+    if (data->uris_as_paths && gtk_targets_include_uri (targets, n_targets))
     {
         gtk_clipboard_request_uris (clipboard,
                                     (GtkClipboardURIReceivedFunc) clipboard_uris_received_cb,
