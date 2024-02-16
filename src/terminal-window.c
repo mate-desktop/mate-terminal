@@ -3366,10 +3366,11 @@ terminal_window_update_geometry (TerminalWindow *window)
     GtkWidget *widget;
     GdkGeometry hints;
     GtkBorder padding;
-    GtkRequisition toplevel_request, vbox_request, widget_request;
+    GtkRequisition vbox_request;
     int grid_width, grid_height;
     int char_width, char_height;
     int chrome_width, chrome_height;
+    int csd_width = 0, csd_height = 0;
 
     if (priv->active_screen == NULL)
         return;
@@ -3400,20 +3401,41 @@ terminal_window_update_geometry (TerminalWindow *window)
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "content area requests %dx%d px\n",
                            vbox_request.width, vbox_request.height);
 
-    gtk_widget_get_preferred_size (GTK_WIDGET (window), NULL, &toplevel_request);
-    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "window requests %dx%d px\n",
-                           toplevel_request.width, toplevel_request.height);
-
     chrome_width = vbox_request.width - (char_width * grid_width);
     chrome_height = vbox_request.height - (char_height * grid_height);
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "chrome: %dx%d px\n",
                            chrome_width, chrome_height);
 
-    gtk_widget_get_preferred_size (widget, NULL, &widget_request);
-    _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "terminal widget requests %dx%d px\n",
-                           widget_request.width, widget_request.height);
+    if (gtk_widget_get_realized (GTK_WIDGET (window))) {
+        GtkAllocation toplevel_allocation, vbox_allocation;
 
-    if (char_width != priv->old_char_width ||
+        gtk_widget_get_allocation (priv->main_vbox, &vbox_allocation);
+        _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
+                               "terminal widget allocation %dx%d px\n",
+                               vbox_allocation.width, vbox_allocation.height);
+
+        gtk_widget_get_allocation (GTK_WIDGET (window), &toplevel_allocation);
+        _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "window allocation %dx%d px\n",
+                               toplevel_allocation.width, toplevel_allocation.height);
+
+        csd_width = toplevel_allocation.width - vbox_allocation.width;
+        csd_height = toplevel_allocation.height - vbox_allocation.height;
+        _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "CSDs: %dx%d px\n",
+                               csd_width, csd_height);
+    }
+
+    if (!gtk_widget_get_realized (GTK_WIDGET (window)))
+    {
+        /* Don't actually set the geometry hints until we have been realized,
+         * because we don't know how large the client-side decorations are going
+         * to be.
+         *
+         * Similarly, the size request doesn't seem to include the padding
+         * until we've been redrawn at least once. Don't resize the window
+         * until we've done that. */
+        _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "not realized yet\n");
+    }
+    else if (char_width != priv->old_char_width ||
              char_height != priv->old_char_height ||
              padding.left + padding.right != priv->old_padding_width ||
              padding.top + padding.bottom != priv->old_padding_height ||
@@ -3421,8 +3443,8 @@ terminal_window_update_geometry (TerminalWindow *window)
              chrome_height != priv->old_chrome_height ||
              widget != GTK_WIDGET (priv->old_geometry_widget))
     {
-        hints.base_width = chrome_width;
-        hints.base_height = chrome_height;
+        hints.base_width = chrome_width + csd_width;
+        hints.base_height = chrome_height + csd_height;
 
 #define MIN_WIDTH_CHARS 4
 #define MIN_HEIGHT_CHARS 1
