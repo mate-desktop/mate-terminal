@@ -7,15 +7,15 @@
 # Aputsiak Niels Janussen <aputtu@gmail.com>, 2018
 # Allan Nordhøy <epost@anotheragency.no>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Joe Hansen <joedalton2@yahoo.dk>, 2021
+# Joe Hansen <joedalton2@yahoo.dk>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.26.0\n"
+"Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2022-10-29 15:30+0200\n"
+"POT-Creation-Date: 2023-09-10 09:13+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2023\n"
 "Language-Team: Danish (https://app.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4415
+#: src/terminal-options.c:189 src/terminal-window.c:4531
 msgid "MATE Terminal"
 msgstr "Mate-terminal"
 
@@ -55,7 +55,7 @@ msgstr ""
 "Terminal så besøg projektets hjemmeside."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2205
+#: src/terminal-profile.c:161 src/terminal-window.c:2287
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -68,16 +68,16 @@ msgstr "Brug kommandolinjen"
 msgid "_Cancel"
 msgstr "_Afbryd"
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3604
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2223
+#: src/terminal-window.c:3719
 msgid "C_lose Window"
 msgstr "_Luk vindue"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
 msgid "Close this window?"
 msgstr "Luk dette vindue?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -85,32 +85,32 @@ msgstr ""
 "Der er stadig en kørende proces i denne terminal.\n"
 "Lukkes terminalen, vil den blive dræbt."
 
-#: src/mate-submodules/libegg/eggsmclient.c:233
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Deaktiver forbindelse til sessionshåndtering"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Specificer fil som indeholder gemt konfiguration"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:962
 #: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FIL"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Specificer sessionshåndterings-ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "Id"
 
-#: src/mate-submodules/libegg/eggsmclient.c:269
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Sessionhåndteringsindstillinger:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Vis sessionhåndteringsindstillinger"
 
@@ -120,7 +120,7 @@ msgstr "Tilføj eller fjern terminalkodninger"
 
 #: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
-#: src/terminal-window.c:1884
+#: src/terminal-window.c:1956
 msgid "_Help"
 msgstr "_Hjælp"
 
@@ -2541,30 +2541,30 @@ msgstr "Vis terminalvise tilvalg"
 msgid "Unnamed"
 msgstr "Uden navn"
 
-#: src/terminal-screen.c:1523
+#: src/terminal-screen.c:1551
 msgid "_Profile Preferences"
 msgstr "Pr_ofilindstillinger"
 
-#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1552 src/terminal-screen.c:2023
 msgid "_Relaunch"
 msgstr "_Genstart"
 
-#: src/terminal-screen.c:1527
+#: src/terminal-screen.c:1555
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Der opstod en fejl under oprettelse af underprocessen for denne terminal"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:2028
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Underprocessen afsluttede normalt med status %d."
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:2033
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "Underprocessen blev termineret af signalet %d."
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:2038
 msgid "The child process was terminated."
 msgstr "Underprocessen blev termineret."
 
@@ -2576,16 +2576,16 @@ msgstr "Luk faneblad"
 msgid "Switch to this tab"
 msgstr "Skift til dette faneblad"
 
-#: src/terminal-util.c:146
+#: src/terminal-util.c:147
 msgid "There was an error displaying help"
 msgstr "Der opstod en fejl ved visning af hjælp"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Kunne ikke åbne adressen “%s”"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2597,7 +2597,7 @@ msgstr ""
 "Foundation; enten version 3 af licensen eller, efter eget valg, enhver nyere"
 " version."
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2609,7 +2609,7 @@ msgstr ""
 "TIL ET BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
 "detaljer."
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2635,225 +2635,233 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1876
+#: src/terminal-window.c:1948
 msgid "_File"
 msgstr "_Fil"
 
-#: src/terminal-window.c:1877 src/terminal-window.c:1890
-#: src/terminal-window.c:2131
+#: src/terminal-window.c:1949 src/terminal-window.c:1962
+#: src/terminal-window.c:2213
 msgid "Open _Terminal"
 msgstr "Åbn _terminal"
 
-#: src/terminal-window.c:1878 src/terminal-window.c:1895
-#: src/terminal-window.c:2136
+#: src/terminal-window.c:1950 src/terminal-window.c:1967
+#: src/terminal-window.c:2218
 msgid "Open Ta_b"
 msgstr "Åbn fane_blad"
 
-#: src/terminal-window.c:1879
+#: src/terminal-window.c:1951
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: src/terminal-window.c:1880
+#: src/terminal-window.c:1952
 msgid "_View"
 msgstr "_Vis"
 
-#: src/terminal-window.c:1881
+#: src/terminal-window.c:1953
 msgid "_Search"
 msgstr "_Søg"
 
-#: src/terminal-window.c:1882
+#: src/terminal-window.c:1954
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: src/terminal-window.c:1883
+#: src/terminal-window.c:1955
 msgid "Ta_bs"
 msgstr "Fane_blade"
 
-#: src/terminal-window.c:1900
+#: src/terminal-window.c:1972
 msgid "New _Profile…"
 msgstr "Ny _profil…"
 
-#: src/terminal-window.c:1905
+#: src/terminal-window.c:1977
 msgid "_Save Contents"
 msgstr "_Gem indhold"
 
-#: src/terminal-window.c:1910 src/terminal-window.c:2146
+#: src/terminal-window.c:1982 src/terminal-window.c:2228
 msgid "C_lose Tab"
 msgstr "L_uk faneblad"
 
-#: src/terminal-window.c:1915
+#: src/terminal-window.c:1987
 msgid "_Close Window"
 msgstr "_Luk vindue"
 
-#: src/terminal-window.c:1922 src/terminal-window.c:2116
+#: src/terminal-window.c:1994 src/terminal-window.c:2198
 msgid "_Copy"
 msgstr "_Kopier"
 
-#: src/terminal-window.c:1927 src/terminal-window.c:2121
+#: src/terminal-window.c:1999 src/terminal-window.c:2203
 msgid "_Paste"
 msgstr "_Indsæt"
 
-#: src/terminal-window.c:1932 src/terminal-window.c:2126
+#: src/terminal-window.c:2004 src/terminal-window.c:2208
 msgid "Paste _Filenames"
 msgstr "Indsæt _filnavne"
 
-#: src/terminal-window.c:1937
+#: src/terminal-window.c:2009
 msgid "Select _All"
 msgstr "Marker _alt"
 
-#: src/terminal-window.c:1942
+#: src/terminal-window.c:2014
 msgid "P_rofiles…"
 msgstr "P_rofiler…"
 
-#: src/terminal-window.c:1947
+#: src/terminal-window.c:2019
 msgid "_Keyboard Shortcuts…"
 msgstr "_Tastaturgenveje…"
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:2024
 msgid "Pr_ofile Preferences"
 msgstr "Pr_ofilindstillinger"
 
-#: src/terminal-window.c:1959
+#: src/terminal-window.c:2031
 msgid "Zoom _In"
 msgstr "Zoom _ind"
 
-#: src/terminal-window.c:1964
+#: src/terminal-window.c:2036
 msgid "Zoom _Out"
 msgstr "Zoom _ud"
 
-#: src/terminal-window.c:1969
+#: src/terminal-window.c:2041
 msgid "_Normal Size"
 msgstr "_Normal størrelse"
 
-#: src/terminal-window.c:1976
+#: src/terminal-window.c:2048
 msgid "_Find..."
 msgstr "_Søg …"
 
-#: src/terminal-window.c:1981
+#: src/terminal-window.c:2053
 msgid "Find Ne_xt"
 msgstr "Find _næste"
 
-#: src/terminal-window.c:1986
+#: src/terminal-window.c:2058
 msgid "Find Pre_vious"
 msgstr "Find _forrige"
 
-#: src/terminal-window.c:1991
+#: src/terminal-window.c:2063
 msgid "_Clear Highlight"
 msgstr "_Ryd fremhævning"
 
-#: src/terminal-window.c:1997
+#: src/terminal-window.c:2069
 msgid "Go to _Line..."
 msgstr "Hop til _linje …"
 
-#: src/terminal-window.c:2002
+#: src/terminal-window.c:2074
 msgid "_Incremental Search..."
 msgstr "_Trinvis søgning …"
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2081
 msgid "Change _Profile"
 msgstr "Skift _profil"
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2083
 msgid "_Previous Profile"
 msgstr "_Foregående profil"
 
-#: src/terminal-window.c:2016
+#: src/terminal-window.c:2088
 msgid "_Next Profile"
 msgstr "_Næste profil"
 
-#: src/terminal-window.c:2021
+#: src/terminal-window.c:2093
 msgid "_Set Title…"
 msgstr "_Sæt titel…"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2097
 msgid "Set _Character Encoding"
 msgstr "Sæt _tegnkodning"
 
-#: src/terminal-window.c:2027
+#: src/terminal-window.c:2099
 msgid "_Reset"
 msgstr "_Nulstil"
 
-#: src/terminal-window.c:2032
+#: src/terminal-window.c:2104
 msgid "Reset and C_lear"
 msgstr "Nulstil og r_yd"
 
-#: src/terminal-window.c:2039
+#: src/terminal-window.c:2111
 msgid "_Add or Remove…"
 msgstr "_Tilføj eller fjern…"
 
-#: src/terminal-window.c:2046
+#: src/terminal-window.c:2118
 msgid "_Previous Tab"
 msgstr "_Foregående faneblad"
 
-#: src/terminal-window.c:2051
+#: src/terminal-window.c:2123
 msgid "_Next Tab"
 msgstr "_Næste faneblad"
 
-#: src/terminal-window.c:2056
+#: src/terminal-window.c:2128
 msgid "Move Tab _Left"
 msgstr "Flyt faneblad til _venstre"
 
-#: src/terminal-window.c:2061
+#: src/terminal-window.c:2133
 msgid "Move Tab _Right"
 msgstr "Flyt faneblad til _højre"
 
-#: src/terminal-window.c:2066
+#: src/terminal-window.c:2138
 msgid "_Detach tab"
 msgstr "_Frigør faneblad"
 
-#: src/terminal-window.c:2073
+#: src/terminal-window.c:2145
 msgid "_Contents"
 msgstr "_Indhold"
 
-#: src/terminal-window.c:2078
+#: src/terminal-window.c:2150
 msgid "_About"
 msgstr "_Om"
 
-#: src/terminal-window.c:2085
+#: src/terminal-window.c:2157
+msgid "_Open Hyperlink"
+msgstr "_Åbn hyperhenvisning"
+
+#: src/terminal-window.c:2162
+msgid "_Copy Hyperlink Address"
+msgstr "_Kopier adresse for hyperhenvisning"
+
+#: src/terminal-window.c:2167
 msgid "_Send Mail To…"
 msgstr "_Send post til…"
 
-#: src/terminal-window.c:2090
+#: src/terminal-window.c:2172
 msgid "_Copy E-mail Address"
 msgstr "K_opier e-postadresse"
 
-#: src/terminal-window.c:2095
+#: src/terminal-window.c:2177
 msgid "C_all To…"
 msgstr "R_ing til…"
 
-#: src/terminal-window.c:2100
+#: src/terminal-window.c:2182
 msgid "_Copy Call Address"
 msgstr "_Kopier opkaldsadresse"
 
-#: src/terminal-window.c:2105
+#: src/terminal-window.c:2187
 msgid "_Open Link"
 msgstr "_Åbn henvisning"
 
-#: src/terminal-window.c:2110
+#: src/terminal-window.c:2192
 msgid "_Copy Link Address"
 msgstr "_Kopier adresse"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2196
 msgid "P_rofiles"
 msgstr "P_rofiler"
 
-#: src/terminal-window.c:2151
+#: src/terminal-window.c:2233
 msgid "L_eave Full Screen"
 msgstr "F_orlad fuldskærm"
 
-#: src/terminal-window.c:2155
+#: src/terminal-window.c:2237
 msgid "_Input Methods"
 msgstr "_Indtastningsmetoder"
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2244
 msgid "Show _Menubar"
 msgstr "Vis _menulinje"
 
-#: src/terminal-window.c:2168
+#: src/terminal-window.c:2250
 msgid "_Full Screen"
 msgstr "_Fuldskærm"
 
-#: src/terminal-window.c:3590
+#: src/terminal-window.c:3705
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2861,31 +2869,31 @@ msgstr ""
 "Der er stadig kørende processer i visse terminaler i dette vindue.\n"
 "At lukke vinduet vil dræbe dem alle."
 
-#: src/terminal-window.c:3596
+#: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
 msgstr "Der er flere faneblade åbne i dette vindue."
 
-#: src/terminal-window.c:3606
+#: src/terminal-window.c:3721
 msgid "Close this terminal?"
 msgstr "Luk denne terminal?"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3722
 msgid "C_lose Terminal"
 msgstr "_Luk terminal"
 
-#: src/terminal-window.c:3677
+#: src/terminal-window.c:3792
 msgid "Could not save contents"
 msgstr "Kunne ikke gemme indholdet"
 
-#: src/terminal-window.c:3701
+#: src/terminal-window.c:3816
 msgid "Save as..."
 msgstr "Gem som …"
 
-#: src/terminal-window.c:4395
+#: src/terminal-window.c:4511
 msgid "Contributors:"
 msgstr "Bidragydere:"
 
-#: src/terminal-window.c:4411
+#: src/terminal-window.c:4527
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2894,11 +2902,11 @@ msgstr ""
 "MATE Terminal er en terminalemulator for skrivebordsmijøet MATE.\n"
 "Forbedret med Virtual TErminal %d.%d.%d"
 
-#: src/terminal-window.c:4417
+#: src/terminal-window.c:4533
 msgid "About MATE Terminal"
 msgstr "Om MATE-terminalen"
 
-#: src/terminal-window.c:4418
+#: src/terminal-window.c:4534
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2914,7 +2922,7 @@ msgstr ""
 "Ophavsret 2011 Perberos\n"
 "Ophavsret 2012-2021 MATE-udviklerne"
 
-#: src/terminal-window.c:4430
+#: src/terminal-window.c:4546
 msgid "translator-credits"
 msgstr ""
 "Joe Hansen 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.\n"

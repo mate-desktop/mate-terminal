@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.26.0\n"
+"Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2022-10-29 15:30+0200\n"
+"POT-Creation-Date: 2023-09-10 09:13+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Malayalam (https://app.transifex.com/mate/teams/13566/ml/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4415
+#: src/terminal-options.c:189 src/terminal-window.c:4531
 msgid "MATE Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍"
 
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2205
+#: src/terminal-profile.c:161 src/terminal-window.c:2287
 msgid "Terminal"
 msgstr "ടെര്‍മിനല്‍"
 
@@ -58,47 +58,47 @@ msgstr "കമാന്‍ഡ് ലൈന്‍ ഉപയോഗിക്കു�
 msgid "_Cancel"
 msgstr "_റദ്ദാക്കുക"
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3604
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2223
+#: src/terminal-window.c:3719
 msgid "C_lose Window"
 msgstr "ജാലകം _അടയ്ക്കുക"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
 msgid "Close this window?"
 msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:233
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "സെഷന്‍ മാനേജറിലേക്കുള്ള കണക്ഷന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "സൂക്ഷിച്ചിട്ടുള്ള ക്രമീകരണം അടങ്ങുന്ന ഫയല്‍ നല്‍കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:962
 #: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FILE"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ID വ്യക്തമാക്കുക"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:269
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍ കാണിക്കുക"
 
@@ -108,7 +108,7 @@ msgstr "ടെര്‍മിനല്‍ എന്‍കോഡിങുകള�
 
 #: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
-#: src/terminal-window.c:1884
+#: src/terminal-window.c:1956
 msgid "_Help"
 msgstr "_സഹായം"
 
@@ -2544,29 +2544,29 @@ msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്�
 msgid "Unnamed"
 msgstr "പേരില്ലാത്ത"
 
-#: src/terminal-screen.c:1523
+#: src/terminal-screen.c:1551
 msgid "_Profile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1552 src/terminal-screen.c:2023
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: src/terminal-screen.c:1527
+#: src/terminal-screen.c:1555
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:2028
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:2033
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "സിഗ്നല്‍ %d ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:2038
 msgid "The child process was terminated."
 msgstr "ചൈള്‍ഡ് പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
@@ -2578,16 +2578,16 @@ msgstr "കിളിവാതില്‍ അടയ്ക്കുക"
 msgid "Switch to this tab"
 msgstr "ഈ കിളിവാതിലിലേയ്ക്കു് പോവുക"
 
-#: src/terminal-util.c:146
+#: src/terminal-util.c:147
 msgid "There was an error displaying help"
 msgstr "സഹായം ലഭ്യമാക്കുന്നതില്‍ ഒരു പിശക്"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "മേല്‍വിലാസം “%s” തുറക്കുവാന്‍ സാധിച്ചില്ല"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2595,7 +2595,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2607,7 +2607,7 @@ msgstr ""
 "പ്രത്യേക കാര്യത്തിനു്ചേരുന്നതാണെന്നോ ഉള്ള പരോക്ഷമായ ഒരു വാറണ്ടി പോലും ഇല്ല. "
 "കൂടുതല്‍ വിവരങ്ങള്‍ക്കു് ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2634,266 +2634,274 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1876
+#: src/terminal-window.c:1948
 msgid "_File"
 msgstr "_ഫയല്‍"
 
-#: src/terminal-window.c:1877 src/terminal-window.c:1890
-#: src/terminal-window.c:2131
+#: src/terminal-window.c:1949 src/terminal-window.c:1962
+#: src/terminal-window.c:2213
 msgid "Open _Terminal"
 msgstr "ടെര്‍മിനല്‍ തുറക്കുക (_T)"
 
-#: src/terminal-window.c:1878 src/terminal-window.c:1895
-#: src/terminal-window.c:2136
+#: src/terminal-window.c:1950 src/terminal-window.c:1967
+#: src/terminal-window.c:2218
 msgid "Open Ta_b"
 msgstr "_കിളിവാതില്‍ തുറക്കുക"
 
-#: src/terminal-window.c:1879
+#: src/terminal-window.c:1951
 msgid "_Edit"
 msgstr "_മാറ്റം വരുത്തുക"
 
-#: src/terminal-window.c:1880
+#: src/terminal-window.c:1952
 msgid "_View"
 msgstr "_കാഴ്ച"
 
-#: src/terminal-window.c:1881
+#: src/terminal-window.c:1953
 msgid "_Search"
 msgstr "_തെരയുക"
 
-#: src/terminal-window.c:1882
+#: src/terminal-window.c:1954
 msgid "_Terminal"
 msgstr "_ടെര്‍മിനല്‍"
 
-#: src/terminal-window.c:1883
+#: src/terminal-window.c:1955
 msgid "Ta_bs"
 msgstr "_കിളിവാതിലുകള്‍ "
 
-#: src/terminal-window.c:1900
+#: src/terminal-window.c:1972
 msgid "New _Profile…"
 msgstr "പുതിയ _പ്രൊഫൈല്‍"
 
-#: src/terminal-window.c:1905
+#: src/terminal-window.c:1977
 msgid "_Save Contents"
 msgstr "ഉള്ളടക്കം _സൂക്ഷിക്കുക"
 
-#: src/terminal-window.c:1910 src/terminal-window.c:2146
+#: src/terminal-window.c:1982 src/terminal-window.c:2228
 msgid "C_lose Tab"
 msgstr "കിളിവാതില്‍ _അടയ്ക്കുക"
 
-#: src/terminal-window.c:1915
+#: src/terminal-window.c:1987
 msgid "_Close Window"
 msgstr "ജാലകം അടയ്ക്കുക (_C)"
 
-#: src/terminal-window.c:1922 src/terminal-window.c:2116
+#: src/terminal-window.c:1994 src/terminal-window.c:2198
 msgid "_Copy"
 msgstr "പകര്‍ത്തുക (_C)"
 
-#: src/terminal-window.c:1927 src/terminal-window.c:2121
+#: src/terminal-window.c:1999 src/terminal-window.c:2203
 msgid "_Paste"
 msgstr "ഒട്ടിയ്ക്കുക"
 
-#: src/terminal-window.c:1932 src/terminal-window.c:2126
+#: src/terminal-window.c:2004 src/terminal-window.c:2208
 msgid "Paste _Filenames"
 msgstr "_ഫയല്‍നാമങ്ങള്‍ ഒട്ടിക്കുക"
 
-#: src/terminal-window.c:1937
+#: src/terminal-window.c:2009
 msgid "Select _All"
 msgstr "_എല്ലാം തെരഞ്ഞെടുക്കുക "
 
-#: src/terminal-window.c:1942
+#: src/terminal-window.c:2014
 msgid "P_rofiles…"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: src/terminal-window.c:1947
+#: src/terminal-window.c:2019
 msgid "_Keyboard Shortcuts…"
 msgstr "_കീബോര്‍ഡിനുള്ള എളുപ്പവഴികള്‍"
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:2024
 msgid "Pr_ofile Preferences"
 msgstr "_പ്രൊഫൈല്‍ മുന്‍ഗണനകള്‍"
 
-#: src/terminal-window.c:1959
+#: src/terminal-window.c:2031
 msgid "Zoom _In"
 msgstr "വ_ലുതാക്കുക"
 
-#: src/terminal-window.c:1964
+#: src/terminal-window.c:2036
 msgid "Zoom _Out"
 msgstr "_ചെറുതാക്കുക"
 
-#: src/terminal-window.c:1969
+#: src/terminal-window.c:2041
 msgid "_Normal Size"
 msgstr "_സാധാരണ വലിപ്പം"
 
-#: src/terminal-window.c:1976
+#: src/terminal-window.c:2048
 msgid "_Find..."
 msgstr "തിരയുക (_F)..."
 
-#: src/terminal-window.c:1981
+#: src/terminal-window.c:2053
 msgid "Find Ne_xt"
 msgstr "_അടുത്തത് കണ്ടു പിടിക്കുക"
 
-#: src/terminal-window.c:1986
+#: src/terminal-window.c:2058
 msgid "Find Pre_vious"
 msgstr "_മുമ്പുള്ളതു് കണ്ടു പിടിക്കുക"
 
-#: src/terminal-window.c:1991
+#: src/terminal-window.c:2063
 msgid "_Clear Highlight"
 msgstr "എടുത്തുകാണിയ്ക്കുന്ന_തൊഴിവാക്കുക"
 
-#: src/terminal-window.c:1997
+#: src/terminal-window.c:2069
 msgid "Go to _Line..."
 msgstr "_വരിയിലേക്ക് പോകുക..."
 
-#: src/terminal-window.c:2002
+#: src/terminal-window.c:2074
 msgid "_Incremental Search..."
 msgstr "_കൂട്ടിക്കൂട്ടി തെരയുക..."
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2081
 msgid "Change _Profile"
 msgstr "_പ്രൊഫൈന്‍ മാറ്റം വരുത്തുക "
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2083
 msgid "_Previous Profile"
 msgstr ""
 
-#: src/terminal-window.c:2016
+#: src/terminal-window.c:2088
 msgid "_Next Profile"
 msgstr ""
 
-#: src/terminal-window.c:2021
+#: src/terminal-window.c:2093
 msgid "_Set Title…"
 msgstr "തലക്കെട്ടു് _സജ്ജമാക്കുക"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2097
 msgid "Set _Character Encoding"
 msgstr "_അക്ഷരങ്ങള്‍ എന്‍കോഡ് ചെയ്യുന്ന സംവിധാനം ക്രമീകരിക്കുക "
 
-#: src/terminal-window.c:2027
+#: src/terminal-window.c:2099
 msgid "_Reset"
 msgstr "_പുനഃസ്ഥാപിക്കുക "
 
-#: src/terminal-window.c:2032
+#: src/terminal-window.c:2104
 msgid "Reset and C_lear"
 msgstr "പുനഃസ്ഥാപിച്ച് _വെടിപ്പാക്കുക "
 
-#: src/terminal-window.c:2039
+#: src/terminal-window.c:2111
 msgid "_Add or Remove…"
 msgstr "_ചേര്‍ക്കുക അല്ലെങ്കില്‍ നീക്കം ചെയ്യുക… "
 
-#: src/terminal-window.c:2046
+#: src/terminal-window.c:2118
 msgid "_Previous Tab"
 msgstr "_മുമ്പുളള കിളിവാതില്‍"
 
-#: src/terminal-window.c:2051
+#: src/terminal-window.c:2123
 msgid "_Next Tab"
 msgstr "_അടുത്ത കിളിവാതില്‍"
 
-#: src/terminal-window.c:2056
+#: src/terminal-window.c:2128
 msgid "Move Tab _Left"
 msgstr "കിളിവാതില്‍ _ഇടത്തേക്ക് നീക്കുക"
 
-#: src/terminal-window.c:2061
+#: src/terminal-window.c:2133
 msgid "Move Tab _Right"
 msgstr "കിളിവാതില്‍ _വലത്തേക്ക് നീക്കുക"
 
-#: src/terminal-window.c:2066
+#: src/terminal-window.c:2138
 msgid "_Detach tab"
 msgstr "കിളിവാതില്‍ _വേര്‍പ്പെടുത്തുക"
 
-#: src/terminal-window.c:2073
+#: src/terminal-window.c:2145
 msgid "_Contents"
 msgstr "_ഉളളടക്കം"
 
-#: src/terminal-window.c:2078
+#: src/terminal-window.c:2150
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: src/terminal-window.c:2085
+#: src/terminal-window.c:2157
+msgid "_Open Hyperlink"
+msgstr ""
+
+#: src/terminal-window.c:2162
+msgid "_Copy Hyperlink Address"
+msgstr ""
+
+#: src/terminal-window.c:2167
 msgid "_Send Mail To…"
 msgstr "മെയില്‍ _അയയ്ക്കേണ്ടത്"
 
-#: src/terminal-window.c:2090
+#: src/terminal-window.c:2172
 msgid "_Copy E-mail Address"
 msgstr "ഈ-മെയില്‍ മേല്‍വിലാസം _പകര്‍ത്തുക "
 
-#: src/terminal-window.c:2095
+#: src/terminal-window.c:2177
 msgid "C_all To…"
 msgstr "_വിളിയ്ക്കേണ്ടതു്…"
 
-#: src/terminal-window.c:2100
+#: src/terminal-window.c:2182
 msgid "_Copy Call Address"
 msgstr "വിളിക്കുവാനുള്ള മേല്‍വിലാസം _പകര്‍ത്തുക"
 
-#: src/terminal-window.c:2105
+#: src/terminal-window.c:2187
 msgid "_Open Link"
 msgstr "_കണ്ണി തുറക്കുക"
 
-#: src/terminal-window.c:2110
+#: src/terminal-window.c:2192
 msgid "_Copy Link Address"
 msgstr "കണ്ണി വിലാസം _പകര്‍ത്തുക"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2196
 msgid "P_rofiles"
 msgstr "_പ്രൊഫൈലുകള്‍"
 
-#: src/terminal-window.c:2151
+#: src/terminal-window.c:2233
 msgid "L_eave Full Screen"
 msgstr "സ്ക്രീനിന്റെ പൂര്‍ണ്ണവലിപ്പത്തില്‍ നിന്നും പുറത്തു് _കടക്കുക"
 
-#: src/terminal-window.c:2155
+#: src/terminal-window.c:2237
 msgid "_Input Methods"
 msgstr "_ഇന്‍പുട്ട് മാര്‍ഗ്ഗങ്ങള്‍ "
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2244
 msgid "Show _Menubar"
 msgstr "_മെനു ബാര്‍ കാണിക്കുക "
 
-#: src/terminal-window.c:2168
+#: src/terminal-window.c:2250
 msgid "_Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമവധി _വലിപ്പമുളളതാക്കുക "
 
-#: src/terminal-window.c:3590
+#: src/terminal-window.c:3705
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3596
+#: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3606
+#: src/terminal-window.c:3721
 msgid "Close this terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3722
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അ_ടയ്ക്കുക"
 
-#: src/terminal-window.c:3677
+#: src/terminal-window.c:3792
 msgid "Could not save contents"
 msgstr "ഉള്ളടക്കം സൂക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: src/terminal-window.c:3701
+#: src/terminal-window.c:3816
 msgid "Save as..."
 msgstr "പുതിയ പേരില്‍ സൂക്ഷിക്കുക..."
 
-#: src/terminal-window.c:4395
+#: src/terminal-window.c:4511
 msgid "Contributors:"
 msgstr "സംഭാവനചെയ്തവര്‍:"
 
-#: src/terminal-window.c:4411
+#: src/terminal-window.c:4527
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4417
+#: src/terminal-window.c:4533
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4418
+#: src/terminal-window.c:4534
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2903,7 +2911,7 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4430
+#: src/terminal-window.c:4546
 msgid "translator-credits"
 msgstr ""
 "അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"

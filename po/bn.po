@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.26.0\n"
+"Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2022-10-29 15:30+0200\n"
+"POT-Creation-Date: 2023-09-10 09:13+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Bengali (https://app.transifex.com/mate/teams/13566/bn/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4415
+#: src/terminal-options.c:189 src/terminal-window.c:4531
 msgid "MATE Terminal"
 msgstr "MATE টার্মিনাল"
 
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2205
+#: src/terminal-profile.c:161 src/terminal-window.c:2287
 msgid "Terminal"
 msgstr "টার্মিনাল"
 
@@ -58,47 +58,47 @@ msgstr "কমান্ড লাইন ব্যবহার করুন"
 msgid "_Cancel"
 msgstr "বাতিল (_C)"
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3604
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2223
+#: src/terminal-window.c:3719
 msgid "C_lose Window"
 msgstr "উইন্ডো বন্ধ করুন (_l)"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
 msgid "Close this window?"
 msgstr "এই উইন্ডো বন্ধ করা হবে কি?"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:233
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "সেশন ব্যবস্থাপকের সাথে সংযোগ নিষ্ক্রিয় করুন"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "ফাইলে সংরক্ষিত কনফিগারেশন উল্লেখ করে"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:962
 #: src/terminal-options.c:971
 msgid "FILE"
 msgstr "FILE"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "সেশন ব্যবস্থাপনার ID উল্লেখ করা হয়"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:269
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "সেশন ব্যবস্থাপনা অপশন:"
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "সেশন ব্যবস্থাপনা অপশন প্রদর্শন"
 
@@ -108,7 +108,7 @@ msgstr "টার্মিনালে ব্যবহারযোগ্য এ�
 
 #: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
-#: src/terminal-window.c:1884
+#: src/terminal-window.c:1956
 msgid "_Help"
 msgstr "সহায়িকা (_H)"
 
@@ -2469,29 +2469,29 @@ msgstr "প্রতি টার্মিনালের জন্য অপশ
 msgid "Unnamed"
 msgstr "নামবিহীন"
 
-#: src/terminal-screen.c:1523
+#: src/terminal-screen.c:1551
 msgid "_Profile Preferences"
 msgstr ""
 
-#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1552 src/terminal-screen.c:2023
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.c:1527
+#: src/terminal-screen.c:1555
 msgid "There was an error creating the child process for this terminal"
 msgstr "বর্তমান টার্মিনালের চাইল্ড প্রসেস নির্মাণ করতে সমস্যা"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:2028
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:2033
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr ""
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:2038
 msgid "The child process was terminated."
 msgstr ""
 
@@ -2503,16 +2503,16 @@ msgstr "ট্যাব বন্ধ করুন"
 msgid "Switch to this tab"
 msgstr "বর্তমান ট্যাবে স্থানান্তর করুন"
 
-#: src/terminal-util.c:146
+#: src/terminal-util.c:147
 msgid "There was an error displaying help"
 msgstr "সহায়তা প্রদর্শন করার সময় একটি ত্রুটি ছিল"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "“%s” ঠিকানা খোলা যায়নি"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2520,7 +2520,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2532,7 +2532,7 @@ msgstr ""
 " সুনির্দিষ্ট কর্ম সাধনের জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে "
 "GNU General Public License পড়ুন।"
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2559,266 +2559,274 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1876
+#: src/terminal-window.c:1948
 msgid "_File"
 msgstr "ফাইল (_F)"
 
-#: src/terminal-window.c:1877 src/terminal-window.c:1890
-#: src/terminal-window.c:2131
+#: src/terminal-window.c:1949 src/terminal-window.c:1962
+#: src/terminal-window.c:2213
 msgid "Open _Terminal"
 msgstr "টার্মিনাল খুলুন (_T)"
 
-#: src/terminal-window.c:1878 src/terminal-window.c:1895
-#: src/terminal-window.c:2136
+#: src/terminal-window.c:1950 src/terminal-window.c:1967
+#: src/terminal-window.c:2218
 msgid "Open Ta_b"
 msgstr "ট্যাব খুলুন (_b)"
 
-#: src/terminal-window.c:1879
+#: src/terminal-window.c:1951
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
-#: src/terminal-window.c:1880
+#: src/terminal-window.c:1952
 msgid "_View"
 msgstr "প্রদর্শন (_V)"
 
-#: src/terminal-window.c:1881
+#: src/terminal-window.c:1953
 msgid "_Search"
 msgstr "অনুসন্ধান (_S)"
 
-#: src/terminal-window.c:1882
+#: src/terminal-window.c:1954
 msgid "_Terminal"
 msgstr "টার্মিনাল (_T)"
 
-#: src/terminal-window.c:1883
+#: src/terminal-window.c:1955
 msgid "Ta_bs"
 msgstr "ট্যাব (_b)"
 
-#: src/terminal-window.c:1900
+#: src/terminal-window.c:1972
 msgid "New _Profile…"
 msgstr "নতুন প্রোফাইল...(_P)"
 
-#: src/terminal-window.c:1905
+#: src/terminal-window.c:1977
 msgid "_Save Contents"
 msgstr "বিষয়বস্তু সংরক্ষণ (_S)"
 
-#: src/terminal-window.c:1910 src/terminal-window.c:2146
+#: src/terminal-window.c:1982 src/terminal-window.c:2228
 msgid "C_lose Tab"
 msgstr "ট্যাব বন্ধ করুন (_l)"
 
-#: src/terminal-window.c:1915
+#: src/terminal-window.c:1987
 msgid "_Close Window"
 msgstr "উইন্ডো বন্ধ করো (_C)"
 
-#: src/terminal-window.c:1922 src/terminal-window.c:2116
+#: src/terminal-window.c:1994 src/terminal-window.c:2198
 msgid "_Copy"
 msgstr "অনুলিপি করুন (_C)"
 
-#: src/terminal-window.c:1927 src/terminal-window.c:2121
+#: src/terminal-window.c:1999 src/terminal-window.c:2203
 msgid "_Paste"
 msgstr "প্রতিলেপন (_P)"
 
-#: src/terminal-window.c:1932 src/terminal-window.c:2126
+#: src/terminal-window.c:2004 src/terminal-window.c:2208
 msgid "Paste _Filenames"
 msgstr "ফাইলের নাম প্রতিলেপন করা হবে (_F)"
 
-#: src/terminal-window.c:1937
+#: src/terminal-window.c:2009
 msgid "Select _All"
 msgstr "সবকিছু নির্বাচন করুন (_A)"
 
-#: src/terminal-window.c:1942
+#: src/terminal-window.c:2014
 msgid "P_rofiles…"
 msgstr "প্রোফাইল...(_r)"
 
-#: src/terminal-window.c:1947
+#: src/terminal-window.c:2019
 msgid "_Keyboard Shortcuts…"
 msgstr "কীবোর্ড শর্টকাট...(_K)"
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:2024
 msgid "Pr_ofile Preferences"
 msgstr "প্রোফাইল সংক্রান্ত পছন্দ (_o)"
 
-#: src/terminal-window.c:1959
+#: src/terminal-window.c:2031
 msgid "Zoom _In"
 msgstr "বড় করে প্রদর্শন (_I)"
 
-#: src/terminal-window.c:1964
+#: src/terminal-window.c:2036
 msgid "Zoom _Out"
 msgstr "ছোট আকারে প্রদর্শন (_O)"
 
-#: src/terminal-window.c:1969
+#: src/terminal-window.c:2041
 msgid "_Normal Size"
 msgstr "স্বাভাবিক আকার (_N)"
 
-#: src/terminal-window.c:1976
+#: src/terminal-window.c:2048
 msgid "_Find..."
 msgstr "অনুসন্ধান... (_F)"
 
-#: src/terminal-window.c:1981
+#: src/terminal-window.c:2053
 msgid "Find Ne_xt"
 msgstr "পরবর্তীটি খুঁজুন (_x)"
 
-#: src/terminal-window.c:1986
+#: src/terminal-window.c:2058
 msgid "Find Pre_vious"
 msgstr "পূর্ববর্তীটি খুঁজুন"
 
-#: src/terminal-window.c:1991
+#: src/terminal-window.c:2063
 msgid "_Clear Highlight"
 msgstr "উজ্জ্বলতা বাতিল করুন (_C)"
 
-#: src/terminal-window.c:1997
+#: src/terminal-window.c:2069
 msgid "Go to _Line..."
 msgstr "উল্লেখিত লাইন সংখ্যা দেখুন (_L)..."
 
-#: src/terminal-window.c:2002
+#: src/terminal-window.c:2074
 msgid "_Incremental Search..."
 msgstr "ক্রমবর্ধমান অনুসন্ধান...(_I)"
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2081
 msgid "Change _Profile"
 msgstr "প্রোফাইল পরিবর্তন করুন (_P)"
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2083
 msgid "_Previous Profile"
 msgstr ""
 
-#: src/terminal-window.c:2016
+#: src/terminal-window.c:2088
 msgid "_Next Profile"
 msgstr ""
 
-#: src/terminal-window.c:2021
+#: src/terminal-window.c:2093
 msgid "_Set Title…"
 msgstr "শিরোনাম নির্ধারণ করুন...(_S)"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2097
 msgid "Set _Character Encoding"
 msgstr "ক্যারেক্টার এনকোডিং নির্ধারণ করুন (_C)"
 
-#: src/terminal-window.c:2027
+#: src/terminal-window.c:2099
 msgid "_Reset"
 msgstr "রিসেট (_R)"
 
-#: src/terminal-window.c:2032
+#: src/terminal-window.c:2104
 msgid "Reset and C_lear"
 msgstr "রিসেট ও পরিস্কার করুন (_l)"
 
-#: src/terminal-window.c:2039
+#: src/terminal-window.c:2111
 msgid "_Add or Remove…"
 msgstr "যোগ করুন অথবা মুছে ফেলুন... (_A)"
 
-#: src/terminal-window.c:2046
+#: src/terminal-window.c:2118
 msgid "_Previous Tab"
 msgstr "পূর্ববর্তী ট্যাব (_P)"
 
-#: src/terminal-window.c:2051
+#: src/terminal-window.c:2123
 msgid "_Next Tab"
 msgstr "পরবর্তী ট্যাব (_N)"
 
-#: src/terminal-window.c:2056
+#: src/terminal-window.c:2128
 msgid "Move Tab _Left"
 msgstr "ট্যাব বাদিকে স্থানান্তর করুন (_L)"
 
-#: src/terminal-window.c:2061
+#: src/terminal-window.c:2133
 msgid "Move Tab _Right"
 msgstr "ট্যাব ডান দিকে স্থানান্তর করুন (_R)"
 
-#: src/terminal-window.c:2066
+#: src/terminal-window.c:2138
 msgid "_Detach tab"
 msgstr "ট্যাব বিচ্ছিন্ন করুন (_D)"
 
-#: src/terminal-window.c:2073
+#: src/terminal-window.c:2145
 msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
-#: src/terminal-window.c:2078
+#: src/terminal-window.c:2150
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: src/terminal-window.c:2085
+#: src/terminal-window.c:2157
+msgid "_Open Hyperlink"
+msgstr ""
+
+#: src/terminal-window.c:2162
+msgid "_Copy Hyperlink Address"
+msgstr ""
+
+#: src/terminal-window.c:2167
 msgid "_Send Mail To…"
 msgstr "মেইল প্রেরণের গন্তব্যস্থল...(_S)"
 
-#: src/terminal-window.c:2090
+#: src/terminal-window.c:2172
 msgid "_Copy E-mail Address"
 msgstr "ইমেইল ঠিকানা অনুলিপি করুন (_C)"
 
-#: src/terminal-window.c:2095
+#: src/terminal-window.c:2177
 msgid "C_all To…"
 msgstr "চিহ্নিত স্থানে কল করুন...(_a)"
 
-#: src/terminal-window.c:2100
+#: src/terminal-window.c:2182
 msgid "_Copy Call Address"
 msgstr "কলের ঠিকানা অনুলিপি করুন (_C)"
 
-#: src/terminal-window.c:2105
+#: src/terminal-window.c:2187
 msgid "_Open Link"
 msgstr "লিঙ্ক খুলুন (_O)"
 
-#: src/terminal-window.c:2110
+#: src/terminal-window.c:2192
 msgid "_Copy Link Address"
 msgstr "লিঙ্ক-এর ঠিকানা কপি করুন (_C)"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2196
 msgid "P_rofiles"
 msgstr "প্রোফাইল (_r)"
 
-#: src/terminal-window.c:2151
+#: src/terminal-window.c:2233
 msgid "L_eave Full Screen"
 msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন বন্ধ করুন (_e)"
 
-#: src/terminal-window.c:2155
+#: src/terminal-window.c:2237
 msgid "_Input Methods"
 msgstr "ইনপুট মেথড (_I)"
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2244
 msgid "Show _Menubar"
 msgstr "মেনুবার প্রদর্শন করা হবে (_M)"
 
-#: src/terminal-window.c:2168
+#: src/terminal-window.c:2250
 msgid "_Full Screen"
 msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন (_F)"
 
-#: src/terminal-window.c:3590
+#: src/terminal-window.c:3705
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3596
+#: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3606
+#: src/terminal-window.c:3721
 msgid "Close this terminal?"
 msgstr "এই টার্মিনাল বন্ধ করা হবে কি?"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3722
 msgid "C_lose Terminal"
 msgstr "টার্মিনাল বন্ধ করুন (_l)"
 
-#: src/terminal-window.c:3677
+#: src/terminal-window.c:3792
 msgid "Could not save contents"
 msgstr "বিষয়বস্তু সংরক্ষণ করা যায়নি"
 
-#: src/terminal-window.c:3701
+#: src/terminal-window.c:3816
 msgid "Save as..."
 msgstr "নতুনভাবে সংরক্ষণ..."
 
-#: src/terminal-window.c:4395
+#: src/terminal-window.c:4511
 msgid "Contributors:"
 msgstr "অংশগ্রহণকারী:"
 
-#: src/terminal-window.c:4411
+#: src/terminal-window.c:4527
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4417
+#: src/terminal-window.c:4533
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4418
+#: src/terminal-window.c:4534
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2828,7 +2836,7 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4430
+#: src/terminal-window.c:4546
 msgid "translator-credits"
 msgstr ""
 "অঙ্কুর প্রকল্পের পক্ষে, সায়মিন্দু দাশগুপ্ত <unmadindu@bengalinux.org>\n"

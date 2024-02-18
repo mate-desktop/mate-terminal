@@ -14,15 +14,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 玉堂白鹤 <yjwork@qq.com>, 2021
 # shuyu liu <liushuyu011@gmail.com>, 2021
-# Wenbin Lv <wenbin816@gmail.com>, 2022
+# Wenbin Lv <wenbin816@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.26.0\n"
+"Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2022-10-29 15:30+0200\n"
+"POT-Creation-Date: 2023-09-10 09:13+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4415
+#: src/terminal-options.c:189 src/terminal-window.c:4531
 msgid "MATE Terminal"
 msgstr "MATE 终端"
 
@@ -58,7 +58,7 @@ msgstr ""
 "MATE 终端是 GNOME 终端的分叉，也是 MATE 桌面环境的一部分。想了解更多关于 MATE 及 MATE 终端的信息，请访问项目主页。"
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2205
+#: src/terminal-profile.c:161 src/terminal-window.c:2287
 msgid "Terminal"
 msgstr "终端"
 
@@ -71,16 +71,16 @@ msgstr "使用命令行"
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2141
-#: src/terminal-window.c:3604
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2223
+#: src/terminal-window.c:3719
 msgid "C_lose Window"
 msgstr "关闭窗口(_L)"
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3603
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
 msgid "Close this window?"
 msgstr "关闭这个窗口？"
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3593
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -88,32 +88,32 @@ msgstr ""
 "终端中仍有进程在运行。\n"
 "关闭终端会杀死此进程。"
 
-#: src/mate-submodules/libegg/eggsmclient.c:233
+#: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "禁止连接到会话管理器"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238
+#: src/mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "指定包含有已保存配置的文件"
 
-#: src/mate-submodules/libegg/eggsmclient.c:238 src/terminal-options.c:962
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:962
 #: src/terminal-options.c:971
 msgid "FILE"
 msgstr "文件"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "指定会话管理 ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:243
+#: src/mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: src/mate-submodules/libegg/eggsmclient.c:269
+#: src/mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "会话管理选项："
 
-#: src/mate-submodules/libegg/eggsmclient.c:270
+#: src/mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "显示会话管理选项"
 
@@ -123,7 +123,7 @@ msgstr "添加或删除终端编码"
 
 #: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
-#: src/terminal-window.c:1884
+#: src/terminal-window.c:1956
 msgid "_Help"
 msgstr "帮助(_H)"
 
@@ -2302,29 +2302,29 @@ msgstr "显示每个终端的选项"
 msgid "Unnamed"
 msgstr "未命名"
 
-#: src/terminal-screen.c:1523
+#: src/terminal-screen.c:1551
 msgid "_Profile Preferences"
 msgstr "配置文件首选项(_P)"
 
-#: src/terminal-screen.c:1524 src/terminal-screen.c:1966
+#: src/terminal-screen.c:1552 src/terminal-screen.c:2023
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: src/terminal-screen.c:1527
+#: src/terminal-screen.c:1555
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: src/terminal-screen.c:1971
+#: src/terminal-screen.c:2028
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子进程以状态 %d 正常退出。"
 
-#: src/terminal-screen.c:1976
+#: src/terminal-screen.c:2033
 #, c-format
 msgid "The child process was terminated by signal %d."
 msgstr "子进程被信号 %d 终止。"
 
-#: src/terminal-screen.c:1981
+#: src/terminal-screen.c:2038
 msgid "The child process was terminated."
 msgstr "子进程被终止。"
 
@@ -2336,16 +2336,16 @@ msgstr "关闭标签页"
 msgid "Switch to this tab"
 msgstr "切换到此标签页"
 
-#: src/terminal-util.c:146
+#: src/terminal-util.c:147
 msgid "There was an error displaying help"
 msgstr "显示帮助时发生了一个错误"
 
-#: src/terminal-util.c:217
+#: src/terminal-util.c:218
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "无法打开地址“%s”"
 
-#: src/terminal-util.c:325
+#: src/terminal-util.c:326
 msgid ""
 "MATE Terminal is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -2355,7 +2355,7 @@ msgstr ""
 "MATE 终端是自由软件；您可以按照自由软件基金会所发布的 GNU "
 "通用公共许可证再分发和/或修改它；您可以使用此许可证的第三版或（依您所愿）任何更新的版本。"
 
-#: src/terminal-util.c:329
+#: src/terminal-util.c:330
 msgid ""
 "MATE Terminal is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -2364,7 +2364,7 @@ msgid ""
 msgstr ""
 "分发 MATE 终端的目的是希望它对您有用，但没有任何保证；甚至没有对适销性或特定用途适用性的默示保证。请阅读 GNU 通用公共许可证以了解更多细节。"
 
-#: src/terminal-util.c:333
+#: src/terminal-util.c:334
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " MATE Terminal; if not, write to the Free Software Foundation, Inc., 51 "
@@ -2389,225 +2389,233 @@ msgstr "_%d. %s"
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
-#: src/terminal-window.c:1876
+#: src/terminal-window.c:1948
 msgid "_File"
 msgstr "文件(_F)"
 
-#: src/terminal-window.c:1877 src/terminal-window.c:1890
-#: src/terminal-window.c:2131
+#: src/terminal-window.c:1949 src/terminal-window.c:1962
+#: src/terminal-window.c:2213
 msgid "Open _Terminal"
 msgstr "打开终端(_T)"
 
-#: src/terminal-window.c:1878 src/terminal-window.c:1895
-#: src/terminal-window.c:2136
+#: src/terminal-window.c:1950 src/terminal-window.c:1967
+#: src/terminal-window.c:2218
 msgid "Open Ta_b"
 msgstr "打开标签(_B)"
 
-#: src/terminal-window.c:1879
+#: src/terminal-window.c:1951
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: src/terminal-window.c:1880
+#: src/terminal-window.c:1952
 msgid "_View"
 msgstr "查看(_V)"
 
-#: src/terminal-window.c:1881
+#: src/terminal-window.c:1953
 msgid "_Search"
 msgstr "搜索(_S)"
 
-#: src/terminal-window.c:1882
+#: src/terminal-window.c:1954
 msgid "_Terminal"
 msgstr "终端(_T)"
 
-#: src/terminal-window.c:1883
+#: src/terminal-window.c:1955
 msgid "Ta_bs"
 msgstr "标签(_B)"
 
-#: src/terminal-window.c:1900
+#: src/terminal-window.c:1972
 msgid "New _Profile…"
 msgstr "新建配置文件(_P)…"
 
-#: src/terminal-window.c:1905
+#: src/terminal-window.c:1977
 msgid "_Save Contents"
 msgstr "保存内容(_S)"
 
-#: src/terminal-window.c:1910 src/terminal-window.c:2146
+#: src/terminal-window.c:1982 src/terminal-window.c:2228
 msgid "C_lose Tab"
 msgstr "关闭标签页(_L)"
 
-#: src/terminal-window.c:1915
+#: src/terminal-window.c:1987
 msgid "_Close Window"
 msgstr "关闭窗口(_C)"
 
-#: src/terminal-window.c:1922 src/terminal-window.c:2116
+#: src/terminal-window.c:1994 src/terminal-window.c:2198
 msgid "_Copy"
 msgstr "复制(_C)"
 
-#: src/terminal-window.c:1927 src/terminal-window.c:2121
+#: src/terminal-window.c:1999 src/terminal-window.c:2203
 msgid "_Paste"
 msgstr "粘贴(_P)"
 
-#: src/terminal-window.c:1932 src/terminal-window.c:2126
+#: src/terminal-window.c:2004 src/terminal-window.c:2208
 msgid "Paste _Filenames"
 msgstr "粘贴文件名(_F)"
 
-#: src/terminal-window.c:1937
+#: src/terminal-window.c:2009
 msgid "Select _All"
 msgstr "全选(_A)"
 
-#: src/terminal-window.c:1942
+#: src/terminal-window.c:2014
 msgid "P_rofiles…"
 msgstr "配置文件(_R)…"
 
-#: src/terminal-window.c:1947
+#: src/terminal-window.c:2019
 msgid "_Keyboard Shortcuts…"
 msgstr "键盘快捷键(_K)…"
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:2024
 msgid "Pr_ofile Preferences"
 msgstr "配置文件首选项(_O)"
 
-#: src/terminal-window.c:1959
+#: src/terminal-window.c:2031
 msgid "Zoom _In"
 msgstr "放大(_I)"
 
-#: src/terminal-window.c:1964
+#: src/terminal-window.c:2036
 msgid "Zoom _Out"
 msgstr "缩小(_O)"
 
-#: src/terminal-window.c:1969
+#: src/terminal-window.c:2041
 msgid "_Normal Size"
 msgstr "正常大小(_N)"
 
-#: src/terminal-window.c:1976
+#: src/terminal-window.c:2048
 msgid "_Find..."
 msgstr "查找(_F)…"
 
-#: src/terminal-window.c:1981
+#: src/terminal-window.c:2053
 msgid "Find Ne_xt"
 msgstr "查找下一个(_X)"
 
-#: src/terminal-window.c:1986
+#: src/terminal-window.c:2058
 msgid "Find Pre_vious"
 msgstr "查找上一个(_V)"
 
-#: src/terminal-window.c:1991
+#: src/terminal-window.c:2063
 msgid "_Clear Highlight"
 msgstr "清除高亮(_C)"
 
-#: src/terminal-window.c:1997
+#: src/terminal-window.c:2069
 msgid "Go to _Line..."
 msgstr "跳转到指定行(_L)…"
 
-#: src/terminal-window.c:2002
+#: src/terminal-window.c:2074
 msgid "_Incremental Search..."
 msgstr "增量搜索(_I)…"
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2081
 msgid "Change _Profile"
 msgstr "更改配置文件(_P)"
 
-#: src/terminal-window.c:2011
+#: src/terminal-window.c:2083
 msgid "_Previous Profile"
 msgstr "上个配置:(_P)"
 
-#: src/terminal-window.c:2016
+#: src/terminal-window.c:2088
 msgid "_Next Profile"
 msgstr "下个配置:(_N)"
 
-#: src/terminal-window.c:2021
+#: src/terminal-window.c:2093
 msgid "_Set Title…"
 msgstr "设置标题(_S)…"
 
-#: src/terminal-window.c:2025
+#: src/terminal-window.c:2097
 msgid "Set _Character Encoding"
 msgstr "设定字符编码(_C)"
 
-#: src/terminal-window.c:2027
+#: src/terminal-window.c:2099
 msgid "_Reset"
 msgstr "复位(_R)"
 
-#: src/terminal-window.c:2032
+#: src/terminal-window.c:2104
 msgid "Reset and C_lear"
 msgstr "复位并清屏(_L)"
 
-#: src/terminal-window.c:2039
+#: src/terminal-window.c:2111
 msgid "_Add or Remove…"
 msgstr "添加或删除(_A)…"
 
-#: src/terminal-window.c:2046
+#: src/terminal-window.c:2118
 msgid "_Previous Tab"
 msgstr "上一标签页(_P)"
 
-#: src/terminal-window.c:2051
+#: src/terminal-window.c:2123
 msgid "_Next Tab"
 msgstr "下一标签页(_N)"
 
-#: src/terminal-window.c:2056
+#: src/terminal-window.c:2128
 msgid "Move Tab _Left"
 msgstr "标签页左移(_L)"
 
-#: src/terminal-window.c:2061
+#: src/terminal-window.c:2133
 msgid "Move Tab _Right"
 msgstr "标签页右移(_R)"
 
-#: src/terminal-window.c:2066
+#: src/terminal-window.c:2138
 msgid "_Detach tab"
 msgstr "分离标签页(_D)"
 
-#: src/terminal-window.c:2073
+#: src/terminal-window.c:2145
 msgid "_Contents"
 msgstr "目录(_C)"
 
-#: src/terminal-window.c:2078
+#: src/terminal-window.c:2150
 msgid "_About"
 msgstr "关于(_A)"
 
-#: src/terminal-window.c:2085
+#: src/terminal-window.c:2157
+msgid "_Open Hyperlink"
+msgstr "打开超链接(_O)"
+
+#: src/terminal-window.c:2162
+msgid "_Copy Hyperlink Address"
+msgstr "复制超链接地址(_C)"
+
+#: src/terminal-window.c:2167
 msgid "_Send Mail To…"
 msgstr "发送邮件给(_S)…"
 
-#: src/terminal-window.c:2090
+#: src/terminal-window.c:2172
 msgid "_Copy E-mail Address"
 msgstr "复制电子邮件地址(_C)"
 
-#: src/terminal-window.c:2095
+#: src/terminal-window.c:2177
 msgid "C_all To…"
 msgstr "呼叫(_A)…"
 
-#: src/terminal-window.c:2100
+#: src/terminal-window.c:2182
 msgid "_Copy Call Address"
 msgstr "复制呼叫地址(_C)"
 
-#: src/terminal-window.c:2105
+#: src/terminal-window.c:2187
 msgid "_Open Link"
 msgstr "打开链接(_O)"
 
-#: src/terminal-window.c:2110
+#: src/terminal-window.c:2192
 msgid "_Copy Link Address"
 msgstr "复制链接地址(_C)"
 
-#: src/terminal-window.c:2114
+#: src/terminal-window.c:2196
 msgid "P_rofiles"
 msgstr "配置文件(_R)"
 
-#: src/terminal-window.c:2151
+#: src/terminal-window.c:2233
 msgid "L_eave Full Screen"
 msgstr "退出全屏(_E)"
 
-#: src/terminal-window.c:2155
+#: src/terminal-window.c:2237
 msgid "_Input Methods"
 msgstr "输入法(_I)"
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2244
 msgid "Show _Menubar"
 msgstr "显示菜单栏(_M)"
 
-#: src/terminal-window.c:2168
+#: src/terminal-window.c:2250
 msgid "_Full Screen"
 msgstr "全屏(_F)"
 
-#: src/terminal-window.c:3590
+#: src/terminal-window.c:3705
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
@@ -2615,31 +2623,31 @@ msgstr ""
 "窗口内仍有一些进程在终端中运行。\n"
 "关闭该窗口将杀死所有进程。"
 
-#: src/terminal-window.c:3596
+#: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
 msgstr "此窗口中打开了多个标签页。"
 
-#: src/terminal-window.c:3606
+#: src/terminal-window.c:3721
 msgid "Close this terminal?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.c:3607
+#: src/terminal-window.c:3722
 msgid "C_lose Terminal"
 msgstr "关闭终端(_L)"
 
-#: src/terminal-window.c:3677
+#: src/terminal-window.c:3792
 msgid "Could not save contents"
 msgstr "无法保存内容"
 
-#: src/terminal-window.c:3701
+#: src/terminal-window.c:3816
 msgid "Save as..."
 msgstr "另存为…"
 
-#: src/terminal-window.c:4395
+#: src/terminal-window.c:4511
 msgid "Contributors:"
 msgstr "贡献者："
 
-#: src/terminal-window.c:4411
+#: src/terminal-window.c:4527
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
@@ -2648,11 +2656,11 @@ msgstr ""
 "“MATE终端”为 MATE 桌面环境的终端模拟器。\n"
 "由 Virtual TErminal %d.%d.%d 提供强劲动力"
 
-#: src/terminal-window.c:4417
+#: src/terminal-window.c:4533
 msgid "About MATE Terminal"
 msgstr "关于 MATE 终端"
 
-#: src/terminal-window.c:4418
+#: src/terminal-window.c:4534
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2668,7 +2676,7 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE 开发者"
 
-#: src/terminal-window.c:4430
+#: src/terminal-window.c:4546
 msgid "translator-credits"
 msgstr ""
 "Christopher Meng <i@cicku.me>, 2012-2013\n"
