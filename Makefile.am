@@ -36,6 +36,18 @@ EXTRA_DIST = 			\
 	$(man_MANS)		\
 	$(NULL)
 
+# Distribute the Meson build system files as well
+EXTRA_DIST += \
+	help/LINGUAS			\
+	help/meson.build		\
+	meson.build			\
+	meson_options.txt		\
+	meson_post_install.py		\
+	po/meson.build			\
+	src/meson.build			\
+	src/skey/meson.build		\
+	subprojects/mate-submodules.wrap
+
 CLEANFILES = \
 	mate-terminal.appdata.xml \
 	$(appdata_DATA) \
