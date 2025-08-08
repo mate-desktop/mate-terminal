@@ -3467,7 +3467,7 @@ terminal_window_update_geometry (TerminalWindow *window)
     int char_width, char_height;
     int chrome_width, chrome_height;
     int csd_width = 0, csd_height = 0;
-    bool suppress_hints = FALSE;
+    gboolean suppress_hints = FALSE;
 
     if (priv->active_screen == NULL)
         return;
