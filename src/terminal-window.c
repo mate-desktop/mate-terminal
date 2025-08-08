@@ -3467,6 +3467,7 @@ terminal_window_update_geometry (TerminalWindow *window)
     int char_width, char_height;
     int chrome_width, chrome_height;
     int csd_width = 0, csd_height = 0;
+    gboolean suppress_hints = FALSE;
 
     if (priv->active_screen == NULL)
         return;
@@ -3530,14 +3531,25 @@ terminal_window_update_geometry (TerminalWindow *window)
          * until we've been redrawn at least once. Don't resize the window
          * until we've done that. */
         _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY, "not realized yet\n");
+
+        suppress_hints = TRUE;
     }
-    else if (char_width != priv->old_char_width ||
+
+#ifdef GDK_WINDOWING_X11
+    // On X11 it would make the window to rescale without font size granularity.
+    if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+        suppress_hints = FALSE;
+    }
+#endif
+
+    if (!suppress_hints && (
+             char_width != priv->old_char_width ||
              char_height != priv->old_char_height ||
              padding.left + padding.right != priv->old_padding_width ||
              padding.top + padding.bottom != priv->old_padding_height ||
              chrome_width != priv->old_chrome_width ||
              chrome_height != priv->old_chrome_height ||
-             widget != GTK_WIDGET (priv->old_geometry_widget))
+             widget != GTK_WIDGET (priv->old_geometry_widget)))
     {
         hints.base_width = chrome_width + csd_width;
         hints.base_height = chrome_height + csd_height;
