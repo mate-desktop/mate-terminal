@@ -13,11 +13,6 @@ while ($opt = shift(@ARGV))
         $arg = shift(@ARGV);
         push(@args, "--window-with-profile=$arg");
     }
-    elsif ($opt eq '-n')
-    {
-        # Accept but ignore
-        print STDERR "$0: to set an icon, please use -name <profile> and set a profile icon\n"
-    }
     elsif ($opt eq '-T' || $opt eq '-title')
     {
         push(@args, '-t', shift(@ARGV));
