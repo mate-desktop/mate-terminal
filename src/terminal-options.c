@@ -85,6 +85,7 @@ initial_window_free (InitialWindow *iw)
 	g_list_free (iw->tabs);
 	g_free (iw->geometry);
 	g_free (iw->role);
+	g_free (iw->icon);
 	g_slice_free (InitialWindow, iw);
 }
 
@@ -100,6 +101,9 @@ apply_defaults (TerminalOptions *options,
 
 	if (iw->geometry == NULL)
 		iw->geometry = g_strdup (options->default_geometry);
+
+	if (iw->icon == NULL)
+		iw->icon = g_strdup (options->default_icon);
 
 	if (options->default_window_menubar_forced)
 	{
@@ -478,6 +482,27 @@ option_geometry_callback (const gchar *option_name,
 }
 
 static gboolean
+option_icon_callback (const gchar *option_name,
+                      const gchar *value,
+                      gpointer     data,
+                      GError     **error)
+{
+	TerminalOptions *options = data;
+
+	if (options->initial_windows)
+	{
+		InitialWindow *iw;
+
+		iw = g_list_last (options->initial_windows)->data;
+		iw->icon = g_strdup (value);
+	}
+	else
+		options->default_icon = g_strdup (value);
+
+	return TRUE;
+}
+
+static gboolean
 option_disable_factory_callback (const gchar *option_name,
                                  const gchar *value,
                                  gpointer     data,
@@ -719,6 +744,7 @@ terminal_options_parse (const char *working_directory,
 	options->initial_windows = NULL;
 	options->default_role = NULL;
 	options->default_geometry = NULL;
+	options->default_icon = NULL;
 	options->default_title = NULL;
 	options->zoom = 1.0;
 
@@ -846,6 +872,7 @@ terminal_options_merge_config (TerminalOptions *options,
 
 		iw->role = g_key_file_get_string (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_ROLE, NULL);
 		iw->geometry = g_key_file_get_string (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_GEOMETRY, NULL);
+		iw->icon = g_key_file_get_string (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_ICON, NULL);
 		iw->start_fullscreen = g_key_file_get_boolean (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_FULLSCREEN, NULL);
 		iw->start_maximized = g_key_file_get_boolean (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_MAXIMIZED, NULL);
 		if (g_key_file_has_key (key_file, window_group, TERMINAL_CONFIG_WINDOW_PROP_MENUBAR_VISIBLE, NULL))
@@ -926,6 +953,7 @@ terminal_options_free (TerminalOptions *options)
 	g_strfreev (options->env);
 	g_free (options->default_role);
 	g_free (options->default_geometry);
+	g_free (options->default_icon);
 	g_free (options->default_working_dir);
 	g_free (options->default_title);
 	g_free (options->default_profile);
@@ -1052,6 +1080,15 @@ get_goption_context (TerminalOptions *options)
 			option_role_callback,
 			N_("Set the window role"),
 			N_("ROLE")
+		},
+		{
+			"icon",
+			0,
+			0,
+			G_OPTION_ARG_CALLBACK,
+			option_icon_callback,
+			N_("Set the window icon"),
+			N_("ICON")
 		},
 		{
 			"active",
@@ -1323,14 +1360,6 @@ get_goption_context (TerminalOptions *options)
 		},
 		{
 			"nolastlog",
-			0,
-			G_OPTION_FLAG_HIDDEN | G_OPTION_FLAG_NO_ARG,
-			G_OPTION_ARG_CALLBACK,
-			unsupported_option_callback,
-			NULL, NULL
-		},
-		{
-			"icon",
 			0,
 			G_OPTION_FLAG_HIDDEN | G_OPTION_FLAG_NO_ARG,
 			G_OPTION_ARG_CALLBACK,

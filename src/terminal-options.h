@@ -40,6 +40,7 @@ typedef struct
 	gboolean default_maximize;
 	char    *default_role;
 	char    *default_geometry;
+	char    *default_icon;
 	char    *default_working_dir;
 	char    *default_title;
 	char   **exec_argv;
@@ -83,6 +84,7 @@ typedef struct
 
 	char *geometry;
 	char *role;
+	char *icon;
 
 } InitialWindow;
 
