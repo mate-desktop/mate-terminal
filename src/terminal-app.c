@@ -1798,12 +1798,7 @@ terminal_app_handle_options (TerminalApp *app,
                 gtk_window_set_role (GTK_WINDOW (window), iw->role);
 
             if (iw->icon)
-            {
-                if (g_path_is_absolute (iw->icon))
-                    gtk_window_set_icon_from_file (GTK_WINDOW (window), iw->icon, NULL);
-                else
-                    gtk_window_set_icon_name (GTK_WINDOW (window), iw->icon);
-            }
+                terminal_window_set_icon (window, iw->icon);
 
             if (iw->force_menubar_state)
                 terminal_window_set_menubar_visible (window, iw->menubar_state);

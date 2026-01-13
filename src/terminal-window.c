@@ -109,6 +109,8 @@ struct _TerminalWindowPrivate
     /* Workaround until gtk+ bug #535557 is fixed */
     guint icon_title_set : 1;
 
+    char *icon;
+
     gint64 focus_time;
 
     /* should we copy selection to clibpoard */
@@ -2489,6 +2491,8 @@ terminal_window_finalize (GObject *object)
         gtk_dialog_response (GTK_DIALOG (priv->search_find_dialog),
                              GTK_RESPONSE_DELETE_EVENT);
 
+    g_free (priv->icon);
+
     G_OBJECT_CLASS (terminal_window_parent_class)->finalize (object);
 }
 
@@ -2834,6 +2838,34 @@ terminal_window_get_menubar_visible (TerminalWindow *window)
     TerminalWindowPrivate *priv = window->priv;
 
     return priv->menubar_visible;
+}
+
+void
+terminal_window_set_icon (TerminalWindow *window,
+                          const char     *icon)
+{
+    TerminalWindowPrivate *priv = window->priv;
+
+    g_free (priv->icon);
+    priv->icon = g_strdup (icon);
+
+    if (icon == NULL || icon[0] == '\0')
+        return;
+
+    if (g_path_is_absolute (icon))
+    {
+        GError *error = NULL;
+        if (!gtk_window_set_icon_from_file (GTK_WINDOW (window), icon, &error))
+        {
+            g_printerr (_("Could not load icon from \"%s\": %s\n"),
+                        icon, error->message);
+            g_error_free (error);
+        }
+    }
+    else
+    {
+        gtk_window_set_icon_name (GTK_WINDOW (window), icon);
+    }
 }
 
 GtkWidget *
@@ -4609,6 +4641,10 @@ terminal_window_save_state (TerminalWindow *window,
 
     g_key_file_set_string (key_file, group, TERMINAL_CONFIG_WINDOW_PROP_ROLE,
                            gtk_window_get_role (GTK_WINDOW (window)));
+
+    if (priv->icon)
+        g_key_file_set_string (key_file, group, TERMINAL_CONFIG_WINDOW_PROP_ICON,
+                               priv->icon);
 
     state = gdk_window_get_state (gtk_widget_get_window (GTK_WIDGET (window)));
     if (state & GDK_WINDOW_STATE_MAXIMIZED)
