@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -eo pipefail
+
 # Use grouped output messages
 infobegin() {
 	echo "::group::${1}"
