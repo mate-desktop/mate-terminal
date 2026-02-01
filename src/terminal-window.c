@@ -38,7 +38,6 @@
 #include "terminal-screen-container.h"
 #include "terminal-search-dialog.h"
 #include "terminal-tab-label.h"
-#include "terminal-tabs-menu.h"
 #include "terminal-util.h"
 #include "terminal-window.h"
 
@@ -48,25 +47,25 @@
 
 struct _TerminalWindowPrivate
 {
-    GtkActionGroup *action_group;
-    GtkUIManager *ui_manager;
-    guint ui_id;
+    /* GtkBuilder and GMenu - modern approach */
+    GtkBuilder *builder;
+    GMenuModel *popup_model;
+    GMenuModel *notebook_popup_model;
 
-    GtkActionGroup *profiles_action_group;
-    guint profiles_ui_id;
-
-    GtkActionGroup *encodings_action_group;
-    guint encodings_ui_id;
-
-    TerminalTabsMenu *tabs_menu;
+    /* Dynamic GMenu sections */
+    GMenu *profiles_menu;
+    GMenu *popup_profiles_menu;
+    GMenu *new_window_profiles_menu;
+    GMenu *new_tab_profiles_menu;
+    GMenu *encodings_menu;
+    GMenu *tabs_gmenu;
 
     TerminalScreenPopupInfo *popup_info;
     guint remove_popup_info_idle;
 
-    GtkActionGroup *new_terminal_action_group;
-    guint new_terminal_ui_id;
-
     GtkWidget *menubar;
+    GtkWidget *popup_menu;
+    GtkWidget *notebook_popup;
     GtkWidget *notebook;
     GtkWidget *main_vbox;
     TerminalScreen *active_screen;
@@ -117,21 +116,8 @@ struct _TerminalWindowPrivate
 };
 
 #define PROFILE_DATA_KEY "GT::Profile"
-
-#define FILE_NEW_TERMINAL_TAB_UI_PATH     "/menubar/File/FileNewTabProfiles"
-#define FILE_NEW_TERMINAL_WINDOW_UI_PATH  "/menubar/File/FileNewWindowProfiles"
-#define SET_ENCODING_UI_PATH              "/menubar/Terminal/TerminalSetEncoding/EncodingsPH"
-#define SET_ENCODING_ACTION_NAME_PREFIX   "TerminalSetEncoding"
-
-#define PROFILES_UI_PATH        "/menubar/Terminal/TerminalProfiles/ProfilesPH"
-#define PROFILES_POPUP_UI_PATH  "/Popup/PopupTerminalProfiles/ProfilesPH"
-
-#define SIZE_TO_UI_PATH            "/menubar/Terminal/TerminalSizeToPH"
-#define SIZE_TO_ACTION_NAME_PREFIX "TerminalSizeTo"
-
-#define STOCK_NEW_TAB     "tab-new"
-
 #define ENCODING_DATA_KEY "encoding"
+#define STOCK_NEW_TAB     "tab-new"
 
 #if 1
 /*
@@ -558,373 +544,83 @@ find_tab_num_at_pos (GtkNotebook *nb,
 }
 
 static void
-terminal_set_profile_toggled_callback (GtkToggleAction *action,
-                                       TerminalWindow *window)
-{
-    TerminalWindowPrivate *priv = window->priv;
-    TerminalProfile *profile;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    if (!gtk_toggle_action_get_active (action))
-        return;
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    if (priv->active_screen == NULL)
-        return;
-
-    profile = g_object_get_data (G_OBJECT (action), PROFILE_DATA_KEY);
-    g_assert (profile);
-
-    if (_terminal_profile_get_forgotten (profile))
-        return;
-
-    g_signal_handlers_block_by_func (priv->active_screen, G_CALLBACK (profile_set_callback), window);
-    terminal_screen_set_profile (priv->active_screen, profile);
-    g_signal_handlers_unblock_by_func (priv->active_screen, G_CALLBACK (profile_set_callback), window);
-}
-
-static void
-profile_visible_name_notify_cb (TerminalProfile *profile,
-                                GParamSpec *pspec,
-                                GtkAction *action)
-{
-    const char *visible_name;
-    char *dot, *display_name;
-    guint num;
-
-    visible_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_VISIBLE_NAME);
-    display_name = escape_underscores (visible_name);
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    dot = strchr (gtk_action_get_name (action), '.');
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    if (dot != NULL)
-    {
-        char *free_me;
-
-        num = g_ascii_strtoll (dot + 1, NULL, 10);
-
-        free_me = display_name;
-        if (num < 10)
-            /* Translators: This is the label of a menu item to choose a profile.
-             * _%d is used as the accelerator (with d between 1 and 9), and
-             * the %s is the name of the terminal profile.
-             */
-            display_name = g_strdup_printf (_("_%d. %s"), num, display_name);
-        else if (num < 36)
-            /* Translators: This is the label of a menu item to choose a profile.
-             * _%c is used as the accelerator (it will be a character between A and Z),
-             * and the %s is the name of the terminal profile.
-             */
-            display_name = g_strdup_printf (_("_%c. %s"), ('A' + num - 10), display_name);
-        else
-            free_me = NULL;
-
-        g_free (free_me);
-    }
-
-    g_object_set (action, "label", display_name, NULL);
-    g_free (display_name);
-}
-
-static void
-disconnect_profiles_from_actions_in_group (GtkActionGroup *action_group)
-{
-    GList *actions, *l;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    actions = gtk_action_group_list_actions (action_group);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    for (l = actions; l != NULL; l = l->next)
-    {
-        GObject *action = G_OBJECT (l->data);
-        TerminalProfile *profile;
-
-        profile = g_object_get_data (action, PROFILE_DATA_KEY);
-        if (!profile)
-            continue;
-
-        g_signal_handlers_disconnect_by_func (profile, G_CALLBACK (profile_visible_name_notify_cb), action);
-    }
-    g_list_free (actions);
-}
-
-static void
 terminal_window_update_set_profile_menu_active_profile (TerminalWindow *window)
 {
-    TerminalWindowPrivate *priv = window->priv;
-    TerminalProfile *new_active_profile;
-    GList *actions, *l;
-
-    if (!priv->profiles_action_group)
-        return;
-
-    if (!priv->active_screen)
-        return;
-
-    new_active_profile = terminal_screen_get_profile (priv->active_screen);
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    actions = gtk_action_group_list_actions (priv->profiles_action_group);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    for (l = actions; l != NULL; l = l->next)
-    {
-        GObject *action = G_OBJECT (l->data);
-        TerminalProfile *profile;
-
-        profile = g_object_get_data (action, PROFILE_DATA_KEY);
-        if (profile != new_active_profile)
-            continue;
-
-        g_signal_handlers_block_by_func (action, G_CALLBACK (terminal_set_profile_toggled_callback), window);
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-        g_signal_handlers_unblock_by_func (action, G_CALLBACK (terminal_set_profile_toggled_callback), window);
-
-        break;
-    }
-    g_list_free (actions);
+    /* With GMenu, profile selection is handled by the select-profile action.
+     * The menu doesn't need to track active state. */
+    (void) window;
 }
 
 static void
 terminal_window_update_set_profile_menu (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
-    TerminalProfile *active_profile;
-    GtkActionGroup *action_group;
-    GtkAction *action;
     GList *profiles, *p;
-    GSList *group;
-    guint n;
-    gboolean single_profile;
 
-    /* Remove the old UI */
-    if (priv->profiles_ui_id != 0)
-    {
-        gtk_ui_manager_remove_ui (priv->ui_manager, priv->profiles_ui_id);
-        priv->profiles_ui_id = 0;
-    }
-
-    if (priv->profiles_action_group != NULL)
-    {
-        disconnect_profiles_from_actions_in_group (priv->profiles_action_group);
-        gtk_ui_manager_remove_action_group (priv->ui_manager,
-                                            priv->profiles_action_group);
-        priv->profiles_action_group = NULL;
-    }
+    /* Clear existing profile menus */
+    g_menu_remove_all (priv->profiles_menu);
+    g_menu_remove_all (priv->popup_profiles_menu);
 
     profiles = terminal_app_get_profile_list (terminal_app_get ());
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "TerminalProfiles");
-    single_profile = !profiles || profiles->next == NULL; /* list length <= 1 */
-    gtk_action_set_sensitive (action, !single_profile);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
     if (profiles == NULL)
         return;
 
-    if (priv->active_screen)
-        active_profile = terminal_screen_get_profile (priv->active_screen);
-    else
-        active_profile = NULL;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action_group = priv->profiles_action_group = gtk_action_group_new ("Profiles");
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    gtk_ui_manager_insert_action_group (priv->ui_manager, action_group, -1);
-    g_object_unref (action_group);
-
-    priv->profiles_ui_id = gtk_ui_manager_new_merge_id (priv->ui_manager);
-
-    group = NULL;
-    n = 0;
     for (p = profiles; p != NULL; p = p->next)
     {
         TerminalProfile *profile = (TerminalProfile *) p->data;
-        GtkRadioAction *profile_action;
-        char name[32];
+        const char *visible_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_VISIBLE_NAME);
+        GMenuItem *item;
 
-        g_snprintf (name, sizeof (name), "TerminalSetProfile%u", n++);
+        /* Add to main profile menu */
+        item = g_menu_item_new (visible_name, NULL);
+        g_menu_item_set_action_and_target (item, "win.select-profile", "s", visible_name);
+        g_menu_append_item (priv->profiles_menu, item);
+        g_object_unref (item);
 
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        profile_action = gtk_radio_action_new (name,
-                                               NULL,
-                                               NULL,
-                                               NULL,
-                                               n);
-
-        gtk_radio_action_set_group (profile_action, group);
-        group = gtk_radio_action_get_group (profile_action);
-
-        if (profile == active_profile)
-            gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (profile_action), TRUE);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-
-        g_object_set_data_full (G_OBJECT (profile_action),
-                                PROFILE_DATA_KEY,
-                                g_object_ref (profile),
-                                (GDestroyNotify) g_object_unref);
-        profile_visible_name_notify_cb (profile, NULL, GTK_ACTION (profile_action));
-        g_signal_connect (profile, "notify::" TERMINAL_PROFILE_VISIBLE_NAME,
-                          G_CALLBACK (profile_visible_name_notify_cb), profile_action);
-        g_signal_connect (profile_action, "toggled",
-                          G_CALLBACK (terminal_set_profile_toggled_callback), window);
-
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        gtk_action_group_add_action (action_group, GTK_ACTION (profile_action));
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-        g_object_unref (profile_action);
-
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->profiles_ui_id,
-                               PROFILES_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->profiles_ui_id,
-                               PROFILES_POPUP_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
+        /* Add to popup profile menu */
+        item = g_menu_item_new (visible_name, NULL);
+        g_menu_item_set_action_and_target (item, "win.select-profile", "s", visible_name);
+        g_menu_append_item (priv->popup_profiles_menu, item);
+        g_object_unref (item);
     }
 
     g_list_free (profiles);
-}
-
-static void
-terminal_window_create_new_terminal_action (TerminalWindow *window,
-        TerminalProfile *profile,
-        const char *name,
-        guint num,
-        GCallback callback)
-{
-    TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_new (name, NULL, NULL, NULL);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    g_object_set_data_full (G_OBJECT (action),
-                            PROFILE_DATA_KEY,
-                            g_object_ref (profile),
-                            (GDestroyNotify) g_object_unref);
-    profile_visible_name_notify_cb (profile, NULL, action);
-    g_signal_connect (profile, "notify::" TERMINAL_PROFILE_VISIBLE_NAME,
-                      G_CALLBACK (profile_visible_name_notify_cb), action);
-    g_signal_connect (action, "activate", callback, window);
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    gtk_action_group_add_action (priv->new_terminal_action_group, action);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    g_object_unref (action);
 }
 
 static void
 terminal_window_update_new_terminal_menus (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
-    GtkActionGroup *action_group;
-    GtkAction *action;
     GList *profiles, *p;
-    guint n;
-    gboolean have_single_profile;
 
-    /* Remove the old UI */
-    if (priv->new_terminal_ui_id != 0)
-    {
-        gtk_ui_manager_remove_ui (priv->ui_manager, priv->new_terminal_ui_id);
-        priv->new_terminal_ui_id = 0;
-    }
-
-    if (priv->new_terminal_action_group != NULL)
-    {
-        disconnect_profiles_from_actions_in_group (priv->new_terminal_action_group);
-        gtk_ui_manager_remove_action_group (priv->ui_manager,
-                                            priv->new_terminal_action_group);
-        priv->new_terminal_action_group = NULL;
-    }
+    /* Clear existing profile menus for new terminal */
+    g_menu_remove_all (priv->new_window_profiles_menu);
+    g_menu_remove_all (priv->new_tab_profiles_menu);
 
     profiles = terminal_app_get_profile_list (terminal_app_get ());
-    have_single_profile = !profiles || !profiles->next;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "FileNewTab");
-    gtk_action_set_visible (action, have_single_profile);
-    action = gtk_action_group_get_action (priv->action_group, "FileNewWindow");
-    gtk_action_set_visible (action, have_single_profile);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    if (have_single_profile)
-    {
-        g_list_free (profiles);
+    if (profiles == NULL)
         return;
-    }
 
-    /* Now build the submenus */
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action_group = priv->new_terminal_action_group = gtk_action_group_new ("NewTerminal");
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    gtk_ui_manager_insert_action_group (priv->ui_manager, action_group, -1);
-    g_object_unref (action_group);
-
-    priv->new_terminal_ui_id = gtk_ui_manager_new_merge_id (priv->ui_manager);
-
-    n = 0;
     for (p = profiles; p != NULL; p = p->next)
     {
         TerminalProfile *profile = (TerminalProfile *) p->data;
-        char name[32];
+        const char *visible_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_VISIBLE_NAME);
+        GMenuItem *item;
 
-        g_snprintf (name, sizeof (name), "FileNewTab.%u", n);
-        terminal_window_create_new_terminal_action (window,
-                profile,
-                name,
-                n,
-                G_CALLBACK (file_new_tab_callback));
+        /* Add to new tab with profile menu */
+        item = g_menu_item_new (visible_name, NULL);
+        g_menu_item_set_action_and_target (item, "win.new-tab-profile", "s", visible_name);
+        g_menu_append_item (priv->new_tab_profiles_menu, item);
+        g_object_unref (item);
 
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->new_terminal_ui_id,
-                               FILE_NEW_TERMINAL_TAB_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
-
-        g_snprintf (name, sizeof (name), "FileNewWindow.%u", n);
-        terminal_window_create_new_terminal_action (window,
-                profile,
-                name,
-                n,
-                G_CALLBACK (file_new_window_callback));
-
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->new_terminal_ui_id,
-                               FILE_NEW_TERMINAL_WINDOW_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
-
-        ++n;
+        /* Add to new window with profile menu */
+        item = g_menu_item_new (visible_name, NULL);
+        g_menu_item_set_action_and_target (item, "win.new-window-profile", "s", visible_name);
+        g_menu_append_item (priv->new_window_profiles_menu, item);
+        g_object_unref (item);
     }
 
     g_list_free (profiles);
-}
-
-static void
-terminal_set_encoding_callback (GtkToggleAction *action,
-                                TerminalWindow *window)
-{
-    TerminalWindowPrivate *priv = window->priv;
-    TerminalEncoding *encoding;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    if (!gtk_toggle_action_get_active (action))
-        return;
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    if (priv->active_screen == NULL)
-        return;
-
-    encoding = g_object_get_data (G_OBJECT (action), ENCODING_DATA_KEY);
-    g_assert (encoding);
-
-    vte_terminal_set_encoding (VTE_TERMINAL (priv->active_screen),
-                               terminal_encoding_get_charset (encoding), NULL);
 }
 
 static void
@@ -932,34 +628,12 @@ terminal_window_update_encoding_menu (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
     TerminalApp *app;
-    GtkActionGroup *action_group;
-    GSList *group;
-    guint n;
     GSList *encodings, *l;
     const char *charset;
     TerminalEncoding *active_encoding;
 
-    /* Remove the old UI */
-    if (priv->encodings_ui_id != 0)
-    {
-        gtk_ui_manager_remove_ui (priv->ui_manager, priv->encodings_ui_id);
-        priv->encodings_ui_id = 0;
-    }
-
-    if (priv->encodings_action_group != NULL)
-    {
-        gtk_ui_manager_remove_action_group (priv->ui_manager,
-                                            priv->encodings_action_group);
-        priv->encodings_action_group = NULL;
-    }
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action_group = priv->encodings_action_group = gtk_action_group_new ("Encodings");
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    gtk_ui_manager_insert_action_group (priv->ui_manager, action_group, -1);
-    g_object_unref (action_group);
-
-    priv->encodings_ui_id = gtk_ui_manager_new_merge_id (priv->ui_manager);
+    /* Clear existing encoding menu */
+    g_menu_remove_all (priv->encodings_menu);
 
     if (priv->active_screen)
         charset = vte_terminal_get_encoding (VTE_TERMINAL (priv->active_screen));
@@ -974,49 +648,21 @@ terminal_window_update_encoding_menu (TerminalWindow *window)
     if (g_slist_find (encodings, active_encoding) == NULL)
         encodings = g_slist_append (encodings, terminal_encoding_ref (active_encoding));
 
-    group = NULL;
-    n = 0;
     for (l = encodings; l != NULL; l = l->next)
     {
         TerminalEncoding *e = (TerminalEncoding *) l->data;
-        GtkRadioAction *encoding_action;
-        char name[128];
         char *display_name;
+        GMenuItem *item;
 
-        g_snprintf (name, sizeof (name), SET_ENCODING_ACTION_NAME_PREFIX "%s", terminal_encoding_get_id (e));
         display_name = g_strdup_printf ("%s (%s)", e->name, terminal_encoding_get_charset (e));
 
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        encoding_action = gtk_radio_action_new (name,
-                                                display_name,
-                                                NULL,
-                                                NULL,
-                                                n);
+        item = g_menu_item_new (display_name, NULL);
+        g_menu_item_set_action_and_target (item, "win.select-encoding", "s",
+                                           terminal_encoding_get_charset (e));
+        g_menu_append_item (priv->encodings_menu, item);
+
+        g_object_unref (item);
         g_free (display_name);
-
-        gtk_radio_action_set_group (encoding_action, group);
-        group = gtk_radio_action_get_group (encoding_action);
-
-        if (charset && strcmp (terminal_encoding_get_id (e), charset) == 0)
-            gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (encoding_action), TRUE);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-
-        g_signal_connect (encoding_action, "toggled",
-                          G_CALLBACK (terminal_set_encoding_callback), window);
-
-        g_object_set_data_full (G_OBJECT (encoding_action), ENCODING_DATA_KEY,
-                                terminal_encoding_ref (e),
-                                (GDestroyNotify) terminal_encoding_unref);
-
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        gtk_action_group_add_action (action_group, GTK_ACTION (encoding_action));
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-        g_object_unref (encoding_action);
-
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->encodings_ui_id,
-                               SET_ENCODING_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
     }
 
     g_slist_foreach (encodings, (GFunc) terminal_encoding_unref, NULL);
@@ -1026,131 +672,84 @@ terminal_window_update_encoding_menu (TerminalWindow *window)
 static void
 terminal_window_update_encoding_menu_active_encoding (TerminalWindow *window)
 {
-    TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
-    char name[128];
-
-    if (!priv->active_screen)
-        return;
-    if (!priv->encodings_action_group)
-        return;
-
-    g_snprintf (name, sizeof (name), SET_ENCODING_ACTION_NAME_PREFIX "%s",
-                vte_terminal_get_encoding (VTE_TERMINAL (priv->active_screen)));
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->encodings_action_group, name);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    if (!action)
-        return;
-
-    g_signal_handlers_block_by_func (action, G_CALLBACK (terminal_set_encoding_callback), window);
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    g_signal_handlers_unblock_by_func (action, G_CALLBACK (terminal_set_encoding_callback), window);
+    /* With GMenu, the encoding menu is rebuilt dynamically.
+     * No need to track active encoding state in the menu itself. */
+    terminal_window_update_encoding_menu (window);
 }
 
-static void
-terminal_size_to_cb (GtkAction *action,
-                     TerminalWindow *window)
-{
-    TerminalWindowPrivate *priv = window->priv;
-    const char *name;
-    char *end = NULL;
-    guint width, height;
-
-    if (priv->active_screen == NULL)
-        return;
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    name = gtk_action_get_name (action) + strlen (SIZE_TO_ACTION_NAME_PREFIX);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    width = g_ascii_strtoull (name, &end, 10);
-    g_assert (end && *end == 'x');
-    height = g_ascii_strtoull (end + 1, &end, 10);
-    g_assert (end && *end == '\0');
-
-    vte_terminal_set_size (VTE_TERMINAL (priv->active_screen), width, height);
-
-    terminal_window_update_size (window, priv->active_screen, TRUE);
-}
+/* Size-to callback removed during GMenu migration - functionality disabled */
 
 static void
 terminal_window_update_size_to_menu (TerminalWindow *window)
 {
-    static const struct
-    {
-        guint grid_width;
-        guint grid_height;
-    } predefined_sizes[] =
-    {
-        { 80, 24 },
-        { 80, 43 },
-        { 132, 24 },
-        { 132, 43 }
-    };
-    TerminalWindowPrivate *priv = window->priv;
-    guint i;
-
-    /* We only install this once, so there's no need for a separate action group
-     * and any cleanup + build-new-one action here.
+    /* Size-to menu is currently disabled in the GMenu migration.
+     * TODO: Add GActions for predefined terminal sizes if needed.
      */
+    (void) window;
+}
 
-    for (i = 0; i < G_N_ELEMENTS (predefined_sizes); ++i)
+static void
+terminal_window_update_tabs_gmenu (TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    GtkNotebook *notebook;
+    int n_pages, i;
+
+    if (priv->disposed)
+        return;
+
+    /* Clear existing tabs menu */
+    g_menu_remove_all (priv->tabs_gmenu);
+
+    notebook = GTK_NOTEBOOK (priv->notebook);
+    n_pages = gtk_notebook_get_n_pages (notebook);
+
+    if (n_pages == 0)
+        return;
+
+    for (i = 0; i < n_pages; i++)
     {
-        guint grid_width = predefined_sizes[i].grid_width;
-        guint grid_height = predefined_sizes[i].grid_height;
-        GtkAction *action;
-        char name[40];
-        char *display_name;
+        GtkWidget *child;
+        TerminalScreenContainer *container;
+        TerminalScreen *screen;
+        const char *title;
+        GMenuItem *item;
 
-        g_snprintf (name, sizeof (name), SIZE_TO_ACTION_NAME_PREFIX "%ux%u",
-                    grid_width, grid_height);
+        child = gtk_notebook_get_nth_page (notebook, i);
+        container = TERMINAL_SCREEN_CONTAINER (child);
+        screen = terminal_screen_container_get_screen (container);
+        title = terminal_screen_get_title (screen);
 
-        /* If there are ever more than 9 of these, extend this to use A..Z as mnemonics,
-         * like we do for the profiles menu.
-         */
-        display_name = g_strdup_printf ("_%u. %ux%u", i + 1, grid_width, grid_height);
-
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        action = gtk_action_new (name, display_name, NULL, NULL);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-        g_free (display_name);
-
-        g_signal_connect (action, "activate",
-                          G_CALLBACK (terminal_size_to_cb), window);
-
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        gtk_action_group_add_action (priv->action_group, action);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
-        g_object_unref (action);
-
-        gtk_ui_manager_add_ui (priv->ui_manager, priv->ui_id,
-                               SIZE_TO_UI_PATH,
-                               name, name,
-                               GTK_UI_MANAGER_MENUITEM, FALSE);
+        item = g_menu_item_new (title ? title : _("Terminal"), NULL);
+        g_menu_item_set_action_and_target (item, "win.switch-tab", "i", i);
+        g_menu_append_item (priv->tabs_gmenu, item);
+        g_object_unref (item);
     }
 }
 
 /* Actions stuff */
+
+/* Helper to set action sensitivity */
+static void
+set_action_enabled (TerminalWindow *window, const char *action_name, gboolean enabled)
+{
+    GAction *action = g_action_map_lookup_action (G_ACTION_MAP (window), action_name);
+    if (action && G_IS_SIMPLE_ACTION (action))
+        g_simple_action_set_enabled (G_SIMPLE_ACTION (action), enabled);
+}
 
 static void
 terminal_window_update_copy_sensitivity (TerminalScreen *screen,
                                          TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
     gboolean can_copy;
 
     if (screen != priv->active_screen)
         return;
 
     can_copy = vte_terminal_get_has_selection (VTE_TERMINAL (screen));
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "EditCopy");
-    gtk_action_set_sensitive (action, can_copy);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    set_action_enabled (window, "copy", can_copy);
 
     if (can_copy && priv->copy_selection)
 #if VTE_CHECK_VERSION (0, 50, 0)
@@ -1165,7 +764,6 @@ terminal_window_update_zoom_sensitivity (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreen *screen;
-    GtkAction *action;
     double current, zoom;
 
     screen = priv->active_screen;
@@ -1174,12 +772,8 @@ terminal_window_update_zoom_sensitivity (TerminalWindow *window)
 
     current = terminal_screen_get_font_scale (screen);
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "ViewZoomOut");
-    gtk_action_set_sensitive (action, find_smaller_zoom_factor (current, &zoom));
-    action = gtk_action_group_get_action (priv->action_group, "ViewZoomIn");
-    gtk_action_set_sensitive (action, find_larger_zoom_factor (current, &zoom));
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    set_action_enabled (window, "zoom-out", find_smaller_zoom_factor (current, &zoom));
+    set_action_enabled (window, "zoom-in", find_larger_zoom_factor (current, &zoom));
 }
 
 static void
@@ -1187,7 +781,6 @@ terminal_window_update_search_sensitivity (TerminalScreen *screen,
         TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
     gboolean can_search;
 
     if (screen != priv->active_screen)
@@ -1195,14 +788,8 @@ terminal_window_update_search_sensitivity (TerminalScreen *screen,
 
     can_search = vte_terminal_search_get_regex (VTE_TERMINAL (screen)) != NULL;
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "SearchFindNext");
-    gtk_action_set_sensitive (action, can_search);
-    action = gtk_action_group_get_action (priv->action_group, "SearchFindPrevious");
-    gtk_action_set_sensitive (action, can_search);
-    action = gtk_action_group_get_action (priv->action_group, "SearchClearHighlight");
-    gtk_action_set_sensitive (action, can_search);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    set_action_enabled (window, "find-next", can_search);
+    set_action_enabled (window, "find-prev", can_search);
 }
 
 static void
@@ -1211,20 +798,13 @@ update_edit_menu_cb (GtkClipboard *clipboard,
                      int n_targets,
                      TerminalWindow *window)
 {
-    TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
     gboolean can_paste, can_paste_uris;
 
     can_paste = targets != NULL && gtk_targets_include_text (targets, n_targets);
     can_paste_uris = targets != NULL && gtk_targets_include_uri (targets, n_targets);
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "EditPaste");
-    gtk_action_set_sensitive (action, can_paste);
-    action = gtk_action_group_get_action (priv->action_group, "EditPasteURIPaths");
-    gtk_action_set_visible (action, can_paste_uris);
-    gtk_action_set_sensitive (action, can_paste_uris);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    set_action_enabled (window, "paste", can_paste);
+    set_action_enabled (window, "paste-uris", can_paste_uris);
 
     /* Ref was added in gtk_clipboard_request_targets below */
     g_object_unref (window);
@@ -1270,8 +850,6 @@ terminal_window_update_tabs_menu_sensitivity (TerminalWindow *window)
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkNotebook *notebook = GTK_NOTEBOOK (priv->notebook);
-    GtkActionGroup *action_group = priv->action_group;
-    GtkAction *action;
     int num_pages, page_num;
     gboolean not_first, not_last;
 
@@ -1283,39 +861,18 @@ terminal_window_update_tabs_menu_sensitivity (TerminalWindow *window)
     not_first = page_num > 0;
     not_last = page_num + 1 < num_pages;
 
-    /* Hide the tabs menu in single-tab windows */
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (action_group, "Tabs");
-    gtk_action_set_visible (action, num_pages > 1);
-
-#if 1
     /* NOTE: We always make next/prev actions sensitive except in
      * single-tab windows, so the corresponding shortcut key escape code
      * isn't sent to the terminal. See bug #453193 and bug #138609.
      * This also makes tab cycling work, bug #92139.
-     * FIXME: Find a better way to do this.
      */
-    action = gtk_action_group_get_action (action_group, "TabsPrevious");
-    gtk_action_set_sensitive (action, num_pages > 1);
-    action = gtk_action_group_get_action (action_group, "TabsNext");
-    gtk_action_set_sensitive (action, num_pages > 1);
-#else
-    /* This would be correct, but see the comment above. */
-    action = gtk_action_group_get_action (action_group, "TabsPrevious");
-    gtk_action_set_sensitive (action, not_first);
-    action = gtk_action_group_get_action (action_group, "TabsNext");
-    gtk_action_set_sensitive (action, not_last);
-#endif
+    set_action_enabled (window, "prev-tab", num_pages > 1);
+    set_action_enabled (window, "next-tab", num_pages > 1);
 
-    action = gtk_action_group_get_action (action_group, "TabsMoveLeft");
-    gtk_action_set_sensitive (action, not_first);
-    action = gtk_action_group_get_action (action_group, "TabsMoveRight");
-    gtk_action_set_sensitive (action, not_last);
-    action = gtk_action_group_get_action (action_group, "TabsDetach");
-    gtk_action_set_sensitive (action, num_pages > 1);
-    action = gtk_action_group_get_action (action_group, "FileCloseTab");
-    gtk_action_set_sensitive (action, num_pages > 1);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    set_action_enabled (window, "move-tab-left", not_first);
+    set_action_enabled (window, "move-tab-right", not_last);
+    set_action_enabled (window, "detach-tab", num_pages > 1);
+    set_action_enabled (window, "close-tab", num_pages > 1);
 }
 
 static void
@@ -1478,15 +1035,8 @@ static void
 popup_menu_deactivate_callback (GtkWidget *popup,
                                 TerminalWindow *window)
 {
-    TerminalWindowPrivate *priv = window->priv;
-    GtkWidget *im_menu_item;
-
     g_signal_handlers_disconnect_by_func
     (popup, G_CALLBACK (popup_menu_deactivate_callback), window);
-
-    im_menu_item = gtk_ui_manager_get_widget (priv->ui_manager,
-                   "/Popup/PopupInputMethods");
-    gtk_menu_item_set_submenu (GTK_MENU_ITEM (im_menu_item), NULL);
 
     unset_popup_info (window);
 }
@@ -1501,9 +1051,7 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreen *screen = info->screen;
     GtkWidget *popup_menu;
-    GtkAction *action;
-    gboolean can_paste, can_paste_uris, show_hyperlink, show_link, show_email_link, show_call_link, show_input_method_menu;
-    int n_pages;
+    gboolean can_paste, can_paste_uris;
 
     if (!gtk_widget_get_realized (GTK_WIDGET (screen)))
     {
@@ -1516,70 +1064,23 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
 
     priv->popup_info = info; /* adopt the ref added when requesting the clipboard */
 
-    n_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (priv->notebook));
-
     can_paste = targets != NULL && gtk_targets_include_text (targets, n_targets);
     can_paste_uris = targets != NULL && gtk_targets_include_uri (targets, n_targets);
-    show_hyperlink = info->hyperlink != NULL;
-    show_link = !show_hyperlink && info->url != NULL && (info->flavor == FLAVOR_AS_IS || info->flavor == FLAVOR_DEFAULT_TO_HTTP);
-    show_email_link = !show_hyperlink && info->url != NULL && info->flavor == FLAVOR_EMAIL;
-    show_call_link = !show_hyperlink && info->url != NULL && info->flavor == FLAVOR_VOIP_CALL;
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "PopupOpenHyperlink");
-    gtk_action_set_visible (action, show_hyperlink);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCopyHyperlinkAddress");
-    gtk_action_set_visible (action, show_hyperlink);
-    action = gtk_action_group_get_action (priv->action_group, "PopupSendEmail");
-    gtk_action_set_visible (action, show_email_link);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCopyEmailAddress");
-    gtk_action_set_visible (action, show_email_link);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCall");
-    gtk_action_set_visible (action, show_call_link);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCopyCallAddress");
-    gtk_action_set_visible (action, show_call_link);
-    action = gtk_action_group_get_action (priv->action_group, "PopupOpenLink");
-    gtk_action_set_visible (action, show_link);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCopyLinkAddress");
-    gtk_action_set_visible (action, show_link);
+    /* Update action sensitivity */
+    set_action_enabled (window, "copy", vte_terminal_get_has_selection (VTE_TERMINAL (screen)));
+    set_action_enabled (window, "paste", can_paste);
+    set_action_enabled (window, "paste-uris", can_paste_uris);
 
-    action = gtk_action_group_get_action (priv->action_group, "PopupCloseWindow");
-    gtk_action_set_visible (action, n_pages <= 1);
-    action = gtk_action_group_get_action (priv->action_group, "PopupCloseTab");
-    gtk_action_set_visible (action, n_pages > 1);
+    /* Recreate popup menu from model to reflect current state */
+    popup_menu = gtk_menu_new_from_model (priv->popup_model);
+    gtk_menu_attach_to_widget (GTK_MENU (popup_menu), GTK_WIDGET (screen), NULL);
 
-    action = gtk_action_group_get_action (priv->action_group, "PopupCopy");
-    gtk_action_set_sensitive (action, vte_terminal_get_has_selection (VTE_TERMINAL (screen)));
-    action = gtk_action_group_get_action (priv->action_group, "PopupPaste");
-    gtk_action_set_sensitive (action, can_paste);
-    action = gtk_action_group_get_action (priv->action_group, "PopupPasteURIPaths");
-    gtk_action_set_visible (action, can_paste_uris);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    g_object_get (gtk_widget_get_settings (GTK_WIDGET (window)),
-                  "gtk-show-input-method-menu", &show_input_method_menu,
-                  NULL);
-
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "PopupInputMethods");
-    gtk_action_set_visible (action, show_input_method_menu);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    popup_menu = gtk_ui_manager_get_widget (priv->ui_manager, "/Popup");
     g_signal_connect (popup_menu, "deactivate",
                       G_CALLBACK (popup_menu_deactivate_callback), window);
 
-    /* Pseudo activation of the popup menu's action */
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "Popup");
-    gtk_action_activate (action);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
     if (info->button == 0)
         gtk_menu_shell_select_first (GTK_MENU_SHELL (popup_menu), FALSE);
-
-    if (!gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
-        gtk_menu_attach_to_widget (GTK_MENU (popup_menu),GTK_WIDGET (screen),NULL);
 
     gtk_menu_popup (GTK_MENU (popup_menu),
                     NULL, NULL,
@@ -1639,53 +1140,6 @@ screen_close_cb (TerminalScreen *screen,
                  TerminalWindow *window)
 {
     terminal_window_remove_screen (window, screen);
-}
-
-static gboolean
-terminal_window_accel_activate_cb (GtkAccelGroup  *accel_group,
-                                   GObject        *acceleratable,
-                                   guint           keyval,
-                                   GdkModifierType modifier,
-                                   TerminalWindow *window)
-{
-    GtkAccelGroupEntry *entries;
-    guint n_entries;
-    gboolean retval = FALSE;
-
-    entries = gtk_accel_group_query (accel_group, keyval, modifier, &n_entries);
-    if (n_entries > 0)
-    {
-        const char *accel_path;
-
-        accel_path = g_quark_to_string (entries[0].accel_path_quark);
-
-        if (g_str_has_prefix (accel_path, "<Actions>/Main/"))
-        {
-            const char *action_name;
-
-            /* We want to always consume these accelerators, even if the corresponding
-             * action is insensitive, so the corresponding shortcut key escape code
-             * isn't sent to the terminal. See bug #453193, bug #138609 and bug #559728.
-             * This also makes tab cycling work, bug #92139. (NOT!)
-             */
-
-            action_name = I_(accel_path + strlen ("<Actions>/Main/"));
-
-#if 0
-            if (gtk_notebook_get_n_pages (GTK_NOTEBOOK (priv->notebook)) > 1 &&
-                    (action_name == I_("TabsPrevious") || action_name == I_("TabsNext")))
-                retval = TRUE;
-            else
-#endif
-                if (action_name == I_("EditCopy") ||
-                        action_name == I_("PopupCopy") ||
-                        action_name == I_("EditPaste") ||
-                        action_name == I_("PopupPaste"))
-                    retval = TRUE;
-        }
-    }
-
-    return retval;
 }
 
 /*****************************************/
@@ -1818,19 +1272,18 @@ terminal_window_state_event (GtkWidget            *widget,
     if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
     {
         TerminalWindow *window = TERMINAL_WINDOW (widget);
-        TerminalWindowPrivate *priv = window->priv;
-        GtkAction *action;
+        GAction *action;
         gboolean is_fullscreen;
 
         is_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
 
-        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-        action = gtk_action_group_get_action (priv->action_group, "ViewFullscreen");
-        gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), is_fullscreen);
+        /* Update fullscreen toggle state */
+        action = g_action_map_lookup_action (G_ACTION_MAP (window), "fullscreen");
+        if (action)
+            g_simple_action_set_state (G_SIMPLE_ACTION (action), g_variant_new_boolean (is_fullscreen));
 
-        action = gtk_action_group_get_action (priv->action_group, "PopupLeaveFullscreen");
-        gtk_action_set_visible (action, is_fullscreen);
-        G_GNUC_END_IGNORE_DEPRECATIONS;
+        /* Enable/disable leave-fullscreen action */
+        set_action_enabled (window, "leave-fullscreen", is_fullscreen);
     }
 
     if (window_state_event)
@@ -1844,16 +1297,14 @@ static void
 terminal_window_window_manager_changed_cb (GdkScreen *screen,
         TerminalWindow *window)
 {
-    TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
+    GAction *action;
     gboolean supports_fs;
 
     supports_fs = gdk_x11_screen_supports_net_wm_hint (screen, gdk_atom_intern ("_NET_WM_STATE_FULLSCREEN", FALSE));
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "ViewFullscreen");
-    gtk_action_set_sensitive (action, supports_fs);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    action = g_action_map_lookup_action (G_ACTION_MAP (window), "fullscreen");
+    if (action)
+        g_simple_action_set_enabled (G_SIMPLE_ACTION (action), supports_fs);
 }
 #endif
 
@@ -1936,325 +1387,9 @@ terminal_window_encoding_list_changed_cb (TerminalApp *app,
 static void
 terminal_window_init (TerminalWindow *window)
 {
-    const GtkActionEntry menu_entries[] =
-    {
-        /* Toplevel */
-        { "File", NULL, N_("_File"), NULL, NULL, NULL },
-        { "FileNewWindowProfiles", "utilities-terminal", N_("Open _Terminal"), NULL, NULL, NULL },
-        { "FileNewTabProfiles", STOCK_NEW_TAB, N_("Open Ta_b"), NULL, NULL, NULL },
-        { "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
-        { "View", NULL, N_("_View"), NULL, NULL, NULL },
-        { "Search", NULL, N_("_Search"), NULL, NULL, NULL },
-        { "Terminal", NULL, N_("_Terminal"), NULL, NULL, NULL },
-        { "Tabs", NULL, N_("Ta_bs"), NULL, NULL, NULL },
-        { "Help", NULL, N_("_Help"), NULL, NULL, NULL },
-        { "Popup", NULL, NULL, NULL, NULL, NULL },
-        { "NotebookPopup", NULL, "", NULL, NULL, NULL },
-
-        /* File menu */
-        {
-            "FileNewWindow", "utilities-terminal", N_("Open _Terminal"), "<shift><control>N",
-            NULL,
-            G_CALLBACK (file_new_window_callback)
-        },
-        {
-            "FileNewTab", STOCK_NEW_TAB, N_("Open Ta_b"), "<shift><control>T",
-            NULL,
-            G_CALLBACK (file_new_tab_callback)
-        },
-        {
-            "FileNewProfile", "document-open", N_("New _Profile…"), "",
-            NULL,
-            G_CALLBACK (file_new_profile_callback)
-        },
-        {
-            "FileSaveContents", "document-save", N_("_Save Contents"), "",
-            NULL,
-            G_CALLBACK (file_save_contents_callback)
-        },
-        {
-            "FileCloseTab", "window-close", N_("C_lose Tab"), "<shift><control>W",
-            NULL,
-            G_CALLBACK (file_close_tab_callback)
-        },
-        {
-            "FileCloseWindow", "window-close", N_("_Close Window"), "<shift><control>Q",
-            NULL,
-            G_CALLBACK (file_close_window_callback)
-        },
-
-        /* Edit menu */
-        {
-            "EditCopy", "edit-copy", N_("_Copy"), "<shift><control>C",
-            NULL,
-            G_CALLBACK (edit_copy_callback)
-        },
-        {
-            "EditPaste", "edit-paste", N_("_Paste"), "<shift><control>V",
-            NULL,
-            G_CALLBACK (edit_paste_callback)
-        },
-        {
-            "EditPasteURIPaths", "edit-paste", N_("Paste _Filenames"), "",
-            NULL,
-            G_CALLBACK (edit_paste_callback)
-        },
-        {
-            "EditSelectAll", "edit-select-all", N_("Select _All"), "<shift><control>A",
-            NULL,
-            G_CALLBACK (edit_select_all_callback)
-        },
-        {
-            "EditProfiles", NULL, N_("P_rofiles…"), NULL,
-            NULL,
-            G_CALLBACK (edit_profiles_callback)
-        },
-        {
-            "EditKeybindings", NULL, N_("_Keyboard Shortcuts…"), NULL,
-            NULL,
-            G_CALLBACK (edit_keybindings_callback)
-        },
-        {
-            "EditCurrentProfile", NULL, N_("Pr_ofile Preferences"), NULL,
-            NULL,
-            G_CALLBACK (edit_current_profile_callback)
-        },
-
-        /* View menu */
-        {
-            "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<control>plus",
-            NULL,
-            G_CALLBACK (view_zoom_in_callback)
-        },
-        {
-            "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
-            NULL,
-            G_CALLBACK (view_zoom_out_callback)
-        },
-        {
-            "ViewZoom100", "zoom-original", N_("_Normal Size"), "<control>0",
-            NULL,
-            G_CALLBACK (view_zoom_normal_callback)
-        },
-
-        /* Search menu */
-        {
-            "SearchFind", "edit-find", N_("_Find..."), "<shift><control>F",
-            NULL,
-            G_CALLBACK (search_find_callback)
-        },
-        {
-            "SearchFindNext", NULL, N_("Find Ne_xt"), "<shift><control>H",
-            NULL,
-            G_CALLBACK (search_find_next_callback)
-        },
-        {
-            "SearchFindPrevious", NULL, N_("Find Pre_vious"), "<shift><control>G",
-            NULL,
-            G_CALLBACK (search_find_prev_callback)
-        },
-        {
-            "SearchClearHighlight", NULL, N_("_Clear Highlight"), "<shift><control>J",
-            NULL,
-            G_CALLBACK (search_clear_highlight_callback)
-        },
-#if 0
-        {
-            "SearchGoToLine", "go-jump", N_("Go to _Line..."), "<shift><control>I",
-            NULL,
-            G_CALLBACK (search_goto_line_callback)
-        },
-        {
-            "SearchIncrementalSearch", "edit-find", N_("_Incremental Search..."), "<shift><control>K",
-            NULL,
-            G_CALLBACK (search_incremental_search_callback)
-        },
-#endif
-
-        /* Terminal menu */
-        { "TerminalProfiles", NULL, N_("Change _Profile"), NULL, NULL, NULL },
-        {
-            "ProfilePrevious", NULL, N_("_Previous Profile"), "<alt>Page_Up",
-            NULL,
-            G_CALLBACK (terminal_next_or_previous_profile_cb)
-        },
-        {
-            "ProfileNext", NULL, N_("_Next Profile"), "<alt>Page_Down",
-            NULL,
-            G_CALLBACK (terminal_next_or_previous_profile_cb)
-        },
-        {
-            "TerminalSetTitle", NULL, N_("_Set Title…"), NULL,
-            NULL,
-            G_CALLBACK (terminal_set_title_callback)
-        },
-        { "TerminalSetEncoding", NULL, N_("Set _Character Encoding"), NULL, NULL, NULL },
-        {
-            "TerminalReset", NULL, N_("_Reset"), NULL,
-            NULL,
-            G_CALLBACK (terminal_reset_callback)
-        },
-        {
-            "TerminalResetClear", NULL, N_("Reset and C_lear"), NULL,
-            NULL,
-            G_CALLBACK (terminal_reset_clear_callback)
-        },
-
-        /* Terminal/Encodings menu */
-        {
-            "TerminalAddEncoding", NULL, N_("_Add or Remove…"), NULL,
-            NULL,
-            G_CALLBACK (terminal_add_encoding_callback)
-        },
-
-        /* Tabs menu */
-        {
-            "TabsPrevious", NULL, N_("_Previous Tab"), "<control>Page_Up",
-            NULL,
-            G_CALLBACK (tabs_next_or_previous_tab_cb)
-        },
-        {
-            "TabsNext", NULL, N_("_Next Tab"), "<control>Page_Down",
-            NULL,
-            G_CALLBACK (tabs_next_or_previous_tab_cb)
-        },
-        {
-            "TabsMoveLeft", NULL, N_("Move Tab _Left"), "<shift><control>Page_Up",
-            NULL,
-            G_CALLBACK (tabs_move_left_callback)
-        },
-        {
-            "TabsMoveRight", NULL, N_("Move Tab _Right"), "<shift><control>Page_Down",
-            NULL,
-            G_CALLBACK (tabs_move_right_callback)
-        },
-        {
-            "TabsDetach", NULL, N_("_Detach tab"), NULL,
-            NULL,
-            G_CALLBACK (tabs_detach_tab_callback)
-        },
-
-        /* Help menu */
-        {
-            "HelpContents", "help-browser", N_("_Contents"), "F1",
-            NULL,
-            G_CALLBACK (help_contents_callback)
-        },
-        {
-            "HelpAbout", "help-about", N_("_About"), NULL,
-            NULL,
-            G_CALLBACK (help_about_callback)
-        },
-
-        /* Popup menu */
-        {
-            "PopupOpenHyperlink", NULL, N_("_Open Hyperlink"), NULL,
-            NULL,
-            G_CALLBACK (popup_open_hyperlink_callback)
-        },
-        {
-            "PopupCopyHyperlinkAddress", NULL, N_("_Copy Hyperlink Address"), NULL,
-            NULL,
-            G_CALLBACK (popup_copy_hyperlink_callback)
-        },
-        {
-            "PopupSendEmail", NULL, N_("_Send Mail To…"), NULL,
-            NULL,
-            G_CALLBACK (popup_open_url_callback)
-        },
-        {
-            "PopupCopyEmailAddress", NULL, N_("_Copy E-mail Address"), NULL,
-            NULL,
-            G_CALLBACK (popup_copy_url_callback)
-        },
-        {
-            "PopupCall", NULL, N_("C_all To…"), NULL,
-            NULL,
-            G_CALLBACK (popup_open_url_callback)
-        },
-        {
-            "PopupCopyCallAddress", NULL, N_("_Copy Call Address"), NULL,
-            NULL,
-            G_CALLBACK (popup_copy_url_callback)
-        },
-        {
-            "PopupOpenLink", NULL, N_("_Open Link"), NULL,
-            NULL,
-            G_CALLBACK (popup_open_url_callback)
-        },
-        {
-            "PopupCopyLinkAddress", NULL, N_("_Copy Link Address"), NULL,
-            NULL,
-            G_CALLBACK (popup_copy_url_callback)
-        },
-        { "PopupTerminalProfiles", NULL, N_("P_rofiles"), NULL, NULL, NULL },
-        {
-            "PopupCopy", "edit-copy", N_("_Copy"), "",
-            NULL,
-            G_CALLBACK (edit_copy_callback)
-        },
-        {
-            "PopupPaste", "edit-paste", N_("_Paste"), "",
-            NULL,
-            G_CALLBACK (edit_paste_callback)
-        },
-        {
-            "PopupPasteURIPaths", "edit-paste", N_("Paste _Filenames"), "",
-            NULL,
-            G_CALLBACK (edit_paste_callback)
-        },
-        {
-            "PopupNewTerminal", "utilities-terminal", N_("Open _Terminal"), NULL,
-            NULL,
-            G_CALLBACK (file_new_window_callback)
-        },
-        {
-            "PopupNewTab", "tab-new", N_("Open Ta_b"), NULL,
-            NULL,
-            G_CALLBACK (file_new_tab_callback)
-        },
-        {
-            "PopupCloseWindow", "window-close", N_("C_lose Window"), NULL,
-            NULL,
-            G_CALLBACK (file_close_window_callback)
-        },
-        {
-            "PopupCloseTab", "window-close", N_("C_lose Tab"), NULL,
-            NULL,
-            G_CALLBACK (file_close_tab_callback)
-        },
-        {
-            "PopupLeaveFullscreen", NULL, N_("L_eave Full Screen"), NULL,
-            NULL,
-            G_CALLBACK (popup_leave_fullscreen_callback)
-        },
-        { "PopupInputMethods", NULL, N_("_Input Methods"), NULL, NULL, NULL }
-    };
-
-    const GtkToggleActionEntry toggle_menu_entries[] =
-    {
-        /* View Menu */
-        {
-            "ViewMenubar", NULL, N_("Show _Menubar"), NULL,
-            NULL,
-            G_CALLBACK (view_menubar_toggled_callback),
-            FALSE
-        },
-        {
-            "ViewFullscreen", NULL, N_("_Full Screen"), NULL,
-            NULL,
-            G_CALLBACK (view_fullscreen_toggled_callback),
-            FALSE
-        }
-    };
     TerminalWindowPrivate *priv;
     TerminalApp *app;
-    GtkActionGroup *action_group;
-    GtkAction *action;
-    GtkUIManager *manager;
-    GError *error;
     GtkWindowGroup *window_group;
-    GtkAccelGroup *accel_group;
     GtkClipboard *clipboard;
 
     priv = window->priv = terminal_window_get_instance_private (window);
@@ -2310,6 +1445,9 @@ terminal_window_init (TerminalWindow *window)
     g_signal_connect_data (priv->notebook, "page-reordered",
                            G_CALLBACK (terminal_window_update_tabs_menu_sensitivity),
                            window, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+    g_signal_connect_data (priv->notebook, "page-reordered",
+                           G_CALLBACK (terminal_window_update_tabs_gmenu),
+                           window, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
 
     gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
     g_signal_connect (priv->notebook, "scroll-event",
@@ -2331,59 +1469,61 @@ terminal_window_init (TerminalWindow *window)
 
     priv->old_geometry_widget = NULL;
 
-    /* Create the UI manager */
-    manager = priv->ui_manager = gtk_ui_manager_new ();
+    /* Initialize GActions for the window */
+    terminal_actions_init_window (GTK_APPLICATION_WINDOW (window));
 
-    accel_group = gtk_ui_manager_get_accel_group (manager);
-    gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
-    /* Workaround for bug #453193, bug #138609 and bug #559728 */
-    g_signal_connect_after (accel_group, "accel-activate",
-                            G_CALLBACK (terminal_window_accel_activate_cb), window);
+    /* Load the menu UI from GtkBuilder */
+    priv->builder = gtk_builder_new_from_resource (
+        TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/terminal-menus.ui");
 
-    /* Create the actions */
-    /* Note that this action group name is used in terminal-accels.c; do not change it */
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    priv->action_group = action_group = gtk_action_group_new ("Main");
-    gtk_action_group_set_translation_domain (action_group, NULL);
-    gtk_action_group_add_actions (action_group, menu_entries,
-                                  G_N_ELEMENTS (menu_entries), window);
-    gtk_action_group_add_toggle_actions (action_group,
-                                         toggle_menu_entries,
-                                         G_N_ELEMENTS (toggle_menu_entries),
-                                         window);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-    gtk_ui_manager_insert_action_group (manager, action_group, 0);
-    g_object_unref (action_group);
-
-   clipboard = gtk_widget_get_clipboard (GTK_WIDGET (window), GDK_SELECTION_CLIPBOARD);
-   g_signal_connect_swapped (clipboard, "owner-change",
-                             G_CALLBACK (update_edit_menu), window);
-   update_edit_menu (window);
-    /* Idem for this action, since the window is not fullscreen. */
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "PopupLeaveFullscreen");
-    gtk_action_set_visible (action, FALSE);
-
-#ifndef ENABLE_SAVE
-    action = gtk_action_group_get_action (priv->action_group, "FileSaveContents");
-    gtk_action_set_visible (action, FALSE);
-#endif
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    /* Load the UI */
-    error = NULL;
-    priv->ui_id = gtk_ui_manager_add_ui_from_resource (manager,
-                  TERMINAL_RESOURCES_PATH_PREFIX G_DIR_SEPARATOR_S "ui/terminal.xml",
-                  &error);
-    g_assert_no_error (error);
-
-    priv->menubar = gtk_ui_manager_get_widget (manager, "/menubar");
+    /* Create menubar from GMenu model */
+    priv->menubar = gtk_menu_bar_new_from_model (
+        G_MENU_MODEL (gtk_builder_get_object (priv->builder, "menubar")));
     gtk_box_pack_start (GTK_BOX (priv->main_vbox),
                         priv->menubar,
                         FALSE, FALSE, 0);
 
-    /* Add tabs menu */
-    priv->tabs_menu = terminal_tabs_menu_new (window);
+    /* Get references to dynamic menu sections from the builder.
+     * These are GMenu objects defined as empty sections in terminal-menus.ui
+     * that we populate dynamically. */
+    priv->profiles_menu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "profiles-section")));
+    priv->popup_profiles_menu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "popup-profiles-section")));
+    priv->new_window_profiles_menu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "new-window-profiles-section")));
+    priv->new_tab_profiles_menu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "new-tab-profiles-section")));
+    priv->encodings_menu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "encodings-section")));
+    priv->tabs_gmenu = G_MENU (g_object_ref (
+        gtk_builder_get_object (priv->builder, "tabs-section")));
+
+    /* Create popup menus from GMenu models */
+    priv->popup_model = G_MENU_MODEL (gtk_builder_get_object (priv->builder, "popup-menu"));
+    priv->popup_menu = gtk_menu_new_from_model (priv->popup_model);
+    gtk_menu_attach_to_widget (GTK_MENU (priv->popup_menu), GTK_WIDGET (window), NULL);
+
+    priv->notebook_popup_model = G_MENU_MODEL (gtk_builder_get_object (priv->builder, "notebook-popup-menu"));
+    priv->notebook_popup = gtk_menu_new_from_model (priv->notebook_popup_model);
+    gtk_menu_attach_to_widget (GTK_MENU (priv->notebook_popup), GTK_WIDGET (window), NULL);
+
+    /* Set up clipboard monitoring for paste action sensitivity */
+    clipboard = gtk_widget_get_clipboard (GTK_WIDGET (window), GDK_SELECTION_CLIPBOARD);
+    g_signal_connect_swapped (clipboard, "owner-change",
+                              G_CALLBACK (update_edit_menu), window);
+    update_edit_menu (window);
+
+    /* Initially disable leave-fullscreen since window is not fullscreen */
+    g_simple_action_set_enabled (
+        G_SIMPLE_ACTION (g_action_map_lookup_action (G_ACTION_MAP (window), "leave-fullscreen")),
+        FALSE);
+
+#ifndef ENABLE_SAVE
+    g_simple_action_set_enabled (
+        G_SIMPLE_ACTION (g_action_map_lookup_action (G_ACTION_MAP (window), "save-contents")),
+        FALSE);
+#endif
 
     app = terminal_app_get ();
     terminal_window_profile_list_changed_cb (app, window);
@@ -2441,16 +1581,13 @@ terminal_window_dispose (GObject *object)
 
     priv->disposed = TRUE;
 
-    if (priv->tabs_menu)
-    {
-        g_object_unref (priv->tabs_menu);
-        priv->tabs_menu = NULL;
-    }
-
-    if (priv->profiles_action_group != NULL)
-        disconnect_profiles_from_actions_in_group (priv->profiles_action_group);
-    if (priv->new_terminal_action_group != NULL)
-        disconnect_profiles_from_actions_in_group (priv->new_terminal_action_group);
+    /* Clean up GMenu objects */
+    g_clear_object (&priv->profiles_menu);
+    g_clear_object (&priv->popup_profiles_menu);
+    g_clear_object (&priv->new_window_profiles_menu);
+    g_clear_object (&priv->new_tab_profiles_menu);
+    g_clear_object (&priv->encodings_menu);
+    g_clear_object (&priv->tabs_gmenu);
 
     app = terminal_app_get ();
     g_signal_handlers_disconnect_by_func (app,
@@ -2483,7 +1620,7 @@ terminal_window_finalize (GObject *object)
     TerminalWindow *window = TERMINAL_WINDOW (object);
     TerminalWindowPrivate *priv = window->priv;
 
-    g_object_unref (priv->ui_manager);
+    g_clear_object (&priv->builder);
 
     if (priv->confirm_close_dialog)
         gtk_dialog_response (GTK_DIALOG (priv->confirm_close_dialog),
@@ -2599,6 +1736,15 @@ sync_screen_title (TerminalScreen *screen,
         return;
 
     gtk_window_set_title (GTK_WINDOW (window), terminal_screen_get_title (screen));
+}
+
+static void
+sync_tabs_menu_title (TerminalScreen *screen,
+                      GParamSpec *pspec,
+                      TerminalWindow *window)
+{
+    /* Update the tabs menu when any tab title changes */
+    terminal_window_update_tabs_gmenu (window);
 }
 
 static void
@@ -2807,7 +1953,7 @@ terminal_window_set_menubar_visible (TerminalWindow *window,
                                      gboolean        setting)
 {
     TerminalWindowPrivate *priv = window->priv;
-    GtkAction *action;
+    GAction *action;
 
     /* it's been set now, so don't override when adding a screen.
      * this side effect must happen before we short-circuit below.
@@ -2819,10 +1965,10 @@ terminal_window_set_menubar_visible (TerminalWindow *window,
 
     priv->menubar_visible = (setting != FALSE);
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "ViewMenubar");
-    gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), setting);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
+    /* Sync the GAction state with the menubar visibility */
+    action = g_action_map_lookup_action (G_ACTION_MAP (window), "menubar");
+    if (action)
+        g_simple_action_set_state (G_SIMPLE_ACTION (action), g_variant_new_boolean (setting));
 
     g_object_set (priv->menubar, "visible", setting, NULL);
 
@@ -3046,8 +2192,6 @@ notebook_button_press_cb (GtkWidget *widget,
     GtkNotebook *notebook = GTK_NOTEBOOK (widget);
     GSettings *settings = terminal_app_get_global_settings (terminal_app_get ());
     GtkWidget *tab;
-    GtkWidget *menu;
-    GtkAction *action;
     int tab_clicked;
     int page_num;
     int before_pages;
@@ -3110,17 +2254,12 @@ notebook_button_press_cb (GtkWidget *widget,
     /* switch to the page the mouse is over */
     gtk_notebook_set_current_page (notebook, tab_clicked);
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "NotebookPopup");
-    gtk_action_activate (action);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    menu = gtk_ui_manager_get_widget (priv->ui_manager, "/NotebookPopup");
-    if (gtk_menu_get_attach_widget (GTK_MENU (menu)))
-      gtk_menu_detach (GTK_MENU (menu));
+    /* Show the notebook popup menu */
+    if (gtk_menu_get_attach_widget (GTK_MENU (priv->notebook_popup)))
+        gtk_menu_detach (GTK_MENU (priv->notebook_popup));
     tab = gtk_notebook_get_nth_page (notebook, tab_clicked);
-    gtk_menu_attach_to_widget (GTK_MENU (menu), tab, NULL);
-    gtk_menu_popup_at_pointer (GTK_MENU (menu), NULL);
+    gtk_menu_attach_to_widget (GTK_MENU (priv->notebook_popup), tab, NULL);
+    gtk_menu_popup_at_pointer (GTK_MENU (priv->notebook_popup), NULL);
 
     return TRUE;
 }
@@ -3168,8 +2307,7 @@ notebook_popup_menu_cb (GtkWidget *widget,
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkNotebook *notebook = GTK_NOTEBOOK (priv->notebook);
-    GtkWidget *focus_widget, *tab, *tab_label, *menu;
-    GtkAction *action;
+    GtkWidget *focus_widget, *tab, *tab_label;
     int page_num;
 
     focus_widget = gtk_window_get_focus (GTK_WINDOW (window));
@@ -3181,21 +2319,16 @@ notebook_popup_menu_cb (GtkWidget *widget,
     tab = gtk_notebook_get_nth_page (notebook, page_num);
     tab_label = gtk_notebook_get_tab_label (notebook, tab);
 
-    G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-    action = gtk_action_group_get_action (priv->action_group, "NotebookPopup");
-    gtk_action_activate (action);
-    G_GNUC_END_IGNORE_DEPRECATIONS;
-
-    menu = gtk_ui_manager_get_widget (priv->ui_manager, "/NotebookPopup");
-    if (gtk_menu_get_attach_widget (GTK_MENU (menu)))
-      gtk_menu_detach (GTK_MENU (menu));
-    gtk_menu_attach_to_widget (GTK_MENU (menu), tab_label, NULL);
-    gtk_menu_popup_at_widget (GTK_MENU (menu),
+    /* Show the notebook popup menu */
+    if (gtk_menu_get_attach_widget (GTK_MENU (priv->notebook_popup)))
+        gtk_menu_detach (GTK_MENU (priv->notebook_popup));
+    gtk_menu_attach_to_widget (GTK_MENU (priv->notebook_popup), tab_label, NULL);
+    gtk_menu_popup_at_widget (GTK_MENU (priv->notebook_popup),
                               tab_label,
                               GDK_GRAVITY_SOUTH_WEST,
                               GDK_GRAVITY_NORTH_WEST,
                               NULL);
-    gtk_menu_shell_select_first (GTK_MENU_SHELL (menu), FALSE);
+    gtk_menu_shell_select_first (GTK_MENU_SHELL (priv->notebook_popup), FALSE);
 
     return TRUE;
 }
@@ -3300,6 +2433,8 @@ notebook_page_added_callback (GtkWidget       *notebook,
     /* FIXME: only connect on the active screen, not all screens! */
     g_signal_connect (screen, "notify::title",
                       G_CALLBACK (sync_screen_title), window);
+    g_signal_connect (screen, "notify::title",
+                      G_CALLBACK (sync_tabs_menu_title), window);
     g_signal_connect (screen, "notify::icon-title",
                       G_CALLBACK (sync_screen_icon_title), window);
     g_signal_connect (screen, "notify::icon-title-set",
@@ -3321,6 +2456,7 @@ notebook_page_added_callback (GtkWidget       *notebook,
 
     update_tab_visibility (window, 0);
     terminal_window_update_tabs_menu_sensitivity (window);
+    terminal_window_update_tabs_gmenu (window);
     terminal_window_update_search_sensitivity (screen, window);
 
 #if 0
@@ -3377,6 +2513,10 @@ notebook_page_removed_callback (GtkWidget       *notebook,
                                           window);
 
     g_signal_handlers_disconnect_by_func (G_OBJECT (screen),
+                                          G_CALLBACK (sync_tabs_menu_title),
+                                          window);
+
+    g_signal_handlers_disconnect_by_func (G_OBJECT (screen),
                                           G_CALLBACK (sync_screen_icon_title),
                                           window);
 
@@ -3408,6 +2548,7 @@ notebook_page_removed_callback (GtkWidget       *notebook,
                                           window);
 
     terminal_window_update_tabs_menu_sensitivity (window);
+    terminal_window_update_tabs_gmenu (window);
     update_tab_visibility (window, 0);
     terminal_window_update_search_sensitivity (screen, window);
 
@@ -4621,14 +3762,6 @@ help_about_callback (GtkAction *action,
     g_free (licence_text);
 }
 
-GtkUIManager *
-terminal_window_get_ui_manager (TerminalWindow *window)
-{
-    TerminalWindowPrivate *priv = window->priv;
-
-    return priv->ui_manager;
-}
-
 /* Public wrapper functions for GAction callbacks */
 
 void
@@ -4666,6 +3799,33 @@ terminal_window_show_about_dialog (GtkWindow *parent)
         if (windows)
             help_about_callback (NULL, TERMINAL_WINDOW (windows->data));
     }
+}
+
+void
+terminal_window_save_contents (TerminalWindow *window)
+{
+    g_return_if_fail (TERMINAL_IS_WINDOW (window));
+    file_save_contents_callback (NULL, window);
+}
+
+void
+terminal_window_paste_uris_received (GtkClipboard *clipboard,
+                                      gchar **uris,
+                                      gpointer user_data)
+{
+    TerminalScreen *screen = TERMINAL_SCREEN (user_data);
+    char *text;
+    gsize len;
+
+    if (!uris)
+        return;
+
+    /* Transform URIs to quoted paths */
+    terminal_util_transform_uris_to_quoted_fuse_paths (uris);
+
+    text = terminal_util_concat_uris (uris, &len);
+    vte_terminal_feed_child (VTE_TERMINAL (screen), text, len);
+    g_free (text);
 }
 
 void

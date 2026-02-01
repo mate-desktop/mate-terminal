@@ -56,8 +56,6 @@ TerminalWindow* terminal_window_new (void);
 
 void terminal_window_set_is_restored (TerminalWindow *window);
 
-GtkUIManager *terminal_window_get_ui_manager (TerminalWindow *window);
-
 void terminal_window_add_screen (TerminalWindow *window,
                                  TerminalScreen *screen,
                                  int position);

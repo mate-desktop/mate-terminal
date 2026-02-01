@@ -23,10 +23,18 @@
 
 #include "terminal-actions.h"
 #include "terminal-app.h"
+#include "terminal-encoding.h"
 #include "terminal-intl.h"
+#include "terminal-profile.h"
 #include "terminal-screen.h"
 #include "terminal-util.h"
 #include "terminal-window.h"
+
+/* Forward declarations for functions defined in terminal-window.c */
+void terminal_window_paste_uris_received (GtkClipboard *clipboard,
+                                          gchar **uris,
+                                          gpointer user_data);
+void terminal_window_save_contents (TerminalWindow *window);
 
 /*
  * Application-level action callbacks
@@ -546,14 +554,290 @@ action_about (GSimpleAction *action,
     terminal_window_show_about_dialog (parent);
 }
 
+static void
+action_new_window_win (GSimpleAction *action,
+                       GVariant      *parameter,
+                       gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *profile = terminal_app_get_profile_for_new_term (app);
+
+    if (profile)
+    {
+        TerminalScreen *screen = terminal_window_get_active (window);
+        char *working_dir = NULL;
+        GdkScreen *gdk_screen;
+
+        if (screen)
+            working_dir = terminal_screen_get_current_dir_with_fallback (screen);
+
+        gdk_screen = gtk_widget_get_screen (GTK_WIDGET (window));
+        TerminalWindow *new_window = terminal_app_new_window (app, gdk_screen);
+        terminal_app_new_terminal (app, new_window, profile,
+                                   NULL, NULL,
+                                   working_dir,
+                                   screen ? terminal_screen_get_initial_environment (screen) : NULL,
+                                   1.0);
+        gtk_window_present (GTK_WINDOW (new_window));
+        g_free (working_dir);
+    }
+}
+
+static void
+action_leave_fullscreen (GSimpleAction *action,
+                         GVariant      *parameter,
+                         gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    gtk_window_unfullscreen (GTK_WINDOW (window));
+}
+
+static void
+action_paste_uris (GSimpleAction *action,
+                   GVariant      *parameter,
+                   gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    TerminalScreen *screen = terminal_window_get_active (window);
+    if (screen)
+    {
+        GtkClipboard *clipboard;
+        clipboard = gtk_widget_get_clipboard (GTK_WIDGET (window), GDK_SELECTION_CLIPBOARD);
+        gtk_clipboard_request_uris (clipboard,
+                                    (GtkClipboardURIReceivedFunc) terminal_window_paste_uris_received,
+                                    screen);
+    }
+}
+
+static void
+action_select_profile (GSimpleAction *action,
+                       GVariant      *parameter,
+                       gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    const char *profile_name = g_variant_get_string (parameter, NULL);
+    if (!profile_name)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *profile = terminal_app_get_profile_by_visible_name (app, profile_name);
+    if (profile)
+    {
+        TerminalScreen *screen = terminal_window_get_active (window);
+        if (screen)
+            terminal_screen_set_profile (screen, profile);
+    }
+}
+
+static void
+action_new_tab_profile (GSimpleAction *action,
+                        GVariant      *parameter,
+                        gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    const char *profile_name = g_variant_get_string (parameter, NULL);
+    if (!profile_name)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *profile = terminal_app_get_profile_by_visible_name (app, profile_name);
+    if (profile)
+    {
+        TerminalScreen *screen = terminal_window_get_active (window);
+        char *working_dir = NULL;
+
+        if (screen)
+            working_dir = terminal_screen_get_current_dir_with_fallback (screen);
+
+        terminal_app_new_terminal (app, window, profile,
+                                   NULL, NULL,
+                                   working_dir,
+                                   screen ? terminal_screen_get_initial_environment (screen) : NULL,
+                                   1.0);
+        g_free (working_dir);
+    }
+}
+
+static void
+action_new_window_profile (GSimpleAction *action,
+                           GVariant      *parameter,
+                           gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    const char *profile_name = g_variant_get_string (parameter, NULL);
+    if (!profile_name)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *profile = terminal_app_get_profile_by_visible_name (app, profile_name);
+    if (profile)
+    {
+        TerminalScreen *screen = terminal_window_get_active (window);
+        char *working_dir = NULL;
+        GdkScreen *gdk_screen;
+
+        if (screen)
+            working_dir = terminal_screen_get_current_dir_with_fallback (screen);
+
+        gdk_screen = gtk_widget_get_screen (GTK_WIDGET (window));
+        TerminalWindow *new_window = terminal_app_new_window (app, gdk_screen);
+        terminal_app_new_terminal (app, new_window, profile,
+                                   NULL, NULL,
+                                   working_dir,
+                                   screen ? terminal_screen_get_initial_environment (screen) : NULL,
+                                   1.0);
+        gtk_window_present (GTK_WINDOW (new_window));
+        g_free (working_dir);
+    }
+}
+
+static void
+action_profile_next (GSimpleAction *action,
+                     GVariant      *parameter,
+                     gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    TerminalScreen *screen = terminal_window_get_active (window);
+    if (!screen)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *current = terminal_screen_get_profile (screen);
+    GList *profiles = terminal_app_get_profile_list (app);
+    GList *l;
+
+    for (l = profiles; l != NULL; l = l->next)
+    {
+        if (l->data == current)
+        {
+            TerminalProfile *next = l->next ? l->next->data : profiles->data;
+            terminal_screen_set_profile (screen, next);
+            break;
+        }
+    }
+    g_list_free (profiles);
+}
+
+static void
+action_profile_previous (GSimpleAction *action,
+                         GVariant      *parameter,
+                         gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    TerminalScreen *screen = terminal_window_get_active (window);
+    if (!screen)
+        return;
+
+    TerminalApp *app = terminal_app_get ();
+    TerminalProfile *current = terminal_screen_get_profile (screen);
+    GList *profiles = terminal_app_get_profile_list (app);
+    GList *l, *last = g_list_last (profiles);
+
+    for (l = profiles; l != NULL; l = l->next)
+    {
+        if (l->data == current)
+        {
+            TerminalProfile *prev = l->prev ? l->prev->data : last->data;
+            terminal_screen_set_profile (screen, prev);
+            break;
+        }
+    }
+    g_list_free (profiles);
+}
+
+static void
+action_select_encoding (GSimpleAction *action,
+                        GVariant      *parameter,
+                        gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    const char *encoding = g_variant_get_string (parameter, NULL);
+    if (!encoding)
+        return;
+
+    TerminalScreen *screen = terminal_window_get_active (window);
+    if (screen)
+        vte_terminal_set_encoding (VTE_TERMINAL (screen), encoding, NULL);
+}
+
+static void
+action_add_encoding (GSimpleAction *action,
+                     GVariant      *parameter,
+                     gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    terminal_encoding_dialog_show (window ? GTK_WINDOW (window) : NULL);
+}
+
+static void
+action_save_contents (GSimpleAction *action,
+                      GVariant      *parameter,
+                      gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    terminal_window_save_contents (window);
+}
+
+static void
+action_switch_tab (GSimpleAction *action,
+                   GVariant      *parameter,
+                   gpointer       user_data)
+{
+    TerminalWindow *window = get_terminal_window (user_data);
+    if (!window)
+        return;
+
+    gint32 tab_num = g_variant_get_int32 (parameter);
+    GtkWidget *notebook = terminal_window_get_notebook (window);
+    if (notebook)
+    {
+        int n_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+        if (tab_num >= 0 && tab_num < n_pages)
+            gtk_notebook_set_current_page (GTK_NOTEBOOK (notebook), tab_num);
+    }
+}
+
 /* Window action entries */
 static const GActionEntry win_actions[] = {
     { TERMINAL_ACTION_NEW_TAB, action_new_tab, NULL, NULL, NULL },
+    { "new-window", action_new_window_win, NULL, NULL, NULL },
     { TERMINAL_ACTION_NEW_PROFILE, action_new_profile, NULL, NULL, NULL },
     { TERMINAL_ACTION_CLOSE_TAB, action_close_tab, NULL, NULL, NULL },
     { TERMINAL_ACTION_CLOSE_WINDOW, action_close_window, NULL, NULL, NULL },
     { TERMINAL_ACTION_COPY, action_copy, NULL, NULL, NULL },
     { TERMINAL_ACTION_PASTE, action_paste, NULL, NULL, NULL },
+    { "paste-uris", action_paste_uris, NULL, NULL, NULL },
     { TERMINAL_ACTION_SELECT_ALL, action_select_all, NULL, NULL, NULL },
     { TERMINAL_ACTION_KEYBINDINGS, action_keybindings, NULL, NULL, NULL },
     { TERMINAL_ACTION_CURRENT_PROFILE, action_current_profile, NULL, NULL, NULL },
@@ -561,6 +845,7 @@ static const GActionEntry win_actions[] = {
     { TERMINAL_ACTION_ZOOM_OUT, action_zoom_out, NULL, NULL, NULL },
     { TERMINAL_ACTION_ZOOM_NORMAL, action_zoom_normal, NULL, NULL, NULL },
     { TERMINAL_ACTION_FULLSCREEN, action_fullscreen, NULL, "false", NULL },
+    { "leave-fullscreen", action_leave_fullscreen, NULL, NULL, NULL },
     { TERMINAL_ACTION_MENUBAR, action_menubar, NULL, "true", NULL },
     { TERMINAL_ACTION_FIND, action_find, NULL, NULL, NULL },
     { TERMINAL_ACTION_FIND_NEXT, action_find_next, NULL, NULL, NULL },
@@ -574,6 +859,15 @@ static const GActionEntry win_actions[] = {
     { TERMINAL_ACTION_MOVE_TAB_RIGHT, action_move_tab_right, NULL, NULL, NULL },
     { TERMINAL_ACTION_DETACH_TAB, action_detach_tab, NULL, NULL, NULL },
     { "about", action_about, NULL, NULL, NULL },
+    { "select-profile", action_select_profile, "s", NULL, NULL },
+    { "new-tab-profile", action_new_tab_profile, "s", NULL, NULL },
+    { "new-window-profile", action_new_window_profile, "s", NULL, NULL },
+    { "profile-next", action_profile_next, NULL, NULL, NULL },
+    { "profile-previous", action_profile_previous, NULL, NULL, NULL },
+    { "select-encoding", action_select_encoding, "s", NULL, NULL },
+    { "add-encoding", action_add_encoding, NULL, NULL, NULL },
+    { "save-contents", action_save_contents, NULL, NULL, NULL },
+    { "switch-tab", action_switch_tab, "i", NULL, NULL },
 };
 
 /*
