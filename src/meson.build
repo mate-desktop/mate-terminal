@@ -36,6 +36,8 @@ sources = [
   'terminal.c',
   'terminal-accels.c',
   'terminal-accels.h',
+  'terminal-actions.c',
+  'terminal-actions.h',
   'terminal-app.c',
   'terminal-app.h',
   'terminal-close-button.h',

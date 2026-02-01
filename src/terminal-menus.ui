@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    MATE Terminal - GMenu-based menu definition
+    This replaces the deprecated GtkUIManager XML format
+-->
+<interface>
+  <menu id="menubar">
+    <submenu>
+      <attribute name="label" translatable="yes">_File</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Open _Terminal</attribute>
+          <attribute name="action">win.new-window-profile</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Open Ta_b</attribute>
+          <attribute name="action">win.new-tab</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">New _Profile...</attribute>
+          <attribute name="action">win.new-profile</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">C_lose Tab</attribute>
+          <attribute name="action">win.close-tab</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Close Window</attribute>
+          <attribute name="action">win.close-window</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">_Edit</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Copy</attribute>
+          <attribute name="action">win.copy</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Paste</attribute>
+          <attribute name="action">win.paste</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Paste _Filenames</attribute>
+          <attribute name="action">win.paste-uris</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Select _All</attribute>
+          <attribute name="action">win.select-all</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">P_rofiles...</attribute>
+          <attribute name="action">app.preferences</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Keyboard Shortcuts...</attribute>
+          <attribute name="action">win.keybindings</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Pr_ofile Preferences</attribute>
+          <attribute name="action">win.current-profile</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">_View</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Show _Menubar</attribute>
+          <attribute name="action">win.menubar</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Full Screen</attribute>
+          <attribute name="action">win.fullscreen</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Zoom _In</attribute>
+          <attribute name="action">win.zoom-in</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Zoom _Out</attribute>
+          <attribute name="action">win.zoom-out</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Normal Size</attribute>
+          <attribute name="action">win.zoom-normal</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">_Search</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Find...</attribute>
+          <attribute name="action">win.find</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Find Ne_xt</attribute>
+          <attribute name="action">win.find-next</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Find Pre_vious</attribute>
+          <attribute name="action">win.find-prev</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">_Terminal</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Set Title...</attribute>
+          <attribute name="action">win.set-title</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Reset</attribute>
+          <attribute name="action">win.reset</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Reset and C_lear</attribute>
+          <attribute name="action">win.reset-clear</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">Ta_bs</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Next Tab</attribute>
+          <attribute name="action">win.next-tab</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Previous Tab</attribute>
+          <attribute name="action">win.prev-tab</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Move Tab _Left</attribute>
+          <attribute name="action">win.move-tab-left</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Move Tab _Right</attribute>
+          <attribute name="action">win.move-tab-right</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Detach Tab</attribute>
+          <attribute name="action">win.detach-tab</attribute>
+        </item>
+      </section>
+    </submenu>
+    <submenu>
+      <attribute name="label" translatable="yes">_Help</attribute>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Contents</attribute>
+          <attribute name="action">app.help</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_About</attribute>
+          <attribute name="action">win.about</attribute>
+        </item>
+      </section>
+    </submenu>
+  </menu>
+</interface>
