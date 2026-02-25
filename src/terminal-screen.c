@@ -875,7 +875,7 @@ terminal_screen_format_title (TerminalScreen *screen,
 		switch (arg[1])
 		{
 		case 'A':
-			text_to_append = raw_title ? raw_title : static_title;
+			text_to_append = (raw_title && raw_title[0]) ? raw_title : static_title;
 			break;
 		case 'D':
 			text_to_append = raw_title;
