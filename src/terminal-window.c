@@ -45,8 +45,6 @@
 #include "skey-popup.h"
 #endif
 
-static gboolean detach_tab = FALSE;
-
 struct _TerminalWindowPrivate
 {
     GtkActionGroup *action_group;
@@ -162,10 +160,10 @@ static gboolean terminal_window_focus_in_event (GtkWidget *widget,
 
 static gboolean notebook_button_press_cb     (GtkWidget *notebook,
         GdkEventButton *event,
-        GSettings *settings);
+        gpointer user_data);
 static gboolean window_key_press_cb     (GtkWidget *notebook,
         GdkEventKey *event,
-        GSettings *settings);
+        gpointer user_data);
 static gboolean notebook_popup_menu_cb       (GtkWidget *notebook,
         TerminalWindow *window);
 static void notebook_page_selected_callback  (GtkWidget       *notebook,
@@ -269,7 +267,7 @@ sync_screen_icon_title (TerminalScreen *screen,
                         GParamSpec *psepc,
                         TerminalWindow *window);
 
-G_DEFINE_TYPE_WITH_PRIVATE (TerminalWindow, terminal_window, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (TerminalWindow, terminal_window, GTK_TYPE_APPLICATION_WINDOW)
 
 /* Menubar mnemonics & accel settings handling */
 
@@ -2294,9 +2292,9 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_show_tabs (GTK_NOTEBOOK (priv->notebook), FALSE);
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
-                      G_CALLBACK (notebook_button_press_cb), settings_global);
+                      G_CALLBACK (notebook_button_press_cb), NULL);
     g_signal_connect (window, "key-press-event",
-                      G_CALLBACK (window_key_press_cb), settings_global);
+                      G_CALLBACK (window_key_press_cb), NULL);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2482,14 +2480,6 @@ terminal_window_finalize (GObject *object)
     TerminalWindowPrivate *priv = window->priv;
 
     g_object_unref (priv->ui_manager);
-
-    if (priv->confirm_close_dialog)
-        gtk_dialog_response (GTK_DIALOG (priv->confirm_close_dialog),
-                             GTK_RESPONSE_DELETE_EVENT);
-
-    if (priv->search_find_dialog)
-        gtk_dialog_response (GTK_DIALOG (priv->search_find_dialog),
-                             GTK_RESPONSE_DELETE_EVENT);
 
     g_free (priv->icon);
 
@@ -2727,9 +2717,10 @@ terminal_window_add_screen (TerminalWindow *window,
                                      TRUE);
 }
 
-void
-terminal_window_remove_screen (TerminalWindow *window,
-                               TerminalScreen *screen)
+static void
+remove_screen_internal (TerminalWindow *window,
+                        TerminalScreen *screen,
+                        gboolean        detach)
 {
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreenContainer *screen_container;
@@ -2739,15 +2730,19 @@ terminal_window_remove_screen (TerminalWindow *window,
     update_tab_visibility (window, -1);
 
     screen_container = terminal_screen_container_get_from_screen (screen);
-    if (detach_tab)
-    {
+    if (detach)
         gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
                                  GTK_WIDGET (screen_container));
-        detach_tab = FALSE;
-    }
     else
         gtk_container_remove (GTK_CONTAINER (priv->notebook),
                               GTK_WIDGET (screen_container));
+}
+
+void
+terminal_window_remove_screen (TerminalWindow *window,
+                               TerminalScreen *screen)
+{
+    remove_screen_internal (window, screen, FALSE);
 }
 
 void
@@ -2775,9 +2770,7 @@ terminal_window_move_screen (TerminalWindow *source_window,
     g_object_ref_sink (screen_container);
     g_object_ref_sink (screen);
 
-    detach_tab = TRUE;
-
-    terminal_window_remove_screen (source_window, screen);
+    remove_screen_internal (source_window, screen, TRUE);
 
     /* Now we can safely remove the screen from the container and let the container die */
     gtk_container_remove (GTK_CONTAINER (gtk_widget_get_parent (GTK_WIDGET (screen))), GTK_WIDGET (screen));
@@ -3034,11 +3027,12 @@ terminal_window_get_active (TerminalWindow *window)
 static gboolean
 notebook_button_press_cb (GtkWidget *widget,
                           GdkEventButton *event,
-                          GSettings *settings)
+                          gpointer user_data)
 {
     TerminalWindow *window = TERMINAL_WINDOW (gtk_widget_get_toplevel (widget));
     TerminalWindowPrivate *priv = window->priv;
     GtkNotebook *notebook = GTK_NOTEBOOK (widget);
+    GSettings *settings = terminal_app_get_global_settings (terminal_app_get ());
     GtkWidget *tab;
     GtkWidget *menu;
     GtkAction *action;
@@ -3122,8 +3116,9 @@ notebook_button_press_cb (GtkWidget *widget,
 static gboolean
 window_key_press_cb (GtkWidget *widget,
                      GdkEventKey *event,
-                     GSettings *settings)
+                     gpointer user_data)
 {
+    GSettings *settings = terminal_app_get_global_settings (terminal_app_get ());
     if (g_settings_get_boolean (settings, "ctrl-tab-switch-tabs") &&
         event->state & GDK_CONTROL_MASK)
     {
@@ -3732,7 +3727,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
     int n_tabs;
     char *confirm_msg;
 
-    if (!g_settings_get_boolean (settings_global, "confirm-window-close"))
+    if (!g_settings_get_boolean (terminal_app_get_global_settings (terminal_app_get ()), "confirm-window-close"))
         return FALSE;
 
     if (screen)
