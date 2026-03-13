@@ -29,6 +29,9 @@ void terminal_accels_init (void);
 
 void terminal_accels_shutdown (void);
 
+/* Set up accelerators for GActions */
+void terminal_accels_set_gaction_accels (GtkApplication *app);
+
 void terminal_edit_keys_dialog_show (GtkWindow *transient_parent);
 
 G_END_DECLS

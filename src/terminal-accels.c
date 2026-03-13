@@ -379,6 +379,7 @@ static gboolean binding_from_value  (GVariant        *value,
                                      GdkModifierType *accelerator_mods);
 
 static gboolean sync_idle_cb (gpointer data);
+static void update_gaction_accel_for_key (const gchar *gsettings_key);
 
 static guint sync_idle_id = 0;
 static GtkAccelGroup *notification_group = NULL;
@@ -577,6 +578,9 @@ keys_change_notify (GSettings *settings,
 	 */
 	if (edit_keys_store)
 		gtk_tree_model_foreach (GTK_TREE_MODEL (edit_keys_store), update_model_foreach, key_entry);
+
+	/* Also update GAction accelerator if this key has one */
+	update_gaction_accel_for_key (key);
 
 	g_variant_unref(val);
 }
@@ -1090,4 +1094,108 @@ terminal_edit_keys_dialog_show (GtkWindow *transient_parent)
 done:
 	gtk_window_set_transient_for (GTK_WINDOW (edit_keys_dialog), transient_parent);
 	gtk_window_present (GTK_WINDOW (edit_keys_dialog));
+}
+
+/* GAction accelerator mapping
+ * Maps GSettings keys to GAction names for gtk_application_set_accels_for_action
+ */
+typedef struct {
+	const char *gsettings_key;
+	const char *action_name;
+} GActionAccelEntry;
+
+static const char *
+get_gaction_name_for_gsettings_key (const gchar *gsettings_key);
+
+static void
+update_gaction_accel_for_key (const gchar *gsettings_key)
+{
+	GApplication *app;
+	const char *action_name;
+	char *binding;
+	const char *accels[2] = { NULL, NULL };
+
+	app = g_application_get_default ();
+	if (!GTK_IS_APPLICATION (app))
+		return;
+
+	action_name = get_gaction_name_for_gsettings_key (gsettings_key);
+	if (!action_name)
+		return;
+
+	binding = g_settings_get_string (settings_keybindings, gsettings_key);
+
+	if (binding && *binding && g_strcmp0 (binding, "disabled") != 0)
+		accels[0] = binding;
+
+	gtk_application_set_accels_for_action (GTK_APPLICATION (app), action_name, accels);
+
+	g_free (binding);
+}
+
+static const GActionAccelEntry gaction_accels[] = {
+	{ KEY_NEW_TAB,              "win.new-tab" },
+	{ KEY_NEW_WINDOW,           "app.new-window" },
+	{ KEY_CLOSE_TAB,            "win.close-tab" },
+	{ KEY_CLOSE_WINDOW,         "win.close-window" },
+	{ KEY_COPY,                 "win.copy" },
+	{ KEY_PASTE,                "win.paste" },
+	{ KEY_SELECT_ALL,           "win.select-all" },
+	{ KEY_FULL_SCREEN,          "win.fullscreen" },
+	{ KEY_TOGGLE_MENUBAR,       "win.menubar" },
+	{ KEY_PREV_TAB,             "win.prev-tab" },
+	{ KEY_NEXT_TAB,             "win.next-tab" },
+	{ KEY_MOVE_TAB_LEFT,        "win.move-tab-left" },
+	{ KEY_MOVE_TAB_RIGHT,       "win.move-tab-right" },
+	{ KEY_SEARCH_FIND_NEXT,     "win.find-next" },
+	{ KEY_SEARCH_FIND_PREVIOUS, "win.find-prev" },
+	{ KEY_RESET,                "win.reset" },
+	{ KEY_RESET_AND_CLEAR,      "win.reset-clear" },
+	{ KEY_HELP,                 "app.help" },
+};
+
+static const char *
+get_gaction_name_for_gsettings_key (const gchar *gsettings_key)
+{
+	guint i;
+
+	for (i = 0; i < G_N_ELEMENTS (gaction_accels); i++)
+	{
+		if (g_strcmp0 (gaction_accels[i].gsettings_key, gsettings_key) == 0)
+			return gaction_accels[i].action_name;
+	}
+
+	return NULL;
+}
+
+void
+terminal_accels_set_gaction_accels (GtkApplication *app)
+{
+	guint i;
+
+	g_return_if_fail (GTK_IS_APPLICATION (app));
+	g_return_if_fail (settings_keybindings != NULL);
+
+	for (i = 0; i < G_N_ELEMENTS (gaction_accels); i++)
+	{
+		const GActionAccelEntry *entry = &gaction_accels[i];
+		char *binding;
+		const char *accels[2] = { NULL, NULL };
+
+		binding = g_settings_get_string (settings_keybindings, entry->gsettings_key);
+
+		/* Check if binding is valid (not empty, not "disabled") */
+		if (binding && *binding && g_strcmp0 (binding, "disabled") != 0)
+		{
+			accels[0] = binding;
+			gtk_application_set_accels_for_action (app, entry->action_name, accels);
+		}
+		else
+		{
+			/* Set empty accelerator list (clears any existing) */
+			gtk_application_set_accels_for_action (app, entry->action_name, accels);
+		}
+
+		g_free (binding);
+	}
 }
