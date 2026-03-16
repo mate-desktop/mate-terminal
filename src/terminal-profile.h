@@ -189,6 +189,9 @@ gboolean          terminal_profile_modify_palette_entry   (TerminalProfile *prof
         guint            i,
         const GdkRGBA  *color);
 
+gboolean rgba_equal (const GdkRGBA *a,
+                     const GdkRGBA *b);
+
 G_END_DECLS
 
 #endif /* TERMINAL_PROFILE_H */

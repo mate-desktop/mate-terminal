@@ -380,8 +380,8 @@ profile_colors_notify_scheme_combo_cb (TerminalProfile *profile,
 	{
 		for (i = 0; i < G_N_ELEMENTS (color_schemes); ++i)
 		{
-			if (gdk_rgba_equal (&fg, &color_schemes[i].foreground) &&
-			        gdk_rgba_equal (&bg, &color_schemes[i].background))
+			if (rgba_equal (fg, &color_schemes[i].foreground) &&
+			        rgba_equal (bg, &color_schemes[i].background))
 				break;
 		}
 	}
