@@ -5,13 +5,14 @@
 # 
 # Translators:
 # Mikko Harhanen <gitti@mikkoharhanen.fi>, 2018
-# Lasse Liehu <larso@gmx.com>, 2018
+# Lasse Liehu-Inui <larso@gmx.com>, 2018
 # Riku Viitanen <riisseli4@gmail.com>, 2018
 # Ammuu5, 2018
 # nomen omen, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Eslam Ali <talvikahvi@gmail.com>, 2021
 # Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021
+# Tommi Nieminen <translator@legisign.org>, 2026
 # 
 msgid ""
 msgstr ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
 "PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +44,10 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"MATEn pääte on pääte-emulointisovellus, jota voi käyttää UNIX-komentotulkin "
+"käyttöön MATE-ympäristössä. MATEn pääte emuloi X Consortiumin xterm-"
+"ohjelmaa. Se tukee läpinäkyviä taustoja, useampien päätteiden avaamista "
+"yhteen ikkunaan (välilehdille) sekä napsautettavia verkko-osoitteita."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -50,6 +55,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"MATEn pääte on haarautettu GNOMEn päätteestä ja on osa MATE-"
+"työpöytäympäristöä. Halutessasi lisätietoa MATEsta ja MATEn päätteestä, käy "
+"projektin kotisivulla."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2287
@@ -79,6 +87,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Päätteessä on yhä prosessi käynnissä.\n"
+"Päätteen sulkeminen tappaa sen."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -904,6 +914,9 @@ msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Jos tosi, hiirikohdistimen alla olevat verkko-osoitteet korostetaan, ja ne "
+"voi avata napsauttamalla hiirtä yhdessä muunnosnäppäimen kanssa tai "
+"kontekstivalikosta."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -1678,7 +1691,7 @@ msgstr ""
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Korosta _hiirikohdistimen alla olevat verkko-osoitteet"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1926,7 +1939,7 @@ msgstr "_Arvonimi:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_OK"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2849,10 +2862,12 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Joissakin tämän ikkunan päätteissä on yhä prosesseja käynnissä. Ikkunan "
+"sulkeminen tappaa ne kaikki."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "Ikkunassa on auki useita välilehtiä."
 
 #: src/terminal-window.c:3721
 msgid "Close this terminal?"
@@ -2880,6 +2895,8 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"MATEn pääte on pääte-emulaattori MATE-työpöytäympäristöön. Sen "
+"voimanlähteenä on Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"
@@ -2894,6 +2911,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Tekijänoikeudet © 2002–2004 Havoc Pennington\n"
+"Tekijänoikeudet © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Tekijänoikeudet © 2006 Guilherme de S. Pastore\n"
+"Tekijänoikeudet © 2007–2010 Christian Persch\n"
+"Tekijänoikeudet © 2011 Perberos\n"
+"Tekijänoikeudet © 2012–2021 MATEn kehittäjät"
 
 #: src/terminal-window.c:4546
 msgid "translator-credits"
