@@ -39,14 +39,14 @@ typedef struct _TerminalWindowPrivate TerminalWindowPrivate;
 
 struct _TerminalWindow
 {
-	GtkWindow parent_instance;
+	GtkApplicationWindow parent_instance;
 
 	TerminalWindowPrivate *priv;
 };
 
 struct _TerminalWindowClass
 {
-	GtkWindowClass parent_class;
+	GtkApplicationWindowClass parent_class;
 
 };
 
@@ -55,8 +55,6 @@ GType terminal_window_get_type (void) G_GNUC_CONST;
 TerminalWindow* terminal_window_new (void);
 
 void terminal_window_set_is_restored (TerminalWindow *window);
-
-GtkUIManager *terminal_window_get_ui_manager (TerminalWindow *window);
 
 void terminal_window_add_screen (TerminalWindow *window,
                                  TerminalScreen *screen,
@@ -109,6 +107,12 @@ terminal_window_update_copy_selection (TerminalScreen *screen,
 
 TerminalWindow *terminal_window_get_latest_focused (TerminalWindow *window1,
                                                     TerminalWindow *window2);
+
+/* Public functions for GAction callbacks */
+void terminal_window_show_find_dialog (TerminalWindow *window);
+void terminal_window_show_set_title_dialog (TerminalWindow *window);
+void terminal_window_detach_screen (TerminalWindow *window, TerminalScreen *screen);
+void terminal_window_show_about_dialog (GtkWindow *parent);
 
 G_END_DECLS
 
