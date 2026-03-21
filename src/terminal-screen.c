@@ -1761,24 +1761,46 @@ terminal_screen_button_press (GtkWidget      *widget,
 		}
 	}
 
-	// right button with no Ctrl, Alt or Shift
-	if (event->button == 3 &&
-	        (state & (GDK_SHIFT_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK)) == 0)
+	// right button with Shift, no Ctrl or Alt
+	if (event->button == 3)
 	{
-		TerminalScreenPopupInfo *info;
+		if (!(state & (GDK_SHIFT_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK)))
+		{
+			if (button_press_event && button_press_event(widget, event))
+				return TRUE;
 
-		info = terminal_screen_popup_info_new (screen);
-		info->button = event->button;
-		info->state = state;
-		info->timestamp = event->time;
-		info->url = url; /* adopted */
-		info->hyperlink = hyperlink; /* adopted */
-		info->flavor = url_flavor;
+			TerminalScreenPopupInfo *info;
 
-		g_signal_emit (screen, signals[SHOW_POPUP_MENU], 0, info);
-		terminal_screen_popup_info_unref (info);
+			info = terminal_screen_popup_info_new (screen);
+			info->button = event->button;
+			info->state = state;
+			info->timestamp = event->time;
+			info->url = url; /* adopted */
+			info->hyperlink = hyperlink; /* adopted */
+			info->flavor = url_flavor;
 
-		return TRUE;
+			g_signal_emit (screen, signals[SHOW_POPUP_MENU], 0, info);
+			terminal_screen_popup_info_unref (info);
+
+			return TRUE;
+		}
+		else if (!(state & (GDK_CONTROL_MASK | GDK_MOD1_MASK)))
+		{
+			TerminalScreenPopupInfo *info;
+
+			info = terminal_screen_popup_info_new (screen);
+			info->button = event->button;
+			info->state = state;
+			info->timestamp = event->time;
+			info->url = url; /* adopted */
+			info->hyperlink = hyperlink; /* adopted */
+			info->flavor = url_flavor;
+
+			g_signal_emit (screen, signals[SHOW_POPUP_MENU], 0, info);
+			terminal_screen_popup_info_unref (info);
+
+			return TRUE;
+		}
 	}
 
 	g_free (url);
