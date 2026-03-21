@@ -311,7 +311,7 @@ static GQuark gsettings_key_quark;
 G_DEFINE_TYPE_WITH_PRIVATE (TerminalProfile, terminal_profile, G_TYPE_OBJECT);
 
 /* gdk_rgba_equal is too strict! */
-static gboolean
+gboolean
 rgba_equal (const GdkRGBA *a,
             const GdkRGBA *b)
 {
