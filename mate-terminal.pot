@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-terminal 1.27.1\n"
+"Project-Id-Version: mate-terminal 1.28.3\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
-"POT-Creation-Date: 2023-09-10 09:13+0200\n"
+"POT-Creation-Date: 2026-03-09 13:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
-#: src/terminal-options.c:189 src/terminal-window.c:4531
+#: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:2
+#: src/terminal-options.c:193 src/terminal-window.c:4590
 msgid "MATE Terminal"
 msgstr ""
 
@@ -40,12 +40,12 @@ msgid ""
 "please visit the project's home page."
 msgstr ""
 
-#: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
-#: src/terminal-profile.c:161 src/terminal-window.c:2287
+#: mate-terminal.desktop.in.in:3 src/terminal-accels.c:351 src/terminal.c:517
+#: src/terminal-profile.c:161 src/terminal-window.c:2282
 msgid "Terminal"
 msgstr ""
 
-#: mate-terminal.desktop.in.in:5
+#: mate-terminal.desktop.in.in:4
 msgid "Use the command line"
 msgstr ""
 
@@ -54,16 +54,16 @@ msgstr ""
 msgid "_Cancel"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2223
-#: src/terminal-window.c:3719
+#: src/confirm-close-dialog.ui:56 src/terminal-window.c:2218
+#: src/terminal-window.c:3779
 msgid "C_lose Window"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
+#: src/confirm-close-dialog.ui:119 src/terminal-window.c:3778
 msgid "Close this window?"
 msgstr ""
 
-#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
+#: src/confirm-close-dialog.ui:138 src/terminal-window.c:3768
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
@@ -77,8 +77,8 @@ msgstr ""
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:962
-#: src/terminal-options.c:971
+#: src/mate-submodules/libegg/eggsmclient.c:239 src/terminal-options.c:990
+#: src/terminal-options.c:999
 msgid "FILE"
 msgstr ""
 
@@ -104,7 +104,7 @@ msgstr ""
 
 #: src/encodings-dialog.ui:41 src/keybinding-editor.ui:41
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
-#: src/terminal-window.c:1956
+#: src/terminal-window.c:1951
 msgid "_Help"
 msgstr ""
 
@@ -1864,17 +1864,17 @@ msgstr ""
 msgid "Choose base profile"
 msgstr ""
 
-#: src/terminal-app.c:1837
+#: src/terminal-app.c:1840
 #, c-format
 msgid "No such profile \"%s\", using default profile\n"
 msgstr ""
 
-#: src/terminal-app.c:1864
+#: src/terminal-app.c:1867
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr ""
 
-#: src/terminal-app.c:2070
+#: src/terminal-app.c:2073
 msgid "User Defined"
 msgstr ""
 
@@ -2032,7 +2032,7 @@ msgstr ""
 msgid "Current Locale"
 msgstr ""
 
-#: src/terminal-options.c:177
+#: src/terminal-options.c:181
 #, c-format
 msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
@@ -2040,180 +2040,188 @@ msgid ""
 "profile' option\n"
 msgstr ""
 
-#: src/terminal-options.c:209
+#: src/terminal-options.c:213
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
 msgstr ""
 
-#: src/terminal-options.c:347
+#: src/terminal-options.c:351
 msgid "Two roles given for one window"
 msgstr ""
 
-#: src/terminal-options.c:368 src/terminal-options.c:401
+#: src/terminal-options.c:372 src/terminal-options.c:405
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
 msgstr ""
 
-#: src/terminal-options.c:600
+#: src/terminal-options.c:625
 #, c-format
 msgid "\"%s\" is not a valid zoom factor"
 msgstr ""
 
-#: src/terminal-options.c:607
+#: src/terminal-options.c:632
 #, c-format
 msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgstr ""
 
-#: src/terminal-options.c:615
+#: src/terminal-options.c:640
 #, c-format
 msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgstr ""
 
-#: src/terminal-options.c:650
+#: src/terminal-options.c:675
 #, c-format
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
 msgstr ""
 
-#: src/terminal-options.c:811
+#: src/terminal-options.c:837
 msgid "Not a valid terminal config file."
 msgstr ""
 
-#: src/terminal-options.c:824
+#: src/terminal-options.c:850
 msgid "Incompatible terminal config file version."
 msgstr ""
 
-#: src/terminal-options.c:952
+#: src/terminal-options.c:980
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 
-#: src/terminal-options.c:961
+#: src/terminal-options.c:989
 msgid "Load a terminal configuration file"
 msgstr ""
 
-#: src/terminal-options.c:970
+#: src/terminal-options.c:998
 msgid "Save the terminal configuration to a file"
 msgstr ""
 
-#: src/terminal-options.c:985
+#: src/terminal-options.c:1013
 msgid "Open a new window containing a tab with the default profile"
 msgstr ""
 
-#: src/terminal-options.c:994
+#: src/terminal-options.c:1022
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 
-#: src/terminal-options.c:1008
+#: src/terminal-options.c:1036
 msgid "Turn on the menubar"
 msgstr ""
 
-#: src/terminal-options.c:1017
+#: src/terminal-options.c:1045
 msgid "Turn off the menubar"
 msgstr ""
 
-#: src/terminal-options.c:1026
+#: src/terminal-options.c:1054
 msgid "Maximize the window"
 msgstr ""
 
-#: src/terminal-options.c:1035
+#: src/terminal-options.c:1063
 msgid "Full-screen the window"
 msgstr ""
 
-#: src/terminal-options.c:1044
+#: src/terminal-options.c:1072
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
-#: src/terminal-options.c:1045
+#: src/terminal-options.c:1073
 msgid "GEOMETRY"
 msgstr ""
 
-#: src/terminal-options.c:1053
+#: src/terminal-options.c:1081
 msgid "Set the window role"
 msgstr ""
 
-#: src/terminal-options.c:1054
+#: src/terminal-options.c:1082
 msgid "ROLE"
 msgstr ""
 
-#: src/terminal-options.c:1062
+#: src/terminal-options.c:1090
+msgid "Set the window icon"
+msgstr ""
+
+#: src/terminal-options.c:1091
+msgid "ICON"
+msgstr ""
+
+#: src/terminal-options.c:1099
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 
-#: src/terminal-options.c:1076
+#: src/terminal-options.c:1113
 msgid "Execute the argument to this option inside the terminal"
 msgstr ""
 
-#: src/terminal-options.c:1085
+#: src/terminal-options.c:1122
 msgid "Use the given profile instead of the default profile"
 msgstr ""
 
-#: src/terminal-options.c:1086
+#: src/terminal-options.c:1123
 msgid "PROFILE-NAME"
 msgstr ""
 
-#: src/terminal-options.c:1094
+#: src/terminal-options.c:1131
 msgid "Set the terminal title"
 msgstr ""
 
-#: src/terminal-options.c:1095
+#: src/terminal-options.c:1132
 msgid "TITLE"
 msgstr ""
 
-#: src/terminal-options.c:1103
+#: src/terminal-options.c:1140
 msgid "Set the working directory"
 msgstr ""
 
-#: src/terminal-options.c:1104
+#: src/terminal-options.c:1141
 msgid "DIRNAME"
 msgstr ""
 
-#: src/terminal-options.c:1112
+#: src/terminal-options.c:1149
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgstr ""
 
-#: src/terminal-options.c:1113
+#: src/terminal-options.c:1150
 msgid "ZOOM"
 msgstr ""
 
-#: src/terminal-options.c:1364 src/terminal-options.c:1367
+#: src/terminal-options.c:1393 src/terminal-options.c:1396
 msgid "MATE Terminal Emulator"
 msgstr ""
 
-#: src/terminal-options.c:1368
+#: src/terminal-options.c:1397
 msgid "Show MATE Terminal options"
 msgstr ""
 
-#: src/terminal-options.c:1378
+#: src/terminal-options.c:1407
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr ""
 
-#: src/terminal-options.c:1379
+#: src/terminal-options.c:1408
 msgid "Show terminal options"
 msgstr ""
 
-#: src/terminal-options.c:1387
+#: src/terminal-options.c:1416
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr ""
 
-#: src/terminal-options.c:1388
+#: src/terminal-options.c:1417
 msgid "Show per-window options"
 msgstr ""
 
-#: src/terminal-options.c:1396
+#: src/terminal-options.c:1425
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr ""
 
-#: src/terminal-options.c:1397
+#: src/terminal-options.c:1426
 msgid "Show per-terminal options"
 msgstr ""
 
@@ -2291,7 +2299,7 @@ msgstr ""
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
 #.
-#: src/terminal-window.c:619
+#: src/terminal-window.c:614
 #, c-format
 msgid "_%d. %s"
 msgstr ""
@@ -2300,279 +2308,284 @@ msgstr ""
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
 #.
-#: src/terminal-window.c:625
+#: src/terminal-window.c:620
 #, c-format
 msgid "_%c. %s"
 msgstr ""
 
-#: src/terminal-window.c:1948
+#: src/terminal-window.c:1943
 msgid "_File"
 msgstr ""
 
-#: src/terminal-window.c:1949 src/terminal-window.c:1962
-#: src/terminal-window.c:2213
+#: src/terminal-window.c:1944 src/terminal-window.c:1957
+#: src/terminal-window.c:2208
 msgid "Open _Terminal"
 msgstr ""
 
-#: src/terminal-window.c:1950 src/terminal-window.c:1967
-#: src/terminal-window.c:2218
+#: src/terminal-window.c:1945 src/terminal-window.c:1962
+#: src/terminal-window.c:2213
 msgid "Open Ta_b"
 msgstr ""
 
-#: src/terminal-window.c:1951
+#: src/terminal-window.c:1946
 msgid "_Edit"
 msgstr ""
 
-#: src/terminal-window.c:1952
+#: src/terminal-window.c:1947
 msgid "_View"
 msgstr ""
 
-#: src/terminal-window.c:1953
+#: src/terminal-window.c:1948
 msgid "_Search"
 msgstr ""
 
-#: src/terminal-window.c:1954
+#: src/terminal-window.c:1949
 msgid "_Terminal"
 msgstr ""
 
-#: src/terminal-window.c:1955
+#: src/terminal-window.c:1950
 msgid "Ta_bs"
 msgstr ""
 
-#: src/terminal-window.c:1972
+#: src/terminal-window.c:1967
 msgid "New _Profile…"
 msgstr ""
 
-#: src/terminal-window.c:1977
+#: src/terminal-window.c:1972
 msgid "_Save Contents"
 msgstr ""
 
-#: src/terminal-window.c:1982 src/terminal-window.c:2228
+#: src/terminal-window.c:1977 src/terminal-window.c:2223
 msgid "C_lose Tab"
 msgstr ""
 
-#: src/terminal-window.c:1987
+#: src/terminal-window.c:1982
 msgid "_Close Window"
 msgstr ""
 
-#: src/terminal-window.c:1994 src/terminal-window.c:2198
+#: src/terminal-window.c:1989 src/terminal-window.c:2193
 msgid "_Copy"
 msgstr ""
 
-#: src/terminal-window.c:1999 src/terminal-window.c:2203
+#: src/terminal-window.c:1994 src/terminal-window.c:2198
 msgid "_Paste"
 msgstr ""
 
-#: src/terminal-window.c:2004 src/terminal-window.c:2208
+#: src/terminal-window.c:1999 src/terminal-window.c:2203
 msgid "Paste _Filenames"
 msgstr ""
 
-#: src/terminal-window.c:2009
+#: src/terminal-window.c:2004
 msgid "Select _All"
 msgstr ""
 
-#: src/terminal-window.c:2014
+#: src/terminal-window.c:2009
 msgid "P_rofiles…"
 msgstr ""
 
-#: src/terminal-window.c:2019
+#: src/terminal-window.c:2014
 msgid "_Keyboard Shortcuts…"
 msgstr ""
 
-#: src/terminal-window.c:2024
+#: src/terminal-window.c:2019
 msgid "Pr_ofile Preferences"
 msgstr ""
 
-#: src/terminal-window.c:2031
+#: src/terminal-window.c:2026
 msgid "Zoom _In"
 msgstr ""
 
-#: src/terminal-window.c:2036
+#: src/terminal-window.c:2031
 msgid "Zoom _Out"
 msgstr ""
 
-#: src/terminal-window.c:2041
+#: src/terminal-window.c:2036
 msgid "_Normal Size"
 msgstr ""
 
-#: src/terminal-window.c:2048
+#: src/terminal-window.c:2043
 msgid "_Find..."
 msgstr ""
 
-#: src/terminal-window.c:2053
+#: src/terminal-window.c:2048
 msgid "Find Ne_xt"
 msgstr ""
 
-#: src/terminal-window.c:2058
+#: src/terminal-window.c:2053
 msgid "Find Pre_vious"
 msgstr ""
 
-#: src/terminal-window.c:2063
+#: src/terminal-window.c:2058
 msgid "_Clear Highlight"
 msgstr ""
 
-#: src/terminal-window.c:2069
+#: src/terminal-window.c:2064
 msgid "Go to _Line..."
 msgstr ""
 
-#: src/terminal-window.c:2074
+#: src/terminal-window.c:2069
 msgid "_Incremental Search..."
 msgstr ""
 
-#: src/terminal-window.c:2081
+#: src/terminal-window.c:2076
 msgid "Change _Profile"
 msgstr ""
 
-#: src/terminal-window.c:2083
+#: src/terminal-window.c:2078
 msgid "_Previous Profile"
 msgstr ""
 
-#: src/terminal-window.c:2088
+#: src/terminal-window.c:2083
 msgid "_Next Profile"
 msgstr ""
 
-#: src/terminal-window.c:2093
+#: src/terminal-window.c:2088
 msgid "_Set Title…"
 msgstr ""
 
-#: src/terminal-window.c:2097
+#: src/terminal-window.c:2092
 msgid "Set _Character Encoding"
 msgstr ""
 
-#: src/terminal-window.c:2099
+#: src/terminal-window.c:2094
 msgid "_Reset"
 msgstr ""
 
-#: src/terminal-window.c:2104
+#: src/terminal-window.c:2099
 msgid "Reset and C_lear"
 msgstr ""
 
-#: src/terminal-window.c:2111
+#: src/terminal-window.c:2106
 msgid "_Add or Remove…"
 msgstr ""
 
-#: src/terminal-window.c:2118
+#: src/terminal-window.c:2113
 msgid "_Previous Tab"
 msgstr ""
 
-#: src/terminal-window.c:2123
+#: src/terminal-window.c:2118
 msgid "_Next Tab"
 msgstr ""
 
-#: src/terminal-window.c:2128
+#: src/terminal-window.c:2123
 msgid "Move Tab _Left"
 msgstr ""
 
-#: src/terminal-window.c:2133
+#: src/terminal-window.c:2128
 msgid "Move Tab _Right"
 msgstr ""
 
-#: src/terminal-window.c:2138
+#: src/terminal-window.c:2133
 msgid "_Detach tab"
 msgstr ""
 
-#: src/terminal-window.c:2145
+#: src/terminal-window.c:2140
 msgid "_Contents"
 msgstr ""
 
-#: src/terminal-window.c:2150
+#: src/terminal-window.c:2145
 msgid "_About"
 msgstr ""
 
-#: src/terminal-window.c:2157
+#: src/terminal-window.c:2152
 msgid "_Open Hyperlink"
 msgstr ""
 
-#: src/terminal-window.c:2162
+#: src/terminal-window.c:2157
 msgid "_Copy Hyperlink Address"
 msgstr ""
 
-#: src/terminal-window.c:2167
+#: src/terminal-window.c:2162
 msgid "_Send Mail To…"
 msgstr ""
 
-#: src/terminal-window.c:2172
+#: src/terminal-window.c:2167
 msgid "_Copy E-mail Address"
 msgstr ""
 
-#: src/terminal-window.c:2177
+#: src/terminal-window.c:2172
 msgid "C_all To…"
 msgstr ""
 
-#: src/terminal-window.c:2182
+#: src/terminal-window.c:2177
 msgid "_Copy Call Address"
 msgstr ""
 
-#: src/terminal-window.c:2187
+#: src/terminal-window.c:2182
 msgid "_Open Link"
 msgstr ""
 
-#: src/terminal-window.c:2192
+#: src/terminal-window.c:2187
 msgid "_Copy Link Address"
 msgstr ""
 
-#: src/terminal-window.c:2196
+#: src/terminal-window.c:2191
 msgid "P_rofiles"
 msgstr ""
 
-#: src/terminal-window.c:2233
+#: src/terminal-window.c:2228
 msgid "L_eave Full Screen"
 msgstr ""
 
-#: src/terminal-window.c:2237
+#: src/terminal-window.c:2232
 msgid "_Input Methods"
 msgstr ""
 
-#: src/terminal-window.c:2244
+#: src/terminal-window.c:2239
 msgid "Show _Menubar"
 msgstr ""
 
-#: src/terminal-window.c:2250
+#: src/terminal-window.c:2245
 msgid "_Full Screen"
 msgstr ""
 
-#: src/terminal-window.c:3705
+#: src/terminal-window.c:2860
+#, c-format
+msgid "Could not load icon from \"%s\": %s\n"
+msgstr ""
+
+#: src/terminal-window.c:3765
 msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.c:3711
+#: src/terminal-window.c:3771
 msgid "There are multiple tabs open in this window."
 msgstr ""
 
-#: src/terminal-window.c:3721
+#: src/terminal-window.c:3781
 msgid "Close this terminal?"
 msgstr ""
 
-#: src/terminal-window.c:3722
+#: src/terminal-window.c:3782
 msgid "C_lose Terminal"
 msgstr ""
 
-#: src/terminal-window.c:3792
+#: src/terminal-window.c:3852
 msgid "Could not save contents"
 msgstr ""
 
-#: src/terminal-window.c:3816
+#: src/terminal-window.c:3876
 msgid "Save as..."
 msgstr ""
 
-#: src/terminal-window.c:4511
+#: src/terminal-window.c:4570
 msgid "Contributors:"
 msgstr ""
 
-#: src/terminal-window.c:4527
+#: src/terminal-window.c:4586
 #, c-format
 msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 
-#: src/terminal-window.c:4533
+#: src/terminal-window.c:4592
 msgid "About MATE Terminal"
 msgstr ""
 
-#: src/terminal-window.c:4534
+#: src/terminal-window.c:4593
 msgid ""
 "Copyright © 2002–2004 Havoc Pennington\n"
 "Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
@@ -2582,6 +2595,6 @@ msgid ""
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/terminal-window.c:4546
+#: src/terminal-window.c:4605
 msgid "translator-credits"
 msgstr ""
