@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # jeremy shields <jeremy.shields@orange.fr>, 2018
 # Nicolas Dobigeon, 2018
 # Lothaire B <translations@lothai.re>, 2018
@@ -18,20 +15,26 @@
 # Étienne Deparis <etienne@depar.is>, 2021
 # Tubuntu, 2021
 # David D, 2024
-# 
+# Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: David D, 2024\n"
-"Language-Team: French (https://app.transifex.com/mate/teams/13566/fr/)\n"
+"PO-Revision-Date: 2026-03-31 10:58+0000\n"
+"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
+"Language-Team: French <https://translate.fedoraproject.org/projects/mate-"
+"terminal/application-master/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
+"1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -93,8 +96,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
-"Il y a un processus actif dans ce terminal. Fermer le terminal "
-"l'interrompra."
+"Il y a un processus actif dans ce terminal.\n"
+"Fermer le terminal l'interrompra."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -467,7 +470,7 @@ msgstr "Nom lisible du profil."
 msgid "Whether to show menubar in new windows/tabs"
 msgstr ""
 "Indique s'il faut afficher la barre de menus dans les nouvelles fenêtres et "
-"les nouveaux onglets."
+"les nouveaux onglets"
 
 #: src/org.mate.terminal.gschema.xml.in:99
 msgid ""
@@ -738,7 +741,7 @@ msgid ""
 "(argv[0] will have a hyphen in front of it.)"
 msgstr ""
 "Si vrai, la commande lancée dans le terminal le sera comme un shell de "
-"connexion (argv[0] sera précédé d'un tiret)."
+"connexion. (argv[0] sera précédé d'un tiret)"
 
 #: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
@@ -807,8 +810,9 @@ msgid ""
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr ""
 "Le terminal a une palette de 16 couleurs que les applications texte peuvent "
-"utiliser. Cette palette est représentée par une liste de couleurs (en "
-"valeurs hexadécimales comme « #FF00FF ») séparées par des deux-points \":\"."
+"utiliser. Cette palette est représentée par une liste de couleurs séparées "
+"par des deux-points \":\". Les couleurs doivent être au format hexadécimal "
+"tel que « #FF00FF »"
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
@@ -1745,7 +1749,7 @@ msgstr "Mettre en surbrillance les _URL sous le pointeur de la souris"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
-msgstr "Clignotement du curseur:"
+msgstr "Clignotement du curseur :"
 
 #: src/profile-preferences.ui:576
 msgid "Cursor _shape:"
@@ -1905,7 +1909,7 @@ msgstr "_Ombrage transparent ou image d'arrière-plan :"
 
 #: src/profile-preferences.ui:2017
 msgid "S_hade transparent background:"
-msgstr "_Ombrage transparent comme arrière-plan"
+msgstr "_Ombrage transparent comme arrière-plan :"
 
 #: src/profile-preferences.ui:2038
 msgid "<small><i>None</i></small>"
@@ -1989,7 +1993,7 @@ msgstr "_Titre :"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr "_OK"
+msgstr "_Ok"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2670,9 +2674,8 @@ msgid ""
 "Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 "Vous devez avoir reçu une copie de la Licence Publique Générale GNU en même "
-"temps que MATE Terminal ; si ce n'est pas le cas, écrivez à la Free Software"
-" Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 "
-"USA."
+"temps que MATE Terminal ; si ce n'est pas le cas, écrivez à la Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
@@ -2921,8 +2924,8 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
-"Il y a des processus actifs dans certains terminaux de cette fenêtre. Fermer"
-" la fenêtre les interrompra tous."
+"Il y a des processus actifs dans certains terminaux de cette fenêtre.\n"
+"Fermer la fenêtre les interrompra tous."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
@@ -2955,7 +2958,8 @@ msgid ""
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
 "MATE Terminal est un émulateur de terminal pour l'environnement de bureau "
-"MATE propulsé par Virtual Terminal %d. %d. %d"
+"MATE.\n"
+"Propulsé par Virtual TErminal %d. %d. %d"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"
@@ -2981,7 +2985,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Contributeurs au projet MATE :\n"
-"Voir https://www.transifex.com/mate/teams/13566/fr/\n"
+"Voir https://translate.fedoraproject.org/translate/mate-terminal/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
 "Vincent Renardias <vincent@ldsol.com>, 1998-2000.\n"
