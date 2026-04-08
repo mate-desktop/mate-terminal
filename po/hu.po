@@ -1,32 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Takler Tamás <taklertamas@gmail.com>, 2018
 # István Szőllősi <szollosi.istv4n@gmail.com>, 2018
 # Falu <info@falu.me>, 2018
 # KAMI KAMI <kami911@gmail.com>, 2018
 # Rezső Páder <rezso@rezso.net>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Balázs Meskó <meskobalazs@mailbox.org>, 2021
+# Balázs Meskó <meskobalazs@mailbox.org>, 2021, 2026.
 # Kopec Damian <damikope@gmail.com>, 2021
 # László Varga, 2024
-# 
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: László Varga, 2024\n"
-"Language-Team: Hungarian (https://app.transifex.com/mate/teams/13566/hu/)\n"
+"PO-Revision-Date: 2026-04-02 18:58+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
+"Language-Team: Hungarian <https://translate.fedoraproject.org/projects/mate-"
+"terminal/application-master/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -44,6 +45,11 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"A MATE Terminál egy terminálemulátor, amely segítségével hozzáfér egy UNIX-"
+"parancssorhoz a MATE asztali környezetben. A MATE Terminál az X Consortium "
+"által kifejlesztett xterm programot emulálja. Támogatja az áttetsző "
+"háttérképeket, a több terminál egyetlen ablakban való megnyitását (lapok) és "
+"a kattintható webcímeket."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -51,6 +57,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"A MATE Terminál a GNOME Terminál forkja, és a MATE asztali környezet része. "
+"Ha szeretne többet megtudni a MATE-ről és a MATE Terminálról, akkor keresse "
+"fel a projekt honlapját."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2287
@@ -73,13 +82,15 @@ msgstr "_Ablak bezárása"
 
 #: src/confirm-close-dialog.ui:119 src/terminal-window.c:3718
 msgid "Close this window?"
-msgstr "Bezárja ezt az ablakot"
+msgstr "Bezárja ezt az ablakot?"
 
 #: src/confirm-close-dialog.ui:138 src/terminal-window.c:3708
 msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Még van futó folyamat ebben a terminálban.\n"
+"A terminál bezárása ezeket ki fogja lőni."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -286,7 +297,7 @@ msgstr "_Keresés"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
-msgstr "Keresés _erre: "
+msgstr "Keresés _erre:"
 
 #: src/find-dialog.ui:138
 msgid "_Match case"
@@ -314,8 +325,7 @@ msgstr "Gyorsbillentyűk"
 
 #: src/keybinding-editor.ui:93
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
-msgstr ""
-"Me_nü-hívóbetűk engedélyezése (például Alt+F a Fájl menü megnyitásához)"
+msgstr "Me_nühívóbetűk engedélyezése (például Alt+F a Fájl menü megnyitásához)"
 
 #: src/keybinding-editor.ui:132
 msgid "Enable the _menu shortcut key (F10 by default)"
@@ -394,7 +404,7 @@ msgid ""
 msgstr ""
 "A Karakterkódolás almenüben a lehetséges kódolások egy részhalmaza jelenik "
 "meg. Ez az ott megjelenő kódolások listája. A „Jelenlegi” nevű kódolás a "
-"jelenlegi locale kódolását jelenti."
+"jelenlegi területi beállítás kódolását jelenti."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
@@ -405,28 +415,28 @@ msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
-"Kérjen-e megerősítést egy egynél több megnyitott lappal vagy előtérben futó "
+"Kérjen-e megerősítést az egynél több megnyitott lappal vagy előtérben futó "
 "alfolymattal rendelkező terminálablak bezárásakor."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
-msgstr "Fülek bezárása középső kattintással"
+msgstr "Lapok bezárása középső kattintással"
 
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
-msgstr "Ha igaz, akkor engedélyezi a fülek bezárását középső kattintással."
+msgstr "Ha igaz, akkor engedélyezi a lapok bezárását középső kattintással."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
-msgstr "Fülek váltása ezzel: [Ctrl]+[Tab]"
+msgstr "Lapok váltása ezzel: [Ctrl]+[Tab]"
 
 #: src/org.mate.terminal.gschema.xml.in:85
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
-"Ha igaz, lehetővé teszi a fülváltást használva a  [Ctrl+Tab] és "
-"[Ctrl+Shift+Tab]."
+"Ha igaz, lehetővé teszi a lapváltást a [Ctrl+Tab] és a [Ctrl+Shift+Tab] "
+"használatával."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -533,8 +543,8 @@ msgid ""
 "depending on the title_mode setting."
 msgstr ""
 "A terminálablak vagy lap címe. Ez a cím helyettesíthető vagy kombinálható a "
-"terminálban futó alkalmazás által beállítottal, függően a title_mode "
-"beállítástól."
+"terminálban futó alkalmazás által beállítottal, a title_mode beállítástól "
+"függően."
 
 #: src/org.mate.terminal.gschema.xml.in:133
 msgid "Whether to allow bold text"
@@ -629,8 +639,8 @@ msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr ""
-"Hol legyen a terminál görgetősávja. A lehetőségek: „balra”, „jobbra”  és "
-"„rejtett”."
+"Hol legyen a terminál görgetősávja. A lehetőségek: „balra”, „jobbra” és „"
+"rejtett”."
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
@@ -906,13 +916,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Egérmutató alatti webcímek kiemelése"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Ha igaz, az egérmutató alatti webcímek ki lesznek emelve, és a Control + bal "
+"kattintással meg lehet nyitni őket, vagy helyi menüvel is használhatóak."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -1082,8 +1094,8 @@ msgid ""
 msgstr ""
 "Gyorsbillentyű a keresőkifejezés következő előfordulásának megkereséséhez a "
 "terminálban. Karakterláncként kifejezve, a GTK+ erőforrásfájlokban "
-"használttal azonos formában. Ha ezt a beállítást „disabled” értékre állítja,"
-" akkor ehhez az művelethez nem lesz gyorsbillentyű. "
+"használttal azonos formában. Ha ezt a beállítást „disabled” értékre állítja, "
+"akkor ehhez az művelethez nem lesz gyorsbillentyű."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
@@ -1098,8 +1110,8 @@ msgid ""
 msgstr ""
 "Gyorsbillentyű a keresőkifejezés előző előfordulásának megkereséséhez a "
 "terminálban. Karakterláncként kifejezve, a GTK+ erőforrásfájlokban "
-"használttal azonos formában. Ha ezt a beállítást „disabled” értékre állítja,"
-" akkor ehhez az művelethez nem lesz gyorsbillentyű. "
+"használttal azonos formában. Ha ezt a beállítást „disabled” értékre állítja, "
+"akkor ehhez az művelethez nem lesz gyorsbillentyű."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1657,11 +1669,11 @@ msgstr "A kijelölt szöveg másolása a _vágólapra"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "Egérmutató alatti _S/Key kihívások kiemelése"
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Egérmutató alatti _webcímek kiemelése"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -2014,11 +2026,11 @@ msgstr "Váltás a következő lapra"
 
 #: src/terminal-accels.c:267
 msgid "Move Tab to the Left"
-msgstr "Lap mozgatása jobbra"
+msgstr "Lap áthelyezése jobbra"
 
 #: src/terminal-accels.c:271
 msgid "Move Tab to the Right"
-msgstr "Lap mozgatása balra"
+msgstr "Lap áthelyezése balra"
 
 #: src/terminal-accels.c:275
 msgid "Detach Tab"
@@ -2115,7 +2127,7 @@ msgstr "Kattintson ide a profil kiválasztásához"
 
 #: src/terminal-app.c:608
 msgid "Profile list"
-msgstr "Profil lista"
+msgstr "Profillista"
 
 #: src/terminal-app.c:685
 #, c-format
@@ -2156,7 +2168,7 @@ msgstr "Felhasználó által megadott"
 #: src/terminal.c:512
 #, c-format
 msgid "Failed to parse arguments: %s\n"
-msgstr "A paraméterek feldolgozása meghiúsult: %s\n"
+msgstr "Nem sikerült a paraméterek feldolgozása: %s\n"
 
 #: src/terminal-encoding.c:54 src/terminal-encoding.c:67
 #: src/terminal-encoding.c:81 src/terminal-encoding.c:103
@@ -2276,7 +2288,7 @@ msgstr "Perzsa"
 
 #: src/terminal-encoding.c:99
 msgid "Gujarati"
-msgstr "Gudzsarati"
+msgstr "Gudzsaráti"
 
 #: src/terminal-encoding.c:100
 msgid "Gurmukhi"
@@ -2289,7 +2301,7 @@ msgstr "Izlandi"
 #: src/terminal-encoding.c:108 src/terminal-encoding.c:111
 #: src/terminal-encoding.c:120
 msgid "Vietnamese"
-msgstr "Vietnami"
+msgstr "Vietnámi"
 
 #: src/terminal-encoding.c:109
 msgid "Thai"
@@ -2835,6 +2847,8 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Még vannak futó folyamatok az ablak termináljain.\n"
+"Az ablak bezárása ezeket mind ki fogja lőni."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
@@ -2866,6 +2880,8 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"A MATE Terminál egy terminálemulátor a MATE asztali környezethez.\n"
+"A motorháztető alatt: Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"
@@ -2880,6 +2896,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 a MATE fejlesztői"
 
 #: src/terminal-window.c:4546
 msgid "translator-credits"
