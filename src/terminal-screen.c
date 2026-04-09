@@ -1881,61 +1881,39 @@ terminal_screen_get_dynamic_icon_title (TerminalScreen *screen)
  * terminal_screen_get_current_dir:
  * @screen:
  *
- * Tries to determine the current working directory of the foreground process
- * in @screen's PTY, falling back to the current working directory of the
- * primary child.
+ * Tries to determine the current working directory of the terminal.
+ * First tries OSC 7 (current directory URI set by the shell), then
+ * falls back to reading /proc for the child process's cwd, and
+ * finally to the initial working directory.
  *
  * Returns: a newly allocated string containing the current working directory,
  *   or %NULL on failure
  */
-char*
+char *
 terminal_screen_get_current_dir (TerminalScreen *screen)
 {
-	TerminalScreenPrivate *priv = screen->priv;
-	char *cwd;
-	VtePty *pty;
+	const char *uri;
 
-	pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
-	if (pty != NULL)
+	/* Prefer OSC 7 current directory URI if the shell has set it */
+	uri = vte_terminal_get_current_directory_uri (VTE_TERMINAL (screen));
+	if (uri != NULL)
+		return g_filename_from_uri (uri, NULL, NULL);
+
+	/* Fallback to /proc-based detection */
+	if (vte_terminal_get_pty (VTE_TERMINAL (screen)) != NULL)
 	{
-#if 0
-		/* Get the foreground process ID */
-		cwd = cwd_of_pid (tcgetpgrp (priv->pty_fd));
-		if (cwd != NULL)
-			return cwd;
-#endif
+		char *cwd;
 
-		/* If that didn't work, try falling back to the primary child. See bug #575184. */
-		cwd = cwd_of_pid (priv->child_pid);
+		cwd = cwd_of_pid (screen->priv->child_pid);
 		if (cwd != NULL)
 			return cwd;
 	}
 
+	/* Further fallback to initial working directory */
+	if (screen->priv->initial_working_directory)
+		return g_strdup (screen->priv->initial_working_directory);
+
 	return NULL;
-}
-
-/**
- * terminal_screen_get_current_dir_with_fallback:
- * @screen:
- *
- * Like terminal_screen_get_current_dir(), but falls back to returning
- * @screen's initial working directory, with a further fallback to the
- * user's home directory.
- *
- * Returns: a newly allocated string containing the current working directory,
- *   or %NULL on failure
- */
-char*
-terminal_screen_get_current_dir_with_fallback (TerminalScreen *screen)
-{
-	VtePty *pty;
-	TerminalScreenPrivate *priv = screen->priv;
-
-	pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
-	if (pty == NULL)
-		return g_strdup (priv->initial_working_directory);
-
-	return terminal_screen_get_current_dir (screen);
 }
 
 void
