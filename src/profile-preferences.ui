@@ -352,6 +352,60 @@ Author: Wolfgang Ulbrich
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkBox" id="hbox-profile-icon">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="spacing">12</property>
+                    <child>
+                      <object class="GtkLabel" id="profile-icon-label">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="valign">center</property>
+                        <property name="label" translatable="yes">Profile _icon:</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="mnemonic-widget">profile-icon-entry</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="profile-icon-entry">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="placeholder-text" translatable="yes">Icon name or file path</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="profile-icon-browse-button">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="label" translatable="yes">_Browse…</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkCheckButton" id="system-font-checkbutton">
                     <property name="label" translatable="yes">_Use the system fixed width font</property>
                     <property name="visible">True</property>
@@ -364,7 +418,7 @@ Author: Wolfgang Ulbrich
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>

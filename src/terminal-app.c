@@ -1798,7 +1798,7 @@ terminal_app_handle_options (TerminalApp *app,
                 gtk_window_set_role (GTK_WINDOW (window), iw->role);
 
             if (iw->icon)
-                terminal_window_set_icon (window, iw->icon);
+                terminal_window_set_icon_from_cli (window, iw->icon);
 
             if (iw->force_menubar_state)
                 terminal_window_set_menubar_visible (window, iw->menubar_state);

@@ -585,6 +585,77 @@ editor_response_cb (GtkWidget *editor,
 }
 
 static void
+icon_browse_button_clicked_cb (GtkWidget *button,
+                               GtkWidget *entry)
+{
+	GtkWidget *dialog;
+	GtkFileFilter *filter;
+
+	dialog = gtk_file_chooser_dialog_new (_("Choose A Profile Icon"),
+	                                      GTK_WINDOW (gtk_widget_get_toplevel (button)),
+	                                      GTK_FILE_CHOOSER_ACTION_OPEN,
+	                                      _("_Cancel"), GTK_RESPONSE_CANCEL,
+	                                      _("_Open"), GTK_RESPONSE_ACCEPT,
+	                                      NULL);
+
+	filter = gtk_file_filter_new ();
+	gtk_file_filter_add_pixbuf_formats (filter);
+	gtk_file_filter_set_name (filter, _("Images"));
+	gtk_file_chooser_set_filter (GTK_FILE_CHOOSER (dialog), filter);
+
+	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog), TRUE);
+
+	/* Add standard icon folders as shortcots.
+	 * This resolves to something like /usr/share/icons in the file chooser sidebar. */
+	gtk_file_chooser_add_shortcut_folder (GTK_FILE_CHOOSER (dialog),
+	                                      TERM_DATADIR "/icons", NULL);
+	gtk_file_chooser_add_shortcut_folder (GTK_FILE_CHOOSER (dialog),
+	                                      TERM_DATADIR "/pixmaps", NULL);
+
+	/* Pre-select the current icon file, resolving theme names via the icon theme */
+	const char *current = gtk_entry_get_text (GTK_ENTRY (entry));
+	if (current && current[0] != '\0')
+	{
+		if (g_path_is_absolute (current))
+		{
+			gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (dialog), current);
+		}
+		else
+		{
+			GtkIconTheme *icon_theme;
+			GtkIconInfo *info;
+
+			icon_theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (button));
+			info = gtk_icon_theme_lookup_icon (icon_theme, current, 48, 0);
+			if (info)
+			{
+				gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (dialog),
+				                               gtk_icon_info_get_filename (info));
+				g_object_unref (info);
+			}
+		}
+	}
+	else
+	{
+		/* Use /usr/share/icons as the initial folder */
+		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog),
+		                                     TERM_DATADIR "/icons");
+	}
+
+	if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
+	{
+		char *filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
+		if (filename)
+		{
+			gtk_entry_set_text (GTK_ENTRY (entry), filename);
+			g_free (filename);
+		}
+	}
+
+	gtk_widget_destroy (dialog);
+}
+
+static void
 setup_background_filechooser (GtkWidget *filechooser,
                               TerminalProfile *profile)
 {
@@ -842,6 +913,11 @@ terminal_profile_edit (TerminalProfile *profile,
 	g_signal_connect (w, "changed",
 	                  G_CALLBACK (visible_name_entry_changed_cb), editor);
 
+	w = GTK_WIDGET (gtk_builder_get_object (builder, "profile-icon-browse-button"));
+	g_signal_connect (w, "clicked",
+	                  G_CALLBACK (icon_browse_button_clicked_cb),
+	                  gtk_builder_get_object (builder, "profile-icon-entry"));
+
 	g_signal_connect (gtk_builder_get_object  (builder, "reset-compat-defaults-button"),
 	                  "clicked",
 	                  G_CALLBACK (reset_compat_defaults_cb),
@@ -868,6 +944,7 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT ("foreground-colorpicker", TERMINAL_PROFILE_FOREGROUND_COLOR);
 	CONNECT ("image-radiobutton", TERMINAL_PROFILE_BACKGROUND_TYPE);
 	CONNECT ("login-shell-checkbutton", TERMINAL_PROFILE_LOGIN_SHELL);
+	CONNECT ("profile-icon-entry", TERMINAL_PROFILE_ICON);
 	CONNECT ("profile-name-entry", TERMINAL_PROFILE_VISIBLE_NAME);
 	CONNECT ("scrollback-lines-spinbutton", TERMINAL_PROFILE_SCROLLBACK_LINES);
 	CONNECT ("scrollback-unlimited-checkbutton", TERMINAL_PROFILE_SCROLLBACK_UNLIMITED);
