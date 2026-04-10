@@ -2584,6 +2584,7 @@ profile_set_callback (TerminalScreen *screen,
         return;
 
     terminal_window_update_set_profile_menu_active_profile (window);
+    terminal_window_update_icon (window);
 }
 
 static void
@@ -2844,11 +2845,6 @@ void
 terminal_window_set_icon (TerminalWindow *window,
                           const char     *icon)
 {
-    TerminalWindowPrivate *priv = window->priv;
-
-    g_free (priv->icon);
-    priv->icon = g_strdup (icon);
-
     if (icon == NULL || icon[0] == '\0')
         return;
 
@@ -2866,6 +2862,40 @@ terminal_window_set_icon (TerminalWindow *window,
     {
         gtk_window_set_icon_name (GTK_WINDOW (window), icon);
     }
+}
+
+void
+terminal_window_set_icon_from_cli (TerminalWindow *window,
+                                   const char     *icon)
+{
+    TerminalWindowPrivate *priv = window->priv;
+
+    g_free (priv->icon);
+    priv->icon = g_strdup (icon);
+
+    terminal_window_set_icon (window, icon);
+}
+
+void
+terminal_window_update_icon (TerminalWindow *window)
+{
+    TerminalWindowPrivate *priv = window->priv;
+    TerminalProfile *profile;
+    const char *icon;
+
+    /* The --icon flag takes precedence over the profile icon */
+    if (priv->icon != NULL && priv->icon[0] != '\0')
+        return;
+
+    if (priv->active_screen == NULL ||
+        !(profile = terminal_screen_get_profile (priv->active_screen)))
+        return;
+
+    icon = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_ICON);
+    if (icon != NULL && icon[0] != '\0')
+        terminal_window_set_icon (window, icon);
+    else
+        gtk_window_set_icon_name (GTK_WINDOW (window), MATE_TERMINAL_ICON_NAME);
 }
 
 GtkWidget *
@@ -3254,6 +3284,7 @@ notebook_page_selected_callback (GtkWidget       *notebook,
     sync_screen_icon_title_set (screen, NULL, window);
     sync_screen_icon_title (screen, NULL, window);
     sync_screen_title (screen, NULL, window);
+    terminal_window_update_icon (window);
 
     /* set size of window to current grid size */
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,

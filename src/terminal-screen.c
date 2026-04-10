@@ -959,6 +959,9 @@ terminal_screen_profile_notify_cb (TerminalProfile *profile,
 		 * update terminal window config
 		 * with the flag of copy selection to clipboard or not. */
 		terminal_window_update_copy_selection(screen, window);
+
+		if (!prop_name || prop_name == I_(TERMINAL_PROFILE_ICON))
+			terminal_window_update_icon (window);
 	}
 
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_SCROLLBAR_POSITION))
