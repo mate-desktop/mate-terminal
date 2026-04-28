@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Felipe Rozelio <feliperozelio@gmail.com>, 2018
 # Aldo Oliveira <america103@gmail.com>, 2018
 # Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2018
@@ -26,20 +23,26 @@
 # Samuel Henrique <samueloph@debian.org>, 2021
 # jose, 2021
 # Luciano Luck, 2022
-# 
+# Rafael Fontenelle <rafaelff@gnome.org>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Luciano Luck, 2022\n"
-"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/13566/pt_BR/)\n"
+"PO-Revision-Date: 2026-04-07 02:58+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
+"projects/mate-terminal/application-master/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
+"1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -57,11 +60,10 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
-"O MATE Terminal é um aplicativo de emulação de terminal que você pode \n"
-"usar para acessar um shell UNIX no ambiente MATE. O Terminal MATE emula o\n"
-" programa xterm desenvolvido pelo X Consortium. Suporta fundos \n"
-"translúcidos, abrindo vários terminais em uma única janela (abas) e URLs\n"
-" clicáveis."
+"O MATE Terminal é um aplicativo de emulação de terminal que você pode usar "
+"para acessar um shell UNIX no ambiente MATE. O Terminal MATE emula o "
+"programa xterm desenvolvido pelo X Consortium. Suporta fundos translúcidos, "
+"abrindo vários terminais em uma única janela (abas) e URLs clicáveis."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -69,8 +71,8 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
-"O MATE Terminal é um fork do GNOME Terminal e parte do MATE Desktop \n"
-"Environment. Se você quiser saber mais sobre o MATE e o MATE Terminal, \n"
+"O MATE Terminal é um fork do GNOME Terminal e parte do MATE Desktop "
+"Environment. Se você quiser saber mais sobre o MATE e o MATE Terminal, "
 "visite a página inicial do projeto."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
@@ -309,7 +311,7 @@ msgstr "_Localizar"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
-msgstr "_Pesquisar por: "
+msgstr "_Pesquisar por:"
 
 #: src/find-dialog.ui:138
 msgid "_Match case"
@@ -363,7 +365,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
-msgstr "Perfil a utilizar para novos terminais."
+msgstr "Perfil a utilizar para novos terminais"
 
 #: src/org.mate.terminal.gschema.xml.in:55
 msgid ""
@@ -440,8 +442,7 @@ msgstr "Fechar as abas com o clique do meio"
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
-"Se verdadeiro, ativa a funcionalidade de mudar abas através das combinações "
-"[ctrl + tab] e [ctrl + shift + tab]"
+"Se verdadeiro, ativa a funcionalidade de mudar abas usando clique do meio."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -453,7 +454,7 @@ msgid ""
 "[Ctrl+Shift+Tab]."
 msgstr ""
 "Se verdadeiro, ativa a funcionalidade de mudar abas através das combinações "
-"[ctrl + tab] e [ctrl + shift + tab]"
+"[Ctrl+Tab] e [Ctrl+Shift+Tab]."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -462,11 +463,11 @@ msgstr "'Padrão'"
 
 #: src/org.mate.terminal.gschema.xml.in:93
 msgid "Human-readable name of the profile"
-msgstr "Nome do perfil legível para humanos "
+msgstr "Nome do perfil legível para humanos"
 
 #: src/org.mate.terminal.gschema.xml.in:94
 msgid "Human-readable name of the profile."
-msgstr "Nome do perfil legível para humanos "
+msgstr "Nome do perfil legível para humanos."
 
 #: src/org.mate.terminal.gschema.xml.in:98
 msgid "Whether to show menubar in new windows/tabs"
@@ -495,7 +496,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
-msgstr "Cor padrão de fundo no terminal."
+msgstr "Cor padrão de fundo no terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:109
 msgid ""
@@ -951,9 +952,9 @@ msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
-"Se verdadeiro, os URLs sob o ponteiro do mouse são destacados e podem \n"
-"ser abertos com um clique do mouse junto com a tecla de controle ou \n"
-"usados ​​no menu de contexto."
+"Se verdadeiro, os URLs sob o ponteiro do mouse são destacados e podem ser "
+"abertos com um clique do mouse junto com a tecla de controle ou usados no "
+"menu de contexto."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -2652,7 +2653,7 @@ msgid ""
 msgstr ""
 "Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com o "
 "MATE; caso contrário, escreva para a Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA 02110-1301 USA."
+"Franklin St, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
@@ -2706,7 +2707,7 @@ msgstr "A_bas"
 
 #: src/terminal-window.c:1972
 msgid "New _Profile…"
-msgstr "Novo _perfil..."
+msgstr "Novo _perfil…"
 
 #: src/terminal-window.c:1977
 msgid "_Save Contents"
@@ -2738,11 +2739,11 @@ msgstr "Selecionar _tudo"
 
 #: src/terminal-window.c:2014
 msgid "P_rofiles…"
-msgstr "Pe_rfis..."
+msgstr "Pe_rfis…"
 
 #: src/terminal-window.c:2019
 msgid "_Keyboard Shortcuts…"
-msgstr "Atalhos de _teclado..."
+msgstr "Atalhos de _teclado…"
 
 #: src/terminal-window.c:2024
 msgid "Pr_ofile Preferences"
@@ -2798,7 +2799,7 @@ msgstr "Próximo perfil"
 
 #: src/terminal-window.c:2093
 msgid "_Set Title…"
-msgstr "Definir _título..."
+msgstr "Definir _título…"
 
 #: src/terminal-window.c:2097
 msgid "Set _Character Encoding"
@@ -2814,7 +2815,7 @@ msgstr "Redefinir e _limpar"
 
 #: src/terminal-window.c:2111
 msgid "_Add or Remove…"
-msgstr "_Adicionar ou remover..."
+msgstr "_Adicionar ou remover…"
 
 #: src/terminal-window.c:2118
 msgid "_Previous Tab"
@@ -2846,15 +2847,15 @@ msgstr "_Sobre"
 
 #: src/terminal-window.c:2157
 msgid "_Open Hyperlink"
-msgstr ""
+msgstr "_Abrir hiperlink"
 
 #: src/terminal-window.c:2162
 msgid "_Copy Hyperlink Address"
-msgstr ""
+msgstr "_Copiar endereço do hiperlink"
 
 #: src/terminal-window.c:2167
 msgid "_Send Mail To…"
-msgstr "_Enviar e-mail para..."
+msgstr "_Enviar e-mail para…"
 
 #: src/terminal-window.c:2172
 msgid "_Copy E-mail Address"
@@ -2862,7 +2863,7 @@ msgstr "_Copiar endereço de e-mail"
 
 #: src/terminal-window.c:2177
 msgid "C_all To…"
-msgstr "Li_gar para..."
+msgstr "Li_gar para…"
 
 #: src/terminal-window.c:2182
 msgid "_Copy Call Address"
@@ -2950,10 +2951,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
-"Copyright © 2002–2004 Havoc PenningtonCopyright © 2003–2004, 2007 Mariano "
-"Suárez-AlvarezCopyright © 2006 Guilherme de S. PastoreCopyright © 2007–2010 "
-"Christian PerschCopyright © 2011 PerberosCopyright © 2012-2021 "
-"desemvolvedores do MATE"
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 Desenvolvedores do MATE"
 
 #: src/terminal-window.c:4546
 msgid "translator-credits"
