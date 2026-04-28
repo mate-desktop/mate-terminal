@@ -1,28 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Mattias Põldaru <mahfiaz@gmail.com>, 2019
 # Rivo Zängov <eraser@eraser.ee>, 2020
 # Ivar Smolin <okul@linux.ee>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # vaba <vaba@riseup.net>, 2021
-# 
+# Priit Jõerüüt <jrtkbfdr@users.noreply.translate.fedoraproject.org>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: vaba <vaba@riseup.net>, 2021\n"
-"Language-Team: Estonian (https://app.transifex.com/mate/teams/13566/et/)\n"
+"PO-Revision-Date: 2026-04-28 12:59+0000\n"
+"Last-Translator: Priit Jõerüüt "
+"<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
+"Language-Team: Estonian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/application-master/et/>\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: et\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -40,6 +43,10 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"MATE Terminal on terminaliemulatsioonirakendus, mille abil saab MATE-"
+"keskkonnas kasutada UNIX-i kesta. MATE Terminal emuleerib X Consortiumi "
+"poolt arendatud xterm-programmi. See toetab läbipaistvat tausta, mitme "
+"terminali avamist ühes aknas (vahekaardid) ja klõpsatavaid URL-e."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -79,6 +86,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Selles terminalis on veel üks protsess töös.\n"
+"Terminali sulgemine katkestab selle protsessi toimimise."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -267,7 +276,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr "Solarized"
+msgstr "Päikesest pleekinud"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -380,7 +389,7 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:68
 msgctxt "active-encodings"
 msgid "[ 'UTF-8', 'current' ]"
-msgstr "[ 'UTF-8', 'current' ]"
+msgstr "[ 'UTF-8', 'praegune' ]"
 
 #: src/org.mate.terminal.gschema.xml.in:69
 msgid "List of available encodings"
@@ -415,8 +424,7 @@ msgstr "Kaartide sulgemine keskmise hiirenupu klõpsuga"
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
-"Kui määrattud, siis suletakse kaardid kui nendel keskmise hiirenupuga "
-"klõpsata"
+"Kui määratud, siis suletakse kaardid nendel keskmise hiirenupuga klõpsamisel."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -476,8 +484,8 @@ msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
-"Terminali tausta vaikimisi värv värvikirjeldusena (võib kasutada nii HTML-"
-"stiilis kuueteistkümnendarve kui ingliskeelseid värvinimetusi nagu \"red\")"
+"Terminali tausta vaikimisi värv värvikirjeldusena (võid kasutada nii HTML-"
+"stiilis kuueteistkümnendarve kui ingliskeelseid värvinimetusi nagu \"red\")."
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
@@ -706,7 +714,7 @@ msgid ""
 "(argv[0] will have a hyphen in front of it.)"
 msgstr ""
 "Kui märgitud, siis terminalis käivitatav käsk käivitatakse kestprogrammina "
-"(argv[0] ette lisatakse sidekriips)."
+"(argv[0] ette lisatakse sidekriips)"
 
 #: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
@@ -762,7 +770,7 @@ msgstr "Terminaliakna ikoon"
 
 #: src/org.mate.terminal.gschema.xml.in:224
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr "Ikoon, mida selle profiili puhul kasutatakse kaartidel ja akendel"
+msgstr "Ikoon, mida selle profiili puhul kasutatakse kaartidel ja akendel."
 
 #: src/org.mate.terminal.gschema.xml.in:228
 msgid "Palette for terminal applications"
@@ -774,9 +782,9 @@ msgid ""
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr ""
-"Terminalides töötavate rakenduste käsutuses on on 16-värvusega palett, mis "
-"on kirjeldatud koolonitega eraldatud nimekirjana. Värvuste nimed võivad olla"
-" ka kuueteistkümnendkujul, näiteks \"#FF00FF\"."
+"Terminalides töötavate rakenduste käsutuses on 16-värvusega palett, mis on "
+"kirjeldatud koolonitega eraldatud loendina. Värvuste nimed võivad olla ka "
+"kuueteistkümnendkujul, näiteks \"#FF00FF\""
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
@@ -910,13 +918,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Tõsta hiirekursori all olevad URL-id esile"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Kui see on tõsi, siis hiirekursori all olevad URL-id on esiletõstetud ja "
+"neid saab avada hiireklõpsuga Ctrl-klahvi abil või kasutada kontekstimenüüs."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -929,7 +939,7 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Klaviatuuri kiirklahv uue kaardi avamiseks.  Kirjeldatakse samasuguses "
+"Klaviatuuri kiirklahv uue kaardi avamiseks. Kirjeldatakse samasuguses "
 "vormingus, mis on kasutusel GTK+ ressursifailides. Väärtus \"disabled\" "
 "keelab selle tegevuse kiirklahvi."
 
@@ -944,7 +954,7 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Klaviatuuri kiirklahv uue akna avamiseks.  Kirjeldatakse samasuguses "
+"Klaviatuuri kiirklahv uue akna avamiseks. Kirjeldatakse samasuguses "
 "vormingus, mis on kasutusel GTK+ ressursifailides. Väärtus \"disabled\" "
 "keelab selle tegevuse kiirklahvi."
 
@@ -989,7 +999,7 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Klaviatuuri kiirklahv kaardi sulgemiseks.  Kirjeldatakse samasuguses "
+"Klaviatuuri kiirklahv kaardi sulgemiseks. Kirjeldatakse samasuguses "
 "vormingus, mis on kasutusel GTK+ ressursifailides. Väärtus \"disabled\" "
 "keelab selle tegevuse kiirklahvi."
 
@@ -1517,9 +1527,9 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
-"Klaviatuuri kiirklahv kirjatüübi suuruse algsele suurusele viimiseks.  "
-"Kirjeldatakse samasuguses vormingus, mis on kasutusel GTK+ ressursifailides."
-" Väärtus \"disabled\" keelab selle tegevuse kiirklahvi."
+"Klaviatuuri kiirklahv kirjatüübi suuruse algsele suurusele viimiseks. "
+"Kirjeldatakse samasuguses vormingus, mis on kasutusel GTK+ ressursifailides. "
+"Väärtus \"disabled\" keelab selle tegevuse kiirklahvi."
 
 #: src/profile-editor.c:45
 msgid "Black on light yellow"
@@ -1647,15 +1657,15 @@ msgstr "Terminali kõ_ll"
 
 #: src/profile-preferences.ui:472
 msgid "Copy selected text into _clipboard"
-msgstr "Valitud teksti _kopeerimine lõikelauale"
+msgstr "_Kopeeri valitud tekst lõikelauale"
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "Tõsta kursori all olevad S/Key väljakutsed esile"
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Tõsta kursori all olevad _URL-id esile"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1903,7 +1913,7 @@ msgstr "_Ametinimetus:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "S_obib"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
@@ -2712,7 +2722,7 @@ msgstr "_Kasvav otsing..."
 
 #: src/terminal-window.c:2081
 msgid "Change _Profile"
-msgstr "Muuda _profiil"
+msgstr "Muuda _profiili"
 
 #: src/terminal-window.c:2083
 msgid "_Previous Profile"
@@ -2772,11 +2782,11 @@ msgstr "_Lähemalt"
 
 #: src/terminal-window.c:2157
 msgid "_Open Hyperlink"
-msgstr ""
+msgstr "_Ava hüperlink"
 
 #: src/terminal-window.c:2162
 msgid "_Copy Hyperlink Address"
-msgstr ""
+msgstr "_Kopeeri hüperlingi aadress"
 
 #: src/terminal-window.c:2167
 msgid "_Send Mail To…"
@@ -2827,6 +2837,8 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Selle akna mõnes terminalis on veel protsesse töös.\n"
+"Terminali sulgemine katkestab kõigi nende protsesside toimimise."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
@@ -2858,6 +2870,8 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"MATE terminal terminaliemulaator MATE töölauakeskkonna jaoks.\n"
+"Taustajõuks on Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"
@@ -2872,6 +2886,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Autoriõigused © 2002–2004 Havoc Pennington\n"
+"Autoriõigused © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Autoriõigused © 2006 Guilherme de S. Pastore\n"
+"Autoriõigused © 2007–2010 Christian Persch\n"
+"Autoriõigused © 2011 Perberos\n"
+"Autoriõigused © 2012-2021 MATE arendajad"
 
 #: src/terminal-window.c:4546
 msgid "translator-credits"
@@ -2880,4 +2900,5 @@ msgstr ""
 "Ilmar Kerm <ikerm hot ee>, 2001, 2002.\n"
 "Tõivo Leedjärv <toivo linux ee>, 2002, 2003.\n"
 "Priit Laes <plaes plaes org>, 2004–2006, 2008, 2009\n"
-"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018."
+"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018\n"
+"Priit Jõerüüt 2026"
