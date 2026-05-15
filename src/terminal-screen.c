@@ -1188,6 +1188,9 @@ update_color_scheme (TerminalScreen *screen)
 		vte_terminal_set_color_bold (VTE_TERMINAL (screen),
 		                             bold_rgba);
 
+	/* Clear any OSC 10/11 color overrides so profile colors take effect */
+	vte_terminal_feed (VTE_TERMINAL (screen), "\033]110\a\033]111\a", -1);
+
 	update_toplevel_transparency (screen);
 }
 
