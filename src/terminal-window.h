@@ -39,14 +39,14 @@ typedef struct _TerminalWindowPrivate TerminalWindowPrivate;
 
 struct _TerminalWindow
 {
-	GtkWindow parent_instance;
+	GtkApplicationWindow parent_instance;
 
 	TerminalWindowPrivate *priv;
 };
 
 struct _TerminalWindowClass
 {
-	GtkWindowClass parent_class;
+	GtkApplicationWindowClass parent_class;
 
 };
 
