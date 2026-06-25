@@ -73,7 +73,10 @@ G_BEGIN_DECLS
 #define TERMINAL_APP_ENABLE_MNEMONICS       "enable-mnemonics"
 #define TERMINAL_APP_SYSTEM_FONT            "system-font"
 
-/* TerminalApp */
+/* Application ID for GtkApplication */
+#define TERMINAL_APPLICATION_ID "org.mate.Terminal"
+
+/* TerminalApp - now inherits from GtkApplication */
 
 #define TERMINAL_TYPE_APP              (terminal_app_get_type ())
 #define TERMINAL_APP(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), TERMINAL_TYPE_APP, TerminalApp))
@@ -84,14 +87,15 @@ G_BEGIN_DECLS
 
 typedef struct _TerminalAppClass TerminalAppClass;
 typedef struct _TerminalApp TerminalApp;
-
-extern GSettings *settings_global;
+typedef struct _TerminalAppPrivate TerminalAppPrivate;
 
 GType terminal_app_get_type (void);
 
+/* Get the application instance - now uses g_application_get_default() internally */
 TerminalApp* terminal_app_get (void);
 
-void terminal_app_shutdown (void);
+/* Get GSettings for global settings */
+GSettings* terminal_app_get_global_settings (TerminalApp *app);
 
 gboolean terminal_app_handle_options (TerminalApp *app,
                                       TerminalOptions *options,
