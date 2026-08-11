@@ -70,22 +70,18 @@
  *
  */
 
-GSettings *settings_global;
-
 struct _TerminalAppClass
 {
-	GObjectClass parent_class;
+	GtkApplicationClass parent_class;
 
-	void (* quit) (TerminalApp *app);
 	void (* profile_list_changed) (TerminalApp *app);
 	void (* encoding_list_changed) (TerminalApp *app);
 };
 
 struct _TerminalApp
 {
-	GObject parent_instance;
+	GtkApplication parent_instance;
 
-	GList *windows;
 	GtkWidget *new_profile_dialog;
 	GtkWidget *manage_profiles_dialog;
 	GtkWidget *manage_profiles_list;
@@ -94,6 +90,7 @@ struct _TerminalApp
 	GtkWidget *manage_profiles_delete_button;
 	GtkWidget *manage_profiles_default_menu;
 
+	GSettings *settings_global;
 	GSettings *settings_font;
 
 	GHashTable *profiles;
@@ -120,7 +117,6 @@ enum
 
 enum
 {
-    QUIT,
     PROFILE_LIST_CHANGED,
     ENCODING_LIST_CHANGED,
     LAST_SIGNAL
@@ -140,8 +136,6 @@ enum
     SOURCE_SESSION = 1
 };
 
-static TerminalApp *global_app = NULL;
-
 #define MONOSPACE_FONT_SCHEMA "org.mate.interface"
 #define MONOSPACE_FONT_KEY "monospace-font-name"
 #define DEFAULT_MONOSPACE_FONT ("Monospace 10")
@@ -156,6 +150,9 @@ static TerminalApp *global_app = NULL;
 #define DEFAULT_PROFILE_KEY "default-profile"
 
 #define ENCODING_LIST_KEY "active-encodings"
+
+/* Define the type - inherits from GtkApplication */
+G_DEFINE_TYPE (TerminalApp, terminal_app, GTK_TYPE_APPLICATION)
 
 /* two following functions were copied from libmate-desktop to get rid
  * of dependency on it
@@ -323,16 +320,6 @@ profiles_lookup_by_visible_name_foreach (gpointer key,
 		info->result = value;
 }
 
-static void
-terminal_window_destroyed (TerminalWindow *window,
-                           TerminalApp    *app)
-{
-	app->windows = g_list_remove (app->windows, window);
-
-	if (app->windows == NULL)
-		g_signal_emit (app, signals[QUIT], 0);
-}
-
 static TerminalProfile *
 terminal_app_create_profile (TerminalApp *app,
                              const char *name)
@@ -361,7 +348,7 @@ terminal_app_create_profile (TerminalApp *app,
 }
 
 static void
-terminal_app_delete_profile (TerminalProfile *profile)
+terminal_app_delete_profile (TerminalApp *app, TerminalProfile *profile)
 {
 	const char *profile_name;
 	char *profile_dir;
@@ -370,7 +357,7 @@ terminal_app_delete_profile (TerminalProfile *profile)
 	profile_name = terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME);
 	profile_dir = g_strconcat (CONF_PROFILE_PREFIX, profile_name, "/", NULL);
 
-	gsettings_remove_all_from_strv (settings_global, PROFILE_LIST_KEY, profile_name);
+	gsettings_remove_all_from_strv (app->settings_global, PROFILE_LIST_KEY, profile_name);
 
 	/* And remove the profile directory */
 	DConfClient *client = dconf_client_new ();
@@ -400,6 +387,7 @@ terminal_app_profile_cell_data_func (GtkTreeViewColumn *tree_column,
 	g_object_get_property (G_OBJECT (profile), "visible-name", &value);
 	g_object_set_property (G_OBJECT (cell), "text", &value);
 	g_value_unset (&value);
+	g_object_unref (profile);
 }
 
 static int
@@ -548,7 +536,7 @@ profile_combo_box_changed_cb (GtkWidget *widget,
 	if (!profile)
 		return;
 
-	g_settings_set_string (settings_global, DEFAULT_PROFILE_KEY,
+	g_settings_set_string (app->settings_global, DEFAULT_PROFILE_KEY,
 			       terminal_profile_get_property_string (profile, TERMINAL_PROFILE_NAME));
 
 	/* Even though the GSettings change notification does this, it happens too late.
@@ -629,12 +617,16 @@ profile_list_delete_confirm_response_cb (GtkWidget *dialog,
                                          int        response)
 {
 	TerminalProfile *profile;
+	TerminalApp *app;
 
 	profile = TERMINAL_PROFILE (g_object_get_data (G_OBJECT (dialog), "profile"));
 	g_assert (profile != NULL);
 
 	if (response == GTK_RESPONSE_ACCEPT)
-		terminal_app_delete_profile (profile);
+	{
+		app = terminal_app_get ();
+		terminal_app_delete_profile (app, profile);
+	}
 
 	gtk_widget_destroy (dialog);
 }
@@ -682,7 +674,7 @@ profile_list_delete_button_clicked_cb (GtkWidget *button,
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_QUESTION,
 	                                 GTK_BUTTONS_NONE,
-	                                 _("Delete profile “%s”?"),
+	                                 _("Delete profile \"%s\"?"),
 	                                 terminal_profile_get_property_string (selected_profile, TERMINAL_PROFILE_VISIBLE_NAME));
 
 	mate_dialog_add_button (GTK_DIALOG (dialog),
@@ -1145,7 +1137,7 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 			                 GTK_DIALOG_DESTROY_WITH_PARENT,
 			                 GTK_MESSAGE_QUESTION,
 			                 GTK_BUTTONS_YES_NO,
-			                 _("You already have a profile called “%s”. Do you want to create another profile with the same name?"), name);
+			                 _("You already have a profile called \"%s\". Do you want to create another profile with the same name?"), name);
 			/* Alternative button order was set automatically by GtkMessageDialog */
 			retval = gtk_dialog_run (GTK_DIALOG (confirm_dialog));
 			gtk_widget_destroy (confirm_dialog);
@@ -1163,7 +1155,7 @@ new_profile_response_cb (GtkWidget *new_profile_dialog,
 		                     new_profile /* adopts the refcount */);
 
 		/* And now save the new profile name to GSettings */
-		gsettings_append_strv (settings_global,
+		gsettings_append_strv (app->settings_global,
 						PROFILE_LIST_KEY,
 						new_profile_name);
 
@@ -1389,18 +1381,19 @@ static void
 terminal_app_client_quit_cb (EggSMClient *client,
                              TerminalApp *app)
 {
-	g_signal_emit (app, signals[QUIT], 0);
+	g_application_quit (G_APPLICATION (app));
 }
 #endif /* HAVE_SMCLIENT */
 
-/* Class implementation */
-
-G_DEFINE_TYPE (TerminalApp, terminal_app, G_TYPE_OBJECT)
+/* GtkApplication vfuncs */
 
 static void
-terminal_app_init (TerminalApp *app)
+terminal_app_startup (GApplication *application)
 {
-	global_app = app;
+	TerminalApp *app = TERMINAL_APP (application);
+
+	/* Chain up */
+	G_APPLICATION_CLASS (terminal_app_parent_class)->startup (application);
 
 	gtk_window_set_default_icon_name (MATE_TERMINAL_ICON_NAME);
 
@@ -1412,20 +1405,20 @@ terminal_app_init (TerminalApp *app)
 
 	app->encodings = terminal_encodings_get_builtins ();
 
-	settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
+	app->settings_global = g_settings_new (CONF_GLOBAL_SCHEMA);
 	app->settings_font = g_settings_new (MONOSPACE_FONT_SCHEMA);
 
-	g_signal_connect (settings_global,
+	g_signal_connect (app->settings_global,
 			  "changed::" PROFILE_LIST_KEY,
 			  G_CALLBACK(terminal_app_profile_list_notify_cb),
 			  app);
 
-	g_signal_connect (settings_global,
+	g_signal_connect (app->settings_global,
 			  "changed::" DEFAULT_PROFILE_KEY,
 			  G_CALLBACK(terminal_app_default_profile_notify_cb),
 			  app);
 
-	g_signal_connect (settings_global,
+	g_signal_connect (app->settings_global,
 			  "changed::" ENCODING_LIST_KEY,
 			  G_CALLBACK(terminal_app_encoding_list_notify_cb),
 			  app);
@@ -1435,33 +1428,33 @@ terminal_app_init (TerminalApp *app)
 			  G_CALLBACK(terminal_app_system_font_notify_cb),
 			  app);
 
-	g_signal_connect (settings_global,
+	g_signal_connect (app->settings_global,
 	                  "changed::" ENABLE_MNEMONICS_KEY,
 	                  G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                  app);
 
-	g_signal_connect (settings_global,
+	g_signal_connect (app->settings_global,
 	                  "changed::" ENABLE_MENU_BAR_ACCEL_KEY,
 	                  G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                  app);
 
 	/* Load the settings */
-        terminal_app_profile_list_notify_cb (settings_global,
+        terminal_app_profile_list_notify_cb (app->settings_global,
 					     PROFILE_LIST_KEY,
 					     app);
-	terminal_app_default_profile_notify_cb (settings_global,
+	terminal_app_default_profile_notify_cb (app->settings_global,
 					        DEFAULT_PROFILE_KEY,
 						app);
-	terminal_app_encoding_list_notify_cb (settings_global,
+	terminal_app_encoding_list_notify_cb (app->settings_global,
 					      ENCODING_LIST_KEY,
 					      app);
 	terminal_app_system_font_notify_cb (app->settings_font,
 					    MONOSPACE_FONT_KEY,
 					    app);
-	terminal_app_enable_menu_accels_notify_cb (settings_global,
+	terminal_app_enable_menu_accels_notify_cb (app->settings_global,
 	                                           ENABLE_MENU_BAR_ACCEL_KEY,
 	                                           app);
-	terminal_app_enable_mnemonics_notify_cb (settings_global,
+	terminal_app_enable_mnemonics_notify_cb (app->settings_global,
 	                                         ENABLE_MNEMONICS_KEY,
 	                                         app);
 
@@ -1491,9 +1484,93 @@ terminal_app_init (TerminalApp *app)
 }
 
 static void
-terminal_app_finalize (GObject *object)
+terminal_app_activate (GApplication *application)
 {
-	TerminalApp *app = TERMINAL_APP (object);
+	TerminalApp *app = TERMINAL_APP (application);
+	GList *windows;
+
+	/* If we have windows, just present the first one */
+	windows = gtk_application_get_windows (GTK_APPLICATION (app));
+	if (windows != NULL)
+	{
+		gtk_window_present (GTK_WINDOW (windows->data));
+		return;
+	}
+
+	/* Otherwise create a new window with default profile */
+	TerminalWindow *window;
+	TerminalProfile *profile;
+
+	window = terminal_app_new_window (app, gdk_screen_get_default ());
+	profile = terminal_app_get_profile_for_new_term (app);
+
+	terminal_app_new_terminal (app, window, profile,
+	                           NULL, NULL, NULL, NULL, 1.0);
+
+	gtk_window_present (GTK_WINDOW (window));
+}
+
+static int
+terminal_app_command_line (GApplication            *application,
+                           GApplicationCommandLine *command_line)
+{
+	TerminalApp *app = TERMINAL_APP (application);
+	TerminalOptions *options = NULL;
+	GError *error = NULL;
+	int argc;
+	char **argv;
+	const char *working_directory;
+	const char *startup_id;
+	gboolean allow_resume;
+
+	argv = g_application_command_line_get_arguments (command_line, &argc);
+	working_directory = g_application_command_line_get_cwd (command_line);
+	startup_id = g_application_command_line_getenv (command_line, "DESKTOP_STARTUP_ID");
+
+	/* Determine if we're resuming from session */
+	allow_resume = g_application_command_line_get_is_remote (command_line) == FALSE;
+
+	options = terminal_options_parse (working_directory,
+	                                  NULL, /* display_name - get from environment */
+	                                  startup_id,
+	                                  NULL, /* envv - we get it from command line */
+	                                  TRUE, /* remote args */
+	                                  TRUE, /* do_not_use_factory */
+	                                  &argc, &argv,
+	                                  &error,
+	                                  NULL);
+
+	if (options == NULL)
+	{
+		g_application_command_line_printerr (command_line,
+		                                     _("Failed to parse arguments: %s\n"),
+		                                     error->message);
+		g_error_free (error);
+		g_strfreev (argv);
+		return EXIT_FAILURE;
+	}
+
+	if (!terminal_app_handle_options (app, options, allow_resume, &error))
+	{
+		g_application_command_line_printerr (command_line,
+		                                     "Error handling options: %s\n",
+		                                     error->message);
+		g_error_free (error);
+		terminal_options_free (options);
+		g_strfreev (argv);
+		return EXIT_FAILURE;
+	}
+
+	terminal_options_free (options);
+	g_strfreev (argv);
+
+	return EXIT_SUCCESS;
+}
+
+static void
+terminal_app_shutdown (GApplication *application)
+{
+	TerminalApp *app = TERMINAL_APP (application);
 
 #ifdef HAVE_SMCLIENT
 	EggSMClient *sm_client;
@@ -1503,41 +1580,56 @@ terminal_app_finalize (GObject *object)
 	                                      0, 0, NULL, NULL, app);
 #endif /* HAVE_SMCLIENT */
 
-	g_signal_handlers_disconnect_by_func (settings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_profile_list_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (settings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_default_profile_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (settings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 					      G_CALLBACK(terminal_app_encoding_list_notify_cb),
 					      app);
 	g_signal_handlers_disconnect_by_func (app->settings_font,
 					      G_CALLBACK(terminal_app_system_font_notify_cb),
 					      app);
-	g_signal_handlers_disconnect_by_func (settings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 	                                      G_CALLBACK(terminal_app_enable_menu_accels_notify_cb),
 	                                      app);
-	g_signal_handlers_disconnect_by_func (settings_global,
+	g_signal_handlers_disconnect_by_func (app->settings_global,
 	                                      G_CALLBACK(terminal_app_enable_mnemonics_notify_cb),
 	                                      app);
 
-	g_object_unref (settings_global);
-	g_object_unref (app->settings_font);
+	g_clear_object (&app->settings_global);
+	g_clear_object (&app->settings_font);
 
 	g_free (app->default_profile_id);
+	app->default_profile_id = NULL;
 
 	g_hash_table_destroy (app->profiles);
+	app->profiles = NULL;
 
 	g_hash_table_destroy (app->encodings);
+	app->encodings = NULL;
 
-	pango_font_description_free (app->system_font_desc);
+	if (app->system_font_desc)
+	{
+		pango_font_description_free (app->system_font_desc);
+		app->system_font_desc = NULL;
+	}
 
 	terminal_accels_shutdown ();
 
-	G_OBJECT_CLASS (terminal_app_parent_class)->finalize (object);
+	/* Chain up */
+	G_APPLICATION_CLASS (terminal_app_parent_class)->shutdown (application);
+}
 
-	global_app = NULL;
+/* GObject vfuncs */
+
+static void
+terminal_app_finalize (GObject *object)
+{
+	/* Most cleanup is done in shutdown */
+	G_OBJECT_CLASS (terminal_app_parent_class)->finalize (object);
 }
 
 static void
@@ -1583,11 +1675,11 @@ terminal_app_set_property (GObject *object,
 	{
 	case PROP_ENABLE_MENU_BAR_ACCEL:
 		app->enable_menu_accels = g_value_get_boolean (value);
-		g_settings_set_boolean (settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
+		g_settings_set_boolean (app->settings_global, ENABLE_MENU_BAR_ACCEL_KEY, app->enable_menu_accels);
 		break;
 	case PROP_ENABLE_MNEMONICS:
 		app->enable_mnemonics = g_value_get_boolean (value);
-		g_settings_set_boolean (settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
+		g_settings_set_boolean (app->settings_global, ENABLE_MNEMONICS_KEY, app->enable_mnemonics);
 		break;
 	case PROP_DEFAULT_PROFILE:
 	case PROP_SYSTEM_FONT:
@@ -1598,31 +1690,65 @@ terminal_app_set_property (GObject *object,
 	}
 }
 
-static void
-terminal_app_real_quit (TerminalApp *app)
+static gboolean
+terminal_app_local_command_line (GApplication *application,
+                                  char ***arguments,
+                                  int *exit_status)
 {
-	gtk_main_quit();
+	char **argv = *arguments;
+
+	/* Parse locally with strict option checking before any D-Bus contact.
+	 * For --help* and --version this calls exit() in the local process.
+	 * For unknown options it returns NULL so we can report the error locally. */
+	{
+		char **args = g_strdupv (argv);
+		int argc;
+		GError *error = NULL;
+		TerminalOptions *options;
+
+		for (argc = 0; args[argc] != NULL; argc++)
+			;
+
+		options = terminal_options_parse (NULL, NULL, NULL, NULL,
+		                                  FALSE, FALSE,
+		                                  &argc, &args,
+		                                  &error,
+#ifdef HAVE_SMCLIENT
+		                                  gtk_get_option_group (FALSE),
+		                                  egg_sm_client_get_option_group (),
+#endif /* HAVE_SMCLIENT */
+		                                  NULL);
+		g_strfreev (args);
+
+		if (options == NULL)
+		{
+			g_printerr (_("Failed to parse arguments: %s\n"), error->message);
+			g_error_free (error);
+			*exit_status = EXIT_FAILURE;
+			return TRUE;
+		}
+
+		terminal_options_free (options);
+	}
+
+	return FALSE;
 }
 
 static void
 terminal_app_class_init (TerminalAppClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+	GApplicationClass *application_class = G_APPLICATION_CLASS (klass);
 
 	object_class->finalize = terminal_app_finalize;
 	object_class->get_property = terminal_app_get_property;
 	object_class->set_property = terminal_app_set_property;
 
-	klass->quit = terminal_app_real_quit;
-
-	signals[QUIT] =
-	    g_signal_new (I_("quit"),
-	                  G_OBJECT_CLASS_TYPE (object_class),
-	                  G_SIGNAL_RUN_LAST,
-	                  G_STRUCT_OFFSET (TerminalAppClass, quit),
-	                  NULL, NULL,
-	                  g_cclosure_marshal_VOID__VOID,
-	                  G_TYPE_NONE, 0);
+	application_class->local_command_line = terminal_app_local_command_line;
+	application_class->startup = terminal_app_startup;
+	application_class->activate = terminal_app_activate;
+	application_class->command_line = terminal_app_command_line;
+	application_class->shutdown = terminal_app_shutdown;
 
 	signals[PROFILE_LIST_CHANGED] =
 	    g_signal_new (I_("profile-list-changed"),
@@ -1671,28 +1797,32 @@ terminal_app_class_init (TerminalAppClass *klass)
 	                      G_PARAM_READABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
 }
 
+static void
+terminal_app_init (TerminalApp *app)
+{
+	/* Initialization is done in startup vfunc */
+}
+
 /* Public API */
 
 TerminalApp*
 terminal_app_get (void)
 {
-	if (global_app == NULL)
-	{
-		g_object_new (TERMINAL_TYPE_APP, NULL);
-		g_assert (global_app != NULL);
-	}
+	GApplication *app;
 
-	return global_app;
+	app = g_application_get_default ();
+	if (app != NULL && TERMINAL_IS_APP (app))
+		return TERMINAL_APP (app);
+
+	return NULL;
 }
 
-void
-terminal_app_shutdown (void)
+GSettings*
+terminal_app_get_global_settings (TerminalApp *app)
 {
-	if (global_app == NULL)
-		return;
+	g_return_val_if_fail (TERMINAL_IS_APP (app), NULL);
 
-	g_object_unref (global_app);
-	g_assert (global_app == NULL);
+	return app->settings_global;
 }
 
 /**
@@ -1881,9 +2011,7 @@ terminal_app_new_window (TerminalApp *app,
 
 	window = terminal_window_new ();
 
-	app->windows = g_list_append (app->windows, window);
-	g_signal_connect (window, "destroy",
-	                  G_CALLBACK (terminal_window_destroyed), app);
+	gtk_application_add_window (GTK_APPLICATION (app), GTK_WINDOW (window));
 
 	if (screen)
 		gtk_window_set_screen (GTK_WINDOW (window), screen);
@@ -1948,26 +2076,38 @@ terminal_app_get_current_window (TerminalApp *app,
                                  GdkScreen *from_screen,
                                  int workspace)
 {
-    GList *res = NULL;
+    GList *windows;
+    GList *res;
     TerminalWindow *ret = NULL;
 
-	if (app->windows == NULL)
-		return NULL;
+    windows = gtk_application_get_windows (GTK_APPLICATION (app));
+    if (windows == NULL)
+        return NULL;
 
-    res = g_list_last (app->windows);
+    res = g_list_last (windows);
 
     g_assert (from_screen != NULL);
 
     while (res)
     {
       int win_workspace;
+
+      if (!TERMINAL_IS_WINDOW (res->data))
+      {
+          res = g_list_previous (res);
+          continue;
+      }
+
       if (gtk_window_get_screen(GTK_WINDOW(res->data)) != from_screen)
-        continue;
+      {
+          res = g_list_previous (res);
+          continue;
+      }
 
-      win_workspace = terminal_app_get_workspace_for_window(res->data);
+      win_workspace = terminal_app_get_workspace_for_window(TERMINAL_WINDOW(res->data));
 
-      /* Same workspace or if the window is set to show up on all workspaces */
-      if (win_workspace == workspace || win_workspace == -1)
+      /* Same workspace, or no specific workspace requested, or window is on all workspaces */
+      if (workspace == -1 || win_workspace == workspace || win_workspace == -1)
         ret = terminal_window_get_latest_focused (ret, TERMINAL_WINDOW(res->data));
 
       res = g_list_previous (res);
@@ -2111,6 +2251,7 @@ void
 terminal_app_save_config (TerminalApp *app,
                           GKeyFile *key_file)
 {
+	GList *windows;
 	GList *lw;
 	guint n = 0;
 	GPtrArray *window_names_array;
@@ -2122,13 +2263,18 @@ terminal_app_save_config (TerminalApp *app,
 	g_key_file_set_integer (key_file, TERMINAL_CONFIG_GROUP, TERMINAL_CONFIG_PROP_VERSION, TERMINAL_CONFIG_VERSION);
 	g_key_file_set_integer (key_file, TERMINAL_CONFIG_GROUP, TERMINAL_CONFIG_PROP_COMPAT_VERSION, TERMINAL_CONFIG_COMPAT_VERSION);
 
-	window_names_array = g_ptr_array_sized_new (g_list_length (app->windows) + 1);
+	windows = gtk_application_get_windows (GTK_APPLICATION (app));
+	window_names_array = g_ptr_array_sized_new (g_list_length (windows) + 1);
 
-	for (lw = app->windows; lw != NULL; lw = lw->next)
+	for (lw = windows; lw != NULL; lw = lw->next)
 	{
-		TerminalWindow *window = TERMINAL_WINDOW (lw->data);
+		TerminalWindow *window;
 		char *group;
 
+		if (!TERMINAL_IS_WINDOW (lw->data))
+			continue;
+
+		window = TERMINAL_WINDOW (lw->data);
 		group = g_strdup_printf ("Window%u", n++);
 		g_ptr_array_add (window_names_array, group);
 
