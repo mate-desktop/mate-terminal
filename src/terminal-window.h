@@ -65,6 +65,10 @@ void terminal_window_add_screen (TerminalWindow *window,
 void terminal_window_remove_screen (TerminalWindow *window,
                                     TerminalScreen *screen);
 
+void terminal_window_set_screen_tab_color (TerminalWindow *window,
+                                           TerminalScreen *screen,
+                                           const GdkRGBA  *rgba);
+
 void terminal_window_move_screen (TerminalWindow *source_window,
                                   TerminalWindow *dest_window,
                                   TerminalScreen *screen,

@@ -48,6 +48,7 @@ initial_tab_new (const char *profile,
 	it->profile_is_id = is_id;
 	it->exec_argv = NULL;
 	it->title = NULL;
+	it->tab_color = NULL;
 	it->working_dir = NULL;
 	it->zoom = 1.0;
 	it->zoom_set = FALSE;
@@ -63,6 +64,7 @@ initial_tab_free (InitialTab *it)
 	g_free (it->profile);
 	g_strfreev (it->exec_argv);
 	g_free (it->title);
+	g_free (it->tab_color);
 	g_free (it->working_dir);
 	g_slice_free (InitialTab, it);
 }
@@ -562,6 +564,45 @@ option_title_callback (const gchar *option_name,
 }
 
 static gboolean
+option_tab_color_callback (const gchar *option_name,
+                           const gchar *value,
+                           gpointer     data,
+                           GError     **error)
+{
+	TerminalOptions *options = data;
+
+	/* An empty value ("--tab-color ''") is a valid, deliberate "no color",
+	 * overriding a profile default that would otherwise apply. It's only
+	 * an actual color spec that needs validating. */
+	if (value[0] != '\0')
+	{
+		GdkRGBA color;
+
+		if (!gdk_rgba_parse (&color, value))
+		{
+			g_set_error (error, TERMINAL_OPTION_ERROR, TERMINAL_OPTION_ERROR_INVALID_ARGUMENT,
+			            "\"%s\" is not a valid color specification", value);
+			return FALSE;
+		}
+	}
+
+	if (options->initial_windows)
+	{
+		InitialTab *it = ensure_top_tab (options);
+
+		g_free (it->tab_color);
+		it->tab_color = g_strdup (value);
+	}
+	else
+	{
+		g_free (options->default_tab_color);
+		options->default_tab_color = g_strdup (value);
+	}
+
+	return TRUE;
+}
+
+static gboolean
 option_working_directory_callback (const gchar *option_name,
                                    const gchar *value,
                                    gpointer     data,
@@ -956,6 +997,7 @@ terminal_options_free (TerminalOptions *options)
 	g_free (options->default_icon);
 	g_free (options->default_working_dir);
 	g_free (options->default_title);
+	g_free (options->default_tab_color);
 	g_free (options->default_profile);
 
 	g_strfreev (options->exec_argv);
@@ -1130,6 +1172,15 @@ get_goption_context (TerminalOptions *options)
 			option_title_callback,
 			N_("Set the terminal title"),
 			N_("TITLE")
+		},
+		{
+			"tab-color",
+			0,
+			0,
+			G_OPTION_ARG_CALLBACK,
+			option_tab_color_callback,
+			N_("Set the tab background color"),
+			N_("COLOR")
 		},
 		{
 			"working-directory",

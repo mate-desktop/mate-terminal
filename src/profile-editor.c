@@ -147,6 +147,19 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 #define SET_SENSITIVE(name, setting) widget_and_labels_set_sensitive (profile_editor_get_widget (editor, name), setting)
 
 	if (!prop_name ||
+	        prop_name == I_(TERMINAL_PROFILE_USE_TAB_COLOR) ||
+	        prop_name == I_(TERMINAL_PROFILE_TAB_COLOR))
+	{
+		gboolean use_tab_color, tab_color_locked;
+
+		use_tab_color = terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_TAB_COLOR);
+		tab_color_locked = terminal_profile_property_locked (profile, TERMINAL_PROFILE_TAB_COLOR);
+
+		SET_SENSITIVE ("use-tab-color-checkbutton", !terminal_profile_property_locked (profile, TERMINAL_PROFILE_USE_TAB_COLOR));
+		SET_SENSITIVE ("tab-color-box", use_tab_color && !tab_color_locked);
+	}
+
+	if (!prop_name ||
 	        prop_name == I_(TERMINAL_PROFILE_USE_CUSTOM_COMMAND) ||
 	        prop_name == I_(TERMINAL_PROFILE_CUSTOM_COMMAND))
 	{
@@ -953,13 +966,16 @@ terminal_profile_edit (TerminalProfile *profile,
 	CONNECT ("scroll-on-keystroke-checkbutton", TERMINAL_PROFILE_SCROLL_ON_KEYSTROKE);
 	CONNECT ("scroll-on-output-checkbutton", TERMINAL_PROFILE_SCROLL_ON_OUTPUT);
 	CONNECT ("show-menubar-checkbutton", TERMINAL_PROFILE_DEFAULT_SHOW_MENUBAR);
+	CONNECT ("show-tab-close-button-checkbutton", TERMINAL_PROFILE_SHOW_TAB_CLOSE_BUTTON);
 	CONNECT ("solid-radiobutton", TERMINAL_PROFILE_BACKGROUND_TYPE);
 	CONNECT ("system-font-checkbutton", TERMINAL_PROFILE_USE_SYSTEM_FONT);
+	CONNECT ("tab-colorpicker", TERMINAL_PROFILE_TAB_COLOR);
 	CONNECT ("title-entry", TERMINAL_PROFILE_TITLE);
 	CONNECT ("title-mode-combobox", TERMINAL_PROFILE_TITLE_MODE);
 	CONNECT ("transparent-radiobutton", TERMINAL_PROFILE_BACKGROUND_TYPE);
 	CONNECT ("use-custom-command-checkbutton", TERMINAL_PROFILE_USE_CUSTOM_COMMAND);
 	CONNECT ("use-custom-default-size-checkbutton", TERMINAL_PROFILE_USE_CUSTOM_DEFAULT_SIZE);
+	CONNECT ("use-tab-color-checkbutton", TERMINAL_PROFILE_USE_TAB_COLOR);
 	CONNECT ("use-theme-colors-checkbutton", TERMINAL_PROFILE_USE_THEME_COLORS);
 	CONNECT ("word-chars-entry", TERMINAL_PROFILE_WORD_CHARS);
 	CONNECT_WITH_FLAGS ("bell-checkbutton", TERMINAL_PROFILE_SILENT_BELL, FLAG_INVERT_BOOL);

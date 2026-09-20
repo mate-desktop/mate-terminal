@@ -77,6 +77,9 @@ struct _TerminalScreenPrivate
 	guint launch_child_source_id;
 	gulong bg_image_callback_id;
 	GdkPixbuf *bg_image;
+	GdkRGBA tab_color;
+	gboolean has_tab_color;
+	gboolean tab_close_button_visible;
 };
 
 enum
@@ -737,6 +740,13 @@ terminal_screen_new (TerminalProfile *profile,
 
 	terminal_screen_set_profile (screen, profile);
 
+	if (terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_TAB_COLOR))
+		terminal_screen_set_tab_color (screen,
+		                               terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_TAB_COLOR));
+
+	priv->tab_close_button_visible =
+	    terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_SHOW_TAB_CLOSE_BUTTON);
+
 	if (terminal_profile_get_property_boolean (profile, TERMINAL_PROFILE_USE_CUSTOM_DEFAULT_SIZE))
 	{
 		vte_terminal_set_size (VTE_TERMINAL (screen),
@@ -1323,6 +1333,38 @@ terminal_screen_get_profile (TerminalScreen *screen)
 
 	g_assert (priv->profile != NULL);
 	return priv->profile;
+}
+
+void
+terminal_screen_set_tab_color (TerminalScreen *screen,
+                               const GdkRGBA  *rgba)
+{
+	TerminalScreenPrivate *priv = screen->priv;
+
+	priv->has_tab_color = rgba != NULL;
+	if (rgba != NULL)
+		priv->tab_color = *rgba;
+}
+
+const GdkRGBA *
+terminal_screen_get_tab_color (TerminalScreen *screen)
+{
+	TerminalScreenPrivate *priv = screen->priv;
+
+	return priv->has_tab_color ? &priv->tab_color : NULL;
+}
+
+void
+terminal_screen_set_tab_close_button_visible (TerminalScreen *screen,
+                                              gboolean visible)
+{
+	screen->priv->tab_close_button_visible = visible != FALSE;
+}
+
+gboolean
+terminal_screen_get_tab_close_button_visible (TerminalScreen *screen)
+{
+	return screen->priv->tab_close_button_visible;
 }
 
 void

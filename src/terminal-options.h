@@ -43,6 +43,7 @@ typedef struct
 	char    *default_icon;
 	char    *default_working_dir;
 	char    *default_title;
+	char    *default_tab_color;
 	char   **exec_argv;
 	char    *default_profile;
 	gboolean default_profile_is_id;
@@ -63,6 +64,7 @@ typedef struct
 	gboolean profile_is_id;
 	char **exec_argv;
 	char *title;
+	char *tab_color;
 	char *working_dir;
 	double zoom;
 	guint zoom_set : 1;
@@ -95,7 +97,8 @@ typedef enum
     TERMINAL_OPTION_ERROR_NOT_IN_FACTORY,
     TERMINAL_OPTION_ERROR_EXCLUSIVE_OPTIONS,
     TERMINAL_OPTION_ERROR_INVALID_CONFIG_FILE,
-    TERMINAL_OPTION_ERROR_INCOMPATIBLE_CONFIG_FILE
+    TERMINAL_OPTION_ERROR_INCOMPATIBLE_CONFIG_FILE,
+    TERMINAL_OPTION_ERROR_INVALID_ARGUMENT
 } TerminalOptionError;
 
 TerminalOptions *terminal_options_parse (const char *working_directory,

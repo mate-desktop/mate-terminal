@@ -34,6 +34,7 @@ struct _TerminalTabLabelPrivate
 	GtkWidget *label;
 	GtkWidget *close_button;
 	gboolean bold;
+	gboolean close_button_visible;
 };
 
 enum
@@ -129,6 +130,7 @@ terminal_tab_label_constructor (GType type,
 
 	priv->close_button = close_button = terminal_close_button_new ();
 	gtk_widget_set_tooltip_text (close_button, _("Close tab"));
+	priv->close_button_visible = TRUE;
 
 	gtk_box_pack_end (GTK_BOX (hbox), close_button, FALSE, FALSE, 0);
 
@@ -281,4 +283,40 @@ terminal_tab_label_set_bold (TerminalTabLabel *tab_label,
 
 	if (free_list)
 		pango_attr_list_unref (attr_list);
+}
+
+/**
+ * terminal_tab_label_set_close_button_visible:
+ * @tab_label: a #TerminalTabLabel
+ * @visible: whether the tab's close ("x") button should be shown
+ *
+ * Hiding the close button only removes the clickable "x" from the tab,
+ * as a guard against accidentally closing it with a stray click; the
+ * tab can still be closed via its other means (Ctrl+W, File > Close
+ * Tab, middle-click, etc).
+ */
+void
+terminal_tab_label_set_close_button_visible (TerminalTabLabel *tab_label,
+                                             gboolean visible)
+{
+	TerminalTabLabelPrivate *priv = tab_label->priv;
+
+	visible = visible != FALSE;
+	if (priv->close_button_visible == visible)
+		return;
+
+	priv->close_button_visible = visible;
+	gtk_widget_set_visible (priv->close_button, visible);
+}
+
+/**
+ * terminal_tab_label_get_close_button_visible:
+ * @tab_label: a #TerminalTabLabel
+ *
+ * Returns: whether the tab's close ("x") button is currently shown
+ */
+gboolean
+terminal_tab_label_get_close_button_visible (TerminalTabLabel *tab_label)
+{
+	return tab_label->priv->close_button_visible;
 }

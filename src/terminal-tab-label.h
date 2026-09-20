@@ -60,6 +60,11 @@ GtkWidget  *terminal_tab_label_new        (TerminalScreen *screen);
 void        terminal_tab_label_set_bold   (TerminalTabLabel *tab_label,
         gboolean bold);
 
+void        terminal_tab_label_set_close_button_visible (TerminalTabLabel *tab_label,
+        gboolean visible);
+
+gboolean    terminal_tab_label_get_close_button_visible (TerminalTabLabel *tab_label);
+
 G_END_DECLS
 
 #endif /* !TERMINAL_TAB_LABEL_H */
