@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021
-# 
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021\n"
-"Language-Team: Kazakh (https://app.transifex.com/mate/teams/13566/kk/)\n"
+"PO-Revision-Date: 2026-08-24 10:20+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-terminal/kk/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -37,6 +38,11 @@ msgid ""
 "program developed by the X Consortium. It supports translucent backgrounds, "
 "opening multiple terminals in a single window (tabs) and clickable URLs."
 msgstr ""
+"MATE Terminal — бұл MATE ортасында UNIX қоршамына қол жеткізу үшін "
+"пайдалануға болатын терминал эмуляциясының қолданбасы. MATE Terminal X "
+"Consortium әзірлеген xterm бағдарламасын эмуляциялайды. Ол жартылай мөлдір "
+"фонды, бір терезеде бірнеше терминалды ашуды (беттер) және шертуге болатын "
+"URL мекенжайларын қолдайды."
 
 #: mate-terminal.appdata.xml.in.in:17
 msgid ""
@@ -44,6 +50,9 @@ msgid ""
 "Environment. If you would like to know more about MATE and MATE Terminal, "
 "please visit the project's home page."
 msgstr ""
+"MATE Terminal — бұл GNOME Terminal жобасының тармағы және MATE жұмыс үстелі "
+"ортасының бөлігі. MATE және MATE Terminal туралы көбірек білгіңіз келсе, "
+"жобаның басты бетіне өтіңіз."
 
 #: mate-terminal.desktop.in.in:4 src/terminal-accels.c:351 src/terminal.c:517
 #: src/terminal-profile.c:161 src/terminal-window.c:2287
@@ -73,6 +82,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
+"Бұл терминалда әлі де процесс орындалуда.\n"
+"Терминалды жабу оны тоқтатады."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -261,7 +272,7 @@ msgstr "Rxvt"
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:81 src/profile-preferences.ui:153
 msgid "Solarized"
-msgstr ""
+msgstr "Solarized"
 
 #. Translators: This is the name of a colour scheme
 #: src/extra-strings.c:83 src/profile-editor.c:546
@@ -275,7 +286,7 @@ msgstr "Табу"
 
 #: src/find-dialog.ui:59
 msgid "_Find"
-msgstr ""
+msgstr "_Табу"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
@@ -327,6 +338,8 @@ msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
 msgstr ""
+"mate-terminal-ға белгілі профильдер тізімі. Тізімде /org/mate/terminal/"
+"profiles жолына қатысты ішкі бумаларды атайтын жолдар бар."
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
@@ -337,6 +350,8 @@ msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
 msgstr ""
+"Жаңа терезе немесе бет ашылған кезде пайдаланылатын профиль. profile_list "
+"ішінде болуы керек."
 
 #: src/org.mate.terminal.gschema.xml.in:59
 msgid "Whether the menubar has access keys"
@@ -348,10 +363,13 @@ msgid ""
 "with some applications run inside the terminal so it's possible to turn them"
 " off."
 msgstr ""
+"Мәзір жолағы үшін Alt+әріп қатынау пернелері болуы керек пе. Олар терминал "
+"ішінде орындалатын кейбір қолданбаларға кедергі келтіруі мүмкін, сондықтан "
+"оларды сөндіруге болады."
 
 #: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
-msgstr ""
+msgstr "Мәзір жолағына қол жеткізудің стандартты GTK+ жарлығы іске қосылған ба"
 
 #: src/org.mate.terminal.gschema.xml.in:65
 msgid ""
@@ -378,34 +396,43 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Мүмкін кодтаулардың ішкі жиыны «Кодтау» ішкі мәзірінде көрсетіледі. Бұл "
+"сонда пайда болатын кодтаулар тізімі. «current» арнайы кодтау атауы ағымдағы "
+"локальдің кодтауын көрсетуді білдіреді."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
-msgstr ""
+msgstr "Терминал терезелерін жапқан кезде растауды сұрау керек пе"
 
 #: src/org.mate.terminal.gschema.xml.in:75
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
+"Бірнеше ашық беті немесе кез келген алдыңғы пландағы ішкі процестері бар "
+"терминал терезесін жапқан кезде растауды сұрау керек пе."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
-msgstr ""
+msgstr "Беттерді ортаңғы шертумен жабу"
 
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Егер ақиқат болса, беттерді ортаңғы шерту арқылы жабу мүмкіндігін іске "
+"қосады."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
-msgstr ""
+msgstr "Беттерді [Ctrl]+[Tab] арқылы ауыстыру"
 
 #: src/org.mate.terminal.gschema.xml.in:85
 msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Егер ақиқат болса, [Ctrl+Tab] және [Ctrl+Shift+Tab] көмегімен беттерді "
+"ауыстыру мүмкіндігін іске қосады."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -429,6 +456,8 @@ msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr ""
+"Осы профилі бар терезелер/беттер үшін жаңа терезелерде мәзір жолағы "
+"көрсетілуі керек болса — ақиқат."
 
 #: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
@@ -439,6 +468,9 @@ msgid ""
 "Default color of text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as \"red\")."
 msgstr ""
+"Түс спецификациясы түріндегі терминалдағы мәтіннің үнсіз келісім бойынша "
+"түсі (HTML стиліндегі оналтылық цифрлар немесе «red» сияқты түс атауы болуы "
+"мүмкін)."
 
 #: src/org.mate.terminal.gschema.xml.in:108
 msgid "Default color of terminal background"
@@ -449,6 +481,9 @@ msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as \"red\")."
 msgstr ""
+"Түс спецификациясы түріндегі терминал фонының үнсіз келісім бойынша түсі "
+"(HTML стиліндегі оналтылық цифрлар немесе «red» сияқты түс атауы болуы "
+"мүмкін)."
 
 #: src/org.mate.terminal.gschema.xml.in:113
 msgid "Default color of bold text in the terminal"
@@ -460,6 +495,10 @@ msgid ""
 " HTML-style hex digits, or a color name such as \"red\"). This is ignored if"
 " bold_color_same_as_fg is true."
 msgstr ""
+"Түс спецификациясы түріндегі терминалдағы жуан мәтіннің үнсіз келісім "
+"бойынша түсі (HTML стиліндегі оналтылық цифрлар немесе «red» сияқты түс "
+"атауы болуы мүмкін). Егер bold_color_same_as_fg мәні ақиқат болса, бұл "
+"еленбейді."
 
 #: src/org.mate.terminal.gschema.xml.in:118
 msgid "Whether bold text should use the same color as normal text"
@@ -481,6 +520,10 @@ msgid ""
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
+"Егер терминалдағы қолданба атауды орнатса (әдетте адамдар өз қоршамын бұған "
+"баптайды), динамикалық түрде орнатылған атау бапталған атауды өшіре алады, "
+"оның алдында тұра алады, одан кейін тұра алады немесе оны алмастыра алады. "
+"Мүмкін мәндер: «replace», «before», «after» және «ignore»."
 
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
@@ -497,6 +540,9 @@ msgid ""
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
 msgstr ""
+"Терминал терезесі немесе беті үшін көрсетілетін атау. Бұл атау title_mode "
+"баптауына байланысты терминал ішіндегі қолданба орнатқан атаумен "
+"алмастырылуы немесе онымен біріктірілуі мүмкін."
 
 #: src/org.mate.terminal.gschema.xml.in:133
 msgid "Whether to allow bold text"
@@ -508,13 +554,15 @@ msgstr "Ақиқат болса, қолданбалар терминалда м�
 
 #: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
-msgstr ""
+msgstr "Терминал қоңырауының дыбысын сөндіру керек пе"
 
 #: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
 msgstr ""
+"Егер ақиқат болса, қолданбалар терминал қоңырауы үшін экрандау тізбегін "
+"жібергенде шу шығармайды."
 
 #: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
@@ -523,6 +571,8 @@ msgstr "Таңдалғанды алмасу буферіне көшіру"
 #: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr ""
+"Егер ақиқат болса, таңдалған мәтін алмасу буферіне автоматты түрде "
+"көшіріледі."
 
 #: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
@@ -534,6 +584,9 @@ msgid ""
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
 msgstr ""
+"Мәтінді сөз бойынша таңдаған кезде осы таңбалардың тізбегі бір сөз болып "
+"есептеледі. Ауқымдарды «A-Z» түрінде беруге болады. Тікелей дефис (ауқымды "
+"білдірмейтін) бірінші берілген таңба болуы керек."
 
 #: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
@@ -544,6 +597,9 @@ msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
 msgstr ""
+"Егер ақиқат болса, жаңадан жасалған терминал терезелерінің "
+"default_size_columns және default_size_rows арқылы көрсетілген "
+"пайдаланушылық өлшемі болады."
 
 #: src/org.mate.terminal.gschema.xml.in:158
 msgid "Default number of columns"
@@ -578,6 +634,8 @@ msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr ""
+"Терминалдың айналдыру жолағын қайда орналастыру керек. Мүмкін нұсқалар: «left"
+"», «right» және «hidden»."
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
@@ -589,6 +647,9 @@ msgid ""
 "terminal by this number of lines; lines that don't fit in the scrollback are"
 " discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr ""
+"Сақталатын кері айналдыру жолдарының саны. Терминалда осы жолдар санына кері "
+"айналдыруға болады; кері айналдыруға сыймайтын жолдар еленбейді. Егер "
+"scrollback_unlimited мәні ақиқат болса, бұл мән еленбейді."
 
 #: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
@@ -614,12 +675,14 @@ msgstr "Ақиқат болса, перне басылған кезде айна
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
-msgstr ""
+msgstr "Жаңа шығыс пайда болған кезде төменге қарай айналдыру керек пе"
 
 #: src/org.mate.terminal.gschema.xml.in:189
 msgid ""
 "If true, whenever there's new output the terminal will scroll to the bottom."
 msgstr ""
+"Егер ақиқат болса, жаңа шығыс болған кезде терминал төменге қарай "
+"айналдырылады."
 
 #: src/org.mate.terminal.gschema.xml.in:193
 msgid "What to do with the terminal when the child command exits"
@@ -630,6 +693,8 @@ msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr ""
+"Мүмкін мәндер: терминалды жабу үшін «close» және команданы қайта іске қосу "
+"үшін «restart»."
 
 #: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -640,6 +705,8 @@ msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
 msgstr ""
+"Егер ақиқат болса, терминал ішіндегі команда кіру қоршамы ретінде іске "
+"қосылады. (argv[0] алдында дефис болады.)"
 
 #: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
@@ -662,6 +729,8 @@ msgid ""
 "The possible values are \"system\" to use the global cursor blinking "
 "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgstr ""
+"Мүмкін мәндер: курсордың жыпылықтауының глобалды баптауларын пайдалану үшін «"
+"system», немесе режимді анық түрде орнату үшін «on» не «off»."
 
 #: src/org.mate.terminal.gschema.xml.in:213
 msgid "The cursor appearance"
@@ -672,6 +741,8 @@ msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
+"Мүмкін мәндер: блоктық курсорды пайдалану үшін «block», вертикалды сызықты "
+"курсор үшін «ibeam» немесе асты сызылған курсор үшін «underline»."
 
 #: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
@@ -688,7 +759,7 @@ msgstr "Терминал терезесі үшін таңбаша"
 
 #: src/org.mate.terminal.gschema.xml.in:224
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr ""
+msgstr "Осы профилі бар беттер/терезелер үшін пайдаланылатын таңбаша."
 
 #: src/org.mate.terminal.gschema.xml.in:228
 msgid "Palette for terminal applications"
@@ -700,6 +771,9 @@ msgid ""
 "use. This is that palette, in the form of a colon-separated list of color "
 "names. Color names should be in hex format e.g. \"#FF00FF\""
 msgstr ""
+"Терминалдарда терминал ішіндегі қолданбалар пайдалана алатын 16 түсті "
+"палитра бар. Бұл — қос нүктемен бөлінген түс атауларының тізімі түріндегі "
+"сол палитра. Түс атаулары оналтылық пішімде болуы керек, мысалы «#FF00FF»"
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
@@ -707,7 +781,7 @@ msgstr "Қаріп"
 
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
+msgstr "Pango қаріп атауы. Мысалдар: «Sans 12» немесе «Monospace Bold 14»."
 
 #: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
@@ -719,6 +793,9 @@ msgid ""
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
 msgstr ""
+"Терминал фонының түрі. Тұтас түс үшін «solid», сурет үшін «image», немесе "
+"терезелердің композиттік басқарушысы іске қосылған болса нақты мөлдірлік "
+"үшін, әйтпесе жалған мөлдірлік үшін «transparent» болуы мүмкін."
 
 #: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
@@ -737,10 +814,13 @@ msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr ""
+"Егер ақиқат болса, фондық сурет алдыңғы пландағы мәтінмен бірге "
+"айналдырылады; егер жалған болса, сурет бекітілген орында қалып, мәтін оның "
+"үстімен айналдырылады."
 
 #: src/org.mate.terminal.gschema.xml.in:253
 msgid "How much to darken the background image"
-msgstr ""
+msgstr "Фондық суретті қаншалықты қарайту керек"
 
 #: src/org.mate.terminal.gschema.xml.in:254
 msgid ""
@@ -749,10 +829,15 @@ msgid ""
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
 msgstr ""
+"Фондық суретті қаншалықты қарайту керектігін көрсететін 0.0 мен 1.0 "
+"арасындағы мән. 0.0 қараңғылықтың жоқтығын, 1.0 толық қараңғы екенін "
+"білдіреді. Ағымдағы іске асырылуда қараңғылықтың тек екі деңгейі мүмкін, "
+"сондықтан баптау логикалық мән сияқты әрекет етеді, мұнда 0.0 қарайту "
+"эффектісін сөндіреді."
 
 #: src/org.mate.terminal.gschema.xml.in:258
 msgid "Effect of the Backspace key"
-msgstr ""
+msgstr "Backspace пернесінің әсері"
 
 #: src/org.mate.terminal.gschema.xml.in:259
 msgid ""
@@ -762,10 +847,15 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
+"Backspace пернесі қай кодты генерациялайтынын орнатады. Мүмкін мәндер: ASCII "
+"DEL таңбасы үшін «ascii-del», Control-H (ASCII BS таңбасы ретінде белгілі) "
+"үшін «control-h», әдетте backspace немесе delete пернелеріне "
+"байланыстырылған экрандау тізбегі үшін «escape-sequence». Әдетте Backspace "
+"пернесі үшін дұрыс баптау ретінде «ascii-del» саналады."
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
-msgstr ""
+msgstr "Delete пернесінің әсері"
 
 #: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
@@ -775,6 +865,11 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
+"Delete пернесі қай кодты генерациялайтынын орнатады. Мүмкін мәндер: ASCII "
+"DEL таңбасы үшін «ascii-del», Control-H (ASCII BS таңбасы ретінде белгілі) "
+"үшін «control-h», әдетте backspace немесе delete пернелеріне "
+"байланыстырылған экрандау тізбегі үшін «escape-sequence». Әдетте Delete "
+"пернесі үшін дұрыс баптау ретінде «escape-sequence» саналады."
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -785,6 +880,8 @@ msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
+"Егер ақиқат болса, пайдаланушы көрсеткен түстердің орнына терминал үшін "
+"мәтін енгізу өрістерінде қолданылатын тема түстерінің сұлбасы пайдаланылады."
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
@@ -795,26 +892,33 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"Егер ақиқат болса, терминал жұмыс үстелінің глобалды стандартты қарпін (егер "
+"оның ені біркелкі болса), әйтпесе барынша ұқсас қаріпті пайдаланады."
 
 #: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
-msgstr ""
+msgstr "S/Key сұранымдарын түспен ерекшелеу"
 
 #: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
+"S/Key сұрау-жауап сұранымы анықталып, шертілген кезде сұхбат терезесін "
+"көрсету. Сұхбат терезесіне парольді теру оны терминалға жібереді."
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Тышқан курсорының астындағы URL адрестерін түспен ерекшелеу"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Егер ақиқат болса, тышқан курсорының астындағы URL адрестері түспен "
+"ерекшеленеді және оларды Control пернесімен бірге тышқанмен шерту арқылы "
+"ашуға немесе контексттік мәзірде пайдалануға болады."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -827,6 +931,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Жаңа бетті ашуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
@@ -839,6 +947,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Жаңа терезені ашуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
@@ -851,6 +963,10 @@ msgid ""
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
 msgstr ""
+"Профильді жасау сұхбат терезесін шақыруға арналған пернетақта жарлығының "
+"пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде "
+"беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін "
+"пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:305
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -863,6 +979,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Ағымдағы беттің мазмұнын файлға сақтауға арналған пернетақта жарлығының "
+"пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде "
+"беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін "
+"пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
@@ -875,6 +995,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Бетті жабуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
@@ -887,6 +1010,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Терезені жабуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:320
 msgid "Keyboard shortcut to copy text"
@@ -899,6 +1025,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Таңдалған мәтінді алмасу буферіне көшіруге арналған пернетақта жарлығының "
+"пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде "
+"беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін "
+"пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:325
 msgid "Keyboard shortcut to paste text"
@@ -911,10 +1041,14 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
+"Алмасу буферінің мазмұнын терминалға кірістіруге арналған пернетақта "
+"жарлығының пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол "
+"ретінде беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл "
+"әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
-msgstr ""
+msgstr "Барлық мәтінді таңдауға арналған пернетақта жарлығы"
 
 #: src/org.mate.terminal.gschema.xml.in:331
 msgid ""
@@ -923,10 +1057,14 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Терминалдағы барлық мәтінді таңдауға арналған пернетақта жарлығының пернесі. "
+"GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. "
+"Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
-msgstr ""
+msgstr "Табу сұхбат терезесін көрсетуге арналған пернетақта жарлығы"
 
 #: src/org.mate.terminal.gschema.xml.in:336
 msgid ""
@@ -935,10 +1073,14 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Табу сұхбат терезесін көрсетуге арналған пернетақта жарлығының пернесі. GTK+ "
+"ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер "
+"опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
-msgstr ""
+msgstr "Іздеу терминінің келесі кездесуін табуға арналған пернетақта жарлығы"
 
 #: src/org.mate.terminal.gschema.xml.in:341
 msgid ""
@@ -947,10 +1089,14 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Терминалдағы іздеу терминінің келесі кездесуін табуға арналған пернетақта "
+"жарлығының пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол "
+"ретінде беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл "
+"әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
-msgstr ""
+msgstr "Іздеу терминінің алдыңғы кездесуін табуға арналған пернетақта жарлығы"
 
 #: src/org.mate.terminal.gschema.xml.in:346
 msgid ""
@@ -959,6 +1105,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
+"Терминалдағы іздеу терминінің алдыңғы кездесуін табуға арналған пернетақта "
+"жарлығының пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол "
+"ретінде беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл "
+"әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -971,6 +1121,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Толық экран режимін ауыстыруға арналған пернетақта жарлығының пернесі. GTK+ "
+"ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер "
+"опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:355
 msgid "Keyboard shortcut to toggle the visibility of the menubar"
@@ -983,6 +1137,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Мәзір жолағының көрінуін ауыстыруға арналған пернетақта жарлығының пернесі. "
+"GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. "
+"Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:360
 msgid "Keyboard shortcut to set the terminal title"
@@ -995,6 +1153,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Терминал атауын орнатуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:365
 msgid "Keyboard shortcut to reset the terminal"
@@ -1007,6 +1169,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Терминалды бастапқы күйге келтіруге арналған пернетақта жарлығының пернесі. "
+"GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. "
+"Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:370
 msgid "Keyboard shortcut to reset and clear the terminal"
@@ -1019,6 +1185,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Терминалды бастапқы күйге келтіру және тазартуға арналған пернетақта "
+"жарлығының пернесі. GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол "
+"ретінде беріледі. Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл "
+"әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:375
 msgid "Keyboard shortcut to switch to the previous tab"
@@ -1031,6 +1201,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Алдыңғы бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:380
 msgid "Keyboard shortcut to switch to the next tab"
@@ -1043,6 +1217,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Келесі бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:385
 msgid "Keyboard shortcut to switch to the previous profile"
@@ -1055,6 +1233,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
+"Алдыңғы профильге ауысуға арналған пернетақта жарлығының пернесі. GTK+ "
+"ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер "
+"опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:390
 msgid "Keyboard shortcut to switch to the next profile"
@@ -1067,6 +1249,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Келесі профильге ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:395
 msgid "Accelerator to move the current tab to the left."
@@ -1079,6 +1265,9 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
+"Ағымдағы бетті солға жылжытуға арналған үдеткіш перне. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернелер байланысы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:400
 msgid "Accelerator to move the current tab to the right."
@@ -1091,6 +1280,9 @@ msgid ""
 "the special string \"disabled\", then there will be no keybinding for this "
 "action."
 msgstr ""
+"Ағымдағы бетті оңға жылжытуға арналған үдеткіш перне. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернелер байланысы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:405
 msgid "Accelerator to detach current tab."
@@ -1102,6 +1294,9 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keybinding for this action."
 msgstr ""
+"Ағымдағы бетті бөліп алуға арналған үдеткіш перне. GTK+ ресурс файлдары үшін "
+"пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернелер байланысы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:410
 msgid "Keyboard shortcut to switch to tab 1"
@@ -1114,6 +1309,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"1-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:415
 msgid "Keyboard shortcut to switch to tab 2"
@@ -1126,6 +1324,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"2-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:420
 msgid "Keyboard shortcut to switch to tab 3"
@@ -1138,6 +1339,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"3-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:425
 msgid "Keyboard shortcut to switch to tab 4"
@@ -1150,6 +1354,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"4-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:430
 msgid "Keyboard shortcut to switch to tab 5"
@@ -1162,6 +1369,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"5-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:435
 msgid "Keyboard shortcut to switch to tab 6"
@@ -1174,6 +1384,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"6-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:440
 msgid "Keyboard shortcut to switch to tab 7"
@@ -1186,6 +1399,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"7-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:445
 msgid "Keyboard shortcut to switch to tab 8"
@@ -1198,6 +1414,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"8-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:450
 msgid "Keyboard shortcut to switch to tab 9"
@@ -1210,6 +1429,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"9-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс файлдары "
+"үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «disabled» "
+"арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:455
 msgid "Keyboard shortcut to switch to tab 10"
@@ -1222,6 +1444,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"10-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:460
 msgid "Keyboard shortcut to switch to tab 11"
@@ -1234,6 +1460,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"11-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:465
 msgid "Keyboard shortcut to switch to tab 12"
@@ -1246,6 +1476,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"12-бетке ауысуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:470
 msgid "Keyboard shortcut to launch help"
@@ -1258,6 +1492,10 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
+"Көмекті іске қосуға арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:475
 msgid "Keyboard shortcut to make font larger"
@@ -1270,6 +1508,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Қаріпті үлкейтуге арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:480
 msgid "Keyboard shortcut to make font smaller"
@@ -1282,6 +1524,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Қаріпті кішірейтуге арналған пернетақта жарлығының пернесі. GTK+ ресурс "
+"файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. Егер опцияны «"
+"disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта жарлығы "
+"болмайды."
 
 #: src/org.mate.terminal.gschema.xml.in:485
 msgid "Keyboard shortcut to make font normal-size"
@@ -1294,6 +1540,10 @@ msgid ""
 "the special string \"disabled\", then there will be no keyboard shortcut for"
 " this action."
 msgstr ""
+"Қаріпті қалыпты өлшемге келтіруге арналған пернетақта жарлығының пернесі. "
+"GTK+ ресурс файлдары үшін пайдаланылатын пішімдегі жол ретінде беріледі. "
+"Егер опцияны «disabled» арнайы жолына орнатсаңыз, бұл әрекет үшін пернетақта "
+"жарлығы болмайды."
 
 #: src/profile-editor.c:45
 msgid "Black on light yellow"
@@ -1319,13 +1569,13 @@ msgstr "Қара үстіндегі ақ"
 #. translated
 #: src/profile-editor.c:70
 msgid "Solarized light"
-msgstr ""
+msgstr "Solarized ашық"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be
 #. translated
 #: src/profile-editor.c:75
 msgid "Solarized dark"
-msgstr ""
+msgstr "Solarized қараңғы"
 
 #: src/profile-editor.c:498
 #, c-format
@@ -1425,11 +1675,11 @@ msgstr "Таңдалған мәтінді а_лмасу буферіне көш�
 
 #: src/profile-preferences.ui:488
 msgid "Highlight _S/Key challenges under mouse pointer"
-msgstr ""
+msgstr "Тышқан курсорының астындағы _S/Key сұранымдарын түспен ерекшелеу"
 
 #: src/profile-preferences.ui:504
 msgid "Highlight _URLs under mouse pointer"
-msgstr ""
+msgstr "Тышқан курсорының астындағы _URL адрестерін түспен ерекшелеу"
 
 #: src/profile-preferences.ui:529
 msgid "Cursor blin_k:"
@@ -1669,7 +1919,7 @@ msgstr "Атауын орнату"
 
 #: src/set-title-dialog.ui:51
 msgid "_OK"
-msgstr ""
+msgstr "_ОК"
 
 #: src/set-title-dialog.ui:88
 msgid "_Title:"
@@ -1677,11 +1927,11 @@ msgstr "А_тауы:"
 
 #: src/skey-challenge.ui:57
 msgid "_Ok"
-msgstr ""
+msgstr "_ОК"
 
 #: src/skey-challenge.ui:114
 msgid "S/Key Challenge Response"
-msgstr ""
+msgstr "S/Key сұрау-жауап"
 
 #: src/skey-challenge.ui:134
 msgid "_Password:"
@@ -1689,11 +1939,11 @@ msgstr "_Пароль:"
 
 #: src/skey-popup.c:166
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
-msgstr ""
+msgstr "Сіз шерткен мәтін жарамды S/Key сұранымына ұқсамайды."
 
 #: src/skey-popup.c:177
 msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
-msgstr ""
+msgstr "Сіз шерткен мәтін жарамды OTP сұранымына ұқсамайды."
 
 #: src/terminal-accels.c:149
 msgid "New Tab"
@@ -2081,6 +2331,9 @@ msgid ""
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
 msgstr ""
+"mate-terminal-дың бұл нұсқасында «%s» опциясына енді қолдау көрсетілмейді; "
+"қалаған баптауы бар профиль жасап, жаңа «--profile» опциясын пайдаланғыңыз "
+"келуі мүмкін\n"
 
 #: src/terminal-options.c:209
 #, c-format
@@ -2543,11 +2796,11 @@ msgstr "О_сы туралы"
 
 #: src/terminal-window.c:2157
 msgid "_Open Hyperlink"
-msgstr ""
+msgstr "Гиперсілтемені _ашу"
 
 #: src/terminal-window.c:2162
 msgid "_Copy Hyperlink Address"
-msgstr ""
+msgstr "Гиперсілтеме адресін _көшіру"
 
 #: src/terminal-window.c:2167
 msgid "_Send Mail To…"
@@ -2598,10 +2851,12 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"Бұл терезедегі кейбір терминалдарда әлі де процестер орындалуда.\n"
+"Терезені жабу олардың барлығын тоқтатады."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "Бұл терезеде бірнеше бет ашық тұр."
 
 #: src/terminal-window.c:3721
 msgid "Close this terminal?"
@@ -2629,10 +2884,12 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
+"MATE Terminal — бұл MATE жұмыс үстелі ортасына арналған терминал эмуляторы.\n"
+"Virtual TErminal %d.%d.%d негізінде жасалған"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"
-msgstr ""
+msgstr "MATE Terminal туралы"
 
 #: src/terminal-window.c:4534
 msgid ""
@@ -2643,6 +2900,12 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 2002–2004 Havoc Pennington\n"
+"Copyright © 2003–2004, 2007 Mariano Suárez-Alvarez\n"
+"Copyright © 2006 Guilherme de S. Pastore\n"
+"Copyright © 2007–2010 Christian Persch\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 MATE әзірлеушілері"
 
 #: src/terminal-window.c:4546
 msgid "translator-credits"
