@@ -1776,6 +1776,7 @@ terminal_window_draw (GtkWidget *widget,
 		int width;
 		int height;
 		GtkWidget *child;
+		TerminalWindow *window = TERMINAL_WINDOW (widget);
 
 		/* Get the *child* allocation, so we don't overwrite window borders */
 		child = gtk_bin_get_child (GTK_BIN (widget));
@@ -1784,8 +1785,62 @@ terminal_window_draw (GtkWidget *widget,
 		context = gtk_widget_get_style_context (widget);
 		width = gtk_widget_get_allocated_width (widget);
 		height = gtk_widget_get_allocated_height (widget);
-		gtk_render_background (context, cr, 0, 0, width, height);
-		gtk_render_frame (context, cr, 0, 0, width, height);
+
+		/* A transparent profile background makes the toplevel app-paintable,
+		 * and GTK then reserves margins on it for the client-side window
+		 * shadow and the titlebar. Filling the whole toplevel paints those
+		 * margins as well: the shadow is gone and the margins show up as a
+		 * band of the terminal background around the window. Fill only the
+		 * content rectangle and leave the margins to the shadow. */
+		if (window->priv->active_screen != NULL)
+		{
+			TerminalProfile *profile = terminal_screen_get_profile (window->priv->active_screen);
+			const GdkRGBA *bg_rgba;
+			GdkRGBA bg;
+			GdkRGBA *theme_bg = NULL;
+
+			bg_rgba = (const GdkRGBA *) terminal_profile_get_property_boxed (profile, TERMINAL_PROFILE_BACKGROUND_COLOR);
+			if (bg_rgba != NULL)
+			{
+				bg = *bg_rgba;
+			}
+			else
+			{
+				gtk_style_context_get (context, GTK_STATE_FLAG_NORMAL,
+				                       GTK_STYLE_PROPERTY_BACKGROUND_COLOR,
+				                       &theme_bg, NULL);
+				if (theme_bg != NULL)
+				{
+					bg = *theme_bg;
+					gdk_rgba_free (theme_bg);
+				}
+				else
+				{
+					bg.red = bg.green = bg.blue = 0.0;
+					bg.alpha = 1.0;
+				}
+			}
+
+			if (terminal_profile_get_property_enum (profile, TERMINAL_PROFILE_BACKGROUND_TYPE)
+			    == TERMINAL_BACKGROUND_TRANSPARENT)
+			{
+				bg.alpha = terminal_profile_get_property_double (profile, TERMINAL_PROFILE_BACKGROUND_DARKNESS);
+			}
+
+			cairo_save (cr);
+			cairo_rectangle (cr,
+			                 child_allocation.x, child_allocation.y,
+			                 child_allocation.width, child_allocation.height);
+			cairo_clip (cr);
+			gdk_cairo_set_source_rgba (cr, &bg);
+			cairo_paint (cr);
+			cairo_restore (cr);
+		}
+		else
+		{
+			gtk_render_background (context, cr, 0, 0, width, height);
+			gtk_render_frame (context, cr, 0, 0, width, height);
+		}
 
 		gtk_render_background (context, cr,
 							   child_allocation.x, child_allocation.y,
