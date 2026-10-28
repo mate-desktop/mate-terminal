@@ -302,7 +302,7 @@ update_active_encodings_gsettings (void)
 		strings = g_array_append_val (strings, id_string);
 	}
 
-	g_settings_set_strv (settings_global, "active-encodings", (const gchar **) strings->data);
+	g_settings_set_strv (terminal_app_get_global_settings (terminal_app_get ()), "active-encodings", (const gchar **) strings->data);
 
 	g_array_free (strings, TRUE);
 	g_slist_foreach (list, (GFunc) terminal_encoding_unref, NULL);
