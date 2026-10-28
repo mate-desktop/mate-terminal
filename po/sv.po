@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Kristoffer Grundström <lovaren@gmail.com>, 2018
 # Marcus Larborg, 2018
 # Henrik Mattsson-Mårn <h@reglage.net>, 2018
@@ -15,21 +12,25 @@
 # cb445fb3dfd1fe3c2b9f58ac5638f478, 2021
 # Philip Andersen <renegadevi@codeofmagi.net>, 2021
 # Luna Jernberg <droidbittin@gmail.com>, 2023
-# Daniel Nylander <po@danielnylander.se>, 2025
-# 
+# Daniel Nylander <po@danielnylander.se>, 2025, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
-"Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
+"PO-Revision-Date: 2026-10-11 12:12+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-terminal/sv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -91,8 +92,8 @@ msgid ""
 "There is still a process running in this terminal.\n"
 "Closing the terminal will kill it."
 msgstr ""
-"Det finns fortfarande en process igång i denna terminal. Stängning av "
-"terminalen kommer att döda den."
+"Det kör fortfarande en process i den här terminalen.\n"
+"Om terminalen stängs avbryts processen."
 
 #: src/mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
@@ -131,7 +132,7 @@ msgstr "Lägg till eller ta bort terminalkodningar"
 #: src/profile-manager.ui:58 src/profile-preferences.ui:262
 #: src/terminal-window.c:1956
 msgid "_Help"
-msgstr "_Hjälp"
+msgstr "_Bevaka"
 
 #: src/encodings-dialog.ui:59 src/find-dialog.ui:42
 #: src/keybinding-editor.ui:59 src/profile-manager.ui:76
@@ -295,7 +296,7 @@ msgstr "Sök"
 
 #: src/find-dialog.ui:59
 msgid "_Find"
-msgstr "Sök"
+msgstr "Sö_k"
 
 #: src/find-dialog.ui:101
 msgid "_Search for:"
@@ -558,7 +559,7 @@ msgstr "Om sant, tillåt program i terminalfönstret att göra text fet."
 
 #: src/org.mate.terminal.gschema.xml.in:138
 msgid "Whether to silence terminal bell"
-msgstr "Om terminalljudet ska tystas"
+msgstr "Om terminalsignalen ska tystas"
 
 #: src/org.mate.terminal.gschema.xml.in:139
 msgid ""
@@ -655,7 +656,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:178
 msgid "Whether an unlimited number of lines should be kept in scrollback"
-msgstr "Om obegränsat antal rader ska behållas i rullningshistoriken"
+msgstr "Om ett obegränsat antal rader ska behållas i rullningshistoriken"
 
 #: src/org.mate.terminal.gschema.xml.in:179
 msgid ""
@@ -663,18 +664,17 @@ msgid ""
 " stored on disk temporarily, so this may cause the system to run out of disk"
 " space if there is a lot of output to the terminal."
 msgstr ""
-"Om sant så kommer inga rader i rullningshistoriken att försvinna. "
-"Rullningshistoriken lagras temporärt på disk så detta kan orsaka att "
-"systemet får slut på diskutrymme om det är mycket utdata i terminalfönstret."
+"Om sant kasseras aldrig rader i rullningshistoriken. Rullningshistoriken "
+"lagras tillfälligt på disken, så systemet kan få slut på diskutrymme om "
+"terminalen har mycket utdata."
 
 #: src/org.mate.terminal.gschema.xml.in:183
 msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr "Om det ska rullas till nedersta läget då en tangent trycks ned"
+msgstr "Om terminalen ska rulla längst ned när en tangent trycks ned"
 
 #: src/org.mate.terminal.gschema.xml.in:184
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr ""
-"Om sant hoppar rullningslisten till nedersta läget då en tangent trycks ned."
+msgstr "Om sant flyttas rullningslisten längst ned när en tangent trycks ned."
 
 #: src/org.mate.terminal.gschema.xml.in:188
 msgid "Whether to scroll to the bottom when there's new output"
@@ -879,16 +879,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
-msgstr "Om färgerna från temat ska användas för terminalwidgeten"
+msgstr "Om färgerna från temat ska användas för terminalkomponenten"
 
 #: src/org.mate.terminal.gschema.xml.in:269
 msgid ""
 "If true, the theme color scheme used for text entry boxes will be used for "
 "the terminal, instead of colors provided by the user."
 msgstr ""
-"Om sant kommer temafärgschemat som används för textinmatningsfält att "
-"användas för terminalfönstret istället för de färger som angetts av "
-"användaren."
+"Om sant används temats färgschema för textinmatningsfält i terminalen i "
+"stället för färger som användaren angett."
 
 #: src/org.mate.terminal.gschema.xml.in:273
 msgid "Whether to use the system font"
@@ -939,10 +938,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
-"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
-"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
-"för denna åtgärd."
+"Tangentbordsgenväg för att öppna en ny flik. Anges som en sträng i samma "
+"format som används i GTK+-resursfiler. Om du ställer in inställningen på "
+"specialsträngen \"disabled\" finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
@@ -955,10 +953,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma "
-"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
-"till specialsträngen \"disabled\" kommer det inte att finnas någon "
-"snabbtangent för denna åtgärd."
+"Tangentbordsgenväg för att öppna ett nytt fönster. Anges som en sträng i "
+"samma format som används i GTK+-resursfiler. Om du ställer in inställningen "
+"på specialsträngen \"disabled\" finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
@@ -971,10 +968,10 @@ msgid ""
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
 msgstr ""
-"Snabbtangent för att ta fram dialogen för ny profil. Uttryckt som en sträng "
-"i samma format som används för GTK+-resursfiler. Om du ställer in detta "
-"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
-"någon snabbtangent för denna åtgärd."
+"Tangentbordsgenväg för att öppna dialogrutan för att skapa en profil. Anges "
+"som en sträng i samma format som används i GTK+-resursfiler. Om du ställer "
+"in inställningen på specialsträngen \"disabled\" finns ingen "
+"tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:305
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -987,10 +984,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
-"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
-"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
-"för denna åtgärd."
+"Tangentbordsgenväg för att spara den aktuella flikens innehåll till en fil. "
+"Anges som en sträng i samma format som används i GTK+-resursfiler. Om du "
+"ställer in inställningen på specialsträngen \"disabled\" finns ingen "
+"tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:310
 msgid "Keyboard shortcut to close a tab"
@@ -1003,10 +1000,9 @@ msgid ""
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
 msgstr ""
-"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
-"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
-"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
-"för denna åtgärd."
+"Tangentbordsgenväg för att stänga en flik. Anges som en sträng i samma "
+"format som används i GTK+-resursfiler. Om du ställer in inställningen på "
+"specialsträngen \"disabled\" finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:315
 msgid "Keyboard shortcut to close a window"
@@ -1019,10 +1015,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Snabbtangent för att stänga ett fönster. Uttryckt som en sträng i samma "
-"format som används för GTK+-resursfiler. Om du ställer in detta alternativ "
-"till specialsträngen \"disabled\" kommer det inte att finnas någon "
-"snabbtangent för denna åtgärd."
+"Tangentbordsgenväg för att stänga ett fönster. Anges som en sträng i samma "
+"format som används i GTK+-resursfiler. Om du ställer in inställningen på "
+"specialsträngen \"disabled\" finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:320
 msgid "Keyboard shortcut to copy text"
@@ -1035,10 +1030,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Snabbtangent för att stänga en flik. Uttryckt som en sträng i samma format "
-"som används för GTK+-resursfiler. Om du ställer in detta alternativ till "
-"specialsträngen \"disabled\" kommer det inte att finnas någon snabbtangent "
-"för denna åtgärd."
+"Tangentbordsgenväg för att kopiera markerad text till urklipp. Anges som en "
+"sträng i samma format som används i GTK+-resursfiler. Om du ställer in "
+"inställningen på specialsträngen \"disabled\" finns ingen tangentbordsgenväg "
+"för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:325
 msgid "Keyboard shortcut to paste text"
@@ -1051,10 +1046,10 @@ msgid ""
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
 msgstr ""
-"Snabbtangent för att klistra in markerad text från urklipp till terminalen. "
-"Uttryckt som en sträng i samma format som används för GTK+-resursfiler. Om "
-"du ställer in detta alternativ till specialsträngen \"disabled\" kommer det "
-"inte att finnas någon tangentbindning för denna åtgärd."
+"Tangentbordsgenväg för att klistra in urklippets innehåll i terminalen. "
+"Anges som en sträng i samma format som används i GTK+-resursfiler. Om du "
+"ställer in inställningen på specialsträngen \"disabled\" finns ingen "
+"tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:330
 msgid "Keyboard shortcut to select all text"
@@ -1067,10 +1062,10 @@ msgid ""
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
 msgstr ""
-"Snabbtangent för att återställa terminalfönstret. Uttryckt som en sträng i "
-"samma format som används för GTK+-resursfiler. Om du ställer in detta "
-"alternativ till specialsträngen \"disabled\" kommer det inte att finnas "
-"någon snabbtangent för denna åtgärd."
+"Tangentbordsgenväg för att markera all text i terminalen. Anges som en "
+"sträng i samma format som används i GTK+-resursfiler. Om du ställer in "
+"inställningen på specialsträngen \"disabled\" finns ingen tangentbordsgenväg "
+"för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:335
 msgid "Keyboard shortcut to show the find dialog"
@@ -1083,10 +1078,9 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
-"Snabbtangent för visa sökdialogen. Uttryckt som en sträng i samma format som"
-" används för GTK+-resursfiler. Om du ställer in detta alternativ till "
-"specialsträngen \"disabled\" kommer det inte att finnas någon "
-"tangentbindning för denna åtgärd."
+"Tangentbordsgenväg för att visa sökdialogrutan. Anges som en sträng i samma "
+"format som används i GTK+-resursfiler. Om du ställer in inställningen på "
+"specialsträngen \"disabled\" finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:340
 msgid "Keyboard shortcut to find the next occurrence of the search term"
@@ -1099,10 +1093,10 @@ msgid ""
 "resource files. If you set the option to the special string \"disabled\", "
 "then there will be no keyboard shortcut for this action."
 msgstr ""
-"Snabbtangent för att hitta nästa förekomst av söktermen i terminalen. "
-"Uttryckt som en sträng i samma format som används för GTK +-resursfiler. Om "
-"du ställer in alternativet till specialsträngen \"disabled\", kommer det "
-"inte att finnas någon snabbtangent för den här åtgärden."
+"Tangentbordsgenväg för att hitta nästa förekomst av söktermen i terminalen. "
+"Anges som en sträng i samma format som används i GTK+-resursfiler. Om du "
+"ställer in inställningen på specialsträngen \"disabled\" finns ingen "
+"tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:345
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
@@ -1116,10 +1110,9 @@ msgid ""
 "then there will be no keyboard shortcut for this action."
 msgstr ""
 "Tangentbordsgenväg för att hitta föregående förekomst av söktermen i "
-"terminalen. Uttryckt som en sträng i samma format som används för GTK "
-"+-resursfiler. Om du ställer in alternativet till specialsträngen "
-"\"disabled\", kommer det inte att finnas någon tangentbordsgenväg för den "
-"här åtgärden."
+"terminalen. Anges som en sträng i samma format som används i GTK+-"
+"resursfiler. Om du ställer in inställningen på specialsträngen \"disabled\" "
+"finns ingen tangentbordsgenväg för åtgärden."
 
 #: src/org.mate.terminal.gschema.xml.in:350
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1930,7 +1923,7 @@ msgstr "_Backstegstangenten genererar:"
 
 #: src/profile-preferences.ui:2418
 msgid "_Reset Compatibility Options to Defaults"
-msgstr "_Återställ kompatibilitetsalternativ till standardvärden"
+msgstr "_Ställ tillbaka kompatibilitetsalternativens standardvärden"
 
 #: src/profile-preferences.ui:2448
 msgid "Compatibility"
@@ -1942,7 +1935,7 @@ msgstr "Ställ in titel"
 
 #: src/set-title-dialog.ui:51
 msgid "_OK"
-msgstr "Ok"
+msgstr "_OK"
 
 #: src/set-title-dialog.ui:88
 msgid "_Title:"
@@ -2143,7 +2136,7 @@ msgstr "Snabbtangenten \"%s\" är redan bunden till \"%s\"-åtgärden"
 
 #: src/terminal-accels.c:1012
 msgid "_Action"
-msgstr "_Åtgärd"
+msgstr "_Handling"
 
 #: src/terminal-accels.c:1031
 msgid "Shortcut _Key"
@@ -2779,7 +2772,7 @@ msgstr "Ställ in _teckenkodning"
 
 #: src/terminal-window.c:2099
 msgid "_Reset"
-msgstr "_Återställ"
+msgstr "_Nollställ"
 
 #: src/terminal-window.c:2104
 msgid "Reset and C_lear"
@@ -2843,7 +2836,7 @@ msgstr "_Kopiera samtalsadress"
 
 #: src/terminal-window.c:2187
 msgid "_Open Link"
-msgstr "_Öppna länk"
+msgstr "Ö_ppna länk"
 
 #: src/terminal-window.c:2192
 msgid "_Copy Link Address"
@@ -2907,8 +2900,8 @@ msgid ""
 "MATE Terminal is a terminal emulator for the MATE Desktop Environment.\n"
 "Powered by Virtual TErminal %d.%d.%d"
 msgstr ""
-"MATE Terminal är en terminalemulator för MATE Skrivbordsmiljön . Drivs av "
-"Virtual TERminal %d.%d.%d"
+"MATE Terminal är en terminalemulator för MATE:s skrivbordsmiljö.\n"
+"Drivs av Virtual TErminal %d.%d.%d"
 
 #: src/terminal-window.c:4533
 msgid "About MATE Terminal"

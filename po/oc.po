@@ -1,27 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-terminal package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
 # Quentin PAGÈS, 2025
-# 
+# Quentin PAGÈS <quentinantonin@free.fr>, 2026.
+#
+# Translators:
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-terminal 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-terminal/issues\n"
 "POT-Creation-Date: 2023-09-10 09:13+0200\n"
-"PO-Revision-Date: 2018-03-12 08:42+0000\n"
-"Last-Translator: Quentin PAGÈS, 2025\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2026-10-04 18:18+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-terminal/oc/>\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: oc\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.10\n"
 
 #: mate-terminal.appdata.xml.in.in:7 mate-terminal.desktop.in.in:3
 #: src/terminal-options.c:189 src/terminal-window.c:4531
@@ -320,10 +322,11 @@ msgstr "Acorchis de clavièr"
 #: src/keybinding-editor.ui:93
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
 msgstr ""
+"_Activar las tòcas d'accès als menús (coma Alt+F per dobrir lo menú Fichièr)"
 
 #: src/keybinding-editor.ui:132
 msgid "Enable the _menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Activar la tòca d’acorchi del _menú (F10 per defaut)"
 
 #: src/keybinding-editor.ui:151
 msgid "_Shortcut keys:"
@@ -338,6 +341,8 @@ msgid ""
 "List of profiles known to mate-terminal. The list contains strings naming "
 "subdirectories relative to /org/mate/terminal/profiles."
 msgstr ""
+"Lista dels perfils coneguts de mate-terminal. La lista conten de cadenas que "
+"designan de sosdorsièrs relatius a /org/mate/terminal/profiles."
 
 #: src/org.mate.terminal.gschema.xml.in:54
 msgid "Profile to use for new terminals"
@@ -348,6 +353,8 @@ msgid ""
 "Profile to be used when opening a new window or tab. Must be in "
 "profile_list."
 msgstr ""
+"Perfil d’utilizar quand se dobrís una fenèstra novèla o un onglet novèl. Deu "
+"figurar dins profile_list."
 
 #: src/org.mate.terminal.gschema.xml.in:59
 msgid "Whether the menubar has access keys"
@@ -366,6 +373,8 @@ msgstr ""
 #: src/org.mate.terminal.gschema.xml.in:64
 msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
 msgstr ""
+"Indica se cal utilizar l'acorchi estandard de GTK+ per accedir a la barra de "
+"menús"
 
 #: src/org.mate.terminal.gschema.xml.in:65
 msgid ""
@@ -392,16 +401,24 @@ msgid ""
 "This is a list of encodings to appear there. The special encoding name "
 "\"current\" means to display the encoding of the current locale."
 msgstr ""
+"Un sosensemble dels encodatges possibles es presentat dins lo sosmenú « "
+"Encodatge ». Aquò es la lista dels encodatges que i devon aparéisser. Lo nom "
+"d’encodatge especial «current» significa que cal afichar l’encodatge del "
+"parametratge regional actual."
 
 #: src/org.mate.terminal.gschema.xml.in:74
 msgid "Whether to ask for confirmation when closing terminal windows"
 msgstr ""
+"Indicar se cal demandar o non una confirmacion abans de tampar las fenèstras "
+"del terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:75
 msgid ""
 "Whether to ask for confirmation when closing a terminal window which has "
 "more than one open tab or any foreground subprocesses."
 msgstr ""
+"Se cal demandar una confirmacion en tampant una fenèstra de terminal que "
+"conten mai d’un onglet dobèrt o al mens un sosprocèssus al primièr plan."
 
 #: src/org.mate.terminal.gschema.xml.in:79
 msgid "Close tabs with middle click"
@@ -410,6 +427,8 @@ msgstr "Tampar los onglets amb lo clic del mitat"
 #: src/org.mate.terminal.gschema.xml.in:80
 msgid "If true, it enables the ability to close tabs using middle click."
 msgstr ""
+"Se definit a true, aquò activa la possibilitat de tampar los onglets d’un "
+"clic sul boton del mitan de la mirga."
 
 #: src/org.mate.terminal.gschema.xml.in:84
 msgid "Switch tabs with [Ctrl]+[Tab]"
@@ -420,6 +439,8 @@ msgid ""
 "If true, it enables the ability to switch tabs using [Ctrl+Tab] and "
 "[Ctrl+Shift+Tab]."
 msgstr ""
+"Se definit a true, activa la possibilitat de cambiar d’onglet en utilizant "
+"[ctrl + tab] e [ctrl + shift + tab]."
 
 #: src/org.mate.terminal.gschema.xml.in:92
 msgctxt "visible-name"
@@ -445,6 +466,8 @@ msgid ""
 "True if the menubar should be shown in new windows, for windows/tabs with "
 "this profile."
 msgstr ""
+"Verai se la barra de menús deu èsser afichada dins las fenèstras novèlas, "
+"per las fenèstras/onglets amb aqueste perfil."
 
 #: src/org.mate.terminal.gschema.xml.in:103
 msgid "Default color of text in the terminal"
@@ -500,7 +523,7 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:123
 msgid "What to do with dynamic title"
-msgstr ""
+msgstr "Qué cal far amb lo títol dinamic"
 
 #: src/org.mate.terminal.gschema.xml.in:124
 msgid ""
@@ -509,6 +532,10 @@ msgid ""
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
 msgstr ""
+"Una aplicacion dins lo terminal pòt precisar son títol ; fòrça utilizaires "
+"an lor shell configurat per aquò. Lo títol de l’aplicacion pòt remplaçar "
+"aquel del terminal (« replace »), èsser inserit abans (« before »), aprèp (« "
+"after »), o èsser ignorat (« ignore »)."
 
 #: src/org.mate.terminal.gschema.xml.in:127
 msgctxt "title"
@@ -525,6 +552,9 @@ msgid ""
 "by or combined with the title set by the application inside the terminal, "
 "depending on the title_mode setting."
 msgstr ""
+"Títol de mostrar per la fenèstra o l’onglet del terminal. Aqueste títol se "
+"pòt remplaçar o combinar amb lo títol definit per l’aplicacion dins lo "
+"terminal, segon lo parametratge de title_mode."
 
 #: src/org.mate.terminal.gschema.xml.in:133
 msgid "Whether to allow bold text"
@@ -544,6 +574,8 @@ msgid ""
 "If true, don't make a noise when applications send the escape sequence for "
 "the terminal bell."
 msgstr ""
+"Se definit a true, s’emet pas cap de bruch quand las aplicacions mandan la "
+"sequéncia d'escapament del son de campana del terminal."
 
 #: src/org.mate.terminal.gschema.xml.in:143
 msgid "Copy selection to clipboard"
@@ -552,10 +584,12 @@ msgstr "Copiar lo tèxte seleccionat dins lo quichapapièr"
 #: src/org.mate.terminal.gschema.xml.in:144
 msgid "If true, selection is automatically copied to clipboard buffer."
 msgstr ""
+"Se definit a true, la seleccion es copiada automaticament dins lo "
+"quichapapièrs."
 
 #: src/org.mate.terminal.gschema.xml.in:148
 msgid "Characters that are considered \"part of a word\""
-msgstr ""
+msgstr "Caractèrs considerats coma « parts d’un mot »"
 
 #: src/org.mate.terminal.gschema.xml.in:149
 msgid ""
@@ -563,16 +597,24 @@ msgid ""
 "single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing"
 " a range) should be the first character given."
 msgstr ""
+"Quand se selecciona un tèxte mot a mot, las sequéncias d’aquestes caractèrs "
+"son consideradas coma de mots unics. Las plajas de caractèrs pòdon èsser "
+"indicadas jos la forma « A-Z ». Se se vòl far figurar lo caractèr jonhent "
+"(« - ») en tant que tal (es a dire, pas coma separador de plaja), cal lo "
+"plaçar en primièra posicion."
 
 #: src/org.mate.terminal.gschema.xml.in:153
 msgid "Whether to use custom terminal size for new windows"
 msgstr ""
+"Se cal utilizar una talha de terminal personalizada per las fenèstras novèlas"
 
 #: src/org.mate.terminal.gschema.xml.in:154
 msgid ""
 "If true, newly created terminal windows will have custom size specified by "
 "default_size_columns and default_size_rows."
 msgstr ""
+"Se definit a true, las fenèstras de terminal novèlament creadas auràn la "
+"talha personalizada definida per default_size_columns e default_size_rows."
 
 #: src/org.mate.terminal.gschema.xml.in:158
 msgid "Default number of columns"
@@ -600,13 +642,15 @@ msgstr ""
 
 #: src/org.mate.terminal.gschema.xml.in:168
 msgid "Position of the scrollbar"
-msgstr ""
+msgstr "Posicion de la barra de defilament"
 
 #: src/org.mate.terminal.gschema.xml.in:169
 msgid ""
 "Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
 "and \"hidden\"."
 msgstr ""
+"Ont plaçar la barra de defilament. Las valors possiblas son « left » "
+"(esquèrra), « right » (drecha) e « hidden » (amagada)."
 
 #: src/org.mate.terminal.gschema.xml.in:173
 msgid "Number of lines to keep in scrollback"
@@ -669,6 +713,8 @@ msgid ""
 "Possible values are \"close\" to close the terminal, and \"restart\" to "
 "restart the command."
 msgstr ""
+"Las valors possiblas son « close » (per tampar lo terminal) e « restart » "
+"(per tornar lançar la comanda)."
 
 #: src/org.mate.terminal.gschema.xml.in:198
 msgid "Whether to launch the command in the terminal as a login shell"
@@ -680,6 +726,8 @@ msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
 msgstr ""
+"Se definit a true, la comanda aviada dins lo terminal o serà coma un shell "
+"de connexion (argv[0] serà precedit d'un jonhent)."
 
 #: src/org.mate.terminal.gschema.xml.in:203
 msgid "Whether to run a custom command instead of the shell"
@@ -715,6 +763,9 @@ msgid ""
 "The possible values are \"block\" to use a block cursor, \"ibeam\" to use a "
 "vertical line cursor, or \"underline\" to use an underline cursor."
 msgstr ""
+"Las valors possiblas son « block » per utilizar lo cursor en fòrma de blòt, "
+"« ibeam » pel cursor format d’una linha verticala, o « underline » pel "
+"cursor format d’un caractèr de soslinhat."
 
 #: src/org.mate.terminal.gschema.xml.in:218
 msgid "Custom command to use instead of the shell"
@@ -732,7 +783,7 @@ msgstr "Icòna per la fenèstra de terminal"
 
 #: src/org.mate.terminal.gschema.xml.in:224
 msgid "Icon to use for tabs/windows containing this profile."
-msgstr ""
+msgstr "Icòna d’utilizar per als onglets/fenèstras que contenon aqueste perfil."
 
 #: src/org.mate.terminal.gschema.xml.in:228
 msgid "Palette for terminal applications"
@@ -747,7 +798,7 @@ msgstr ""
 "Los terminals an una paleta de 16 colors que las aplicacions dedins del "
 "terminal pòdon utilizar. Es aquesta paleta, de la fòrma d'una lista de nom "
 "de color separada per de ponches virgulas. Los noms de color devon èsser en "
-"format exadecimal per exemple « #FF00FF » "
+"format exadecimal per exemple « #FF00FF »"
 
 #: src/org.mate.terminal.gschema.xml.in:233
 msgid "Font"
@@ -756,6 +807,7 @@ msgstr "Polissa"
 #: src/org.mate.terminal.gschema.xml.in:234
 msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
+"Un nom de polissa Pango. Per exemple : « Sans 12 » o « Monospace Bold 14 »."
 
 #: src/org.mate.terminal.gschema.xml.in:238
 msgid "Background type"
@@ -767,6 +819,10 @@ msgid ""
 "for an image, or \"transparent\" for either real transparency if a "
 "compositing window manager is running, or pseudo-transparency otherwise."
 msgstr ""
+"Tipe de rèireplan del terminal. Las valors possiblas son « solid » (color "
+"unifòrma), « image » (imatge) o « transparent » (transparéncia reala se i a "
+"un gestionari de fenèstras compositor d'imatges, o transparéncia falsa "
+"autrament)."
 
 #: src/org.mate.terminal.gschema.xml.in:243
 msgid "Background image"
@@ -778,17 +834,19 @@ msgstr "Nom de fichièr de l'imatge de rèireplan."
 
 #: src/org.mate.terminal.gschema.xml.in:248
 msgid "Whether to scroll background image"
-msgstr ""
+msgstr "Indicar se cal far defilar l’imatge de rèireplan"
 
 #: src/org.mate.terminal.gschema.xml.in:249
 msgid ""
 "If true, scroll the background image with the foreground text; if false, "
 "keep the image in a fixed position and scroll the text above it."
 msgstr ""
+"Se definit a true, l’imatge de fons defilarà al meteis temps que lo tèxt. Se "
+"false, l’imatge aurà una posicion fixa e lo tèxt defilarà dessús."
 
 #: src/org.mate.terminal.gschema.xml.in:253
 msgid "How much to darken the background image"
-msgstr ""
+msgstr "Quora enfosquir l’imatge de rèireplan"
 
 #: src/org.mate.terminal.gschema.xml.in:254
 msgid ""
@@ -797,10 +855,15 @@ msgid ""
 "implementation, there are only two levels of darkness possible, so the "
 "setting behaves as a boolean, where 0.0 disables the darkening effect."
 msgstr ""
+"Una valor entre 0,0 e 1,0 que indica quora cal enfosquir l’imatge de "
+"rèireplan. 0,0 significa pas cap d’enfosquiment, 1,0 significa una escuritat "
+"totala. Dins l’implementacion actuala, sonque dos nivèls d’enfosquiment son "
+"possibles, doncas lo paramètre fonciona coma un valor booleana, ont 0,0 "
+"desactiva l’efièch d’enfosquiment."
 
 #: src/org.mate.terminal.gschema.xml.in:258
 msgid "Effect of the Backspace key"
-msgstr ""
+msgstr "Efièch de la tòca Retorn enrè"
 
 #: src/org.mate.terminal.gschema.xml.in:259
 msgid ""
@@ -810,10 +873,15 @@ msgid ""
 "bound to backspace or delete. \"ascii-del\" is normally considered the "
 "correct setting for the Backspace key."
 msgstr ""
+"Definís quin còdi genèra la tòca Retorn enrè. Las valors possiblas son «"
+"ascii-del» pel caractèr ASCII DEL, «control-h» per Control-H (tanben conegut "
+"coma lo caractèr ASCII BS), «escape-sequence» per la sequéncia d'escapament "
+"generalament associada a Retorn enrè o Suprimir. «ascii-del» es normalament "
+"considerat coma lo paramètre corrècte per la tòca Retorn enrè."
 
 #: src/org.mate.terminal.gschema.xml.in:263
 msgid "Effect of the Delete key"
-msgstr ""
+msgstr "Efièch de la tòca « suprimir »"
 
 #: src/org.mate.terminal.gschema.xml.in:264
 msgid ""
@@ -823,6 +891,12 @@ msgid ""
 "backspace or delete. \"escape-sequence\" is normally considered the correct "
 "setting for the Delete key."
 msgstr ""
+"Definís quin còdi genèra la tòca Suprimir. Las valors possiblas son «ascii-"
+"del» per lo caractèr DEL d’ASCII, «control-h» per Control-H (tanben conegut "
+"coma lo caractèr BS d’ASCII), «escape-sequence» per la sequéncia "
+"d’escapament associada abitualament a Retorn enrè o Suprimir. «escape-"
+"sequence» es normalament considerat coma lo parametratge corrècte per la "
+"tòca Suprimir."
 
 #: src/org.mate.terminal.gschema.xml.in:268
 msgid "Whether to use the colors from the theme for the terminal widget"
@@ -846,26 +920,35 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"Se definit a true, lo terminal utilizarà la polissa indicada per desktop-"
+"global se es monoespaiada (e la polissa que li sembla mai dins lo cas "
+"contrari)."
 
 #: src/org.mate.terminal.gschema.xml.in:278
 msgid "Highlight S/Key challenges"
-msgstr ""
+msgstr "Metre en evidéncia los defiaments S/Key"
 
 #: src/org.mate.terminal.gschema.xml.in:279
 msgid ""
 "Popup a dialog when an S/Key challenge response query is detected and "
 "clicked on. Typing a password into the dialog will send it to the terminal."
 msgstr ""
+"Afichar una fenèstra de dialòg quand una requèsta de responsa a un desfís S/"
+"Key es detectada e clicada. Picar un senhal dins la fenèstra lo mandarà al "
+"terminal."
 
 #: src/org.mate.terminal.gschema.xml.in:283
 msgid "Highlight URLs under mouse pointer"
-msgstr ""
+msgstr "Metre en evidéncia los URL jos lo cursor de la mirga"
 
 #: src/org.mate.terminal.gschema.xml.in:284
 msgid ""
 "If true, URLs under mouse pointer are highlighted and can be opened by mouse"
 " click together with control key or used in context menu."
 msgstr ""
+"Se es definit, las URL jos lo ponchador de la mirga son mesas en evidéncia e "
+"pòdon èsser dobridas en clicant amb la mirga tot en mantenent quichada la "
+"tòca Ctrl, o utilizadas dins lo menú contextual."
 
 #: src/org.mate.terminal.gschema.xml.in:290
 msgid "Keyboard shortcut to open a new tab"
@@ -878,6 +961,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Acorchi de clavièr per dobrir un onglet novèl. Exprimit coma una cadena dins "
+"lo meteis format qu'es utilizat pels fichièrs de ressorsas GTK+. Se "
+"definissètz l'opcion amb la cadena especiala «disabled», i aurà pas cap "
+"d'acorchi de clavièr per aquesta accion."
 
 #: src/org.mate.terminal.gschema.xml.in:295
 msgid "Keyboard shortcut to open a new window"
@@ -890,6 +977,10 @@ msgid ""
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
 msgstr ""
+"Tòca d’acorchi clavièr per dobrir una fenèstra novèla. Exprimit coma cadena "
+"dins lo meteis format qu’utilizan los fichièrs de ressorsas GTK+. Se "
+"definissètz l’opcion amb la cadena especiala «disabled», aquesta accion aurà "
+"pas cap d’acorchi clavièr."
 
 #: src/org.mate.terminal.gschema.xml.in:300
 msgid "Keyboard shortcut to create a new profile"
@@ -1662,7 +1753,7 @@ msgstr "Rèireplan"
 
 #: src/profile-preferences.ui:2125
 msgid "_Scrollbar is:"
-msgstr ""
+msgstr "La _barra de defilament es :"
 
 #: src/profile-preferences.ui:2136
 msgid "Scroll on _output"
@@ -1778,7 +1869,7 @@ msgstr "Tot seleccionar"
 
 #: src/terminal-accels.c:195
 msgid "Hide and Show menubar"
-msgstr ""
+msgstr "Amagar e afichar la barra de menú"
 
 #: src/terminal-accels.c:199
 msgid "Full Screen"
@@ -1814,11 +1905,11 @@ msgstr "Reïnicializar e escafar"
 
 #: src/terminal-accels.c:247
 msgid "Switch to Previous Profile"
-msgstr ""
+msgstr "Passar al perfil precedent"
 
 #: src/terminal-accels.c:251
 msgid "Switch to Next Profile"
-msgstr ""
+msgstr "Passar al perfil seguent"
 
 #: src/terminal-accels.c:259
 msgid "Switch to Previous Tab"
@@ -2353,7 +2444,7 @@ msgstr ""
 
 #: src/terminal-screen.c:2038
 msgid "The child process was terminated."
-msgstr ""
+msgstr "Lo procèssus filh es estat acabat."
 
 #: src/terminal-tab-label.c:131
 msgid "Close tab"
@@ -2653,10 +2744,12 @@ msgid ""
 "There are still processes running in some terminals in this window.\n"
 "Closing the window will kill all of them."
 msgstr ""
+"I a de processus actius dins certans terminals d'aquesta fenèstra.\n"
+"Tampar la fenèstra los interromprà totes."
 
 #: src/terminal-window.c:3711
 msgid "There are multiple tabs open in this window."
-msgstr ""
+msgstr "I a mantun onglet dobèrt dins aquesta fenèstra."
 
 #: src/terminal-window.c:3721
 msgid "Close this terminal?"
