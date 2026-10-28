@@ -987,13 +987,10 @@ terminal_profile_constructor (GType type,
 	priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA, concat);
 	g_assert (priv->settings != NULL);
 	g_free (concat);
-	concat = g_strconcat("changed::", priv->profile_dir, "/", NULL);
 	g_signal_connect (priv->settings,
-			  concat,
+			  "changed",
 			  G_CALLBACK(terminal_profile_gsettings_notify_cb),
 			  profile);
-
-	g_free (concat);
 
 	/* Now load those properties from GSettings that were not set as construction params */
 	pspecs = g_object_class_list_properties (G_OBJECT_CLASS (TERMINAL_PROFILE_GET_CLASS (profile)), &n_pspecs);
@@ -1153,12 +1150,10 @@ terminal_profile_set_property (GObject *object,
 			concat=  g_strconcat (CONF_PROFILE_PREFIX, priv->profile_dir, "/", NULL);
 			priv->settings = g_settings_new_with_path (CONF_PROFILE_SCHEMA, concat);
 			g_free (concat);
-			concat = g_strconcat("changed::", priv->profile_dir, "/", NULL);
 			g_signal_connect (priv->settings,
-					  concat,
+					  "changed",
 					  G_CALLBACK(terminal_profile_gsettings_notify_cb),
 					  profile);
-			g_free (concat);
 		}
 		break;
 	}
