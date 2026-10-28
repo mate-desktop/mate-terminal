@@ -188,6 +188,14 @@ desktop_file = i18n.merge_file(
   )
 )
 
+# For xdg-terminal-exec support
+install_symlink(
+  'mate-terminal.desktop',
+  install_dir: join_paths(datadir, 'xdg-terminals'),
+  install_tag: 'runtime',
+  pointing_to: desktop_file.full_path(),
+)
+
 desktop_file_validate = find_program('desktop-file-validate', required: false)
 if desktop_file_validate.found()
   test(
