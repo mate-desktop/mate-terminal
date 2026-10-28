@@ -155,13 +155,13 @@ CLEANFILES = \
 
 EXTRA_DIST = \
 	confirm-close-dialog.ui \
+	customize-tab-dialog.ui \
 	encodings-dialog.ui \
 	find-dialog.ui \
 	keybinding-editor.ui \
 	profile-manager.ui \
 	profile-new-dialog.ui \
 	profile-preferences.ui \
-	set-title-dialog.ui \
 	skey-challenge.ui \
 	terminal.about \
 	terminal.xml \

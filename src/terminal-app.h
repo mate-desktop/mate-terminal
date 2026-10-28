@@ -115,6 +115,7 @@ TerminalScreen *terminal_app_new_terminal (TerminalApp     *app,
         TerminalProfile *profile,
         char           **override_command,
         const char      *title,
+        const char      *tab_color,
         const char      *working_dir,
         char           **child_env,
         double           zoom);

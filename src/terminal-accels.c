@@ -232,7 +232,7 @@ static KeyEntry search_entries[] =
 static KeyEntry terminal_entries[] =
 {
 	{
-		N_("Set Title"),
+		N_("Customize Tab"),
 		KEY_SET_TERMINAL_TITLE, ACCEL_PATH_SET_TERMINAL_TITLE, 0, 0, NULL, FALSE, TRUE
 	},
 	{

@@ -1846,6 +1846,7 @@ terminal_app_handle_options (TerminalApp *app,
 			screen = terminal_app_new_terminal (app, window, profile,
 			                                    it->exec_argv ? it->exec_argv : options->exec_argv,
 			                                    it->title ? it->title : options->default_title,
+			                                    it->tab_color ? it->tab_color : options->default_tab_color,
 			                                    it->working_dir ? it->working_dir : options->default_working_dir,
 			                                    options->env,
 			                                    it->zoom_set ? it->zoom : options->zoom);
@@ -1897,6 +1898,7 @@ terminal_app_new_terminal (TerminalApp     *app,
                            TerminalProfile *profile,
                            char           **override_command,
                            const char      *title,
+                           const char      *tab_color,
                            const char      *working_dir,
                            char           **child_env,
                            double           zoom)
@@ -1912,6 +1914,26 @@ terminal_app_new_terminal (TerminalApp     *app,
 	terminal_window_add_screen (window, screen, -1);
 	terminal_window_switch_screen (window, screen);
 	gtk_widget_grab_focus (GTK_WIDGET (screen));
+
+	/* --tab-color overrides whatever color the profile default (applied
+	 * inside terminal_window_add_screen) may have set: NULL means "not
+	 * given, leave the profile default as-is"; "" means "explicitly no
+	 * color, even if the profile would set one"; anything else is a
+	 * color spec to apply. */
+	if (tab_color != NULL)
+	{
+		if (tab_color[0] == '\0')
+		{
+			terminal_window_set_screen_tab_color (window, screen, NULL);
+		}
+		else
+		{
+			GdkRGBA rgba;
+
+			if (gdk_rgba_parse (&rgba, tab_color))
+				terminal_window_set_screen_tab_color (window, screen, &rgba);
+		}
+	}
 
 	return screen;
 }

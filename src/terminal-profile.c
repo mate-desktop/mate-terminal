@@ -78,6 +78,9 @@ enum
     PROP_SILENT_BELL,
     PROP_TITLE,
     PROP_TITLE_MODE,
+    PROP_USE_TAB_COLOR,
+    PROP_TAB_COLOR,
+    PROP_SHOW_TAB_CLOSE_BUTTON,
     PROP_USE_CUSTOM_COMMAND,
     PROP_USE_CUSTOM_DEFAULT_SIZE,
     PROP_USE_SKEY,
@@ -121,6 +124,9 @@ enum
 #define KEY_COPY_SELECTION "copy-selection"
 #define KEY_TITLE_MODE "title-mode"
 #define KEY_TITLE "title"
+#define KEY_USE_TAB_COLOR "use-tab-color"
+#define KEY_TAB_COLOR "tab-color"
+#define KEY_SHOW_TAB_CLOSE_BUTTON "show-tab-close-button"
 #define KEY_USE_CUSTOM_COMMAND "use-custom-command"
 #define KEY_USE_CUSTOM_DEFAULT_SIZE "use-custom-default-size"
 #define KEY_USE_SKEY "use-skey"
@@ -162,6 +168,9 @@ enum
 #define DEFAULT_COPY_SELECTION        (FALSE)
 #define DEFAULT_TITLE_MODE            (TERMINAL_TITLE_REPLACE)
 #define DEFAULT_TITLE                 (N_("Terminal"))
+#define DEFAULT_USE_TAB_COLOR         (FALSE)
+#define DEFAULT_TAB_COLOR             ("#3465A4")
+#define DEFAULT_SHOW_TAB_CLOSE_BUTTON (TRUE)
 #define DEFAULT_USE_CUSTOM_COMMAND    (FALSE)
 #define DEFAULT_USE_CUSTOM_DEFAULT_SIZE (FALSE)
 #define DEFAULT_USE_SKEY              (TRUE)
@@ -539,6 +548,16 @@ terminal_profile_reset_property_internal (TerminalProfile *profile,
 			GdkRGBA color;
 
 			if (!gdk_rgba_parse (&color, DEFAULT_BACKGROUND_COLOR))
+				return;
+			color.alpha = 1.0;
+			g_value_set_boxed (value, &color);
+			break;
+		}
+		case PROP_TAB_COLOR:
+		{
+			GdkRGBA color;
+
+			if (!gdk_rgba_parse (&color, DEFAULT_TAB_COLOR))
 				return;
 			color.alpha = 1.0;
 			g_value_set_boxed (value, &color);
@@ -957,6 +976,7 @@ terminal_profile_init (TerminalProfile *profile)
 	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_FOREGROUND_COLOR), FALSE);
 	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_BOLD_COLOR), FALSE);
 	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_BACKGROUND_COLOR), FALSE);
+	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_TAB_COLOR), FALSE);
 	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_FONT), FALSE);
 	terminal_profile_reset_property_internal (profile, g_object_class_find_property (object_class, TERMINAL_PROFILE_PALETTE), FALSE);
 }
@@ -1317,8 +1337,11 @@ terminal_profile_class_init (TerminalProfileClass *klass)
 	TERMINAL_PROFILE_PROPERTY_BOOLEAN (USE_URLS, DEFAULT_USE_URLS, KEY_USE_URLS);
 	TERMINAL_PROFILE_PROPERTY_BOOLEAN (USE_SYSTEM_FONT, DEFAULT_USE_SYSTEM_FONT, KEY_USE_SYSTEM_FONT);
 	TERMINAL_PROFILE_PROPERTY_BOOLEAN (USE_THEME_COLORS, DEFAULT_USE_THEME_COLORS, KEY_USE_THEME_COLORS);
+	TERMINAL_PROFILE_PROPERTY_BOOLEAN (USE_TAB_COLOR, DEFAULT_USE_TAB_COLOR, KEY_USE_TAB_COLOR);
+	TERMINAL_PROFILE_PROPERTY_BOOLEAN (SHOW_TAB_CLOSE_BUTTON, DEFAULT_SHOW_TAB_CLOSE_BUTTON, KEY_SHOW_TAB_CLOSE_BUTTON);
 
 	TERMINAL_PROFILE_PROPERTY_BOXED (BACKGROUND_COLOR, GDK_TYPE_RGBA, KEY_BACKGROUND_COLOR);
+	TERMINAL_PROFILE_PROPERTY_BOXED (TAB_COLOR, GDK_TYPE_RGBA, KEY_TAB_COLOR);
 	TERMINAL_PROFILE_PROPERTY_BOXED (BOLD_COLOR, GDK_TYPE_RGBA, KEY_BOLD_COLOR);
 	TERMINAL_PROFILE_PROPERTY_BOXED (FONT, PANGO_TYPE_FONT_DESCRIPTION, KEY_FONT);
 	TERMINAL_PROFILE_PROPERTY_BOXED (FOREGROUND_COLOR, GDK_TYPE_RGBA, KEY_FOREGROUND_COLOR);

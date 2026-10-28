@@ -106,6 +106,17 @@ void terminal_screen_set_user_title (TerminalScreen *screen,
 void        terminal_screen_set_override_title     (TerminalScreen *screen,
         const char     *title);
 
+/* Appearance of the screen's notebook tab, as opposed to the terminal
+ * itself. Seeded from the profile when the screen is created, and kept on
+ * the screen so it survives the tab being moved to another window. */
+void           terminal_screen_set_tab_color (TerminalScreen *screen,
+        const GdkRGBA  *rgba);
+const GdkRGBA *terminal_screen_get_tab_color (TerminalScreen *screen);
+
+void        terminal_screen_set_tab_close_button_visible (TerminalScreen *screen,
+        gboolean visible);
+gboolean    terminal_screen_get_tab_close_button_visible (TerminalScreen *screen);
+
 const char *terminal_screen_get_dynamic_title      (TerminalScreen *screen);
 const char *terminal_screen_get_dynamic_icon_title (TerminalScreen *screen);
 

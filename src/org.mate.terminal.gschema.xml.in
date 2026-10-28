@@ -128,6 +128,21 @@
       <summary>Title for terminal</summary>
       <description>Title to display for the terminal window or tab. This title may be replaced by or combined with  the title set by the application inside the terminal,  depending on the title_mode setting.</description>
     </key>
+    <key name="use-tab-color" type="b">
+      <default>false</default>
+      <summary>Whether to give tabs a custom background color</summary>
+      <description>If true, new tabs opened with this profile get a custom notebook-tab background color, as set by tab_color.</description>
+    </key>
+    <key name="tab-color" type="s">
+      <default>'#3465A4'</default>
+      <summary>Default color of the notebook tab background</summary>
+      <description>Default background color of the notebook tab for terminals using this profile, as a color specification (can be HTML-style hex digits, or a color name such as "red"). Only used if use_tab_color is true.</description>
+    </key>
+    <key name="show-tab-close-button" type="b">
+      <default>true</default>
+      <summary>Whether to show the close button on tabs</summary>
+      <description>If false, new tabs opened with this profile do not show a close ("x") button, as a guard against accidentally closing them with a stray click. The tab can still be closed by other means (Ctrl+W, File &gt; Close Tab, middle-click, etc).</description>
+    </key>
     <key name="allow-bold" type="b">
       <default>true</default>
       <summary>Whether to allow bold text</summary>
